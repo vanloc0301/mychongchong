@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\UnitTests.dll
+obj\Debug\UnitTests.pdb
+bin\Debug\UnitTests.dll
+bin\Debug\UnitTests.pdb
+bin\Debug\RuleEngine.dll
+bin\Debug\RuleEngine.pdb

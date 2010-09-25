@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.DAO.DataWord,SkyMap.Net.DAO" table="DD_WORD">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="assigned"/>
+    </id>
+    <!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="50" />
+    <property column="IsActive" name="IsActive"/>
+    <property column="EnableUpdate" name="EnableUpdate" />
+    <property column="EnableRemove" name="EnableRemove" />
+    <property column="Code" type="String" name="Code" length="20" />
+    <property column="DisplayOrder" name="DisplayOrder"/>
+    <many-to-one name="Type" column="TYPE_OID" class="SkyMap.Net.DAO.DataWordType,SkyMap.Net.DAO" cascade="none"/>
+    
+  </class>
+</hibernate-mapping> 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1049]C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\UnitTests.dll</TopNode>
+  <SelectedNode>[0-1043]UnitTests.Compiler.Compiler</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1049]C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\UnitTests.dll" Expanded="true" />
+    <Node UniqueName="[0-1050]UnitTests" Expanded="true" />
+    <Node UniqueName="[0-1051]UnitTests.Compiler" Expanded="true" />
+    <Node UniqueName="[0-1043]UnitTests.Compiler.Compiler" Expanded="true" />
+  </Nodes>
+</VisualState>

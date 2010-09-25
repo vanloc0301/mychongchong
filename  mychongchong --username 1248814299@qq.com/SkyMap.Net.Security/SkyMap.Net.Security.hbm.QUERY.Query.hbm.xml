@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<!-- 获取所有同名登录系统且在线的记录 -->
+	<query name="GetStaffLogs"><![CDATA[
+		from CStaffLog log 
+		where (log.StaffId = ?
+		and log.LogSystem = ?
+		and log.Status=1)
+		or log.Id = ?
+	]]></query>
+	
+	
+	<!-- 获取人员角色部门等的查询 -->
+	<query name="GetStaffs">
+		<![CDATA[
+	select t1 from CStaff t1
+	]]>
+	</query>
+	<query name="GetRoles">
+		<![CDATA[
+	select t1 from CRole t1
+	]]>
+	</query>
+	<query name="GetDepts">
+		<![CDATA[
+	select t1 from CDept t1
+	]]>
+	</query>
+	
+	<query name="GetDeptsNoParent">
+		<![CDATA[
+	from CDept dept
+	]]>
+	</query>
+	
+	
+	<query name="GetRoleTypes">
+		<![CDATA[
+	select rt from CRoleType rt
+	where rt.Parent is null
+	]]>
+	</query>
+	
+	<!-- 获取所有权限管理类型 -->
+	<query name="GetAllAuthTypes"><![CDATA[
+		from CAuthType
+	]]></query>
+	
+	<!-- 获取某用户所属的参与者的所有ID -->
+	<query name="GetParticipantsOfStaff">
+    <![CDATA[
+	select part.Id
+	from CParticipant part
+	where (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue= :staff)
+	   or (part.ParticipantEntity.Type='ALL')
+	   or (part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in 
+				(select sr.RoleID from CStaffRole sr  where sr.StaffID= :staff))
+	   or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in 
+				(select sd.DeptID from CStaffDept sd  where sd.StaffID= :staff))
+	]]></query>
+	
+	<!-- 获取批定参与者与权限类型ID所拥有的资源ID列表 -->
+	<query name="GetCurrentPrincipalAuthResources">
+		<![CDATA[
+	select ua.ResourceId
+	from CUniversalAuth ua
+	where (ua.Type.Id=? and ua.ParticipantId in (?))
+	]]></query>
+	
+	<!-- 获取批定权限类型表示代码的权限类型对象 -->
+	<query name="GetAuthTypeByTypeCode"><![CDATA[
+	from CAuthType at
+	where (at.TypeCode=?)
+	]]></query>
+	
+	<!-- 获取指定类型的参与者的所有人员与名称 -->
+	<query name="GetStaffIdNamesByPart">
+			<![CDATA[
+	select s.Id,s.Name
+	from CStaff s
+	where ( :partType = 'STAFF' and s.Id=:partIdValue )
+		or ( :partType = 'ALL' ) 
+		or ( :partType = 'DEPT' and s.Id in (select sd.StaffID from CStaffDept sd where sd.IsActive=1 and sd.DeptID=:partIdValue))
+		or ( :partType = 'ROLE' and s.Id in (select sr.StaffID from CStaffRole sr where sr.IsActive=1 and sr.RoleID=:partIdValue))
+	]]>
+	</query>
+</hibernate-mapping>

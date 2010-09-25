@@ -1,0 +1,8 @@
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\dll\AutoUpdate.exe
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\dll\AutoUpdate.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\AutoUpdate.FrmUpdate.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\Properties.Resources.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\AutoUpdate.csproj.GenerateResource.Cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\AutoUpdate.exe
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AutoUpdate\obj\Debug\AutoUpdate.pdb

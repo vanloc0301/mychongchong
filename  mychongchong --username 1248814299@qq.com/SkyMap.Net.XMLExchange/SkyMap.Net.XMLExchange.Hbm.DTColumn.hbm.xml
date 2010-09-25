@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.XMLExchange.Model.DTColumn,SkyMap.Net.XMLExchange" table="DT_Column">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="uuid.hex"/>
+    </id>
+    <version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="50" />
+    <property column="IsActive" name="IsActive"/>
+    <property column="MapXMLElementName" type="String" name="MapXMLElementName" length="50" />
+    <property column="Type" name="Type"/>
+    <property column="DefaultValue" name="DefaultValue"/>
+    <property column="NamespacePrefix" type="String" name="NamespacePrefix" length="50" />
+    <property column="NamespaceUri" type="String" name="NamespaceUri" length="50" />
+    <property column="DisplayOrder" name="DisplayOrder" />
+    <property column="IfExport" name="IfExport" />
+    <property column="IfImport" name="IfImport" />
+    <many-to-one name="DTTable" column="DTTABLE_OID" class="SkyMap.Net.XMLExchange.Model.DTTable,SkyMap.Net.XMLExchange" cascade="none"/>
+  </class>
+</hibernate-mapping>

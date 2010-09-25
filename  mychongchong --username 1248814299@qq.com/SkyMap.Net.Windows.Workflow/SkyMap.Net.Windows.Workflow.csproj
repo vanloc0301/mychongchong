@@ -1,0 +1,659 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08B692EA-C07C-4F47-9B3C-5760866082A5}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Windows.Workflow</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/SkyMap.Net.Windows.Workflow/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v8.2">
+      <Name>DevExpress.Utils.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2">
+      <Name>DevExpress.XtraEditors.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2">
+      <Name>DevExpress.XtraGrid.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v8.2">
+      <Name>DevExpress.XtraNavBar.v8.2</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\AbstractBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\BoxHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\Dj.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\EMail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\NotImplement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\Static.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\WfBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\WfGeneralCriteria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Box\WfYwCriteria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\ChineseGridLocalizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AbortCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AbortDeleteCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AbstractWfViewCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AcceptAndOpenCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AcceptAndOpenFocusCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\AvgCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CallBackCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CancelDelegateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CancelMonitorCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CancelPressCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CancelSelectCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ColumnStaticCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CompleteDeleteCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CompleteDeleteOneByOneCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CountCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CreateAndAcceptProinstCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CreateMyDjProinstCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\CreateProinstCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DefaultAcceptAndOpenCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DefaultOpenViewCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DefaultOpenZbViewCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DelegateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayAddNumEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayFlowInfoCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayMyDjAddNumEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayMyDjProdefsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayMyFirstAddNumEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayMyFirstProdefsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DisplayMyStartProdefsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\DjCreateAndOpenFirstCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ExistFailSavedFileEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ExportExcel2Command.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ExportExcelCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ExtQueryEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ExtYwCriteriaCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ListTempletsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\LoadBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MaxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MinCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MonitorAllCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MonitorCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MonitorDateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\MonitorQueryCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OGMCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenDefaultBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenNavBarView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenStaticFormCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenViewForFocusCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenViewForQueryCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenViewForQueryFocusCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\OpenZbViewForFocusCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\PassCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\PressCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\PrintBSZYCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ProdefCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ProinstStartDateCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ProinstStatusCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ProjectIdCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditOGMCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditProdefCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditProinstStartDateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditProinstStatusCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\QueryEditProjectIdCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\RestoreProjectDataCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SaveAsProinstCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SelectAllCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SelectCurrentCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SelectElseCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SendBackCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SetDefaultBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SetWfBoxColumnAutoWidthCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ShowZSGTJProjectInfoCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SumCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\SuspendCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\TerminateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewAbstractNavigationCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewCloseCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewDeleteCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewListPrintsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewNavigationCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewNavigationFirstCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewNavigationLastCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewNavigationNextCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewNavigationPreviousCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewPassCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewPrintCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfViewSaveCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\WfYwCriteriaCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\YwCriteriaCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ZbCreateAndOpenFirstCheckedCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Commands\ZbSendBackCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Contents\BoxViewContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\AbstractWorkflowDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\FilterCustomDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\IWfDialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\PassDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\ReasonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\SendBackDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Dialog\WtDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Pads\NavBarView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Pads\SmNavBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\Services\BoxService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AddAdjunctCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AddMaterCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AddMaterFromTempletCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AddMyNotionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AdjunctEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\AdjunctEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\FlowInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\GatherNotionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\ListTempletsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\MatersEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\MatersEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\OpenAdjunctCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\ProinstDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\ProinstFlowInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\RemoveAdjunctCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\RemoveMaterCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\RemoveMyNotionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\SaveAsAdjunctCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\StaffNotion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\StaffNotionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\WfView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Workflow\Client\View\WfViewHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Criteria.Client\SkyMap.Net.Criteria.Client.csproj">
+      <Project>{5310D80B-E5C8-48BB-88EB-EF71074B8F32}</Project>
+      <Name>SkyMap.Net.Criteria.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DataForms\SkyMap.Net.DataForms.csproj">
+      <Project>{D849C043-D533-4B5C-87AC-28115B16E539}</Project>
+      <Name>SkyMap.Net.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Evaluant\SkyMap.Net.Evaluant.csproj">
+      <Project>{E67B0E1B-3FCA-4B82-B9AD-FAA430B71B8F}</Project>
+      <Name>SkyMap.Net.Evaluant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Network\SkyMap.Net.Network.csproj">
+      <Project>{EF57601A-F9D9-47A1-AA50-D23C1BC91D7B}</Project>
+      <Name>SkyMap.Net.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
+      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
+      <Name>SkyMap.Net.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.Client\SkyMap.Net.Workflow.Client.csproj">
+      <Project>{217987FF-FFC1-43A0-9BF4-1160E9D6A90E}</Project>
+      <Name>SkyMap.Net.Workflow.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.Engine\SkyMap.Net.Workflow.Engine.csproj">
+      <Project>{FC50239B-6D25-48C0-AD92-DD3EE9D01A3F}</Project>
+      <Name>SkyMap.Net.Workflow.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.FlowChartCtl\SkyMap.Net.Workflow.FlowChartCtl.csproj">
+      <Project>{3EACA55A-F034-4E6A-920F-976F9A4AD956}</Project>
+      <Name>SkyMap.Net.Workflow.FlowChartCtl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.FlowChart\SkyMap.Net.Workflow.FlowChart.csproj">
+      <Project>{4441A1AC-1592-498D-8E51-F78122C4D1EA}</Project>
+      <Name>SkyMap.Net.Workflow.FlowChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow\SkyMap.Net.Workflow.csproj">
+      <Project>{59C4907B-30F8-4616-90ED-8A909115771F}</Project>
+      <Name>SkyMap.Net.Workflow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\AbstractBox.resx">
+      <DependentUpon>AbstractBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\Dj.resx">
+      <DependentUpon>Dj.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\EMail.resx">
+      <DependentUpon>EMail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\Static.resx">
+      <DependentUpon>Static.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\WfBox.resx">
+      <DependentUpon>WfBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\WfGeneralCriteria.resx">
+      <DependentUpon>WfGeneralCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Box\WfYwCriteria.resx">
+      <DependentUpon>WfYwCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\AbstractWorkflowDialog.resx">
+      <DependentUpon>AbstractWorkflowDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\FilterCustomDialog.resx">
+      <DependentUpon>FilterCustomDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\PassDialog.resx">
+      <DependentUpon>PassDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\ReasonDialog.resx">
+      <DependentUpon>ReasonDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\SendBackDialog.resx">
+      <DependentUpon>SendBackDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\Dialog\WtDialog.resx">
+      <DependentUpon>WtDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\AdjunctEdit.resx">
+      <DependentUpon>AdjunctEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\FlowInfo.resx">
+      <DependentUpon>FlowInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\MatersEdit.resx">
+      <DependentUpon>MatersEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\ProinstFlowInfo.resx">
+      <DependentUpon>ProinstFlowInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\StaffNotion.resx">
+      <DependentUpon>StaffNotion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Workflow\Client\View\WfView.resx">
+      <DependentUpon>WfView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

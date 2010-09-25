@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfStateEventAuditInst,SkyMap.Net.Workflow" table="WF_STATEAUDIT">
+		<id name="Id" type="String" column="STATEAUDIT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="ProinstId" column="PROINST_ID" />
+		<property name="ProinstName" column="PROINST_NAME" />
+		<property name="ActinstId" column="ACTINST_ID" />
+		<property name="ActinstName" column="ACTINST_NAME" />
+		<property name="TimeStamp" column="STATEAUDIT_TIMESTAMP" />
+		<property name="OldState" column="STATEAUDIT_OLDSTATE" 
+			type="SkyMap.Net.Workflow.Instance.WfStatusType,SkyMap.Net.Workflow" />
+		<property name="NewState" column="STATEAUDIT_NEWSTATE" 
+			type="SkyMap.Net.Workflow.Instance.WfStatusType,SkyMap.Net.Workflow" />
+		
+	</class>
+	
+</hibernate-mapping>

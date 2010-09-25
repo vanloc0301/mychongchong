@@ -1,0 +1,37 @@
+<project name="SkyMapTools" default="build">
+     <target name="build">
+          <csc output="${build.dir}/bin/${nant.project.name}.exe" target="winexe" win32icon="${images.dir}/SKyMapTools.ico" optimize="${optimize}" debug="${debug}">
+               <sources failonempty="true">
+                    <includes name="**/*.cs" />
+               </sources>
+               <references basedir="${BaseLibrary.dir}">
+                    <include name="${nant.settings.currentframework.frameworkassemblydirectory}/System.dll" />
+                    <include name="${nant.settings.currentframework.frameworkassemblydirectory}/System.XML.dll" />
+                    <include name="${nant.settings.currentframework.frameworkassemblydirectory}/System.Data.dll" />
+                    <include name="${nant.settings.currentframework.frameworkassemblydirectory}/System.Forms.dll" />
+                    <include name="SkyMap.Net.Base.dll" />
+                    <include name="${build.dir}/bin/SkyMap.Net.Core.dll" />
+                    <include name="${build.dir}/bin/SkyMap.Net.Tools.Base.dll" />&gt;
+               </references>
+               <resources basedir=".">
+                    <include name="Strings.resx" />
+                    <include name="ControlConfig.xml" />
+                    <include name="SplashScreen.png" />
+                    <include name="BitmapResources.resources" />
+                    <include name="StringResources.resources" />
+                    <include name="AddIn.xsd" />
+               </resources>
+          </csc>
+          <copy file="App.config" tofile="${build.dir}/bin/${nant.project.name}.exe.config" />
+          <copy todir="${build.dir}/bin">
+               <fileset>
+                    <include name="Default.cfg.xml" />
+                    <include name="Update.xml" />
+               </fileset>
+          </copy>
+     </target>
+     <target name="clean">
+          <delete verbose="true" dir="bin" failonerror="false" />
+          <delete verbose="true" dir="obj" failonerror="false" />
+     </target>
+</project>

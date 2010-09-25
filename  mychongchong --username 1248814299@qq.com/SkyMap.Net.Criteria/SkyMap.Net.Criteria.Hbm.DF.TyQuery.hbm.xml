@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Criteria.TyQuery,SkyMap.Net.Criteria" table="TY_Query">
+
+		<id name="Id" column="ID" type="String" unsaved-value="null">
+			<generator class="assigned"/>
+		</id>
+		<property column="NAME" type="String" name="Name" length="50" />
+		<property column="Description" type="String" name="Description" length="50" />
+		<property column="DisplayOrder" name="DisplayOrder" />
+		<property column="DatabaseID" type="String" name="smDataSourceOID" access="field"/>
+		<property column="SQL" name="Sql" />
+		<property column="FormPage" name="FormPage" />
+		<property column="DetailPage" name="DetailPage" />
+		<bag name="QueryWheres" lazy="false" cascade="delete" inverse="false" order-by="DisplayOrder" generic="true" outer-join="true" fetch="subselect">
+			<key column="QueryID" />
+			<one-to-many class="SkyMap.Net.Criteria.TyQueryWhere,SkyMap.Net.Criteria" />
+		</bag>
+		<bag name="TrFilters" lazy="false" cascade="delete" inverse="false" generic="true" outer-join="true" fetch="subselect">
+			<key column="Query_ID" />
+			<one-to-many class="SkyMap.Net.Criteria.TrFilter,SkyMap.Net.Criteria" />
+		</bag>
+	</class>
+</hibernate-mapping>

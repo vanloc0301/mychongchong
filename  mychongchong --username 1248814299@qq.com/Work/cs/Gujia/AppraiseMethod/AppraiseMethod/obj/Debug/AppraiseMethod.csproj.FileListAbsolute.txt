@@ -1,0 +1,10 @@
+D:\pg-oa\addins\AppraiseMethod\Appraise.AddIn
+D:\pg-oa\addins\AppraiseMethod\AppraiseMethod.dll.config
+D:\pg-oa\addins\AppraiseMethod\AppraiseMethod.dll
+D:\pg-oa\addins\AppraiseMethod\AppraiseMethod.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\AppraiseMethod.MethodControl.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\AppraiseMethod.MethodForm.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\AppraiseMethod.csproj.GenerateResource.Cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\AppraiseMethod.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\AppraiseMethod\AppraiseMethod\obj\Debug\AppraiseMethod.pdb

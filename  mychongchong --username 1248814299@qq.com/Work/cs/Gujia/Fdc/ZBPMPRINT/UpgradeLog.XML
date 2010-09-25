@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ZBPMPRINT">
+</Property><Property Name="Solution File" Value="E:\NET\svn\App-And-DataForms\ZBPMPRINT\ZBPMPRINT.sln">
+</Property><Property Name="User Options File" Value="E:\NET\svn\App-And-DataForms\ZBPMPRINT\ZBPMPRINT.suo">
+</Property><Property Name="Date" Value="2008年5月23日">
+</Property><Property Name="Time" Value="10:55">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ZBPMPRINT.sln" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT.sln">
+</Event><Event ErrorLevel="0" Project="" Source="ZBPMPRINT.suo" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT.suo">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\ZBPMPRINT.csproj" Description="Project file successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\ZBPMPRINT.csproj">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Balance.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Balance.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Balance.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Balance.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Check.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Check.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Check.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Check.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsBalance.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsBalance.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsCheck.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsCheck.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsFinancial.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsFinancial.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsItem.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsItem.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsPrint.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsPrint.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsTelegraphicMoneyOrdertelegraph.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsTelegraphicMoneyOrdertelegraph.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Financial.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Financial.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Financial.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Financial.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\frmPrint.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\frmPrint.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\frmPrint.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\frmPrint.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Income.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Income.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Income.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Income.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Program.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Program.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\Resources.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\Settings.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\SupportHelper.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\SupportHelper.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\TelegraphicMoneyOrdertelegraph.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\TelegraphicMoneyOrdertelegraph.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\TelegraphicMoneyOrdertelegraph.Designer.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\TelegraphicMoneyOrdertelegraph.Designer.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\clsIncome.cs" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\clsIncome.cs">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\ClassDiagram2.cd" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\ClassDiagram2.cd">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsBalance.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsBalance.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsCheck.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsCheck.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsFinancial.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsFinancial.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsIncome.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsIncome.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsItem.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsItem.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\ClassDiagram1.cd" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\DataSources\clsTelegraphicMoneyOrdertelegraph.datasource" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\DataSources\clsTelegraphicMoneyOrdertelegraph.datasource">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\Settings.settings" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\aaa.gif" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\aaa.gif">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Balance.rdlc" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Balance.rdlc">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Balance.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Balance.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Check.rdlc" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Check.rdlc">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Check.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Check.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Financial.rdlc" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Financial.rdlc">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Financial.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Financial.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\frmPrint.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\frmPrint.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Income.rdlc" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Income.rdlc">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Income.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Income.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\Properties\Resources.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\TelegraphicMoneyOrdertelegraph.rdlc" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\TelegraphicMoneyOrdertelegraph.rdlc">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\TelegraphicMoneyOrdertelegraph.resx" Description="File successfully backed up as E:\NET\svn\App-And-DataForms\ZBPMPRINT\Backup\ZBPMPRINT\TelegraphicMoneyOrdertelegraph.resx">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\ZBPMPRINT.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ZBPMPRINT" Source="ZBPMPRINT\ZBPMPRINT.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ZBPMPRINT.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ZBPMPRINT.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ZBPMPRINT" Source="ZBPMPRINT\ZBPMPRINT.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

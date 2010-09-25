@@ -1,0 +1,10 @@
+﻿<AddIn name="AppraiseUtil" author="lcg" copyright="@" url="http://www.skymapsoft.com" description="skymap soft base module" version="1.0.0" addInManagerHidden="true">
+  <Runtime>
+    <Import assembly="AppraiseMethod.dll"/>
+  </Runtime>
+  <Path name="/Workbench/Pads">
+    <Pad id="ChooseMethod" category="Main" title="评估方法" icon="Icons.Pads.BillPrint" shortcut="Control|Alt|P" class="AppraiseMethod.Method"/>
+  </Path>
+
+
+</AddIn>

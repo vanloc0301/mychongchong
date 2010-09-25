@@ -1,0 +1,262 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<!-- 获取所有我在办未委托的活动实例 -->
+	<query name="GetMyWorkItems"><![CDATA[
+		from WfAssigninst assign 
+		where assign.StaffId = ?
+		and assign.Status=1
+		and assign.Id not in 
+				(select abl.AssignId 
+				 from WfAbnormalAuditInst abl
+				 where abl.ReleaseType=0 and abl.Type=800)
+	]]></query>
+	<!-- 获取指定ID的并且其分配的任何任务均未被签收过 -->
+	<query name="GetWfResOfNotAssigned"><![CDATA[
+		from WfResinst res 
+		where res.IsAssigned=false and res.Actinst.Status=3 and res.Id in ( :resIds )  
+	]]></query>
+	<!-- 获取指定ID尚未被ACCEPT的任务 -->
+	<query name="GetNotAcceptAssignment"><![CDATA[
+		from WfAssigninst assign 
+		where assign.Status=0 and assign.Id in ( :assignIds )  
+	]]></query>
+	
+	<!-- 获取指定ID处于ACCEPTED状态的任务 -->
+	<query name="GetAcceptAssignment"><![CDATA[
+		from WfAssigninst assign 
+		where assign.Status=1 and assign.Id in ( :assignIds )  
+	]]></query>
+	
+	<!-- 获取指定ID处于ACCEPTED状态，并且没有被委托的任务 -->
+	<query name="GetAcceptAssignmentAndNotDelegated"><![CDATA[ 
+		from WfAssigninst assign 
+		where assign.Status=1 
+		and assign.Id in ( :assignIds ) 
+		and assign.Id not in 
+				(select abl.AssignId 
+				 from WfAbnormalAuditInst abl
+				 where abl.ReleaseType=0 and abl.Type=800)  
+	]]></query>
+	
+	<!-- 获取指定ID的且特殊操作未撤消的所有特殊操作日志记录实例 -->
+	<query name="GetAbnormalAuditInstOfNotRelease"><![CDATA[ 
+		from WfAbnormalAuditInst abl
+		where abl.ReleaseType=0 
+		and abl.Id in ( :AbnormalIds )
+	]]></query>
+	
+	<!-- 获取所有的状态正常的业务定义 -->
+	<query name="GetProdefs"><![CDATA[
+	from Prodef prodef
+	prodef.Status=true
+	]]></query>
+	
+	<!-- 获取所有的业务定义 -->
+	<query name="GetAllProdefs"><![CDATA[
+	from Prodef prodef
+	]]></query>
+	
+	<!--获取指定人员的能起办的流程类业务定义 -->
+	<query name="GetMyProdefs">
+        <![CDATA[
+	select new ProdefRow(prodef.Id,prodef.Name)
+	from Actdef actdef
+	full join actdef.Prodef prodef
+	where actdef.Type=0
+	and prodef.Status=true
+	and prodef.Type= :type 
+	and actdef.ParticipantId in  
+		(select part.Id from CParticipant part where
+			   (part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in ( :roles ))
+			or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in ( :depts ))
+			or (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue = :staff )
+			or (part.Id='ALLSTAFF'))
+	order by prodef.CreationDate desc
+	]]></query>
+	
+	<!--获取指定人员的能起办并能办理第一步活动的流程类业务定义 -->
+	<query name="GetMyFirstProdefs">
+       <![CDATA[
+	select new ProdefRow(prodef.Id,prodef.Name)
+	from Transition tran
+	inner join tran.From startActdef
+	inner join tran.From.Prodef prodef 
+	where startActdef.Type=0
+	and prodef.Status=true
+	and prodef.Type= 'FLW' 
+	and tran.From.ParticipantId in
+		(select part.Id from CParticipant part where
+			(part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in ( :roles ))
+		 or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in ( :depts ))
+		 or (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue = :staff )
+		 or (part.Id='ALLSTAFF'))
+	and tran.To.ParticipantId in
+		(select part.Id from CParticipant part where
+			(part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in ( :roles ))
+		 or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in ( :depts ))
+		 or (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue = :staff )
+		 or (part.Id='ALLSTAFF'))
+	order by prodef.CreationDate desc
+	]]></query>
+  <!--查询某人是否可以新建指定ID的业务 -->
+  <query name="IsCanCreateProdef">
+    <![CDATA[
+	select new ProdefRow(prodef.Id,prodef.Name)
+	from Transition tran
+	full join tran.From startActdef
+	full join tran.From.Prodef prodef 
+	where startActdef.Type=0
+	and prodef.Status=true
+	and prodef.Id= :prodefId 
+	and tran.From.ParticipantId in
+		(select part.Id from CParticipant part where
+			(part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in ( :roles ))
+		 or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in ( :depts ))
+		 or (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue = :staff )
+		 or (part.Id='ALLSTAFF'))
+	and tran.To.ParticipantId in
+		(select part.Id from CParticipant part where
+			(part.ParticipantEntity.Type='ROLE' and part.ParticipantEntity.IdValue in ( :roles ))
+		 or (part.ParticipantEntity.Type='DEPT' and part.ParticipantEntity.IdValue in ( :depts ))
+		 or (part.ParticipantEntity.Type='STAFF' and part.ParticipantEntity.IdValue = :staff )
+		 or (part.Id='ALLSTAFF'))
+	order by prodef.CreationDate desc
+	]]>
+  </query>
+	
+	<!-- 获取指定业务ID且当前用户可以签收的并未起办的业务分配 -->
+	<query name="GetFirstAssigns"><![CDATA[
+		select assign
+		from WfAssigninst assign
+		inner join assign.WfResinst res
+		where res.Actinst.Proinst.Id in ( :keys)
+		and res.Actinst.Proinst.Status=3
+		and (
+			 (assign.StaffId = :staff)
+		  or ((assign.StaffId is null or assign.StaffId='') and 
+				(
+			     (res.ParticipantType ='ROLE' and res.RoleId in ( :roles))
+		      or (res.ParticipantType ='DEPT' and res.DeptId in ( :depts))
+		      or (res.ParticipantType ='ALL')
+				)
+		     )
+		    )
+	]]></query>
+	
+	<!-- 获取业务实例所有的路由实例 -->
+	<query name="GetProinstRoute"><![CDATA[
+		from WfRouteInst route where (route.ProinstId=?)
+	]]></query>
+	
+	<!--
+	<query name="GetMyResource"><![CDATA[
+		from WfResinst res where (res.IsAssigned = false ) 
+		and (res.RoleId in(:roles) or res.DeptId in (:depts) or res.StaffId = :staff)
+	]]></query>
+	-->
+	
+	<!--获取下一步路由的查询 -->
+	<query name="GetTransFrom">from Transition tran where tran.From.Id=?</query>
+	<!-- 获取到达本步的路由查询-->
+	<query name="GetTransTo">from Transition tran where tran.To.Id=?</query>
+	<!-- 获取某定义流程的所有路由查询 -->
+	<query name="GetProdefTrans">from Transition tran where tran.To.Prodef.Id=?</query>
+	<!--得到所有我已签收的任务分配 -->
+	<query name="GetMyAcceptedAssigns"><![CDATA[
+	from WfAssigninst assign where assign.Status=1 and 
+	assign.StaffId=?
+	]]></query>
+	
+	<!--获取某人尚未结办的委托的特殊操作以解除委托-->
+	<query name="GetMyDelegates">
+    <![CDATA[
+	from WfAbnormalAuditInst abl 
+	where (abl.Type =850 or abl.Type=800)
+		and abl.ReleaseType=0 and abl.OpStaffId=? 
+	]]></query>
+  <!--获取某业务没取消的某种特殊操作-->
+  <query name="GetProinstNotReleaseAblInst">
+    <![CDATA[
+  from WfAbnormalAuditInst abl 
+	where (abl.ReleaseType=0 and abl.ProinstId=? and abl.Type=? and abl.OpStaffId=?) 
+	]]>
+  </query>
+	<!--获取任务所处状态 -->
+	<query name="GetAssignStatus"><![CDATA[
+	select a.Status
+	from WfAssigninst a
+	where a.Id=?
+	]]></query>
+	
+	<!--查询某人是否将其办理业务的权限已全部委托出去-->
+	<query name="GetMyAllDelegated"><![CDATA[
+	select abl.Id 
+	from WfAbnormalAuditInst abl 
+	where (abl.Type =850)
+		and abl.ReleaseType=0 and abl.OpStaffId=? 
+	]]></query>
+	
+	<!-- 获取指定业务ID与定义活动ID的相应ASSIGN用于退回操作 -->
+	<query name="GetSendBackToAssign"><![CDATA[
+	from WfAssigninst assign 
+	where assign.WfResinst.Actinst.Proinst.Id=? 
+	and assign.WfResinst.Actinst.ActdefId=?
+	]]></query>
+	
+	<!-- 获取指定业务ID与定义活动ID的相应活动用于退回操作 -->
+	<query name="GetActinstByProinstAndActdef"><![CDATA[
+	from Actinst actinst
+	where actinst.Proinst.Id=? 
+	and actinst.ActdefId=?
+	]]></query>
+	<!-- 获取指定到达指定活动实例ID的路由实例 -->
+	<query name="GetRouteTo"><![CDATA[
+	from WfRouteInst route
+	where route.To.Id=? 
+	]]></query>
+	
+	<!-- 获取指定人员ID与名称的请求者 -->
+	<query name="GetRequester"><![CDATA[
+	from WfRequesterinst rq
+	where rq.StaffId=? and rq.StaffName=? 
+	]]>
+	</query>
+	
+	<!-- 获取指定业务ID的业务材料 -->
+	<query name="GetProinstMaters"><![CDATA[
+	from WfProinstMater pm
+	where pm.ProinstId=? 
+	]]>
+	</query>
+	
+	<!-- 获取指定业务ID的所有附件 -->
+	<query name="GetAdjuncts"><![CDATA[
+	from WfAdjunct ad
+	where ad.ProinstId=? 
+	]]>
+	</query>
+	
+	<!-- 获取指定业务ID的业务 -->
+	<query name="GetProinst">
+    <![CDATA[
+	from Proinst p
+  left join fetch p.Actinsts a
+	where p.Id=? 
+	]]>
+	</query>
+  <!-- 获取指定业务ID与定义活动ID的相应活动用于退回操作 -->
+  <query name="GetActinstByProcessKey">
+    <![CDATA[
+	from Actinst actinst
+	where actinst.Proinst.Id=? 
+	]]>
+  </query>
+
+	<!-- 获取某业务实例所有经办人意见集合 -->
+	<query name="GetStaffNotions"><![CDATA[
+	from WfStaffNotion sn where sn.ProinstId=?
+	]]>
+	</query>
+	
+	
+</hibernate-mapping>

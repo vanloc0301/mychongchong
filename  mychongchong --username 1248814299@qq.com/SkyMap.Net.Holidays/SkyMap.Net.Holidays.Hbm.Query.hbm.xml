@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<!-- 获取所有节假日 -->
+	<query name="GetAllHolidays"><![CDATA[
+		from Holiday holi
+		order by holi.HoliDate
+	]]></query>
+	
+	<!-- 获取固定节假日 -->
+	<query name="GetAllFixHolidays"><![CDATA[
+		from Fixholiday fh
+		order by fh.HoliDate
+	]]></query>
+</hibernate-mapping>

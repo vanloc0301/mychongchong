@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfResinst,SkyMap.Net.Workflow" table="WF_WFRES">
+		<id name="Id" type="String" column="ACTINST_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="AssignRule" column="WFRES_ASSIGNRULE"
+			type="SkyMap.Net.OGM.AssignRuleType,SkyMap.Net.Security" />
+		<property name="DeptId" column="DEPT_ID" />
+		<property name="DeptName" column="DEPT_NAME" />
+		<property name="IsAssigned" column="WFRES_ISASSIGNED" />
+		<property name="ParticipantId" column="PARTICIPANT_ID" />
+		<property name="ParticipantName" column="PARTICIPANT_NAME" />
+		<property name="ParticipantType" column="PARTICIPANT_TYPE" />
+		<property name="RoleId" column="ROLE_ID" />
+		<property name="RoleName" column="ROLE_NAME" />
+		<property name="StaffId" column="STAFF_ID" />
+		<property name="StaffName" column="STAFF_NAME" />
+		<property name="SubProinstId" column="SUBPROINST_ID" />
+		<property name="SubProinstName" column="SUBPROINST_NAME" />
+		<property name="FromStaffId" column="FROMSTAFF_ID" />
+		<property name="FromStaffName" column="FROMSTAFF_NAME" />
+		<property name="FromActinstId" column="FROMACTINST_ID" />
+		<property name="FromActinstName" column="FROMACTINST_NAME" />
+		<property name="FromAssignId" column="FROMASSIGN_ID" />
+		<property name="ExcludeStaffId" column="ExcludeStaffId"/>
+		<one-to-one name="Actinst"
+			class="SkyMap.Net.Workflow.Instance.Actinst,SkyMap.Net.Workflow"
+			cascade="none" constrained="true" />
+		<bag name="Assigns" inverse="false" lazy="true"
+			cascade="delete" order-by="ASSIGN_FROMDATE" generic="true">
+			<key column="ACTINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAssigninst,SkyMap.Net.Workflow" />
+		</bag>
+	</class>
+	
+</hibernate-mapping>

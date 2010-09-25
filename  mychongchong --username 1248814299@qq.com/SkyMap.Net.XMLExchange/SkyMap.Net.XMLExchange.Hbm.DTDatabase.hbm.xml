@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.XMLExchange.Model.DTDatabase,SkyMap.Net.XMLExchange" table="DT_DATABASE">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="uuid.hex"/>
+    </id>
+    <version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="50" />
+    <property column="IsActive" name="IsActive"/>
+    <property column="Type" type="String" name="DSType" length="100" />
+    <property column="ConnectionString" type="String" name="ConnectionString" length="200" />
+    <property column="BeforeProcedure" type="String" name="BeforeProcedure" length="50" />
+    <property column="AfterProcedure" type="String" name="AfterProcedure" length="50" />
+    <property column="IfExport" name="IfExport" />
+    <property column="IfImport" name="IfImport" />
+    <many-to-one name="DTProject" column="DTPROJECT_OID" class="SkyMap.Net.XMLExchange.Model.DTProject,SkyMap.Net.XMLExchange" cascade="none"/>
+    <bag name="DTTables" inverse="false" lazy="false"
+			cascade="delete" order-by="Hiberarchy" outer-join="true" fetch="subselect">
+      <key column="DTDATABASE_OID" />
+      <one-to-many class="SkyMap.Net.XMLExchange.Model.DTTable,SkyMap.Net.XMLExchange" />
+    </bag>
+  </class>
+</hibernate-mapping> 

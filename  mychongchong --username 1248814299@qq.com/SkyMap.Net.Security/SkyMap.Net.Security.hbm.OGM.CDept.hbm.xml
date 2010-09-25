@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CDept,SkyMap.Net.Security" table="OG_DEPT">
+		<id name="Id" type="String" column="DEPT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="DEPT_NAME" />
+		<property name="Description" column="DEPT_MEM" />
+		<property name="Order" column="DEPT_ORDER" />
+		<property name="IsActive" column="DEPT_STATUS" />
+		<property name="Clazz" column="DEPT_CLASS" />
+		<property name="Type" column="DEPT_TYPE" />
+    <property name="ParentID" column="PARENTDEPT_ID" />
+		<!--<many-to-one name="Parent" column="PARENTDEPT_ID"
+			class="SkyMap.Net.OGM.CDept,SkyMap.Net.Security"
+                 cascade="none" insert="true" update="true"/>-->
+		<bag name="Children" inverse="false" lazy="false"
+			cascade="delete" generic="true" outer-join="true" fetch="subselect">
+			<key column="PARENTDEPT_ID" />
+			<one-to-many class="SkyMap.Net.OGM.CDept,SkyMap.Net.Security"/>
+		</bag>
+		<bag name="StaffDepts" inverse="false" lazy="false"
+			cascade="delete" order-by="STAFF_ORDER" generic="true" outer-join="true" fetch="subselect">
+			<key column="DEPT_ID" />
+			<one-to-many class="SkyMap.Net.OGM.CStaffDept,SkyMap.Net.Security"/>
+		</bag>
+		
+	</class>
+	
+</hibernate-mapping>

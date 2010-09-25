@@ -1,0 +1,12 @@
+﻿[assembly: System.Reflection.AssemblyVersion("0.9.16.0")]
+[assembly: System.Reflection.AssemblyProduct("置信办公应用平台")]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Reflection.AssemblyTitle("置信办公应用平台")]
+[assembly: System.Reflection.AssemblyDescription("置信办公应用平台")]
+[assembly: System.Reflection.AssemblyConfiguration("")]
+[assembly: System.Reflection.AssemblyCompany("中山市置信信息科技有限公司")]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyCopyright("@CopyRight 2007-2008")]
+[assembly: System.Reflection.AssemblyTrademark("SkyMap SoftWare")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute.DebuggingModes.Default)]
+

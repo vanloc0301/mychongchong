@@ -1,0 +1,234 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Icons.SkyMapSoftIcon.ico</ApplicationIcon>
+    <AssemblyName>SMOA</AssemblyName>
+    <AssemblyOriginatorKeyFile>SkyMapSoft.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>SkyMap.Net.Workflow.Client.AppEntry</StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>2C8D4C5DC372629FAC8C6D69842126A29D757F78</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SMOA_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>E:\devtemp\net\SkyMapSoft2.50.00\App-And-DataForms\ZQRSF\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>Debug\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>Debug\bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SMLibBuild|AnyCPU' ">
+    <OutputPath>bin\SMLibBuild\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\..\..\build\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Core, Version=2.50.0.306, Culture=neutral, PublicKeyToken=ddc169abef05e6cc, processorArchitecture=MSIL" />
+    <Reference Include="SkyMap.Net.Windows, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ddc169abef05e6cc, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="SkyMap.Net.Windows.Workflow">
+      <HintPath>..\..\..\SMBuild\SkyMap.Net.Windows.Workflow.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="SkyMap.Net.Workflow.Client">
+      <HintPath>..\..\..\SMBuild\SkyMap.Net.Workflow.Client.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Debug.cfg.xml" />
+    <None Include="Debug.bat" />
+    <None Include="Debug\bin\DataForms.config" />
+    <None Include="Debug\Data\Tools\Jzfj\Jzfj_DbC.ini" />
+    <None Include="SMOA.build" />
+    <None Include="SMOA_TemporaryKey.pfx" />
+    <None Include="Update.xml" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddInTreeSettingsHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Resources\BitmapResources.resources" />
+    <EmbeddedResource Include="MdiLayoutConfig3.xml" />
+    <EmbeddedResource Include="Resources\SplashScreen.png" />
+    <EmbeddedResource Include="Resources\StringResources.resources" />
+    <None Include="SkyMapSoft.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BulletinForm\BulletinForm\BulletinForm\BulletinForm.csproj">
+      <Project>{BB22D002-06E4-4F9E-B9D8-5DFEBDA6D362}</Project>
+      <Name>BulletinForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FDCMForm1\FDCMForm1.csproj">
+      <Project>{BEBA75BA-5EF8-4468-8EA9-40CC381B4D3B}</Project>
+      <Name>FDCMForm1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FDCMForm\FDCMForm.csproj">
+      <Project>{4197D2E4-3B1C-4C25-BF9C-00D45DC390AF}</Project>
+      <Name>FDCMForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.FDCRSFMXForm\SkyMap.Net.FDCRSFMXForm.csproj">
+      <Project>{CEE332E3-5E41-4795-B97F-ADDA09B630CE}</Project>
+      <Name>SkyMap.Net.FDCRSFMXForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.ZqrqfSjmx\SkyMap.Net.ZqrqfSjmx.csproj">
+      <Project>{DDF13E72-2FF9-4A08-A5B5-8434C983DD59}</Project>
+      <Name>SkyMap.Net.ZqrqfSjmx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZQRSF\ZQRSF.DataForms.csproj">
+      <Project>{071D7EF7-FCFB-4A82-911A-635E8251441A}</Project>
+      <Name>ZQRSF.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZSZQDataForms\ZSZQDataForms.csproj">
+      <Project>{7E3DBEB7-2C5E-4021-852C-C43CDA3273C6}</Project>
+      <Name>ZSZQDataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.FDCMX\SkyMap.Net.FDCMX.csproj">
+      <Project>{FE523A12-1236-4ABD-AD88-41548021239B}</Project>
+      <Name>SkyMap.Net.FDCMX</Name>
+    </ProjectReference>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\addins\Core.addin" />
+    <None Include="Debug\addins\datautil\DataDefine.xml" />
+    <None Include="Debug\addins\datautil\DataUtil.addin" />
+    <None Include="Debug\addins\Tzcxapp\Tzcxapp.addin" />
+    <None Include="Debug\addins\Workflow\Workflow.addin" />
+    <None Include="Debug\bin\Release.cfg.xml" />
+    <None Include="Debug\Data\options\SMOAProperties.xml" />
+    <None Include="Debug\Data\Remote\ESF.Remoting.Config" />
+    <None Include="Debug\Data\Resources\DataForms\ESF\Calc.htm" />
+    <None Include="Debug\Data\Resources\DataForms\ESF\Zqsj.htm" />
+    <None Include="Debug\Data\Resources\layouts\Default.xml" />
+    <None Include="Debug\Data\Resources\layouts\LayoutConfig.xml" />
+    <None Include="Debug\Data\Tools\Jzfj\Jzfj.exe" />
+    <None Include="Debug\Data\Tools\Tz\Tzcxapp.exe" />
+    <None Include="Debug\Data\Workflow\ControlConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\bin\Release.DataForms.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Debug\addins\datautil\SkyMap.Net.DataUtil.dll" />
+    <None Include="Debug\bin\setup\PostInstallTasks.bat" />
+    <None Include="Debug\bin\setup\PreUninstallTasks.bat" />
+    <None Include="Debug\Data\Remote\ReleaseRemoteServers.xml" />
+    <None Include="Debug\Data\Resources\DataForms\ESF\Zqcs.htm" />
+    <None Include="Debug\Data\Tools\Jzfj\bin\gtfgGIS.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Debug\addins\BillPrint\Bills.xml" />
+    <None Include="Debug\addins\BillPrint\BillPrint.addin" />
+    <Content Include="Debug\addins\SMIM\SkyMap.Net.SMIM.dll" />
+    <Content Include="Debug\addins\SMIM\SkyMap.Net.XMPP.dll" />
+    <Content Include="Debug\addins\SMIM\SkyMap.Net.XMPP.ui.dll" />
+    <Content Include="Debug\addins\SMIM\SMIM.addin" />
+    <Content Include="Debug\Data\options\SmApp-tools.xml" />
+    <Content Include="Debug\Data\Tools\Jzfj\bin\db_GisSysDll.dll" />
+    <Content Include="Debug\Data\Tools\Jzfj\JYS_JZFDJ_MAIN.exe" />
+    <Content Include="hand point.ico" />
+    <Content Include="Icons.SkyMapSoftIcon.ico" />
+    <None Include="Resources\hand point.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

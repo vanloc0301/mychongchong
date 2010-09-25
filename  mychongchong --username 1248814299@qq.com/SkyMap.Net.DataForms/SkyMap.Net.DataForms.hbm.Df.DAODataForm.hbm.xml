@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.DataForms.DAODataForm,SkyMap.Net.DataForms" table="DF_DATAFORM">
+		<id name="Id" type="String" column="FORM_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="FORM_NAME" />
+		<property name="AssemblyName" column="ASSEMBLY_NAME" />
+		<property name="Description" column="FORM_DESCRIPTION" />
+    <property name="CascadeSql" column="CascadeSql" />
+    <property column="DATASOURCE_OID" type="String" name="smDataSourceOID" access="field"/>
+		<bag name="DataControls" lazy="false" outer-join="true" cascade="delete" inverse="false" generic="true" order-by="REPLICATION_VERSION" fetch="subselect">
+			<key column="DATAFORM_ID" />
+			<one-to-many class="SkyMap.Net.DataForms.DataControl,SkyMap.Net.DataForms" />
+		</bag>
+		<bag name="BindTables" table="DF_DATAFORM_DATATABLE" outer-join="true" inverse="false" lazy="false"
+			cascade="none" generic="true" fetch="subselect">
+			<key column="FORM_ID" />
+			<many-to-many class = "SkyMap.Net.DataForms.DAODataTable,SkyMap.Net.DataForms"
+				column="DATATABLE_ID" />
+		</bag>
+    <bag name="SaveAsTos" table="DF_DATAFORM_DATASOURCE" outer-join="true" inverse="false" lazy="false"
+			cascade="delete" generic="true" fetch="subselect">
+      <key column="FORM_ID" />
+      <many-to-many class = "SkyMap.Net.DAO.SMDataSource,SkyMap.Net.DAO"
+				column="DATASOURCE_ID" />
+    </bag>
+	</class>
+</hibernate-mapping>
+

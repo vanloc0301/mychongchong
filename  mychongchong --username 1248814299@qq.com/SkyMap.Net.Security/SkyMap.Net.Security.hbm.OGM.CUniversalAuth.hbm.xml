@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CUniversalAuth,SkyMap.Net.Security" table="OG_UniversalAuth">
+		<id name="Id" type="String" column="ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="ParticipantId" column="PARTICIPANT_Id" />
+		<property name="ParticipantName" column="PARTICIPANT_NAME" />
+		<property name="ParticipantType" column="PARTICIPANT_TYPE" />
+		<property name="ParticipantIdValue" column="PARTICIPANT_IDVALUE" />
+		<property name="ResourceId" column="Resource_Id" />
+		<property name="ResourceName" column="Resource_Name" />
+		<property name="Description" column="Description" />
+		<many-to-one name="Type" column="Type_Id"
+			class="SkyMap.Net.OGM.CAuthType,SkyMap.Net.Security"
+                 cascade="none" insert="true" update="true"/>
+	</class>
+	
+</hibernate-mapping>

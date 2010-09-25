@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfRequesterinst,SkyMap.Net.Workflow" table="WF_REQUESTER">
+		<id name="Id" type="String" column="REQUESTER_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="ActinstId" column="ACTINST_ID" />
+		<property name="ActinstName" column="ACTINST_NAME" />
+		<property name="StaffId" column="STAFF_ID" />
+		<property name="StaffName" column="STAFF_NAME" />
+	</class>
+	
+</hibernate-mapping>

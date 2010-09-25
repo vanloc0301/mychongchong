@@ -1,0 +1,5 @@
+D:\pg-oa\bin\SkyMap.Net.Evaluant.dll
+D:\pg-oa\bin\SkyMap.Net.Evaluant.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Evaluant\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Evaluant\obj\Debug\SkyMap.Net.Evaluant.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Evaluant\obj\Debug\SkyMap.Net.Evaluant.pdb

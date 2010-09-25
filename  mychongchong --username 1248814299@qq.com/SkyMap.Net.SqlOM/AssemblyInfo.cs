@@ -1,0 +1,11 @@
+﻿[assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
+[assembly: System.Reflection.AssemblyDescription("SkyMap.Net.SqlOM")]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyTitle("SkyMap.Net.SqlOM")]
+[assembly: System.Reflection.AssemblyConfiguration("")]
+[assembly: System.Reflection.AssemblyCompany("中山市置信信息科技有限公司")]
+[assembly: System.Reflection.AssemblyProduct("SkyMap SoftWare")]
+[assembly: System.Reflection.AssemblyCopyright("@CopyRight 2004-2005")]
+[assembly: System.Reflection.AssemblyTrademark("SkyMap SoftWare")]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+

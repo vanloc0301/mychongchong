@@ -1,0 +1,5 @@
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\ZSHJGT\obj\Debug\ResolveAssemblyReference.cache
+D:\pg-oa\bin\物控管理系统.exe
+D:\pg-oa\bin\物控管理系统.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\ZSHJGT\obj\Debug\物控管理系统.exe
+D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\ZSHJGT\obj\Debug\物控管理系统.pdb

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Criteria.TyQueryWhere,SkyMap.Net.Criteria" table="TY_QueryWheres">
+
+		<id name="Id" column="ID" type="String" unsaved-value="null">
+			<generator class="assigned"/>
+		</id>
+		<property column="ColumnName" type="String" name="Name" length="50" />
+		<property column="TableName" type="String" name="TableName" length="50" />
+		<property column="Description" type="String" name="Description" length="50" />
+		<property column="DisplayOrder" name="DisplayOrder" />
+		<property column="ColumnType" name="ColumnType"/>
+		<property column="DefaultValue" name="DefaultValue" />
+		<many-to-one name="TyQuery" column="QueryID" class="SkyMap.Net.Criteria.TyQuery,SkyMap.Net.Criteria" />
+	</class>
+</hibernate-mapping>

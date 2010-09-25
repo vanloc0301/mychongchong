@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.Proinst,SkyMap.Net.Workflow" table="WF_PROINST">
+		<id name="Id" type="String" column="PROINST_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="CostTime" column="PROINST_COSTTIME" />
+		<property name="CreateDate" column="PROINST_CREATEDATE" />
+		<property name="Description" column="PROINST_DESCRIPTION" />
+		<property name="DueDate" column="PROINST_DUEDATE" />
+		<property name="DueTime" column="PROINST_DUETIME" />
+		<property name="EndDate" column="PROINST_ENDDATE" />
+		<property name="LastStateDate" column="PROINST_LASTSTATEDATE" />
+		<property name="Name" column="PROINST_NAME" />
+		<property name="PackageId" column="PACKAGE_ID" />
+		<property name="PackageName" column="PACKAGE_NAME" />
+		<property name="Priority" column="PROINST_PRIORITY" />
+		<property name="ProdefId" column="PRODEF_ID" />
+		<property name="ProdefName" column="PRODEF_NAME" />
+		<property name="ProdefVersion" column="PRODEF_VERSION" />
+		<property name="StartDate" column="PROINST_STARTDATE" />
+		<property name="ProjectId" column="PROJECT_ID" />
+		<property name="Status" column="PROINST_STATUS" 
+			type="SkyMap.Net.Workflow.Instance.WfStatusType,SkyMap.Net.Workflow"/>
+		<property name="Responsible" column="PROINST_RESPONSIBLE" />
+		<property name='TempletDataSetId' column="TEMPLETDATASET_ID" />
+		<property name="FormId" column="FORM_Id" />
+		<property name="Style" column="PRODEF_STYLE" />
+    <one-to-one name="ProinstWorkMem" cascade="delete"
+			class="SkyMap.Net.Workflow.Instance.ProinstWorkMem,SkyMap.Net.Workflow" />
+		<many-to-one name="Requester" 
+			column="REQUESTER_ID"
+			class="SkyMap.Net.Workflow.Instance.WfRequesterinst,SkyMap.Net.Workflow"
+			cascade="none" />
+		<bag name="Actinsts" inverse="false" cascade="delete" order-by="ACTINST_CREATEDATE" generic="true">
+			<key column="PROINST_ID"/>
+			<one-to-many class="SkyMap.Net.Workflow.Instance.Actinst,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="StateEvents" inverse="false" lazy="true"
+			cascade="delete" generic="true">
+			<key column="PROINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfStateEventAuditInst,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="WfAbnormalAudits" inverse="false" lazy="true"
+			cascade="delete" order-by="ABNORMALAUDIT_TIMESTAMP" generic="true">
+			<key column="PROINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAbnormalAuditInst,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="WfAdjuncts" lazy="true" inverse="false" cascade="delete" generic="true">
+			<key column="PROINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAdjunct,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="StaffNotions" lazy="true" inverse="false" cascade="delete" generic="true">
+			<key column="PROINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfStaffNotion,SkyMap.Net.Workflow" />
+		</bag>
+    <bag name="Maters" lazy="true" inverse="false" cascade="delete" generic="true" order-by="REPLICATION_VERSION">
+      <key column="PROINST_ID" />
+      <one-to-many class="SkyMap.Net.Workflow.Instance.WfProinstMater,SkyMap.Net.Workflow" />
+    </bag>
+	</class>
+
+  <class name="SkyMap.Net.Workflow.Instance.ProinstWorkMem,SkyMap.Net.Workflow" table="WF_PROINSTWORKMEM">
+    <id name="Id" type="String" column="PROINST_ID">
+      <generator class="assigned" />
+    </id>
+    <property name="WorkMem1" column="WORK_MEM1" />
+    <property name="WorkMem2" column="WORK_MEM2" />
+    <property name="WorkMem3" column="WORK_MEM3" />
+    <property name="WorkMem4" column="WORK_MEM4" />
+  </class>
+</hibernate-mapping>

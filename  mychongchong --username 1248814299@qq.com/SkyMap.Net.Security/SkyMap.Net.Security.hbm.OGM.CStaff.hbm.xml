@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CStaff,SkyMap.Net.Security" table="OG_STAFF">
+		<id name="Id" type="String" column="STAFF_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="STAFF_NAME" />
+		<property name="Description" column="STAFF_MEM" />
+		<property name="IsActive" column="STAFF_STATUS" />
+		<property name="Password" column="STAFF_PWD" />
+    <property name="UserName" column="USER_NAME" />
+    <property name="EMail" column="STAFF_EMAIL" />
+    <property name="EMailPassword" column="EMAIL_PASSWORD" />
+		<property name="AdminLevel" column="ADMIN_LEVEL" 
+			type="SkyMap.Net.Security.AdminLevelType,SkyMap.Net.Security"/>
+		<bag name="staffRoles" inverse="false" lazy="false" access="field"
+			cascade="delete" generic="true" outer-join="true" fetch="subselect">
+			<key column="STAFF_ID" />
+			<one-to-many class="SkyMap.Net.OGM.CStaffRole,SkyMap.Net.Security"/>
+		</bag>
+		
+		<bag name="staffDepts" inverse="false" lazy="false" access="field"
+			cascade="delete" generic="true" outer-join="true" fetch="subselect">
+			<key column="STAFF_ID" />
+			<one-to-many class="SkyMap.Net.OGM.CStaffDept,SkyMap.Net.Security"/>
+		</bag>
+		
+	</class>
+	
+</hibernate-mapping>

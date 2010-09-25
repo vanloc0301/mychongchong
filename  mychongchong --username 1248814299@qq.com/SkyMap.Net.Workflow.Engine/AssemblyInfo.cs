@@ -1,0 +1,12 @@
+﻿[assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute.DebuggingModes.EnableEditAndContinue | System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: System.Reflection.AssemblyTitle("SkyMap.Net.Workflow.Engine")]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyConfiguration("")]
+[assembly: System.Reflection.AssemblyTrademark("SkyMap SoftWare")]
+[assembly: System.Reflection.AssemblyDescription("置信工作流引擎核心库")]
+[assembly: System.Reflection.AssemblyCompany("中山市置信信息科技有限公司")]
+[assembly: System.Reflection.AssemblyProduct("SkyMap SoftWare")]
+[assembly: System.Reflection.AssemblyCopyright("@CopyRight 2004-2005")]
+

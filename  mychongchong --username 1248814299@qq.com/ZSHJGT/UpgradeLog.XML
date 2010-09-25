@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ZSHJGT">
+</Property><Property Name="Solution File" Value="d:\我的文档\Reflector\Disassembler\ZSHJGT\ZSHJGT.sln">
+</Property><Property Name="Date" Value="2010年7月2日">
+</Property><Property Name="Time" Value="12:20:51">
+</Property></Properties><Event ErrorLevel="0" Project="ZSHJGT" Source="ZSHJGT.csproj" Description="Project file successfully backed up as d:\我的文档\Reflector\Disassembler\ZSHJGT\Backup\ZSHJGT.csproj">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="AssemblyInfo.cs" Description="File successfully backed up as d:\我的文档\Reflector\Disassembler\ZSHJGT\Backup\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="Global.cs" Description="File successfully backed up as d:\我的文档\Reflector\Disassembler\ZSHJGT\Backup\Global.cs">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="SkyMap\Net\Tools\AddInSettingsHandler.cs" Description="File successfully backed up as d:\我的文档\Reflector\Disassembler\ZSHJGT\Backup\SkyMap\Net\Tools\AddInSettingsHandler.cs">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="SkyMap\Net\Workflow\Client\AppEntry.cs" Description="File successfully backed up as d:\我的文档\Reflector\Disassembler\ZSHJGT\Backup\SkyMap\Net\Workflow\Client\AppEntry.cs">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="ZSHJGT.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="ZSHJGT" Source="ZSHJGT.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="ZSHJGT" Source="ZSHJGT.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
