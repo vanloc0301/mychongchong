@@ -1,0 +1,5 @@
+C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\RuleEngine\bin\Release\RuleEngine.dll
+C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\RuleEngine\bin\Release\RuleEngine.pdb
+C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\RuleEngine\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\RuleEngine\obj\Release\RuleEngine.dll
+C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\RuleEngine\obj\Release\RuleEngine.pdb

@@ -1,0 +1,233 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7812758-27C6-430C-B6D5-2E49A7CC2557}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.SqlOM</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/SkyMap.Net.SqlOM/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\CaseClause.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\CaseTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\CaseTermCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\CompareOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\DeleteQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\DistinctModifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\FromClause.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\FromTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\FromTermType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\GroupByTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\GroupByTermCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\InsertQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\InvalidQueryException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Join.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\JoinCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\JoinCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\JoinType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\OrderByDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\OrderByTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\OrderByTermCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\ISqlOmRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\MySqlRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\OracleRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\SqlOmRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\SqlOmRenderHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\Render\SqlServerRenderer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SelectColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SelectColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SelectQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlAggregationFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlConstant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlConstantCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlDataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlExpressionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlUnion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\SqlUnionItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\UpdateQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\UpdateTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\UpdateTermCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereClause.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereClauseCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereClauseRelationship.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereTerm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereTermCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\SqlOM\WhereTermType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

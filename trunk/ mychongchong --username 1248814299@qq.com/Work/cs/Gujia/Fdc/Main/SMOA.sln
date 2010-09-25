@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMOA", "SMOA.csproj", "{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SMLibBuild|Any CPU = SMLibBuild|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.SMLibBuild|Any CPU.ActiveCfg = SMLibBuild|Any CPU
+		{6A483FE7-82C1-47CA-98D6-35FF328E2CBC}.SMLibBuild|Any CPU.Build.0 = SMLibBuild|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

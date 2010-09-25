@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfAssigninst,SkyMap.Net.Workflow" table="WF_ASSIGN">
+		<id name="Id" type="String" column="ASSIGN_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="FromDate" column="ASSIGN_FROMDATE" />
+		<property name="AcceptDate" column="ASSIGN_ACCEPTDATE" />
+		<property name="ToDate" column="ASSIGN_TODATE" />
+		<property name="StaffId" column="STAFF_ID" />
+		<property name="StaffName" column="STAFF_NAME" />
+		<property name="Status" column="ASSIGN_STATUS" 
+			type="SkyMap.Net.Workflow.Instance.AssignStatusType,SkyMap.Net.Workflow"/>
+		<property name="AbnormalStatus" column="ABNORMAL_STATUS" 
+			type="SkyMap.Net.Workflow.Instance.WfAbnormalType,SkyMap.Net.Workflow"/>
+		<one-to-one name="StaffNotion" cascade="delete"
+			class="SkyMap.Net.Workflow.Instance.WfStaffNotion,SkyMap.Net.Workflow" />
+		<many-to-one name="WfResinst" column="ACTINST_ID"
+			class="SkyMap.Net.Workflow.Instance.WfResinst,SkyMap.Net.Workflow"
+			cascade="none" />
+		<bag name="WfAbnormalAudits" inverse="false" lazy="true"
+			cascade="delete" order-by="ABNORMALAUDIT_TIMESTAMP" generic="true">
+			<key column="ASSIGN_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAbnormalAuditInst,SkyMap.Net.Workflow" />
+		</bag>
+		
+	</class>
+	
+</hibernate-mapping>

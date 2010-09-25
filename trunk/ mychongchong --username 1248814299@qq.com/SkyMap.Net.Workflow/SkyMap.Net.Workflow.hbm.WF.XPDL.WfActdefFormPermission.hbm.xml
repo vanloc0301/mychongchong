@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.XPDL.ExtendElement.WfActdefFormPermission,SkyMap.Net.Workflow" table="WF_ACTDEFFORMPERMISSION">
+		<id name="Id" type="String" column="ACTDEF_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		
+        <property name="UnableFrame" column="UNABLE_FRAME" />
+        <property name="InVisibleFrame" column="INVISIBLE_FRAME" />
+        <property name="MustFields" column="MUST_FIELDS" />
+        <property name="PageIndex" column="PAGE_INDEX" />
+        <property name="DaoDataFormId" column="FORM_ID" />
+		<property name="DaoDataFormName" column="FORM_NAME" />
+        <property name="PrintSetId" column="PRINTSET_ID" />
+        <property name="PrintSetName" column="PRINTSET_NAME" />
+        <property name="EnableDelete" column="ENABLE_DELETE" />
+        <one-to-one name="Actdef"
+			class="SkyMap.Net.Workflow.XPDL.Actdef,SkyMap.Net.Workflow"
+			cascade="none" constrained="true" />
+        
+	</class>
+	
+</hibernate-mapping>
+
+

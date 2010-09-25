@@ -1,0 +1,14 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\SpeedTest.exe
+bin\Debug\SpeedTest.pdb
+bin\Debug\RuleEngine.dll
+bin\Debug\RuleEngine.pdb
+obj\Debug\SpeedTest.exe
+obj\Debug\SpeedTest.pdb
+bin\Release\SpeedTest.exe
+bin\Release\SpeedTest.pdb
+bin\Release\RuleEngine.dll
+bin\Release\RuleEngine.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\SpeedTest.exe
+obj\Release\SpeedTest.pdb

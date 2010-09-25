@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controlConfig>
+	<tlResult>
+		<box name="收件箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Sj,SkyMap.Net.Windows.Workflow" 
+			queryName="GetSj" idField="ASSIGN_ID" 
+			queryParameters="Staff,Roles,Depts,Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="到达时间" fieldName="ASSIGN_FROMDATE" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="在办箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Zb,SkyMap.Net.Windows.Workflow" 
+			queryName="GetZb" idField="ASSIGN_ID" 
+			queryParameters="Staff,Staff,Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="到达时间" fieldName="ASSIGN_FROMDATE" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="发件箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Fj,SkyMap.Net.Windows.Workflow" queryName="GetFj" idField="ACTINST_ID" queryParameters="Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="下一步工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="发件时间" fieldName="ACTINST_CREATEDATE" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="登记箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Dj,SkyMap.Net.Windows.Workflow" queryName="GetDj" idField="PROINST_ID" >
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="-1" />
+		
+		</box>
+		<box name="退回箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Back,SkyMap.Net.Windows.Workflow" queryName="GetBack" idField="ASSIGN_ID" queryParameters="Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="到达时间" fieldName="ASSIGN_FROMDATE" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="挂起箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Suspend,SkyMap.Net.Windows.Workflow" queryName="GetSuspend" idField="ABNORMALAUDIT_ID" queryParameters="Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="挂起时间" fieldName="ABNORMALAUDIT_TIMESTAMP" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="回收箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Abort,SkyMap.Net.Windows.Workflow" queryName="GetAbort" idField="ABNORMALAUDIT_ID" queryParameters="Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="回收时间" fieldName="ABNORMALAUDIT_TIMESTAMP" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="退件箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Terminate,SkyMap.Net.Windows.Workflow" queryName="GetTerminate" idField="ABNORMALAUDIT_ID" queryParameters="Staff">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="当前工作" fieldName="ACTINST_NAME" visibleIndex="3" />
+			<col caption="退件时间" fieldName="ABNORMALAUDIT_TIMESTAMP" visibleIndex="4" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="5" />
+		</box>
+		<box name="通用查询" 
+			class="SkyMap.Net.Workflow.Client.Box.WfGeneralCriteria,SkyMap.Net.Windows.Workflow" queryName="" idField="PROINST_ID" queryParameters="">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			
+		</box>
+		<box name="业务查询" 
+			class="SkyMap.Net.Workflow.Client.Box.WfYwCriteria,SkyMap.Net.Windows.Workflow" queryName="WfYwCriteria" idField="PROINST_ID" queryParameters="Where">
+			<col caption="业务编号" fieldName="PROJECT_ID" visibleIndex="1" />
+			<col caption="业务名称" fieldName="PROINST_NAME" visibleIndex="2" />
+			<col caption="开始时间" fieldName="PROINST_STARTDATE" visibleIndex="3" 
+				formatType = "DateTime" formatString = "yyyy年MM月dd日" />
+			<col caption="业务信息" fieldName="WORK_MEM1" visibleIndex="4" />
+		</box>
+		<box name="统计箱" 
+			class="SkyMap.Net.Workflow.Client.Box.Static,SkyMap.Net.Windows.Workflow">
+		</box>
+	</tlResult>
+	<navBar>
+		<group caption="业务审办" styleBackgroundName = "group1"
+			image="Workflow.NavBar.gongzuotai">
+			<item caption="收件箱" image="Workflow.Box.Accept" tag="SkyMap.Net.Workflow.Client.Box.Sj,SkyMap.Net.Windows.Workflow"/>
+			<item caption="在办箱" image="Workflow.NavBar.Zb" tag="SkyMap.Net.Workflow.Client.Box.Zb,SkyMap.Net.Windows.Workflow" isDefault="true"/>
+			<item caption="发件箱" image="Workflow.NavBar.Fj" tag="SkyMap.Net.Workflow.Client.Box.Fj,SkyMap.Net.Windows.Workflow"/>
+			<item caption="登记箱" image="Workflow.NavBar.Dj" tag="SkyMap.Net.Workflow.Client.Box.Dj,SkyMap.Net.Windows.Workflow"/>
+			<item caption="退回箱" image="Workflow.Box.SendBack" tag="SkyMap.Net.Workflow.Client.Box.Back,SkyMap.Net.Windows.Workflow"/>
+			<item caption="挂起箱" image="Workflow.Box.Suspend" tag="SkyMap.Net.Workflow.Client.Box.Suspend,SkyMap.Net.Windows.Workflow"/>
+			<item caption="回收箱" image="Workflow.Box.Abort" tag="SkyMap.Net.Workflow.Client.Box.Abort,SkyMap.Net.Windows.Workflow"/>
+			<item caption="退件箱" image="Workflow.Box.Terminate" tag="SkyMap.Net.Workflow.Client.Box.Terminate,SkyMap.Net.Windows.Workflow"/>
+		</group>
+		<group caption="查询统计" styleBackgroundName = "group2"
+			image="Workflow.NavBar.chaxuntongji" >
+			<item caption="业务查询" image="Workflow.Box.WfYwCriteria" tag="SkyMap.Net.Workflow.Client.Box.WfYwCriteria,SkyMap.Net.Windows.Workflow"/>
+			<item caption="通用查询" image="Workflow.NavBar.TyCriteria" tag="SkyMap.Net.Workflow.Client.Box.WfGeneralCriteria,SkyMap.Net.Windows.Workflow"/>
+			<item caption="统计箱" image="Workflow.NavBar.Static" tag="SkyMap.Net.Workflow.Client.Box.Static,SkyMap.Net.Windows.Workflow"/>			
+		</group>
+	</navBar>
+</controlConfig> 

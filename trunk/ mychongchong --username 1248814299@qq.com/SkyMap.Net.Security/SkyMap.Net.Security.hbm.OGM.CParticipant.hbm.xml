@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CParticipant,SkyMap.Net.Security" table="WF_PARTICIPANT">
+		<id name="Id" type="String" column="PARTICIPANT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="PARTICIPANT_NAME" />
+		<property name="Description" column="PARTICIPANT_DESCRIPTION" />
+    <component name="ParticipantEntity">
+      <property name="Type" column="PARTICIPANT_TYPE" />
+      <property name="IdValue" column="PARTICIPANT_IDVALUE" />
+    </component>
+		<property name="AssignRule" column="PARTICIPANT_ASSIGNRULE" 
+			type="SkyMap.Net.OGM.AssignRuleType,SkyMap.Net.Security"/>
+		
+	</class>
+</hibernate-mapping>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Criteria.TySearchx,SkyMap.Net.Criteria" table="TY_SearchX">
+
+		<id name="Id" column="ID" type="String" unsaved-value="null">
+			<generator class="assigned"/>
+		</id>
+		<property column="Name" type="String" name="Name" not-null="true" length="50" />
+		<property column="Description" type="String" name="Description" length="50" />
+		<property column="TableName" type="String" name="TableName" length="50" />
+    <property column="PreCondition" type="String" name="PreCondition" length="500" />
+		<property column="ISMANY" type="Boolean" name="Ismany" />
+		<property column="ZH_ID" type="Int32" name="ZhId" />
+    <property column="DATASOURCE_OID" type="String" name="smDataSourceOID" access="field"/>
+    <!--<many-to-one name="DataSource" column="DATASOURCE_OID" class="SkyMap.Net.DAO.SMDataSource,SkyMap.Net.DAO" />-->
+    <bag name="TyFieldsSelects" lazy="false" cascade="delete" inverse="false" order-by="Display_Index" generic="true" outer-join="true" fetch="subselect">
+			<key column="SearchX_ID" />
+			<one-to-many class="SkyMap.Net.Criteria.TyFieldsSelect,SkyMap.Net.Criteria" />
+		</bag>
+		<bag name="TyFilters" lazy="false" cascade="delete" inverse="false" generic="true" outer-join="true" fetch="subselect">
+			<key column="SearchX_ID" />
+			<one-to-many class="SkyMap.Net.Criteria.TyFilter,SkyMap.Net.Criteria" />
+		</bag>
+		<bag name="TySearchtables" lazy="false" cascade="delete" inverse="false" generic="true" outer-join="true" fetch="subselect">
+			<key column="SEARCHX_ID" />
+			<one-to-many class="SkyMap.Net.Criteria.TySearchtable,SkyMap.Net.Criteria" />
+		</bag>
+		
+	</class>
+</hibernate-mapping>

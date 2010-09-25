@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\RuleEngine.dll
+bin\Debug\RuleEngine.pdb
+obj\Debug\RuleEngine.dll
+obj\Debug\RuleEngine.pdb

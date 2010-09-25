@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<!-- 获取所有的表单 -->
+	<query name="GetDataForms"><![CDATA[
+	from DAODataForm
+	]]>
+	</query>
+	
+	<!-- 获取所有的数据集配置 -->
+	<query name="GetDataSets"><![CDATA[
+	from DAODataSet
+	]]>
+	</query>
+	
+	<!-- 获取所有的报表 -->
+	<query name="GetPrintSets"><![CDATA[
+	from PrintSet
+	]]>
+	</query>
+	
+	<!-- 获取所有参与的者的表单权限 -->
+	<query name="GetParticipantFormPermissions"><![CDATA[
+	from ParticipantFormPermission
+	]]>
+	</query>
+	
+	<!-- 获取与常用语控件关联的且是当前用户设置的常用语 -->
+	<query name="GetCommonDictionsByPathAndStaff"><![CDATA[
+	from CommonDiction cd
+	where (len(cd.Path)=0 and len(cd.StaffId)=0) or (cd.Path = ? and cd.StaffId = ?)
+  order by cd.StaffId
+	]]>
+	</query>
+</hibernate-mapping>
+

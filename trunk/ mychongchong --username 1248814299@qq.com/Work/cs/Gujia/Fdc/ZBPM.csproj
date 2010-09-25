@@ -1,0 +1,506 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD566A18-17E2-42AB-9798-A766889FDDD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZBPM</RootNamespace>
+    <AssemblyName>ZBPM</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>http://localhost/ZBPM/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\pg-oa\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft.NET\Primary Interop Assemblies\adodb.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Developer Express .NET v8.2\Sources\DevExpress.DLL\DevExpress.Data.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Developer Express .NET v8.2\Sources\DevExpress.DLL\DevExpress.Utils.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Developer Express .NET v8.2\Sources\DevExpress.DLL\DevExpress.XtraEditors.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Developer Express .NET v8.2\Sources\DevExpress.DLL\DevExpress.XtraGrid.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichTextEdit.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\DevExpress.XtraRichTextEdit.v8.2\8.2.2.0__49d90c14d24271b5\DevExpress.XtraRichTextEdit.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Word, Version=8.3.0.0, Culture=neutral">
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="RuleEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\RuleEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Taramon.Exceller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\Taramon.Exceller.dll</HintPath>
+    </Reference>
+    <Reference Include="WordDataSetTemplateEditorlhm, Version=1.0.2490.15061, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\dll\WordDataSetTemplateEditorlhm.dll</HintPath>
+    </Reference>
+    <Reference Include="Yogesh.ExcelXml, Version=3.6.614.1455, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\Yogesh.ExcelXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Yogesh.Extensions, Version=1.16.524.1306, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\..\..\pg-oa\bin\Yogesh.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppraiseClass.cs" />
+    <Compile Include="BaseConvert.cs" />
+    <Compile Include="ExtendedWebBrowser2\BrowserCommands.cs" />
+    <Compile Include="ExtendedWebBrowser2\BrowserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\BrowserControl.Designer.cs">
+      <DependentUpon>BrowserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\BrowserExtendedNavigatingEventArgs.cs" />
+    <Compile Include="ExtendedWebBrowser2\CommandStateEventArgs.cs" />
+    <Compile Include="ExtendedWebBrowser2\ExtendedWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\NativeMethods.cs" />
+    <Compile Include="ExtendedWebBrowser2\NotifyCollection.cs" />
+    <Compile Include="ExtendedWebBrowser2\OpenUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\OpenUrlForm.Designer.cs">
+      <DependentUpon>OpenUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\PopupBlockerFilterLevel.cs" />
+    <Compile Include="ExtendedWebBrowser2\ScriptError.cs" />
+    <Compile Include="ExtendedWebBrowser2\ScriptErrorManager.cs" />
+    <Compile Include="ExtendedWebBrowser2\ScriptErrorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\ScriptErrorWindow.Designer.cs">
+      <DependentUpon>ScriptErrorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedWebBrowser2\SettingsHelper.cs" />
+    <Compile Include="ExtendedWebBrowser2\TextChangedEventArgs.cs" />
+    <Compile Include="ExtendedWebBrowser2\UnsafeNativeMethods.cs" />
+    <Compile Include="ExtendedWebBrowser2\UrlContext.cs" />
+    <Compile Include="ExtendedWebBrowser2\WindowManager.cs" />
+    <Compile Include="FJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FJ.Designer.cs">
+      <DependentUpon>FJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FjBb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FjBb.Designer.cs">
+      <DependentUpon>FjBb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fjds.cs">
+      <DependentUpon>Fjds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Fjds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fjds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fj\AbstractFj.cs" />
+    <Compile Include="fj\ifj.cs" />
+    <Compile Include="fj\ifjext.cs" />
+    <Compile Include="fj\llsz.cs" />
+    <Compile Include="fj\Rjl.cs" />
+    <Compile Include="GujiaDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GujiaDataForm.Designer.cs">
+      <DependentUpon>GujiaDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gujiaDataSet.cs">
+      <DependentUpon>gujiaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="gujiaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gujiaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gujiaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gujiaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fj\Jglx.cs" />
+    <Compile Include="PhotoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoManager.Designer.cs">
+      <DependentUpon>PhotoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="wk1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wk.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Wk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wk.Designer.cs">
+      <DependentUpon>Wk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wk\wcexcel.cs" />
+    <Compile Include="yd\iyd.cs" />
+    <Compile Include="yd\yd.cs" />
+    <Compile Include="yd\ydconst.cs" />
+    <Compile Include="ZBPMReportJPWTZ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZBPMReportJPWTZ.Designer.cs">
+      <DependentUpon>ZBPMReportJPWTZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RoleSecurityCommand.cs" />
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SupportHelper.cs" />
+    <Compile Include="ZBPMDataForms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZBPMDataForms.Designer.cs">
+      <DependentUpon>ZBPMDataForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZBPMReportJQYW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZBPMReportJQYW.Designer.cs">
+      <DependentUpon>ZBPMReportJQYW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZBPMReportCJYW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZBPMReportCJYW.Designer.cs">
+      <DependentUpon>ZBPMReportCJYW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZBPMReportZBYW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZBPMReportZBYW.Designer.cs">
+      <DependentUpon>ZBPMReportZBYW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zszbpmDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zszbpmDataSet.xsd</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExtendedWebBrowser2\BrowserControl.resx">
+      <DependentUpon>BrowserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FJ.resx">
+      <DependentUpon>FJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FjBb.resx">
+      <DependentUpon>FjBb.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GujiaDataForm.resx">
+      <DependentUpon>GujiaDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportZBYW.rdlc" />
+    <EmbeddedResource Include="Wk.resx">
+      <DependentUpon>Wk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZBPMReportJPWTZ.resx">
+      <DependentUpon>ZBPMReportJPWTZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCJYW.rdlc" />
+    <EmbeddedResource Include="ReportJQYW.rdlc" />
+    <EmbeddedResource Include="ZBPMDataForms.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ZBPMDataForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZBPMReportCJYW.resx">
+      <DependentUpon>ZBPMReportCJYW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZBPMReportJQYW.resx">
+      <DependentUpon>ZBPMReportJQYW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZBPMReportZBYW.resx">
+      <DependentUpon>ZBPMReportZBYW.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Fjds.xsc">
+      <DependentUpon>Fjds.xsd</DependentUpon>
+    </None>
+    <None Include="Fjds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fjds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Fjds.xss">
+      <DependentUpon>Fjds.xsd</DependentUpon>
+    </None>
+    <None Include="gujiaDataSet.xsc">
+      <DependentUpon>gujiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gujiaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gujiaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="gujiaDataSet.xss">
+      <DependentUpon>gujiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gujiaDataSet1.xsc">
+      <DependentUpon>gujiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="gujiaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gujiaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gujiaDataSet1.xss">
+      <DependentUpon>gujiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="wk.xsc">
+      <DependentUpon>wk.xsd</DependentUpon>
+    </None>
+    <None Include="wk.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>wk1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="wk.xss">
+      <DependentUpon>wk.xsd</DependentUpon>
+    </None>
+    <None Include="zszbpmDataSet.xsc">
+      <DependentUpon>zszbpmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zszbpmDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zszbpmDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zszbpmDataSet.xss">
+      <DependentUpon>zszbpmDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.DataForms\SkyMap.Net.DataForms.csproj">
+      <Project>{D849C043-D533-4B5C-87AC-28115B16E539}</Project>
+      <Name>SkyMap.Net.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Windows.DataForms\SkyMap.Net.Windows.DataForms.csproj">
+      <Project>{C29B5623-CE8E-4A16-B210-53D4067EBB75}</Project>
+      <Name>SkyMap.Net.Windows.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Windows.Workflow\SkyMap.Net.Windows.Workflow.csproj">
+      <Project>{08B692EA-C07C-4F47-9B3C-5760866082A5}</Project>
+      <Name>SkyMap.Net.Windows.Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
+      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
+      <Name>SkyMap.Net.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Workflow.Client\SkyMap.Net.Workflow.Client.csproj">
+      <Project>{217987FF-FFC1-43A0-9BF4-1160E9D6A90E}</Project>
+      <Name>SkyMap.Net.Workflow.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Workflow.Engine\SkyMap.Net.Workflow.Engine.csproj">
+      <Project>{FC50239B-6D25-48C0-AD92-DD3EE9D01A3F}</Project>
+      <Name>SkyMap.Net.Workflow.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\SkyMap.Net.Workflow\SkyMap.Net.Workflow.csproj">
+      <Project>{59C4907B-30F8-4616-90ED-8A909115771F}</Project>
+      <Name>SkyMap.Net.Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="ExcelOper\ExcelOper.csproj">
+      <Project>{3DED9BCA-1A80-4524-A0AE-46977E630959}</Project>
+      <Name>ExcelOper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Map2PicTool">
+      <Guid>{EE7370BB-D642-492E-A737-B43174FBCE0A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="PatchForCRHTBH">
+      <Guid>{643C8776-361C-4656-B232-8E725D563AA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

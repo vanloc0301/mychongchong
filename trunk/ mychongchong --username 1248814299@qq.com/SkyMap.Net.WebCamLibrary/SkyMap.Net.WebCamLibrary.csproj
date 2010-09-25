@@ -1,0 +1,44 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="95a43d91-03ad-48d8-9f70-4ab15f5435e1">
+    <Build>
+      <Settings AssemblyName="SkyMap.Net.WebCamLibrary" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="SkyMap.Net.Windows" AssemblyName="SkyMap.Net.Windows" />
+        <Reference Name="SkyMap.Net.Core" AssemblyName="SkyMap.Net.Core" />
+        <Reference Name="SkyMap.Net.Network" AssemblyName="SkyMap.Net.Network" />
+        <Reference Name="DirectX.Capture" AssemblyName="DirectX.Capture" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="System.Data" AssemblyName="System.Data" />
+        <Reference Name="SkyMap.Net.DataForms" AssemblyName="SkyMap.Net.DataForms" />
+        <Reference Name="SkyMap.Net.DAO" AssemblyName="SkyMap.Net.DAO" />
+        <Reference Name="SkyMap.Net.Workflow.Client" AssemblyName="SkyMap.Net.Workflow.Client" />
+        <Reference Name="SkyMap.Net.Configuration" AssemblyName="SkyMap.Net.Configuration" />
+        <Reference Name="VBWebCamSocket" AssemblyName="VBWebCamSocket" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\Properties\Resources.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\YLiveShow.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\ZQESFWebCamReportVistor.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\CapturePicCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\ZrfCapturePicCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\SrfCapturePicCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\LiveShowOkCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\LiveShow.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\ProjectCaptureCommand2.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\WebCamLibrary\AutoStartSMTrayCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap.Net.WebCamLibrary.LiveShow.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="SkyMap.Net.WebCamLibrary.YLiveShow.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="SkyMap.Net.WebCamLibrary.Properties.Resources.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

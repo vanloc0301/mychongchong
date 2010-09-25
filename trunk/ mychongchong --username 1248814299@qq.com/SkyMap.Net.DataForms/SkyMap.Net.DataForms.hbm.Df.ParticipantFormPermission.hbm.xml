@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.DataForms.ParticipantFormPermission,SkyMap.Net.DataForms" 
+		table="WF_PARTICIPANTFORMPERMISSION">
+		<id name="Id" type="String" column="PERM_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		
+        <property name="UnableFrame" column="UNABLE_FRAME" />
+        <property name="InVisibleFrame" column="INVISIBLE_FRAME" />
+        <property name="PageIndex" column="PAGE_INDEX" />
+		    <property name="DaoDataFormId" column="FORM_ID" />
+		    <property name="DaoDataFormName" column="FORM_NAME" />
+        <property name="PrintSetId" column="PRINTSET_ID" />
+        <property name="PrintSetName" column="PRINTSET_NAME" />
+		<property name="ParticipantId" column="PARTICIPANT_ID" />
+		<property name="ParticipantName" column="PARTICIPANT_Name" />
+		<property name="EnableDelete" column="ENABLE_DELETE" />
+        
+	</class>
+</hibernate-mapping>
+
+

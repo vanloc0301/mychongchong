@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfStaffNotion,SkyMap.Net.Workflow" table="WF_STAFFNOTION">
+		<id name="AssignId" type="String" column="ASSIGN_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="ProinstId" column="PROINST_ID" />
+		<property name="Content" column="NOTION_CONTENT" />
+		<property name="StaffId" column="STAFF_ID" />
+		<property name="StaffName" column="STAFF_NAME" />
+		<property name="Date" column="NOTION_DATE" />
+		
+	</class>
+	
+</hibernate-mapping>

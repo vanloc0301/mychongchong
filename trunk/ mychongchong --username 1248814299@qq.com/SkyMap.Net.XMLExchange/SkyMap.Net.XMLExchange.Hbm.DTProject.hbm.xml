@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.XMLExchange.Model.DTProject,SkyMap.Net.XMLExchange" table="DT_PROJECT">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="uuid.hex"/>
+    </id>
+    <version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="50" />
+    <property column="IsActive" name="IsActive"/>
+    <property column="MapXMLElementName" type="String" name="MapXMLElementName" length="50" />
+    <property column="Templet" name="Templet"/>
+    <property column="ProdefID" name="ProdefID"/>
+    <bag name="DTDatabases" inverse="false" lazy="false"
+			cascade="delete" outer-join="true" fetch="subselect">
+      <key column="DTPROJECT_OID" />
+      <one-to-many class="SkyMap.Net.XMLExchange.Model.DTDatabase,SkyMap.Net.XMLExchange" />
+    </bag>
+  </class>
+</hibernate-mapping> 

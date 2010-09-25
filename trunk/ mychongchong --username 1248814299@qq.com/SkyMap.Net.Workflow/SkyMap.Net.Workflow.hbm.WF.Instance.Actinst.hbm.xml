@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.Actinst,SkyMap.Net.Workflow" table="WF_ACTINST">
+		<id name="Id" type="String" column="ACTINST_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="CostTime" column="ACTINST_COSTTIME" />
+		<property name="CreateDate" column="ACTINST_CREATEDATE" />
+		<property name="Description" column="ACTINST_DESCRIPTION" />
+		<property name="DueDate" column="ACTINST_DUEDATE" />
+		<property name="DueTime" column="ACTINST_DUETIME" />
+		<property name="EndDate" column="ACTINST_ENDDATE" />
+		<property name="LastStateDate" column="ACTINST_LASTSTATEDATE" />
+		<property name="Name" column="ACTINST_NAME" />
+		<property name="PackageId" column="PACKAGE_ID" />
+		<property name="PackageName" column="PACKAGE_NAME" />
+		<property name="Priority" column="ACTINST_PRIORITY" />
+		<property name="ProdefId" column="PRODEF_ID" />
+		<property name="ProdefName" column="PRODEF_NAME" />
+		<property name="ProdefVersion" column="PRODEF_VERSION" />
+		<property name="StartDate" column="ACTINST_STARTDATE" />
+		<property name="Status" column="ACTINST_STATUS" 
+			type="SkyMap.Net.Workflow.Instance.WfStatusType,SkyMap.Net.Workflow"/>
+		<property name="ActdefId" column="ACTDEF_ID" />
+		<property name="ActdefName" column="ACTDEF_Name" />
+		<property name="FromCount" column="ACTINST_FROMCOUNT" />
+		<property name="ToCount" column="ACTINST_TOCOUNT" />
+		<property name="Type" column="ACTDEF_TYPE" 
+			type="SkyMap.Net.Workflow.XPDL.ActdefType,SkyMap.Net.Workflow"/>
+		<many-to-one name="Proinst" column="PROINST_ID" 
+			class="SkyMap.Net.Workflow.Instance.Proinst,SkyMap.Net.Workflow" cascade="save-update"/>
+		<one-to-one name="WfResinst" cascade="delete"
+			class="SkyMap.Net.Workflow.Instance.WfResinst,SkyMap.Net.Workflow" />
+		<set name="RouteFromMe" inverse="false" lazy="true"
+			cascade="delete" generic="true">
+			<key column="ROUTEINST_FROM" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfRouteInst,SkyMap.Net.Workflow" />
+		</set>
+		<set name="RouteToMe" inverse="false" lazy="true"
+			cascade="delete" generic="true">
+			<key column="ROUTEINST_TO" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfRouteInst,SkyMap.Net.Workflow"/>
+		</set>
+		<bag name="StateEvents" inverse="false" lazy="true"
+			cascade="delete" generic="true">
+			<key column="ACTINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfStateEventAuditInst,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="WfAbnormalAudits" inverse="false" lazy="true"
+			cascade="delete" order-by="ABNORMALAUDIT_TIMESTAMP" generic="true">
+			<key column="ACTINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAbnormalAuditInst,SkyMap.Net.Workflow" />
+		</bag>
+		<bag name="Assigns" inverse="false" lazy="true"
+			cascade="delete" order-by="ASSIGN_FROMDATE" generic="true">
+			<key column="ACTINST_ID" />
+			<one-to-many class="SkyMap.Net.Workflow.Instance.WfAssigninst,SkyMap.Net.Workflow" />
+		</bag>
+	</class>
+	
+</hibernate-mapping>

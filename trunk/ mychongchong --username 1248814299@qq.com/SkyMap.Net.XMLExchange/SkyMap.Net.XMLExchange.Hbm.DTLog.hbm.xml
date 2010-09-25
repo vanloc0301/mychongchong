@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.XMLExchange.Model.DTLog,SkyMap.Net.XMLExchange" table="DT_LOG">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="uuid.hex"/>
+    </id>
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="500" />
+    <property column="Time" name="Time"/>
+    <property column="ProjectID" type="String" name="ProjectID" length="50" />
+    <property column="FileName" name="FileName"/>
+    <property column="IsOK" name="IsOK"/>
+  </class>
+</hibernate-mapping> 

@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CStaffRole,SkyMap.Net.Security" table="OG_STAFFROLE">
+		<id name="Id" type="String" column="ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="IsActive" column="STAFF_STATUS" />
+		<property name="Description" column="STAFFROLE_MEM" />
+		<property name="Order" column="STAFF_ORDER" />
+    <property name="StaffID" column="STAFF_ID" />
+    <property name="RoleID" column="ROLE_ID" />
+		<!--<many-to-one name="Staff"
+					class="SkyMap.Net.OGM.CStaff,SkyMap.Net.Security"
+        column="STAFF_ID" cascade="none" insert="true" update="true"/>
+    <many-to-one name="Role" cascade="none" insert="true" update="true"
+					class="SkyMap.Net.OGM.CRole,SkyMap.Net.Security"
+        column="ROLE_ID" />-->
+  </class>
+	
+</hibernate-mapping>

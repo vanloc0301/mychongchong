@@ -1,0 +1,41 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="c8c14460-a3e0-4033-8447-aeb7eee3995e">
+    <Build>
+      <Settings AssemblyName="SkyMap.Net.GTOA.BillPrint" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="SkyMap.Net.Windows" AssemblyName="SkyMap.Net.Windows" />
+        <Reference Name="SkyMap.Net.Core" AssemblyName="SkyMap.Net.Core" />
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="System.Xml" AssemblyName="System.Xml" />
+        <Reference Name="SkyMap.Net.DataForms" AssemblyName="SkyMap.Net.DataForms" />
+        <Reference Name="System.Data" AssemblyName="System.Data" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="SkyMap.Net.Windows.Workflow" AssemblyName="SkyMap.Net.Windows.Workflow" />
+        <Reference Name="SkyMap.Net.Workflow.Client" AssemblyName="SkyMap.Net.Workflow.Client" />
+        <Reference Name="SkyMap.Net.DAO" AssemblyName="SkyMap.Net.DAO" />
+        <Reference Name="SkyMap.Net.ZSTax" AssemblyName="SkyMap.Net.ZSTax" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="SkyMap.Net.Security" AssemblyName="SkyMap.Net.Security" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\BillBrowser.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\BillNode.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\IntXEditCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\IntYEditCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\StaffEditCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\DeptEditCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\IsCancelSelectedItemAfterPrint.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\GTOA\BillPrint\IsCheckRegisterTypeBeforePrint.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\ZSTax\Commands\GTOAAcceptCommand.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\ZSTax\Commands\GTOAPassToNext.cs" SubType="Code" BuildAction="Compile" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

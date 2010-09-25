@@ -1,0 +1,730 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="gujiaDataSet" targetNamespace="http://tempuri.org/gujiaDataSet.xsd" xmlns:mstns="http://tempuri.org/gujiaDataSet.xsd" xmlns="http://tempuri.org/gujiaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zszbpmoldConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zszbpmoldConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ZBPM.Properties.Settings.GlobalReference.Default.zszbpmoldConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="yw_gujia_bTableAdapter" GeneratorDataComponentClassName="yw_gujia_bTableAdapter" Name="yw_gujia_b" UserDataComponentName="yw_gujia_bTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zszbpmoldConnectionString1 (Settings)" DbObjectName="zszbpmold.dbo.yw_gujia_b" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[yw_gujia_b] WHERE (([Bid] = @Original_Bid) AND ((@IsNull_PROJECT_ID = 1 AND [PROJECT_ID] IS NULL) OR ([PROJECT_ID] = @Original_PROJECT_ID)) AND ((@IsNull_报告号 = 1 AND [报告号] IS NULL) OR ([报告号] = @Original_报告号)) AND ((@IsNull_报告名 = 1 AND [报告名] IS NULL) OR ([报告名] = @Original_报告名)) AND ((@IsNull_评估类型 = 1 AND [评估类型] IS NULL) OR ([评估类型] = @Original_评估类型)) AND ((@IsNull_土地证号 = 1 AND [土地证号] IS NULL) OR ([土地证号] = @Original_土地证号)) AND ((@IsNull_土地使用者 = 1 AND [土地使用者] IS NULL) OR ([土地使用者] = @Original_土地使用者)) AND ((@IsNull_镇区 = 1 AND [镇区] IS NULL) OR ([镇区] = @Original_镇区)) AND ((@IsNull_座落 = 1 AND [座落] IS NULL) OR ([座落] = @Original_座落)) AND ((@IsNull_土地用途 = 1 AND [土地用途] IS NULL) OR ([土地用途] = @Original_土地用途)) AND ((@IsNull_土地使用权类型 = 1 AND [土地使用权类型] IS NULL) OR ([土地使用权类型] = @Original_土地使用权类型)) AND ((@IsNull_土地终止日期 = 1 AND [土地终止日期] IS NULL) OR ([土地终止日期] = @Original_土地终止日期)) AND ((@IsNull_土地使用权面积 = 1 AND [土地使用权面积] IS NULL) OR ([土地使用权面积] = @Original_土地使用权面积)) AND ((@IsNull_土地分摊面积 = 1 AND [土地分摊面积] IS NULL) OR ([土地分摊面积] = @Original_土地分摊面积)) AND ((@IsNull_房地产权证 = 1 AND [房地产权证] IS NULL) OR ([房地产权证] = @Original_房地产权证)) AND ((@IsNull_房地产共有用证 = 1 AND [房地产共有用证] IS NULL) OR ([房地产共有用证] = @Original_房地产共有用证)) AND ((@IsNull_房屋所有权来源 = 1 AND [房屋所有权来源] IS NULL) OR ([房屋所有权来源] = @Original_房屋所有权来源)) AND ((@IsNull_房屋用途 = 1 AND [房屋用途] IS NULL) OR ([房屋用途] = @Original_房屋用途)) AND ((@IsNull_占有房屋份额 = 1 AND [占有房屋份额] IS NULL) OR ([占有房屋份额] = @Original_占有房屋份额)) AND ((@IsNull_房屋所有权性质 = 1 AND [房屋所有权性质] IS NULL) OR ([房屋所有权性质] = @Original_房屋所有权性质)) AND ((@IsNull_土地使用权来源 = 1 AND [土地使用权来源] IS NULL) OR ([土地使用权来源] = @Original_土地使用权来源)) AND ((@IsNull_土地使用权性质 = 1 AND [土地使用权性质] IS NULL) OR ([土地使用权性质] = @Original_土地使用权性质)) AND ((@IsNull_建筑结构 = 1 AND [建筑结构] IS NULL) OR ([建筑结构] = @Original_建筑结构)) AND ((@IsNull_层数 = 1 AND [层数] IS NULL) OR ([层数] = @Original_层数)) AND ((@IsNull_建筑面积 = 1 AND [建筑面积] IS NULL) OR ([建筑面积] = @Original_建筑面积)) AND ((@IsNull_住宅建筑面积 = 1 AND [住宅建筑面积] IS NULL) OR ([住宅建筑面积] = @Original_住宅建筑面积)) AND ((@IsNull_套内建筑面积 = 1 AND [套内建筑面积] IS NULL) OR ([套内建筑面积] = @Original_套内建筑面积)) AND ((@IsNull_评估房屋面积 = 1 AND [评估房屋面积] IS NULL) OR ([评估房屋面积] = @Original_评估房屋面积)) AND ((@IsNull_计算土地总价 = 1 AND [计算土地总价] IS NULL) OR ([计算土地总价] = @Original_计算土地总价)) AND ((@IsNull_计算房地产总价 = 1 AND [计算房地产总价] IS NULL) OR ([计算房地产总价] = @Original_计算房地产总价)) AND ((@IsNull_评估确定房地产总价 = 1 AND [评估确定房地产总价] IS NULL) OR ([评估确定房地产总价] = @Original_评估确定房地产总价)) AND ((@IsNull_评估确定土地总价 = 1 AND [评估确定土地总价] IS NULL) OR ([评估确定土地总价] = @Original_评估确定土地总价)) AND ((@IsNull_价值类型 = 1 AND [价值类型] IS NULL) OR ([价值类型] = @Original_价值类型)) AND ((@IsNull_估价目的 = 1 AND [估价目的] IS NULL) OR ([估价目的] = @Original_估价目的)) AND ((@IsNull_总价精度 = 1 AND [总价精度] IS NULL) OR ([总价精度] = @Original_总价精度)) AND ((@IsNull_货币单位 = 1 AND [货币单位] IS NULL) OR ([货币单位] = @Original_货币单位)) AND ((@IsNull_报告开始时间 = 1 AND [报告开始时间] IS NULL) OR ([报告开始时间] = @Original_报告开始时间)) AND ((@IsNull_报告结束时间 = 1 AND [报告结束时间] IS NULL) OR ([报告结束时间] = @Original_报告结束时间)) AND ((@IsNull_估价基准日 = 1 AND [估价基准日] IS NULL) OR ([估价基准日] = @Original_估价基准日)) AND ((@IsNull_报告有效期限 = 1 AND [报告有效期限] IS NULL) OR ([报告有效期限] = @Original_报告有效期限)) AND ((@IsNull_报告到期时间 = 1 AND [报告到期时间] IS NULL) OR ([报告到期时间] = @Original_报告到期时间)) AND ((@IsNull_区片号 = 1 AND [区片号] IS NULL) OR ([区片号] = @Original_区片号)) AND ((@IsNull_容积率 = 1 AND [容积率] IS NULL) OR ([容积率] = @Original_容积率)) AND ((@IsNull_土地开发程度 = 1 AND [土地开发程度] IS NULL) OR ([土地开发程度] = @Original_土地开发程度)) AND ((@IsNull_土地平整条件 = 1 AND [土地平整条件] IS NULL) OR ([土地平整条件] = @Original_土地平整条件)) AND ((@IsNull_土地剩余使用年限 = 1 AND [土地剩余使用年限] IS NULL) OR ([土地剩余使用年限] = @Original_土地剩余使用年限)) AND ((@IsNull_评估设定使用年限 = 1 AND [评估设定使用年限] IS NULL) OR ([评估设定使用年限] = @Original_评估设定使用年限)) AND ((@IsNull_新测实评土地面积 = 1 AND [新测实评土地面积] IS NULL) OR ([新测实评土地面积] = @Original_新测实评土地面积)) AND ((@IsNull_土地登记一览表备注 = 1 AND [土地登记一览表备注] IS NULL) OR ([土地登记一览表备注] = @Original_土地登记一览表备注)) AND ((@IsNull_评估方法 = 1 AND [评估方法] IS NULL) OR ([评估方法] = @Original_评估方法)) AND ((@IsNull_收费标准 = 1 AND [收费标准] IS NULL) OR ([收费标准] = @Original_收费标准)) AND ((@IsNull_标准收费 = 1 AND [标准收费] IS NULL) OR ([标准收费] = @Original_标准收费)) AND ((@IsNull_有效证件 = 1 AND [有效证件] IS NULL) OR ([有效证件] = @Original_有效证件)) AND ((@IsNull_估价师 = 1 AND [估价师] IS NULL) OR ([估价师] = @Original_估价师)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Bid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Bid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PROJECT_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PROJECT_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_报告号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告名" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_报告名" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地证号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地证号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用者" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用者" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_镇区" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_镇区" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_座落" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_座落" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地用途" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地终止日期" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地终止日期" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地使用权面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地分摊面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地分摊面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房地产权证" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房地产权证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房地产共有用证" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房地产共有用证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋所有权来源" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋所有权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋用途" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_占有房屋份额" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_占有房屋份额" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋所有权性质" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋所有权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权来源" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权性质" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_建筑结构" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_建筑结构" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_住宅建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_住宅建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_套内建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_套内建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估房屋面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估房屋面积" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_计算土地总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_计算土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_计算房地产总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_计算房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估确定房地产总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_评估确定房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估确定土地总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_评估确定土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_价值类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_价值类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价目的" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_估价目的" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_总价精度" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_总价精度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_货币单位" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_货币单位" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告开始时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告开始时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告结束时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告结束时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价基准日" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_估价基准日" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告到期时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告到期时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_容积率" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="容积率" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_容积率" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="容积率" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地开发程度" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地开发程度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地平整条件" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地平整条件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地剩余使用年限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地剩余使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估设定使用年限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_评估设定使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_新测实评土地面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_新测实评土地面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地登记一览表备注" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地登记一览表备注" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估方法" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估方法" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_收费标准" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_收费标准" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_标准收费" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_标准收费" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_有效证件" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_有效证件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价师" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_估价师" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[yw_gujia_b] ([PROJECT_ID], [报告号], [报告名], [评估类型], [土地证号], [土地使用者], [镇区], [座落], [土地用途], [土地使用权类型], [土地终止日期], [土地使用权面积], [土地分摊面积], [房地产权证], [房地产共有用证], [房屋所有权来源], [房屋用途], [占有房屋份额], [房屋所有权性质], [土地使用权来源], [土地使用权性质], [建筑结构], [层数], [建筑面积], [住宅建筑面积], [套内建筑面积], [评估房屋面积], [计算土地总价], [计算房地产总价], [评估确定房地产总价], [评估确定土地总价], [价值类型], [估价目的], [总价精度], [货币单位], [报告开始时间], [报告结束时间], [估价基准日], [报告有效期限], [报告到期时间], [对象状况], [位置区域和环境], [区片号], [容积率], [土地开发程度], [土地平整条件], [土地剩余使用年限], [评估设定使用年限], [新测实评土地面积], [土地登记一览表备注], [土地状况], [个别因素], [评估方法], [收费标准], [标准收费], [有效证件], [估价师]) VALUES (@PROJECT_ID, @报告号, @报告名, @评估类型, @土地证号, @土地使用者, @镇区, @座落, @土地用途, @土地使用权类型, @土地终止日期, @土地使用权面积, @土地分摊面积, @房地产权证, @房地产共有用证, @房屋所有权来源, @房屋用途, @占有房屋份额, @房屋所有权性质, @土地使用权来源, @土地使用权性质, @建筑结构, @层数, @建筑面积, @住宅建筑面积, @套内建筑面积, @评估房屋面积, @计算土地总价, @计算房地产总价, @评估确定房地产总价, @评估确定土地总价, @价值类型, @估价目的, @总价精度, @货币单位, @报告开始时间, @报告结束时间, @估价基准日, @报告有效期限, @报告到期时间, @对象状况, @位置区域和环境, @区片号, @容积率, @土地开发程度, @土地平整条件, @土地剩余使用年限, @评估设定使用年限, @新测实评土地面积, @土地登记一览表备注, @土地状况, @个别因素, @评估方法, @收费标准, @标准收费, @有效证件, @估价师);
+SELECT Bid, PROJECT_ID, 报告号, 报告名, 评估类型, 土地证号, 土地使用者, 镇区, 座落, 土地用途, 土地使用权类型, 土地终止日期, 土地使用权面积, 土地分摊面积, 房地产权证, 房地产共有用证, 房屋所有权来源, 房屋用途, 占有房屋份额, 房屋所有权性质, 土地使用权来源, 土地使用权性质, 建筑结构, 层数, 建筑面积, 住宅建筑面积, 套内建筑面积, 评估房屋面积, 计算土地总价, 计算房地产总价, 评估确定房地产总价, 评估确定土地总价, 价值类型, 估价目的, 总价精度, 货币单位, 报告开始时间, 报告结束时间, 估价基准日, 报告有效期限, 报告到期时间, 对象状况, 位置区域和环境, 区片号, 容积率, 土地开发程度, 土地平整条件, 土地剩余使用年限, 评估设定使用年限, 新测实评土地面积, 土地登记一览表备注, 土地状况, 个别因素, 评估方法, 收费标准, 标准收费, 有效证件, 估价师 FROM yw_gujia_b WHERE (Bid = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PROJECT_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@报告号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@报告名" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地证号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用者" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@镇区" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@座落" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地终止日期" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地使用权面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地分摊面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房地产权证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房地产共有用证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋所有权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@占有房屋份额" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋所有权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@建筑结构" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@住宅建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@套内建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估房屋面积" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@计算土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@计算房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@评估确定房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@评估确定土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@价值类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@估价目的" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@总价精度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@货币单位" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告开始时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告结束时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@估价基准日" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告到期时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@对象状况" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="对象状况" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@位置区域和环境" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="位置区域和环境" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@容积率" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="容积率" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地开发程度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地平整条件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地剩余使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@评估设定使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@新测实评土地面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地登记一览表备注" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地状况" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="土地状况" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@个别因素" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="个别因素" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估方法" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@收费标准" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@标准收费" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@有效证件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@估价师" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Bid, PROJECT_ID, 报告号, 报告名, 评估类型, 土地证号, 土地使用者, 镇区, 座落, 土地用途, 土地使用权类型, 土地终止日期, 土地使用权面积, 土地分摊面积, 房地产权证, 房地产共有用证, 房屋所有权来源, 房屋用途, 占有房屋份额, 房屋所有权性质, 土地使用权来源, 土地使用权性质, 建筑结构, 层数, 建筑面积, 住宅建筑面积, 套内建筑面积, 评估房屋面积, 计算土地总价, 计算房地产总价, 评估确定房地产总价, 评估确定土地总价, 价值类型, 估价目的, 总价精度, 货币单位, 报告开始时间, 报告结束时间, 估价基准日, 报告有效期限, 报告到期时间, 对象状况, 位置区域和环境, 区片号, 容积率, 土地开发程度, 土地平整条件, 土地剩余使用年限, 评估设定使用年限, 新测实评土地面积, 土地登记一览表备注, 土地状况, 个别因素, 评估方法, 收费标准, 标准收费, 有效证件, 估价师 FROM dbo.yw_gujia_b</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[yw_gujia_b] SET [PROJECT_ID] = @PROJECT_ID, [报告号] = @报告号, [报告名] = @报告名, [评估类型] = @评估类型, [土地证号] = @土地证号, [土地使用者] = @土地使用者, [镇区] = @镇区, [座落] = @座落, [土地用途] = @土地用途, [土地使用权类型] = @土地使用权类型, [土地终止日期] = @土地终止日期, [土地使用权面积] = @土地使用权面积, [土地分摊面积] = @土地分摊面积, [房地产权证] = @房地产权证, [房地产共有用证] = @房地产共有用证, [房屋所有权来源] = @房屋所有权来源, [房屋用途] = @房屋用途, [占有房屋份额] = @占有房屋份额, [房屋所有权性质] = @房屋所有权性质, [土地使用权来源] = @土地使用权来源, [土地使用权性质] = @土地使用权性质, [建筑结构] = @建筑结构, [层数] = @层数, [建筑面积] = @建筑面积, [住宅建筑面积] = @住宅建筑面积, [套内建筑面积] = @套内建筑面积, [评估房屋面积] = @评估房屋面积, [计算土地总价] = @计算土地总价, [计算房地产总价] = @计算房地产总价, [评估确定房地产总价] = @评估确定房地产总价, [评估确定土地总价] = @评估确定土地总价, [价值类型] = @价值类型, [估价目的] = @估价目的, [总价精度] = @总价精度, [货币单位] = @货币单位, [报告开始时间] = @报告开始时间, [报告结束时间] = @报告结束时间, [估价基准日] = @估价基准日, [报告有效期限] = @报告有效期限, [报告到期时间] = @报告到期时间, [对象状况] = @对象状况, [位置区域和环境] = @位置区域和环境, [区片号] = @区片号, [容积率] = @容积率, [土地开发程度] = @土地开发程度, [土地平整条件] = @土地平整条件, [土地剩余使用年限] = @土地剩余使用年限, [评估设定使用年限] = @评估设定使用年限, [新测实评土地面积] = @新测实评土地面积, [土地登记一览表备注] = @土地登记一览表备注, [土地状况] = @土地状况, [个别因素] = @个别因素, [评估方法] = @评估方法, [收费标准] = @收费标准, [标准收费] = @标准收费, [有效证件] = @有效证件, [估价师] = @估价师 WHERE (([Bid] = @Original_Bid) AND ((@IsNull_PROJECT_ID = 1 AND [PROJECT_ID] IS NULL) OR ([PROJECT_ID] = @Original_PROJECT_ID)) AND ((@IsNull_报告号 = 1 AND [报告号] IS NULL) OR ([报告号] = @Original_报告号)) AND ((@IsNull_报告名 = 1 AND [报告名] IS NULL) OR ([报告名] = @Original_报告名)) AND ((@IsNull_评估类型 = 1 AND [评估类型] IS NULL) OR ([评估类型] = @Original_评估类型)) AND ((@IsNull_土地证号 = 1 AND [土地证号] IS NULL) OR ([土地证号] = @Original_土地证号)) AND ((@IsNull_土地使用者 = 1 AND [土地使用者] IS NULL) OR ([土地使用者] = @Original_土地使用者)) AND ((@IsNull_镇区 = 1 AND [镇区] IS NULL) OR ([镇区] = @Original_镇区)) AND ((@IsNull_座落 = 1 AND [座落] IS NULL) OR ([座落] = @Original_座落)) AND ((@IsNull_土地用途 = 1 AND [土地用途] IS NULL) OR ([土地用途] = @Original_土地用途)) AND ((@IsNull_土地使用权类型 = 1 AND [土地使用权类型] IS NULL) OR ([土地使用权类型] = @Original_土地使用权类型)) AND ((@IsNull_土地终止日期 = 1 AND [土地终止日期] IS NULL) OR ([土地终止日期] = @Original_土地终止日期)) AND ((@IsNull_土地使用权面积 = 1 AND [土地使用权面积] IS NULL) OR ([土地使用权面积] = @Original_土地使用权面积)) AND ((@IsNull_土地分摊面积 = 1 AND [土地分摊面积] IS NULL) OR ([土地分摊面积] = @Original_土地分摊面积)) AND ((@IsNull_房地产权证 = 1 AND [房地产权证] IS NULL) OR ([房地产权证] = @Original_房地产权证)) AND ((@IsNull_房地产共有用证 = 1 AND [房地产共有用证] IS NULL) OR ([房地产共有用证] = @Original_房地产共有用证)) AND ((@IsNull_房屋所有权来源 = 1 AND [房屋所有权来源] IS NULL) OR ([房屋所有权来源] = @Original_房屋所有权来源)) AND ((@IsNull_房屋用途 = 1 AND [房屋用途] IS NULL) OR ([房屋用途] = @Original_房屋用途)) AND ((@IsNull_占有房屋份额 = 1 AND [占有房屋份额] IS NULL) OR ([占有房屋份额] = @Original_占有房屋份额)) AND ((@IsNull_房屋所有权性质 = 1 AND [房屋所有权性质] IS NULL) OR ([房屋所有权性质] = @Original_房屋所有权性质)) AND ((@IsNull_土地使用权来源 = 1 AND [土地使用权来源] IS NULL) OR ([土地使用权来源] = @Original_土地使用权来源)) AND ((@IsNull_土地使用权性质 = 1 AND [土地使用权性质] IS NULL) OR ([土地使用权性质] = @Original_土地使用权性质)) AND ((@IsNull_建筑结构 = 1 AND [建筑结构] IS NULL) OR ([建筑结构] = @Original_建筑结构)) AND ((@IsNull_层数 = 1 AND [层数] IS NULL) OR ([层数] = @Original_层数)) AND ((@IsNull_建筑面积 = 1 AND [建筑面积] IS NULL) OR ([建筑面积] = @Original_建筑面积)) AND ((@IsNull_住宅建筑面积 = 1 AND [住宅建筑面积] IS NULL) OR ([住宅建筑面积] = @Original_住宅建筑面积)) AND ((@IsNull_套内建筑面积 = 1 AND [套内建筑面积] IS NULL) OR ([套内建筑面积] = @Original_套内建筑面积)) AND ((@IsNull_评估房屋面积 = 1 AND [评估房屋面积] IS NULL) OR ([评估房屋面积] = @Original_评估房屋面积)) AND ((@IsNull_计算土地总价 = 1 AND [计算土地总价] IS NULL) OR ([计算土地总价] = @Original_计算土地总价)) AND ((@IsNull_计算房地产总价 = 1 AND [计算房地产总价] IS NULL) OR ([计算房地产总价] = @Original_计算房地产总价)) AND ((@IsNull_评估确定房地产总价 = 1 AND [评估确定房地产总价] IS NULL) OR ([评估确定房地产总价] = @Original_评估确定房地产总价)) AND ((@IsNull_评估确定土地总价 = 1 AND [评估确定土地总价] IS NULL) OR ([评估确定土地总价] = @Original_评估确定土地总价)) AND ((@IsNull_价值类型 = 1 AND [价值类型] IS NULL) OR ([价值类型] = @Original_价值类型)) AND ((@IsNull_估价目的 = 1 AND [估价目的] IS NULL) OR ([估价目的] = @Original_估价目的)) AND ((@IsNull_总价精度 = 1 AND [总价精度] IS NULL) OR ([总价精度] = @Original_总价精度)) AND ((@IsNull_货币单位 = 1 AND [货币单位] IS NULL) OR ([货币单位] = @Original_货币单位)) AND ((@IsNull_报告开始时间 = 1 AND [报告开始时间] IS NULL) OR ([报告开始时间] = @Original_报告开始时间)) AND ((@IsNull_报告结束时间 = 1 AND [报告结束时间] IS NULL) OR ([报告结束时间] = @Original_报告结束时间)) AND ((@IsNull_估价基准日 = 1 AND [估价基准日] IS NULL) OR ([估价基准日] = @Original_估价基准日)) AND ((@IsNull_报告有效期限 = 1 AND [报告有效期限] IS NULL) OR ([报告有效期限] = @Original_报告有效期限)) AND ((@IsNull_报告到期时间 = 1 AND [报告到期时间] IS NULL) OR ([报告到期时间] = @Original_报告到期时间)) AND ((@IsNull_区片号 = 1 AND [区片号] IS NULL) OR ([区片号] = @Original_区片号)) AND ((@IsNull_容积率 = 1 AND [容积率] IS NULL) OR ([容积率] = @Original_容积率)) AND ((@IsNull_土地开发程度 = 1 AND [土地开发程度] IS NULL) OR ([土地开发程度] = @Original_土地开发程度)) AND ((@IsNull_土地平整条件 = 1 AND [土地平整条件] IS NULL) OR ([土地平整条件] = @Original_土地平整条件)) AND ((@IsNull_土地剩余使用年限 = 1 AND [土地剩余使用年限] IS NULL) OR ([土地剩余使用年限] = @Original_土地剩余使用年限)) AND ((@IsNull_评估设定使用年限 = 1 AND [评估设定使用年限] IS NULL) OR ([评估设定使用年限] = @Original_评估设定使用年限)) AND ((@IsNull_新测实评土地面积 = 1 AND [新测实评土地面积] IS NULL) OR ([新测实评土地面积] = @Original_新测实评土地面积)) AND ((@IsNull_土地登记一览表备注 = 1 AND [土地登记一览表备注] IS NULL) OR ([土地登记一览表备注] = @Original_土地登记一览表备注)) AND ((@IsNull_评估方法 = 1 AND [评估方法] IS NULL) OR ([评估方法] = @Original_评估方法)) AND ((@IsNull_收费标准 = 1 AND [收费标准] IS NULL) OR ([收费标准] = @Original_收费标准)) AND ((@IsNull_标准收费 = 1 AND [标准收费] IS NULL) OR ([标准收费] = @Original_标准收费)) AND ((@IsNull_有效证件 = 1 AND [有效证件] IS NULL) OR ([有效证件] = @Original_有效证件)) AND ((@IsNull_估价师 = 1 AND [估价师] IS NULL) OR ([估价师] = @Original_估价师)));
+SELECT Bid, PROJECT_ID, 报告号, 报告名, 评估类型, 土地证号, 土地使用者, 镇区, 座落, 土地用途, 土地使用权类型, 土地终止日期, 土地使用权面积, 土地分摊面积, 房地产权证, 房地产共有用证, 房屋所有权来源, 房屋用途, 占有房屋份额, 房屋所有权性质, 土地使用权来源, 土地使用权性质, 建筑结构, 层数, 建筑面积, 住宅建筑面积, 套内建筑面积, 评估房屋面积, 计算土地总价, 计算房地产总价, 评估确定房地产总价, 评估确定土地总价, 价值类型, 估价目的, 总价精度, 货币单位, 报告开始时间, 报告结束时间, 估价基准日, 报告有效期限, 报告到期时间, 对象状况, 位置区域和环境, 区片号, 容积率, 土地开发程度, 土地平整条件, 土地剩余使用年限, 评估设定使用年限, 新测实评土地面积, 土地登记一览表备注, 土地状况, 个别因素, 评估方法, 收费标准, 标准收费, 有效证件, 估价师 FROM yw_gujia_b WHERE (Bid = @Bid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PROJECT_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@报告号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@报告名" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地证号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用者" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@镇区" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@座落" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地终止日期" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地使用权面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地分摊面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房地产权证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房地产共有用证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋所有权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@占有房屋份额" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@房屋所有权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地使用权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@建筑结构" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@住宅建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@套内建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估房屋面积" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@计算土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@计算房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@评估确定房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@评估确定土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@价值类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@估价目的" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@总价精度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@货币单位" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告开始时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告结束时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@估价基准日" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@报告到期时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@对象状况" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="对象状况" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@位置区域和环境" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="位置区域和环境" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@容积率" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="容积率" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地开发程度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地平整条件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@土地剩余使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@评估设定使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@新测实评土地面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地登记一览表备注" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@土地状况" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="土地状况" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@个别因素" Precision="0" ProviderType="NText" Scale="0" Size="0" SourceColumn="个别因素" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@评估方法" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@收费标准" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@标准收费" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@有效证件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@估价师" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Bid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Bid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PROJECT_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PROJECT_ID" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PROJECT_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_报告号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告名" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_报告名" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="报告名" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地证号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地证号" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地证号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用者" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用者" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用者" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_镇区" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_镇区" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="镇区" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_座落" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_座落" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="座落" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地用途" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地用途" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地终止日期" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地终止日期" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地终止日期" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地使用权面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地使用权面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地分摊面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地分摊面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地分摊面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房地产权证" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房地产权证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产权证" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房地产共有用证" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房地产共有用证" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房地产共有用证" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋所有权来源" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋所有权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权来源" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋用途" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋用途" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋用途" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_占有房屋份额" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_占有房屋份额" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="占有房屋份额" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_房屋所有权性质" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_房屋所有权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="房屋所有权性质" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权来源" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权来源" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权来源" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地使用权性质" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地使用权性质" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地使用权性质" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_建筑结构" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_建筑结构" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="建筑结构" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_层数" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="层数" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_住宅建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_住宅建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="住宅建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_套内建筑面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_套内建筑面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="套内建筑面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估房屋面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估房屋面积" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估房屋面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_计算土地总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_计算土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算土地总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_计算房地产总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_计算房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="计算房地产总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估确定房地产总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_评估确定房地产总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定房地产总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估确定土地总价" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_评估确定土地总价" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="评估确定土地总价" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_价值类型" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_价值类型" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="价值类型" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价目的" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_估价目的" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价目的" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_总价精度" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_总价精度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="总价精度" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_货币单位" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_货币单位" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="货币单位" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告开始时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告开始时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告开始时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告结束时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告结束时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告结束时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价基准日" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_估价基准日" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="估价基准日" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_报告有效期限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告有效期限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_报告到期时间" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_报告到期时间" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="报告到期时间" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_区片号" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="区片号" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_容积率" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="容积率" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_容积率" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="容积率" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地开发程度" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地开发程度" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地开发程度" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地平整条件" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地平整条件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地平整条件" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地剩余使用年限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_土地剩余使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="土地剩余使用年限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估设定使用年限" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_评估设定使用年限" Precision="5" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="评估设定使用年限" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_新测实评土地面积" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_新测实评土地面积" Precision="10" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="新测实评土地面积" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_土地登记一览表备注" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_土地登记一览表备注" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="土地登记一览表备注" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_评估方法" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_评估方法" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="评估方法" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_收费标准" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_收费标准" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="收费标准" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_标准收费" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_标准收费" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="标准收费" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_有效证件" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_有效证件" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="有效证件" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_估价师" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_估价师" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="估价师" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Bid" ColumnName="Bid" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Bid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Bid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bid" DataSetColumn="Bid" />
+              <Mapping SourceColumn="PROJECT_ID" DataSetColumn="PROJECT_ID" />
+              <Mapping SourceColumn="报告号" DataSetColumn="报告号" />
+              <Mapping SourceColumn="报告名" DataSetColumn="报告名" />
+              <Mapping SourceColumn="评估类型" DataSetColumn="评估类型" />
+              <Mapping SourceColumn="土地证号" DataSetColumn="土地证号" />
+              <Mapping SourceColumn="土地使用者" DataSetColumn="土地使用者" />
+              <Mapping SourceColumn="镇区" DataSetColumn="镇区" />
+              <Mapping SourceColumn="座落" DataSetColumn="座落" />
+              <Mapping SourceColumn="土地用途" DataSetColumn="土地用途" />
+              <Mapping SourceColumn="土地使用权类型" DataSetColumn="土地使用权类型" />
+              <Mapping SourceColumn="土地终止日期" DataSetColumn="土地终止日期" />
+              <Mapping SourceColumn="土地使用权面积" DataSetColumn="土地使用权面积" />
+              <Mapping SourceColumn="土地分摊面积" DataSetColumn="土地分摊面积" />
+              <Mapping SourceColumn="房地产权证" DataSetColumn="房地产权证" />
+              <Mapping SourceColumn="房地产共有用证" DataSetColumn="房地产共有用证" />
+              <Mapping SourceColumn="房屋所有权来源" DataSetColumn="房屋所有权来源" />
+              <Mapping SourceColumn="房屋用途" DataSetColumn="房屋用途" />
+              <Mapping SourceColumn="占有房屋份额" DataSetColumn="占有房屋份额" />
+              <Mapping SourceColumn="房屋所有权性质" DataSetColumn="房屋所有权性质" />
+              <Mapping SourceColumn="土地使用权来源" DataSetColumn="土地使用权来源" />
+              <Mapping SourceColumn="土地使用权性质" DataSetColumn="土地使用权性质" />
+              <Mapping SourceColumn="建筑结构" DataSetColumn="建筑结构" />
+              <Mapping SourceColumn="层数" DataSetColumn="层数" />
+              <Mapping SourceColumn="建筑面积" DataSetColumn="建筑面积" />
+              <Mapping SourceColumn="住宅建筑面积" DataSetColumn="住宅建筑面积" />
+              <Mapping SourceColumn="套内建筑面积" DataSetColumn="套内建筑面积" />
+              <Mapping SourceColumn="评估房屋面积" DataSetColumn="评估房屋面积" />
+              <Mapping SourceColumn="计算土地总价" DataSetColumn="计算土地总价" />
+              <Mapping SourceColumn="计算房地产总价" DataSetColumn="计算房地产总价" />
+              <Mapping SourceColumn="评估确定房地产总价" DataSetColumn="评估确定房地产总价" />
+              <Mapping SourceColumn="评估确定土地总价" DataSetColumn="评估确定土地总价" />
+              <Mapping SourceColumn="价值类型" DataSetColumn="价值类型" />
+              <Mapping SourceColumn="估价目的" DataSetColumn="估价目的" />
+              <Mapping SourceColumn="总价精度" DataSetColumn="总价精度" />
+              <Mapping SourceColumn="货币单位" DataSetColumn="货币单位" />
+              <Mapping SourceColumn="报告开始时间" DataSetColumn="报告开始时间" />
+              <Mapping SourceColumn="报告结束时间" DataSetColumn="报告结束时间" />
+              <Mapping SourceColumn="估价基准日" DataSetColumn="估价基准日" />
+              <Mapping SourceColumn="报告有效期限" DataSetColumn="报告有效期限" />
+              <Mapping SourceColumn="报告到期时间" DataSetColumn="报告到期时间" />
+              <Mapping SourceColumn="对象状况" DataSetColumn="对象状况" />
+              <Mapping SourceColumn="位置区域和环境" DataSetColumn="位置区域和环境" />
+              <Mapping SourceColumn="区片号" DataSetColumn="区片号" />
+              <Mapping SourceColumn="容积率" DataSetColumn="容积率" />
+              <Mapping SourceColumn="土地开发程度" DataSetColumn="土地开发程度" />
+              <Mapping SourceColumn="土地平整条件" DataSetColumn="土地平整条件" />
+              <Mapping SourceColumn="土地剩余使用年限" DataSetColumn="土地剩余使用年限" />
+              <Mapping SourceColumn="评估设定使用年限" DataSetColumn="评估设定使用年限" />
+              <Mapping SourceColumn="新测实评土地面积" DataSetColumn="新测实评土地面积" />
+              <Mapping SourceColumn="土地登记一览表备注" DataSetColumn="土地登记一览表备注" />
+              <Mapping SourceColumn="土地状况" DataSetColumn="土地状况" />
+              <Mapping SourceColumn="个别因素" DataSetColumn="个别因素" />
+              <Mapping SourceColumn="评估方法" DataSetColumn="评估方法" />
+              <Mapping SourceColumn="收费标准" DataSetColumn="收费标准" />
+              <Mapping SourceColumn="标准收费" DataSetColumn="标准收费" />
+              <Mapping SourceColumn="有效证件" DataSetColumn="有效证件" />
+              <Mapping SourceColumn="估价师" DataSetColumn="估价师" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="gujiaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="gujiaDataSet" msprop:Generator_DataSetName="gujiaDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="yw_gujia_b" msprop:Generator_UserTableName="yw_gujia_b" msprop:Generator_RowDeletedName="yw_gujia_bRowDeleted" msprop:Generator_TableClassName="yw_gujia_bDataTable" msprop:Generator_RowChangedName="yw_gujia_bRowChanged" msprop:Generator_RowClassName="yw_gujia_bRow" msprop:Generator_RowChangingName="yw_gujia_bRowChanging" msprop:Generator_RowEvArgName="yw_gujia_bRowChangeEvent" msprop:Generator_RowEvHandlerName="yw_gujia_bRowChangeEventHandler" msprop:Generator_TablePropName="yw_gujia_b" msprop:Generator_TableVarName="tableyw_gujia_b" msprop:Generator_RowDeletingName="yw_gujia_bRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Bid" msprop:Generator_ColumnPropNameInRow="Bid" msprop:Generator_ColumnVarNameInTable="columnBid" msprop:Generator_ColumnPropNameInTable="BidColumn" type="xs:int" />
+              <xs:element name="PROJECT_ID" msprop:Generator_UserColumnName="PROJECT_ID" msprop:Generator_ColumnPropNameInRow="PROJECT_ID" msprop:Generator_ColumnVarNameInTable="columnPROJECT_ID" msprop:Generator_ColumnPropNameInTable="PROJECT_IDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="报告号" msprop:Generator_UserColumnName="报告号" msprop:Generator_ColumnPropNameInRow="报告号" msprop:Generator_ColumnVarNameInTable="column报告号" msprop:Generator_ColumnPropNameInTable="报告号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="报告名" msprop:Generator_UserColumnName="报告名" msprop:Generator_ColumnPropNameInRow="报告名" msprop:Generator_ColumnVarNameInTable="column报告名" msprop:Generator_ColumnPropNameInTable="报告名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="评估类型" msprop:Generator_UserColumnName="评估类型" msprop:Generator_ColumnPropNameInRow="评估类型" msprop:Generator_ColumnVarNameInTable="column评估类型" msprop:Generator_ColumnPropNameInTable="评估类型Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地证号" msprop:Generator_UserColumnName="土地证号" msprop:Generator_ColumnPropNameInRow="土地证号" msprop:Generator_ColumnVarNameInTable="column土地证号" msprop:Generator_ColumnPropNameInTable="土地证号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用者" msprop:Generator_UserColumnName="土地使用者" msprop:Generator_ColumnPropNameInRow="土地使用者" msprop:Generator_ColumnVarNameInTable="column土地使用者" msprop:Generator_ColumnPropNameInTable="土地使用者Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区" msprop:Generator_UserColumnName="镇区" msprop:Generator_ColumnPropNameInRow="镇区" msprop:Generator_ColumnVarNameInTable="column镇区" msprop:Generator_ColumnPropNameInTable="镇区Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="座落" msprop:Generator_UserColumnName="座落" msprop:Generator_ColumnPropNameInRow="座落" msprop:Generator_ColumnVarNameInTable="column座落" msprop:Generator_ColumnPropNameInTable="座落Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地用途" msprop:Generator_UserColumnName="土地用途" msprop:Generator_ColumnPropNameInRow="土地用途" msprop:Generator_ColumnVarNameInTable="column土地用途" msprop:Generator_ColumnPropNameInTable="土地用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用权类型" msprop:Generator_UserColumnName="土地使用权类型" msprop:Generator_ColumnPropNameInRow="土地使用权类型" msprop:Generator_ColumnVarNameInTable="column土地使用权类型" msprop:Generator_ColumnPropNameInTable="土地使用权类型Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地终止日期" msprop:Generator_UserColumnName="土地终止日期" msprop:Generator_ColumnPropNameInRow="土地终止日期" msprop:Generator_ColumnVarNameInTable="column土地终止日期" msprop:Generator_ColumnPropNameInTable="土地终止日期Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用权面积" msprop:Generator_UserColumnName="土地使用权面积" msprop:Generator_ColumnPropNameInRow="土地使用权面积" msprop:Generator_ColumnVarNameInTable="column土地使用权面积" msprop:Generator_ColumnPropNameInTable="土地使用权面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="土地分摊面积" msprop:Generator_UserColumnName="土地分摊面积" msprop:Generator_ColumnPropNameInRow="土地分摊面积" msprop:Generator_ColumnVarNameInTable="column土地分摊面积" msprop:Generator_ColumnPropNameInTable="土地分摊面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="房地产权证" msprop:Generator_UserColumnName="房地产权证" msprop:Generator_ColumnPropNameInRow="房地产权证" msprop:Generator_ColumnVarNameInTable="column房地产权证" msprop:Generator_ColumnPropNameInTable="房地产权证Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="房地产共有用证" msprop:Generator_UserColumnName="房地产共有用证" msprop:Generator_ColumnPropNameInRow="房地产共有用证" msprop:Generator_ColumnVarNameInTable="column房地产共有用证" msprop:Generator_ColumnPropNameInTable="房地产共有用证Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="房屋所有权来源" msprop:Generator_UserColumnName="房屋所有权来源" msprop:Generator_ColumnPropNameInRow="房屋所有权来源" msprop:Generator_ColumnVarNameInTable="column房屋所有权来源" msprop:Generator_ColumnPropNameInTable="房屋所有权来源Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="房屋用途" msprop:Generator_UserColumnName="房屋用途" msprop:Generator_ColumnPropNameInRow="房屋用途" msprop:Generator_ColumnVarNameInTable="column房屋用途" msprop:Generator_ColumnPropNameInTable="房屋用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="占有房屋份额" msprop:Generator_UserColumnName="占有房屋份额" msprop:Generator_ColumnPropNameInRow="占有房屋份额" msprop:Generator_ColumnVarNameInTable="column占有房屋份额" msprop:Generator_ColumnPropNameInTable="占有房屋份额Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="房屋所有权性质" msprop:Generator_UserColumnName="房屋所有权性质" msprop:Generator_ColumnPropNameInRow="房屋所有权性质" msprop:Generator_ColumnVarNameInTable="column房屋所有权性质" msprop:Generator_ColumnPropNameInTable="房屋所有权性质Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用权来源" msprop:Generator_UserColumnName="土地使用权来源" msprop:Generator_ColumnPropNameInRow="土地使用权来源" msprop:Generator_ColumnVarNameInTable="column土地使用权来源" msprop:Generator_ColumnPropNameInTable="土地使用权来源Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用权性质" msprop:Generator_UserColumnName="土地使用权性质" msprop:Generator_ColumnPropNameInRow="土地使用权性质" msprop:Generator_ColumnVarNameInTable="column土地使用权性质" msprop:Generator_ColumnPropNameInTable="土地使用权性质Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="建筑结构" msprop:Generator_UserColumnName="建筑结构" msprop:Generator_ColumnPropNameInRow="建筑结构" msprop:Generator_ColumnVarNameInTable="column建筑结构" msprop:Generator_ColumnPropNameInTable="建筑结构Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="层数" msprop:Generator_UserColumnName="层数" msprop:Generator_ColumnPropNameInRow="层数" msprop:Generator_ColumnVarNameInTable="column层数" msprop:Generator_ColumnPropNameInTable="层数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="建筑面积" msprop:Generator_UserColumnName="建筑面积" msprop:Generator_ColumnPropNameInRow="建筑面积" msprop:Generator_ColumnVarNameInTable="column建筑面积" msprop:Generator_ColumnPropNameInTable="建筑面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="住宅建筑面积" msprop:Generator_UserColumnName="住宅建筑面积" msprop:Generator_ColumnPropNameInRow="住宅建筑面积" msprop:Generator_ColumnVarNameInTable="column住宅建筑面积" msprop:Generator_ColumnPropNameInTable="住宅建筑面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="套内建筑面积" msprop:Generator_UserColumnName="套内建筑面积" msprop:Generator_ColumnPropNameInRow="套内建筑面积" msprop:Generator_ColumnVarNameInTable="column套内建筑面积" msprop:Generator_ColumnPropNameInTable="套内建筑面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="评估房屋面积" msprop:Generator_UserColumnName="评估房屋面积" msprop:Generator_ColumnPropNameInRow="评估房屋面积" msprop:Generator_ColumnVarNameInTable="column评估房屋面积" msprop:Generator_ColumnPropNameInTable="评估房屋面积Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="计算土地总价" msprop:Generator_UserColumnName="计算土地总价" msprop:Generator_ColumnPropNameInRow="计算土地总价" msprop:Generator_ColumnVarNameInTable="column计算土地总价" msprop:Generator_ColumnPropNameInTable="计算土地总价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="计算房地产总价" msprop:Generator_UserColumnName="计算房地产总价" msprop:Generator_ColumnPropNameInRow="计算房地产总价" msprop:Generator_ColumnVarNameInTable="column计算房地产总价" msprop:Generator_ColumnPropNameInTable="计算房地产总价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="评估确定房地产总价" msprop:Generator_UserColumnName="评估确定房地产总价" msprop:Generator_ColumnPropNameInRow="评估确定房地产总价" msprop:Generator_ColumnVarNameInTable="column评估确定房地产总价" msprop:Generator_ColumnPropNameInTable="评估确定房地产总价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="评估确定土地总价" msprop:Generator_UserColumnName="评估确定土地总价" msprop:Generator_ColumnPropNameInRow="评估确定土地总价" msprop:Generator_ColumnVarNameInTable="column评估确定土地总价" msprop:Generator_ColumnPropNameInTable="评估确定土地总价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="价值类型" msprop:Generator_UserColumnName="价值类型" msprop:Generator_ColumnPropNameInRow="价值类型" msprop:Generator_ColumnVarNameInTable="column价值类型" msprop:Generator_ColumnPropNameInTable="价值类型Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="估价目的" msprop:Generator_UserColumnName="估价目的" msprop:Generator_ColumnPropNameInRow="估价目的" msprop:Generator_ColumnVarNameInTable="column估价目的" msprop:Generator_ColumnPropNameInTable="估价目的Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="总价精度" msprop:Generator_UserColumnName="总价精度" msprop:Generator_ColumnPropNameInRow="总价精度" msprop:Generator_ColumnVarNameInTable="column总价精度" msprop:Generator_ColumnPropNameInTable="总价精度Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="货币单位" msprop:Generator_UserColumnName="货币单位" msprop:Generator_ColumnPropNameInRow="货币单位" msprop:Generator_ColumnVarNameInTable="column货币单位" msprop:Generator_ColumnPropNameInTable="货币单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="报告开始时间" msprop:Generator_UserColumnName="报告开始时间" msprop:Generator_ColumnPropNameInRow="报告开始时间" msprop:Generator_ColumnVarNameInTable="column报告开始时间" msprop:Generator_ColumnPropNameInTable="报告开始时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="报告结束时间" msprop:Generator_UserColumnName="报告结束时间" msprop:Generator_ColumnPropNameInRow="报告结束时间" msprop:Generator_ColumnVarNameInTable="column报告结束时间" msprop:Generator_ColumnPropNameInTable="报告结束时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="估价基准日" msprop:Generator_UserColumnName="估价基准日" msprop:Generator_ColumnPropNameInRow="估价基准日" msprop:Generator_ColumnVarNameInTable="column估价基准日" msprop:Generator_ColumnPropNameInTable="估价基准日Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="报告有效期限" msprop:Generator_UserColumnName="报告有效期限" msprop:Generator_ColumnPropNameInRow="报告有效期限" msprop:Generator_ColumnVarNameInTable="column报告有效期限" msprop:Generator_ColumnPropNameInTable="报告有效期限Column" type="xs:int" minOccurs="0" />
+              <xs:element name="报告到期时间" msprop:Generator_UserColumnName="报告到期时间" msprop:Generator_ColumnPropNameInRow="报告到期时间" msprop:Generator_ColumnVarNameInTable="column报告到期时间" msprop:Generator_ColumnPropNameInTable="报告到期时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="对象状况" msprop:Generator_UserColumnName="对象状况" msprop:Generator_ColumnPropNameInRow="对象状况" msprop:Generator_ColumnVarNameInTable="column对象状况" msprop:Generator_ColumnPropNameInTable="对象状况Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="位置区域和环境" msprop:Generator_UserColumnName="位置区域和环境" msprop:Generator_ColumnPropNameInRow="位置区域和环境" msprop:Generator_ColumnVarNameInTable="column位置区域和环境" msprop:Generator_ColumnPropNameInTable="位置区域和环境Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="区片号" msprop:Generator_UserColumnName="区片号" msprop:Generator_ColumnPropNameInRow="区片号" msprop:Generator_ColumnVarNameInTable="column区片号" msprop:Generator_ColumnPropNameInTable="区片号Column" type="xs:int" minOccurs="0" />
+              <xs:element name="容积率" msprop:Generator_UserColumnName="容积率" msprop:Generator_ColumnPropNameInRow="容积率" msprop:Generator_ColumnVarNameInTable="column容积率" msprop:Generator_ColumnPropNameInTable="容积率Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="土地开发程度" msprop:Generator_UserColumnName="土地开发程度" msprop:Generator_ColumnPropNameInRow="土地开发程度" msprop:Generator_ColumnVarNameInTable="column土地开发程度" msprop:Generator_ColumnPropNameInTable="土地开发程度Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地平整条件" msprop:Generator_UserColumnName="土地平整条件" msprop:Generator_ColumnPropNameInRow="土地平整条件" msprop:Generator_ColumnVarNameInTable="column土地平整条件" msprop:Generator_ColumnPropNameInTable="土地平整条件Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地剩余使用年限" msprop:Generator_UserColumnName="土地剩余使用年限" msprop:Generator_ColumnPropNameInRow="土地剩余使用年限" msprop:Generator_ColumnVarNameInTable="column土地剩余使用年限" msprop:Generator_ColumnPropNameInTable="土地剩余使用年限Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="评估设定使用年限" msprop:Generator_UserColumnName="评估设定使用年限" msprop:Generator_ColumnPropNameInRow="评估设定使用年限" msprop:Generator_ColumnVarNameInTable="column评估设定使用年限" msprop:Generator_ColumnPropNameInTable="评估设定使用年限Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新测实评土地面积" msprop:Generator_UserColumnName="新测实评土地面积" msprop:Generator_ColumnPropNameInRow="新测实评土地面积" msprop:Generator_ColumnVarNameInTable="column新测实评土地面积" msprop:Generator_ColumnPropNameInTable="新测实评土地面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="土地登记一览表备注" msprop:Generator_UserColumnName="土地登记一览表备注" msprop:Generator_ColumnPropNameInRow="土地登记一览表备注" msprop:Generator_ColumnVarNameInTable="column土地登记一览表备注" msprop:Generator_ColumnPropNameInTable="土地登记一览表备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地状况" msprop:Generator_UserColumnName="土地状况" msprop:Generator_ColumnPropNameInRow="土地状况" msprop:Generator_ColumnVarNameInTable="column土地状况" msprop:Generator_ColumnPropNameInTable="土地状况Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="个别因素" msprop:Generator_UserColumnName="个别因素" msprop:Generator_ColumnPropNameInRow="个别因素" msprop:Generator_ColumnVarNameInTable="column个别因素" msprop:Generator_ColumnPropNameInTable="个别因素Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="评估方法" msprop:Generator_UserColumnName="评估方法" msprop:Generator_ColumnPropNameInRow="评估方法" msprop:Generator_ColumnVarNameInTable="column评估方法" msprop:Generator_ColumnPropNameInTable="评估方法Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="收费标准" msprop:Generator_UserColumnName="收费标准" msprop:Generator_ColumnPropNameInRow="收费标准" msprop:Generator_ColumnVarNameInTable="column收费标准" msprop:Generator_ColumnPropNameInTable="收费标准Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="标准收费" msprop:Generator_UserColumnName="标准收费" msprop:Generator_ColumnPropNameInRow="标准收费" msprop:Generator_ColumnVarNameInTable="column标准收费" msprop:Generator_ColumnPropNameInTable="标准收费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="有效证件" msprop:Generator_UserColumnName="有效证件" msprop:Generator_ColumnPropNameInRow="有效证件" msprop:Generator_ColumnVarNameInTable="column有效证件" msprop:Generator_ColumnPropNameInTable="有效证件Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="估价师" msprop:Generator_UserColumnName="估价师" msprop:Generator_ColumnPropNameInRow="估价师" msprop:Generator_ColumnVarNameInTable="column估价师" msprop:Generator_ColumnPropNameInTable="估价师Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:yw_gujia_b" />
+      <xs:field xpath="mstns:Bid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

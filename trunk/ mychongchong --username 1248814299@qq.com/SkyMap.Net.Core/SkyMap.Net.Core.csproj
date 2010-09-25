@@ -1,0 +1,438 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>9.0.21022</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Core</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <PublishUrl>http://localhost/SkyMap.Net.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <RootNamespace>SkyMap.Net.Core</RootNamespace>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bamboo.Prevalence">
+      <Name>Bamboo.Prevalence</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\Bamboo.Prevalence.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <Name>log4net</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nini">
+      <Name>Nini</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\Nini.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Components\DropDownAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Components\GridAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Components\ListAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Components\Navigate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractCheckableMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractComboBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractDateTimeEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractPopupEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractSpinEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AbstractTextEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInLoadException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInManifest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInTree.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AddInTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AmountHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AndCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\AutoUpdateHepler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CacheEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CacheService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CacheSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ClassDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ClipboardWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Codon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CompareConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Condition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ConditionFailedAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CoreException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CoreStartup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CryptoHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CryptoTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CustomDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\EMailHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ExportHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ExtensionPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileErrorPolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileFilterDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileNameEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileNameEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileOperationDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileOperationResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Hashing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IBuildItemsModifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ICheckableMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IComboBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IconDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ICondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IconDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IMementoCapable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IMenuCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IncludeDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IOwnerState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IPopupEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IRemoteUpdate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ISpinEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IStringTagProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ISubmenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ITextEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LazyConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LazyLoadDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LogEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LogEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LoggingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LogLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MathHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MessageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\NamedFileOperationDelegate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\NegatedCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\OrCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\OwnerStateConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Properties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\PropertyChangedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\PropertyChangedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\PropertyService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RedoAction!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RedoAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RedoIfError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RemoteLoggingSinkImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RemoteUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RemotingSingletonProvider!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ResourceNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ResourceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RightToLeftConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Runtime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\SaveErrorChooseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\SaveErrorInformDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\SingletonProvider!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\SmartClientHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\StringDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\StringHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\StringParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\TreePathNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\WaitUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ZipHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

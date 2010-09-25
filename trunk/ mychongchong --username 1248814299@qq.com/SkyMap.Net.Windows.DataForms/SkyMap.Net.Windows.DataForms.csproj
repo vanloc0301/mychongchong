@@ -1,0 +1,179 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C29B5623-CE8E-4A16-B210-53D4067EBB75}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Windows.DataForms</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/SkyMap.Net.Windows.DataForms/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v8.2">
+      <Name>DevExpress.Utils.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2">
+      <Name>DevExpress.XtraEditors.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2">
+      <Name>DevExpress.XtraGrid.v8.2</Name>
+    </Reference>
+    <Reference Include="NCalc, Version=1.3.5.0, Culture=neutral, PublicKeyToken=973cde3f1cafed03, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\NCalc.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\AbstractDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\clsTermb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\clsUserInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\CommonDictionValueChange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\GetTableRowValueString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\InvokeResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\SmCommonDiction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\WebBrowserExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DataForms\WfAbstractDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="SkyMap.Net.DataForms.AbstractDataForm.resources" />
+    <EmbeddedResource Include="SkyMap.Net.DataForms.SmCommonDiction.resources" />
+    <EmbeddedResource Include="SkyMap.Net.DataForms.WfAbstractDataForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DataForms\SkyMap.Net.DataForms.csproj">
+      <Project>{D849C043-D533-4B5C-87AC-28115B16E539}</Project>
+      <Name>SkyMap.Net.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
+      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
+      <Name>SkyMap.Net.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.Client\SkyMap.Net.Workflow.Client.csproj">
+      <Project>{217987FF-FFC1-43A0-9BF4-1160E9D6A90E}</Project>
+      <Name>SkyMap.Net.Workflow.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Workflow.Engine\SkyMap.Net.Workflow.Engine.csproj">
+      <Project>{FC50239B-6D25-48C0-AD92-DD3EE9D01A3F}</Project>
+      <Name>SkyMap.Net.Workflow.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

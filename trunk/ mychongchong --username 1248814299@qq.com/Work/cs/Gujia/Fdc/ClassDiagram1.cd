@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZBPM.AppraiseClass" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIQAAAAAACAAABAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppraiseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.XMLEncodeHelper" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>AppraiseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.AppraiseReport" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAgAEoAAAAAAAAEAAAAAAAEQAAAACAAAAAA=</HashCode>
+      <FileName>AppraiseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.BaseConvert" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAgAgAEAEAAAAAAAAACoAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>BaseConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.Money" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.BrowserControl" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEEAQRACCEAABAAAACgBEACAAAEAACAAAAQAYABAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\BrowserControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.BrowserExtendedNavigatingEventArgs" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAACAAAAgAAAAAAAAAgAAAAAAAAAIACAAAAAAAAAE=</HashCode>
+      <FileName>ExtendedWebBrowser2\BrowserExtendedNavigatingEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.CommandStateEventArgs" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\CommandStateEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ExtendedWebBrowser" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACABIAAQBAAACAABAAAAAACgIAAgAIAUAQQQAAAAQA=</HashCode>
+      <FileName>ExtendedWebBrowser2\ExtendedWebBrowser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.NativeMethods" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\NativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.NotifyCollection&lt;T&gt;" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAABAAAAAAAgAAAQAAAABAEAAAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\NotifyCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.OpenUrlForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACQAABAAAACAAAASEAQEEAAASAAAAABAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\OpenUrlForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.OptionsForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAACQDADAAAACAAAACUAAAUAAAACAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\OptionsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ScriptError" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAIIAAAAAQAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\ScriptError.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ScriptErrorManager" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAwQAAAAAAAAAAAgAAAQAAAAABBAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\ScriptErrorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ScriptErrorWindow" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAAAAIAAECAAACCAwAAAAAAIAAAAYAAAAI=</HashCode>
+      <FileName>ExtendedWebBrowser2\ScriptErrorWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.SettingsHelper" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEIAAgAAAAAAAAACAAAAAAEAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\SettingsHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.TextChangedEventArgs" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\TextChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.UnsafeNativeMethods" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\UnsafeNativeMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.WindowManager" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIAAAICAAAJCABggAAAAAAgAACAKAgAAAAAADAAQA=</HashCode>
+      <FileName>ExtendedWebBrowser2\WindowManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.FJ" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9npo1Tv8sasLO3nS////sbln/PelLrj6r/37efi+6Fg=</HashCode>
+      <FileName>FJ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.JZFJ" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gSCABZgACAwDAMAMQACCFQAAABBVhgAAAQBEAgAARGY=</HashCode>
+      <FileName>FJ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.FjBb" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QALAAABQACAAECAAAACAAAACAQAAAAAAgAAAAIABAAA=</HashCode>
+      <FileName>FjBb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.GujiaDataForm" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SrT0RO//obHm3/1SrtudPbz//fcL/wh+7nr0/3/HhmM=</HashCode>
+      <FileName>GujiaDataForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAQAJABAAAQAAAAAgCQBgAAAACAAEAJBA=</HashCode>
+      <FileName>gujiaDataSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFhwCSEAzCATALBJYQkYDmYACgSQBkIEYAEgAUBJlA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.RoleSecurityCommand" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>RoleSecurityCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.SupportHelper" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAIAAAAARgAAAhAAAABAAAgAAAACA=</HashCode>
+      <FileName>SupportHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ZBPMDataForms" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/3/2++/l7e/f+rn//v7/7fbf////Ptn27/////+/3nc=</HashCode>
+      <FileName>ZBPMDataForms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ZBPMReportCJYW" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAACEKAcCBAJCpCEAEACAQgEABCEAACAAAikAAI=</HashCode>
+      <FileName>ZBPMReportCJYW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ZBPMReportJPWTZ" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABFg4hAQCA4IHAABDCQQQBCIQRAAASdAAAAACEBAIo=</HashCode>
+      <FileName>ZBPMReportJPWTZ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ZBPMReportJQYW" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAACAKA8CBABCJCEAACCAQgEABAEAACAAAiAAAE=</HashCode>
+      <FileName>ZBPMReportJQYW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.ZBPMReportZBYW" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAIAAKAcCBABCJCEAAACAQgAABAEAACAAAiAAAA=</HashCode>
+      <FileName>ZBPMReportZBYW.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.zszbpmDataSet" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAyAgAIJABAAAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSetTableAdapters.yw_gujia_bTableAdapter" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABgEBAAAAMAAgAAACgAAAAAQACAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_朝向修正TableAdapter" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_车房类型修正TableAdapter" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_车房区片价TableAdapter" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_电梯房楼层修正TableAdapter" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_电梯修正TableAdapter" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_复式修正TableAdapter" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_公摊修正TableAdapter" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_建筑密度修正TableAdapter" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_建筑面积修正TableAdapter" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_交通修正TableAdapter" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_结构类型修正TableAdapter" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_临路情况修正TableAdapter" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_楼龄修正TableAdapter" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_楼型修正TableAdapter" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_区片信息TableAdapter" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_容积率修正TableAdapter" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_无电梯房楼层修正TableAdapter" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.yw_物业管理修正TableAdapter" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.gujiaDataSet1TableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBgUDIIgAJABJEBwhDAcAAkCBkCgAABwCQAAcAQREQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAABEAAAAQAAAAEAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.Properties.Settings" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAIAggAAgAAEAAAAJAAAAERBAAAAAAAAAAAACAg=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyMap.Net.DataAccess.SqlHelper" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCAAAiAAAAAACAkABAEBECAgAAAAAABAAAAAAIAAIA=</HashCode>
+      <FileName>SQLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkyMap.Net.DataAccess.SqlHelperParameterCache" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAEECAAIAAAAAAAARAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.zszbpmDataSetTableAdapters.VW_tdzbpm_bTableAdapter" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.zszbpmDataSetTableAdapters.VW_ZBYWTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZBPM.zszbpmDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ZBPM.BrowserCommands" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACAAAAAAAAAAAAAAAAAAAQAAAAAKAAAAAEkAAI=</HashCode>
+      <FileName>ExtendedWebBrowser2\BrowserCommands.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZBPM.PopupBlockerFilterLevel" Collapsed="true">
+    <Position X="2.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAAAAEEAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\PopupBlockerFilterLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZBPM.UrlContext" Collapsed="true">
+    <Position X="4" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAABBAIAAAABAAAAAAAEAEAAAA=</HashCode>
+      <FileName>ExtendedWebBrowser2\UrlContext.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="SimSun" Size="9" />
+</ClassDiagram>

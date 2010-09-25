@@ -1,0 +1,129 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04D36C7E-A688-4D88-B4E7-C29268ADA74D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Criteria</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\ColumnType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\CriteriaDAOService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\DAOCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TrFilter.cs" />
+    <Compile Include="SkyMap\Net\Criteria\TrFilterCondition.cs" />
+    <Compile Include="SkyMap\Net\Criteria\TyFieldsSelect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TyFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TyFilterCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TyQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TyQueryWhere.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TySearchtable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TySearchx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Criteria\TyZh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyFieldsSelect.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyFilter.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyFilterCondition.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyQuery.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyQueryWhere.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TySearchtable.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TySearchx.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TyZh.hbm.xml" />
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.Query.Query.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TrFilter.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SkyMap.Net.Criteria.Hbm.DF.TrFilterCondition.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfAbnormalAuditInst,SkyMap.Net.Workflow"
+        table="WF_ABNORMALAUDIT">
+		<id name="Id" type="String" column="ABNORMALAUDIT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="ProinstId" column="PROINST_ID" />
+		<property name="ProinstName" column="PROINST_NAME" />
+		<property name="ActinstId" column="ACTINST_ID" />
+		<property name="ActinstName" column="ACTINST_NAME" />
+		<property name="TimeStamp" column="ABNORMALAUDIT_TIMESTAMP" />
+		<property name="AssignId" column="ASSIGN_ID" />
+		<property name="DecisionMemo" column="DECISION_MEMO" />
+		<property name="DecisionStaffId" column="DECISIONSTAFF_ID" />
+		<property name="DecisionStaffName" column="DECISIONSTAFF_NAME" />
+		<property name="DecisionStatus" column="DECISION_STATUS" 
+			type="SkyMap.Net.Workflow.Instance.WfDecisionStatusType,SkyMap.Net.Workflow" />
+		<property name="DecisionTime" column="DECISION_TIMESTAMP" />
+		<property name="NeedDecision" column="DECISION_NEED" />
+		<property name="OpReason" column="OP_REASON" />
+		<property name="OpStaffId" column="OPSTAFF_ID" />
+		<property name="OpStaffName" column="OPSTAFF_NAME" />
+		<property name="ReceiveActinstId" column="RECEIVEACTINST_ID" />
+		<property name="ReceiveActinstName" column="RECEIVEACTINST_Name" />
+		<property name="ReceiveAssignId" column="RECEIVEASSIGN_ID" />
+		<property name="ReceiveStaffId" column="RECEIVESTAFF_ID" />
+		<property name="ReceiveStaffName" column="RECEIVESTAFF_NAME" />
+		<property name="ReleaseStaffId" column="RELEASESTAFF_ID" />
+		<property name="ReleaseStaffName" column="RELEASESTAFF_NAME" />
+		<property name="ReleaseTime" column="RELEASE_TIMESTAMP" />
+		<property name="Type" column="ABNORMALAUDIT_TYPE" 
+			type="SkyMap.Net.Workflow.Instance.WfAbnormalType,SkyMap.Net.Workflow" />
+		<property name="ReleaseType" column="RELEASE_TYPE" 
+			type="SkyMap.Net.Workflow.Instance.WfReleaseType,SkyMap.Net.Workflow" />
+		
+	</class>
+	
+</hibernate-mapping>

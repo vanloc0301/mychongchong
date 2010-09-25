@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.OGM.CStaffLog,SkyMap.Net.Security" table="OG_LOG">
+		<id name="Id" type="String" column="LOG_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Description" column="LOG_DESCRIPTION" />
+		<property name="StaffId" column="STAFF_ID" />
+		<property name="StaffName" column="STAFF_NAME" />
+		<property name="Status" column="LOG_STATUS" />
+		<property name="LogTime" column="LOG_TIME" />
+		<property name="LogOutTime" column="LOGOUT_TIME" />
+		<property name="LogSystem" column="LOG_SYSTEM" />
+		<property name="IP" column="LOG_IP" />
+		<property name="Compute" column="LOG_COMPUTE" />
+	</class>
+	
+</hibernate-mapping>

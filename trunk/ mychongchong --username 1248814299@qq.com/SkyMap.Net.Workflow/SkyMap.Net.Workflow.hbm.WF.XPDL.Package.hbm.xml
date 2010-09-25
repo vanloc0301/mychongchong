@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.XPDL.Package,SkyMap.Net.Workflow"  
+      table="WF_PACKAGE">
+		<id name="Id" type="String" column="PACKAGE_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="PACKAGE_NAME" />
+		<property name="Logo" column="PACKAGE_LOGO" />
+		<property name="Description" column="PACKAGE_DESCRIPTION" />
+		<property name="Style" column="PACKAGE_STYLE" />
+		<property name="Type" column="PACKAGE_TYPE" />
+		<property name="DaoDataSetId" column="TEMPLETDATASET_ID" />
+		<property name="DaoDataFormId" column="FORM_ID" />
+		<property name="DaoDataSetName" column="TEMPLETDATASET_NAME" />
+		<property name="DaoDataFormName" column="FORM_NAME" />
+		<property name="TempletAppendixsId" column="TEMPLETAPPENDIXS_ID" />
+		<property name="TempletAppendixsName" column="TEMPLETAPPENDIXS_NAME" />
+		
+		<map name="Prodefs" inverse="false" cascade="delete" lazy="false" generic="true" outer-join="true" fetch="subselect">
+			<key column="PACKAGE_ID" />
+			<index column="PRODEF_ID" type="String" /> 
+			<one-to-many class="SkyMap.Net.Workflow.XPDL.Prodef,SkyMap.Net.Workflow" />
+		</map>
+		
+	</class>
+</hibernate-mapping>

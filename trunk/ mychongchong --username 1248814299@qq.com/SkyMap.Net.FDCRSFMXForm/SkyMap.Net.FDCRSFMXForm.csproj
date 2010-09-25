@@ -1,0 +1,36 @@
+<VisualStudioProject>
+  <CSHARP ProjectType="local" ProjectVersion="7.10.3077" SchemaVersion="2.0" ProjectGuid="36327e41-e4a3-4f41-b63b-569a748c5461">
+    <Build>
+      <Settings AssemblyName="SkyMap.Net.FDCRSFMXForm" DefaultClientScript="JScript" DefaultHTMLPageLayout="Grid" DefaultTargetSchema="IE50" DelaySign="false" OutputType="Library">
+        <Config Name="Debug" AllowUnsafeBlocks="true" DefineConstants="DEBUG;TRACE" DebugSymbols="true" IncrementalBuild="false" NoStdLib="false" Optimize="false" OutputPath="bin\Debug\" WarningLevel="4" />
+        <Config Name="Release" AllowUnsafeBlocks="true" DefineConstants="TRACE" DebugSymbols="false" IncrementalBuild="false" NoStdLib="false" Optimize="true" OutputPath="bin\Release\" WarningLevel="4" />
+      </Settings>
+      <References>
+        <Reference Name="System.Windows.Forms" AssemblyName="System.Windows.Forms" />
+        <Reference Name="SkyMap.Net.Windows.DataForms" AssemblyName="SkyMap.Net.Windows.DataForms" />
+        <Reference Name="System" AssemblyName="System" />
+        <Reference Name="Microsoft.ReportViewer.WinForms" AssemblyName="Microsoft.ReportViewer.WinForms" />
+        <Reference Name="DevExpress.XtraEditors.v8.2" AssemblyName="DevExpress.XtraEditors.v8.2" />
+        <Reference Name="System.Drawing" AssemblyName="System.Drawing" />
+        <Reference Name="SkyMap.Net.DAO" AssemblyName="SkyMap.Net.DAO" />
+        <Reference Name="System.Data" AssemblyName="System.Data" />
+        <Reference Name="SkyMap.Net.Security" AssemblyName="SkyMap.Net.Security" />
+        <Reference Name="DevExpress.Utils.v8.2" AssemblyName="DevExpress.Utils.v8.2" />
+      </References>
+    </Build>
+    <Files>
+      <Include>
+        <File RelPath="AssemblyInfo.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="Global.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\FDCRSFMXForm\RSF.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\FDCRSFMXForm\FDCRSFMXF.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\FDCRSFMXForm\Properties\Resources.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap\Net\FDCRSFMXForm\Class1.cs" SubType="Code" BuildAction="Compile" />
+        <File RelPath="SkyMap.Net.FDCRSFMXForm.Properties.Resources.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="SkyMap.Net.FDCRSFMXForm.RSFMX.rdlc" BuildAction="EmbeddedResource" />
+        <File RelPath="SkyMap.Net.FDCRSFMXForm.FDCRSFMXF.resources" BuildAction="EmbeddedResource" />
+        <File RelPath="SkyMap.Net.FDCRSFMXForm.RSF.resources" BuildAction="EmbeddedResource" />
+      </Include>
+    </Files>
+  </CSHARP>
+</VisualStudioProject>

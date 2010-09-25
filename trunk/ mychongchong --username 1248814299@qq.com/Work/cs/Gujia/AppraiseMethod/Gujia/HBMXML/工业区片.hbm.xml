@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" >
+<class name="Gujia.Method.工业区片, Gujia" table="工业区片" >
+<id name="区片号" column="区片号" type="Int32"  length="4">
+   <generator class="assigned" />
+</id>
+<property name="镇区编号" column="镇区编号" type="String" length="510" />
+<property name="镇区名称" column="镇区名称" type="String" length="510" />
+<property name="区片价" column="区片价" type="Double" />
+<property name="级别价" column="级别价" type="Double" />
+<property name="四至" column="四至" type="String" length="510" />
+<property name="道路交通状况" column="道路交通状况" type="String" length="510" />
+<property name="基础设施状况" column="基础设施状况" type="String" length="510" />
+<property name="产业聚集程度" column="产业聚集程度" type="String" length="510" />
+<property name="环境质量状况" column="环境质量状况" type="String" length="510" />
+<property name="地质状况" column="地质状况" type="String" length="510" />
+<property name="其他" column="其他" type="String" length="510" />
+</class>
+
+</hibernate-mapping>

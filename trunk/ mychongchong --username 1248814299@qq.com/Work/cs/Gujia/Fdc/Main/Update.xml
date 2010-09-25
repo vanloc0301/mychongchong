@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Nini>
+    <Section Name="FtpSetting">
+        <Key Name="SoftName" Value="ZSZQESF" />
+        <Key Name="Version" Value="1.00.00" />
+        <Key Name="Server" Value="127.0.0.7" />
+        <Key Name="User" Value="dev" />
+        <Key Name="Password" Value="update" />
+        <Key Name="Path" Value="0" />
+    </Section>
+</Nini>

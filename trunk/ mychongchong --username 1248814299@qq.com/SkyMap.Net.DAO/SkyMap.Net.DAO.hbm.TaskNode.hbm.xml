@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <class name="SkyMap.Net.DAO.TaskNode,SkyMap.Net.DAO" table="AD_TASK_NODE">
+
+    <id name="Id" column="OID" type="String" unsaved-value="null">
+      <generator class="assigned"/>
+    </id>
+    <!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+    <property column="Name" type="String" name="Name" length="50" />
+    <property column="Description" type="String" name="Description" length="50" />
+    <property column="IsActive" name="IsActive"/>
+    <property column="EnableUpdate" name="EnableUpdate" />
+    <property column="EnableRemove" name="EnableRemove" />
+    <property column="DisplayOrder" name="DisplayOrder"/>
+    <property column="Icon" name="Icon" />
+    <property column="AddCommand" name="AddCommand" />
+    <property column="PasteCommand" name="PasteCommand"/>
+    <property column="LoadChildrenCommand" name="LoadChildrenCommand"/>
+    <property column="SelectCommand" name="SelectCommand"/>
+    <property column="ContextmenuAddinTreePath" name="ContextmenuAddinTreePath"/>
+    <property column="Assembly" name="Assembly"/>
+    <many-to-one name="Parent" column="Parent" class="SkyMap.Net.DAO.TaskNode,SkyMap.Net.DAO" cascade="none"/>
+    <bag name="Children" inverse="false" lazy="false"
+			cascade="delete" order-by="DisplayOrder" generic="true" outer-join="true" fetch="subselect">
+      <key column="Parent" />
+      <one-to-many class="SkyMap.Net.DAO.TaskNode,SkyMap.Net.DAO" />
+    </bag>
+  </class>
+</hibernate-mapping>

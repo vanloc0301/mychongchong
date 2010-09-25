@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfProinstMater,SkyMap.Net.Workflow" 
+		table="WF_PROINSTMATER">
+		<id name="Id" type="String" column="PROINSTMATER_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="PROINSTMATER_NAME" />
+    <property name="DisplayOrder" column="REPLICATION_VERSION" />
+		<property name="Description" column="PROINSTMATER_MEM" />
+		<property name="OldNum" column="OLD_NUM" />
+		<property name="DupliNum" column="DUPL_NUM" />
+		<property name="ProinstId" column="PROINST_ID" />
+    <property name="Selected" column="SELECTED" />
+	</class>
+</hibernate-mapping>
+

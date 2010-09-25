@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyMap.Net.DAO", "SkyMap.Net.DAO.csproj", "{B27F5666-F54C-4422-9B41-0BB6D82E01AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B27F5666-F54C-4422-9B41-0BB6D82E01AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27F5666-F54C-4422-9B41-0BB6D82E01AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27F5666-F54C-4422-9B41-0BB6D82E01AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27F5666-F54C-4422-9B41-0BB6D82E01AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

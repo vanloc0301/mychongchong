@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.XPDL.ExtendElement.WfAppendix,SkyMap.Net.Workflow" table="WF_APPENDIX">
+		<id name="Id" type="String" column="APPENDIX_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="APPENDIX_NAME" />
+    <property name="DisplayOrder" column="REPLICATION_VERSION" />
+		<property name="Description" column="APPENDIX_DESCRIPTION" />
+		<property name="DupliNum" column="APPENDIX_DUPLINUM" />
+		<property name="IsArch" column="APPENDIX_ISARCH" />
+		<property name="OldNum" column="APPENDIX_OLDNUM" />
+		<property name="Source" column="APPENDIX_SOURCE" />
+		
+		<many-to-one name="WfTempletAppendix" column="TEMPLETAPPENDIX_ID" 
+			class="SkyMap.Net.Workflow.XPDL.ExtendElement.WfTempletAppendix,SkyMap.Net.Workflow" 
+			cascade="none" not-null="true" />
+		
+	</class>
+</hibernate-mapping>
+

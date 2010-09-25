@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<!-- 获取所有查询X -->
+	<query name="GetAllSearchx"><![CDATA[
+		from TySearchx
+	]]></query>
+	
+	
+</hibernate-mapping>

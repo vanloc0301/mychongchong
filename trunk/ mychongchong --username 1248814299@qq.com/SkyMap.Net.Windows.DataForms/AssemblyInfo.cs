@@ -1,0 +1,12 @@
+﻿[assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
+[assembly: System.Reflection.AssemblyDescription("SkyMap.Net.Windows.DataForms")]
+[assembly: System.Reflection.AssemblyConfiguration("")]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyTitle("SkyMap.Net.Windows.DataForms")]
+[assembly: System.Reflection.AssemblyCompany("中山市置信信息科技有限公司")]
+[assembly: System.Reflection.AssemblyProduct("SkyMap SoftWare")]
+[assembly: System.Reflection.AssemblyCopyright("@CopyRight 2004-2005")]
+[assembly: System.Reflection.AssemblyTrademark("SkyMap SoftWare")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute.DebuggingModes.EnableEditAndContinue | System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+

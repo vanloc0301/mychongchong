@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>E:\NET\SkyMapSoft2.60.00\SMBuild\</ReferencePath>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="zszbpmDataSet" targetNamespace="http://tempuri.org/zszbpmDataSet.xsd" xmlns:mstns="http://tempuri.org/zszbpmDataSet.xsd" xmlns="http://tempuri.org/zszbpmDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zszbpmConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zszbpmConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ZBPM.Properties.Settings.GlobalReference.Default.zszbpmConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zszbpmoa_newConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zszbpmoa_newConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ZBPM.Properties.Settings.GlobalReference.Default.zszbpmoa_newConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_tdzbpm_bTableAdapter" GeneratorDataComponentClassName="VW_tdzbpm_bTableAdapter" Name="VW_tdzbpm_b" UserDataComponentName="VW_tdzbpm_bTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zszbpmoa_newConnectionString (Settings)" DbObjectName="zszbpmoa_new.dbo.VW_tdzbpm_b" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Bid, PROJECT_ID, 标号, 标名, 业务编号, 保证金收款单位, 保证金开户银行, 保证金开户行地址, 保证金人民币帐号, 地价款收款单位, 地价款开户银行, 地价款开户行地址, 地价款人民币帐号, 挂牌报价申请起始时间, 挂牌报价申请截止时间, 现场竞价时间, 现场竞价时间1, 公告起始日期, 公告结束日期, 保证金截止日期, 镇区经办人签名, 镇区经办人签名时间, 分局长签名, 分局长签名时间, 镇区意见, 镇区填写人签名, 镇区填写意见时间, 分局经办对勘察情况意见, 市局经办对勘察情况意见, 市局经办人签名, 市局经办人签名时间, 交易方式, 业务类型, 局领导意见, 主管市长意见, 成交价, 宗地图标, 竞价增幅, 备注, 保证金冲减地价款期数, 交易底价, 容积率标准值标, 容积率允许值标, 建筑密度标, 建筑高度标, 保证金标, 使用年限, 建设项目规划设计要点意见编号, 交付土地计划时间, 宗地编号标, 行业要求, 行业代码, 投资强度, 环境保护要求, 工业用地的容积率, 工业用地的建筑系数, 出让年限, 动工时间, 竣工时间, 镇区, 税费负担方式, 委托方, 土地位置坐落, 用地面积, 用地现状, 原土地用途, 竞得人, 是否成交, 成交价日期, 超底价金额, sszq, 法定代表人, 法定代表人地址, 权属单位, 宗地地址, 图纸编号, 业务状态, 交易方式1, 业务类型1, 地价款, 土地使用证编号集合, 出让金, 耕地占用税, 当前服务器时间, 业务费, 成交后状态, 当前工作状态, 合同编号 FROM dbo.VW_tdzbpm_b</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bid" DataSetColumn="Bid" />
+              <Mapping SourceColumn="PROJECT_ID" DataSetColumn="PROJECT_ID" />
+              <Mapping SourceColumn="标号" DataSetColumn="标号" />
+              <Mapping SourceColumn="标名" DataSetColumn="标名" />
+              <Mapping SourceColumn="业务编号" DataSetColumn="业务编号" />
+              <Mapping SourceColumn="保证金收款单位" DataSetColumn="保证金收款单位" />
+              <Mapping SourceColumn="保证金开户银行" DataSetColumn="保证金开户银行" />
+              <Mapping SourceColumn="保证金开户行地址" DataSetColumn="保证金开户行地址" />
+              <Mapping SourceColumn="保证金人民币帐号" DataSetColumn="保证金人民币帐号" />
+              <Mapping SourceColumn="地价款收款单位" DataSetColumn="地价款收款单位" />
+              <Mapping SourceColumn="地价款开户银行" DataSetColumn="地价款开户银行" />
+              <Mapping SourceColumn="地价款开户行地址" DataSetColumn="地价款开户行地址" />
+              <Mapping SourceColumn="地价款人民币帐号" DataSetColumn="地价款人民币帐号" />
+              <Mapping SourceColumn="挂牌报价申请起始时间" DataSetColumn="挂牌报价申请起始时间" />
+              <Mapping SourceColumn="挂牌报价申请截止时间" DataSetColumn="挂牌报价申请截止时间" />
+              <Mapping SourceColumn="现场竞价时间" DataSetColumn="现场竞价时间" />
+              <Mapping SourceColumn="现场竞价时间1" DataSetColumn="现场竞价时间1" />
+              <Mapping SourceColumn="公告起始日期" DataSetColumn="公告起始日期" />
+              <Mapping SourceColumn="公告结束日期" DataSetColumn="公告结束日期" />
+              <Mapping SourceColumn="保证金截止日期" DataSetColumn="保证金截止日期" />
+              <Mapping SourceColumn="镇区经办人签名" DataSetColumn="镇区经办人签名" />
+              <Mapping SourceColumn="镇区经办人签名时间" DataSetColumn="镇区经办人签名时间" />
+              <Mapping SourceColumn="分局长签名" DataSetColumn="分局长签名" />
+              <Mapping SourceColumn="分局长签名时间" DataSetColumn="分局长签名时间" />
+              <Mapping SourceColumn="镇区意见" DataSetColumn="镇区意见" />
+              <Mapping SourceColumn="镇区填写人签名" DataSetColumn="镇区填写人签名" />
+              <Mapping SourceColumn="镇区填写意见时间" DataSetColumn="镇区填写意见时间" />
+              <Mapping SourceColumn="分局经办对勘察情况意见" DataSetColumn="分局经办对勘察情况意见" />
+              <Mapping SourceColumn="市局经办对勘察情况意见" DataSetColumn="市局经办对勘察情况意见" />
+              <Mapping SourceColumn="市局经办人签名" DataSetColumn="市局经办人签名" />
+              <Mapping SourceColumn="市局经办人签名时间" DataSetColumn="市局经办人签名时间" />
+              <Mapping SourceColumn="交易方式" DataSetColumn="交易方式" />
+              <Mapping SourceColumn="业务类型" DataSetColumn="业务类型" />
+              <Mapping SourceColumn="局领导意见" DataSetColumn="局领导意见" />
+              <Mapping SourceColumn="主管市长意见" DataSetColumn="主管市长意见" />
+              <Mapping SourceColumn="成交价" DataSetColumn="成交价" />
+              <Mapping SourceColumn="宗地图标" DataSetColumn="宗地图标" />
+              <Mapping SourceColumn="竞价增幅" DataSetColumn="竞价增幅" />
+              <Mapping SourceColumn="备注" DataSetColumn="备注" />
+              <Mapping SourceColumn="保证金冲减地价款期数" DataSetColumn="保证金冲减地价款期数" />
+              <Mapping SourceColumn="交易底价" DataSetColumn="交易底价" />
+              <Mapping SourceColumn="容积率标准值标" DataSetColumn="容积率标准值标" />
+              <Mapping SourceColumn="容积率允许值标" DataSetColumn="容积率允许值标" />
+              <Mapping SourceColumn="建筑密度标" DataSetColumn="建筑密度标" />
+              <Mapping SourceColumn="建筑高度标" DataSetColumn="建筑高度标" />
+              <Mapping SourceColumn="保证金标" DataSetColumn="保证金标" />
+              <Mapping SourceColumn="使用年限" DataSetColumn="使用年限" />
+              <Mapping SourceColumn="建设项目规划设计要点意见编号" DataSetColumn="建设项目规划设计要点意见编号" />
+              <Mapping SourceColumn="交付土地计划时间" DataSetColumn="交付土地计划时间" />
+              <Mapping SourceColumn="宗地编号标" DataSetColumn="宗地编号标" />
+              <Mapping SourceColumn="行业要求" DataSetColumn="行业要求" />
+              <Mapping SourceColumn="行业代码" DataSetColumn="行业代码" />
+              <Mapping SourceColumn="投资强度" DataSetColumn="投资强度" />
+              <Mapping SourceColumn="环境保护要求" DataSetColumn="环境保护要求" />
+              <Mapping SourceColumn="工业用地的容积率" DataSetColumn="工业用地的容积率" />
+              <Mapping SourceColumn="工业用地的建筑系数" DataSetColumn="工业用地的建筑系数" />
+              <Mapping SourceColumn="出让年限" DataSetColumn="出让年限" />
+              <Mapping SourceColumn="动工时间" DataSetColumn="动工时间" />
+              <Mapping SourceColumn="竣工时间" DataSetColumn="竣工时间" />
+              <Mapping SourceColumn="镇区" DataSetColumn="镇区" />
+              <Mapping SourceColumn="税费负担方式" DataSetColumn="税费负担方式" />
+              <Mapping SourceColumn="委托方" DataSetColumn="委托方" />
+              <Mapping SourceColumn="土地位置坐落" DataSetColumn="土地位置坐落" />
+              <Mapping SourceColumn="用地面积" DataSetColumn="用地面积" />
+              <Mapping SourceColumn="用地现状" DataSetColumn="用地现状" />
+              <Mapping SourceColumn="原土地用途" DataSetColumn="原土地用途" />
+              <Mapping SourceColumn="竞得人" DataSetColumn="竞得人" />
+              <Mapping SourceColumn="是否成交" DataSetColumn="是否成交" />
+              <Mapping SourceColumn="成交价日期" DataSetColumn="成交价日期" />
+              <Mapping SourceColumn="超底价金额" DataSetColumn="超底价金额" />
+              <Mapping SourceColumn="sszq" DataSetColumn="sszq" />
+              <Mapping SourceColumn="法定代表人" DataSetColumn="法定代表人" />
+              <Mapping SourceColumn="法定代表人地址" DataSetColumn="法定代表人地址" />
+              <Mapping SourceColumn="权属单位" DataSetColumn="权属单位" />
+              <Mapping SourceColumn="宗地地址" DataSetColumn="宗地地址" />
+              <Mapping SourceColumn="图纸编号" DataSetColumn="图纸编号" />
+              <Mapping SourceColumn="业务状态" DataSetColumn="业务状态" />
+              <Mapping SourceColumn="交易方式1" DataSetColumn="交易方式1" />
+              <Mapping SourceColumn="业务类型1" DataSetColumn="业务类型1" />
+              <Mapping SourceColumn="地价款" DataSetColumn="地价款" />
+              <Mapping SourceColumn="土地使用证编号集合" DataSetColumn="土地使用证编号集合" />
+              <Mapping SourceColumn="出让金" DataSetColumn="出让金" />
+              <Mapping SourceColumn="耕地占用税" DataSetColumn="耕地占用税" />
+              <Mapping SourceColumn="当前服务器时间" DataSetColumn="当前服务器时间" />
+              <Mapping SourceColumn="业务费" DataSetColumn="业务费" />
+              <Mapping SourceColumn="成交后状态" DataSetColumn="成交后状态" />
+              <Mapping SourceColumn="当前工作状态" DataSetColumn="当前工作状态" />
+              <Mapping SourceColumn="合同编号" DataSetColumn="合同编号" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_ZBYWTableAdapter" GeneratorDataComponentClassName="VW_ZBYWTableAdapter" Name="VW_ZBYW" UserDataComponentName="VW_ZBYWTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zszbpmoa_newConnectionString (Settings)" DbObjectName="zszbpmoa_new.dbo.VW_ZBYW" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 镇区窗口收件, 镇区分局经办人审核, 分局局长初审, 市局经办人出审批表, 副主任审核, 主任审核, 局长, 市局经办人发件, 权属单位, 宗地地址, 用地面积, 交易底价, 当前服务器时间, 结案时间, 业务编号 FROM dbo.VW_ZBYW</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="镇区窗口收件" DataSetColumn="镇区窗口收件" />
+              <Mapping SourceColumn="镇区分局经办人审核" DataSetColumn="镇区分局经办人审核" />
+              <Mapping SourceColumn="分局局长初审" DataSetColumn="分局局长初审" />
+              <Mapping SourceColumn="市局经办人出审批表" DataSetColumn="市局经办人出审批表" />
+              <Mapping SourceColumn="副主任审核" DataSetColumn="副主任审核" />
+              <Mapping SourceColumn="主任审核" DataSetColumn="主任审核" />
+              <Mapping SourceColumn="局长" DataSetColumn="局长" />
+              <Mapping SourceColumn="市局经办人发件" DataSetColumn="市局经办人发件" />
+              <Mapping SourceColumn="权属单位" DataSetColumn="权属单位" />
+              <Mapping SourceColumn="宗地地址" DataSetColumn="宗地地址" />
+              <Mapping SourceColumn="用地面积" DataSetColumn="用地面积" />
+              <Mapping SourceColumn="交易底价" DataSetColumn="交易底价" />
+              <Mapping SourceColumn="当前服务器时间" DataSetColumn="当前服务器时间" />
+              <Mapping SourceColumn="结案时间" DataSetColumn="结案时间" />
+              <Mapping SourceColumn="业务编号" DataSetColumn="业务编号" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="zszbpmDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="zszbpmDataSet" msprop:Generator_DataSetName="zszbpmDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VW_tdzbpm_b" msprop:Generator_UserTableName="VW_tdzbpm_b" msprop:Generator_RowDeletedName="VW_tdzbpm_bRowDeleted" msprop:Generator_RowChangedName="VW_tdzbpm_bRowChanged" msprop:Generator_RowClassName="VW_tdzbpm_bRow" msprop:Generator_RowChangingName="VW_tdzbpm_bRowChanging" msprop:Generator_RowEvArgName="VW_tdzbpm_bRowChangeEvent" msprop:Generator_RowEvHandlerName="VW_tdzbpm_bRowChangeEventHandler" msprop:Generator_TableClassName="VW_tdzbpm_bDataTable" msprop:Generator_TableVarName="tableVW_tdzbpm_b" msprop:Generator_RowDeletingName="VW_tdzbpm_bRowDeleting" msprop:Generator_TablePropName="VW_tdzbpm_b">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Bid" msprop:Generator_ColumnPropNameInRow="Bid" msprop:Generator_ColumnVarNameInTable="columnBid" msprop:Generator_ColumnPropNameInTable="BidColumn" type="xs:int" />
+              <xs:element name="PROJECT_ID" msprop:Generator_UserColumnName="PROJECT_ID" msprop:Generator_ColumnPropNameInRow="PROJECT_ID" msprop:Generator_ColumnVarNameInTable="columnPROJECT_ID" msprop:Generator_ColumnPropNameInTable="PROJECT_IDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="标号" msprop:Generator_UserColumnName="标号" msprop:Generator_ColumnPropNameInRow="标号" msprop:Generator_ColumnVarNameInTable="column标号" msprop:Generator_ColumnPropNameInTable="标号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="标名" msprop:Generator_UserColumnName="标名" msprop:Generator_ColumnPropNameInRow="标名" msprop:Generator_ColumnVarNameInTable="column标名" msprop:Generator_ColumnPropNameInTable="标名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="业务编号" msprop:Generator_UserColumnName="业务编号" msprop:Generator_ColumnPropNameInRow="业务编号" msprop:Generator_ColumnVarNameInTable="column业务编号" msprop:Generator_ColumnPropNameInTable="业务编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金收款单位" msprop:Generator_UserColumnName="保证金收款单位" msprop:Generator_ColumnPropNameInRow="保证金收款单位" msprop:Generator_ColumnVarNameInTable="column保证金收款单位" msprop:Generator_ColumnPropNameInTable="保证金收款单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金开户银行" msprop:Generator_UserColumnName="保证金开户银行" msprop:Generator_ColumnPropNameInRow="保证金开户银行" msprop:Generator_ColumnVarNameInTable="column保证金开户银行" msprop:Generator_ColumnPropNameInTable="保证金开户银行Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金开户行地址" msprop:Generator_UserColumnName="保证金开户行地址" msprop:Generator_ColumnPropNameInRow="保证金开户行地址" msprop:Generator_ColumnVarNameInTable="column保证金开户行地址" msprop:Generator_ColumnPropNameInTable="保证金开户行地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金人民币帐号" msprop:Generator_UserColumnName="保证金人民币帐号" msprop:Generator_ColumnPropNameInRow="保证金人民币帐号" msprop:Generator_ColumnVarNameInTable="column保证金人民币帐号" msprop:Generator_ColumnPropNameInTable="保证金人民币帐号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地价款收款单位" msprop:Generator_UserColumnName="地价款收款单位" msprop:Generator_ColumnPropNameInRow="地价款收款单位" msprop:Generator_ColumnVarNameInTable="column地价款收款单位" msprop:Generator_ColumnPropNameInTable="地价款收款单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地价款开户银行" msprop:Generator_UserColumnName="地价款开户银行" msprop:Generator_ColumnPropNameInRow="地价款开户银行" msprop:Generator_ColumnVarNameInTable="column地价款开户银行" msprop:Generator_ColumnPropNameInTable="地价款开户银行Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地价款开户行地址" msprop:Generator_UserColumnName="地价款开户行地址" msprop:Generator_ColumnPropNameInRow="地价款开户行地址" msprop:Generator_ColumnVarNameInTable="column地价款开户行地址" msprop:Generator_ColumnPropNameInTable="地价款开户行地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地价款人民币帐号" msprop:Generator_UserColumnName="地价款人民币帐号" msprop:Generator_ColumnPropNameInRow="地价款人民币帐号" msprop:Generator_ColumnVarNameInTable="column地价款人民币帐号" msprop:Generator_ColumnPropNameInTable="地价款人民币帐号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="挂牌报价申请起始时间" msprop:Generator_UserColumnName="挂牌报价申请起始时间" msprop:Generator_ColumnPropNameInRow="挂牌报价申请起始时间" msprop:Generator_ColumnVarNameInTable="column挂牌报价申请起始时间" msprop:Generator_ColumnPropNameInTable="挂牌报价申请起始时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="挂牌报价申请截止时间" msprop:Generator_UserColumnName="挂牌报价申请截止时间" msprop:Generator_ColumnPropNameInRow="挂牌报价申请截止时间" msprop:Generator_ColumnVarNameInTable="column挂牌报价申请截止时间" msprop:Generator_ColumnPropNameInTable="挂牌报价申请截止时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="现场竞价时间" msdata:ReadOnly="true" msprop:Generator_UserColumnName="现场竞价时间" msprop:Generator_ColumnPropNameInRow="现场竞价时间" msprop:Generator_ColumnVarNameInTable="column现场竞价时间" msprop:Generator_ColumnPropNameInTable="现场竞价时间Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="现场竞价时间1" msprop:Generator_UserColumnName="现场竞价时间1" msprop:Generator_ColumnPropNameInRow="现场竞价时间1" msprop:Generator_ColumnVarNameInTable="column现场竞价时间1" msprop:Generator_ColumnPropNameInTable="现场竞价时间1Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="公告起始日期" msprop:Generator_UserColumnName="公告起始日期" msprop:Generator_ColumnPropNameInRow="公告起始日期" msprop:Generator_ColumnVarNameInTable="column公告起始日期" msprop:Generator_ColumnPropNameInTable="公告起始日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="公告结束日期" msprop:Generator_UserColumnName="公告结束日期" msprop:Generator_ColumnPropNameInRow="公告结束日期" msprop:Generator_ColumnVarNameInTable="column公告结束日期" msprop:Generator_ColumnPropNameInTable="公告结束日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="保证金截止日期" msprop:Generator_UserColumnName="保证金截止日期" msprop:Generator_ColumnPropNameInRow="保证金截止日期" msprop:Generator_ColumnVarNameInTable="column保证金截止日期" msprop:Generator_ColumnPropNameInTable="保证金截止日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="镇区经办人签名" msprop:Generator_UserColumnName="镇区经办人签名" msprop:Generator_ColumnPropNameInRow="镇区经办人签名" msprop:Generator_ColumnVarNameInTable="column镇区经办人签名" msprop:Generator_ColumnPropNameInTable="镇区经办人签名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区经办人签名时间" msprop:Generator_UserColumnName="镇区经办人签名时间" msprop:Generator_ColumnPropNameInRow="镇区经办人签名时间" msprop:Generator_ColumnVarNameInTable="column镇区经办人签名时间" msprop:Generator_ColumnPropNameInTable="镇区经办人签名时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="分局长签名" msprop:Generator_UserColumnName="分局长签名" msprop:Generator_ColumnPropNameInRow="分局长签名" msprop:Generator_ColumnVarNameInTable="column分局长签名" msprop:Generator_ColumnPropNameInTable="分局长签名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分局长签名时间" msprop:Generator_UserColumnName="分局长签名时间" msprop:Generator_ColumnPropNameInRow="分局长签名时间" msprop:Generator_ColumnVarNameInTable="column分局长签名时间" msprop:Generator_ColumnPropNameInTable="分局长签名时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="镇区意见" msprop:Generator_UserColumnName="镇区意见" msprop:Generator_ColumnPropNameInRow="镇区意见" msprop:Generator_ColumnVarNameInTable="column镇区意见" msprop:Generator_ColumnPropNameInTable="镇区意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区填写人签名" msprop:Generator_UserColumnName="镇区填写人签名" msprop:Generator_ColumnPropNameInRow="镇区填写人签名" msprop:Generator_ColumnVarNameInTable="column镇区填写人签名" msprop:Generator_ColumnPropNameInTable="镇区填写人签名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区填写意见时间" msprop:Generator_UserColumnName="镇区填写意见时间" msprop:Generator_ColumnPropNameInRow="镇区填写意见时间" msprop:Generator_ColumnVarNameInTable="column镇区填写意见时间" msprop:Generator_ColumnPropNameInTable="镇区填写意见时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="分局经办对勘察情况意见" msprop:Generator_UserColumnName="分局经办对勘察情况意见" msprop:Generator_ColumnPropNameInRow="分局经办对勘察情况意见" msprop:Generator_ColumnVarNameInTable="column分局经办对勘察情况意见" msprop:Generator_ColumnPropNameInTable="分局经办对勘察情况意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="市局经办对勘察情况意见" msprop:Generator_UserColumnName="市局经办对勘察情况意见" msprop:Generator_ColumnPropNameInRow="市局经办对勘察情况意见" msprop:Generator_ColumnVarNameInTable="column市局经办对勘察情况意见" msprop:Generator_ColumnPropNameInTable="市局经办对勘察情况意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="市局经办人签名" msprop:Generator_UserColumnName="市局经办人签名" msprop:Generator_ColumnPropNameInRow="市局经办人签名" msprop:Generator_ColumnVarNameInTable="column市局经办人签名" msprop:Generator_ColumnPropNameInTable="市局经办人签名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="市局经办人签名时间" msprop:Generator_UserColumnName="市局经办人签名时间" msprop:Generator_ColumnPropNameInRow="市局经办人签名时间" msprop:Generator_ColumnVarNameInTable="column市局经办人签名时间" msprop:Generator_ColumnPropNameInTable="市局经办人签名时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="交易方式" msprop:Generator_UserColumnName="交易方式" msprop:Generator_ColumnPropNameInRow="交易方式" msprop:Generator_ColumnVarNameInTable="column交易方式" msprop:Generator_ColumnPropNameInTable="交易方式Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="业务类型" msprop:Generator_UserColumnName="业务类型" msprop:Generator_ColumnPropNameInRow="业务类型" msprop:Generator_ColumnVarNameInTable="column业务类型" msprop:Generator_ColumnPropNameInTable="业务类型Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="局领导意见" msprop:Generator_UserColumnName="局领导意见" msprop:Generator_ColumnPropNameInRow="局领导意见" msprop:Generator_ColumnVarNameInTable="column局领导意见" msprop:Generator_ColumnPropNameInTable="局领导意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="主管市长意见" msprop:Generator_UserColumnName="主管市长意见" msprop:Generator_ColumnPropNameInRow="主管市长意见" msprop:Generator_ColumnVarNameInTable="column主管市长意见" msprop:Generator_ColumnPropNameInTable="主管市长意见Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="成交价" msprop:Generator_UserColumnName="成交价" msprop:Generator_ColumnPropNameInRow="成交价" msprop:Generator_ColumnVarNameInTable="column成交价" msprop:Generator_ColumnPropNameInTable="成交价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="宗地图标" msprop:Generator_UserColumnName="宗地图标" msprop:Generator_ColumnPropNameInRow="宗地图标" msprop:Generator_ColumnVarNameInTable="column宗地图标" msprop:Generator_ColumnPropNameInTable="宗地图标Column" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="竞价增幅" msprop:Generator_UserColumnName="竞价增幅" msprop:Generator_ColumnPropNameInRow="竞价增幅" msprop:Generator_ColumnVarNameInTable="column竞价增幅" msprop:Generator_ColumnPropNameInTable="竞价增幅Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金冲减地价款期数" msprop:Generator_UserColumnName="保证金冲减地价款期数" msprop:Generator_ColumnPropNameInRow="保证金冲减地价款期数" msprop:Generator_ColumnVarNameInTable="column保证金冲减地价款期数" msprop:Generator_ColumnPropNameInTable="保证金冲减地价款期数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="交易底价" msprop:Generator_UserColumnName="交易底价" msprop:Generator_ColumnPropNameInRow="交易底价" msprop:Generator_ColumnVarNameInTable="column交易底价" msprop:Generator_ColumnPropNameInTable="交易底价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="容积率标准值标" msprop:Generator_UserColumnName="容积率标准值标" msprop:Generator_ColumnPropNameInRow="容积率标准值标" msprop:Generator_ColumnVarNameInTable="column容积率标准值标" msprop:Generator_ColumnPropNameInTable="容积率标准值标Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="容积率允许值标" msprop:Generator_UserColumnName="容积率允许值标" msprop:Generator_ColumnPropNameInRow="容积率允许值标" msprop:Generator_ColumnVarNameInTable="column容积率允许值标" msprop:Generator_ColumnPropNameInTable="容积率允许值标Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="建筑密度标" msprop:Generator_UserColumnName="建筑密度标" msprop:Generator_ColumnPropNameInRow="建筑密度标" msprop:Generator_ColumnVarNameInTable="column建筑密度标" msprop:Generator_ColumnPropNameInTable="建筑密度标Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="建筑高度标" msprop:Generator_UserColumnName="建筑高度标" msprop:Generator_ColumnPropNameInRow="建筑高度标" msprop:Generator_ColumnVarNameInTable="column建筑高度标" msprop:Generator_ColumnPropNameInTable="建筑高度标Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="保证金标" msprop:Generator_UserColumnName="保证金标" msprop:Generator_ColumnPropNameInRow="保证金标" msprop:Generator_ColumnVarNameInTable="column保证金标" msprop:Generator_ColumnPropNameInTable="保证金标Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="使用年限" msprop:Generator_UserColumnName="使用年限" msprop:Generator_ColumnPropNameInRow="使用年限" msprop:Generator_ColumnVarNameInTable="column使用年限" msprop:Generator_ColumnPropNameInTable="使用年限Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="建设项目规划设计要点意见编号" msprop:Generator_UserColumnName="建设项目规划设计要点意见编号" msprop:Generator_ColumnPropNameInRow="建设项目规划设计要点意见编号" msprop:Generator_ColumnVarNameInTable="column建设项目规划设计要点意见编号" msprop:Generator_ColumnPropNameInTable="建设项目规划设计要点意见编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="交付土地计划时间" msprop:Generator_UserColumnName="交付土地计划时间" msprop:Generator_ColumnPropNameInRow="交付土地计划时间" msprop:Generator_ColumnVarNameInTable="column交付土地计划时间" msprop:Generator_ColumnPropNameInTable="交付土地计划时间Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="宗地编号标" msprop:Generator_UserColumnName="宗地编号标" msprop:Generator_ColumnPropNameInRow="宗地编号标" msprop:Generator_ColumnVarNameInTable="column宗地编号标" msprop:Generator_ColumnPropNameInTable="宗地编号标Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="行业要求" msprop:Generator_UserColumnName="行业要求" msprop:Generator_ColumnPropNameInRow="行业要求" msprop:Generator_ColumnVarNameInTable="column行业要求" msprop:Generator_ColumnPropNameInTable="行业要求Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="行业代码" msprop:Generator_UserColumnName="行业代码" msprop:Generator_ColumnPropNameInRow="行业代码" msprop:Generator_ColumnVarNameInTable="column行业代码" msprop:Generator_ColumnPropNameInTable="行业代码Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="投资强度" msprop:Generator_UserColumnName="投资强度" msprop:Generator_ColumnPropNameInRow="投资强度" msprop:Generator_ColumnVarNameInTable="column投资强度" msprop:Generator_ColumnPropNameInTable="投资强度Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="环境保护要求" msprop:Generator_UserColumnName="环境保护要求" msprop:Generator_ColumnPropNameInRow="环境保护要求" msprop:Generator_ColumnVarNameInTable="column环境保护要求" msprop:Generator_ColumnPropNameInTable="环境保护要求Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="工业用地的容积率" msprop:Generator_UserColumnName="工业用地的容积率" msprop:Generator_ColumnPropNameInRow="工业用地的容积率" msprop:Generator_ColumnVarNameInTable="column工业用地的容积率" msprop:Generator_ColumnPropNameInTable="工业用地的容积率Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="工业用地的建筑系数" msprop:Generator_UserColumnName="工业用地的建筑系数" msprop:Generator_ColumnPropNameInRow="工业用地的建筑系数" msprop:Generator_ColumnVarNameInTable="column工业用地的建筑系数" msprop:Generator_ColumnPropNameInTable="工业用地的建筑系数Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出让年限" msprop:Generator_UserColumnName="出让年限" msprop:Generator_ColumnPropNameInRow="出让年限" msprop:Generator_ColumnVarNameInTable="column出让年限" msprop:Generator_ColumnPropNameInTable="出让年限Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="动工时间" msprop:Generator_UserColumnName="动工时间" msprop:Generator_ColumnPropNameInRow="动工时间" msprop:Generator_ColumnVarNameInTable="column动工时间" msprop:Generator_ColumnPropNameInTable="动工时间Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="竣工时间" msprop:Generator_UserColumnName="竣工时间" msprop:Generator_ColumnPropNameInRow="竣工时间" msprop:Generator_ColumnVarNameInTable="column竣工时间" msprop:Generator_ColumnPropNameInTable="竣工时间Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区" msprop:Generator_UserColumnName="镇区" msprop:Generator_ColumnPropNameInRow="镇区" msprop:Generator_ColumnVarNameInTable="column镇区" msprop:Generator_ColumnPropNameInTable="镇区Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="税费负担方式" msprop:Generator_UserColumnName="税费负担方式" msprop:Generator_ColumnPropNameInRow="税费负担方式" msprop:Generator_ColumnVarNameInTable="column税费负担方式" msprop:Generator_ColumnPropNameInTable="税费负担方式Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="委托方" msprop:Generator_UserColumnName="委托方" msprop:Generator_ColumnPropNameInRow="委托方" msprop:Generator_ColumnVarNameInTable="column委托方" msprop:Generator_ColumnPropNameInTable="委托方Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地位置坐落" msprop:Generator_UserColumnName="土地位置坐落" msprop:Generator_ColumnPropNameInRow="土地位置坐落" msprop:Generator_ColumnVarNameInTable="column土地位置坐落" msprop:Generator_ColumnPropNameInTable="土地位置坐落Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用地面积" msprop:Generator_UserColumnName="用地面积" msprop:Generator_ColumnPropNameInRow="用地面积" msprop:Generator_ColumnVarNameInTable="column用地面积" msprop:Generator_ColumnPropNameInTable="用地面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="用地现状" msprop:Generator_UserColumnName="用地现状" msprop:Generator_ColumnPropNameInRow="用地现状" msprop:Generator_ColumnVarNameInTable="column用地现状" msprop:Generator_ColumnPropNameInTable="用地现状Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="原土地用途" msprop:Generator_UserColumnName="原土地用途" msprop:Generator_ColumnPropNameInRow="原土地用途" msprop:Generator_ColumnVarNameInTable="column原土地用途" msprop:Generator_ColumnPropNameInTable="原土地用途Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="竞得人" msprop:Generator_UserColumnName="竞得人" msprop:Generator_ColumnPropNameInRow="竞得人" msprop:Generator_ColumnVarNameInTable="column竞得人" msprop:Generator_ColumnPropNameInTable="竞得人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否成交" msdata:ReadOnly="true" msprop:Generator_UserColumnName="是否成交" msprop:Generator_ColumnPropNameInRow="是否成交" msprop:Generator_ColumnVarNameInTable="column是否成交" msprop:Generator_ColumnPropNameInTable="是否成交Column" type="xs:boolean" minOccurs="0" />
+              <xs:element name="成交价日期" msprop:Generator_UserColumnName="成交价日期" msprop:Generator_ColumnPropNameInRow="成交价日期" msprop:Generator_ColumnVarNameInTable="column成交价日期" msprop:Generator_ColumnPropNameInTable="成交价日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="超底价金额" msprop:Generator_UserColumnName="超底价金额" msprop:Generator_ColumnPropNameInRow="超底价金额" msprop:Generator_ColumnVarNameInTable="column超底价金额" msprop:Generator_ColumnPropNameInTable="超底价金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sszq" msprop:Generator_UserColumnName="sszq" msprop:Generator_ColumnPropNameInRow="sszq" msprop:Generator_ColumnVarNameInTable="columnsszq" msprop:Generator_ColumnPropNameInTable="sszqColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="法定代表人" msprop:Generator_UserColumnName="法定代表人" msprop:Generator_ColumnPropNameInRow="法定代表人" msprop:Generator_ColumnVarNameInTable="column法定代表人" msprop:Generator_ColumnPropNameInTable="法定代表人Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="法定代表人地址" msprop:Generator_UserColumnName="法定代表人地址" msprop:Generator_ColumnPropNameInRow="法定代表人地址" msprop:Generator_ColumnVarNameInTable="column法定代表人地址" msprop:Generator_ColumnPropNameInTable="法定代表人地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="权属单位" msprop:Generator_UserColumnName="权属单位" msprop:Generator_ColumnPropNameInRow="权属单位" msprop:Generator_ColumnVarNameInTable="column权属单位" msprop:Generator_ColumnPropNameInTable="权属单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="宗地地址" msprop:Generator_UserColumnName="宗地地址" msprop:Generator_ColumnPropNameInRow="宗地地址" msprop:Generator_ColumnVarNameInTable="column宗地地址" msprop:Generator_ColumnPropNameInTable="宗地地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="图纸编号" msprop:Generator_UserColumnName="图纸编号" msprop:Generator_ColumnPropNameInRow="图纸编号" msprop:Generator_ColumnVarNameInTable="column图纸编号" msprop:Generator_ColumnPropNameInTable="图纸编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="业务状态" msprop:Generator_UserColumnName="业务状态" msprop:Generator_ColumnPropNameInRow="业务状态" msprop:Generator_ColumnVarNameInTable="column业务状态" msprop:Generator_ColumnPropNameInTable="业务状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="交易方式1" msprop:Generator_UserColumnName="交易方式1" msprop:Generator_ColumnPropNameInRow="交易方式1" msprop:Generator_ColumnVarNameInTable="column交易方式1" msprop:Generator_ColumnPropNameInTable="交易方式1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="业务类型1" msprop:Generator_UserColumnName="业务类型1" msprop:Generator_ColumnPropNameInRow="业务类型1" msprop:Generator_ColumnVarNameInTable="column业务类型1" msprop:Generator_ColumnPropNameInTable="业务类型1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地价款" msdata:ReadOnly="true" msprop:Generator_UserColumnName="地价款" msprop:Generator_ColumnPropNameInRow="地价款" msprop:Generator_ColumnVarNameInTable="column地价款" msprop:Generator_ColumnPropNameInTable="地价款Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="土地使用证编号集合" msdata:ReadOnly="true" msprop:Generator_UserColumnName="土地使用证编号集合" msprop:Generator_ColumnPropNameInRow="土地使用证编号集合" msprop:Generator_ColumnVarNameInTable="column土地使用证编号集合" msprop:Generator_ColumnPropNameInTable="土地使用证编号集合Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="403" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出让金" msprop:Generator_UserColumnName="出让金" msprop:Generator_ColumnPropNameInRow="出让金" msprop:Generator_ColumnVarNameInTable="column出让金" msprop:Generator_ColumnPropNameInTable="出让金Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="耕地占用税" msprop:Generator_UserColumnName="耕地占用税" msprop:Generator_ColumnPropNameInRow="耕地占用税" msprop:Generator_ColumnVarNameInTable="column耕地占用税" msprop:Generator_ColumnPropNameInTable="耕地占用税Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当前服务器时间" msprop:Generator_UserColumnName="当前服务器时间" msprop:Generator_ColumnPropNameInRow="当前服务器时间" msprop:Generator_ColumnVarNameInTable="column当前服务器时间" msprop:Generator_ColumnPropNameInTable="当前服务器时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="业务费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="业务费" msprop:Generator_ColumnPropNameInRow="业务费" msprop:Generator_ColumnVarNameInTable="column业务费" msprop:Generator_ColumnPropNameInTable="业务费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="成交后状态" msprop:Generator_UserColumnName="成交后状态" msprop:Generator_ColumnPropNameInRow="成交后状态" msprop:Generator_ColumnVarNameInTable="column成交后状态" msprop:Generator_ColumnPropNameInTable="成交后状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="当前工作状态" msdata:ReadOnly="true" msprop:Generator_UserColumnName="当前工作状态" msprop:Generator_ColumnPropNameInRow="当前工作状态" msprop:Generator_ColumnVarNameInTable="column当前工作状态" msprop:Generator_ColumnPropNameInTable="当前工作状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="合同编号" msprop:Generator_UserColumnName="合同编号" msprop:Generator_ColumnPropNameInRow="合同编号" msprop:Generator_ColumnVarNameInTable="column合同编号" msprop:Generator_ColumnPropNameInTable="合同编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_ZBYW" msprop:Generator_UserTableName="VW_ZBYW" msprop:Generator_RowDeletedName="VW_ZBYWRowDeleted" msprop:Generator_TableClassName="VW_ZBYWDataTable" msprop:Generator_RowChangedName="VW_ZBYWRowChanged" msprop:Generator_RowClassName="VW_ZBYWRow" msprop:Generator_RowChangingName="VW_ZBYWRowChanging" msprop:Generator_RowEvArgName="VW_ZBYWRowChangeEvent" msprop:Generator_RowEvHandlerName="VW_ZBYWRowChangeEventHandler" msprop:Generator_TablePropName="VW_ZBYW" msprop:Generator_TableVarName="tableVW_ZBYW" msprop:Generator_RowDeletingName="VW_ZBYWRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="镇区窗口收件" msprop:Generator_UserColumnName="镇区窗口收件" msprop:Generator_ColumnPropNameInRow="镇区窗口收件" msprop:Generator_ColumnVarNameInTable="column镇区窗口收件" msprop:Generator_ColumnPropNameInTable="镇区窗口收件Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="镇区分局经办人审核" msprop:Generator_UserColumnName="镇区分局经办人审核" msprop:Generator_ColumnPropNameInRow="镇区分局经办人审核" msprop:Generator_ColumnVarNameInTable="column镇区分局经办人审核" msprop:Generator_ColumnPropNameInTable="镇区分局经办人审核Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="分局局长初审" msprop:Generator_UserColumnName="分局局长初审" msprop:Generator_ColumnPropNameInRow="分局局长初审" msprop:Generator_ColumnVarNameInTable="column分局局长初审" msprop:Generator_ColumnPropNameInTable="分局局长初审Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="市局经办人出审批表" msprop:Generator_UserColumnName="市局经办人出审批表" msprop:Generator_ColumnPropNameInRow="市局经办人出审批表" msprop:Generator_ColumnVarNameInTable="column市局经办人出审批表" msprop:Generator_ColumnPropNameInTable="市局经办人出审批表Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="副主任审核" msprop:Generator_UserColumnName="副主任审核" msprop:Generator_ColumnPropNameInRow="副主任审核" msprop:Generator_ColumnVarNameInTable="column副主任审核" msprop:Generator_ColumnPropNameInTable="副主任审核Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="主任审核" msprop:Generator_UserColumnName="主任审核" msprop:Generator_ColumnPropNameInRow="主任审核" msprop:Generator_ColumnVarNameInTable="column主任审核" msprop:Generator_ColumnPropNameInTable="主任审核Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="局长" msprop:Generator_UserColumnName="局长" msprop:Generator_ColumnPropNameInRow="局长" msprop:Generator_ColumnVarNameInTable="column局长" msprop:Generator_ColumnPropNameInTable="局长Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="市局经办人发件" msprop:Generator_UserColumnName="市局经办人发件" msprop:Generator_ColumnPropNameInRow="市局经办人发件" msprop:Generator_ColumnVarNameInTable="column市局经办人发件" msprop:Generator_ColumnPropNameInTable="市局经办人发件Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="权属单位" msprop:Generator_UserColumnName="权属单位" msprop:Generator_ColumnPropNameInRow="权属单位" msprop:Generator_ColumnVarNameInTable="column权属单位" msprop:Generator_ColumnPropNameInTable="权属单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="宗地地址" msprop:Generator_UserColumnName="宗地地址" msprop:Generator_ColumnPropNameInRow="宗地地址" msprop:Generator_ColumnVarNameInTable="column宗地地址" msprop:Generator_ColumnPropNameInTable="宗地地址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="用地面积" msprop:Generator_UserColumnName="用地面积" msprop:Generator_ColumnPropNameInRow="用地面积" msprop:Generator_ColumnVarNameInTable="column用地面积" msprop:Generator_ColumnPropNameInTable="用地面积Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="交易底价" msprop:Generator_UserColumnName="交易底价" msprop:Generator_ColumnPropNameInRow="交易底价" msprop:Generator_ColumnVarNameInTable="column交易底价" msprop:Generator_ColumnPropNameInTable="交易底价Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当前服务器时间" msprop:Generator_UserColumnName="当前服务器时间" msprop:Generator_ColumnPropNameInRow="当前服务器时间" msprop:Generator_ColumnVarNameInTable="column当前服务器时间" msprop:Generator_ColumnPropNameInTable="当前服务器时间Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="结案时间" msprop:Generator_UserColumnName="结案时间" msprop:Generator_ColumnPropNameInRow="结案时间" msprop:Generator_ColumnVarNameInTable="column结案时间" msprop:Generator_ColumnPropNameInTable="结案时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="业务编号" msprop:Generator_UserColumnName="业务编号" msprop:Generator_ColumnPropNameInRow="业务编号" msprop:Generator_ColumnVarNameInTable="column业务编号" msprop:Generator_ColumnPropNameInTable="业务编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:VW_tdzbpm_b" />
+      <xs:field xpath="mstns:Bid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

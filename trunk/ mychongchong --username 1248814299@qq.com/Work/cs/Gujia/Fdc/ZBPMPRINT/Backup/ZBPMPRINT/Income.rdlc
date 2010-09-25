@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>13278699-abdc-4cfb-9ec3-326316d2fee8</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <Left>9cm</Left>
+        <Top>5cm</Top>
+        <ZIndex>7</ZIndex>
+        <Width>3cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrType.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Left>4.5cm</Left>
+        <Top>5cm</Top>
+        <ZIndex>6</ZIndex>
+        <Width>3cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrNo.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Left>13.5cm</Left>
+        <Top>5cm</Top>
+        <ZIndex>5</ZIndex>
+        <Width>3cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrRemark.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Textbox Name="StrMoney">
+        <Left>13.5cm</Left>
+        <Top>4.25cm</Top>
+        <rd:DefaultName>StrMoney</rd:DefaultName>
+        <ZIndex>4</ZIndex>
+        <Width>2.53968cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrMoney.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Textbox Name="StrCapital">
+        <Left>4.5cm</Left>
+        <Top>4.25cm</Top>
+        <rd:DefaultName>StrCapital</rd:DefaultName>
+        <ZIndex>3</ZIndex>
+        <Width>7.5cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrCapital.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Table Name="table1">
+        <Left>1.6cm</Left>
+        <DataSetName>ZBPMPRINT_clsItem</DataSetName>
+        <Top>3.6cm</Top>
+        <ZIndex>2</ZIndex>
+        <Width>15.95cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="StrName">
+                      <rd:DefaultName>StrName</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!StrName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="StrMoney_3">
+                      <rd:DefaultName>StrMoney_3</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontFamily>宋体</FontFamily>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!StrMoney.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <FontFamily>宋体</FontFamily>
+        </Style>
+        <TableColumns>
+          <TableColumn>
+            <Width>12.2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.75cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>0.63492cm</Height>
+      </Table>
+      <Textbox Name="StrDate_1">
+        <Left>12.5cm</Left>
+        <Top>2.2cm</Top>
+        <rd:DefaultName>StrDate_1</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>5cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrDate.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+      <Textbox Name="StrPayUnit">
+        <Left>3.5cm</Left>
+        <Top>2.2cm</Top>
+        <rd:DefaultName>StrPayUnit</rd:DefaultName>
+        <Width>6.5cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>宋体</FontFamily>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>=First(Fields!StrPayUnit.Value, "ZBPMPRINT_clsIncome")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>10.2cm</Height>
+    <Style>
+      <BorderStyle>
+        <Default>Solid</Default>
+      </BorderStyle>
+    </Style>
+  </Body>
+  <rd:ReportID>014c71ec-7b7c-424b-bed7-0845a533e8e2</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="ZBPMPRINT_clsItem">
+      <rd:DataSetInfo>
+        <rd:DataSetName>ZBPMPRINT</rd:DataSetName>
+        <rd:ObjectDataSourceType>ZBPMPRINT.clsItem, ZBPMPRINT, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>clsItem</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="StrMoney">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>StrMoney</DataField>
+        </Field>
+        <Field Name="StrName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>StrName</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ZBPMPRINT_clsIncome">
+      <rd:DataSetInfo>
+        <rd:DataSetName>ZBPMPRINT</rd:DataSetName>
+        <rd:ObjectDataSourceType>ZBPMPRINT.clsIncome, ZBPMPRINT, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>clsIncome</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Items">
+          <rd:TypeName>ZBPMPRINT.clsItems</rd:TypeName>
+          <DataField>Items</DataField>
+        </Field>
+        <Field Name="StrCapital">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>StrCapital</DataField>
+        </Field>
+        <Field Name="StrDate">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>StrDate</DataField>
+        </Field>
+        <Field Name="StrMoney">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>StrMoney</DataField>
+        </Field>
+        <Field Name="StrNo">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>StrNo</DataField>
+        </Field>
+        <Field Name="StrPayUnit">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>StrPayUnit</DataField>
+        </Field>
+        <Field Name="StrRemark">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>StrRemark</DataField>
+        </Field>
+        <Field Name="StrType">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>StrType</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>18.4cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>zh-CN</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

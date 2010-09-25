@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.DataForms.TempletPrint,SkyMap.Net.DataForms" table="DF_TEMPLETPRINT">
+		<id name="Id" type="String" column="TEMPLETPRINT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="TEMPLETPRINT_NAME" />
+		<property name="Description" column="TEMPLETPRINT_DESCRIPTION" />
+		<property name="Type" column="TEMPLETPRINT_TYPE" />
+		<property name="Data" column="TEMPLETPRINT_DATA" type="BinaryBlob"/>
+		<property name="NeedAsk" column="NEED_ASK" />
+    <property name="PrintPreview" column="PRINT_PREVIEW" />
+    <property name="Version" column="REPLICATION_VERSION"/>
+    <property name="Sql" column="SQL"/>
+    <property column="DATASOURCE_OID" type="String" name="smDataSourceOID" access="field"/>
+    <!--<property name="DSType" column="DSType" />
+    <property column="ConnectionString" name="ConnectionString"/>-->
+		<bag name="PrintSets" table="DF_TEMPLETPRINT_PRINTSET" inverse="false" lazy="false"
+			cascade="none" generic="true" outer-join="true" fetch="subselect">
+			<key column="TEMPLETPRINT_ID" />
+			<many-to-many class="SkyMap.Net.DataForms.PrintSet,SkyMap.Net.DataForms"
+				column="PRINTSET_ID" />
+		</bag>
+		
+	</class>
+</hibernate-mapping>
+

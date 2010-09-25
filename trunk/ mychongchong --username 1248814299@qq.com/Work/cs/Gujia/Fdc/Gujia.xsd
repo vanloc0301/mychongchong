@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.zgfdc.net/gujia" elementFormDefault="qualified" xmlns="http://www.zgfdc.net/gujia" xmlns:mstns="http://www.zgfdc.net/gujia" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="Root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="yw_gujia">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PROJECT_ID" type="xs:string" />
+							<xs:element name="PROINST_ID" type="xs:string" minOccurs="0" />
+							<xs:element name="委托方" type="xs:string" minOccurs="0" />
+							<xs:element name="窗口收件日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="窗口收件人" type="xs:string" minOccurs="0" />
+							<xs:element name="估价目的" type="xs:string" minOccurs="0" />
+							<xs:element name="现场调查人员" type="xs:string" minOccurs="0" />
+							<xs:element name="现场调查日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="业务来源" type="xs:string" minOccurs="0" />
+							<xs:element name="业务联系人" type="xs:string" minOccurs="0" />
+							<xs:element name="一审" type="xs:string" minOccurs="0" />
+							<xs:element name="一审日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="二审" type="xs:string" minOccurs="0" />
+							<xs:element name="二审日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="一审1" type="xs:string" minOccurs="0" />
+							<xs:element name="一审日期1" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="二审1" type="xs:string" minOccurs="0" />
+							<xs:element name="二审日期1" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="评估总值" type="xs:decimal" minOccurs="0" />
+							<xs:element name="标准收费" type="xs:decimal" minOccurs="0" />
+							<xs:element name="报告领取人" type="xs:string" minOccurs="0" />
+							<xs:element name="开票人" type="xs:string" minOccurs="0" />
+							<xs:element name="开票日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="报告领取日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="收费人" type="xs:string" minOccurs="0" />
+							<xs:element name="收费日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="委托方备注信息" type="xs:string" minOccurs="0" />
+							<xs:element name="实际收费" type="xs:decimal" minOccurs="0" />
+							<xs:element name="业务费" type="xs:decimal" minOccurs="0" />
+							<xs:element name="业务费结算日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="发票收据" type="xs:string" minOccurs="0" />
+							<xs:element name="财务备注" type="xs:string" minOccurs="0" />
+							<xs:element name="初评备注" type="xs:string" minOccurs="0" />
+							<xs:element name="初评一审备注" type="xs:string" minOccurs="0" />
+							<xs:element name="初评二审备注" type="xs:string" minOccurs="0" />
+							<xs:element name="正式报告备注" type="xs:string" minOccurs="0" />
+							<xs:element name="正式报告一审备注" type="xs:string" minOccurs="0" />
+							<xs:element name="正式报告二审备注" type="xs:string" minOccurs="0" />
+							<xs:element name="估价项目档案备注" type="xs:string" minOccurs="0" />
+							<xs:element name="报告状态" type="xs:int" minOccurs="0" />
+							<xs:element name="评估目的" type="xs:string" minOccurs="0" />
+							<xs:element name="价值类型" type="xs:string" minOccurs="0" />
+							<xs:element name="总价精度" type="xs:string" minOccurs="0" />
+							<xs:element name="货币单位" type="xs:string" minOccurs="0" />
+							<xs:element name="报告开始时间" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="报告结束时间" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="估价期日" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="报告应用有效期" type="xs:int" minOccurs="0" />
+							<xs:element name="估价报告到期时间" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="估价师" type="xs:string" minOccurs="0" />
+							<xs:element name="估价师1" type="xs:string" minOccurs="0" />
+							<xs:element name="估价日期" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="估价日期1" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="换证" type="xs:string" minOccurs="0" />
+							<xs:element name="yw_gujia_b">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Bid" type="xs:int" />
+										<xs:element name="Bid_1" type="xs:int" />
+										<xs:element name="Bid_2" type="xs:int" />
+										<xs:element name="Bid_3" type="xs:int" />
+										<xs:element name="Bid_4" type="xs:int" />
+										<xs:element name="Bid_5" type="xs:int" />
+										<xs:element name="Bid_6" type="xs:int" />
+										<xs:element name="Bid_7" type="xs:int" />
+										<xs:element name="PROJECT_ID" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_1" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_2" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_3" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_4" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_5" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_6" type="xs:string" minOccurs="0" />
+										<xs:element name="PROJECT_ID_7" type="xs:string" minOccurs="0" />
+										<xs:element name="报告号" type="xs:string" minOccurs="0" />
+										<xs:element name="报告名" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_1" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_2" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_3" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_4" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_5" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_6" type="xs:string" minOccurs="0" />
+										<xs:element name="评估类型_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地证号_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用者_7" type="xs:string" minOccurs="0" />
+										<xs:element name="镇区" type="xs:string" minOccurs="0" />
+										<xs:element name="座落" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_1" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_2" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_3" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_4" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_5" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_6" type="xs:string" minOccurs="0" />
+										<xs:element name="座落_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地用途_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权类型_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地终止日期_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地使用权面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地分摊面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="房地产权证" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_1" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_2" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_3" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_4" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_5" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_6" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产权证_7" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_1" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_2" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_3" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_4" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_5" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_6" type="xs:string" minOccurs="0" />
+										<xs:element name="房地产共有用证_7" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_1" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_2" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_3" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_4" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_5" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_6" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权来源_7" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_1" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_2" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_3" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_4" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_5" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_6" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋用途_7" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_1" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_2" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_3" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_4" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_5" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_6" type="xs:string" minOccurs="0" />
+										<xs:element name="占有房屋份额_7" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_2" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_3" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_4" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_5" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_6" type="xs:string" minOccurs="0" />
+										<xs:element name="房屋所有权性质_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权来源_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地使用权性质_7" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_1" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_2" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_3" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_4" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_5" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_6" type="xs:string" minOccurs="0" />
+										<xs:element name="建筑结构_7" type="xs:string" minOccurs="0" />
+										<xs:element name="层数" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_1" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_2" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_3" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_4" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_5" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_6" type="xs:int" minOccurs="0" />
+										<xs:element name="层数_7" type="xs:int" minOccurs="0" />
+										<xs:element name="建筑面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="建筑面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="住宅建筑面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="套内建筑面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估房屋面积" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_1" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_2" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_3" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_4" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_5" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_6" type="xs:string" minOccurs="0" />
+										<xs:element name="评估房屋面积_7" type="xs:string" minOccurs="0" />
+										<xs:element name="计算土地总价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算土地总价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="计算房地产总价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产总价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地总价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="价值类型" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_1" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_2" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_3" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_4" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_5" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_6" type="xs:string" minOccurs="0" />
+										<xs:element name="价值类型_7" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_1" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_2" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_3" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_4" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_5" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_6" type="xs:string" minOccurs="0" />
+										<xs:element name="估价目的_7" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_1" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_2" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_3" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_4" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_5" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_6" type="xs:string" minOccurs="0" />
+										<xs:element name="总价精度_7" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_1" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_2" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_3" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_4" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_5" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_6" type="xs:string" minOccurs="0" />
+										<xs:element name="货币单位_7" type="xs:string" minOccurs="0" />
+										<xs:element name="报告开始时间" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_1" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_2" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_3" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_4" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_5" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_6" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告开始时间_7" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_1" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_2" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_3" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_4" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_5" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_6" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告结束时间_7" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_1" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_2" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_3" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_4" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_5" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_6" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="估价基准日_7" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告有效期限" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_1" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_2" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_3" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_4" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_5" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_6" type="xs:int" minOccurs="0" />
+										<xs:element name="报告有效期限_7" type="xs:int" minOccurs="0" />
+										<xs:element name="报告到期时间" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_1" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_2" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_3" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_4" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_5" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_6" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="报告到期时间_7" type="xs:dateTime" minOccurs="0" />
+										<xs:element name="对象状况" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_1" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_2" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_3" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_4" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_5" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_6" type="xs:string" minOccurs="0" />
+										<xs:element name="对象状况_7" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_1" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_2" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_3" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_4" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_5" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_6" type="xs:string" minOccurs="0" />
+										<xs:element name="位置区域和环境_7" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_1" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_2" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_3" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_4" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_5" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_6" type="xs:string" minOccurs="0" />
+										<xs:element name="区片号_7" type="xs:string" minOccurs="0" />
+										<xs:element name="容积率" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="容积率_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地开发程度" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地开发程度_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地平整条件_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地剩余使用年限" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地剩余使用年限_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估设定使用年限_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评土地面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="土地登记一览表备注" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地登记一览表备注_7" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_1" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_2" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_3" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_4" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_5" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_6" type="xs:string" minOccurs="0" />
+										<xs:element name="土地状况_7" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_1" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_2" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_3" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_4" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_5" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_6" type="xs:string" minOccurs="0" />
+										<xs:element name="个别因素_7" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_1" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_2" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_3" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_4" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_5" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_6" type="xs:string" minOccurs="0" />
+										<xs:element name="评估方法_7" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_1" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_2" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_3" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_4" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_5" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_6" type="xs:string" minOccurs="0" />
+										<xs:element name="收费标准_7" type="xs:string" minOccurs="0" />
+										<xs:element name="标准收费" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="标准收费_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="有效证件" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_1" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_2" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_3" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_4" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_5" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_6" type="xs:string" minOccurs="0" />
+										<xs:element name="有效证件_7" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_1" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_2" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_3" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_4" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_5" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_6" type="xs:string" minOccurs="0" />
+										<xs:element name="估价师_7" type="xs:string" minOccurs="0" />
+										<xs:element name="新测实评房屋面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="新测实评房屋面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估土地面积" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_1" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_2" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_3" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_4" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_5" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_6" type="xs:string" minOccurs="0" />
+										<xs:element name="评估土地面积_7" type="xs:string" minOccurs="0" />
+										<xs:element name="评估确定房地产单价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房地产单价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产价值_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定楼面地价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用建筑面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估最后采用土地面积_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定房产单价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_1" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_2" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_3" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_4" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_5" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_6" type="xs:decimal" minOccurs="0" />
+										<xs:element name="评估确定土地单价_7" type="xs:decimal" minOccurs="0" />
+										<xs:element name="yw_fj">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="附件" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="委托方" type="xs:string" />
+										<xs:element name="委托方_1" type="xs:string" />
+										<xs:element name="委托方_2" type="xs:string" />
+										<xs:element name="委托方_3" type="xs:string" />
+										<xs:element name="委托方_4" type="xs:string" />
+										<xs:element name="委托方_5" type="xs:string" />
+										<xs:element name="委托方_6" type="xs:string" />
+										<xs:element name="委托方_7" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_1" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_2" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_3" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_4" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_5" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_6" type="xs:string" />
+										<xs:element name="评估确定房地产单价大写_7" type="xs:string" />
+										<xs:element name="评估确定土地总价大写" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_1" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_2" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_3" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_4" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_5" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_6" type="xs:string" />
+										<xs:element name="评估确定土地总价大写_7" type="xs:string" />
+										<xs:element name="评估确定土地单价大写" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_1" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_2" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_3" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_4" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_5" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_6" type="xs:string" />
+										<xs:element name="评估确定土地单价大写_7" type="xs:string" />
+										<xs:element name="评估确定房产价值大写" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_1" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_2" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_3" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_4" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_5" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_6" type="xs:string" />
+										<xs:element name="评估确定房产价值大写_7" type="xs:string" />
+										<xs:element name="评估确定房产单价大写" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_1" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_2" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_3" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_4" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_5" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_6" type="xs:string" />
+										<xs:element name="评估确定房产单价大写_7" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_1" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_2" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_3" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_4" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_5" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_6" type="xs:string" />
+										<xs:element name="评估确定楼面地价大写_7" type="xs:string" />
+										<xs:element name="长估价目的" type="xs:string" />
+										<xs:element name="长估价目的_1" type="xs:string" />
+										<xs:element name="长估价目的_2" type="xs:string" />
+										<xs:element name="长估价目的_3" type="xs:string" />
+										<xs:element name="长估价目的_4" type="xs:string" />
+										<xs:element name="长估价目的_5" type="xs:string" />
+										<xs:element name="长估价目的_6" type="xs:string" />
+										<xs:element name="长估价目的_7" type="xs:string" />
+										<xs:element name="价值定义" type="xs:string" />
+										<xs:element name="价值定义_1" type="xs:string" />
+										<xs:element name="价值定义_2" type="xs:string" />
+										<xs:element name="价值定义_3" type="xs:string" />
+										<xs:element name="价值定义_4" type="xs:string" />
+										<xs:element name="价值定义_5" type="xs:string" />
+										<xs:element name="价值定义_6" type="xs:string" />
+										<xs:element name="价值定义_7" type="xs:string" />
+										<xs:element name="初报告编号" type="xs:string" />
+										<xs:element name="初报告编号_1" type="xs:string" />
+										<xs:element name="初报告编号_2" type="xs:string" />
+										<xs:element name="初报告编号_3" type="xs:string" />
+										<xs:element name="初报告编号_4" type="xs:string" />
+										<xs:element name="初报告编号_5" type="xs:string" />
+										<xs:element name="初报告编号_6" type="xs:string" />
+										<xs:element name="初报告编号_7" type="xs:string" />
+										<xs:element name="正报告编号" type="xs:string" />
+										<xs:element name="正报告编号_1" type="xs:string" />
+										<xs:element name="正报告编号_2" type="xs:string" />
+										<xs:element name="正报告编号_3" type="xs:string" />
+										<xs:element name="正报告编号_4" type="xs:string" />
+										<xs:element name="正报告编号_5" type="xs:string" />
+										<xs:element name="正报告编号_6" type="xs:string" />
+										<xs:element name="正报告编号_7" type="xs:string" />
+										<xs:element name="技报告编号" type="xs:string" />
+										<xs:element name="技报告编号_1" type="xs:string" />
+										<xs:element name="技报告编号_2" type="xs:string" />
+										<xs:element name="技报告编号_3" type="xs:string" />
+										<xs:element name="技报告编号_4" type="xs:string" />
+										<xs:element name="技报告编号_5" type="xs:string" />
+										<xs:element name="技报告编号_6" type="xs:string" />
+										<xs:element name="技报告编号_7" type="xs:string" />
+										<xs:element name="开始日期短" type="xs:string" />
+										<xs:element name="开始日期短_1" type="xs:string" />
+										<xs:element name="开始日期短_2" type="xs:string" />
+										<xs:element name="开始日期短_3" type="xs:string" />
+										<xs:element name="开始日期短_4" type="xs:string" />
+										<xs:element name="开始日期短_5" type="xs:string" />
+										<xs:element name="开始日期短_6" type="xs:string" />
+										<xs:element name="开始日期短_7" type="xs:string" />
+										<xs:element name="开始日期长" type="xs:string" />
+										<xs:element name="开始日期长_1" type="xs:string" />
+										<xs:element name="开始日期长_2" type="xs:string" />
+										<xs:element name="开始日期长_3" type="xs:string" />
+										<xs:element name="开始日期长_4" type="xs:string" />
+										<xs:element name="开始日期长_5" type="xs:string" />
+										<xs:element name="开始日期长_6" type="xs:string" />
+										<xs:element name="开始日期长_7" type="xs:string" />
+										<xs:element name="结束日期长" type="xs:string" />
+										<xs:element name="结束日期长_1" type="xs:string" />
+										<xs:element name="结束日期长_2" type="xs:string" />
+										<xs:element name="结束日期长_3" type="xs:string" />
+										<xs:element name="结束日期长_4" type="xs:string" />
+										<xs:element name="结束日期长_5" type="xs:string" />
+										<xs:element name="结束日期长_6" type="xs:string" />
+										<xs:element name="结束日期长_7" type="xs:string" />
+										<xs:element name="结束日期短" type="xs:string" />
+										<xs:element name="结束日期短_1" type="xs:string" />
+										<xs:element name="结束日期短_2" type="xs:string" />
+										<xs:element name="结束日期短_3" type="xs:string" />
+										<xs:element name="结束日期短_4" type="xs:string" />
+										<xs:element name="结束日期短_5" type="xs:string" />
+										<xs:element name="结束日期短_6" type="xs:string" />
+										<xs:element name="结束日期短_7" type="xs:string" />
+										<xs:element name="价格精度大写" type="xs:string" />
+										<xs:element name="价格精度大写_1" type="xs:string" />
+										<xs:element name="价格精度大写_2" type="xs:string" />
+										<xs:element name="价格精度大写_3" type="xs:string" />
+										<xs:element name="价格精度大写_4" type="xs:string" />
+										<xs:element name="价格精度大写_5" type="xs:string" />
+										<xs:element name="价格精度大写_6" type="xs:string" />
+										<xs:element name="价格精度大写_7" type="xs:string" />
+										<xs:element name="开始日期长数字" type="xs:string" />
+										<xs:element name="开始日期长数字_1" type="xs:string" />
+										<xs:element name="开始日期长数字_2" type="xs:string" />
+										<xs:element name="开始日期长数字_3" type="xs:string" />
+										<xs:element name="开始日期长数字_4" type="xs:string" />
+										<xs:element name="开始日期长数字_5" type="xs:string" />
+										<xs:element name="开始日期长数字_6" type="xs:string" />
+										<xs:element name="开始日期长数字_7" type="xs:string" />
+										<xs:element name="结束日期长数字" type="xs:string" />
+										<xs:element name="结束日期长数字_1" type="xs:string" />
+										<xs:element name="结束日期长数字_2" type="xs:string" />
+										<xs:element name="结束日期长数字_3" type="xs:string" />
+										<xs:element name="结束日期长数字_4" type="xs:string" />
+										<xs:element name="结束日期长数字_5" type="xs:string" />
+										<xs:element name="结束日期长数字_6" type="xs:string" />
+										<xs:element name="结束日期长数字_7" type="xs:string" />
+										<xs:element name="项目编号" type="xs:string" />
+										<xs:element name="项目编号_1" type="xs:string" />
+										<xs:element name="项目编号_2" type="xs:string" />
+										<xs:element name="项目编号_4" type="xs:string" />
+										<xs:element name="项目编号_5" type="xs:string" />
+										<xs:element name="项目编号_6" type="xs:string" />
+										<xs:element name="项目编号_7" type="xs:string" />
+										<xs:element name="估价期日长数字" type="xs:string" />
+										<xs:element name="估价期日长数字_1" type="xs:string" />
+										<xs:element name="估价期日长数字_2" type="xs:string" />
+										<xs:element name="估价期日长数字_3" type="xs:string" />
+										<xs:element name="估价期日长数字_4" type="xs:string" />
+										<xs:element name="估价期日长数字_5" type="xs:string" />
+										<xs:element name="估价期日长数字_6" type="xs:string" />
+										<xs:element name="估价期日长数字_7" type="xs:string" />
+										<xs:element name="估价期日长" type="xs:string" />
+										<xs:element name="估价期日长_1" type="xs:string" />
+										<xs:element name="估价期日长_2" type="xs:string" />
+										<xs:element name="估价期日长_3" type="xs:string" />
+										<xs:element name="估价期日长_4" type="xs:string" />
+										<xs:element name="估价期日长_5" type="xs:string" />
+										<xs:element name="估价期日长_6" type="xs:string" />
+										<xs:element name="估价期日长_7" type="xs:string" />
+										<xs:element name="有效年期长" type="xs:string" />
+										<xs:element name="有效年期长_1" type="xs:string" />
+										<xs:element name="有效年期长_2" type="xs:string" />
+										<xs:element name="有效年期长_3" type="xs:string" />
+										<xs:element name="有效年期长_4" type="xs:string" />
+										<xs:element name="有效年期长_5" type="xs:string" />
+										<xs:element name="有效年期长_6" type="xs:string" />
+										<xs:element name="有效年期长_7" type="xs:string" />
+										<xs:element name="yw_zq">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="描述" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="yw_zj">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="证件" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="评估方法的描述" type="xs:string" />
+										<xs:element name="评估方法的描述_1" type="xs:string" />
+										<xs:element name="评估方法的描述_2" type="xs:string" />
+										<xs:element name="评估方法的描述_3" type="xs:string" />
+										<xs:element name="评估方法的描述_4" type="xs:string" />
+										<xs:element name="评估方法的描述_5" type="xs:string" />
+										<xs:element name="评估方法的描述_6" type="xs:string" />
+										<xs:element name="评估方法的描述_7" type="xs:string" />
+										<xs:element name="报告到期时间长" type="xs:string" />
+										<xs:element name="报告到期时间长_1" type="xs:string" />
+										<xs:element name="报告到期时间长_2" type="xs:string" />
+										<xs:element name="报告到期时间长_3" type="xs:string" />
+										<xs:element name="报告到期时间长_4" type="xs:string" />
+										<xs:element name="报告到期时间长_5" type="xs:string" />
+										<xs:element name="报告到期时间长_6" type="xs:string" />
+										<xs:element name="报告到期时间长_7" type="xs:string" />
+										<xs:element name="土地终止日期长" type="xs:string" />
+										<xs:element name="土地终止日期长_1" type="xs:string" />
+										<xs:element name="土地终止日期长_2" type="xs:string" />
+										<xs:element name="土地终止日期长_3" type="xs:string" />
+										<xs:element name="土地终止日期长_4" type="xs:string" />
+										<xs:element name="土地终止日期长_5" type="xs:string" />
+										<xs:element name="土地终止日期长_6" type="xs:string" />
+										<xs:element name="土地终止日期长_7" type="xs:string" />
+										<xs:element name="报告到期时间长数字" type="xs:string" />
+										<xs:element name="报告到期时间长数字_1" type="xs:string" />
+										<xs:element name="报告到期时间长数字_2" type="xs:string" />
+										<xs:element name="报告到期时间长数字_3" type="xs:string" />
+										<xs:element name="报告到期时间长数字_4" type="xs:string" />
+										<xs:element name="报告到期时间长数字_5" type="xs:string" />
+										<xs:element name="报告到期时间长数字_6" type="xs:string" />
+										<xs:element name="报告到期时间长数字_7" type="xs:string" />
+										<xs:element name="土地终止日期长数字" type="xs:string" />
+										<xs:element name="土地终止日期长数字_1" type="xs:string" />
+										<xs:element name="土地终止日期长数字_2" type="xs:string" />
+										<xs:element name="土地终止日期长数字_3" type="xs:string" />
+										<xs:element name="土地终止日期长数字_4" type="xs:string" />
+										<xs:element name="土地终止日期长数字_5" type="xs:string" />
+										<xs:element name="土地终止日期长数字_6" type="xs:string" />
+										<xs:element name="土地终止日期长数字_7" type="xs:string" />
+										<xs:element name="yw_zj1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="证件1" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="yw_zj2">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="证件2" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="yw_zq1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="描述1" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="yw_zq2">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="描述2" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="本估评师" type="xs:string" />
+										<xs:element name="本估评师_1" type="xs:string" />
+										<xs:element name="本估评师_2" type="xs:string" />
+										<xs:element name="本估评师_3" type="xs:string" />
+										<xs:element name="本估评师_4" type="xs:string" />
+										<xs:element name="本估评师_5" type="xs:string" />
+										<xs:element name="本估评师_6" type="xs:string" />
+										<xs:element name="本估评师_7" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写" type="xs:string">
+										</xs:element>
+										<xs:element name="评估确定房地产总价大写_1" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_2" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_3" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_4" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_5" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_6" type="xs:string" />
+										<xs:element name="评估确定房地产总价大写_7" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="评估类型" type="xs:string" />
+							<xs:element name="评估地址" type="xs:string" />
+							<xs:element name="评估编号" type="xs:string" />
+							<xs:element name="实际收费大写" type="xs:string" />
+							<xs:element name="开户帐号" type="xs:string" />
+							<xs:element name="开户行" type="xs:string" />
+							<xs:element name="开户名称" type="xs:string" />
+							<xs:element name="收费通知书日期" type="xs:string" />
+							<xs:element name="评估日期" type="xs:string" />
+							<xs:element name="折扣" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="RootKey1">
+			<xs:selector xpath=".//mstns:yw_gujia_b" />
+			<xs:field xpath="mstns:Bid" />
+		</xs:unique>
+		<xs:unique name="RootKey2">
+			<xs:selector xpath=".//mstns:yw_gujia" />
+			<xs:field xpath="mstns:PROJECT_ID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

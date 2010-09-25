@@ -1,0 +1,1220 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Windows</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <Name>Aspose.Words</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.2">
+      <Name>DevExpress.Data.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2">
+      <Name>DevExpress.Utils.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2">
+      <Name>DevExpress.XtraEditors.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2">
+      <Name>DevExpress.XtraGrid.v8.2</Name>
+    </Reference>
+    <Reference Include="Interop.CAPICOM">
+      <Name>Interop.CAPICOM</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\Interop.CAPICOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.ConnectionUI.Dialog">
+      <Name>Microsoft.Data.ConnectionUI.Dialog</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\Microsoft.Data.ConnectionUI.Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <Name>Microsoft.Office.Interop.Word</Name>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <Name>Microsoft.ReportViewer.WinForms</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <Name>WeifenLuo.WinFormsUI.Docking</Name>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\BrowserDisplayBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\BrowserLocationConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\BrowserPane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\DefaultSchemeExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\ExtendedWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\GoBack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\GoForward.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\GoHome.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\GoSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\HtmlViewPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\ISchemeExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\NewWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\NewWindowExtendedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\NewWindowExtendedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\Refresh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\SchemeExtensionDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\SchemeExtensionDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\Stop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\BrowserDisplayBinding\UrlComboBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AboutSkyMapSoft.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AbstractClipboardCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AbstractEditViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AddDataWordTypeCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AddEditTaskNodeCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\AutoUpdateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ChangeServerCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\CloseAllWindows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\CloseFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Copy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Cut.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\DBExportCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\DecryptCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Delete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\EditPasswordCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\EMailTipsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\EncryptCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ExitWorkbenchCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\InputLanaguaeCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LinkCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LoadDataWordTypesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LoadEditTaskNodesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LoginAsAdminCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LoginByCert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\LoginCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\MainViewMenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ManualUpdateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\OpenContentsMenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\OpenFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\OpenFileCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\OptionsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Paste.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Print.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\PrintPreview.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Redo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\RemoteAutoUpdateServerCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\RemoteTryCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\SelectAll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\SelectNextWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\SelectPrevWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ShowEditViewCommand!2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\StartWorkbenchCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskAddCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskCopyCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskPasteCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskRemoveCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskSaveAsCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\TaskSaveCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ToggleFullscreenCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ToolMenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ToolsViewMenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\Undo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\UpdateDAOCacheVersionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ViewLocalLogCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ViewMenuBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ViewRemoteLogCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Commands\ViewTipOfTheDay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ActiveViewContentUntitledConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ActiveWindowStateConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CommonCheckBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CommonDateTimeCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CommonSpinEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\CommonTextBoxCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DefaultDialogPanelDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DialogMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DialogPanelDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DirectoryDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DisplayBindingDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DisplayBindingDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\DisplayBindingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileCancelEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileRenameEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileRenamingEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\FileService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IconService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IDialogPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IDialogPanelDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IDisplayBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IEditValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ISecondaryDisplayBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IStatusUpdate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\IWizardPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LanguageBindingDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LanguageBindingDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LanguageBindingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\LanguageService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MenuCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MenuCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MenuItemDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MenuSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\MenuService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\OpenWindowStateConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\PadDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\PadDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\RecentOpen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarCalcEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarDateTimeEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarDropDownButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolbarItemDoozer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarPopupEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarSeparator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolbarService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarSpinEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ToolBarTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\ViewContentService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\WindowActiveConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\WindowOpenConditionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Core\WindowState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\DiffUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractBaseViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractDomainObjectNode!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractPadContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractPropertyEditPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractSecondaryViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AbstractWizardPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Action.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ActionResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AnimateDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AppBarInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AutoHideContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AutoHideMenuStripContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\AutoHideStatusStripContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\BackgroundMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\BinderHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\BooleanTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\BorderStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\CloseRequestedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\AbstractPageNavigateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\AbstractSelectCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\AddNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\BlobPropertyEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\ChineseControlLocalizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\ChineseGridLocalizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\ClearSelectionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\DataWordLookUpEditHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\DateEditEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\DbConnectionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\DbProviderEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\DropDownEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\FirstPageNavigateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\GridDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\GridEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\GridPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\GridPanelExportToExcelCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\GridShowDetailCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\IContainerControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\InvertSelectionCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\ListEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\ListStringEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\NextPageNavigateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\OGMTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\PageNavigationDropDown.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\PreviousPageNavigateCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SelectAllCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmApplicationControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmBarUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmCardView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Components\SmUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\CurrentPanelPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\DataWordNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\DataWordTypeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\DefaultWorkbench.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\AbstractDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\CommonAboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\DBExportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\ExceptionBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\ServerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\Dialogs\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\DriveObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\DriveType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\EditTaskNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ExtFolderNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ExtTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ExtTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ExtTreeViewComparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FileIcon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FileList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FileScout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FolderDialog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FontSelectionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FormLocationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\FormPlacement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\GradientHeaderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\GridViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IBaseViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ICanBeDirty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IClipboardHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IconManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IContextHelpProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ICustomizedCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IEditable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IHasPropertyViewContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IPadContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IParseableContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IPositionable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IPrintable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IProgressMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IPropertyEditPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IReportVistor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ISecondaryViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IUndoHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IViewContentMemento.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IViewContentMementoCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IWorkbench.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IWorkbenchLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\IWorkbenchWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LayoutConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LineReceivedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LineReceivedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LocalizedObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LocalizedProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LocalizedPropertyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LocalizedPropertyDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LocalizedTypeDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\LookAndFeelHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\MessageHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ObjectNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\OffDisplayException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\OptionPanels\ExternalToolPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\OutputReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ProcessRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ProcessRunnerException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\PropertyGridEditPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\PropertyView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\PropertyViewContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\RemoteHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ReportViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SaveEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SaveEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SdiWorkbenchLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SdiWorkspaceWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ShellTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SmStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\StackArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\StackMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\StatusBarService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\StatusPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\StringListEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SystemHintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\SystemHintHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TabbedOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TaskTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TipOfTheDayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TipOfTheDayView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\CollectionItemEventArgs!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\CollectionWithEvents!1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicListColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicListEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicListMouseEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicListRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\DynamicTreeRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\IActivatable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\ItemPaintEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\MeasureWidthEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\ScrollButtonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeGrid\VerticalScrollContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeViewHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\TreeViewOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ViewContentEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\ViewContentEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WaitDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WaitDialogHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WindowsWaiUI.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WizardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WndMover.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WorkbenchSingleton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WorkbenchTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WorkbenchTreePad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\WorkbenchTreePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\BaseSharpDevelopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\BaseSharpDevelopUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\DefaultObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\IObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\IPropertyValueCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\IStringValueFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\SharpDevelopPropertyValueCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\SharpDevelopStringValueFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\StringWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\XmlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\XmlLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Gui\XmlForms\XmlUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Internal\ExternalTool\ExternalTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Internal\ExternalTool\ToolLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Internal\Undo\IUndoableOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Internal\Undo\UndoQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Internal\Undo\UndoStack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Project\ILanguageBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Util\FormatColumnValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Util\PrintBySelf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Util\PrintHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Util\RDLCPrint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.Aspose.lic" />
+    <EmbeddedResource Include="Resources.ExternalToolOptions.xfrm" />
+    <EmbeddedResource Include="Resources.TreeViewOptionsDialog.xfrm" />
+    <EmbeddedResource Include="SkyMap\Net\Gui\AniForm.resx">
+      <DependentUpon>AniForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\DateEditEx.resx">
+      <DependentUpon>DateEditEx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\GridDialog.resx">
+      <DependentUpon>GridDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\OGMTreeView.resx">
+      <DependentUpon>OGMTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmBarForm.resx">
+      <DependentUpon>SmBarForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmBarUserControl.resx">
+      <DependentUpon>SmBarUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmForm.resx">
+      <DependentUpon>SmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmGridControl.resx">
+      <DependentUpon>SmGridControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmGridView.resx">
+      <DependentUpon>SmGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Components\SmUserControl.resx">
+      <DependentUpon>SmUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\AbstractDialog.resx">
+      <DependentUpon>AbstractDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\CommonAboutDialog.resx">
+      <DependentUpon>CommonAboutDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\DBExportDialog.resx">
+      <DependentUpon>DBExportDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\EditPassword.resx">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\ServerDialog.resx">
+      <DependentUpon>ServerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkyMap\Net\Gui\Dialogs\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src.Util.wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.POP3\SkyMap.Net.POP3.csproj">
+      <Project>{DFCF4F7B-D48C-4DA4-90B4-920B40705656}</Project>
+      <Name>SkyMap.Net.POP3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\评估管理软件登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\登录.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

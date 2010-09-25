@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.XPDL.Actdef,SkyMap.Net.Workflow" table="WF_ACTDEF">
+		<id name="Id" type="String" column="ACTDEF_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="ACTDEF_NAME" />
+		<property name="Description" column="ACTDEF_DESCRIPTION" />
+		<property name="Limit" column="ACTDEF_LIMIT" />
+		<property name="Status" column="ACTDEF_STATUS" />
+		<property name="Type" column="ACTDEF_TYPE" type="SkyMap.Net.Workflow.XPDL.ActdefType,SkyMap.Net.Workflow" />
+		<property name="IsDefaultInit" column="ACTDEF_ISDEFAULTINIT" />
+		<property name="PassNeedInteraction" column="ACTDEF_PASSNEEDINTERACTION" />
+		<property name="IsSubflowSync" column="ACTDEF_ISSUBFLOWSYNC" />
+		<property name="MNMergeNum" column="ACTDEF_MNMERGENUM" />
+		<property name="ParticipantId" column="PARTICIPANT_ID" />
+		<property name="ParticipantName" column="PARTICIPANT_NAME" />
+		<property name="ApplicationId" column="APPLICATION_ID"  />
+		<property name="ApplicationName" column="APPLICATION_NAME"  />
+		<property name="SubflowProdefId" column="SUBFLOWPRODEF_ID" />
+		<property name="SubflowProdefName" column="SUBFLOWPRODEF_NAME" />
+		
+		<property name="XPos" column="XPOS" />
+		<property name="YPos" column="YPOS" />
+		
+		<one-to-one name="ActdefFormPermission" cascade="delete"
+			class="SkyMap.Net.Workflow.XPDL.ExtendElement.WfActdefFormPermission,SkyMap.Net.Workflow"  outer-join="true"/>
+		<many-to-one name="Prodef" column="PRODEF_ID" class="SkyMap.Net.Workflow.XPDL.Prodef,SkyMap.Net.Workflow" cascade="none"/>
+		
+		<bag name="Froms" inverse="false" lazy="false"
+			cascade="delete" generic="true" outer-join="true" fetch="subselect">
+			<key column="TRANSITION_FROM" />
+			<one-to-many class="SkyMap.Net.Workflow.XPDL.Transition,SkyMap.Net.Workflow"/>
+		</bag>
+		<bag name="Tos" inverse="false" lazy="false"
+			cascade="delete" generic="true" outer-join="true" fetch="subselect">
+			<key column="TRANSITION_TO" />
+			<one-to-many class="SkyMap.Net.Workflow.XPDL.Transition,SkyMap.Net.Workflow"/>
+		</bag>
+	</class>
+	
+</hibernate-mapping>
+
+

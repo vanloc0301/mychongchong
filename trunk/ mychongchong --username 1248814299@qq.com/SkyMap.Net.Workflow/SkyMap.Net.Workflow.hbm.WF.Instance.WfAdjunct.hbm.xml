@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Workflow.Instance.WfAdjunct,SkyMap.Net.Workflow" table="WF_ADJUNCT">
+		<id name="Id" type="String" column="ADJUNCT_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version 
+			name="ReplicationVersion" 
+			column="REPLICATION_VERSION"
+		/>-->
+		<property name="Name" column="ADJUNCT_NAME" />
+		<property name="Description" column="ADJUNCT_DESCRIPTION" />
+		<property name="Type" column="ADJUNCT_TYPE" />
+		<property name="ProinstId" column="PROINST_ID" />
+		<property name="CreateStaffId" column="CREATE_STAFFID" />
+		<property name="CreateStaffName" column="CREATE_STAFFNAME" />
+		<property name="CreateDate" column="CREATE_DATE" />
+		<property name="LastModiStaffId" column="LASTMODI_STAFFID" />
+		<property name="LastModiStaffName" column="LASTMODI_STAFFNAME" />
+		<property name="LastModiDate" column="LASTMODI_DATE" />
+		
+	</class>
+	<class name="SkyMap.Net.Workflow.Instance.WfAdjunctFile,SkyMap.Net.Workflow" table="WF_ADJUNCT">
+		<composite-id>
+			<key-property name="Id" column="ADJUNCT_ID" />
+			<key-property name="Name" column="ADJUNCT_NAME"/>
+		</composite-id>
+		<property name="Data" column="ADJUNCT_DATA" type="BinaryBlob"/>
+		
+	</class>
+</hibernate-mapping>
+

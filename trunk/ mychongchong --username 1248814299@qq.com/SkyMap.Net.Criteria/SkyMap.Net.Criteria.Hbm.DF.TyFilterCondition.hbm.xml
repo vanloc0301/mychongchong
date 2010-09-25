@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+	<class name="SkyMap.Net.Criteria.TyFilterCondition,SkyMap.Net.Criteria" table="TR_FILTER_CONDITION">
+		<id name="Id" column="ID" type="String" unsaved-value="null">
+			<generator class="assigned"/>
+		</id>
+		<many-to-one name="TyFilter" column="Filter_Id" class="SkyMap.Net.Criteria.TyFilter,SkyMap.Net.Criteria" />
+		<property column="Relation" type="String" name="Relation" length="10" />
+		<property column="Condition_Name" type="String" name="ConditionName" length="50" />
+		<property column="Operation" type="String" name="Operation" length="10" />
+		<property column="Compare_Value" type="String" name="CompareValue" length="500" />
+		<many-to-one name="TyFieldsSelect" column="Field_Id" class="SkyMap.Net.Criteria.TyFieldsSelect,SkyMap.Net.Criteria" />
+		<property column="Field_Type" type="String" name="FieldType" length="50" />
+    <property column="TABLE_NAME" type="String" name="TABLENAME" length="50" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--此文件由 XML 架构设计器自动生成。它包含设计器图面组件的布局信息。-->
+<XSDDesignerLayout Style="LeftRight" layoutVersion="2" viewPortLeft="36" viewPortTop="-5571" zoom="100">
+    <Root_XmlElement left="-1209" top="-1164" width="5292" height="2831" selected="0" zOrder="1" index="0" expanded="1">
+        <yw_gujia_XmlElement left="4717" top="-4762" width="5979" height="10028" selected="0" zOrder="2" index="0" expanded="1">
+            <yw_gujia_b_XmlElement left="11330" top="-5820" width="9975" height="12145" selected="0" zOrder="5" index="54" expanded="1">
+                <yw_fj_XmlElement left="21939" top="-11180" width="5292" height="2831" selected="0" zOrder="20" index="507" expanded="1" />
+                <yw_zq_XmlElement left="21939" top="-7841" width="5292" height="2831" selected="0" zOrder="22" index="691" expanded="1" />
+                <yw_zj_XmlElement left="21939" top="-4502" width="5292" height="2831" selected="0" zOrder="24" index="692" expanded="1" />
+                <yw_zj1_XmlElement left="21939" top="-1163" width="5292" height="2831" selected="0" zOrder="8" index="733" expanded="1" />
+                <yw_zj2_XmlElement left="21939" top="2176" width="5292" height="2831" selected="0" zOrder="11" index="734" expanded="1" />
+                <yw_zq1_XmlElement left="21939" top="5515" width="5292" height="2831" selected="0" zOrder="14" index="735" expanded="1" />
+                <yw_zq2_XmlElement left="21939" top="8854" width="5292" height="2831" selected="0" zOrder="17" index="736" expanded="1" />
+            </yw_gujia_b_XmlElement>
+        </yw_gujia_XmlElement>
+    </Root_XmlElement>
+</XSDDesignerLayout>

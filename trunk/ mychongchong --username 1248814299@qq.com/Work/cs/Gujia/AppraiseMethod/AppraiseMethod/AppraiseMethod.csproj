@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9AF8AE5-0784-4DBA-B85F-802919F4F454}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppraiseMethod</RootNamespace>
+    <AssemblyName>AppraiseMethod</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\..\..\pg-oa\addins\AppraiseMethod\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bamboo.Prevalence, Version=1.4.4.4, Culture=neutral, PublicKeyToken=0edf2245780ab2d7">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\dll\Bamboo.Prevalence.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\pg-oa\bin\DevExpress.Data.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\pg-oa\bin\DevExpress.Utils.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\pg-oa\bin\DevExpress.XtraEditors.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\pg-oa\bin\DevExpress.XtraGrid.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5" />
+    <Reference Include="EvaluationEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\dll\EvaluationEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Taramon.Exceller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\addins\AppraiseMethod\Taramon.Exceller.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetFMFormulaTemplate.cs">
+      <DependentUpon>DataSetFMFormulaTemplate.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetFMFormulaTemplate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetFMFormulaTemplate.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetMethod.cs">
+      <DependentUpon>DataSetMethod.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetMethod.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMethod.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Excel\ILand.cs" />
+    <Compile Include="Excel\KillExcel.cs" />
+    <Compile Include="Excel\LandGy.cs" />
+    <Compile Include="Excel\LandInput.cs" />
+    <Compile Include="Excel\LandSz.cs" />
+    <Compile Include="Excel\LandType.cs" />
+    <Compile Include="Excel\LandZz.cs" />
+    <Compile Include="FormulaEngine.cs" />
+    <Compile Include="LandDatumValue.cs">
+      <DependentUpon>LandDatumValue.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LandDatumValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LandDatumValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarketDataSet.cs">
+      <DependentUpon>MarketDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MarketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarketFieldSelectDataSet.cs">
+      <DependentUpon>MarketFieldSelectDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MarketFieldSelectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketFieldSelectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Method.cs">
+    </Compile>
+    <Compile Include="MethodControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MethodControl.Designer.cs">
+      <DependentUpon>MethodControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MethodForm.Designer.cs">
+      <DependentUpon>MethodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Appraise.AddIn">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DataSetFMFormulaTemplate.xsc">
+      <DependentUpon>DataSetFMFormulaTemplate.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetFMFormulaTemplate.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetFMFormulaTemplate.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetFMFormulaTemplate.xss">
+      <DependentUpon>DataSetFMFormulaTemplate.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMethod.xsc">
+      <DependentUpon>DataSetMethod.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetMethod.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMethod.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetMethod.xss">
+      <DependentUpon>DataSetMethod.xsd</DependentUpon>
+    </None>
+    <None Include="LandDatumValue.xsc">
+      <DependentUpon>LandDatumValue.xsd</DependentUpon>
+    </None>
+    <None Include="LandDatumValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LandDatumValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LandDatumValue.xss">
+      <DependentUpon>LandDatumValue.xsd</DependentUpon>
+    </None>
+    <None Include="MarketDataSet.xsc">
+      <DependentUpon>MarketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MarketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarketDataSet.xss">
+      <DependentUpon>MarketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MarketFieldSelectDataSet.xsc">
+      <DependentUpon>MarketFieldSelectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MarketFieldSelectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarketFieldSelectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarketFieldSelectDataSet.xss">
+      <DependentUpon>MarketFieldSelectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="房地产土地估价.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MethodControl.resx">
+      <DependentUpon>MethodControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MethodForm.resx">
+      <DependentUpon>MethodForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Windows.Workflow\SkyMap.Net.Windows.Workflow.csproj">
+      <Project>{08B692EA-C07C-4F47-9B3C-5760866082A5}</Project>
+      <Name>SkyMap.Net.Windows.Workflow</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
+      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
+      <Name>SkyMap.Net.Windows</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Workflow.Client\SkyMap.Net.Workflow.Client.csproj">
+      <Project>{217987FF-FFC1-43A0-9BF4-1160E9D6A90E}</Project>
+      <Name>SkyMap.Net.Workflow.Client</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Workflow.Engine\SkyMap.Net.Workflow.Engine.csproj">
+      <Project>{FC50239B-6D25-48C0-AD92-DD3EE9D01A3F}</Project>
+      <Name>SkyMap.Net.Workflow.Engine</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

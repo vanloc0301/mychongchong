@@ -1,0 +1,243 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA03235E-F8BD-40DF-91EC-7BEE45D37261}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>SkyMap.Net.Tools.DataForms</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/SkyMap.Net.Tools.DataForms/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\..\..\pg-oa\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v8.2">
+      <Name>DevExpress.Data.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2">
+      <Name>DevExpress.Utils.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2">
+      <Name>DevExpress.XtraEditors.v8.2</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2">
+      <Name>DevExpress.XtraGrid.v8.2</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="WordDataSetTemplateEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ddc169abef05e6cc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\tmp\系统\后台管理系统\bin\WordDataSetTemplateEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\AddDAODataFormCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\AddDAODataSetCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\AddPrintSetCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\EditDAODataColumnCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\EditDAODataFormCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\LoadDataFormNodesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\LoadDataSetNodesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\LoadPrintSetNodesCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\SaveAsTempletCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Commands\WordTempletEditCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\DataFormPermissionSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\DataFormSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\DataFormViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\DataSetSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\DataSetViewContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\FormPermissionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\fSelectDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\fSelectTempletDataset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\LoadAndCreateParticipantFormPermission.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\ParticipantFormPermEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\ParticipantFormPermNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\PrintSetNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\TabPageForSetFormPermission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\TempletPrintNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\TextBoxHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\DataForms\TreeViewHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Nodes\DAODataFormNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Nodes\DAODataSetNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SkyMap\Net\Tools\Nodes\DAODataTableNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.DataFormPermissionSettingForm.resources" />
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.DataFormSetting.resources" />
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.DataSetSetting.resources" />
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.fSelectDataForm.resources" />
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.fSelectTempletDataset.resources" />
+    <EmbeddedResource Include="SkyMap.Net.Tools.DataForms.TabPageForSetFormPermission.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
+      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
+      <Name>SkyMap.Net.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
+      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
+      <Name>SkyMap.Net.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.DataForms\SkyMap.Net.DataForms.csproj">
+      <Project>{D849C043-D533-4B5C-87AC-28115B16E539}</Project>
+      <Name>SkyMap.Net.DataForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
+      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
+      <Name>SkyMap.Net.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Tools.Organize\SkyMap.Net.Tools.Organize.csproj">
+      <Project>{C34E2649-AB76-4837-9CEF-F9F3AABB9C26}</Project>
+      <Name>SkyMap.Net.Tools.Organize</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
+      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
+      <Name>SkyMap.Net.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <import class="SkyMap.Net.Workflow.XPDL.ProdefRow,SkyMap.Net.Workflow"/>
+	<class name="SkyMap.Net.Workflow.XPDL.Prodef,SkyMap.Net.Workflow" table="WF_PRODEF">
+		<id name="Id" type="String" column="PRODEF_ID">
+			<generator class="assigned" />
+		</id>
+		<!--<version name="ReplicationVersion" column="REPLICATION_VERSION" />-->
+		<property name="Name" column="PRODEF_NAME" />
+		<property name="Description" column="PRODEF_DESCRIPTION" />
+		<property name="Author" column="PRODEF_Author" />
+		<property name="Duration" column="PRODEF_DURATION" />
+		<property name="Limit" column="PRODEF_LIMIT" />
+		<property name="CreationDate" column="PRODEF_CREATIONDATE" />
+		<property name="Status" column="PRODEF_STATUS" />
+		<property name="ValidFrom" column="PRODEF_VALIDFROM" />
+		<property name="ValidTo" column="PRODEF_VALIDTO" />
+		<property name="Version" column="PRODEF_VERSION" />
+		<property name="Style" column="PRODEF_STYLE" />
+		<property name="Type" column="PRODEF_TYPE" />
+		<property name="DaoDataSetId" column="TEMPLETDATASET_ID" />
+		<property name="DaoDataFormId" column="FORM_ID" />
+		<property name="DaoDataSetName" column="TEMPLETDATASET_NAME" />
+		<property name="DaoDataFormName" column="FORM_NAME" />
+		<property name="TempletAppendixsId" column="TEMPLETAPPENDIXS_ID" />
+		<property name="TempletAppendixsName" column="TEMPLETAPPENDIXS_NAME" />
+		<property name="ResponsibleId" column="PRODEF_RESPONSIBLE"  />
+		<property name="ResponsibleName" column="RESPONSIBLE_NAME"  />
+		
+		<many-to-one name="Package" column="PACKAGE_ID" class="SkyMap.Net.Workflow.XPDL.Package,SkyMap.Net.Workflow" not-null="true" cascade="none" />
+		
+		<map name="Actdefs" cascade="delete" inverse="false" lazy="false"  generic="true" outer-join="true" fetch="subselect">
+			<key column="PRODEF_ID" />
+			<index column="ACTDEF_ID" type="String" />
+			<one-to-many class="SkyMap.Net.Workflow.XPDL.Actdef,SkyMap.Net.Workflow" />
+		</map>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+  <!-- 获取对应的DTPROJECT -->
+  <query name="GetDTProjects">
+    <![CDATA[
+	from DTProject a where a.IsActive=1 and a.MapXMLElementName = ?
+	]]>
+  </query>
+</hibernate-mapping>

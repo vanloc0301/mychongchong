@@ -1,0 +1,12 @@
+﻿[assembly: System.Reflection.AssemblyVersion("5.0.0.7")]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyCompany("www.skymapsoft.com")]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Reflection.AssemblyTitle("SkyMap.Net.DAO")]
+[assembly: System.Reflection.AssemblyDescription("Data object access")]
+[assembly: System.Reflection.AssemblyConfiguration("")]
+[assembly: System.Reflection.AssemblyProduct("SkyMap.Net.DAO")]
+[assembly: System.Reflection.AssemblyCopyright("@CopyRight 2004-2005")]
+[assembly: System.Reflection.AssemblyTrademark("www.skymapsoft.com")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.DisableOptimizations | System.Diagnostics.DebuggableAttribute.DebuggingModes.EnableEditAndContinue | System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+
