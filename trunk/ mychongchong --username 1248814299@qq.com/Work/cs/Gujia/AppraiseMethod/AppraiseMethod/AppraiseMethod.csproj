@@ -78,7 +78,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Taramon.Exceller, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\addins\AppraiseMethod\Taramon.Exceller.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\Taramon.Exceller.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -204,6 +204,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_导入excel数据_Click(object sender, EventArgs e)
         {
+            base.Save();
+            int inum = 1;
             DataTable wcexcel = m_dstAll.Tables["yw_wcexcel"];
             DataTable bomexcel = m_dstAll.Tables["yw_bomexcel"];
 
@@ -259,8 +261,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 dt.Columns.Add("采购备注", System.Type.GetType("System.String"));
                 for (int i = 0; i < wexcel.Xh.Count; i++)
                 {
+                    if (string.IsNullOrEmpty(wexcel.Wlmc[i].ToString())) continue;
                     DataRow dr = dt.NewRow();
-                    dr["序号"] = wexcel.Xh[i].ToString();
+                    dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
                     dr["物料名称"] = wexcel.Wlmc[i].ToString();
                     dr["颜色"] = wexcel.Ys[i].ToString();
                     dr["总用量"] = wexcel.Zrl[i].ToString();
@@ -271,6 +274,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     dr["采购复期"] = wexcel.Cgfq[i].ToString();
                     dr["采购备注"] = wexcel.Cgbz[i].ToString();
                     dt.Rows.Add(dr);
+                    inum++;
                 }
                 smGridControl1.DataSource = dt;
                 bt_读Execl写进数据库.Visible = true;
@@ -331,7 +335,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     li = ExcelColumnTranslator.showMatches(xh[1].ToString());
                     iend = li[0] + 1;
                     #region 智能设置
-                    AutoSetBomExcelModel(tmpdt,"物料名称",istart,iend);
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);
                     AutoSetBomExcelModel(tmpdt, "颜色", istart, iend);
                     AutoSetBomExcelModel(tmpdt, "总用量", istart, iend);
                     AutoSetBomExcelModel(tmpdt, "单位", istart, iend);
@@ -351,16 +355,17 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 }
 
             }
+            base.Save();
         }
 
-        private void AutoSetBomExcelModel(DataTable tmpdt,string colname,int istart,int iend)
+        private void AutoSetBomExcelModel(DataTable tmpdt, string colname, int istart, int iend)
         {
             string[] xh = tmpdt.Rows[0][colname].ToString().Split(new char[] { '|' });
             if (xh.Length == 1 || xh.Length == 2)
             {
                 try
                 {
-                   List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
+                    List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
                     tmpdt.Rows[0][colname] = string.Format("{0}{1}|{2}{3}", ExcelColumnTranslator.ToName(li[1]), istart, ExcelColumnTranslator.ToName(li[1]), iend);
                 }
                 catch
@@ -376,10 +381,147 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
             else
             {
-                MessageBox.Show(string.Format("请设置正确的【{0}】,格式形如:A1或A1|A12",colname));
+                MessageBox.Show(string.Format("请设置正确的【{0}】,格式形如:A1或A1|A12", colname));
                 return;
             }
         }
+
+        private void bt_find_Click(object sender, EventArgs e)
+        {
+            base.Save();
+            if (this.txtSearch1.Text.ToString().Split(new char[] { '|' })[0] != this.txtSearch2.Text.ToString().Split(new char[] { '|' })[0])
+            {
+                MessageBox.Show("工作表设置需要一样!", "提示");
+                return;
+            }
+            AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0);
+            AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1);
+            
+        }
+
+        private void AutoSet(string strtxt,DataTable dt,int inti)
+        {
+            bool bflag = false;//当为true的时候自动运行 模板设置事件
+            string[] str = strtxt.Split(new char[] { '|' });
+            Hashtable ht = new Hashtable();
+            ht.Add("工作表", str[0].ToString());
+            for (int i = 1; i < str.Length; i++)
+            {
+                string strreturn = "";
+                string strname = "";
+                strname = str[i].Split(new char[] { '#' })[0].ToString();
+                strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(),inti);
+                if (strreturn != "")
+                {
+                    ht.Add(strname, strreturn);
+                }
+            }
+            DataTable tmpdt = dt;
+            DataRow dr = null;
+            if (tmpdt.Rows.Count == 1)
+            {
+                dr = tmpdt.Rows[0];
+            }
+            else if (tmpdt.Rows.Count == 0)
+            {
+                dr = tmpdt.NewRow();
+            }
+            else
+            {
+                MessageBox.Show("模板表中只能允许1条记录");
+                return;
+            }
+            foreach (DataColumn dc in tmpdt.Columns)
+            {
+                if (ht.Contains(dc.ColumnName))
+                {
+                    if (dc.ColumnName == "序号" && ht.Contains("预计齐料期") && ht.Contains("序号") )
+                    {
+                        bflag = true;
+                        List<int> li1 = ExcelColumnTranslator.showMatches(ht["预计齐料期"].ToString());
+                        List<int> li2 = ExcelColumnTranslator.showMatches(ht["序号"].ToString());
+                        dr[dc.ColumnName] = string.Format("{0}|{1}{2}", ht[dc.ColumnName].ToString(), ExcelColumnTranslator.ToName(li2[1]), li1[0] - 1);
+                    }
+                    else
+                    {
+                        dr[dc.ColumnName] = ht[dc.ColumnName].ToString();
+                    }
+                }
+            }
+            if (tmpdt.Rows.Count == 0) tmpdt.Rows.Add(dr);
+            if(bflag)
+            {
+                bt_模板设置_Click(null,null);
+            }
+            #region
+            #endregion
+        }
+
+        private string search(string sheetname, string strKeyWord,int inti)
+        {
+            beforeTime = DateTime.Now;
+
+            object filename = excelFileName;
+
+            object MissingValue = Type.Missing;
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application ep = new Microsoft.Office.Interop.Excel.ApplicationClass();
+
+                Microsoft.Office.Interop.Excel.Workbook ew = ep.Workbooks.Open(filename.ToString(), MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue);
+
+                Microsoft.Office.Interop.Excel.Worksheet ews;
+
+                int iEWSCnt = ew.Worksheets.Count;
+
+                int i = 0, j = 0;
+
+                Microsoft.Office.Interop.Excel.Range oRange;
+
+                object oText = strKeyWord.Trim().ToUpper();
+                //for (i = 1; i <= iEWSCnt; i++)  {
+                ews = null;
+
+                ews = (Microsoft.Office.Interop.Excel.Worksheet)ew.Worksheets[sheetname];
+
+                oRange = null;
+
+                oRange = ((Microsoft.Office.Interop.Excel.Range)ews.UsedRange).Find(
+
+                oText, MissingValue, MissingValue,
+
+                MissingValue, MissingValue, Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext,
+
+                MissingValue, MissingValue, MissingValue);
+
+                if (oRange != null && oRange.Cells.Rows.Count >= 1 && oRange.Cells.Columns.Count >= 1)
+                {
+                    return string.Format("{0}{1}", ExcelColumnTranslator.ToName(int.Parse(oRange.Column.ToString()) - 1), int.Parse(oRange.Row.ToString())+inti);
+                }
+
+                return "";
+                //} 
+            }
+            finally
+            {
+                afterTime = DateTime.Now;
+                KillExcel.KillExcelProcess(beforeTime, afterTime);
+            }
+
+        }
+
+
 
     }
 }
