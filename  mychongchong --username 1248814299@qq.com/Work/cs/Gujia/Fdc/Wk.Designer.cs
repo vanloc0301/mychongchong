@@ -64,6 +64,9 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.pc_wcexcel = new DevExpress.XtraEditors.PanelControl();
+            this.txtSearch1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtSearch2 = new DevExpress.XtraEditors.MemoEdit();
+            this.bt_find = new DevExpress.XtraEditors.SimpleButton();
             this.bt_模板设置 = new DevExpress.XtraEditors.SimpleButton();
             this.gdc_bomexcel = new SkyMap.Net.Gui.Components.SmGridControl();
             this.gv_bomexcel = new SkyMap.Net.Gui.Components.SmCardView();
@@ -132,6 +135,8 @@
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_wcexcel)).BeginInit();
             this.pc_wcexcel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_bomexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_bomexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcexcel)).BeginInit();
@@ -444,7 +449,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage2.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage2.Text = "导入excel数据";
             // 
             // splitContainerControl1
@@ -456,7 +461,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.pc_bomexcel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(367, 288);
+            this.splitContainerControl1.Size = new System.Drawing.Size(771, 548);
             this.splitContainerControl1.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl1, null);
             this.splitContainerControl1.TabIndex = 6;
@@ -464,19 +469,48 @@
             // 
             // pc_wcexcel
             // 
+            this.pc_wcexcel.Controls.Add(this.txtSearch1);
+            this.pc_wcexcel.Controls.Add(this.txtSearch2);
+            this.pc_wcexcel.Controls.Add(this.bt_find);
             this.pc_wcexcel.Controls.Add(this.bt_模板设置);
             this.pc_wcexcel.Controls.Add(this.gdc_bomexcel);
             this.pc_wcexcel.Controls.Add(this.gdc_wcexcel);
             this.pc_wcexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_wcexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_wcexcel.Name = "pc_wcexcel";
-            this.pc_wcexcel.Size = new System.Drawing.Size(332, 284);
+            this.pc_wcexcel.Size = new System.Drawing.Size(350, 544);
             this.toolTipController.SetSuperTip(this.pc_wcexcel, null);
             this.pc_wcexcel.TabIndex = 1;
             // 
+            // txtSearch1
+            // 
+            this.txtSearch1.EditValue = "13300|生产单号#MF|预计齐料期#预计齐|厂款号#NB-";
+            this.txtSearch1.Location = new System.Drawing.Point(5, 3);
+            this.txtSearch1.Name = "txtSearch1";
+            this.txtSearch1.Size = new System.Drawing.Size(259, 49);
+            this.txtSearch1.TabIndex = 10;
+            // 
+            // txtSearch2
+            // 
+            this.txtSearch2.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商|来料数量#来料数量|来料日期#来料日期|采购复" +
+                "期#采购复期";
+            this.txtSearch2.Location = new System.Drawing.Point(5, 58);
+            this.txtSearch2.Name = "txtSearch2";
+            this.txtSearch2.Size = new System.Drawing.Size(259, 71);
+            this.txtSearch2.TabIndex = 9;
+            // 
+            // bt_find
+            // 
+            this.bt_find.Location = new System.Drawing.Point(270, 9);
+            this.bt_find.Name = "bt_find";
+            this.bt_find.Size = new System.Drawing.Size(75, 23);
+            this.bt_find.TabIndex = 7;
+            this.bt_find.Text = "快速设置";
+            this.bt_find.Click += new System.EventHandler(this.bt_find_Click);
+            // 
             // bt_模板设置
             // 
-            this.bt_模板设置.Location = new System.Drawing.Point(175, 249);
+            this.bt_模板设置.Location = new System.Drawing.Point(245, 360);
             this.bt_模板设置.Name = "bt_模板设置";
             this.bt_模板设置.Size = new System.Drawing.Size(75, 23);
             this.bt_模板设置.TabIndex = 6;
@@ -487,10 +521,10 @@
             // 
             this.gdc_bomexcel.EmbeddedNavigator.Name = "";
             this.gdc_bomexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_bomexcel.Location = new System.Drawing.Point(0, 240);
+            this.gdc_bomexcel.Location = new System.Drawing.Point(0, 353);
             this.gdc_bomexcel.MainView = this.gv_bomexcel;
             this.gdc_bomexcel.Name = "gdc_bomexcel";
-            this.gdc_bomexcel.Size = new System.Drawing.Size(345, 302);
+            this.gdc_bomexcel.Size = new System.Drawing.Size(345, 322);
             this.gdc_bomexcel.TabIndex = 5;
             this.gdc_bomexcel.UseEmbeddedNavigator = true;
             this.gdc_bomexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -642,10 +676,10 @@
             gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gdc_wcexcel.Location = new System.Drawing.Point(2, 2);
+            this.gdc_wcexcel.Location = new System.Drawing.Point(2, 135);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
-            this.gdc_wcexcel.Size = new System.Drawing.Size(343, 232);
+            this.gdc_wcexcel.Size = new System.Drawing.Size(343, 212);
             this.gdc_wcexcel.TabIndex = 4;
             this.gdc_wcexcel.UseEmbeddedNavigator = true;
             this.gdc_wcexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -725,7 +759,7 @@
             this.pc_bomexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_bomexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_bomexcel.Name = "pc_bomexcel";
-            this.pc_bomexcel.Size = new System.Drawing.Size(21, 284);
+            this.pc_bomexcel.Size = new System.Drawing.Size(407, 544);
             this.toolTipController.SetSuperTip(this.pc_bomexcel, null);
             this.pc_bomexcel.TabIndex = 2;
             // 
@@ -737,7 +771,7 @@
             this.pc_cmdexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pc_cmdexcel.Location = new System.Drawing.Point(2, 2);
             this.pc_cmdexcel.Name = "pc_cmdexcel";
-            this.pc_cmdexcel.Size = new System.Drawing.Size(17, 31);
+            this.pc_cmdexcel.Size = new System.Drawing.Size(403, 31);
             this.toolTipController.SetSuperTip(this.pc_cmdexcel, null);
             this.pc_cmdexcel.TabIndex = 11;
             // 
@@ -778,7 +812,7 @@
             this.smGridControl1.Location = new System.Drawing.Point(2, 2);
             this.smGridControl1.MainView = this.smGridView1;
             this.smGridControl1.Name = "smGridControl1";
-            this.smGridControl1.Size = new System.Drawing.Size(17, 280);
+            this.smGridControl1.Size = new System.Drawing.Size(403, 540);
             this.smGridControl1.TabIndex = 10;
             this.smGridControl1.UseEmbeddedNavigator = true;
             this.smGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -939,6 +973,8 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pc_wcexcel)).EndInit();
             this.pc_wcexcel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_bomexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_bomexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcexcel)).EndInit();
@@ -1037,5 +1073,8 @@
         private DevExpress.XtraEditors.SimpleButton bt_读Execl写进数据库;
         private DevExpress.XtraEditors.SimpleButton bt_模板设置;
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit1;
+        private DevExpress.XtraEditors.SimpleButton bt_find;
+        private DevExpress.XtraEditors.MemoEdit txtSearch1;
+        private DevExpress.XtraEditors.MemoEdit txtSearch2;
     }
 }
