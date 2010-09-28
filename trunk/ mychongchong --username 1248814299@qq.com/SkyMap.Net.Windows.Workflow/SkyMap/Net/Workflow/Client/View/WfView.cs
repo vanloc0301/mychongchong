@@ -442,6 +442,35 @@
             }
         }
 
+        public void WfViewNavigation(string item)
+        {
+            if (this.navigationDataRowViews != null)
+            {
+                base.Visible = false;
+                System.Windows.Forms.Application.DoEvents();
+                this.WfView_Closed(this, null);
+                DataRowView row=null ;
+                string[] tmpstr = item.Split(new char[] { '@' });
+                DataView dt = ((System.Data.DataView)(this.WfBox.DataSource)).Table.DefaultView;
+                int index = 0;
+                foreach (DataRowView dr in dt)
+                {
+                    if (dr["PROJECT_ID"].ToString() == tmpstr[1].ToString())
+                    {
+                        row = (DataRowView)dr;
+                        break;
+                    }
+                    index++;
+                }
+                if ((row == null) || (index <= -1))
+                {
+                    throw new WfClientException("Cannot navigation the item: item have changed");
+                }
+                this.Navigate(this.WfBox, this, row, index);
+                base.BarStatusUpdate();
+            }
+        }
+
         public bool CanPass
         {
             get

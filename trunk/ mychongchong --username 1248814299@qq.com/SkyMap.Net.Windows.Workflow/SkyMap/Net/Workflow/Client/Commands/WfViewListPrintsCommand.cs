@@ -8,6 +8,7 @@
     using System.Collections;
     using System.Collections.Generic;
     using SkyMap.Net.DAO;
+    using System.Data;
 
     public class WfViewListPrintsCommand : AbstractComboBoxCommand
     {
@@ -94,7 +95,109 @@
             }
         }
 
-        public class myReverserClass<T> : IComparer<T> where T: DomainObject
+        public class myReverserClass<T> : IComparer<T> where T : DomainObject
+        {
+            public int Compare(T x, T y)
+            {
+                return new CaseInsensitiveComparer().Compare(x.Name, y.Name);
+            }
+        }
+    }
+
+    public class WfViewListYwsCommand : AbstractComboBoxCommand
+    {
+        private PrintSet printSet;
+
+        public override bool IsEnabled
+        {
+            get
+            {
+                return ((((this.Owner as ToolBarComboBox).Caller as WfView).NavigationDataRowViews != null));
+            }
+            set
+            {
+                base.IsEnabled = value;
+            }
+        }
+
+        private void barItem_Click(object sender, EventArgs e)
+        {           
+            ToolBarComboBox owner = this.Owner as ToolBarComboBox;
+            if (owner.Items.Count > 0)
+            {
+                if (((System.Windows.Forms.ToolStripComboBox)(owner)).ComboBox.Text.Trim() != "")
+                {
+                    //if (this.IsEnabled)
+                    //{
+                    //    (owner.Caller as WfView).WfViewNavigation(((System.Windows.Forms.ToolStripComboBox)(owner)).ComboBox.Text.Trim());
+                    //}
+                    return;
+                }                
+            }
+            WfView caller = owner.Caller as WfView;                      
+            WaitDialogHelper.Show();
+            try
+            {
+                WaitDialogHelper.SetText("正在加载...");
+                
+                owner.Items.Clear();
+                DataTable dt = ((System.Data.DataView)(caller.WfBox.DataSource)).Table;
+                foreach (DataRow dr in dt.Rows)
+                {
+                    owner.Items.Add(string.Format("{0}@{1}", dr["Work_Mem1"].ToString(), dr["PROJECT_ID"].ToString()));
+                }
+                owner.SelectedIndex = 0;
+
+            }
+            finally
+            {
+                WaitDialogHelper.Close();
+            }
+
+        }
+
+        private void barItem_Changed(object sender, EventArgs e)
+        {
+            ToolBarComboBox owner = this.Owner as ToolBarComboBox;
+            if (owner.Items.Count > 0)
+            {
+                if (((System.Windows.Forms.ToolStripComboBox)(owner)).ComboBox.Text.Trim() != "")
+                {
+                    if (this.IsEnabled)
+                    {
+                        (owner.Caller as WfView).WfViewNavigation(((System.Windows.Forms.ToolStripComboBox)(owner)).ComboBox.Text.Trim());
+                    }
+                    return;
+                }
+            }        
+
+        }
+
+        public override void Run()
+        {
+            ToolBarComboBox owner = this.Owner as ToolBarComboBox;
+            WfView caller = owner.Caller as WfView;
+            caller.TemplatePrint = owner.SelectedItem as TempletPrint;
+            caller.BarStatusUpdate();
+        }
+
+        public override object Owner
+        {
+            get
+            {
+                return base.Owner;
+            }
+            set
+            {
+                base.Owner = value;
+                ToolBarComboBox owner = this.Owner as ToolBarComboBox;
+                owner.ComboBox.DropDownHeight = 100;
+                owner.Click += new EventHandler(this.barItem_Click);
+                owner.SelectedIndexChanged += new EventHandler(this.barItem_Changed);
+            }
+        }
+
+        public class myReverserClass<T> : IComparer<T> where T : DomainObject
         {
             public int Compare(T x, T y)
             {

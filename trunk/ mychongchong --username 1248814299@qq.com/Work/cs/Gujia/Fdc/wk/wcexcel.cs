@@ -24,14 +24,14 @@ namespace ZBPM.wk
             set { _qlq = value; }
         }
 
-        [UseSheet("yw_wcexcel")]
-        [FromCell("厂款号")]
-        //厂款号
-        public string Ckh
-        {
-            get { return _ckh; }
-            set { _ckh = value; }
-        }
+        //[UseSheet("yw_wcexcel")]
+        //[FromCell("厂款号")]
+        ////厂款号
+        //public string Ckh
+        //{
+        //    get { return _ckh; }
+        //    set { _ckh = value; }
+        //}
 
         [UseSheet("yw_wcexcel")]
         [FromCell("生产单号")]
@@ -131,14 +131,14 @@ namespace ZBPM.wk
             set { _cgfq = value; }
         }
 
-        private ArrayList _cgbz;
-        [UseSheet("yw_bomexcel")]
-        [FromRange("采购备注", "")]
-        public ArrayList Cgbz
-        {
-            get { return _cgbz; }
-            set { _cgbz = value; }
-        }
+        //private ArrayList _cgbz;
+        //[UseSheet("yw_bomexcel")]
+        //[FromRange("采购备注", "")]
+        //public ArrayList Cgbz
+        //{
+        //    get { return _cgbz; }
+        //    set { _cgbz = value; }
+        //}
 
         #endregion
     }
