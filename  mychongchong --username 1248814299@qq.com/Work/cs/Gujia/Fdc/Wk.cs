@@ -242,11 +242,13 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             double tmpdb = 0;
             try
             {
+                smGridControl1.DataSource = null;
                 //mapper.Write(gh, excelFileName);
                 wexcel = new wk.wcexcel();
                 mapper.Read(wexcel, excelFileName, wcexcel, bomexcel);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
-                string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
+                //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
+                string strwc = string.Format("生产单号：{0}，预备齐料期：{1}", wexcel.Scdh.ToString(),  wexcel.Qlq.ToString());
                 lblWcMsg.Text = strwc;
                 dt = new DataTable("bomexcel");
                 dt.Columns.Add("序号", System.Type.GetType("System.String"));
@@ -272,7 +274,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     dr["来料数量"] = wexcel.Dhsl[i].ToString();
                     dr["来料日期"] = wexcel.Dhrq[i].ToString();
                     dr["采购复期"] = wexcel.Cgfq[i].ToString();
-                    dr["采购备注"] = wexcel.Cgbz[i].ToString();
+                    dr["采购备注"] = "";// wexcel.Cgbz[i].ToString();
                     dt.Rows.Add(dr);
                     inum++;
                 }
@@ -291,7 +293,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             if (wexcel != null && dt != null && dt.Rows.Count > 0)
             {
-                this.txt_厂款号.Text = wexcel.Ckh.ToString();
+                //this.txt_厂款号.Text = wexcel.Ckh.ToString();
                 txt_生产单号.Text = wexcel.Scdh.ToString();
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 if (dtbom.Rows.Count > 0)
@@ -312,7 +314,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     dr["收货数量"] = dt.Rows[i]["来料数量"].ToString();
                     dr["收货日期"] = dt.Rows[i]["来料日期"].ToString();
                     dr["采购复期"] = dt.Rows[i]["采购复期"].ToString();
-                    dr["采购备注"] = dt.Rows[i]["采购备注"].ToString();
+                    //dr["采购备注"] = dt.Rows[i]["采购备注"].ToString();
                     dtbom.Rows.Add(dr);
                 }
 
@@ -343,7 +345,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend);
                     AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend);
                     AutoSetBomExcelModel(tmpdt, "采购复期", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
+                    //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
                     tmpdt.Rows[0]["记录数"] = (iend - istart + 1).ToString();
                     #endregion
 
@@ -388,7 +390,23 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_find_Click(object sender, EventArgs e)
         {
+            foreach (DataRow dr in m_dstAll.Tables["yw_wcexcel"].Rows)
+            {
+                dr.Delete();                
+            }
+            foreach (DataRow dr in m_dstAll.Tables["yw_bomexcel"].Rows)
+            {
+                dr.Delete();
+            }
+        
             base.Save();
+            if (cbe_工作表.Text.ToString() == "")
+            {
+                MessageBox.Show("请先获取工作表！", "提示");
+                return;
+            }
+            this.txtSearch1.Text = string.Concat(cbe_工作表.Text.ToString(),this.txtSearch1.Text.Substring(this.txtSearch1.Text.ToString().IndexOf("|") ));
+            this.txtSearch2.Text = string.Concat(cbe_工作表.Text.ToString(), this.txtSearch2.Text.Substring(this.txtSearch2.Text.ToString().IndexOf("|")));
             if (this.txtSearch1.Text.ToString().Split(new char[] { '|' })[0] != this.txtSearch2.Text.ToString().Split(new char[] { '|' })[0])
             {
                 MessageBox.Show("工作表设置需要一样!", "提示");
@@ -396,10 +414,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
             AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0);
             AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1);
-            
+
         }
 
-        private void AutoSet(string strtxt,DataTable dt,int inti)
+        private void AutoSet(string strtxt, DataTable dt, int inti)
         {
             bool bflag = false;//当为true的时候自动运行 模板设置事件
             string[] str = strtxt.Split(new char[] { '|' });
@@ -410,10 +428,26 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string strreturn = "";
                 string strname = "";
                 strname = str[i].Split(new char[] { '#' })[0].ToString();
-                strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(),inti);
-                if (strreturn != "")
+
+                if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    ht.Add(strname, strreturn);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti);
+                    if (strreturn != "")
+                    {
+                        ht.Add(strname, strreturn);
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
+                    {
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti);
+                        if (strreturn != "")
+                        {
+                            ht.Add(strname, strreturn);
+                            break;
+                        }
+                    }
                 }
             }
             DataTable tmpdt = dt;
@@ -435,7 +469,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             {
                 if (ht.Contains(dc.ColumnName))
                 {
-                    if (dc.ColumnName == "序号" && ht.Contains("预计齐料期") && ht.Contains("序号") )
+                    if (dc.ColumnName == "序号" && ht.Contains("预计齐料期") && ht.Contains("序号"))
                     {
                         bflag = true;
                         List<int> li1 = ExcelColumnTranslator.showMatches(ht["预计齐料期"].ToString());
@@ -449,15 +483,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 }
             }
             if (tmpdt.Rows.Count == 0) tmpdt.Rows.Add(dr);
-            if(bflag)
+            if (bflag)
             {
-                bt_模板设置_Click(null,null);
+                bt_模板设置_Click(null, null);
             }
             #region
             #endregion
         }
 
-        private string search(string sheetname, string strKeyWord,int inti)
+        private string search(string sheetname, string strKeyWord, int inti)
         {
             beforeTime = DateTime.Now;
 
@@ -507,7 +541,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (oRange != null && oRange.Cells.Rows.Count >= 1 && oRange.Cells.Columns.Count >= 1)
                 {
-                    return string.Format("{0}{1}", ExcelColumnTranslator.ToName(int.Parse(oRange.Column.ToString()) - 1), int.Parse(oRange.Row.ToString())+inti);
+                    return string.Format("{0}{1}", ExcelColumnTranslator.ToName(int.Parse(oRange.Column.ToString()) - 1), int.Parse(oRange.Row.ToString()) + inti);
                 }
 
                 return "";
@@ -519,6 +553,54 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 KillExcel.KillExcelProcess(beforeTime, afterTime);
             }
 
+        }
+
+        private void bt_GetWorkSheet_Click(object sender, EventArgs e)
+        {
+            beforeTime = DateTime.Now;
+
+            object filename = excelFileName;
+
+            object MissingValue = Type.Missing;
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application ep = new Microsoft.Office.Interop.Excel.ApplicationClass();
+
+                Microsoft.Office.Interop.Excel.Workbook ew = ep.Workbooks.Open(filename.ToString(), MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue);
+
+                Microsoft.Office.Interop.Excel.Worksheet ews;
+
+                int iEWSCnt = ew.Worksheets.Count;
+
+                int i = 0, j = 0;
+
+                Microsoft.Office.Interop.Excel.Range oRange;
+                cbe_工作表.Properties.Items.Clear();
+                for (i = 1; i <= iEWSCnt; i++)
+                {
+                    ews = null;
+                    ews = (Microsoft.Office.Interop.Excel.Worksheet)ew.Worksheets[i];
+                    
+                    cbe_工作表.Properties.Items.Add(ews.Name.ToString());
+                }
+            }
+            finally
+            {
+                afterTime = DateTime.Now;
+                KillExcel.KillExcelProcess(beforeTime, afterTime);
+                bt_GetWorkSheet.Enabled = false;
+            }
         }
 
 

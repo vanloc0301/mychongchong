@@ -64,6 +64,8 @@
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.pc_wcexcel = new DevExpress.XtraEditors.PanelControl();
+            this.bt_GetWorkSheet = new DevExpress.XtraEditors.SimpleButton();
+            this.cbe_工作表 = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtSearch1 = new DevExpress.XtraEditors.MemoEdit();
             this.txtSearch2 = new DevExpress.XtraEditors.MemoEdit();
             this.bt_find = new DevExpress.XtraEditors.SimpleButton();
@@ -135,6 +137,7 @@
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc_wcexcel)).BeginInit();
             this.pc_wcexcel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_bomexcel)).BeginInit();
@@ -334,8 +337,6 @@
             this.col采购备注.Caption = "采购备注";
             this.col采购备注.FieldName = "采购备注";
             this.col采购备注.Name = "col采购备注";
-            this.col采购备注.Visible = true;
-            this.col采购备注.VisibleIndex = 9;
             this.col采购备注.Width = 42;
             // 
             // col物控提醒日期
@@ -344,7 +345,7 @@
             this.col物控提醒日期.FieldName = "物控提醒日期";
             this.col物控提醒日期.Name = "col物控提醒日期";
             this.col物控提醒日期.Visible = true;
-            this.col物控提醒日期.VisibleIndex = 10;
+            this.col物控提醒日期.VisibleIndex = 9;
             this.col物控提醒日期.Width = 56;
             // 
             // col物控备注
@@ -353,7 +354,7 @@
             this.col物控备注.FieldName = "物控备注";
             this.col物控备注.Name = "col物控备注";
             this.col物控备注.Visible = true;
-            this.col物控备注.VisibleIndex = 11;
+            this.col物控备注.VisibleIndex = 10;
             this.col物控备注.Width = 98;
             // 
             // pc_wc
@@ -407,6 +408,7 @@
             this.txt_厂款号.Name = "txt_厂款号";
             this.txt_厂款号.Size = new System.Drawing.Size(100, 21);
             this.txt_厂款号.TabIndex = 11;
+            this.txt_厂款号.Visible = false;
             // 
             // labelControl2
             // 
@@ -415,6 +417,7 @@
             this.labelControl2.Size = new System.Drawing.Size(36, 14);
             this.labelControl2.TabIndex = 10;
             this.labelControl2.Text = "厂款号";
+            this.labelControl2.Visible = false;
             // 
             // LabelControl1
             // 
@@ -469,6 +472,8 @@
             // 
             // pc_wcexcel
             // 
+            this.pc_wcexcel.Controls.Add(this.bt_GetWorkSheet);
+            this.pc_wcexcel.Controls.Add(this.cbe_工作表);
             this.pc_wcexcel.Controls.Add(this.txtSearch1);
             this.pc_wcexcel.Controls.Add(this.txtSearch2);
             this.pc_wcexcel.Controls.Add(this.bt_find);
@@ -482,26 +487,47 @@
             this.toolTipController.SetSuperTip(this.pc_wcexcel, null);
             this.pc_wcexcel.TabIndex = 1;
             // 
+            // bt_GetWorkSheet
+            // 
+            this.bt_GetWorkSheet.Location = new System.Drawing.Point(270, 1);
+            this.bt_GetWorkSheet.Name = "bt_GetWorkSheet";
+            this.bt_GetWorkSheet.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetWorkSheet.TabIndex = 12;
+            this.bt_GetWorkSheet.Text = "获取工作表";
+            this.bt_GetWorkSheet.Click += new System.EventHandler(this.bt_GetWorkSheet_Click);
+            // 
+            // cbe_工作表
+            // 
+            this.cbe_工作表.Location = new System.Drawing.Point(5, 1);
+            this.cbe_工作表.Name = "cbe_工作表";
+            this.cbe_工作表.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbe_工作表.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbe_工作表.Size = new System.Drawing.Size(246, 21);
+            this.cbe_工作表.TabIndex = 11;
+            // 
             // txtSearch1
             // 
             this.txtSearch1.EditValue = "13300|生产单号#MF|预计齐料期#预计齐|厂款号#NB-";
-            this.txtSearch1.Location = new System.Drawing.Point(5, 3);
+            this.txtSearch1.Location = new System.Drawing.Point(5, 26);
             this.txtSearch1.Name = "txtSearch1";
-            this.txtSearch1.Size = new System.Drawing.Size(259, 49);
+            this.txtSearch1.Size = new System.Drawing.Size(115, 23);
             this.txtSearch1.TabIndex = 10;
+            this.txtSearch1.Visible = false;
             // 
             // txtSearch2
             // 
-            this.txtSearch2.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商|来料数量#来料数量|来料日期#来料日期|采购复" +
+            this.txtSearch2.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商@订/存|来料数量#数量|来料日期#日期|采购复" +
                 "期#采购复期";
-            this.txtSearch2.Location = new System.Drawing.Point(5, 58);
+            this.txtSearch2.Location = new System.Drawing.Point(126, 28);
             this.txtSearch2.Name = "txtSearch2";
-            this.txtSearch2.Size = new System.Drawing.Size(259, 71);
+            this.txtSearch2.Size = new System.Drawing.Size(125, 23);
             this.txtSearch2.TabIndex = 9;
+            this.txtSearch2.Visible = false;
             // 
             // bt_find
             // 
-            this.bt_find.Location = new System.Drawing.Point(270, 9);
+            this.bt_find.Location = new System.Drawing.Point(270, 28);
             this.bt_find.Name = "bt_find";
             this.bt_find.Size = new System.Drawing.Size(75, 23);
             this.bt_find.TabIndex = 7;
@@ -510,23 +536,24 @@
             // 
             // bt_模板设置
             // 
-            this.bt_模板设置.Location = new System.Drawing.Point(245, 360);
+            this.bt_模板设置.Location = new System.Drawing.Point(249, 220);
             this.bt_模板设置.Name = "bt_模板设置";
             this.bt_模板设置.Size = new System.Drawing.Size(75, 23);
             this.bt_模板设置.TabIndex = 6;
             this.bt_模板设置.Text = "模板设置";
+            this.bt_模板设置.Visible = false;
             this.bt_模板设置.Click += new System.EventHandler(this.bt_模板设置_Click);
             // 
             // gdc_bomexcel
             // 
+            this.gdc_bomexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_bomexcel.EmbeddedNavigator.Name = "";
             this.gdc_bomexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_bomexcel.Location = new System.Drawing.Point(0, 353);
+            this.gdc_bomexcel.Location = new System.Drawing.Point(2, 220);
             this.gdc_bomexcel.MainView = this.gv_bomexcel;
             this.gdc_bomexcel.Name = "gdc_bomexcel";
-            this.gdc_bomexcel.Size = new System.Drawing.Size(345, 322);
+            this.gdc_bomexcel.Size = new System.Drawing.Size(346, 322);
             this.gdc_bomexcel.TabIndex = 5;
-            this.gdc_bomexcel.UseEmbeddedNavigator = true;
             this.gdc_bomexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_bomexcel});
             // 
@@ -537,6 +564,7 @@
             this.gv_bomexcel.Appearance.FieldCaption.ForeColor = System.Drawing.Color.BlueViolet;
             this.gv_bomexcel.Appearance.FieldCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gv_bomexcel.Appearance.FieldValue.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gv_bomexcel.CardCaptionFormat = "N {0}";
             this.gv_bomexcel.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid2,
             this.colPROJECT_ID2,
@@ -559,6 +587,7 @@
             this.gv_bomexcel.OptionsBehavior.AutoFocusNewCard = true;
             this.gv_bomexcel.OptionsBehavior.AutoHorzWidth = true;
             this.gv_bomexcel.OptionsBehavior.FieldAutoHeight = true;
+            this.gv_bomexcel.OptionsView.ShowQuickCustomizeButton = false;
             this.gv_bomexcel.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
             // 
             // colid2
@@ -658,8 +687,6 @@
             this.col采购备注1.Caption = "采购备注";
             this.col采购备注1.FieldName = "采购备注";
             this.col采购备注1.Name = "col采购备注1";
-            this.col采购备注1.Visible = true;
-            this.col采购备注1.VisibleIndex = 11;
             // 
             // col工作表1
             // 
@@ -676,12 +703,11 @@
             gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.gdc_wcexcel.Location = new System.Drawing.Point(2, 135);
+            this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
-            this.gdc_wcexcel.Size = new System.Drawing.Size(343, 212);
+            this.gdc_wcexcel.Size = new System.Drawing.Size(343, 290);
             this.gdc_wcexcel.TabIndex = 4;
-            this.gdc_wcexcel.UseEmbeddedNavigator = true;
             this.gdc_wcexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_wcexcel});
             // 
@@ -692,6 +718,7 @@
             this.gv_wcexcel.Appearance.FieldCaption.ForeColor = System.Drawing.Color.BlueViolet;
             this.gv_wcexcel.Appearance.FieldCaption.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.gv_wcexcel.Appearance.FieldValue.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.gv_wcexcel.CardCaptionFormat = " N {0}";
             this.gv_wcexcel.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid1,
             this.colPROJECT_ID1,
@@ -706,6 +733,7 @@
             this.gv_wcexcel.OptionsBehavior.AutoFocusNewCard = true;
             this.gv_wcexcel.OptionsBehavior.AutoHorzWidth = true;
             this.gv_wcexcel.OptionsBehavior.FieldAutoHeight = true;
+            this.gv_wcexcel.OptionsView.ShowQuickCustomizeButton = false;
             this.gv_wcexcel.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
             // 
             // colid1
@@ -893,7 +921,7 @@
             // gridColumn9
             // 
             this.gridColumn9.Caption = "收货数量";
-            this.gridColumn9.FieldName = "收货数量";
+            this.gridColumn9.FieldName = "来料数量";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
@@ -901,7 +929,7 @@
             // gridColumn10
             // 
             this.gridColumn10.Caption = "收货日期";
-            this.gridColumn10.FieldName = "收货日期";
+            this.gridColumn10.FieldName = "来料日期";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
@@ -919,8 +947,6 @@
             this.gridColumn12.Caption = "采购备注";
             this.gridColumn12.FieldName = "采购备注";
             this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 9;
             // 
             // ywwcexcelBindingSource
             // 
@@ -973,6 +999,7 @@
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pc_wcexcel)).EndInit();
             this.pc_wcexcel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_bomexcel)).EndInit();
@@ -1076,5 +1103,7 @@
         private DevExpress.XtraEditors.SimpleButton bt_find;
         private DevExpress.XtraEditors.MemoEdit txtSearch1;
         private DevExpress.XtraEditors.MemoEdit txtSearch2;
+        private DevExpress.XtraEditors.SimpleButton bt_GetWorkSheet;
+        private DevExpress.XtraEditors.ComboBoxEdit cbe_工作表;
     }
 }
