@@ -409,12 +409,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 MessageBox.Show("工作表设置需要一样!", "提示");
                 return;
             }
-            AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0);
-            AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1);
+            AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0,this.excelFileName);
+            AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1,this.excelFileName);
 
         }
 
-        private void AutoSet(string strtxt, DataTable dt, int inti)
+        private void AutoSet(string strtxt, DataTable dt, int inti,string excelfilename)
         {
             bool bflag = false;//当为true的时候自动运行 模板设置事件
             string[] str = strtxt.Split(new char[] { '|' });
@@ -428,7 +428,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename);
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -438,7 +438,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti);
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename);
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
@@ -524,11 +524,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             base.Save();
         }
 
-        private string search(string sheetname, string strKeyWord, int inti)
+        private string search(string sheetname, string strKeyWord, int inti,string excelfilename)
         {
             beforeTime = DateTime.Now;
 
-            object filename = excelFileName;
+            object filename = excelfilename;
 
             object MissingValue = Type.Missing;
 
@@ -712,6 +712,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_findck_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
+            string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
+
             foreach (DataRow dr in m_dstAll.Tables["yw_wcckexcel"].Rows)
             {
                 dr.Delete();
@@ -734,11 +737,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 MessageBox.Show("工作表设置需要一样!", "提示");
                 return;
             }
-            AutoSetCk(this.txtSearch1ck.Text.ToString(), m_dstAll.Tables["yw_wcckexcel"], 0);
-            AutoSetCk(this.txtSearch2ck.Text.ToString(), m_dstAll.Tables["yw_ckexcel"], 1);
+            AutoSetCk(this.txtSearch1ck.Text.ToString(), m_dstAll.Tables["yw_wcckexcel"], 0,filename);
+            AutoSetCk(this.txtSearch2ck.Text.ToString(), m_dstAll.Tables["yw_ckexcel"], 1,filename);
         }
 
-        private void AutoSetCk(string strtxt, DataTable dt, int inti)
+        private void AutoSetCk(string strtxt, DataTable dt, int inti,string excelfilename)
         {
             bool bflag = false;//当为true的时候自动运行 模板设置事件
             string[] str = strtxt.Split(new char[] { '|' });
@@ -752,7 +755,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename);
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -762,7 +765,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti);
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename);
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
