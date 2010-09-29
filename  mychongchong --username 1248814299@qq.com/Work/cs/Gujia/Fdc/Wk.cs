@@ -1122,7 +1122,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                 dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
                                 dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
                             }
-                            else if (dwywck.Count == 0)
+                            else if (dwbom.Count == 0)
                             {
                                 DataRow dr = dtbom.NewRow();
                                 dr["序号"] = dtck.Rows[i]["序号"].ToString();
