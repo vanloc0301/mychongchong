@@ -48,7 +48,7 @@ namespace ZBPM.wk
         private ArrayList _xh;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("序号","")]
+        [FromRange("序号","",Category.AFormatted)]
         public ArrayList Xh
         {
             get { return _xh; }
@@ -57,7 +57,7 @@ namespace ZBPM.wk
         private ArrayList _wlmc;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("物料名称", "")]
+        [FromRange("物料名称", "",Category.AFormatted)]
         public ArrayList Wlmc
         {
             get { return _wlmc; }
@@ -66,7 +66,7 @@ namespace ZBPM.wk
         private ArrayList _ys;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("颜色", "")]
+        [FromRange("颜色", "",Category.AFormatted)]
         public ArrayList Ys
         {
             get { return _ys; }
@@ -75,7 +75,7 @@ namespace ZBPM.wk
         private ArrayList _zrl;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("总用量", "")]
+        [FromRange("总用量", "", Category.AFormatted)]
         public ArrayList Zrl
         {
             get { return _zrl; }
@@ -85,7 +85,7 @@ namespace ZBPM.wk
         private ArrayList _dw;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("单位", "")]
+        [FromRange("单位", "", Category.AFormatted)]
         public ArrayList Dw
         {
             get { return _dw; }
@@ -95,7 +95,7 @@ namespace ZBPM.wk
         private ArrayList _gys;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("供应商", "")]
+        [FromRange("供应商", "", Category.AFormatted)]
         public ArrayList Gys
         {
             get { return _gys; }
@@ -105,7 +105,7 @@ namespace ZBPM.wk
         private ArrayList _dhsl;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("来料数量", "")]
+        [FromRange("来料数量", "", Category.AFormatted)]
         public ArrayList Dhsl
         {
             get { return _dhsl; }
@@ -115,7 +115,7 @@ namespace ZBPM.wk
         private ArrayList _dhrq;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("来料日期", "")]
+        [FromRange("来料日期", "", Category.AFormatted)]
         public ArrayList Dhrq
         {
             get { return _dhrq; }
@@ -124,7 +124,7 @@ namespace ZBPM.wk
         private ArrayList _cgfq;
 
         [UseSheet("yw_bomexcel")]
-        [FromRange("采购复期", "")]
+        [FromRange("采购复期", "", Category.AFormatted)]
         public ArrayList Cgfq
         {
             get { return _cgfq; }
