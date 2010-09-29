@@ -59,6 +59,7 @@ namespace ZBPM
         ExcelFromArrayList excelop = null;   //excel操作 样点导出功能时使用; 2010-08-11
 
         string excelFileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\wc\欠料明细.xls";
+        string excelCkFilePath = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\购料单\";
         #endregion
 
         private void Init()
@@ -122,7 +123,7 @@ namespace ZBPM
         {
             string strProjectId = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
             m_dstAll = SkyMap.Net.DAO.QueryHelper.ExecuteSqls("Default", string.Empty, new string[]{@"SELECT * 
-FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM YW_wcexcel where PROJECT_ID ='"+strProjectId+"'","SELECT * FROM YW_bomexcel where PROJECT_ID ='"+strProjectId+"'"}, new string[] { "YW_bom", "YW_wcexcel", "YW_bomexcel" });
+FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM YW_wcexcel where PROJECT_ID ='"+strProjectId+"'","SELECT * FROM YW_bomexcel where PROJECT_ID ='"+strProjectId+"'","SELECT * FROM YW_ck where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM YW_wcckexcel where PROJECT_ID ='"+strProjectId+"'","SELECT * FROM YW_ckexcel where PROJECT_ID ='"+strProjectId+"'"}, new string[] { "YW_bom", "YW_wcexcel", "YW_bomexcel", "YW_ck", "YW_wcckexcel", "YW_ckexcel" });
             if (m_dstAll != null && m_dstAll.Tables.Count != 0)
             {
                 m_dstAll.Tables["YW_bom"].ExtendedProperties.Add("selectsql", @"SELECT  * FROM YW_bom where PROJECT_ID ='" + strProjectId + "' order by id asc");
@@ -275,7 +276,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 mapper.Read(wexcel, excelFileName, wcexcel, bomexcel);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
                 //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
-                string strwc = string.Format("生产单号：{0}，预备齐料期：{1}", wexcel.Scdh.ToString(),  wexcel.Qlq.ToString());
+                string strwc = string.Format("生产单号：{0}，预备齐料期：{1}", wexcel.Scdh.ToString(), wexcel.Qlq.ToString());
                 lblWcMsg.Text = strwc;
                 dt = new DataTable("bomexcel");
                 dt.Columns.Add("序号", System.Type.GetType("System.String"));
@@ -293,7 +294,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     if (string.IsNullOrEmpty(wexcel.Wlmc[i].ToString())) continue;
                     DataRow dr = dt.NewRow();
                     dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
-                    dr["物料名称"] = wexcel.Wlmc[i].ToString().Split(new char[]{'@'})[0];
+                    dr["物料名称"] = wexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0];
                     dr["颜色"] = wexcel.Ys[i].ToString().Split(new char[] { '@' })[0];
                     dr["总用量"] = wexcel.Zrl[i].ToString().Split(new char[] { '@' })[0];
                     dr["单位"] = wexcel.Dw[i].ToString().Split(new char[] { '@' })[0];
@@ -419,20 +420,20 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             foreach (DataRow dr in m_dstAll.Tables["yw_wcexcel"].Rows)
             {
-                dr.Delete();                
+                dr.Delete();
             }
             foreach (DataRow dr in m_dstAll.Tables["yw_bomexcel"].Rows)
             {
                 dr.Delete();
             }
-        
+
             base.Save();
             if (cbe_工作表.Text.ToString() == "")
             {
                 MessageBox.Show("请先获取工作表！", "提示");
                 return;
             }
-            this.txtSearch1.Text = string.Concat(cbe_工作表.Text.ToString(),this.txtSearch1.Text.Substring(this.txtSearch1.Text.ToString().IndexOf("|") ));
+            this.txtSearch1.Text = string.Concat(cbe_工作表.Text.ToString(), this.txtSearch1.Text.Substring(this.txtSearch1.Text.ToString().IndexOf("|")));
             this.txtSearch2.Text = string.Concat(cbe_工作表.Text.ToString(), this.txtSearch2.Text.Substring(this.txtSearch2.Text.ToString().IndexOf("|")));
             if (this.txtSearch1.Text.ToString().Split(new char[] { '|' })[0] != this.txtSearch2.Text.ToString().Split(new char[] { '|' })[0])
             {
@@ -618,7 +619,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     ews = null;
                     ews = (Microsoft.Office.Interop.Excel.Worksheet)ew.Worksheets[i];
-                    
+
                     cbe_工作表.Properties.Items.Add(ews.Name.ToString());
                 }
             }
@@ -628,6 +629,24 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 KillExcel.KillExcelProcess(beforeTime, afterTime);
                 bt_GetWorkSheet.Enabled = false;
             }
+        }
+
+        private void cbe_文件ck_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_GetCkFile_Click(object sender, EventArgs e)
+        {
+            cbe_文件ck.Properties.Items.Clear();
+            string[] fileNames = Directory.GetFiles(excelCkFilePath);
+            //string[] directories = Directory.GetDirectories(path);
+            //foreach (string file in fileNames)
+            //{
+               
+            //}
+            cbe_文件ck.Properties.Items.AddRange(fileNames);
+
         }
 
 
