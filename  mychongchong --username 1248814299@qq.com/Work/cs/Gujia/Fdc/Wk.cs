@@ -1234,9 +1234,32 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //            excelop.showExcel();
             string tmpstr = string.Format("{0}{1}.xls", excelJgPath, this.txt_生产单号.Text.ToString());
             this.gdc_bom.ExportToXls(tmpstr);
-            System.Diagnostics.Process proc;
-            proc = System.Diagnostics.Process.Start(tmpstr);
-            proc.WaitForExit(1000);
+
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+
+            p.StartInfo.FileName = string.Format("{1}.xls",this.txt_生产单号.Text.ToString()); ;
+            p.StartInfo.WorkingDirectory = excelJgPath;
+            p.StartInfo.Arguments = "";
+            p.StartInfo.UseShellExecute = false;
+
+            //p.StartInfo.RedirectStandardInput = false;
+            p.StartInfo.RedirectStandardOutput = false;
+            p.StartInfo.RedirectStandardError = false;
+            p.StartInfo.CreateNoWindow = false;
+            p.Start();
+
+            p.WaitForExit(3000);
+
+            if (p.HasExited)
+            {
+               
+            }
+            else
+            {
+       
+            }
+
+
         }
 
 
