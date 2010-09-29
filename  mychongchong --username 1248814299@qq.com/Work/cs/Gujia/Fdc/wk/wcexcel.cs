@@ -265,9 +265,7 @@ namespace ZBPM.wk
         {
             get { return _ps; }
             set { _ps = value; }
-        }
-
-      
+        }     
 
         #endregion
     }
