@@ -352,41 +352,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_模板设置_Click(object sender, EventArgs e)
         {
-            DataTable tmpdt = m_dstAll.Tables["yw_bomexcel"];
-            if (tmpdt.Rows.Count == 1)
-            {
-                string[] xh = tmpdt.Rows[0]["序号"].ToString().Split(new char[] { '|' });
-                if (xh.Length == 2)
-                {
-                    List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
-                    int istart = 0;
-                    int iend = 0;
-                    istart = li[0] + 1;
-                    li = ExcelColumnTranslator.showMatches(xh[1].ToString());
-                    iend = li[0] + 1;
-                    #region 智能设置
-                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend);
-                    AutoSetBomExcelModel(tmpdt, "采购复期", istart, iend);
-                    //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
-                    tmpdt.Rows[0]["记录数"] = (iend - istart + 1).ToString();
-                    #endregion
-
-                }
-                else
-                {
-                    MessageBox.Show("请设置正确的【序号格式】,格式形如:A1|A12");
-                    return;
-                }
-
-            }
-            base.Save();
+         
         }
+
+       
 
         private void AutoSetBomExcelModel(DataTable tmpdt, string colname, int istart, int iend)
         {
@@ -513,10 +482,46 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             if (tmpdt.Rows.Count == 0) tmpdt.Rows.Add(dr);
             if (bflag)
             {
-                bt_模板设置_Click(null, null);
+                AutoSetRange(dt);
             }
             #region
             #endregion
+        }
+
+        private void AutoSetRange(DataTable tmpdt)
+        {
+            if (tmpdt.Rows.Count == 1)
+            {
+                string[] xh = tmpdt.Rows[0]["序号"].ToString().Split(new char[] { '|' });
+                if (xh.Length == 2)
+                {
+                    List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
+                    int istart = 0;
+                    int iend = 0;
+                    istart = li[0] + 1;
+                    li = ExcelColumnTranslator.showMatches(xh[1].ToString());
+                    iend = li[0] + 1;
+                    #region 智能设置
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "采购复期", istart, iend);
+                    //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
+                    tmpdt.Rows[0]["记录数"] = (iend - istart + 1).ToString();
+                    #endregion
+                }
+                else
+                {
+                    MessageBox.Show("请设置正确的【序号格式】,格式形如:A1|A12");
+                    return;
+                }
+
+            }
+            base.Save();
         }
 
         private string search(string sheetname, string strKeyWord, int inti)
@@ -671,9 +676,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 Microsoft.Office.Interop.Excel.Workbook ew = ep.Workbooks.Open(filename.ToString(), MissingValue,
 
-                 MissingValue, MissingValue, MissingValue,
+                 MissingValue, MissingValue, "123456",
 
-                 MissingValue, MissingValue, MissingValue,
+                "123456", MissingValue, MissingValue,
 
                  MissingValue, MissingValue, MissingValue,
 
@@ -705,6 +710,143 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
         }
 
+        private void bt_findck_Click(object sender, EventArgs e)
+        {
+            foreach (DataRow dr in m_dstAll.Tables["yw_wcckexcel"].Rows)
+            {
+                dr.Delete();
+            }
+            foreach (DataRow dr in m_dstAll.Tables["yw_ckexcel"].Rows)
+            {
+                dr.Delete();
+            }
+
+            base.Save();
+            if (cbe_工作表ck.Text.ToString() == "")
+            {
+                MessageBox.Show("请先获取工作表！", "提示");
+                return;
+            }
+            this.txtSearch1ck.Text = string.Concat(cbe_工作表ck.Text.ToString(), this.txtSearch1ck.Text.Substring(this.txtSearch1ck.Text.ToString().IndexOf("|")));
+            this.txtSearch2ck.Text = string.Concat(cbe_工作表ck.Text.ToString(), this.txtSearch2ck.Text.Substring(this.txtSearch2ck.Text.ToString().IndexOf("|")));
+            if (this.txtSearch1ck.Text.ToString().Split(new char[] { '|' })[0] != this.txtSearch2ck.Text.ToString().Split(new char[] { '|' })[0])
+            {
+                MessageBox.Show("工作表设置需要一样!", "提示");
+                return;
+            }
+            AutoSetCk(this.txtSearch1ck.Text.ToString(), m_dstAll.Tables["yw_wcckexcel"], 0);
+            AutoSetCk(this.txtSearch2ck.Text.ToString(), m_dstAll.Tables["yw_ckexcel"], 1);
+        }
+
+        private void AutoSetCk(string strtxt, DataTable dt, int inti)
+        {
+            bool bflag = false;//当为true的时候自动运行 模板设置事件
+            string[] str = strtxt.Split(new char[] { '|' });
+            Hashtable ht = new Hashtable();
+            ht.Add("工作表", str[0].ToString());
+            for (int i = 1; i < str.Length; i++)
+            {
+                string strreturn = "";
+                string strname = "";
+                strname = str[i].Split(new char[] { '#' })[0].ToString();
+
+                if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
+                {
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti);
+                    if (strreturn != "")
+                    {
+                        ht.Add(strname, strreturn);
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
+                    {
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti);
+                        if (strreturn != "")
+                        {
+                            ht.Add(strname, strreturn);
+                            break;
+                        }
+                    }
+                }
+            }
+            DataTable tmpdt = dt;
+            DataRow dr = null;
+            if (tmpdt.Rows.Count == 1)
+            {
+                dr = tmpdt.Rows[0];
+            }
+            else if (tmpdt.Rows.Count == 0)
+            {
+                dr = tmpdt.NewRow();
+            }
+            else
+            {
+                MessageBox.Show("模板表中只能允许1条记录");
+                return;
+            }
+            foreach (DataColumn dc in tmpdt.Columns)
+            {
+                if (ht.Contains(dc.ColumnName))
+                {
+                    if (dc.ColumnName == "序号" && ht.Contains("预计齐料期") && ht.Contains("序号"))
+                    {
+                        bflag = true;
+                        List<int> li1 = ExcelColumnTranslator.showMatches(ht["预计齐料期"].ToString());
+                        List<int> li2 = ExcelColumnTranslator.showMatches(ht["序号"].ToString());
+                        dr[dc.ColumnName] = string.Format("{0}|{1}{2}", ht[dc.ColumnName].ToString(), ExcelColumnTranslator.ToName(li2[1]), li1[0] - 1);
+                    }
+                    else
+                    {
+                        dr[dc.ColumnName] = ht[dc.ColumnName].ToString();
+                    }
+                }
+            }
+            if (tmpdt.Rows.Count == 0) tmpdt.Rows.Add(dr);
+            if (bflag)
+            {
+                AutoSetRangeCk(dt);
+            }
+            #region
+            #endregion
+        }
+
+        private void AutoSetRangeCk(DataTable tmpdt)
+        {
+            if (tmpdt.Rows.Count == 1)
+            {
+                string[] xh = tmpdt.Rows[0]["序号"].ToString().Split(new char[] { '|' });
+                if (xh.Length == 2)
+                {
+                    List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
+                    int istart = 0;
+                    int iend = 0;
+                    istart = li[0] + 1;
+                    li = ExcelColumnTranslator.showMatches(xh[1].ToString());
+                    iend = li[0] + 1;
+                    #region 智能设置
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "配色", istart, iend);
+                    //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
+                    tmpdt.Rows[0]["记录数"] = (iend - istart + 1).ToString();
+                    #endregion
+                }
+                else
+                {
+                    MessageBox.Show("请设置正确的【序号格式】,格式形如:A1|A12");
+                    return;
+                }
+
+            }
+            base.Save();
+        }
 
 
     }
