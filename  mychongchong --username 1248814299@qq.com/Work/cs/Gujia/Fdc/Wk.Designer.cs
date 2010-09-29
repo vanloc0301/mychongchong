@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -158,7 +158,22 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.bt_导入excel数据ck = new DevExpress.XtraEditors.SimpleButton();
             this.smGridControl8 = new SkyMap.Net.Gui.Components.SmGridControl();
+            this.ywckBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.smGridView4 = new SkyMap.Net.Gui.Components.SmGridView();
+            this.colid5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPROJECT_ID5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col序号4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col物料名称4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col颜色4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col配色2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col总用量4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col单位4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col供应商4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col收货数量2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col收货日期2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col标注1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col是否标色1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col是否审核1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.smCardView1 = new SkyMap.Net.Gui.Components.SmCardView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -264,21 +279,6 @@
             this.ywckBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yw_ckTableAdapter = new ZBPM.wcTableAdapters.yw_ckTableAdapter();
             this.yw_ckexcelTableAdapter = new ZBPM.wcTableAdapters.yw_ckexcelTableAdapter();
-            this.ywckBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.colid5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPROJECT_ID5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col序号4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col物料名称4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col颜色4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col配色2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col总用量4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col单位4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col供应商4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col收货数量2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col收货日期2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col标注1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col是否标色1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col是否审核1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
             this.tblData.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -335,6 +335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smCardView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl2)).BeginInit();
@@ -376,7 +377,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblData
@@ -927,9 +927,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode1});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1466,9 +1466,9 @@
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1612,6 +1612,11 @@
             this.smGridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.smGridView4});
             // 
+            // ywckBindingSource1
+            // 
+            this.ywckBindingSource1.DataMember = "yw_ck";
+            this.ywckBindingSource1.DataSource = this.wc;
+            // 
             // smGridView4
             // 
             this.smGridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -1639,6 +1644,115 @@
             this.smGridView4.OptionsView.EnableAppearanceOddRow = true;
             this.smGridView4.PaintStyleName = "Skin";
             this.smGridView4.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            // 
+            // colid5
+            // 
+            this.colid5.Caption = "id";
+            this.colid5.FieldName = "id";
+            this.colid5.Name = "colid5";
+            this.colid5.OptionsColumn.ReadOnly = true;
+            // 
+            // colPROJECT_ID5
+            // 
+            this.colPROJECT_ID5.Caption = "PROJECT_ID";
+            this.colPROJECT_ID5.FieldName = "PROJECT_ID";
+            this.colPROJECT_ID5.Name = "colPROJECT_ID5";
+            // 
+            // col序号4
+            // 
+            this.col序号4.Caption = "序号";
+            this.col序号4.FieldName = "序号";
+            this.col序号4.Name = "col序号4";
+            this.col序号4.Visible = true;
+            this.col序号4.VisibleIndex = 0;
+            // 
+            // col物料名称4
+            // 
+            this.col物料名称4.Caption = "物料名称";
+            this.col物料名称4.FieldName = "物料名称";
+            this.col物料名称4.Name = "col物料名称4";
+            this.col物料名称4.Visible = true;
+            this.col物料名称4.VisibleIndex = 1;
+            // 
+            // col颜色4
+            // 
+            this.col颜色4.Caption = "颜色";
+            this.col颜色4.FieldName = "颜色";
+            this.col颜色4.Name = "col颜色4";
+            this.col颜色4.Visible = true;
+            this.col颜色4.VisibleIndex = 2;
+            // 
+            // col配色2
+            // 
+            this.col配色2.Caption = "配色";
+            this.col配色2.FieldName = "配色";
+            this.col配色2.Name = "col配色2";
+            this.col配色2.Visible = true;
+            this.col配色2.VisibleIndex = 3;
+            // 
+            // col总用量4
+            // 
+            this.col总用量4.Caption = "总用量";
+            this.col总用量4.FieldName = "总用量";
+            this.col总用量4.Name = "col总用量4";
+            this.col总用量4.Visible = true;
+            this.col总用量4.VisibleIndex = 4;
+            // 
+            // col单位4
+            // 
+            this.col单位4.Caption = "单位";
+            this.col单位4.FieldName = "单位";
+            this.col单位4.Name = "col单位4";
+            this.col单位4.Visible = true;
+            this.col单位4.VisibleIndex = 5;
+            // 
+            // col供应商4
+            // 
+            this.col供应商4.Caption = "供应商";
+            this.col供应商4.FieldName = "供应商";
+            this.col供应商4.Name = "col供应商4";
+            this.col供应商4.Visible = true;
+            this.col供应商4.VisibleIndex = 6;
+            // 
+            // col收货数量2
+            // 
+            this.col收货数量2.Caption = "收货数量";
+            this.col收货数量2.FieldName = "来料数量";
+            this.col收货数量2.Name = "col收货数量2";
+            this.col收货数量2.Visible = true;
+            this.col收货数量2.VisibleIndex = 7;
+            // 
+            // col收货日期2
+            // 
+            this.col收货日期2.Caption = "收货日期";
+            this.col收货日期2.FieldName = "来料日期";
+            this.col收货日期2.Name = "col收货日期2";
+            this.col收货日期2.Visible = true;
+            this.col收货日期2.VisibleIndex = 8;
+            // 
+            // col标注1
+            // 
+            this.col标注1.Caption = "标注";
+            this.col标注1.FieldName = "标注";
+            this.col标注1.Name = "col标注1";
+            this.col标注1.Visible = true;
+            this.col标注1.VisibleIndex = 9;
+            // 
+            // col是否标色1
+            // 
+            this.col是否标色1.Caption = "是否标色";
+            this.col是否标色1.FieldName = "是否标色";
+            this.col是否标色1.Name = "col是否标色1";
+            this.col是否标色1.Visible = true;
+            this.col是否标色1.VisibleIndex = 10;
+            // 
+            // col是否审核1
+            // 
+            this.col是否审核1.Caption = "是否审核";
+            this.col是否审核1.FieldName = "是否审核";
+            this.col是否审核1.Name = "col是否审核1";
+            this.col是否审核1.Visible = true;
+            this.col是否审核1.VisibleIndex = 11;
             // 
             // smCardView1
             // 
@@ -1713,9 +1827,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode3});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2619,124 +2733,6 @@
             // 
             this.yw_ckexcelTableAdapter.ClearBeforeFill = true;
             // 
-            // ywckBindingSource1
-            // 
-            this.ywckBindingSource1.DataMember = "yw_ck";
-            this.ywckBindingSource1.DataSource = this.wc;
-            // 
-            // colid5
-            // 
-            this.colid5.Caption = "id";
-            this.colid5.FieldName = "id";
-            this.colid5.Name = "colid5";
-            this.colid5.OptionsColumn.ReadOnly = true;
-            this.colid5.Visible = true;
-            this.colid5.VisibleIndex = 0;
-            // 
-            // colPROJECT_ID5
-            // 
-            this.colPROJECT_ID5.Caption = "PROJECT_ID";
-            this.colPROJECT_ID5.FieldName = "PROJECT_ID";
-            this.colPROJECT_ID5.Name = "colPROJECT_ID5";
-            this.colPROJECT_ID5.Visible = true;
-            this.colPROJECT_ID5.VisibleIndex = 1;
-            // 
-            // col序号4
-            // 
-            this.col序号4.Caption = "序号";
-            this.col序号4.FieldName = "序号";
-            this.col序号4.Name = "col序号4";
-            this.col序号4.Visible = true;
-            this.col序号4.VisibleIndex = 2;
-            // 
-            // col物料名称4
-            // 
-            this.col物料名称4.Caption = "物料名称";
-            this.col物料名称4.FieldName = "物料名称";
-            this.col物料名称4.Name = "col物料名称4";
-            this.col物料名称4.Visible = true;
-            this.col物料名称4.VisibleIndex = 3;
-            // 
-            // col颜色4
-            // 
-            this.col颜色4.Caption = "颜色";
-            this.col颜色4.FieldName = "颜色";
-            this.col颜色4.Name = "col颜色4";
-            this.col颜色4.Visible = true;
-            this.col颜色4.VisibleIndex = 4;
-            // 
-            // col配色2
-            // 
-            this.col配色2.Caption = "配色";
-            this.col配色2.FieldName = "配色";
-            this.col配色2.Name = "col配色2";
-            this.col配色2.Visible = true;
-            this.col配色2.VisibleIndex = 5;
-            // 
-            // col总用量4
-            // 
-            this.col总用量4.Caption = "总用量";
-            this.col总用量4.FieldName = "总用量";
-            this.col总用量4.Name = "col总用量4";
-            this.col总用量4.Visible = true;
-            this.col总用量4.VisibleIndex = 6;
-            // 
-            // col单位4
-            // 
-            this.col单位4.Caption = "单位";
-            this.col单位4.FieldName = "单位";
-            this.col单位4.Name = "col单位4";
-            this.col单位4.Visible = true;
-            this.col单位4.VisibleIndex = 7;
-            // 
-            // col供应商4
-            // 
-            this.col供应商4.Caption = "供应商";
-            this.col供应商4.FieldName = "供应商";
-            this.col供应商4.Name = "col供应商4";
-            this.col供应商4.Visible = true;
-            this.col供应商4.VisibleIndex = 8;
-            // 
-            // col收货数量2
-            // 
-            this.col收货数量2.Caption = "收货数量";
-            this.col收货数量2.FieldName = "收货数量";
-            this.col收货数量2.Name = "col收货数量2";
-            this.col收货数量2.Visible = true;
-            this.col收货数量2.VisibleIndex = 9;
-            // 
-            // col收货日期2
-            // 
-            this.col收货日期2.Caption = "收货日期";
-            this.col收货日期2.FieldName = "收货日期";
-            this.col收货日期2.Name = "col收货日期2";
-            this.col收货日期2.Visible = true;
-            this.col收货日期2.VisibleIndex = 10;
-            // 
-            // col标注1
-            // 
-            this.col标注1.Caption = "标注";
-            this.col标注1.FieldName = "标注";
-            this.col标注1.Name = "col标注1";
-            this.col标注1.Visible = true;
-            this.col标注1.VisibleIndex = 11;
-            // 
-            // col是否标色1
-            // 
-            this.col是否标色1.Caption = "是否标色";
-            this.col是否标色1.FieldName = "是否标色";
-            this.col是否标色1.Name = "col是否标色1";
-            this.col是否标色1.Visible = true;
-            this.col是否标色1.VisibleIndex = 12;
-            // 
-            // col是否审核1
-            // 
-            this.col是否审核1.Caption = "是否审核";
-            this.col是否审核1.FieldName = "是否审核";
-            this.col是否审核1.Name = "col是否审核1";
-            this.col是否审核1.Visible = true;
-            this.col是否审核1.VisibleIndex = 13;
-            // 
             // Wk
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2806,6 +2802,7 @@
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smCardView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl2)).EndInit();
@@ -2849,7 +2846,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
