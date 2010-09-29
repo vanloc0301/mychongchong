@@ -619,11 +619,11 @@
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(657, 6);
+            this.simpleButton6.Location = new System.Drawing.Point(656, 3);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(75, 23);
             this.simpleButton6.TabIndex = 15;
-            this.simpleButton6.Text = "导出数据";
+            this.simpleButton6.Text = "生成欠料表";
             this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
             // ck_是否齐料
