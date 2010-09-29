@@ -261,10 +261,10 @@ namespace ZBPM.wk
 
         [UseSheet("yw_ckexcel")]
         [FromRange("配色", "", Category.AFormatted)]
-        public ArrayList Cgfq
+        public ArrayList Ps
         {
-            get { return _cgfq; }
-            set { _cgfq = value; }
+            get { return _ps; }
+            set { _ps = value; }
         }
 
       
