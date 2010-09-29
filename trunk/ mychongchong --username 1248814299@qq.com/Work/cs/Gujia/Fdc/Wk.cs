@@ -52,6 +52,7 @@ namespace ZBPM
 
         private PrintSet m_printSet;
         private wk.wcexcel wexcel;
+        private wk.wcckexcel wckexcel;
         private DataTable dt;
         static DateTime beforeTime;            //Excel启动之前时间
         static DateTime afterTime;
@@ -855,6 +856,92 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             }
             base.Save();
+        }
+
+        private void bt_导入excel数据ck_Click(object sender, EventArgs e)
+        {
+            base.Save();
+            int inum = 1;
+            DataTable wcexcel = m_dstAll.Tables["yw_wcckexcel"];
+            DataTable bomexcel = m_dstAll.Tables["yw_ckexcel"];
+
+            if (wcexcel.Rows.Count == 1 && bomexcel.Rows.Count == 1)
+            {
+                if (wcexcel.Rows[0]["工作表"] == DBNull.Value)
+                {
+                    MessageBox.Show("模板表中工作表字段不能为空");
+                    return;
+                }
+                if (wcexcel.Rows[0]["工作表"].ToString().Trim().Length == 0)
+                {
+                    MessageBox.Show("模板表中工作表字段不能为空");
+                    return;
+                }
+                if (bomexcel.Rows[0]["工作表"] == DBNull.Value)
+                {
+                    MessageBox.Show("模板表中工作表字段不能为空");
+                    return;
+                }
+                if (bomexcel.Rows[0]["工作表"].ToString().Trim().Length == 0)
+                {
+                    MessageBox.Show("模板表中工作表字段不能为空");
+                    return;
+                }
+            }
+            else
+            {
+                throw new Exception("两个Excel模板表记录数都必须只有1条记录！");
+                return;
+            }
+
+            beforeTime = DateTime.Now;
+            double tmpdb = 0;
+            try
+            {
+                smGridControl1.DataSource = null;
+                //mapper.Write(gh, excelFileName);
+                wckexcel = new wk.wcckexcel();
+                mapper.Read(wexcel, excelFileName, wcexcel, bomexcel);
+                //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
+                //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
+                string strwc = string.Format("生产单号：{0}", wexcel.Scdh.ToString());
+                lblWcMsg.Text = strwc;
+                dt = new DataTable("ckexcel");
+                dt.Columns.Add("序号", System.Type.GetType("System.String"));
+                dt.Columns.Add("物料名称", System.Type.GetType("System.String"));
+                dt.Columns.Add("颜色", System.Type.GetType("System.String"));
+                dt.Columns.Add("配色", System.Type.GetType("System.String"));
+                dt.Columns.Add("总用量", System.Type.GetType("System.String"));
+                dt.Columns.Add("单位", System.Type.GetType("System.String"));
+                dt.Columns.Add("供应商", System.Type.GetType("System.String"));
+                dt.Columns.Add("来料数量", System.Type.GetType("System.String"));
+                dt.Columns.Add("来料日期", System.Type.GetType("System.String"));
+
+                for (int i = 0; i < wexcel.Xh.Count; i++)
+                {
+                    //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
+                    DataRow dr = dt.NewRow();
+                    dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
+                    dr["物料名称"] = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0];
+                    dr["颜色"] = wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0];
+                    dr["总用量"] = wckexcel.Zrl[i].ToString().Split(new char[] { '@' })[0];
+                    dr["单位"] = wckexcel.Dw[i].ToString().Split(new char[] { '@' })[0];
+                    dr["供应商"] = wckexcel.Gys[i].ToString().Split(new char[] { '@' })[0];
+                    dr["来料数量"] = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' })[0];
+                    dr["来料日期"] = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' })[0];
+                    dr["配色"] = wckexcel.Ps[i].ToString().Split(new char[] { '@' })[0];
+                    dt.Rows.Add(dr);
+                    inum++;
+                }
+                smGridControl8.DataSource = dt;
+                bt_读Execl写进数据库ck.Visible = true;
+
+            }
+            finally
+            {
+                afterTime = DateTime.Now;
+                KillExcel.KillExcelProcess(beforeTime, afterTime);
+            }
         }
 
 
