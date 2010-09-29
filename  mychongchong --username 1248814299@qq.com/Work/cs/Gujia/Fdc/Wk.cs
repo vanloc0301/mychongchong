@@ -1090,9 +1090,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
-                            if (dwywck.Count == 1)
+                            if (dwbom.Count == 1)
                             {
-                                dwywck[0].Row.Delete();
+                                dwbom[0].Row.Delete();
                             }
                             dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwywck.Count > 0) continue;
@@ -1115,12 +1115,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
-                            if (dwywck.Count == 1)
+                            if (dwbom.Count == 1)
                             {
-                                dwywck[0]["单位"] = dtck.Rows[i]["单位"].ToString();
-                                dwywck[0]["供应商"]= dtck.Rows[i]["供应商"].ToString();
-                                dwywck[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
-                                dwywck[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                                dwbom[0]["单位"] = dtck.Rows[i]["单位"].ToString();
+                                dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
+                                dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                                dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
                             }
                             else if (dwywck.Count == 0)
                             {
