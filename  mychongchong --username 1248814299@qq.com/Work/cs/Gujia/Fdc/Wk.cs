@@ -61,7 +61,7 @@ namespace ZBPM
 
         string excelFileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\wc\欠料明细.xls";
         string excelCkFilePath = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\购料单\";
-        string ckpass = ckpass;
+        string ckpass = "123456";
         #endregion
 
         private void Init()
