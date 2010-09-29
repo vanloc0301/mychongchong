@@ -912,7 +912,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string strwc = string.Format("生产单号：{0}", wckexcel.Scdh.ToString());
                 lblWcMsg.Text = strwc;
                 dt = new DataTable("ckexcel");
-                dt.Columns.Add("序号", System.Type.GetType("System.String"));
+                dt.Columns.Add("序号", System.Type.GetType("System.Int32"));
                 dt.Columns.Add("物料名称", System.Type.GetType("System.String"));
                 dt.Columns.Add("颜色", System.Type.GetType("System.String"));
                 dt.Columns.Add("配色", System.Type.GetType("System.String"));
@@ -930,6 +930,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string[] zrl;
                 string[] dw;
                 string[] gys, dhsl, dhrq, ps;
+                double dzrl=0d, ddhsl=0d;
                 for (int i = 0; i < wckexcel.Xh.Count; i++)
                 {
                     //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
@@ -956,7 +957,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     dhrq = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' });
                     ps = wckexcel.Ps[i].ToString().Split(new char[] { '@' });
                     DataRow dr = dt.NewRow();
-                    dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
+                    dr["序号"] = inum; //wexcel.Xh[i].ToString();
                     dr["物料名称"] = wlmc[0];
                     dr["颜色"] = ys[0];
                     dr["总用量"] = zrl[0];
@@ -970,6 +971,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     {
                         dr["是否标色"] = true;
                     }
+                    if(double.TryParse( zrl[0],out dzrl))
+                    {
+                        if(double.TryParse( dhsl[0],out ddhsl))
+                        {
+                            if (ddhsl - dzrl >= 0)
+                                dr["是否标色"] = true;
+                        }
+                    }                                     
                     dr["是否审核"] = false;
                     dt.Rows.Add(dr);
                     inum++;
