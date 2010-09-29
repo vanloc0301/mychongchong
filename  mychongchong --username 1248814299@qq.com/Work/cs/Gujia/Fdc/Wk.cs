@@ -569,18 +569,35 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 oRange = null;
 
-                oRange = ((Microsoft.Office.Interop.Excel.Range)ews.UsedRange).Find(
+                //=============inti=1时，表示要获取list;
+             //   if (inti == 1)
+             //   {
+             //       oRange = ((Microsoft.Office.Interop.Excel.Range)ews.UsedRange).Find(
 
-                oText, MissingValue, MissingValue,
+             //"序", MissingValue, MissingValue,
 
-                MissingValue, MissingValue, Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext,
+             //MissingValue, MissingValue, Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext,
 
-                MissingValue, MissingValue, MissingValue);
+             //MissingValue, MissingValue, MissingValue);
 
-                if (oRange != null && oRange.Cells.Rows.Count >= 1 && oRange.Cells.Columns.Count >= 1)
-                {
-                    return string.Format("{0}{1}", ExcelColumnTranslator.ToName(int.Parse(oRange.Column.ToString()) - 1), int.Parse(oRange.Row.ToString()) + inti);
-                }
+             //       if (oRange != null && oRange.Cells.Rows.Count >= 1 && oRange.Cells.Columns.Count >= 1)
+             //       {
+                        //===============
+                        oRange = ((Microsoft.Office.Interop.Excel.Range)ews.UsedRange).Find(
+
+                        oText, MissingValue, MissingValue,
+
+                        MissingValue, MissingValue, Microsoft.Office.Interop.Excel.XlSearchDirection.xlNext,
+
+                        MissingValue, MissingValue, MissingValue);
+
+                        if (oRange != null && oRange.Cells.Rows.Count >= 1 && oRange.Cells.Columns.Count >= 1)
+                        {
+                            return string.Format("{0}{1}", ExcelColumnTranslator.ToName(int.Parse(oRange.Column.ToString()) - 1), int.Parse(oRange.Row.ToString()) + inti);
+                        }
+                //    }
+                //}
+              
 
                 return "";
                 //} 
@@ -1161,7 +1178,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
 
                 }
-                int itotal=0,inum=0;
+                int itotal = 0, inum = 0;
                 StringBuilder sb = new StringBuilder();
                 foreach (System.Collections.DictionaryEntry objDE in ht)
                 {
@@ -1237,7 +1254,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             System.Diagnostics.Process p = new System.Diagnostics.Process();
 
-            p.StartInfo.FileName = string.Format("{1}.xls",this.txt_生产单号.Text.ToString()); ;
+            p.StartInfo.FileName = string.Format("{1}.xls", this.txt_生产单号.Text.ToString()); ;
             p.StartInfo.WorkingDirectory = excelJgPath;
             p.StartInfo.Arguments = "";
             p.StartInfo.UseShellExecute = false;
@@ -1252,11 +1269,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             if (p.HasExited)
             {
-               
+
             }
             else
             {
-       
+
             }
 
 
