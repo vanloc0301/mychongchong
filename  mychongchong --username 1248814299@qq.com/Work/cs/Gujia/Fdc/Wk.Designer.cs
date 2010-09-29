@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -120,6 +120,8 @@
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.bt_GetCkFile = new DevExpress.XtraEditors.SimpleButton();
+            this.cbe_文件ck = new DevExpress.XtraEditors.ComboBoxEdit();
             this.bt_GetWorkSheetck = new DevExpress.XtraEditors.SimpleButton();
             this.cbe_工作表ck = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtSearch1ck = new DevExpress.XtraEditors.MemoEdit();
@@ -127,7 +129,21 @@
             this.bt_findck = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.gdc_ckexcel = new SkyMap.Net.Gui.Components.SmGridControl();
+            this.ywckexcelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gv_ckexcel = new SkyMap.Net.Gui.Components.SmCardView();
+            this.colid4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPROJECT_ID4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col序号3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col物料名称3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col颜色3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col配色1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col总用量3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col单位3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col供应商3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col来料数量1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col来料日期1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col记录数1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col工作表2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gdc_wcckexcel = new SkyMap.Net.Gui.Components.SmGridControl();
             this.gv_wcckexcel = new SkyMap.Net.Gui.Components.SmCardView();
             this.gridColumn69 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -238,9 +254,6 @@
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.gdc_ck = new SkyMap.Net.Gui.Components.SmGridControl();
             this.gv_ck = new SkyMap.Net.Gui.Components.SmGridView();
-            this.repositoryItemMemoEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
-            this.ywckBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.yw_ckTableAdapter = new ZBPM.wcTableAdapters.yw_ckTableAdapter();
             this.colid3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPROJECT_ID3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col序号2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -254,26 +267,13 @@
             this.col收货日期1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col标注 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col是否标色 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col是否审核 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.col是否审核 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.ywckexcelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repositoryItemMemoEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+            this.ywckBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yw_ckTableAdapter = new ZBPM.wcTableAdapters.yw_ckTableAdapter();
             this.yw_ckexcelTableAdapter = new ZBPM.wcTableAdapters.yw_ckexcelTableAdapter();
-            this.colid4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPROJECT_ID4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col序号3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col物料名称3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col颜色3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col配色1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col总用量3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col单位3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col供应商3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col来料数量1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col来料日期1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col记录数1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col工作表2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbe_文件ck = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.bt_GetCkFile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
             this.tblData.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -316,10 +316,12 @@
             this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表ck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch1ck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch2ck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ckexcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ckexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcckexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_wcckexcel)).BeginInit();
@@ -365,12 +367,10 @@
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tblData
@@ -921,9 +921,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1228,6 +1228,26 @@
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
+            // bt_GetCkFile
+            // 
+            this.bt_GetCkFile.Location = new System.Drawing.Point(192, 1);
+            this.bt_GetCkFile.Name = "bt_GetCkFile";
+            this.bt_GetCkFile.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetCkFile.TabIndex = 14;
+            this.bt_GetCkFile.Text = "获取购料单";
+            this.bt_GetCkFile.Click += new System.EventHandler(this.bt_GetCkFile_Click);
+            // 
+            // cbe_文件ck
+            // 
+            this.cbe_文件ck.Location = new System.Drawing.Point(13, 2);
+            this.cbe_文件ck.Name = "cbe_文件ck";
+            this.cbe_文件ck.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbe_文件ck.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbe_文件ck.Size = new System.Drawing.Size(173, 21);
+            this.cbe_文件ck.TabIndex = 13;
+            this.cbe_文件ck.SelectedIndexChanged += new System.EventHandler(this.cbe_文件ck_SelectedIndexChanged);
+            // 
             // bt_GetWorkSheetck
             // 
             this.bt_GetWorkSheetck.Location = new System.Drawing.Point(192, 31);
@@ -1235,6 +1255,7 @@
             this.bt_GetWorkSheetck.Size = new System.Drawing.Size(75, 23);
             this.bt_GetWorkSheetck.TabIndex = 12;
             this.bt_GetWorkSheetck.Text = "获取工作表";
+            this.bt_GetWorkSheetck.Click += new System.EventHandler(this.bt_GetWorkSheetck_Click);
             // 
             // cbe_工作表ck
             // 
@@ -1296,6 +1317,11 @@
             this.gdc_ckexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_ckexcel});
             // 
+            // ywckexcelBindingSource
+            // 
+            this.ywckexcelBindingSource.DataMember = "yw_ckexcel";
+            this.ywckexcelBindingSource.DataSource = this.wc;
+            // 
             // gv_ckexcel
             // 
             this.gv_ckexcel.Appearance.FieldCaption.BackColor = System.Drawing.Color.GhostWhite;
@@ -1328,13 +1354,114 @@
             this.gv_ckexcel.OptionsView.ShowQuickCustomizeButton = false;
             this.gv_ckexcel.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Auto;
             // 
+            // colid4
+            // 
+            this.colid4.Caption = "id";
+            this.colid4.FieldName = "id";
+            this.colid4.Name = "colid4";
+            this.colid4.OptionsColumn.ReadOnly = true;
+            // 
+            // colPROJECT_ID4
+            // 
+            this.colPROJECT_ID4.Caption = "PROJECT_ID";
+            this.colPROJECT_ID4.FieldName = "PROJECT_ID";
+            this.colPROJECT_ID4.Name = "colPROJECT_ID4";
+            // 
+            // col序号3
+            // 
+            this.col序号3.Caption = "序号";
+            this.col序号3.FieldName = "序号";
+            this.col序号3.Name = "col序号3";
+            this.col序号3.Visible = true;
+            this.col序号3.VisibleIndex = 0;
+            // 
+            // col物料名称3
+            // 
+            this.col物料名称3.Caption = "物料名称";
+            this.col物料名称3.FieldName = "物料名称";
+            this.col物料名称3.Name = "col物料名称3";
+            this.col物料名称3.Visible = true;
+            this.col物料名称3.VisibleIndex = 1;
+            // 
+            // col颜色3
+            // 
+            this.col颜色3.Caption = "颜色";
+            this.col颜色3.FieldName = "颜色";
+            this.col颜色3.Name = "col颜色3";
+            this.col颜色3.Visible = true;
+            this.col颜色3.VisibleIndex = 2;
+            // 
+            // col配色1
+            // 
+            this.col配色1.Caption = "配色";
+            this.col配色1.FieldName = "配色";
+            this.col配色1.Name = "col配色1";
+            this.col配色1.Visible = true;
+            this.col配色1.VisibleIndex = 3;
+            // 
+            // col总用量3
+            // 
+            this.col总用量3.Caption = "总用量";
+            this.col总用量3.FieldName = "总用量";
+            this.col总用量3.Name = "col总用量3";
+            this.col总用量3.Visible = true;
+            this.col总用量3.VisibleIndex = 4;
+            // 
+            // col单位3
+            // 
+            this.col单位3.Caption = "单位";
+            this.col单位3.FieldName = "单位";
+            this.col单位3.Name = "col单位3";
+            this.col单位3.Visible = true;
+            this.col单位3.VisibleIndex = 5;
+            // 
+            // col供应商3
+            // 
+            this.col供应商3.Caption = "供应商";
+            this.col供应商3.FieldName = "供应商";
+            this.col供应商3.Name = "col供应商3";
+            this.col供应商3.Visible = true;
+            this.col供应商3.VisibleIndex = 6;
+            // 
+            // col来料数量1
+            // 
+            this.col来料数量1.Caption = "来料数量";
+            this.col来料数量1.FieldName = "来料数量";
+            this.col来料数量1.Name = "col来料数量1";
+            this.col来料数量1.Visible = true;
+            this.col来料数量1.VisibleIndex = 7;
+            // 
+            // col来料日期1
+            // 
+            this.col来料日期1.Caption = "来料日期";
+            this.col来料日期1.FieldName = "来料日期";
+            this.col来料日期1.Name = "col来料日期1";
+            this.col来料日期1.Visible = true;
+            this.col来料日期1.VisibleIndex = 8;
+            // 
+            // col记录数1
+            // 
+            this.col记录数1.Caption = "记录数";
+            this.col记录数1.FieldName = "记录数";
+            this.col记录数1.Name = "col记录数1";
+            this.col记录数1.Visible = true;
+            this.col记录数1.VisibleIndex = 9;
+            // 
+            // col工作表2
+            // 
+            this.col工作表2.Caption = "工作表";
+            this.col工作表2.FieldName = "工作表";
+            this.col工作表2.Name = "col工作表2";
+            this.col工作表2.Visible = true;
+            this.col工作表2.VisibleIndex = 10;
+            // 
             // gdc_wcckexcel
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode4});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1651,9 +1778,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2364,7 +2491,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage4.Text = "齐料";
             // 
             // gdc_ck
@@ -2379,7 +2506,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
+            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2413,22 +2540,6 @@
             this.gv_ck.PaintStyleName = "Skin";
             this.gv_ck.RowHeight = 50;
             this.gv_ck.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
-            // 
-            // repositoryItemMemoEdit3
-            // 
-            this.repositoryItemMemoEdit3.Appearance.Options.UseTextOptions = true;
-            this.repositoryItemMemoEdit3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.repositoryItemMemoEdit3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.repositoryItemMemoEdit3.Name = "repositoryItemMemoEdit3";
-            // 
-            // ywckBindingSource
-            // 
-            this.ywckBindingSource.DataMember = "yw_ck";
-            this.ywckBindingSource.DataSource = this.wc;
-            // 
-            // yw_ckTableAdapter
-            // 
-            this.yw_ckTableAdapter.ClearBeforeFill = true;
             // 
             // colid3
             // 
@@ -2532,6 +2643,12 @@
             this.col是否标色.Visible = true;
             this.col是否标色.VisibleIndex = 10;
             // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
             // col是否审核
             // 
             this.col是否审核.Caption = "是否审核";
@@ -2541,147 +2658,31 @@
             this.col是否审核.Visible = true;
             this.col是否审核.VisibleIndex = 11;
             // 
-            // repositoryItemCheckEdit1
-            // 
-            this.repositoryItemCheckEdit1.AutoHeight = false;
-            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
-            this.repositoryItemCheckEdit1.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
             // repositoryItemCheckEdit2
             // 
             this.repositoryItemCheckEdit2.AutoHeight = false;
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             this.repositoryItemCheckEdit2.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
-            // ywckexcelBindingSource
+            // repositoryItemMemoEdit3
             // 
-            this.ywckexcelBindingSource.DataMember = "yw_ckexcel";
-            this.ywckexcelBindingSource.DataSource = this.wc;
+            this.repositoryItemMemoEdit3.Appearance.Options.UseTextOptions = true;
+            this.repositoryItemMemoEdit3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.repositoryItemMemoEdit3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.repositoryItemMemoEdit3.Name = "repositoryItemMemoEdit3";
+            // 
+            // ywckBindingSource
+            // 
+            this.ywckBindingSource.DataMember = "yw_ck";
+            this.ywckBindingSource.DataSource = this.wc;
+            // 
+            // yw_ckTableAdapter
+            // 
+            this.yw_ckTableAdapter.ClearBeforeFill = true;
             // 
             // yw_ckexcelTableAdapter
             // 
             this.yw_ckexcelTableAdapter.ClearBeforeFill = true;
-            // 
-            // colid4
-            // 
-            this.colid4.Caption = "id";
-            this.colid4.FieldName = "id";
-            this.colid4.Name = "colid4";
-            this.colid4.OptionsColumn.ReadOnly = true;
-            // 
-            // colPROJECT_ID4
-            // 
-            this.colPROJECT_ID4.Caption = "PROJECT_ID";
-            this.colPROJECT_ID4.FieldName = "PROJECT_ID";
-            this.colPROJECT_ID4.Name = "colPROJECT_ID4";
-            // 
-            // col序号3
-            // 
-            this.col序号3.Caption = "序号";
-            this.col序号3.FieldName = "序号";
-            this.col序号3.Name = "col序号3";
-            this.col序号3.Visible = true;
-            this.col序号3.VisibleIndex = 0;
-            // 
-            // col物料名称3
-            // 
-            this.col物料名称3.Caption = "物料名称";
-            this.col物料名称3.FieldName = "物料名称";
-            this.col物料名称3.Name = "col物料名称3";
-            this.col物料名称3.Visible = true;
-            this.col物料名称3.VisibleIndex = 1;
-            // 
-            // col颜色3
-            // 
-            this.col颜色3.Caption = "颜色";
-            this.col颜色3.FieldName = "颜色";
-            this.col颜色3.Name = "col颜色3";
-            this.col颜色3.Visible = true;
-            this.col颜色3.VisibleIndex = 2;
-            // 
-            // col配色1
-            // 
-            this.col配色1.Caption = "配色";
-            this.col配色1.FieldName = "配色";
-            this.col配色1.Name = "col配色1";
-            this.col配色1.Visible = true;
-            this.col配色1.VisibleIndex = 3;
-            // 
-            // col总用量3
-            // 
-            this.col总用量3.Caption = "总用量";
-            this.col总用量3.FieldName = "总用量";
-            this.col总用量3.Name = "col总用量3";
-            this.col总用量3.Visible = true;
-            this.col总用量3.VisibleIndex = 4;
-            // 
-            // col单位3
-            // 
-            this.col单位3.Caption = "单位";
-            this.col单位3.FieldName = "单位";
-            this.col单位3.Name = "col单位3";
-            this.col单位3.Visible = true;
-            this.col单位3.VisibleIndex = 5;
-            // 
-            // col供应商3
-            // 
-            this.col供应商3.Caption = "供应商";
-            this.col供应商3.FieldName = "供应商";
-            this.col供应商3.Name = "col供应商3";
-            this.col供应商3.Visible = true;
-            this.col供应商3.VisibleIndex = 6;
-            // 
-            // col来料数量1
-            // 
-            this.col来料数量1.Caption = "来料数量";
-            this.col来料数量1.FieldName = "来料数量";
-            this.col来料数量1.Name = "col来料数量1";
-            this.col来料数量1.Visible = true;
-            this.col来料数量1.VisibleIndex = 7;
-            // 
-            // col来料日期1
-            // 
-            this.col来料日期1.Caption = "来料日期";
-            this.col来料日期1.FieldName = "来料日期";
-            this.col来料日期1.Name = "col来料日期1";
-            this.col来料日期1.Visible = true;
-            this.col来料日期1.VisibleIndex = 8;
-            // 
-            // col记录数1
-            // 
-            this.col记录数1.Caption = "记录数";
-            this.col记录数1.FieldName = "记录数";
-            this.col记录数1.Name = "col记录数1";
-            this.col记录数1.Visible = true;
-            this.col记录数1.VisibleIndex = 9;
-            // 
-            // col工作表2
-            // 
-            this.col工作表2.Caption = "工作表";
-            this.col工作表2.FieldName = "工作表";
-            this.col工作表2.Name = "col工作表2";
-            this.col工作表2.Visible = true;
-            this.col工作表2.VisibleIndex = 10;
-            // 
-            // cbe_文件ck
-            // 
-            this.cbe_文件ck.Location = new System.Drawing.Point(13, 2);
-            this.cbe_文件ck.Name = "cbe_文件ck";
-            this.cbe_文件ck.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbe_文件ck.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbe_文件ck.Size = new System.Drawing.Size(173, 21);
-            this.cbe_文件ck.TabIndex = 13;
-            this.cbe_文件ck.SelectedIndexChanged += new System.EventHandler(this.cbe_文件ck_SelectedIndexChanged);
-            // 
-            // bt_GetCkFile
-            // 
-            this.bt_GetCkFile.Location = new System.Drawing.Point(192, 1);
-            this.bt_GetCkFile.Name = "bt_GetCkFile";
-            this.bt_GetCkFile.Size = new System.Drawing.Size(75, 23);
-            this.bt_GetCkFile.TabIndex = 14;
-            this.bt_GetCkFile.Text = "获取购料单";
-            this.bt_GetCkFile.Click += new System.EventHandler(this.bt_GetCkFile_Click);
             // 
             // Wk
             // 
@@ -2737,10 +2738,12 @@
             this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表ck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch1ck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch2ck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ckexcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ckexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcckexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_wcckexcel)).EndInit();
@@ -2789,12 +2792,10 @@
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

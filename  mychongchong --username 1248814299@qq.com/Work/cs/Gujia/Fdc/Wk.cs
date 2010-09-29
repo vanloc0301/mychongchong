@@ -657,6 +657,54 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         }
 
+        private void bt_GetWorkSheetck_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
+            beforeTime = DateTime.Now;
+            object filename = string.Format("{0}{1}",this.excelCkFilePath,cbe_文件ck.Text.ToString());
+
+            object MissingValue = Type.Missing;
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application ep = new Microsoft.Office.Interop.Excel.ApplicationClass();
+
+                Microsoft.Office.Interop.Excel.Workbook ew = ep.Workbooks.Open(filename.ToString(), MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue, MissingValue, MissingValue,
+
+                 MissingValue);
+
+                Microsoft.Office.Interop.Excel.Worksheet ews;
+
+                int iEWSCnt = ew.Worksheets.Count;
+
+                int i = 0, j = 0;
+
+                Microsoft.Office.Interop.Excel.Range oRange;
+                cbe_工作表ck.Properties.Items.Clear();
+                for (i = 1; i <= iEWSCnt; i++)
+                {
+                    ews = null;
+                    ews = (Microsoft.Office.Interop.Excel.Worksheet)ew.Worksheets[i];
+
+                    cbe_工作表ck.Properties.Items.Add(ews.Name.ToString());
+                }
+            }
+            finally
+            {
+                afterTime = DateTime.Now;
+                KillExcel.KillExcelProcess(beforeTime, afterTime);
+                bt_GetWorkSheetck.Enabled = false;
+            }
+        }
+
 
 
     }
