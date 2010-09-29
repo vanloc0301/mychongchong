@@ -931,6 +931,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 try
                 {
+                    DataView dwywck = m_dstAll.Tables["yw_ck"].DefaultView;
                     for (int i = 0; i < wckexcel.Xh.Count; i++)
                     {
                         string[] wlmc = null;
@@ -984,7 +985,24 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dr["是否标色"] = 1;
                             }
                         }
-                        dr["是否审核"] = 0;
+                        if (!string.IsNullOrEmpty(wlmc[0].ToString()))
+                        {
+                            dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(wlmc[0].ToString()), DvRowFilter(ys[0].ToString()), DvRowFilter(zrl[0].ToString()));
+                            if (dwywck.Count > 0)
+                            {
+                                dr["是否审核"] = 1;
+                                dr["是否标色"] = 1;
+                            }
+                            else
+                            {
+                                dr["是否审核"] = 0;
+                            }
+                        }
+                        else
+                        {
+                            dr["是否审核"] = 0;
+                        }
+                       
                         dtck.Rows.Add(dr);
                         inum++;
                     }
@@ -1033,6 +1051,25 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //}
         }
 
+        /// <summary>
+        /// 处理DataRow筛选条件的特殊字符
+        /// </summary>
+        /// <param name="rowFilter">行筛选条件表达式</param>
+        /// <returns></returns>
+        public static string DvRowFilter(string rowFilter)
+        {
+            //在DataView的RowFilter里面的特殊字符要用"[]"括起来，单引号要换成"''",他的表达式里面没有通配符的说法
+            //return rowFilter
+            //    .Replace("[", "[[ ")
+            //    .Replace("]", " ]]")
+            //    .Replace("*", "[*]")
+            //    .Replace("%", "[%]")
+            //    .Replace("[[ ", "[[]")
+            //    .Replace(" ]]", "[]]")
+            //    .Replace("\'", "''");
+            return rowFilter;
+        }
+
         private void bt_读Execl写进数据库ck_Click(object sender, EventArgs e)
         {
             bool bsh = false;
@@ -1040,6 +1077,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             {
                 txt_生产单号.Text = wckexcel.Scdh.ToString();
                 DataTable dtywck = m_dstAll.Tables["yw_ck"];
+                DataView dwywck = dtywck.DefaultView;
                 for (int i = 0; i < dtck.Rows.Count; i++)
                 {
                     bsh = false;
@@ -1047,7 +1085,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     {
                         if (!bsh) continue;
                         if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
-
+                        dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                        if (dwywck.Count > 0) continue;
                         DataRow dr = dtywck.NewRow();
                         dr["序号"] = dtck.Rows[i]["序号"].ToString();
                         dr["物料名称"] = dtck.Rows[i]["物料名称"].ToString();
@@ -1063,7 +1102,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         dtywck.Rows.Add(dr);
                     }
                 }
-                base.Save();
+                this.Save();
 
             }
 
