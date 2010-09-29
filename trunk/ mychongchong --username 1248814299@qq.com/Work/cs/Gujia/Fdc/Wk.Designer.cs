@@ -120,11 +120,11 @@
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.comboBoxEdit2 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.memoEdit3 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEdit4 = new DevExpress.XtraEditors.MemoEdit();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.bt_GetWorkSheetck = new DevExpress.XtraEditors.SimpleButton();
+            this.cbe_工作表ck = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtSearch1ck = new DevExpress.XtraEditors.MemoEdit();
+            this.txtSearch2ck = new DevExpress.XtraEditors.MemoEdit();
+            this.bt_findck = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.gdc_ckexcel = new SkyMap.Net.Gui.Components.SmGridControl();
             this.gv_ckexcel = new SkyMap.Net.Gui.Components.SmCardView();
@@ -138,9 +138,9 @@
             this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
+            this.bt_读Execl写进数据库ck = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
+            this.bt_导入excel数据ck = new DevExpress.XtraEditors.SimpleButton();
             this.smGridControl8 = new SkyMap.Net.Gui.Components.SmGridControl();
             this.smGridView4 = new SkyMap.Net.Gui.Components.SmGridView();
             this.gridColumn75 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -314,9 +314,9 @@
             this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表ck.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch1ck.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch2ck.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ckexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ckexcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcckexcel)).BeginInit();
@@ -1208,11 +1208,11 @@
             // 
             // panelControl6
             // 
-            this.panelControl6.Controls.Add(this.simpleButton6);
-            this.panelControl6.Controls.Add(this.comboBoxEdit2);
-            this.panelControl6.Controls.Add(this.memoEdit3);
-            this.panelControl6.Controls.Add(this.memoEdit4);
-            this.panelControl6.Controls.Add(this.simpleButton7);
+            this.panelControl6.Controls.Add(this.bt_GetWorkSheetck);
+            this.panelControl6.Controls.Add(this.cbe_工作表ck);
+            this.panelControl6.Controls.Add(this.txtSearch1ck);
+            this.panelControl6.Controls.Add(this.txtSearch2ck);
+            this.panelControl6.Controls.Add(this.bt_findck);
             this.panelControl6.Controls.Add(this.simpleButton8);
             this.panelControl6.Controls.Add(this.gdc_ckexcel);
             this.panelControl6.Controls.Add(this.gdc_wcckexcel);
@@ -1223,50 +1223,50 @@
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
-            // simpleButton6
+            // bt_GetWorkSheetck
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(270, 1);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton6.TabIndex = 12;
-            this.simpleButton6.Text = "获取工作表";
+            this.bt_GetWorkSheetck.Location = new System.Drawing.Point(270, 1);
+            this.bt_GetWorkSheetck.Name = "bt_GetWorkSheetck";
+            this.bt_GetWorkSheetck.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetWorkSheetck.TabIndex = 12;
+            this.bt_GetWorkSheetck.Text = "获取工作表";
             // 
-            // comboBoxEdit2
+            // cbe_工作表ck
             // 
-            this.comboBoxEdit2.Location = new System.Drawing.Point(5, 1);
-            this.comboBoxEdit2.Name = "comboBoxEdit2";
-            this.comboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbe_工作表ck.Location = new System.Drawing.Point(5, 1);
+            this.cbe_工作表ck.Name = "cbe_工作表ck";
+            this.cbe_工作表ck.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit2.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit2.Size = new System.Drawing.Size(246, 21);
-            this.comboBoxEdit2.TabIndex = 11;
+            this.cbe_工作表ck.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbe_工作表ck.Size = new System.Drawing.Size(246, 21);
+            this.cbe_工作表ck.TabIndex = 11;
             // 
-            // memoEdit3
+            // txtSearch1ck
             // 
-            this.memoEdit3.EditValue = "13300|生产单号#MF|预计齐料期#预计齐|厂款号#NB-";
-            this.memoEdit3.Location = new System.Drawing.Point(5, 26);
-            this.memoEdit3.Name = "memoEdit3";
-            this.memoEdit3.Size = new System.Drawing.Size(115, 23);
-            this.memoEdit3.TabIndex = 10;
-            this.memoEdit3.Visible = false;
+            this.txtSearch1ck.EditValue = "13300|生产单号#MF|预计齐料期#预计齐|厂款号#NB-";
+            this.txtSearch1ck.Location = new System.Drawing.Point(5, 26);
+            this.txtSearch1ck.Name = "txtSearch1ck";
+            this.txtSearch1ck.Size = new System.Drawing.Size(115, 23);
+            this.txtSearch1ck.TabIndex = 10;
+            this.txtSearch1ck.Visible = false;
             // 
-            // memoEdit4
+            // txtSearch2ck
             // 
-            this.memoEdit4.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商@订/存|来料数量#数量|来料日期#日期|采购复" +
+            this.txtSearch2ck.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商@订/存|来料数量#数量|来料日期#日期|采购复" +
                 "期#采购复期";
-            this.memoEdit4.Location = new System.Drawing.Point(126, 28);
-            this.memoEdit4.Name = "memoEdit4";
-            this.memoEdit4.Size = new System.Drawing.Size(125, 23);
-            this.memoEdit4.TabIndex = 9;
-            this.memoEdit4.Visible = false;
+            this.txtSearch2ck.Location = new System.Drawing.Point(126, 28);
+            this.txtSearch2ck.Name = "txtSearch2ck";
+            this.txtSearch2ck.Size = new System.Drawing.Size(125, 23);
+            this.txtSearch2ck.TabIndex = 9;
+            this.txtSearch2ck.Visible = false;
             // 
-            // simpleButton7
+            // bt_findck
             // 
-            this.simpleButton7.Location = new System.Drawing.Point(270, 28);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton7.TabIndex = 7;
-            this.simpleButton7.Text = "快速设置";
+            this.bt_findck.Location = new System.Drawing.Point(270, 28);
+            this.bt_findck.Name = "bt_findck";
+            this.bt_findck.Size = new System.Drawing.Size(75, 23);
+            this.bt_findck.TabIndex = 7;
+            this.bt_findck.Text = "快速设置";
             // 
             // simpleButton8
             // 
@@ -1420,9 +1420,9 @@
             // 
             // panelControl8
             // 
-            this.panelControl8.Controls.Add(this.simpleButton9);
+            this.panelControl8.Controls.Add(this.bt_读Execl写进数据库ck);
             this.panelControl8.Controls.Add(this.labelControl8);
-            this.panelControl8.Controls.Add(this.simpleButton10);
+            this.panelControl8.Controls.Add(this.bt_导入excel数据ck);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
@@ -1430,14 +1430,14 @@
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
             // 
-            // simpleButton9
+            // bt_读Execl写进数据库ck
             // 
-            this.simpleButton9.Location = new System.Drawing.Point(157, 3);
-            this.simpleButton9.Name = "simpleButton9";
-            this.simpleButton9.Size = new System.Drawing.Size(170, 23);
-            this.simpleButton9.TabIndex = 2;
-            this.simpleButton9.Text = "写入数据到物控管理系统";
-            this.simpleButton9.Visible = false;
+            this.bt_读Execl写进数据库ck.Location = new System.Drawing.Point(157, 3);
+            this.bt_读Execl写进数据库ck.Name = "bt_读Execl写进数据库ck";
+            this.bt_读Execl写进数据库ck.Size = new System.Drawing.Size(170, 23);
+            this.bt_读Execl写进数据库ck.TabIndex = 2;
+            this.bt_读Execl写进数据库ck.Text = "写入数据到物控管理系统";
+            this.bt_读Execl写进数据库ck.Visible = false;
             // 
             // labelControl8
             // 
@@ -1449,13 +1449,13 @@
             this.labelControl8.TabIndex = 1;
             this.labelControl8.Text = resources.GetString("labelControl8.Text");
             // 
-            // simpleButton10
+            // bt_导入excel数据ck
             // 
-            this.simpleButton10.Location = new System.Drawing.Point(19, 3);
-            this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(119, 25);
-            this.simpleButton10.TabIndex = 0;
-            this.simpleButton10.Text = "读取excel数据";
+            this.bt_导入excel数据ck.Location = new System.Drawing.Point(19, 3);
+            this.bt_导入excel数据ck.Name = "bt_导入excel数据ck";
+            this.bt_导入excel数据ck.Size = new System.Drawing.Size(119, 25);
+            this.bt_导入excel数据ck.TabIndex = 0;
+            this.bt_导入excel数据ck.Text = "读取excel数据";
             // 
             // smGridControl8
             // 
@@ -2712,9 +2712,9 @@
             this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_工作表ck.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch1ck.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearch2ck.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_ckexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_ckexcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_wcckexcel)).EndInit();
@@ -2862,11 +2862,11 @@
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
         private DevExpress.XtraEditors.PanelControl panelControl6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
-        private DevExpress.XtraEditors.MemoEdit memoEdit3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevExpress.XtraEditors.SimpleButton bt_GetWorkSheetck;
+        private DevExpress.XtraEditors.ComboBoxEdit cbe_工作表ck;
+        private DevExpress.XtraEditors.MemoEdit txtSearch1ck;
+        private DevExpress.XtraEditors.MemoEdit txtSearch2ck;
+        private DevExpress.XtraEditors.SimpleButton bt_findck;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private SkyMap.Net.Gui.Components.SmGridControl gdc_ckexcel;
         private SkyMap.Net.Gui.Components.SmCardView gv_ckexcel;
@@ -2880,9 +2880,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn74;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.PanelControl panelControl8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
+        private DevExpress.XtraEditors.SimpleButton bt_读Execl写进数据库ck;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton10;
+        private DevExpress.XtraEditors.SimpleButton bt_导入excel数据ck;
         private SkyMap.Net.Gui.Components.SmGridControl smGridControl8;
         private SkyMap.Net.Gui.Components.SmGridView smGridView4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn75;
