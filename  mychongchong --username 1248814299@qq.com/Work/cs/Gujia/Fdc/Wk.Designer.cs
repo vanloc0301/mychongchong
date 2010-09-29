@@ -272,6 +272,8 @@
             this.col来料日期1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col记录数1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col工作表2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbe_文件ck = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.bt_GetCkFile = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
             this.tblData.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -368,6 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tblData
@@ -1208,6 +1211,8 @@
             // 
             // panelControl6
             // 
+            this.panelControl6.Controls.Add(this.bt_GetCkFile);
+            this.panelControl6.Controls.Add(this.cbe_文件ck);
             this.panelControl6.Controls.Add(this.bt_GetWorkSheetck);
             this.panelControl6.Controls.Add(this.cbe_工作表ck);
             this.panelControl6.Controls.Add(this.txtSearch1ck);
@@ -1225,7 +1230,7 @@
             // 
             // bt_GetWorkSheetck
             // 
-            this.bt_GetWorkSheetck.Location = new System.Drawing.Point(270, 1);
+            this.bt_GetWorkSheetck.Location = new System.Drawing.Point(192, 31);
             this.bt_GetWorkSheetck.Name = "bt_GetWorkSheetck";
             this.bt_GetWorkSheetck.Size = new System.Drawing.Size(75, 23);
             this.bt_GetWorkSheetck.TabIndex = 12;
@@ -1233,18 +1238,18 @@
             // 
             // cbe_工作表ck
             // 
-            this.cbe_工作表ck.Location = new System.Drawing.Point(5, 1);
+            this.cbe_工作表ck.Location = new System.Drawing.Point(13, 30);
             this.cbe_工作表ck.Name = "cbe_工作表ck";
             this.cbe_工作表ck.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe_工作表ck.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbe_工作表ck.Size = new System.Drawing.Size(246, 21);
+            this.cbe_工作表ck.Size = new System.Drawing.Size(173, 21);
             this.cbe_工作表ck.TabIndex = 11;
             // 
             // txtSearch1ck
             // 
             this.txtSearch1ck.EditValue = "13300|生产单号#MF|预计齐料期#预计齐|厂款号#NB-";
-            this.txtSearch1ck.Location = new System.Drawing.Point(5, 26);
+            this.txtSearch1ck.Location = new System.Drawing.Point(13, 65);
             this.txtSearch1ck.Name = "txtSearch1ck";
             this.txtSearch1ck.Size = new System.Drawing.Size(115, 23);
             this.txtSearch1ck.TabIndex = 10;
@@ -1254,7 +1259,7 @@
             // 
             this.txtSearch2ck.EditValue = "3300|预计齐料期#预计齐|序号#序|物料名称#物料名称|颜色#颜色|总用量#总用量|单位#单位|供应商#供应商@订/存|来料数量#数量|来料日期#日期|采购复" +
                 "期#采购复期";
-            this.txtSearch2ck.Location = new System.Drawing.Point(126, 28);
+            this.txtSearch2ck.Location = new System.Drawing.Point(150, 65);
             this.txtSearch2ck.Name = "txtSearch2ck";
             this.txtSearch2ck.Size = new System.Drawing.Size(125, 23);
             this.txtSearch2ck.TabIndex = 9;
@@ -1262,7 +1267,7 @@
             // 
             // bt_findck
             // 
-            this.bt_findck.Location = new System.Drawing.Point(270, 28);
+            this.bt_findck.Location = new System.Drawing.Point(273, 31);
             this.bt_findck.Name = "bt_findck";
             this.bt_findck.Size = new System.Drawing.Size(75, 23);
             this.bt_findck.TabIndex = 7;
@@ -2658,6 +2663,26 @@
             this.col工作表2.Visible = true;
             this.col工作表2.VisibleIndex = 10;
             // 
+            // cbe_文件ck
+            // 
+            this.cbe_文件ck.Location = new System.Drawing.Point(13, 2);
+            this.cbe_文件ck.Name = "cbe_文件ck";
+            this.cbe_文件ck.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbe_文件ck.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbe_文件ck.Size = new System.Drawing.Size(173, 21);
+            this.cbe_文件ck.TabIndex = 13;
+            this.cbe_文件ck.SelectedIndexChanged += new System.EventHandler(this.cbe_文件ck_SelectedIndexChanged);
+            // 
+            // bt_GetCkFile
+            // 
+            this.bt_GetCkFile.Location = new System.Drawing.Point(192, 1);
+            this.bt_GetCkFile.Name = "bt_GetCkFile";
+            this.bt_GetCkFile.Size = new System.Drawing.Size(75, 23);
+            this.bt_GetCkFile.TabIndex = 14;
+            this.bt_GetCkFile.Text = "获取购料单";
+            this.bt_GetCkFile.Click += new System.EventHandler(this.bt_GetCkFile_Click);
+            // 
             // Wk
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2769,6 +2794,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckexcelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe_文件ck.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3014,5 +3040,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn col记录数1;
         private DevExpress.XtraGrid.Columns.GridColumn col工作表2;
         private ZBPM.wcTableAdapters.yw_ckexcelTableAdapter yw_ckexcelTableAdapter;
+        private DevExpress.XtraEditors.ComboBoxEdit cbe_文件ck;
+        private DevExpress.XtraEditors.SimpleButton bt_GetCkFile;
     }
 }
