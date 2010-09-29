@@ -1160,16 +1160,19 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
 
                 }
-                int itotal=0;
+                int itotal=0,inum=0;
                 StringBuilder sb = new StringBuilder();
                 foreach (System.Collections.DictionaryEntry objDE in ht)
                 {
                     itotal = itotal + int.Parse(objDE.Value.ToString());
                     if (int.Parse(objDE.Value.ToString()) > 1)
                     {
-                        sb.Append(string.Format("欠料数据中{0}存在{1}条相同的记录，需要自已手动将总用量*{2}", objDE.Key.ToString(), objDE.Value.ToString(), objDE.Value.ToString()));
+                        inum++;
+                        sb.Append(string.Format("{3}:欠料数据中{0}存在{1}条相同的记录，需要自已手动将总用量*{2}", objDE.Key.ToString(), objDE.Value.ToString(), objDE.Value.ToString()), inum.ToString());
+                        sb.Append("\r\n");
                     }
                 }
+                sb.Append(string.Format("欠料数据包含重复的记录，总共有{0}条", itotal.ToString()));
                 txtTx.Text = sb.ToString();
                 if (txtTx.Text.ToString().Trim() != "") MessageBox.Show("请查看提醒信息！", "注意:");
                 this.Save();
