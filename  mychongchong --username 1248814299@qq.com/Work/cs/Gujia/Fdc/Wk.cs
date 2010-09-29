@@ -1155,7 +1155,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
                     else
                     {
-                        MessageBox.Show("aaa");
+                        MessageBox.Show("【是否审核】bool.TryParse发生错误");
+                        break;
                     }
 
                 }
@@ -1170,6 +1171,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
                 }
                 txtTx.Text = sb.ToString();
+                if (txtTx.Text.ToString().Trim() != "") MessageBox.Show("请查看提醒信息！", "注意:");
                 this.Save();
 
             }
