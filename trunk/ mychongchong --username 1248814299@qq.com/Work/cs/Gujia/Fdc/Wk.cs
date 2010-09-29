@@ -1143,6 +1143,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("aaa");
+                    }
 
                 }
                 this.Save();
