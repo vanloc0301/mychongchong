@@ -1168,7 +1168,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     if (int.Parse(objDE.Value.ToString()) > 1)
                     {
                         inum++;
-                        sb.Append(string.Format("{3}:欠料数据中{0}存在{1}条相同的记录，需要自已手动将总用量*{2}", objDE.Key.ToString(), objDE.Value.ToString(), objDE.Value.ToString()), inum.ToString());
+                        sb.Append(string.Format("{3}:欠料数据中{0}存在{1}条相同的记录，需要自已手动将总用量*{2}", objDE.Key.ToString(), objDE.Value.ToString(), objDE.Value.ToString(), inum.ToString()));
                         sb.Append("\r\n");
                     }
                 }
