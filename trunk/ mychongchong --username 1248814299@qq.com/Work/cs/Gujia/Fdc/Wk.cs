@@ -1080,6 +1080,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 DataView dwywck = dtywck.DefaultView;
                 DataView dwbom = dtbom.DefaultView;
+                Hashtable ht = new Hashtable();
                 for (int i = 0; i < dtck.Rows.Count; i++)
                 {
                     bsh = false;
@@ -1117,6 +1118,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwbom.Count == 1)
                             {
+                                string strfilter = string.Format("序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()), DvRowFilter(dwbom.Rows[0]["序号"].ToString()));
+                                if (!ht.Contains(strfilter))
+                                {
+                                    ht.Add(strfilter, 1);
+                                }
+                                else
+                                {
+                                    ht[strfilter] = int.Parse(ht[strfilter].ToString()) + 1;
+                                }
                                 dwbom[0]["单位"] = dtck.Rows[i]["单位"].ToString();
                                 dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
                                 dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
@@ -1149,6 +1159,17 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
 
                 }
+                int itotal=0;
+                StringBuilder sb = new StringBuilder();
+                foreach (System.Collections.DictionaryEntry objDE in ht)
+                {
+                    itotal = itotal + int.Parse(objDE.Value.ToString());
+                    if (int.Parse(objDE.Value.ToString()) > 1)
+                    {
+                        sb.Append(string.Format("欠料数据中{0}存在{1}条相同的记录，需要自已手动将总用量*{2}", objDE.Key.ToString(), objDE.Value.ToString(), objDE.Value.ToString()));
+                    }
+                }
+                txtTx.Text = sb.ToString();
                 this.Save();
 
             }
