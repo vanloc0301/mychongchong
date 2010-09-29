@@ -164,6 +164,7 @@
             this.colPROJECT_ID5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col序号4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col物料名称4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.col颜色4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col配色2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col总用量4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -172,8 +173,12 @@
             this.col收货数量2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col收货日期2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col标注1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoExEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit();
             this.col是否标色1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.col是否审核1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.repositoryItemMemoEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.smCardView1 = new SkyMap.Net.Gui.Components.SmCardView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -279,6 +284,7 @@
             this.ywckBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yw_ckTableAdapter = new ZBPM.wcTableAdapters.yw_ckTableAdapter();
             this.yw_ckexcelTableAdapter = new ZBPM.wcTableAdapters.yw_ckexcelTableAdapter();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
             this.tblData.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -337,6 +343,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smCardView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -586,6 +597,7 @@
             // 
             // pc_wc
             // 
+            this.pc_wc.Controls.Add(this.simpleButton6);
             this.pc_wc.Controls.Add(this.ck_是否齐料);
             this.pc_wc.Controls.Add(this.de_预计齐料期);
             this.pc_wc.Controls.Add(this.labelControl3);
@@ -1197,7 +1209,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage3.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage3.Text = "导入购料单Excel";
             // 
             // splitContainerControl3
@@ -1209,7 +1221,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl7);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(771, 548);
+            this.splitContainerControl3.Size = new System.Drawing.Size(367, 288);
             this.splitContainerControl3.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl3, null);
             this.splitContainerControl3.TabIndex = 7;
@@ -1230,7 +1242,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(350, 544);
+            this.panelControl6.Size = new System.Drawing.Size(332, 284);
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
@@ -1316,10 +1328,10 @@
             this.gdc_ckexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_ckexcel.EmbeddedNavigator.Name = "";
             this.gdc_ckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_ckexcel.Location = new System.Drawing.Point(2, 220);
+            this.gdc_ckexcel.Location = new System.Drawing.Point(2, -40);
             this.gdc_ckexcel.MainView = this.gv_ckexcel;
             this.gdc_ckexcel.Name = "gdc_ckexcel";
-            this.gdc_ckexcel.Size = new System.Drawing.Size(346, 322);
+            this.gdc_ckexcel.Size = new System.Drawing.Size(328, 322);
             this.gdc_ckexcel.TabIndex = 5;
             this.gdc_ckexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_ckexcel});
@@ -1553,7 +1565,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(407, 544);
+            this.panelControl7.Size = new System.Drawing.Size(21, 284);
             this.toolTipController.SetSuperTip(this.panelControl7, null);
             this.panelControl7.TabIndex = 2;
             // 
@@ -1565,7 +1577,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(403, 31);
+            this.panelControl8.Size = new System.Drawing.Size(17, 31);
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
             // 
@@ -1577,6 +1589,7 @@
             this.bt_读Execl写进数据库ck.TabIndex = 2;
             this.bt_读Execl写进数据库ck.Text = "写入数据到物控管理系统";
             this.bt_读Execl写进数据库ck.Visible = false;
+            this.bt_读Execl写进数据库ck.Click += new System.EventHandler(this.bt_读Execl写进数据库ck_Click);
             // 
             // labelControl8
             // 
@@ -1606,7 +1619,13 @@
             this.smGridControl8.Location = new System.Drawing.Point(2, 2);
             this.smGridControl8.MainView = this.smGridView4;
             this.smGridControl8.Name = "smGridControl8";
-            this.smGridControl8.Size = new System.Drawing.Size(403, 540);
+            this.smGridControl8.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemMemoEdit4,
+            this.repositoryItemMemoEdit5,
+            this.repositoryItemCheckEdit3,
+            this.repositoryItemCheckEdit4,
+            this.repositoryItemMemoExEdit1});
+            this.smGridControl8.Size = new System.Drawing.Size(17, 280);
             this.smGridControl8.TabIndex = 10;
             this.smGridControl8.UseEmbeddedNavigator = true;
             this.smGridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1642,8 +1661,10 @@
             this.smGridView4.OptionsMenu.EnableGroupPanelMenu = false;
             this.smGridView4.OptionsView.EnableAppearanceEvenRow = true;
             this.smGridView4.OptionsView.EnableAppearanceOddRow = true;
+            this.smGridView4.OptionsView.RowAutoHeight = true;
             this.smGridView4.PaintStyleName = "Skin";
             this.smGridView4.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.smGridView4.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.smGridView4_RowCellStyle);
             // 
             // colid5
             // 
@@ -1669,10 +1690,15 @@
             // col物料名称4
             // 
             this.col物料名称4.Caption = "物料名称";
+            this.col物料名称4.ColumnEdit = this.repositoryItemMemoEdit4;
             this.col物料名称4.FieldName = "物料名称";
             this.col物料名称4.Name = "col物料名称4";
             this.col物料名称4.Visible = true;
             this.col物料名称4.VisibleIndex = 1;
+            // 
+            // repositoryItemMemoEdit4
+            // 
+            this.repositoryItemMemoEdit4.Name = "repositoryItemMemoEdit4";
             // 
             // col颜色4
             // 
@@ -1733,26 +1759,52 @@
             // col标注1
             // 
             this.col标注1.Caption = "标注";
+            this.col标注1.ColumnEdit = this.repositoryItemMemoExEdit1;
             this.col标注1.FieldName = "标注";
             this.col标注1.Name = "col标注1";
             this.col标注1.Visible = true;
             this.col标注1.VisibleIndex = 9;
             // 
+            // repositoryItemMemoExEdit1
+            // 
+            this.repositoryItemMemoExEdit1.AutoHeight = false;
+            this.repositoryItemMemoExEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemMemoExEdit1.Name = "repositoryItemMemoExEdit1";
+            // 
             // col是否标色1
             // 
             this.col是否标色1.Caption = "是否标色";
+            this.col是否标色1.ColumnEdit = this.repositoryItemCheckEdit3;
             this.col是否标色1.FieldName = "是否标色";
             this.col是否标色1.Name = "col是否标色1";
             this.col是否标色1.Visible = true;
             this.col是否标色1.VisibleIndex = 10;
             // 
+            // repositoryItemCheckEdit3
+            // 
+            this.repositoryItemCheckEdit3.AutoHeight = false;
+            this.repositoryItemCheckEdit3.Name = "repositoryItemCheckEdit3";
+            this.repositoryItemCheckEdit3.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
             // col是否审核1
             // 
             this.col是否审核1.Caption = "是否审核";
+            this.col是否审核1.ColumnEdit = this.repositoryItemCheckEdit4;
             this.col是否审核1.FieldName = "是否审核";
             this.col是否审核1.Name = "col是否审核1";
             this.col是否审核1.Visible = true;
             this.col是否审核1.VisibleIndex = 11;
+            // 
+            // repositoryItemCheckEdit4
+            // 
+            this.repositoryItemCheckEdit4.AutoHeight = false;
+            this.repositoryItemCheckEdit4.Name = "repositoryItemCheckEdit4";
+            this.repositoryItemCheckEdit4.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // repositoryItemMemoEdit5
+            // 
+            this.repositoryItemMemoEdit5.Name = "repositoryItemMemoEdit5";
             // 
             // smCardView1
             // 
@@ -2733,6 +2785,15 @@
             // 
             this.yw_ckexcelTableAdapter.ClearBeforeFill = true;
             // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Location = new System.Drawing.Point(657, 6);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton6.TabIndex = 15;
+            this.simpleButton6.Text = "导出数据";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            // 
             // Wk
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -2804,6 +2865,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ywckBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoExEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smCardView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smGridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -3098,5 +3164,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn col标注1;
         private DevExpress.XtraGrid.Columns.GridColumn col是否标色1;
         private DevExpress.XtraGrid.Columns.GridColumn col是否审核1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoExEdit repositoryItemMemoExEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
     }
 }

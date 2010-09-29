@@ -3,3 +3,6 @@ D:\pg-oa\bin\SkyMap.Net.Security.pdb
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Security\obj\Debug\ResolveAssemblyReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Security\obj\Debug\SkyMap.Net.Security.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Security\obj\Debug\SkyMap.Net.Security.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Security\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Security\obj\Debug\SkyMap.Net.Security.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Security\obj\Debug\SkyMap.Net.Security.pdb

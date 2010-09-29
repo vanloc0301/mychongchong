@@ -3,3 +3,6 @@ D:\pg-oa\bin\SkyMap.Net.Tools.Organize.pdb
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Organize\obj\Debug\ResolveAssemblyReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Organize\obj\Debug\SkyMap.Net.Tools.Organize.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Organize\obj\Debug\SkyMap.Net.Tools.Organize.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Organize\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Organize\obj\Debug\SkyMap.Net.Tools.Organize.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Organize\obj\Debug\SkyMap.Net.Tools.Organize.pdb

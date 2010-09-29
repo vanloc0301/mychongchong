@@ -5,3 +5,8 @@ D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.FDCMX\obj\Debug
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.FDCMX\obj\Debug\RdlCompile.compiled
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.FDCMX\obj\Debug\SkyMap.Net.FDCMX.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.FDCMX\obj\Debug\SkyMap.Net.FDCMX.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.FDCMX\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.FDCMX\obj\Debug\RdlCompile.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.FDCMX\obj\Debug\RdlCompile.compiled
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.FDCMX\obj\Debug\SkyMap.Net.FDCMX.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.FDCMX\obj\Debug\SkyMap.Net.FDCMX.pdb
