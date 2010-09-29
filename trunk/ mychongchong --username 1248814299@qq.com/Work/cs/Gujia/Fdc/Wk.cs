@@ -128,11 +128,17 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 m_dstAll.Tables["YW_bom"].ExtendedProperties.Add("selectsql", @"SELECT  * FROM YW_bom where PROJECT_ID ='" + strProjectId + "' order by id asc");
                 m_dstAll.Tables["YW_wcexcel"].ExtendedProperties.Add("selectsql", @"SELECT  *  FROM YW_wcexcel where PROJECT_ID ='" + strProjectId + "'");
                 m_dstAll.Tables["YW_bomexcel"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_bomexcel where PROJECT_ID ='" + strProjectId + "'");
+                m_dstAll.Tables["YW_ck"].ExtendedProperties.Add("selectsql", @"SELECT  * FROM YW_ck where PROJECT_ID ='" + strProjectId + "' order by id asc");
+                m_dstAll.Tables["YW_wcckexcel"].ExtendedProperties.Add("selectsql", @"SELECT  *  FROM YW_wcckexcel where PROJECT_ID ='" + strProjectId + "'");
+                m_dstAll.Tables["YW_ckexcel"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_ckexcel where PROJECT_ID ='" + strProjectId + "'");
 
             }
             m_dstAll.Tables["YW_bom"].TableNewRow += new DataTableNewRowEventHandler(Wk_BomNewRow);
             m_dstAll.Tables["YW_wcexcel"].TableNewRow += new DataTableNewRowEventHandler(Wk_ExcelNewRow);
             m_dstAll.Tables["YW_bomexcel"].TableNewRow += new DataTableNewRowEventHandler(Wk_ExcelNewRow);
+            m_dstAll.Tables["YW_ck"].TableNewRow += new DataTableNewRowEventHandler(Wk_BomNewRow);
+            m_dstAll.Tables["YW_wcckexcel"].TableNewRow += new DataTableNewRowEventHandler(Wk_ExcelNewRow);
+            m_dstAll.Tables["YW_ckexcel"].TableNewRow += new DataTableNewRowEventHandler(Wk_ExcelNewRow);
             return m_dstAll;
         }
         private void SaveAllData()
@@ -146,11 +152,23 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             this.gv_wcexcel.PostEditor();
             this.BindingContext[this.gv_wcexcel.DataSource].EndCurrentEdit();
 
+            this.gv_ck.PostEditor();
+            this.BindingContext[this.gv_ck.DataSource].EndCurrentEdit();
+
+            this.gv_ckexcel.PostEditor();
+            this.BindingContext[this.gv_ckexcel.DataSource].EndCurrentEdit();
+
+            this.gv_wcckexcel.PostEditor();
+            this.BindingContext[this.gv_wcckexcel.DataSource].EndCurrentEdit();
+
             SMDataSource smDs = this.dataFormController.DAODataForm.DataSource;
             SkyMap.Net.DataForms.DataEngine.SQLDataEngine sqlDataEngine = new SkyMap.Net.DataForms.DataEngine.SQLDataEngine();
             sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bom"]);
             sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcexcel"]);
             sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bomexcel"]);
+            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ck"]);
+            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcckexcel"]);
+            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ckexcel"]);
             sqlDataEngine.RefreshDataset(smDs, m_dstAll);
         }
         private void BBindData()
@@ -163,6 +181,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             gdc_bomexcel.DataSource = m_dstAll;
             gdc_bomexcel.DataMember = "yw_bomexcel";
+
+            gdc_ck.DataSource = m_dstAll;
+            gdc_ck.DataMember = "yw_ck";
+
+            gdc_ckexcel.DataSource = m_dstAll;
+            gdc_ckexcel.DataMember = "yw_ckexcel";
+
+            gdc_wcckexcel.DataSource = m_dstAll;
+            gdc_wcckexcel.DataMember = "yw_wcckexcel";
         }
 
         void Wk_BomNewRow(object sender, DataTableNewRowEventArgs e)
