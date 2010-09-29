@@ -115,6 +115,7 @@
             this.yw_wcexcelTableAdapter = new ZBPM.wcTableAdapters.yw_wcexcelTableAdapter();
             this.ywbomexcelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yw_bomexcelTableAdapter = new ZBPM.wcTableAdapters.yw_bomexcelTableAdapter();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
             this.tblData.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -162,7 +163,8 @@
             this.tblData.Size = new System.Drawing.Size(780, 580);
             this.tblData.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage2,
+            this.xtraTabPage3});
             // 
             // xtraTabPage1
             // 
@@ -453,7 +455,7 @@
             this.xtraTabPage2.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(771, 548);
-            this.xtraTabPage2.Text = "导入excel数据";
+            this.xtraTabPage2.Text = "导入欠料表excel数据";
             // 
             // splitContainerControl1
             // 
@@ -966,6 +968,12 @@
             // 
             this.yw_bomexcelTableAdapter.ClearBeforeFill = true;
             // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage3.Text = "导入购料单Excel";
+            // 
             // Wk
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -1105,5 +1113,6 @@
         private DevExpress.XtraEditors.MemoEdit txtSearch2;
         private DevExpress.XtraEditors.SimpleButton bt_GetWorkSheet;
         private DevExpress.XtraEditors.ComboBoxEdit cbe_工作表;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
     }
 }
