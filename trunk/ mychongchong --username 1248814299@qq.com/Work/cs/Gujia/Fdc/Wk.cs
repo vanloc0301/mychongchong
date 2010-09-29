@@ -927,65 +927,72 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 int bext = 0;
          
                 double dzrl=0d, ddhsl=0d;
-                for (int i = 0; i < wckexcel.Xh.Count; i++)
+
+                try
                 {
-                    string[] wlmc=null;
-                    string[] ys=null;
-                    string[] zrl=null;
-                    string[] dw=null;
-                    string[] gys=null, dhsl=null, dhrq=null, ps=null;
-                    //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
-                    if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0]) && 
-                        string.IsNullOrEmpty(wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0]) && 
-                        string.IsNullOrEmpty(wckexcel.Zrl[i].ToString().Split(new char[] { '@' })[0]) &&
-                        string.IsNullOrEmpty(wckexcel.Dw[i].ToString().Split(new char[] { '@' })[0]) && 
-                        string.IsNullOrEmpty(wckexcel.Gys[i].ToString().Split(new char[] { '@' })[0]) && 
-                        string.IsNullOrEmpty(wckexcel.Dhsl[i].ToString().Split(new char[] { '@' })[0]) && 
-                        string.IsNullOrEmpty(wckexcel.Dhrq[i].ToString().Split(new char[] { '@' })[0]) &&
-                        string.IsNullOrEmpty(wckexcel.Ps[i].ToString().Split(new char[] { '@' })[0]))
+                    for (int i = 0; i < wckexcel.Xh.Count; i++)
                     {
-                        bext++;
-                        if (bext > 6) break;  //如果连续6行没有数据则认为到达末尾
-                        continue;
-                    }
-                    bext = 0;
-                    wlmc = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' });
-                    ys = wckexcel.Ys[i].ToString().Split(new char[] { '@' });
-                    zrl = wckexcel.Zrl[i].ToString().Split(new char[] { '@' });
-                    dw = wckexcel.Dw[i].ToString().Split(new char[] { '@' });
-                    gys = wckexcel.Gys[i].ToString().Split(new char[] { '@' });
-                    dhsl = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' });
-                    dhrq = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' });
-                    ps = wckexcel.Ps[i].ToString().Split(new char[] { '@' });
-                    DataRow dr = dt.NewRow();
-                    dr["序号"] = inum; //wexcel.Xh[i].ToString();
-                    dr["物料名称"] = wlmc[0];
-                    dr["颜色"] = ys[0];
-                    dr["总用量"] = zrl[0];
-                    dr["单位"] = dw[0];
-                    dr["供应商"] = gys[0];
-                    dr["来料数量"] = dhsl[0];
-                    dr["来料日期"] = dhrq[0];
-                    dr["配色"] = ps[0];
-                    dr["标注"] = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", wlmc[1], ys[1], zrl[1], dw[1], gys[1], dhsl[1], dhrq[1], ps[1]);
-                    if (wlmc[2] == strcolor && ys[2] == strcolor && zrl[2] == strcolor && dw[2] == strcolor && gys[2] == strcolor && dhsl[2] == strcolor && dhrq[2] == strcolor && ps[2] == strcolor)
-                    {
-                        dr["是否标色"] = true;
-                    }
-                    if(double.TryParse( zrl[0],out dzrl))
-                    {
-                        if(double.TryParse( dhsl[0],out ddhsl))
+                        string[] wlmc = null;
+                        string[] ys = null;
+                        string[] zrl = null;
+                        string[] dw = null;
+                        string[] gys = null, dhsl = null, dhrq = null, ps = null;
+
+                        if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Zrl[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Dw[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Gys[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Dhsl[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Dhrq[i].ToString().Split(new char[] { '@' })[0]) &&
+                            string.IsNullOrEmpty(wckexcel.Ps[i].ToString().Split(new char[] { '@' })[0]))
                         {
-                            if (ddhsl - dzrl >= 0)
-                                dr["是否标色"] = true;
+                            bext++;
+                            if (bext > 31) break;  //如果连续6行没有数据则认为到达末尾
+                            continue;
                         }
-                    }                                     
-                    dr["是否审核"] = false;
-                    dt.Rows.Add(dr);
-                    inum++;
+                        bext = 0;
+                        wlmc = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' });
+                        ys = wckexcel.Ys[i].ToString().Split(new char[] { '@' });
+                        zrl = wckexcel.Zrl[i].ToString().Split(new char[] { '@' });
+                        dw = wckexcel.Dw[i].ToString().Split(new char[] { '@' });
+                        gys = wckexcel.Gys[i].ToString().Split(new char[] { '@' });
+                        dhsl = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' });
+                        dhrq = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' });
+                        ps = wckexcel.Ps[i].ToString().Split(new char[] { '@' });
+                        DataRow dr = dt.NewRow();
+                        dr["序号"] = inum; //wexcel.Xh[i].ToString();
+                        dr["物料名称"] = wlmc[0];
+                        dr["颜色"] = ys[0];
+                        dr["总用量"] = zrl[0];
+                        dr["单位"] = dw[0];
+                        dr["供应商"] = gys[0];
+                        dr["来料数量"] = dhsl[0];
+                        dr["来料日期"] = dhrq[0];
+                        dr["配色"] = ps[0];
+                        dr["标注"] = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", wlmc[1], ys[1], zrl[1], dw[1], gys[1], dhsl[1], dhrq[1], ps[1]);
+                        if (wlmc[2] == strcolor && ys[2] == strcolor && zrl[2] == strcolor && dw[2] == strcolor && gys[2] == strcolor && dhsl[2] == strcolor && dhrq[2] == strcolor && ps[2] == strcolor)
+                        {
+                            dr["是否标色"] = true;
+                        }
+                        if (double.TryParse(zrl[0], out dzrl))
+                        {
+                            if (double.TryParse(dhsl[0], out ddhsl))
+                            {
+                                if (ddhsl - dzrl >= 0)
+                                    dr["是否标色"] = true;
+                            }
+                        }
+                        dr["是否审核"] = false;
+                        dt.Rows.Add(dr);
+                        inum++;
+                    }
                 }
-                smGridControl8.DataSource = dt;
-                bt_读Execl写进数据库ck.Visible = true;
+                finally
+                {
+                    smGridControl8.DataSource = dt;
+                    bt_读Execl写进数据库ck.Visible = true;
+                }
 
             }
             finally
