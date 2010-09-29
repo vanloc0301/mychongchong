@@ -925,14 +925,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 dt.Columns.Add("是否标色", System.Type.GetType("System.String"));
                 dt.Columns.Add("是否审核", System.Type.GetType("System.String"));                        
                 int bext = 0;
-                string[] wlmc;
-                string[] ys;
-                string[] zrl;
-                string[] dw;
-                string[] gys, dhsl, dhrq, ps;
+         
                 double dzrl=0d, ddhsl=0d;
                 for (int i = 0; i < wckexcel.Xh.Count; i++)
                 {
+                    string[] wlmc=null;
+                    string[] ys=null;
+                    string[] zrl=null;
+                    string[] dw=null;
+                    string[] gys=null, dhsl=null, dhrq=null, ps=null;
                     //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
                     if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0]) && 
                         string.IsNullOrEmpty(wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0]) && 
