@@ -62,6 +62,7 @@ namespace ZBPM
         string excelFileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\wc\欠料明细.xls";
         string excelCkFilePath = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\购料单\";
         string ckpass = "123456";
+        string strcolor = "10092543";
         #endregion
 
         private void Init()
@@ -920,8 +921,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 dt.Columns.Add("供应商", System.Type.GetType("System.String"));
                 dt.Columns.Add("来料数量", System.Type.GetType("System.String"));
                 dt.Columns.Add("来料日期", System.Type.GetType("System.String"));
-
+                dt.Columns.Add("标注", System.Type.GetType("System.String"));
+                dt.Columns.Add("是否标色", System.Type.GetType("System.String"));
+                dt.Columns.Add("是否审核", System.Type.GetType("System.String"));                        
                 int bext = 0;
+                string[] wlmc;
+                string[] ys;
+                string[] zrl;
+                string[] dw;
+                string[] gys, dhsl, dhrq, ps;
                 for (int i = 0; i < wckexcel.Xh.Count; i++)
                 {
                     //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
@@ -939,16 +947,30 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         continue;
                     }
                     bext = 0;
+                    wlmc = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' });
+                    ys = wckexcel.Ys[i].ToString().Split(new char[] { '@' });
+                    zrl = wckexcel.Zrl[i].ToString().Split(new char[] { '@' });
+                    dw = wckexcel.Dw[i].ToString().Split(new char[] { '@' });
+                    gys = wckexcel.Gys[i].ToString().Split(new char[] { '@' });
+                    dhsl = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' });
+                    dhrq = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' });
+                    ps = wckexcel.Ps[i].ToString().Split(new char[] { '@' });
                     DataRow dr = dt.NewRow();
                     dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
-                    dr["物料名称"] = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0];
-                    dr["颜色"] = wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0];
-                    dr["总用量"] = wckexcel.Zrl[i].ToString().Split(new char[] { '@' })[0];
-                    dr["单位"] = wckexcel.Dw[i].ToString().Split(new char[] { '@' })[0];
-                    dr["供应商"] = wckexcel.Gys[i].ToString().Split(new char[] { '@' })[0];
-                    dr["来料数量"] = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' })[0];
-                    dr["来料日期"] = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' })[0];
-                    dr["配色"] = wckexcel.Ps[i].ToString().Split(new char[] { '@' })[0];
+                    dr["物料名称"] = wlmc[0];
+                    dr["颜色"] = ys[0];
+                    dr["总用量"] = zrl[0];
+                    dr["单位"] = dw[0];
+                    dr["供应商"] = gys[0];
+                    dr["来料数量"] = dhsl[0];
+                    dr["来料日期"] = dhrq[0];
+                    dr["配色"] = ps[0];
+                    dr["标注"] = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", wlmc[1], ys[1], zrl[1], dw[1], gys[1], dhsl[1], dhrq[1], ps[1]);
+                    if (wlmc[2] == strcolor && ys[2] == strcolor && zrl[2] == strcolor && dw[2] == strcolor && gys[2] == strcolor && dhsl[2] == strcolor && dhrq[2] == strcolor && ps[2] == strcolor)
+                    {
+                        dr["是否标色"] = true;
+                    }
+                    dr["是否审核"] = false;
                     dt.Rows.Add(dr);
                     inum++;
                 }
