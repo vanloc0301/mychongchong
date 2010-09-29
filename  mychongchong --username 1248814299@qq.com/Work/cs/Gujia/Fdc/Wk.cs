@@ -908,7 +908,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 mapper.Read(wckexcel, filename, wcexcel, bomexcel,ckpass);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
                 //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
-                string strwc = string.Format("生产单号：{0}", wexcel.Scdh.ToString());
+                string strwc = string.Format("生产单号：{0}", wckexcel.Scdh.ToString());
                 lblWcMsg.Text = strwc;
                 dt = new DataTable("ckexcel");
                 dt.Columns.Add("序号", System.Type.GetType("System.String"));
@@ -921,9 +921,24 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 dt.Columns.Add("来料数量", System.Type.GetType("System.String"));
                 dt.Columns.Add("来料日期", System.Type.GetType("System.String"));
 
-                for (int i = 0; i < wexcel.Xh.Count; i++)
+                int bext = 0;
+                for (int i = 0; i < wckexcel.Xh.Count; i++)
                 {
                     //if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString())) continue;
+                    if (string.IsNullOrEmpty(wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0]) && 
+                        string.IsNullOrEmpty(wckexcel.Ys[i].ToString().Split(new char[] { '@' })[0]) && 
+                        string.IsNullOrEmpty(wckexcel.Zrl[i].ToString().Split(new char[] { '@' })[0]) &&
+                        string.IsNullOrEmpty(wckexcel.Dw[i].ToString().Split(new char[] { '@' })[0]) && 
+                        string.IsNullOrEmpty(wckexcel.Gys[i].ToString().Split(new char[] { '@' })[0]) && 
+                        string.IsNullOrEmpty(wckexcel.Dhsl[i].ToString().Split(new char[] { '@' })[0]) && 
+                        string.IsNullOrEmpty(wckexcel.Dhrq[i].ToString().Split(new char[] { '@' })[0]) &&
+                        string.IsNullOrEmpty(wckexcel.Ps[i].ToString().Split(new char[] { '@' })[0]))
+                    {
+                        bext++;
+                        if (bext > 6) break;  //如果连续6行没有数据则认为到达末尾
+                        continue;
+                    }
+                    bext = 0;
                     DataRow dr = dt.NewRow();
                     dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
                     dr["物料名称"] = wckexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0];
