@@ -428,7 +428,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename,"");
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -438,7 +438,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename);
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename,"");
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
@@ -524,7 +524,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             base.Save();
         }
 
-        private string search(string sheetname, string strKeyWord, int inti,string excelfilename)
+        private string search(string sheetname, string strKeyWord, int inti,string excelfilename,string pass)
         {
             beforeTime = DateTime.Now;
 
@@ -538,9 +538,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 Microsoft.Office.Interop.Excel.Workbook ew = ep.Workbooks.Open(filename.ToString(), MissingValue,
 
-                 MissingValue, MissingValue, MissingValue,
+                 MissingValue, MissingValue, pass,
 
-                 MissingValue, MissingValue, MissingValue,
+                 pass, MissingValue, MissingValue,
 
                  MissingValue, MissingValue, MissingValue,
 
@@ -755,7 +755,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename,"123456");
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -765,7 +765,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename);
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename,"123456");
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
