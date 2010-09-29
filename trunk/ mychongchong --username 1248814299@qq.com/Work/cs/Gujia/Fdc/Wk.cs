@@ -1118,7 +1118,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwbom.Count == 1)
                             {
-                                string strfilter = string.Format("序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()), DvRowFilter(dwbom.Rows[0]["序号"].ToString()));
+                                string strfilter = string.Format("序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()), DvRowFilter(dwbom[0]["序号"].ToString()));
                                 if (!ht.Contains(strfilter))
                                 {
                                     ht.Add(strfilter, 1);
