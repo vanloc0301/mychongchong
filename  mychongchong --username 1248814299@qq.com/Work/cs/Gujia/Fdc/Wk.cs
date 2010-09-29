@@ -862,6 +862,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             base.Save();
             int inum = 1;
+            if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
+            if (string.IsNullOrEmpty(cbe_工作表ck.Text.ToString())) return;
             DataTable wcexcel = m_dstAll.Tables["yw_wcckexcel"];
             DataTable bomexcel = m_dstAll.Tables["yw_ckexcel"];
 
