@@ -1002,7 +1002,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         {
                             dr["是否审核"] = 0;
                         }
-                       
+
                         dtck.Rows.Add(dr);
                         inum++;
                     }
@@ -1072,35 +1072,78 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_读Execl写进数据库ck_Click(object sender, EventArgs e)
         {
-            bool bsh = false;
+            bool bsh = false;//记录审核标记
             if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
             {
                 txt_生产单号.Text = wckexcel.Scdh.ToString();
                 DataTable dtywck = m_dstAll.Tables["yw_ck"];
+                DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 DataView dwywck = dtywck.DefaultView;
+                DataView dwbom = dtbom.DefaultView;
                 for (int i = 0; i < dtck.Rows.Count; i++)
                 {
                     bsh = false;
                     if (bool.TryParse(dtck.Rows[i]["是否审核"].ToString(), out bsh))
                     {
-                        if (!bsh) continue;
-                        if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
-                        dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
-                        if (dwywck.Count > 0) continue;
-                        DataRow dr = dtywck.NewRow();
-                        dr["序号"] = dtck.Rows[i]["序号"].ToString();
-                        dr["物料名称"] = dtck.Rows[i]["物料名称"].ToString();
-                        dr["颜色"] = dtck.Rows[i]["颜色"].ToString();
-                        dr["总用量"] = dtck.Rows[i]["总用量"].ToString();
-                        dr["单位"] = dtck.Rows[i]["单位"].ToString();
-                        dr["供应商"] = dtck.Rows[i]["供应商"].ToString();
-                        dr["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
-                        dr["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
-                        dr["配色"] = dtck.Rows[i]["配色"].ToString();
-                        dr["是否标色"] = 1;
-                        dr["是否审核"] = 1;
-                        dtywck.Rows.Add(dr);
+                        if (bsh)
+                        {
+                            if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
+                            if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
+                            dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                            if (dwywck.Count == 1)
+                            {
+                                dwywck[0].Row.Delete();
+                            }
+                            dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                            if (dwywck.Count > 0) continue;
+                            DataRow dr = dtywck.NewRow();
+                            dr["序号"] = dtck.Rows[i]["序号"].ToString();
+                            dr["物料名称"] = dtck.Rows[i]["物料名称"].ToString();
+                            dr["颜色"] = dtck.Rows[i]["颜色"].ToString();
+                            dr["总用量"] = dtck.Rows[i]["总用量"].ToString();
+                            dr["单位"] = dtck.Rows[i]["单位"].ToString();
+                            dr["供应商"] = dtck.Rows[i]["供应商"].ToString();
+                            dr["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                            dr["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                            dr["配色"] = dtck.Rows[i]["配色"].ToString();
+                            dr["是否标色"] = 1;
+                            dr["是否审核"] = 1;
+                            dtywck.Rows.Add(dr);
+                        }
+                        else
+                        {
+                            if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
+                            if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
+                            dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                            if (dwywck.Count == 1)
+                            {
+                                dwywck[0]["单位"] = dtck.Rows[i]["单位"].ToString();
+                                dwywck[0]["供应商"]= dtck.Rows[i]["供应商"].ToString();
+                                dwywck[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                                dwywck[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                            }
+                            else if (dwywck.Count == 0)
+                            {
+                                DataRow dr = dtbom.NewRow();
+                                dr["序号"] = dtck.Rows[i]["序号"].ToString();
+                                dr["物料名称"] = dtck.Rows[i]["物料名称"].ToString();
+                                dr["颜色"] = dtck.Rows[i]["颜色"].ToString();
+                                dr["总用量"] = dtck.Rows[i]["总用量"].ToString();
+                                dr["单位"] = dtck.Rows[i]["单位"].ToString();
+                                dr["供应商"] = dtck.Rows[i]["供应商"].ToString();
+                                dr["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                                dr["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                                dtbom.Rows.Add(dr);
+                            }
+                            else
+                            {
+                                MessageBox.Show(string.Format("存在相同的记录,物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString())));
+                                break;
+                            }
+
+                        }
                     }
+
                 }
                 this.Save();
 
