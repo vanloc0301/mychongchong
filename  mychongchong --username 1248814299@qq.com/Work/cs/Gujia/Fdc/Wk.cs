@@ -789,6 +789,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 MessageBox.Show("模板表中只能允许1条记录");
                 return;
             }
+            #region 购料单没有记录结束标志，就手动设置一个
+            if (!ht.Contains("预计齐料期"))
+            {
+                ht.Add("预计齐料期", "A300");
+            }
+            #endregion
             foreach (DataColumn dc in tmpdt.Columns)
             {
                 if (ht.Contains(dc.ColumnName))
