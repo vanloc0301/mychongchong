@@ -78,6 +78,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files\Developer Express .NET v8.2\Sources\DevExpress.DLL\DevExpress.XtraGrid.v8.2.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DevExpress.XtraRichTextEdit.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\WINDOWS\assembly\GAC_MSIL\DevExpress.XtraRichTextEdit.v8.2\8.2.2.0__49d90c14d24271b5\DevExpress.XtraRichTextEdit.v8.2.dll</HintPath>
