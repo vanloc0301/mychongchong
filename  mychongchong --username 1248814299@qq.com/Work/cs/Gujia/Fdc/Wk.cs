@@ -62,6 +62,7 @@ namespace ZBPM
 
         string excelFileName = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\wc\欠料明细.xls";
         string excelCkFilePath = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\购料单\";
+        string excelJgPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + @"..\bin\生成结果\";
         string ckpass = "123456";
         string strcolor = "10092543";
         #endregion
@@ -1231,7 +1232,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //            excelop.SaveAs(temp);
             //            excelop.GetWorkBook(temp);
             //            excelop.showExcel();
-
+            string tmpstr = string.Format("{0}{1}.xls", excelJgPath, this.txt_生产单号.Text.ToString());
+            this.gdc_bom.ExportToXls(tmpstr);
+            System.Diagnostics.Process proc;
+            proc = System.Diagnostics.Process.Start(tmpstr);
+            proc.WaitForExit(1000);
         }
 
 
