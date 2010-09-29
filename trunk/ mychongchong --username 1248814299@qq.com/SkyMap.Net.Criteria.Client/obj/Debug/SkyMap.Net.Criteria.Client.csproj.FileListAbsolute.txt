@@ -5,3 +5,8 @@ D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Criteria.Client
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.csproj.GenerateResource.Cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Criteria.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.GeneralCriteria.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.csproj.GenerateResource.Cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Criteria.Client\obj\Debug\SkyMap.Net.Criteria.Client.pdb

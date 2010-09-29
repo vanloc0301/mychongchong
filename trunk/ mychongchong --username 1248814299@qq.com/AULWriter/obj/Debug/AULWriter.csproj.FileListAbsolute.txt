@@ -6,3 +6,11 @@ d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AULWriter\obj\Debug\AULWri
 d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AULWriter\obj\Debug\AULWriter.csproj.GenerateResource.Cache
 d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AULWriter\obj\Debug\AULWriter.exe
 d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\AULWriter\obj\Debug\AULWriter.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\dll\AULWriter.exe
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\dll\AULWriter.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\AULWriter.frmAULWriter.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\AULWriter.Properties.AULWriter.Properties.resources
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\AULWriter.csproj.GenerateResource.Cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\AULWriter.exe
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\AULWriter\obj\Debug\AULWriter.pdb

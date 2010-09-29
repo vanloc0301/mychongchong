@@ -54,6 +54,7 @@ namespace ZBPM
         private wk.wcexcel wexcel;
         private wk.wcckexcel wckexcel;
         private DataTable dt;
+        private DataTable dtck;
         static DateTime beforeTime;            //Excel启动之前时间
         static DateTime afterTime;
         ExcelMapper mapper = new ExcelMapper();
@@ -282,7 +283,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string strwc = string.Format("生产单号：{0}，预备齐料期：{1}", wexcel.Scdh.ToString(), wexcel.Qlq.ToString());
                 lblWcMsg.Text = strwc;
                 dt = new DataTable("bomexcel");
-                dt.Columns.Add("序号", System.Type.GetType("System.String"));
+                dt.Columns.Add("序号", System.Type.GetType("System.Int32"));
                 dt.Columns.Add("物料名称", System.Type.GetType("System.String"));
                 dt.Columns.Add("颜色", System.Type.GetType("System.String"));
                 dt.Columns.Add("总用量", System.Type.GetType("System.String"));
@@ -296,7 +297,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     if (string.IsNullOrEmpty(wexcel.Wlmc[i].ToString())) continue;
                     DataRow dr = dt.NewRow();
-                    dr["序号"] = inum.ToString(); //wexcel.Xh[i].ToString();
+                    dr["序号"] = inum; //wexcel.Xh[i].ToString();
                     dr["物料名称"] = wexcel.Wlmc[i].ToString().Split(new char[] { '@' })[0];
                     dr["颜色"] = wexcel.Ys[i].ToString().Split(new char[] { '@' })[0];
                     dr["总用量"] = wexcel.Zrl[i].ToString().Split(new char[] { '@' })[0];
@@ -355,10 +356,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_模板设置_Click(object sender, EventArgs e)
         {
-         
+
         }
 
-       
+
 
         private void AutoSetBomExcelModel(DataTable tmpdt, string colname, int istart, int iend)
         {
@@ -412,12 +413,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 MessageBox.Show("工作表设置需要一样!", "提示");
                 return;
             }
-            AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0,this.excelFileName);
-            AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1,this.excelFileName);
+            AutoSet(this.txtSearch1.Text.ToString(), m_dstAll.Tables["yw_wcexcel"], 0, this.excelFileName);
+            AutoSet(this.txtSearch2.Text.ToString(), m_dstAll.Tables["yw_bomexcel"], 1, this.excelFileName);
 
         }
 
-        private void AutoSet(string strtxt, DataTable dt, int inti,string excelfilename)
+        private void AutoSet(string strtxt, DataTable dt, int inti, string excelfilename)
         {
             bool bflag = false;//当为true的时候自动运行 模板设置事件
             string[] str = strtxt.Split(new char[] { '|' });
@@ -431,7 +432,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename,"");
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti, excelfilename, "");
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -441,7 +442,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename,"");
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti, excelfilename, "");
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
@@ -527,7 +528,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             base.Save();
         }
 
-        private string search(string sheetname, string strKeyWord, int inti,string excelfilename,string pass)
+        private string search(string sheetname, string strKeyWord, int inti, string excelfilename, string pass)
         {
             beforeTime = DateTime.Now;
 
@@ -654,14 +655,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 //string path = excelCkFilePath + @"\" + strArray2[strArray2.Length - 1];
                 //if (System.IO.File.Exists(path))
                 //{
-                    cbe_文件ck.Properties.Items.Add(strArray2[strArray2.Length - 1]);
+                cbe_文件ck.Properties.Items.Add(strArray2[strArray2.Length - 1]);
                 //}
                 //string[] directories = Directory.GetDirectories(path);
                 //foreach (string file in fileNames)
                 //{
 
                 //}
-            }         
+            }
 
         }
 
@@ -669,7 +670,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
             beforeTime = DateTime.Now;
-            object filename = string.Format("{0}{1}",this.excelCkFilePath,cbe_文件ck.Text.ToString());
+            object filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
 
             object MissingValue = Type.Missing;
 
@@ -740,11 +741,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 MessageBox.Show("工作表设置需要一样!", "提示");
                 return;
             }
-            AutoSetCk(this.txtSearch1ck.Text.ToString(), m_dstAll.Tables["yw_wcckexcel"], 0,filename);
-            AutoSetCk(this.txtSearch2ck.Text.ToString(), m_dstAll.Tables["yw_ckexcel"], 1,filename);
+            AutoSetCk(this.txtSearch1ck.Text.ToString(), m_dstAll.Tables["yw_wcckexcel"], 0, filename);
+            AutoSetCk(this.txtSearch2ck.Text.ToString(), m_dstAll.Tables["yw_ckexcel"], 1, filename);
         }
 
-        private void AutoSetCk(string strtxt, DataTable dt, int inti,string excelfilename)
+        private void AutoSetCk(string strtxt, DataTable dt, int inti, string excelfilename)
         {
             bool bflag = false;//当为true的时候自动运行 模板设置事件
             string[] str = strtxt.Split(new char[] { '|' });
@@ -758,7 +759,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 if (str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length == 1)
                 {
-                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti,excelfilename,ckpass);
+                    strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].ToString(), inti, excelfilename, ckpass);
                     if (strreturn != "")
                     {
                         ht.Add(strname, strreturn);
@@ -768,7 +769,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 {
                     for (int j = 0; j < str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' }).Length; j++)
                     {
-                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti,excelfilename,ckpass);
+                        strreturn = search(str[0].ToString(), str[i].Split(new char[] { '#' })[1].Split(new char[] { '@' })[j].ToString(), inti, excelfilename, ckpass);
                         if (strreturn != "")
                         {
                             ht.Add(strname, strreturn);
@@ -906,27 +907,27 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 //mapper.Write(gh, excelFileName);
                 string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
                 wckexcel = new wk.wcckexcel();
-                mapper.Read(wckexcel, filename, wcexcel, bomexcel,ckpass);
+                mapper.Read(wckexcel, filename, wcexcel, bomexcel, ckpass);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
                 //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
                 string strwc = string.Format("生产单号：{0}", wckexcel.Scdh.ToString());
                 lblWcMsg.Text = strwc;
-                dt = new DataTable("ckexcel");
-                dt.Columns.Add("序号", System.Type.GetType("System.Int32"));
-                dt.Columns.Add("物料名称", System.Type.GetType("System.String"));
-                dt.Columns.Add("颜色", System.Type.GetType("System.String"));
-                dt.Columns.Add("配色", System.Type.GetType("System.String"));
-                dt.Columns.Add("总用量", System.Type.GetType("System.String"));
-                dt.Columns.Add("单位", System.Type.GetType("System.String"));
-                dt.Columns.Add("供应商", System.Type.GetType("System.String"));
-                dt.Columns.Add("来料数量", System.Type.GetType("System.String"));
-                dt.Columns.Add("来料日期", System.Type.GetType("System.String"));
-                dt.Columns.Add("标注", System.Type.GetType("System.String"));
-                dt.Columns.Add("是否标色", System.Type.GetType("System.String"));
-                dt.Columns.Add("是否审核", System.Type.GetType("System.String"));                        
+                dtck = new DataTable("ckexcel");
+                dtck.Columns.Add("序号", System.Type.GetType("System.Int32"));
+                dtck.Columns.Add("物料名称", System.Type.GetType("System.String"));
+                dtck.Columns.Add("颜色", System.Type.GetType("System.String"));
+                dtck.Columns.Add("配色", System.Type.GetType("System.String"));
+                dtck.Columns.Add("总用量", System.Type.GetType("System.String"));
+                dtck.Columns.Add("单位", System.Type.GetType("System.String"));
+                dtck.Columns.Add("供应商", System.Type.GetType("System.String"));
+                dtck.Columns.Add("来料数量", System.Type.GetType("System.String"));
+                dtck.Columns.Add("来料日期", System.Type.GetType("System.String"));
+                dtck.Columns.Add("标注", System.Type.GetType("System.String"));
+                dtck.Columns.Add("是否标色", System.Type.GetType("System.Boolean"));
+                dtck.Columns.Add("是否审核", System.Type.GetType("System.Boolean"));
                 int bext = 0;
-         
-                double dzrl=0d, ddhsl=0d;
+
+                double dzrl = 0d, ddhsl = 0d;
 
                 try
                 {
@@ -960,7 +961,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         dhsl = wckexcel.Dhsl[i].ToString().Split(new char[] { '@' });
                         dhrq = wckexcel.Dhrq[i].ToString().Split(new char[] { '@' });
                         ps = wckexcel.Ps[i].ToString().Split(new char[] { '@' });
-                        DataRow dr = dt.NewRow();
+                        DataRow dr = dtck.NewRow();
                         dr["序号"] = inum; //wexcel.Xh[i].ToString();
                         dr["物料名称"] = wlmc[0];
                         dr["颜色"] = ys[0];
@@ -973,24 +974,24 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         dr["标注"] = string.Format("{0}{1}{2}{3}{4}{5}{6}{7}", wlmc[1], ys[1], zrl[1], dw[1], gys[1], dhsl[1], dhrq[1], ps[1]);
                         if (wlmc[2] == strcolor && ys[2] == strcolor && zrl[2] == strcolor && dw[2] == strcolor && gys[2] == strcolor && dhsl[2] == strcolor && dhrq[2] == strcolor && ps[2] == strcolor)
                         {
-                            dr["是否标色"] = true;
+                            dr["是否标色"] = 0;
                         }
                         if (double.TryParse(zrl[0], out dzrl))
                         {
                             if (double.TryParse(dhsl[0], out ddhsl))
                             {
                                 if (ddhsl - dzrl >= 0)
-                                    dr["是否标色"] = true;
+                                    dr["是否标色"] = 1;
                             }
                         }
-                        dr["是否审核"] = false;
-                        dt.Rows.Add(dr);
+                        dr["是否审核"] = 0;
+                        dtck.Rows.Add(dr);
                         inum++;
                     }
                 }
                 finally
                 {
-                    smGridControl8.DataSource = dt;
+                    smGridControl8.DataSource = dtck;
                     bt_读Execl写进数据库ck.Visible = true;
                 }
 
@@ -1000,6 +1001,125 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 afterTime = DateTime.Now;
                 KillExcel.KillExcelProcess(beforeTime, afterTime);
             }
+        }
+
+        private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
+            DataTable dt = ((System.Data.DataView)(((DevExpress.XtraGrid.Views.Grid.GridView)(sender)).DataSource)).Table;
+            String tmp = dt.Rows[e.RowHandle]["是否标色"].ToString();
+            String tmp1 = dt.Rows[e.RowHandle]["是否审核"].ToString();
+            string tmpwlmc = dt.Rows[e.RowHandle]["物料名称"].ToString();
+            //if (e.RowHandle != smGridView4.FocusedRowHandle)
+            //{
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && !string.IsNullOrEmpty(tmp1) && tmp1 == "True" && !string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.Red;
+                e.Appearance.BackColor2 = Color.Red;
+                return;
+            }
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && ((!string.IsNullOrEmpty(tmp1) && tmp1 == "False") || (string.IsNullOrEmpty(tmp1))) && !string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.Orange;
+                e.Appearance.BackColor2 = Color.Orange;
+                return;
+            }
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.Blue;
+                e.Appearance.BackColor2 = Color.Blue;
+                return;
+            }
+            //}
+        }
+
+        private void bt_读Execl写进数据库ck_Click(object sender, EventArgs e)
+        {
+            bool bsh = false;
+            if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
+            {
+                txt_生产单号.Text = wckexcel.Scdh.ToString();
+                DataTable dtywck = m_dstAll.Tables["yw_ck"];
+                for (int i = 0; i < dtck.Rows.Count; i++)
+                {
+                    bsh = false;
+                    if (bool.TryParse(dtck.Rows[i]["是否审核"].ToString(), out bsh))
+                    {
+                        if (!bsh) continue;
+                        if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
+
+                        DataRow dr = dtywck.NewRow();
+                        dr["序号"] = dtck.Rows[i]["序号"].ToString();
+                        dr["物料名称"] = dtck.Rows[i]["物料名称"].ToString();
+                        dr["颜色"] = dtck.Rows[i]["颜色"].ToString();
+                        dr["总用量"] = dtck.Rows[i]["总用量"].ToString();
+                        dr["单位"] = dtck.Rows[i]["单位"].ToString();
+                        dr["供应商"] = dtck.Rows[i]["供应商"].ToString();
+                        dr["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                        dr["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                        dr["配色"] = dtck.Rows[i]["配色"].ToString();
+                        dr["是否标色"] = 1;
+                        dr["是否审核"] = 1;
+                        dtywck.Rows.Add(dr);
+                    }
+                }
+                base.Save();
+
+            }
+
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            //            string temp = "";
+            //            string strexecl = "";
+            //            string[] sheetname = new string[1];
+            //            string[] sql = new string[1];
+            //            string strwdt = string.Empty;
+            //            string strProjectId = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
+
+            //            string where;
+
+            //            this.Save();
+            //            temp = System.Windows.Forms.Application.StartupPath + string.Format("\\生成结果\\{0}欠料表.xls", txt_生产单号.Text.ToString());
+            //                where = " where yw_yddj.PROJECT_ID = '" + strProjectId + "'";
+            //                strexecl = System.Windows.Forms.Application.StartupPath + "\\模板\\欠料表模板.xls";
+            //                sheetname[0] = "欠料表";
+            //                sql[0] = @"SELECT 
+            //  yw_yddj.[序号],
+            //  yw_yddj.[区片号],
+            //  yw_yddj.[样点编号],
+            //  yw_yddj.[区镇],
+            //  yw_yddj.[地址],
+            //  yw_yddj.[建筑面积],
+            //  yw_yddj.[套内面积],
+            //  yw_yddj.[土地面积],
+            //  yw_yddj.[结构],
+            //  yw_yddj.[朝向],
+            //  yw_yddj.[竣工时间],
+            //  yw_yddj.[楼龄],
+            //  yw_yddj.[临路情况],
+            //  yw_yddj.[交通情况],
+            //  yw_yddj.[容积率],
+            //  yw_yddj.[总价],
+            //  yw_yddj.[单价],
+            //  yw_yddj.[交易时点],
+            //  yw_yddj.[评估时点],
+            //  yw_yddj.[样点来源],
+            //  yw_yddj.[备注]
+            //FROM
+            //  yw_yddj" + where;   
+            //            Microsoft.Office.Interop.Excel.Workbook wb;
+            //            excelop = excelop == null ? new ExcelFromArrayList() : excelop;
+            //            wb = excelop.GetWorkBook(strexecl);
+            //            for (int i = 0; i < sheetname.Count(); i++)
+            //            {
+            //                excelop.setCellValue(SkyMap.Net.DAO.QueryHelper.ExecuteSql("", "", sql[i]), excelop.GetSheet(sheetname[i]), 2, 1);
+            //            }
+            //            excelop.SaveAs(temp);
+            //            excelop.GetWorkBook(temp);
+            //            excelop.showExcel();
+
         }
 
 

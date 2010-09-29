@@ -3,3 +3,6 @@ D:\pg-oa\bin\SkyMap.Net.Tools.Authorization.pdb
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Authorization\obj\Debug\ResolveAssemblyReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Authorization\obj\Debug\SkyMap.Net.Tools.Authorization.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Tools.Authorization\obj\Debug\SkyMap.Net.Tools.Authorization.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Authorization\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Authorization\obj\Debug\SkyMap.Net.Tools.Authorization.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Tools.Authorization\obj\Debug\SkyMap.Net.Tools.Authorization.pdb

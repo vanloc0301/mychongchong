@@ -3,3 +3,6 @@ D:\pg-oa\bin\SkyMap.Net.Workflow.Client.pdb
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Workflow.Client\obj\Debug\ResolveAssemblyReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Workflow.Client\obj\Debug\SkyMap.Net.Workflow.Client.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Workflow.Client\obj\Debug\SkyMap.Net.Workflow.Client.pdb
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Workflow.Client\obj\Debug\ResolveAssemblyReference.cache
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Workflow.Client\obj\Debug\SkyMap.Net.Workflow.Client.dll
+D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Workflow.Client\obj\Debug\SkyMap.Net.Workflow.Client.pdb
