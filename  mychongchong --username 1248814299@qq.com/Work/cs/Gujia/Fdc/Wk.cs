@@ -640,12 +640,20 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             cbe_文件ck.Properties.Items.Clear();
             string[] fileNames = Directory.GetFiles(excelCkFilePath);
-            //string[] directories = Directory.GetDirectories(path);
-            //foreach (string file in fileNames)
-            //{
-               
-            //}
-            cbe_文件ck.Properties.Items.AddRange(fileNames);
+            for (int i = 0; i < fileNames.Length; i++)
+            {
+                string[] strArray2 = fileNames[i].Split(new char[] { '\\' });
+                //string path = excelCkFilePath + @"\" + strArray2[strArray2.Length - 1];
+                //if (System.IO.File.Exists(path))
+                //{
+                    cbe_文件ck.Properties.Items.Add(strArray2[strArray2.Length - 1]);
+                //}
+                //string[] directories = Directory.GetDirectories(path);
+                //foreach (string file in fileNames)
+                //{
+
+                //}
+            }         
 
         }
 
