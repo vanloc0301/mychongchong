@@ -898,10 +898,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             double tmpdb = 0;
             try
             {
-                smGridControl1.DataSource = null;
+                smGridControl8.DataSource = null;
                 //mapper.Write(gh, excelFileName);
+                string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
                 wckexcel = new wk.wcckexcel();
-                mapper.Read(wexcel, excelFileName, wcexcel, bomexcel);
+                mapper.Read(wckexcel, filename, wcexcel, bomexcel);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
                 //string strwc = string.Format("生产单号：{0}，厂款号：{1}，预备齐料期：{2}", wexcel.Scdh.ToString(), wexcel.Ckh.ToString(), wexcel.Qlq.ToString());
                 string strwc = string.Format("生产单号：{0}", wexcel.Scdh.ToString());
