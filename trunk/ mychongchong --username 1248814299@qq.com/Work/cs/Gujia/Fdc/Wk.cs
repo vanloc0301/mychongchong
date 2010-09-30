@@ -359,7 +359,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         //dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
                         //dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
                         //dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
-                        dr["采购复期"] = dt.Rows[i]["采购复期"].ToString();
+                        dwbom[0]["采购复期"] = dt.Rows[i]["采购复期"].ToString();
                     }
                     else if (dwbom.Count == 0)
                     {
