@@ -1231,8 +1231,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
               
 
                 //===============检查欠料表中所有记录是否存在于购料单中
+                base.Save();
                 ExistCq(sb, m_dstAll.Tables["yw_bom"], "欠料表");
                 //===============检查审核表中所有记录是否存在于购料单中
+                base.Save();
                 ExistCq(sb, m_dstAll.Tables["yw_ck"], "审核表");
                 txtTx.Text = sb.ToString();
                 if (txtTx.Text.ToString().Trim() != "") MessageBox.Show("请查看提醒信息！", "注意:");
