@@ -1249,12 +1249,19 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         /// <param name="sb">输出内容</param>
         /// <param name="tmpdt"></param>
         /// <param name="tmpstr">备注</param>
-        private void ExistCq(StringBuilder sb,DataTable tmpdt,string tmpstr)
+        private void ExistCq(StringBuilder sb, DataTable dtbomorcq, string tmpstr)
         {
             if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
             {
-                DataTable dtbom = tmpdt;// m_dstAll.Tables["yw_bom"];
-                DataView dwck = dtck.DefaultView;
+                DataTable dtbom = dtbomorcq;// m_dstAll.Tables["yw_bom"];
+                DataTable tmpdt = dtck.Clone();
+                foreach (DataRow oldDr in dtck.Rows)
+                {
+                    DataRow newDr = tmpdt.NewRow(); 
+                    newDr.ItemArray = oldDr.ItemArray; 
+                    tmpdt.ImportRow(oldDr);
+                }
+                DataView dwck = tmpdt.DefaultView;
 
                 for (int i = 0; i < dtbom.Rows.Count; i++)
                 {
