@@ -1138,6 +1138,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 DataView dwywck = dtywck.DefaultView;
                 DataView dwbom = dtbom.DefaultView;
                 Hashtable ht = new Hashtable();
+                ht.Clear();
                 for (int i = 0; i < dtck.Rows.Count; i++)
                 {
                     bsh = false;

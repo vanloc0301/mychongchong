@@ -475,6 +475,7 @@
             this.colid.Caption = "id";
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
             this.colid.OptionsColumn.ReadOnly = true;
             // 
             // colPROJECT_ID
@@ -482,6 +483,7 @@
             this.colPROJECT_ID.Caption = "PROJECT_ID";
             this.colPROJECT_ID.FieldName = "PROJECT_ID";
             this.colPROJECT_ID.Name = "colPROJECT_ID";
+            this.colPROJECT_ID.OptionsColumn.AllowEdit = false;
             // 
             // col序号
             // 
@@ -501,6 +503,8 @@
             this.col物料名称.ColumnEdit = this.repositoryItemMemoEdit1;
             this.col物料名称.FieldName = "物料名称";
             this.col物料名称.Name = "col物料名称";
+            this.col物料名称.OptionsColumn.AllowEdit = false;
+            this.col物料名称.OptionsColumn.ReadOnly = true;
             this.col物料名称.Visible = true;
             this.col物料名称.VisibleIndex = 1;
             this.col物料名称.Width = 182;
@@ -517,6 +521,8 @@
             this.col颜色.Caption = "颜色";
             this.col颜色.FieldName = "颜色";
             this.col颜色.Name = "col颜色";
+            this.col颜色.OptionsColumn.AllowEdit = false;
+            this.col颜色.OptionsColumn.ReadOnly = true;
             this.col颜色.Visible = true;
             this.col颜色.VisibleIndex = 2;
             this.col颜色.Width = 46;
@@ -526,6 +532,8 @@
             this.col总用量.Caption = "总用量";
             this.col总用量.FieldName = "总用量";
             this.col总用量.Name = "col总用量";
+            this.col总用量.OptionsColumn.AllowEdit = false;
+            this.col总用量.OptionsColumn.ReadOnly = true;
             this.col总用量.Visible = true;
             this.col总用量.VisibleIndex = 3;
             this.col总用量.Width = 46;
@@ -705,7 +713,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage2.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage2.Text = "导入欠料表excel数据";
             // 
             // splitContainerControl1
@@ -717,7 +725,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.pc_bomexcel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(367, 288);
+            this.splitContainerControl1.Size = new System.Drawing.Size(771, 548);
             this.splitContainerControl1.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl1, null);
             this.splitContainerControl1.TabIndex = 6;
@@ -736,7 +744,7 @@
             this.pc_wcexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_wcexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_wcexcel.Name = "pc_wcexcel";
-            this.pc_wcexcel.Size = new System.Drawing.Size(332, 284);
+            this.pc_wcexcel.Size = new System.Drawing.Size(350, 544);
             this.toolTipController.SetSuperTip(this.pc_wcexcel, null);
             this.pc_wcexcel.TabIndex = 1;
             // 
@@ -802,10 +810,10 @@
             this.gdc_bomexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_bomexcel.EmbeddedNavigator.Name = "";
             this.gdc_bomexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_bomexcel.Location = new System.Drawing.Point(2, -40);
+            this.gdc_bomexcel.Location = new System.Drawing.Point(2, 220);
             this.gdc_bomexcel.MainView = this.gv_bomexcel;
             this.gdc_bomexcel.Name = "gdc_bomexcel";
-            this.gdc_bomexcel.Size = new System.Drawing.Size(328, 322);
+            this.gdc_bomexcel.Size = new System.Drawing.Size(346, 322);
             this.gdc_bomexcel.TabIndex = 5;
             this.gdc_bomexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_bomexcel});
@@ -1040,7 +1048,7 @@
             this.pc_bomexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_bomexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_bomexcel.Name = "pc_bomexcel";
-            this.pc_bomexcel.Size = new System.Drawing.Size(21, 284);
+            this.pc_bomexcel.Size = new System.Drawing.Size(407, 544);
             this.toolTipController.SetSuperTip(this.pc_bomexcel, null);
             this.pc_bomexcel.TabIndex = 2;
             // 
@@ -1052,7 +1060,7 @@
             this.pc_cmdexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pc_cmdexcel.Location = new System.Drawing.Point(2, 2);
             this.pc_cmdexcel.Name = "pc_cmdexcel";
-            this.pc_cmdexcel.Size = new System.Drawing.Size(17, 31);
+            this.pc_cmdexcel.Size = new System.Drawing.Size(403, 31);
             this.toolTipController.SetSuperTip(this.pc_cmdexcel, null);
             this.pc_cmdexcel.TabIndex = 11;
             // 
@@ -1093,7 +1101,7 @@
             this.smGridControl1.Location = new System.Drawing.Point(2, 2);
             this.smGridControl1.MainView = this.smGridView1;
             this.smGridControl1.Name = "smGridControl1";
-            this.smGridControl1.Size = new System.Drawing.Size(17, 280);
+            this.smGridControl1.Size = new System.Drawing.Size(403, 540);
             this.smGridControl1.TabIndex = 10;
             this.smGridControl1.UseEmbeddedNavigator = true;
             this.smGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1136,6 +1144,7 @@
             this.gridColumn4.Caption = "物料名称";
             this.gridColumn4.FieldName = "物料名称";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
             // 
@@ -1144,6 +1153,7 @@
             this.gridColumn5.Caption = "颜色";
             this.gridColumn5.FieldName = "颜色";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 2;
             // 
@@ -1152,6 +1162,7 @@
             this.gridColumn6.Caption = "总用量";
             this.gridColumn6.FieldName = "总用量";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             // 
@@ -1160,6 +1171,7 @@
             this.gridColumn7.Caption = "单位";
             this.gridColumn7.FieldName = "单位";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 4;
             // 
@@ -1685,6 +1697,7 @@
             this.colid5.Caption = "id";
             this.colid5.FieldName = "id";
             this.colid5.Name = "colid5";
+            this.colid5.OptionsColumn.AllowEdit = false;
             this.colid5.OptionsColumn.ReadOnly = true;
             // 
             // colPROJECT_ID5
@@ -1692,6 +1705,7 @@
             this.colPROJECT_ID5.Caption = "PROJECT_ID";
             this.colPROJECT_ID5.FieldName = "PROJECT_ID";
             this.colPROJECT_ID5.Name = "colPROJECT_ID5";
+            this.colPROJECT_ID5.OptionsColumn.AllowEdit = false;
             // 
             // col序号4
             // 
@@ -1707,6 +1721,8 @@
             this.col物料名称4.ColumnEdit = this.repositoryItemMemoEdit4;
             this.col物料名称4.FieldName = "物料名称";
             this.col物料名称4.Name = "col物料名称4";
+            this.col物料名称4.OptionsColumn.AllowEdit = false;
+            this.col物料名称4.OptionsColumn.ReadOnly = true;
             this.col物料名称4.Visible = true;
             this.col物料名称4.VisibleIndex = 1;
             // 
@@ -1719,6 +1735,8 @@
             this.col颜色4.Caption = "颜色";
             this.col颜色4.FieldName = "颜色";
             this.col颜色4.Name = "col颜色4";
+            this.col颜色4.OptionsColumn.AllowEdit = false;
+            this.col颜色4.OptionsColumn.ReadOnly = true;
             this.col颜色4.Visible = true;
             this.col颜色4.VisibleIndex = 2;
             // 
@@ -1727,6 +1745,8 @@
             this.col配色2.Caption = "配色";
             this.col配色2.FieldName = "配色";
             this.col配色2.Name = "col配色2";
+            this.col配色2.OptionsColumn.AllowEdit = false;
+            this.col配色2.OptionsColumn.ReadOnly = true;
             this.col配色2.Visible = true;
             this.col配色2.VisibleIndex = 3;
             // 
@@ -1735,6 +1755,8 @@
             this.col总用量4.Caption = "总用量";
             this.col总用量4.FieldName = "总用量";
             this.col总用量4.Name = "col总用量4";
+            this.col总用量4.OptionsColumn.AllowEdit = false;
+            this.col总用量4.OptionsColumn.ReadOnly = true;
             this.col总用量4.Visible = true;
             this.col总用量4.VisibleIndex = 4;
             // 
@@ -1743,6 +1765,8 @@
             this.col单位4.Caption = "单位";
             this.col单位4.FieldName = "单位";
             this.col单位4.Name = "col单位4";
+            this.col单位4.OptionsColumn.AllowEdit = false;
+            this.col单位4.OptionsColumn.ReadOnly = true;
             this.col单位4.Visible = true;
             this.col单位4.VisibleIndex = 5;
             // 
@@ -2661,6 +2685,7 @@
             this.colid3.Caption = "id";
             this.colid3.FieldName = "id";
             this.colid3.Name = "colid3";
+            this.colid3.OptionsColumn.AllowEdit = false;
             this.colid3.OptionsColumn.ReadOnly = true;
             // 
             // colPROJECT_ID3
@@ -2668,6 +2693,7 @@
             this.colPROJECT_ID3.Caption = "PROJECT_ID";
             this.colPROJECT_ID3.FieldName = "PROJECT_ID";
             this.colPROJECT_ID3.Name = "colPROJECT_ID3";
+            this.colPROJECT_ID3.OptionsColumn.AllowEdit = false;
             // 
             // col序号2
             // 
@@ -2682,6 +2708,8 @@
             this.col物料名称2.Caption = "物料名称";
             this.col物料名称2.FieldName = "物料名称";
             this.col物料名称2.Name = "col物料名称2";
+            this.col物料名称2.OptionsColumn.AllowEdit = false;
+            this.col物料名称2.OptionsColumn.ReadOnly = true;
             this.col物料名称2.Visible = true;
             this.col物料名称2.VisibleIndex = 1;
             // 
@@ -2690,6 +2718,8 @@
             this.col颜色2.Caption = "颜色";
             this.col颜色2.FieldName = "颜色";
             this.col颜色2.Name = "col颜色2";
+            this.col颜色2.OptionsColumn.AllowEdit = false;
+            this.col颜色2.OptionsColumn.ReadOnly = true;
             this.col颜色2.Visible = true;
             this.col颜色2.VisibleIndex = 2;
             // 
@@ -2698,6 +2728,8 @@
             this.col配色.Caption = "配色";
             this.col配色.FieldName = "配色";
             this.col配色.Name = "col配色";
+            this.col配色.OptionsColumn.AllowEdit = false;
+            this.col配色.OptionsColumn.ReadOnly = true;
             this.col配色.Visible = true;
             this.col配色.VisibleIndex = 3;
             // 
@@ -2706,6 +2738,8 @@
             this.col总用量2.Caption = "总用量";
             this.col总用量2.FieldName = "总用量";
             this.col总用量2.Name = "col总用量2";
+            this.col总用量2.OptionsColumn.AllowEdit = false;
+            this.col总用量2.OptionsColumn.ReadOnly = true;
             this.col总用量2.Visible = true;
             this.col总用量2.VisibleIndex = 4;
             // 
@@ -2714,6 +2748,8 @@
             this.col单位2.Caption = "单位";
             this.col单位2.FieldName = "单位";
             this.col单位2.Name = "col单位2";
+            this.col单位2.OptionsColumn.AllowEdit = false;
+            this.col单位2.OptionsColumn.ReadOnly = true;
             this.col单位2.Visible = true;
             this.col单位2.VisibleIndex = 5;
             // 
