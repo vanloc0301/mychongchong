@@ -1223,7 +1223,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage3.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage3.Text = "导入购料单Excel";
             // 
             // splitContainerControl3
@@ -1235,7 +1235,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl7);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(367, 288);
+            this.splitContainerControl3.Size = new System.Drawing.Size(771, 548);
             this.splitContainerControl3.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl3, null);
             this.splitContainerControl3.TabIndex = 7;
@@ -1256,7 +1256,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(332, 284);
+            this.panelControl6.Size = new System.Drawing.Size(350, 544);
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
@@ -1342,10 +1342,10 @@
             this.gdc_ckexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_ckexcel.EmbeddedNavigator.Name = "";
             this.gdc_ckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_ckexcel.Location = new System.Drawing.Point(2, -40);
+            this.gdc_ckexcel.Location = new System.Drawing.Point(2, 220);
             this.gdc_ckexcel.MainView = this.gv_ckexcel;
             this.gdc_ckexcel.Name = "gdc_ckexcel";
-            this.gdc_ckexcel.Size = new System.Drawing.Size(328, 322);
+            this.gdc_ckexcel.Size = new System.Drawing.Size(346, 322);
             this.gdc_ckexcel.TabIndex = 5;
             this.gdc_ckexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_ckexcel});
@@ -1579,7 +1579,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(21, 284);
+            this.panelControl7.Size = new System.Drawing.Size(407, 544);
             this.toolTipController.SetSuperTip(this.panelControl7, null);
             this.panelControl7.TabIndex = 2;
             // 
@@ -1591,7 +1591,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(17, 31);
+            this.panelControl8.Size = new System.Drawing.Size(403, 31);
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
             // 
@@ -1639,7 +1639,7 @@
             this.repositoryItemCheckEdit3,
             this.repositoryItemCheckEdit4,
             this.repositoryItemMemoExEdit1});
-            this.smGridControl8.Size = new System.Drawing.Size(17, 280);
+            this.smGridControl8.Size = new System.Drawing.Size(403, 540);
             this.smGridControl8.TabIndex = 10;
             this.smGridControl8.UseEmbeddedNavigator = true;
             this.smGridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
