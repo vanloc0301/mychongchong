@@ -1126,7 +1126,9 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_读Execl写进数据库ck_Click(object sender, EventArgs e)
         {
-            base.Save();
+            Save();
+            SMDataSource smDs = this.dataFormController.DAODataForm.DataSource;
+            SkyMap.Net.DataForms.DataEngine.SQLDataEngine sqlDataEngine = new SkyMap.Net.DataForms.DataEngine.SQLDataEngine();
             bool bsh = false;//记录审核标记
             if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
             {
@@ -1148,8 +1150,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwbom.Count == 1)
                             {
-                                dtbom.Rows[0].Delete();
-                                dtbom.AcceptChanges();
+                                dwbom[0].Delete();
+                                dtbom.Rows[0].Delete();                                
                             }
                             dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwywck.Count > 0) continue;
@@ -1171,6 +1173,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         {
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
+                            dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                            if (dwywck.Count ==1)
+                            {
+                                MessageBox.Show(string.Format("审核表中已审核此物料，不允许修改状态为未审核，如果确认要取消审核，请先删除审核表对应的数据！序号={3}|物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()),DvRowFilter(dwywck[0]["序号"].ToString())));
+                                return;
+                            }
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwbom.Count == 1)
                             {
@@ -1216,6 +1224,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
 
                 }
+                sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bom"]);
+                sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ck"]);
+                sqlDataEngine.RefreshDataset(smDs, m_dstAll);
+                m_dstAll.Tables["YW_bom"].AcceptChanges();
+                m_dstAll.Tables["YW_ck"].AcceptChanges();
                 int itotal = 0, inum = 0;
                 StringBuilder sb = new StringBuilder();
                 foreach (System.Collections.DictionaryEntry objDE in ht)
@@ -1229,12 +1242,13 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
                 }
                 sb.Append(string.Format("欠料数据包含重复的记录，总共有{0}条\r\n", itotal.ToString()));
-              
+                base.Save();
 
                 //===============检查欠料表中所有记录是否存在于购料单中
                 ExistCq(sb, m_dstAll.Tables["yw_bom"], "欠料表");
-                //===============检查审核表中所有记录是否存在于购料单中
-                 ExistCq(sb, m_dstAll.Tables["yw_ck"], "审核表");
+                ////===============检查审核表中所有记录是否存在于购料单中
+                //base.Save();
+                ExistCq(sb, m_dstAll.Tables["yw_ck"], "审核表");
                 txtTx.Text = sb.ToString();
                 if (txtTx.Text.ToString().Trim() != "") MessageBox.Show("请查看提醒信息！", "注意:");
                 base.Save();
