@@ -1126,6 +1126,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_读Execl写进数据库ck_Click(object sender, EventArgs e)
         {
+            base.Save();
             bool bsh = false;//记录审核标记
             if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
             {
@@ -1226,13 +1227,58 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         sb.Append("\r\n");
                     }
                 }
-                sb.Append(string.Format("欠料数据包含重复的记录，总共有{0}条", itotal.ToString()));
+                sb.Append(string.Format("欠料数据包含重复的记录，总共有{0}条\r\n", itotal.ToString()));
+              
+
+                //===============检查欠料表中所有记录是否存在于购料单中
+                ExistCq(sb, m_dstAll.Tables["yw_bom"], "欠料表");
+                //===============检查审核表中所有记录是否存在于购料单中
+                ExistCq(sb, m_dstAll.Tables["yw_ck"], "审核表");
                 txtTx.Text = sb.ToString();
                 if (txtTx.Text.ToString().Trim() != "") MessageBox.Show("请查看提醒信息！", "注意:");
-                this.Save();
+                base.Save();
 
             }
 
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sb">输出内容</param>
+        /// <param name="tmpdt"></param>
+        /// <param name="tmpstr">备注</param>
+        private void ExistCq(StringBuilder sb,DataTable tmpdt,string tmpstr)
+        {
+            if (wckexcel != null && dtck != null && dtck.Rows.Count > 0)
+            {
+                DataTable dtbom = tmpdt;// m_dstAll.Tables["yw_bom"];
+                DataView dwck = dtck.DefaultView;
+
+                for (int i = 0; i < dtbom.Rows.Count; i++)
+                {
+                    //=====================
+                    if (string.IsNullOrEmpty(dtbom.Rows[i]["物料名称"].ToString().Trim())) continue;
+                    if (string.IsNullOrEmpty(dtbom.Rows[i]["总用量"].ToString().Trim())) continue;
+                    dwck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtbom.Rows[i]["物料名称"].ToString()), DvRowFilter(dtbom.Rows[i]["颜色"].ToString()), DvRowFilter(dtbom.Rows[i]["总用量"].ToString()));
+                    if (dwck.Count == 1)
+                    {
+
+                    }
+                    else if (dwck.Count == 0)
+                    {
+                        string strfilter = string.Format("{4}中的数据在购料表中找不到:序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'\r\n", DvRowFilter(dtbom.Rows[i]["物料名称"].ToString()), DvRowFilter(dtbom.Rows[i]["颜色"].ToString()), DvRowFilter(dtbom.Rows[i]["总用量"].ToString()), DvRowFilter(dtbom.Rows[i]["序号"].ToString()), tmpstr);
+                        sb.Append(strfilter);
+                    }
+                    else
+                    {
+                        MessageBox.Show(string.Format("存在相同的记录,物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtbom.Rows[i]["物料名称"].ToString()), DvRowFilter(dtbom.Rows[i]["颜色"].ToString()), DvRowFilter(dtbom.Rows[i]["总用量"].ToString())));
+                        break;
+                    }
+
+                }
+            }
         }
 
         private void simpleButton6_Click(object sender, EventArgs e)
