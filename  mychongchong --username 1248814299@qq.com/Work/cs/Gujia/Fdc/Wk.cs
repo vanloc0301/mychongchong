@@ -1148,7 +1148,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                             if (dwbom.Count == 1)
                             {
-                                dwbom[0].Row.Delete();
+                                dtbom.Rows[0].Delete();
                                 dtbom.AcceptChanges();
                             }
                             dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
