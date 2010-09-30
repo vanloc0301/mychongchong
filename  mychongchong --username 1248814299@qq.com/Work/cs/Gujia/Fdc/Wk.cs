@@ -324,11 +324,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_读Execl写进数据库_Click(object sender, EventArgs e)
         {
+            base.Save();
+            Hashtable ht = new Hashtable();
             if (wexcel != null && dt != null && dt.Rows.Count > 0)
             {
                 //this.txt_厂款号.Text = wexcel.Ckh.ToString();
                 txt_生产单号.Text = wexcel.Scdh.ToString();
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
+                DataView dwbom = dtbom.DefaultView;
                 if (dtbom.Rows.Count > 0)
                 {
                     MessageBox.Show("已有物料清单,Excel中读取的数据将追加到现有的数据中！", "提醒：");
@@ -337,21 +340,54 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    DataRow dr = dtbom.NewRow();
-                    dr["序号"] = dt.Rows[i]["序号"].ToString();
-                    dr["物料名称"] = dt.Rows[i]["物料名称"].ToString();
-                    dr["颜色"] = dt.Rows[i]["颜色"].ToString();
-                    dr["总用量"] = dt.Rows[i]["总用量"].ToString();
-                    dr["单位"] = dt.Rows[i]["单位"].ToString();
-                    dr["供应商"] = dt.Rows[i]["供应商"].ToString();
-                    dr["收货数量"] = dt.Rows[i]["来料数量"].ToString();
-                    dr["收货日期"] = dt.Rows[i]["来料日期"].ToString();
-                    dr["采购复期"] = dt.Rows[i]["采购复期"].ToString();
-                    //dr["采购备注"] = dt.Rows[i]["采购备注"].ToString();
-                    dtbom.Rows.Add(dr);
+                    //=====================
+                    if (string.IsNullOrEmpty(dt.Rows[i]["物料名称"].ToString().Trim())) continue;
+                    if (string.IsNullOrEmpty(dt.Rows[i]["总用量"].ToString().Trim())) continue;
+                    dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dt.Rows[i]["物料名称"].ToString()), DvRowFilter(dt.Rows[i]["颜色"].ToString()), DvRowFilter(dt.Rows[i]["总用量"].ToString()));
+                    if (dwbom.Count == 1)
+                    {
+                        string strfilter = string.Format("序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dt.Rows[i]["物料名称"].ToString()), DvRowFilter(dt.Rows[i]["颜色"].ToString()), DvRowFilter(dt.Rows[i]["总用量"].ToString()), DvRowFilter(dwbom[0]["序号"].ToString()));
+                        if (!ht.Contains(strfilter))
+                        {
+                            ht.Add(strfilter, 1);
+                        }
+                        else
+                        {
+                            ht[strfilter] = int.Parse(ht[strfilter].ToString()) + 1;
+                        }
+                        //dwbom[0]["单位"] = dtck.Rows[i]["单位"].ToString();
+                        //dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
+                        //dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
+                        //dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
+                        dr["采购复期"] = dt.Rows[i]["采购复期"].ToString();
+                    }
+                    else if (dwbom.Count == 0)
+                    {
+                        DataRow dr = dtbom.NewRow();
+                        dr["序号"] = dt.Rows[i]["序号"].ToString();
+                        dr["物料名称"] = dt.Rows[i]["物料名称"].ToString();
+                        dr["颜色"] = dt.Rows[i]["颜色"].ToString();
+                        dr["总用量"] = dt.Rows[i]["总用量"].ToString();
+                        dr["单位"] = dt.Rows[i]["单位"].ToString();
+                        dr["供应商"] = dt.Rows[i]["供应商"].ToString();
+                        dr["收货数量"] = dt.Rows[i]["来料数量"].ToString();
+                        dr["收货日期"] = dt.Rows[i]["来料日期"].ToString();
+                        dr["采购复期"] = dt.Rows[i]["采购复期"].ToString();
+                        //dr["采购备注"] = dt.Rows[i]["采购备注"].ToString();
+                        dtbom.Rows.Add(dr);
+                    }
+                    else
+                    {
+                        MessageBox.Show(string.Format("存在相同的记录,物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString())));
+                        break;
+                    }
+
+                    //====================
+
                 }
 
             }
+            base.Save();
 
         }
 
