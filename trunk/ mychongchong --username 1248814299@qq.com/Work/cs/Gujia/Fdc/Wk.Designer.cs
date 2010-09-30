@@ -705,7 +705,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage2.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage2.Text = "导入欠料表excel数据";
             // 
             // splitContainerControl1
@@ -717,7 +717,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.pc_bomexcel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(771, 548);
+            this.splitContainerControl1.Size = new System.Drawing.Size(367, 288);
             this.splitContainerControl1.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl1, null);
             this.splitContainerControl1.TabIndex = 6;
@@ -736,7 +736,7 @@
             this.pc_wcexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_wcexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_wcexcel.Name = "pc_wcexcel";
-            this.pc_wcexcel.Size = new System.Drawing.Size(350, 544);
+            this.pc_wcexcel.Size = new System.Drawing.Size(332, 284);
             this.toolTipController.SetSuperTip(this.pc_wcexcel, null);
             this.pc_wcexcel.TabIndex = 1;
             // 
@@ -802,10 +802,10 @@
             this.gdc_bomexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_bomexcel.EmbeddedNavigator.Name = "";
             this.gdc_bomexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_bomexcel.Location = new System.Drawing.Point(2, 220);
+            this.gdc_bomexcel.Location = new System.Drawing.Point(2, -40);
             this.gdc_bomexcel.MainView = this.gv_bomexcel;
             this.gdc_bomexcel.Name = "gdc_bomexcel";
-            this.gdc_bomexcel.Size = new System.Drawing.Size(346, 322);
+            this.gdc_bomexcel.Size = new System.Drawing.Size(328, 322);
             this.gdc_bomexcel.TabIndex = 5;
             this.gdc_bomexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_bomexcel});
@@ -1040,7 +1040,7 @@
             this.pc_bomexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_bomexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_bomexcel.Name = "pc_bomexcel";
-            this.pc_bomexcel.Size = new System.Drawing.Size(407, 544);
+            this.pc_bomexcel.Size = new System.Drawing.Size(21, 284);
             this.toolTipController.SetSuperTip(this.pc_bomexcel, null);
             this.pc_bomexcel.TabIndex = 2;
             // 
@@ -1052,7 +1052,7 @@
             this.pc_cmdexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pc_cmdexcel.Location = new System.Drawing.Point(2, 2);
             this.pc_cmdexcel.Name = "pc_cmdexcel";
-            this.pc_cmdexcel.Size = new System.Drawing.Size(403, 31);
+            this.pc_cmdexcel.Size = new System.Drawing.Size(17, 31);
             this.toolTipController.SetSuperTip(this.pc_cmdexcel, null);
             this.pc_cmdexcel.TabIndex = 11;
             // 
@@ -1093,7 +1093,7 @@
             this.smGridControl1.Location = new System.Drawing.Point(2, 2);
             this.smGridControl1.MainView = this.smGridView1;
             this.smGridControl1.Name = "smGridControl1";
-            this.smGridControl1.Size = new System.Drawing.Size(403, 540);
+            this.smGridControl1.Size = new System.Drawing.Size(17, 280);
             this.smGridControl1.TabIndex = 10;
             this.smGridControl1.UseEmbeddedNavigator = true;
             this.smGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
