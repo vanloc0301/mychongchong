@@ -48,8 +48,9 @@ namespace ZBPM
         }
 
         #region 全局变量
+        private bool brun = false;
         private DataSet m_dstAll;
-
+        
         private PrintSet m_printSet;
         private wk.wcexcel wexcel;
         private wk.wcckexcel wckexcel;
@@ -83,6 +84,9 @@ namespace ZBPM
             base.AfterBindData();
             m_dstAll = GetAllData();
             BBindData();
+            //Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelData));
+            //t.Start("null");
+           
             //this.txt_ProjectId.Text = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
             //this.lbl_委托方.Text = base.GetControlBindValue(this.txt委托方).ToString();
             //this.lbl_业务来源.Text = base.GetControlBindValue(this.lue_业务来源).ToString();
@@ -196,6 +200,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             gdc_wcckexcel.DataSource = m_dstAll;
             gdc_wcckexcel.DataMember = "yw_wcckexcel";
+          
         }
 
         void Wk_BomNewRow(object sender, DataTableNewRowEventArgs e)
@@ -917,7 +922,24 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void bt_导入excel数据ck_Click(object sender, EventArgs e)
         {
-            base.Save();
+            //System.Action ac = null;
+            //ac = GetExcelData;
+            //ac();
+            //this.Save();
+            
+            ThreadPool.QueueUserWorkItem(new WaitCallback(this.GetExcelData));
+
+            //Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelData));
+            //t.Start("null");
+        }
+
+        private void GetExcelData(object o)
+        {
+            this.Invoke(new System.Action(delegate()
+            {
+                this.Save();
+            }));
+          
             int inum = 1;
             if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
             if (string.IsNullOrEmpty(cbe_工作表ck.Text.ToString())) return;
@@ -957,7 +979,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             double tmpdb = 0;
             try
             {
-                smGridControl8.DataSource = null;
+                this.Invoke(new System.Action(delegate()
+                {
+                    WaitDialogHelper.Show();
+                    smGridControl8.DataSource = null;
+                    bt_导入excel数据ck.Visible = false;
+                    bt_读Execl写进数据库ck.Visible = false;
+                }));
+
+               
                 //mapper.Write(gh, excelFileName);
                 string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
                 wckexcel = new wk.wcckexcel();
@@ -1063,8 +1093,13 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 }
                 finally
                 {
-                    smGridControl8.DataSource = dtck;
-                    bt_读Execl写进数据库ck.Visible = true;
+                    this.Invoke(new System.Action(delegate()
+                    {
+                        smGridControl8.DataSource = dtck;
+                        bt_读Execl写进数据库ck.Visible = true;
+                        bt_导入excel数据ck.Visible = true;
+                        WaitDialogHelper.Close();
+                    }));                    
                 }
 
             }
@@ -1074,7 +1109,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 KillExcel.KillExcelProcess(beforeTime, afterTime);
             }
         }
-
+  
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
         {
             //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
@@ -1358,6 +1393,20 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             this.gdc_bom.ExportToXls(tmpstr);
             System.Diagnostics.Process.Start(tmpstr);
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(cbe_文件ck.Text.ToString()))
+            {
+                if (brun == false)
+                {
+                    Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelData));
+                    t.Start("null");
+                    brun = true;
+                    timer1.Enabled = false;
+                }
+            }
         }
 
 
