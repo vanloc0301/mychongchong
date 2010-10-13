@@ -2631,7 +2631,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage4.Text = "物控已审核数据";
             // 
             // gdc_ck
@@ -2646,7 +2646,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
+            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {

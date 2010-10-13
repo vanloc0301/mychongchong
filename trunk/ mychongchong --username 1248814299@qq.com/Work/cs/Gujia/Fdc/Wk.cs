@@ -971,7 +971,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
             else
             {
-                throw new Exception("两个Excel模板表记录数都必须只有1条记录！");
+                MessageBox.Show("模板表记录数都必须有且仅有1条记录！");
                 return;
             }
 
