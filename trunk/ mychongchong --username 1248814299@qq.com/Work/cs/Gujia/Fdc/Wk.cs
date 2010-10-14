@@ -1121,8 +1121,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //{
             if (!string.IsNullOrEmpty(tmp) && tmp == "True" && !string.IsNullOrEmpty(tmp1) && tmp1 == "True" && !string.IsNullOrEmpty(tmpwlmc))
             {
-                e.Appearance.BackColor = Color.Red;
-                e.Appearance.BackColor2 = Color.Red;
+                e.Appearance.BackColor = Color.SkyBlue;
+                e.Appearance.BackColor2 = Color.SkyBlue;
                 return;
             }
             if (!string.IsNullOrEmpty(tmp) && tmp == "True" && ((!string.IsNullOrEmpty(tmp1) && tmp1 == "False") || (string.IsNullOrEmpty(tmp1))) && !string.IsNullOrEmpty(tmpwlmc))
@@ -1133,8 +1133,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
             if (!string.IsNullOrEmpty(tmp) && tmp == "True" && string.IsNullOrEmpty(tmpwlmc))
             {
-                e.Appearance.BackColor = Color.Blue;
-                e.Appearance.BackColor2 = Color.Blue;
+                e.Appearance.BackColor = Color.Red;
+                e.Appearance.BackColor2 = Color.Red;
                 return;
             }
             //}
