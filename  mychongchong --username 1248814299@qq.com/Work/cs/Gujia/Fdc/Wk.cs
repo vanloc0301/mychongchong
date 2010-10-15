@@ -929,10 +929,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             
             ThreadPool.QueueUserWorkItem(new WaitCallback(this.GetExcelData));
 
-            //Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelData));
+            //Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
             //t.Start("null");
         }
 
+        private void GetExcelDataGc(object o)
+        {
+            GetExcelData(o);
+            System.GC.Collect();
+        }
         private void GetExcelData(object o)
         {
             this.Invoke(new System.Action(delegate()
@@ -941,8 +946,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }));
           
             int inum = 1;
-            if (string.IsNullOrEmpty(cbe_文件ck.Text.ToString())) return;
-            if (string.IsNullOrEmpty(cbe_工作表ck.Text.ToString())) return;
+            if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_文件ck).ToString())) return;
+            if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_工作表ck).ToString())) return;
             DataTable wcexcel = m_dstAll.Tables["yw_wcckexcel"];
             DataTable bomexcel = m_dstAll.Tables["yw_ckexcel"];
 
@@ -989,7 +994,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
                
                 //mapper.Write(gh, excelFileName);
-                string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
+                string filename = string.Format("{0}{1}", this.excelCkFilePath, base.GetControlBindValue(this.cbe_文件ck).ToString());
                 //--------
                 NewMethod(bomexcel, filename);
                 //--------
@@ -1474,11 +1479,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cbe_文件ck.Text.ToString()))
+            if (!string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_文件ck).ToString()))
             {
                 if (brun == false)
                 {
-                    Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelData));
+                    Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
                     t.Start("null");
                     brun = true;
                     timer1.Enabled = false;
