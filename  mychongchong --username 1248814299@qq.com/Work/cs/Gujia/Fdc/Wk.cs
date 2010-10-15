@@ -990,6 +990,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                
                 //mapper.Write(gh, excelFileName);
                 string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
+                //--------
+                wk.TestWlmc twlmc = new ZBPM.wk.TestWlmc();
+                int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc,"1000");
+                
+                //--------
                 wckexcel = new wk.wcckexcel();
                 mapper.Read(wckexcel, filename, wcexcel, bomexcel, ckpass);
                 //mapper.Write(gh, @"c:\tmp.xls", excelFileName);
@@ -1108,6 +1113,31 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 afterTime = DateTime.Now;
                 KillExcel.KillExcelProcess(beforeTime, afterTime);
             }
+        }
+
+        /// <summary>
+        /// 获得物料数目，准确控制读取excel记录数
+        /// </summary>
+        /// <param name="bomexcel"></param>
+        /// <param name="filename"></param>
+        /// <param name="twlmc"></param>
+        /// <returns></returns>
+        private int GetWlmcCount(DataTable bomexcel, string filename, wk.TestWlmc twlmc,string endcell)
+        {
+            ArrayList alwlmc = mapper.Read(twlmc, filename, bomexcel, ckpass,endcell);
+            int bext = 0;
+            int btotal = 0;
+            for (int i = 0; i < alwlmc.Count; i++)
+            {
+                if (String.IsNullOrEmpty(alwlmc[i].ToString()))
+                {
+                    bext++;
+                    if (bext >= 10) break;  //如果连续6行没有数据则认为到达末尾
+                }
+                btotal++;
+                bext = 0;
+            }
+            return btotal;
         }
   
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
@@ -1407,6 +1437,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     timer1.Enabled = false;
                 }
             }
+        }
+
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+            AutoSetRangeCk(m_dstAll.Tables["yw_ckexcel"]);
         }
 
 
