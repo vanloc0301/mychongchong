@@ -269,4 +269,31 @@ namespace ZBPM.wk
 
         #endregion
     }
+
+    [DefaultSheet("tmp")]
+    public class TestWlmc
+    {
+
+        #region yw_ck
+        //private ArrayList _xh;
+
+        //[UseSheet("yw_ckexcel")]
+        //[FromRange("序号", "", Category.AFormatted)]
+        //public ArrayList Xh
+        //{
+        //    get { return _xh; }
+        //    set { _xh = value; }
+        //}
+        private ArrayList _wlmc;
+
+        [UseSheet("yw_ckexcel")]
+        [FromRange("物料名称", "", Category.AFormatted)]
+        public ArrayList Wlmc
+        {
+            get { return _wlmc; }
+            set { _wlmc = value; }
+        }      
+
+        #endregion
+    }
 }
