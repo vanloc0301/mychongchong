@@ -992,8 +992,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
                 //--------
                 wk.TestWlmc twlmc = new ZBPM.wk.TestWlmc();
-                int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc,"1000");
-                
+                AutoSetTestWlmc(bomexcel, 3000);
+                int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc);
+                AutoSetTestWlmc(bomexcel, iwlmccount);
+                AutoSetRangeCk(bomexcel);
                 //--------
                 wckexcel = new wk.wcckexcel();
                 mapper.Read(wckexcel, filename, wcexcel, bomexcel, ckpass);
@@ -1115,6 +1117,31 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
         }
 
+
+        private void AutoSetTestWlmc(DataTable tmpdt,int iend)
+        {
+            if (tmpdt.Rows.Count == 1)
+            {
+                string[] xh = tmpdt.Rows[0]["序号"].ToString().Split(new char[] { '|' });
+                if (xh.Length == 2)
+                {
+                    List<int> li = ExcelColumnTranslator.showMatches(xh[0].ToString());
+                    int istart = 0;
+                    istart = li[0] + 1;
+                    //li = ExcelColumnTranslator.showMatches(xh[1].ToString());
+                    //iend = li[0] + 1;
+                    #region 智能设置
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);           
+                    #endregion
+                }
+                else
+                {
+                    MessageBox.Show("请设置正确的【序号格式】,格式形如:A1|A12");
+                    return;
+                }
+
+            }
+        }
         /// <summary>
         /// 获得物料数目，准确控制读取excel记录数
         /// </summary>
@@ -1122,14 +1149,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         /// <param name="filename"></param>
         /// <param name="twlmc"></param>
         /// <returns></returns>
-        private int GetWlmcCount(DataTable bomexcel, string filename, wk.TestWlmc twlmc,string endcell)
+        private int GetWlmcCount(DataTable bomexcel, string filename, wk.TestWlmc twlmc)
         {
-            ArrayList alwlmc = mapper.Read(twlmc, filename, bomexcel, ckpass,endcell);
+            ArrayList alwlmc = mapper.Read(twlmc, filename, bomexcel, ckpass);
             int bext = 0;
             int btotal = 0;
             for (int i = 0; i < alwlmc.Count; i++)
             {
-                if (String.IsNullOrEmpty(alwlmc[i].ToString()))
+                if (String.IsNullOrEmpty(alwlmc[i].ToString().Split(new char[]{'@'})[0].ToString()))
                 {
                     bext++;
                     if (bext >= 10) break;  //如果连续6行没有数据则认为到达末尾

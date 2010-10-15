@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -962,9 +962,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode1});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1505,9 +1505,9 @@
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode2});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1918,9 +1918,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode3});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2631,7 +2631,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage4.Text = "物控已审核数据";
             // 
             // gdc_ck
@@ -2646,7 +2646,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
+            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
