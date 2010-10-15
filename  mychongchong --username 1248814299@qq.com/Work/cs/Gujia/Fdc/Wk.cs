@@ -1141,16 +1141,17 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     //li = ExcelColumnTranslator.showMatches(xh[1].ToString());
                     //iend = li[0] + 1;
                     #region 智能设置
-                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend+istart-1);
-                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend + istart - 1);
-                    AutoSetBomExcelModel(tmpdt, "配色", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "序号", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend );
+                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend );
+                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend);
+                    AutoSetBomExcelModel(tmpdt, "配色", istart, iend);
                     //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
-                    tmpdt.Rows[0]["记录数"] = (iend).ToString();
+                    tmpdt.Rows[0]["记录数"] = (iend-istart+1).ToString();
                     #endregion
                 }
                 else
@@ -1171,19 +1172,19 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         private int GetWlmcCount(DataTable bomexcel, string filename, wk.TestWlmc twlmc)
         {
             ArrayList alwlmc = mapper.Read(twlmc, filename, bomexcel, ckpass);
-            int bext = 0;
-            int btotal = 0;
-            for (int i = 0; i < alwlmc.Count; i++)
-            {
-                if (String.IsNullOrEmpty(alwlmc[i].ToString().Split(new char[]{'@'})[0].ToString()))
-                {
-                    bext++;
-                    if (bext >= 10) break;  //如果连续6行没有数据则认为到达末尾
-                }
-                btotal++;
-                bext = 0;
-            }
-            return btotal;
+            //int bext = 0;
+            //int btotal = 0;
+            //for (int i = 0; i < alwlmc.Count; i++)
+            //{
+            //    if (String.IsNullOrEmpty(alwlmc[i].ToString().Split(new char[]{'@'})[0].ToString()))
+            //    {
+            //        bext++;
+            //        if (bext >= 10) break;  //如果连续6行没有数据则认为到达末尾
+            //    }
+            //    btotal++;
+            //    bext = 0;
+            //}
+            return int.Parse(alwlmc[0].ToString());
         }
   
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
