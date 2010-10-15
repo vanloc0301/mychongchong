@@ -1189,7 +1189,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //    btotal++;
             //    bext = 0;
             //}
-            return int.Parse(alwlmc[0].ToString());
+            return int.Parse(alwlmc[0].ToString())+1;
         }
   
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)

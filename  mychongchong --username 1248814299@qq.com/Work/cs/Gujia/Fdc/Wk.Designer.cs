@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -962,9 +962,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode1});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1236,7 +1236,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage3.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage3.Text = "导入购料单Excel";
             // 
             // splitContainerControl3
@@ -1248,7 +1248,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl7);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(771, 548);
+            this.splitContainerControl3.Size = new System.Drawing.Size(367, 288);
             this.splitContainerControl3.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl3, null);
             this.splitContainerControl3.TabIndex = 7;
@@ -1269,7 +1269,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(350, 544);
+            this.panelControl6.Size = new System.Drawing.Size(332, 284);
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
@@ -1355,10 +1355,10 @@
             this.gdc_ckexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_ckexcel.EmbeddedNavigator.Name = "";
             this.gdc_ckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_ckexcel.Location = new System.Drawing.Point(2, 220);
+            this.gdc_ckexcel.Location = new System.Drawing.Point(2, -40);
             this.gdc_ckexcel.MainView = this.gv_ckexcel;
             this.gdc_ckexcel.Name = "gdc_ckexcel";
-            this.gdc_ckexcel.Size = new System.Drawing.Size(346, 322);
+            this.gdc_ckexcel.Size = new System.Drawing.Size(328, 322);
             this.gdc_ckexcel.TabIndex = 5;
             this.gdc_ckexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_ckexcel});
@@ -1505,9 +1505,9 @@
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1592,7 +1592,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(407, 544);
+            this.panelControl7.Size = new System.Drawing.Size(21, 284);
             this.toolTipController.SetSuperTip(this.panelControl7, null);
             this.panelControl7.TabIndex = 2;
             // 
@@ -1604,7 +1604,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(403, 31);
+            this.panelControl8.Size = new System.Drawing.Size(17, 31);
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
             // 
@@ -1652,7 +1652,7 @@
             this.repositoryItemCheckEdit3,
             this.repositoryItemCheckEdit4,
             this.repositoryItemMemoExEdit1});
-            this.smGridControl8.Size = new System.Drawing.Size(403, 540);
+            this.smGridControl8.Size = new System.Drawing.Size(17, 280);
             this.smGridControl8.TabIndex = 10;
             this.smGridControl8.UseEmbeddedNavigator = true;
             this.smGridControl8.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1918,9 +1918,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode3});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2853,6 +2853,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Wk
