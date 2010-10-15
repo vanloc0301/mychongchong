@@ -991,11 +991,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 //mapper.Write(gh, excelFileName);
                 string filename = string.Format("{0}{1}", this.excelCkFilePath, cbe_文件ck.Text.ToString());
                 //--------
-                wk.TestWlmc twlmc = new ZBPM.wk.TestWlmc();
-                AutoSetTestWlmc(bomexcel, 3000);
-                int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc);
-                AutoSetTestWlmc(bomexcel, iwlmccount);
-                AutoSetRangeCk(bomexcel);
+                NewMethod(bomexcel, filename);
                 //--------
                 wckexcel = new wk.wcckexcel();
                 mapper.Read(wckexcel, filename, wcexcel, bomexcel, ckpass);
@@ -1117,6 +1113,20 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
         }
 
+        /// <summary>
+        /// 根据物料名称来判断excel中要读取的记录数，自动智能设置模板
+        /// </summary>
+        /// <param name="bomexcel"></param>
+        /// <param name="filename"></param>
+        private void NewMethod(DataTable bomexcel, string filename)
+        {
+            wk.TestWlmc twlmc = new ZBPM.wk.TestWlmc();
+            AutoSetTestWlmc(bomexcel, 3000);
+            int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc);
+            AutoSetTestWlmc(bomexcel, iwlmccount);
+            
+        }
+
 
         private void AutoSetTestWlmc(DataTable tmpdt,int iend)
         {
@@ -1131,7 +1141,16 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     //li = ExcelColumnTranslator.showMatches(xh[1].ToString());
                     //iend = li[0] + 1;
                     #region 智能设置
-                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend);           
+                    AutoSetBomExcelModel(tmpdt, "物料名称", istart, iend+istart-1);
+                    AutoSetBomExcelModel(tmpdt, "颜色", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "总用量", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "单位", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "供应商", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "来料数量", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "来料日期", istart, iend + istart - 1);
+                    AutoSetBomExcelModel(tmpdt, "配色", istart, iend + istart - 1);
+                    //AutoSetBomExcelModel(tmpdt, "采购备注", istart, iend);
+                    tmpdt.Rows[0]["记录数"] = (iend).ToString();
                     #endregion
                 }
                 else
