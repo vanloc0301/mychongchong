@@ -39,6 +39,8 @@ namespace ZBPM {
         
         private yw_ckDataTable tableyw_ck;
         
+        private yw_cktodayDataTable tableyw_cktoday;
+        
         private global::System.Data.DataRelation relationyw_wc_yw_wcexcel;
         
         private global::System.Data.DataRelation relationyw_wc_yw_bom;
@@ -50,6 +52,8 @@ namespace ZBPM {
         private global::System.Data.DataRelation relationyw_wc_yw_ckexcel;
         
         private global::System.Data.DataRelation relationyw_wc_yw_wcckexecl;
+        
+        private global::System.Data.DataRelation relationyw_wc_yw_cktoday;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -97,6 +101,9 @@ namespace ZBPM {
                 }
                 if ((ds.Tables["yw_ck"] != null)) {
                     base.Tables.Add(new yw_ckDataTable(ds.Tables["yw_ck"]));
+                }
+                if ((ds.Tables["yw_cktoday"] != null)) {
+                    base.Tables.Add(new yw_cktodayDataTable(ds.Tables["yw_cktoday"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -180,6 +187,15 @@ namespace ZBPM {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public yw_cktodayDataTable yw_cktoday {
+            get {
+                return this.tableyw_cktoday;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -259,6 +275,9 @@ namespace ZBPM {
                 if ((ds.Tables["yw_ck"] != null)) {
                     base.Tables.Add(new yw_ckDataTable(ds.Tables["yw_ck"]));
                 }
+                if ((ds.Tables["yw_cktoday"] != null)) {
+                    base.Tables.Add(new yw_cktodayDataTable(ds.Tables["yw_cktoday"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -331,12 +350,19 @@ namespace ZBPM {
                     this.tableyw_ck.InitVars();
                 }
             }
+            this.tableyw_cktoday = ((yw_cktodayDataTable)(base.Tables["yw_cktoday"]));
+            if ((initTable == true)) {
+                if ((this.tableyw_cktoday != null)) {
+                    this.tableyw_cktoday.InitVars();
+                }
+            }
             this.relationyw_wc_yw_wcexcel = this.Relations["yw_wc_yw_wcexcel"];
             this.relationyw_wc_yw_bom = this.Relations["yw_wc_yw_bom"];
             this.relationyw_wc_yw_bomexcel = this.Relations["yw_wc_yw_bomexcel"];
             this.relationyw_wc_yw_ck = this.Relations["yw_wc_yw_ck"];
             this.relationyw_wc_yw_ckexcel = this.Relations["yw_wc_yw_ckexcel"];
             this.relationyw_wc_yw_wcckexecl = this.Relations["yw_wc_yw_wcckexecl"];
+            this.relationyw_wc_yw_cktoday = this.Relations["yw_wc_yw_cktoday"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -360,6 +386,8 @@ namespace ZBPM {
             base.Tables.Add(this.tableyw_ckexcel);
             this.tableyw_ck = new yw_ckDataTable();
             base.Tables.Add(this.tableyw_ck);
+            this.tableyw_cktoday = new yw_cktodayDataTable();
+            base.Tables.Add(this.tableyw_cktoday);
             this.relationyw_wc_yw_wcexcel = new global::System.Data.DataRelation("yw_wc_yw_wcexcel", new global::System.Data.DataColumn[] {
                         this.tableyw_wc.PROJECT_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableyw_wcexcel.PROJECT_IDColumn}, false);
@@ -384,6 +412,10 @@ namespace ZBPM {
                         this.tableyw_wc.PROJECT_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableyw_wcckexecl.PROJECT_IDColumn}, false);
             this.Relations.Add(this.relationyw_wc_yw_wcckexecl);
+            this.relationyw_wc_yw_cktoday = new global::System.Data.DataRelation("yw_wc_yw_cktoday", new global::System.Data.DataColumn[] {
+                        this.tableyw_wc.PROJECT_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableyw_cktoday.PROJECT_IDColumn}, false);
+            this.Relations.Add(this.relationyw_wc_yw_cktoday);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -418,6 +450,11 @@ namespace ZBPM {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private bool ShouldSerializeyw_ck() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private bool ShouldSerializeyw_cktoday() {
             return false;
         }
         
@@ -487,6 +524,8 @@ namespace ZBPM {
         public delegate void yw_ckexcelRowChangeEventHandler(object sender, yw_ckexcelRowChangeEvent e);
         
         public delegate void yw_ckRowChangeEventHandler(object sender, yw_ckRowChangeEvent e);
+        
+        public delegate void yw_cktodayRowChangeEventHandler(object sender, yw_cktodayRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3039,6 +3078,425 @@ namespace ZBPM {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class yw_cktodayDataTable : global::System.Data.TypedTableBase<yw_cktodayRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnPROJECT_ID;
+            
+            private global::System.Data.DataColumn column序号;
+            
+            private global::System.Data.DataColumn column物料名称;
+            
+            private global::System.Data.DataColumn column颜色;
+            
+            private global::System.Data.DataColumn column配色;
+            
+            private global::System.Data.DataColumn column总用量;
+            
+            private global::System.Data.DataColumn column单位;
+            
+            private global::System.Data.DataColumn column供应商;
+            
+            private global::System.Data.DataColumn column来料数量;
+            
+            private global::System.Data.DataColumn column来料日期;
+            
+            private global::System.Data.DataColumn column标注;
+            
+            private global::System.Data.DataColumn column是否标色;
+            
+            private global::System.Data.DataColumn column是否审核;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayDataTable() {
+                this.TableName = "yw_cktoday";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal yw_cktodayDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected yw_cktodayDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn PROJECT_IDColumn {
+                get {
+                    return this.columnPROJECT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 序号Column {
+                get {
+                    return this.column序号;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 物料名称Column {
+                get {
+                    return this.column物料名称;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 颜色Column {
+                get {
+                    return this.column颜色;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 配色Column {
+                get {
+                    return this.column配色;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 总用量Column {
+                get {
+                    return this.column总用量;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 单位Column {
+                get {
+                    return this.column单位;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 供应商Column {
+                get {
+                    return this.column供应商;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 来料数量Column {
+                get {
+                    return this.column来料数量;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 来料日期Column {
+                get {
+                    return this.column来料日期;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 标注Column {
+                get {
+                    return this.column标注;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 是否标色Column {
+                get {
+                    return this.column是否标色;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataColumn 是否审核Column {
+                get {
+                    return this.column是否审核;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow this[int index] {
+                get {
+                    return ((yw_cktodayRow)(this.Rows[index]));
+                }
+            }
+            
+            public event yw_cktodayRowChangeEventHandler yw_cktodayRowChanging;
+            
+            public event yw_cktodayRowChangeEventHandler yw_cktodayRowChanged;
+            
+            public event yw_cktodayRowChangeEventHandler yw_cktodayRowDeleting;
+            
+            public event yw_cktodayRowChangeEventHandler yw_cktodayRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Addyw_cktodayRow(yw_cktodayRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow Addyw_cktodayRow(yw_wcRow parentyw_wcRowByyw_wc_yw_cktoday, int 序号, string 物料名称, string 颜色, string 配色, string 总用量, string 单位, string 供应商, string 来料数量, string 来料日期, string 标注, bool 是否标色, bool 是否审核) {
+                yw_cktodayRow rowyw_cktodayRow = ((yw_cktodayRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        null,
+                        序号,
+                        物料名称,
+                        颜色,
+                        配色,
+                        总用量,
+                        单位,
+                        供应商,
+                        来料数量,
+                        来料日期,
+                        标注,
+                        是否标色,
+                        是否审核};
+                if ((parentyw_wcRowByyw_wc_yw_cktoday != null)) {
+                    columnValuesArray[1] = parentyw_wcRowByyw_wc_yw_cktoday[0];
+                }
+                rowyw_cktodayRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowyw_cktodayRow);
+                return rowyw_cktodayRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow FindByid(int id) {
+                return ((yw_cktodayRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public override global::System.Data.DataTable Clone() {
+                yw_cktodayDataTable cln = ((yw_cktodayDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new yw_cktodayDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnPROJECT_ID = base.Columns["PROJECT_ID"];
+                this.column序号 = base.Columns["序号"];
+                this.column物料名称 = base.Columns["物料名称"];
+                this.column颜色 = base.Columns["颜色"];
+                this.column配色 = base.Columns["配色"];
+                this.column总用量 = base.Columns["总用量"];
+                this.column单位 = base.Columns["单位"];
+                this.column供应商 = base.Columns["供应商"];
+                this.column来料数量 = base.Columns["来料数量"];
+                this.column来料日期 = base.Columns["来料日期"];
+                this.column标注 = base.Columns["标注"];
+                this.column是否标色 = base.Columns["是否标色"];
+                this.column是否审核 = base.Columns["是否审核"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnPROJECT_ID = new global::System.Data.DataColumn("PROJECT_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPROJECT_ID);
+                this.column序号 = new global::System.Data.DataColumn("序号", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column序号);
+                this.column物料名称 = new global::System.Data.DataColumn("物料名称", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column物料名称);
+                this.column颜色 = new global::System.Data.DataColumn("颜色", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column颜色);
+                this.column配色 = new global::System.Data.DataColumn("配色", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column配色);
+                this.column总用量 = new global::System.Data.DataColumn("总用量", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column总用量);
+                this.column单位 = new global::System.Data.DataColumn("单位", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column单位);
+                this.column供应商 = new global::System.Data.DataColumn("供应商", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column供应商);
+                this.column来料数量 = new global::System.Data.DataColumn("来料数量", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column来料数量);
+                this.column来料日期 = new global::System.Data.DataColumn("来料日期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column来料日期);
+                this.column标注 = new global::System.Data.DataColumn("标注", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column标注);
+                this.column是否标色 = new global::System.Data.DataColumn("是否标色", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否标色);
+                this.column是否审核 = new global::System.Data.DataColumn("是否审核", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否审核);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
+                this.columnPROJECT_ID.MaxLength = 20;
+                this.column物料名称.MaxLength = 100;
+                this.column颜色.MaxLength = 50;
+                this.column配色.MaxLength = 50;
+                this.column总用量.MaxLength = 50;
+                this.column单位.MaxLength = 4;
+                this.column供应商.MaxLength = 50;
+                this.column来料数量.MaxLength = 53;
+                this.column来料日期.MaxLength = 50;
+                this.column标注.MaxLength = 1000;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow Newyw_cktodayRow() {
+                return ((yw_cktodayRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new yw_cktodayRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override global::System.Type GetRowType() {
+                return typeof(yw_cktodayRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.yw_cktodayRowChanged != null)) {
+                    this.yw_cktodayRowChanged(this, new yw_cktodayRowChangeEvent(((yw_cktodayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.yw_cktodayRowChanging != null)) {
+                    this.yw_cktodayRowChanging(this, new yw_cktodayRowChangeEvent(((yw_cktodayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.yw_cktodayRowDeleted != null)) {
+                    this.yw_cktodayRowDeleted(this, new yw_cktodayRowChangeEvent(((yw_cktodayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.yw_cktodayRowDeleting != null)) {
+                    this.yw_cktodayRowDeleting(this, new yw_cktodayRowChangeEvent(((yw_cktodayRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Removeyw_cktodayRow(yw_cktodayRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                wc ds = new wc();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "yw_cktodayDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -3269,6 +3727,16 @@ namespace ZBPM {
                 }
                 else {
                     return ((yw_wcckexeclRow[])(base.GetChildRows(this.Table.ChildRelations["yw_wc_yw_wcckexecl"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow[] Getyw_cktodayRows() {
+                if ((this.Table.ChildRelations["yw_wc_yw_cktoday"] == null)) {
+                    return new yw_cktodayRow[0];
+                }
+                else {
+                    return ((yw_cktodayRow[])(base.GetChildRows(this.Table.ChildRelations["yw_wc_yw_cktoday"])));
                 }
             }
         }
@@ -4934,6 +5402,366 @@ namespace ZBPM {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public partial class yw_cktodayRow : global::System.Data.DataRow {
+            
+            private yw_cktodayDataTable tableyw_cktoday;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal yw_cktodayRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableyw_cktoday = ((yw_cktodayDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int id {
+                get {
+                    return ((int)(this[this.tableyw_cktoday.idColumn]));
+                }
+                set {
+                    this[this.tableyw_cktoday.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string PROJECT_ID {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.PROJECT_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PROJECT_ID\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.PROJECT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public int 序号 {
+                get {
+                    try {
+                        return ((int)(this[this.tableyw_cktoday.序号Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'序号\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.序号Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 物料名称 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.物料名称Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'物料名称\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.物料名称Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 颜色 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.颜色Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'颜色\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.颜色Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 配色 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.配色Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'配色\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.配色Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 总用量 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.总用量Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'总用量\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.总用量Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 单位 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.单位Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'单位\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.单位Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 供应商 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.供应商Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'供应商\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.供应商Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 来料数量 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.来料数量Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'来料数量\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.来料数量Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 来料日期 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.来料日期Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'来料日期\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.来料日期Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public string 标注 {
+                get {
+                    try {
+                        return ((string)(this[this.tableyw_cktoday.标注Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'标注\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.标注Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool 是否标色 {
+                get {
+                    try {
+                        return ((bool)(this[this.tableyw_cktoday.是否标色Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'是否标色\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.是否标色Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool 是否审核 {
+                get {
+                    try {
+                        return ((bool)(this[this.tableyw_cktoday.是否审核Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'是否审核\' in table \'yw_cktoday\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableyw_cktoday.是否审核Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_wcRow yw_wcRow {
+                get {
+                    return ((yw_wcRow)(this.GetParentRow(this.Table.ParentRelations["yw_wc_yw_cktoday"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["yw_wc_yw_cktoday"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool IsPROJECT_IDNull() {
+                return this.IsNull(this.tableyw_cktoday.PROJECT_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void SetPROJECT_IDNull() {
+                this[this.tableyw_cktoday.PROJECT_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is序号Null() {
+                return this.IsNull(this.tableyw_cktoday.序号Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set序号Null() {
+                this[this.tableyw_cktoday.序号Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is物料名称Null() {
+                return this.IsNull(this.tableyw_cktoday.物料名称Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set物料名称Null() {
+                this[this.tableyw_cktoday.物料名称Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is颜色Null() {
+                return this.IsNull(this.tableyw_cktoday.颜色Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set颜色Null() {
+                this[this.tableyw_cktoday.颜色Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is配色Null() {
+                return this.IsNull(this.tableyw_cktoday.配色Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set配色Null() {
+                this[this.tableyw_cktoday.配色Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is总用量Null() {
+                return this.IsNull(this.tableyw_cktoday.总用量Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set总用量Null() {
+                this[this.tableyw_cktoday.总用量Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is单位Null() {
+                return this.IsNull(this.tableyw_cktoday.单位Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set单位Null() {
+                this[this.tableyw_cktoday.单位Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is供应商Null() {
+                return this.IsNull(this.tableyw_cktoday.供应商Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set供应商Null() {
+                this[this.tableyw_cktoday.供应商Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is来料数量Null() {
+                return this.IsNull(this.tableyw_cktoday.来料数量Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set来料数量Null() {
+                this[this.tableyw_cktoday.来料数量Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is来料日期Null() {
+                return this.IsNull(this.tableyw_cktoday.来料日期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set来料日期Null() {
+                this[this.tableyw_cktoday.来料日期Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is标注Null() {
+                return this.IsNull(this.tableyw_cktoday.标注Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set标注Null() {
+                this[this.tableyw_cktoday.标注Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is是否标色Null() {
+                return this.IsNull(this.tableyw_cktoday.是否标色Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set是否标色Null() {
+                this[this.tableyw_cktoday.是否标色Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public bool Is是否审核Null() {
+                return this.IsNull(this.tableyw_cktoday.是否审核Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public void Set是否审核Null() {
+                this[this.tableyw_cktoday.是否审核Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -5137,6 +5965,37 @@ namespace ZBPM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public yw_ckRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+        public class yw_cktodayRowChangeEvent : global::System.EventArgs {
+            
+            private yw_cktodayRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRowChangeEvent(yw_cktodayRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public yw_cktodayRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9514,6 +10373,786 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class yw_cktodayTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public yw_cktodayTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "yw_cktoday";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("PROJECT_ID", "PROJECT_ID");
+            tableMapping.ColumnMappings.Add("序号", "序号");
+            tableMapping.ColumnMappings.Add("物料名称", "物料名称");
+            tableMapping.ColumnMappings.Add("颜色", "颜色");
+            tableMapping.ColumnMappings.Add("配色", "配色");
+            tableMapping.ColumnMappings.Add("总用量", "总用量");
+            tableMapping.ColumnMappings.Add("单位", "单位");
+            tableMapping.ColumnMappings.Add("供应商", "供应商");
+            tableMapping.ColumnMappings.Add("来料数量", "来料数量");
+            tableMapping.ColumnMappings.Add("来料日期", "来料日期");
+            tableMapping.ColumnMappings.Add("标注", "标注");
+            tableMapping.ColumnMappings.Add("是否标色", "是否标色");
+            tableMapping.ColumnMappings.Add("是否审核", "是否审核");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[yw_cktoday] WHERE (([id] = @Original_id) AND ((@IsNull_PROJECT_ID = 1 AND [PROJECT_ID] IS NULL) OR ([PROJECT_ID] = @Original_PROJECT_ID)) AND ((@IsNull_序号 = 1 AND [序号] IS NULL) OR ([序号] = @Original_序号)) AND ((@IsNull_物料名称 = 1 AND [物料名称] IS NULL) OR ([物料名称] = @Original_物料名称)) AND ((@IsNull_颜色 = 1 AND [颜色] IS NULL) OR ([颜色] = @Original_颜色)) AND ((@IsNull_配色 = 1 AND [配色] IS NULL) OR ([配色] = @Original_配色)) AND ((@IsNull_总用量 = 1 AND [总用量] IS NULL) OR ([总用量] = @Original_总用量)) AND ((@IsNull_单位 = 1 AND [单位] IS NULL) OR ([单位] = @Original_单位)) AND ((@IsNull_供应商 = 1 AND [供应商] IS NULL) OR ([供应商] = @Original_供应商)) AND ((@IsNull_来料数量 = 1 AND [来料数量] IS NULL) OR ([来料数量] = @Original_来料数量)) AND ((@IsNull_来料日期 = 1 AND [来料日期] IS NULL) OR ([来料日期] = @Original_来料日期)) AND ((@IsNull_标注 = 1 AND [标注] IS NULL) OR ([标注] = @Original_标注)) AND ((@IsNull_是否标色 = 1 AND [是否标色] IS NULL) OR ([是否标色] = @Original_是否标色)) AND ((@IsNull_是否审核 = 1 AND [是否审核] IS NULL) OR ([是否审核] = @Original_是否审核)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PROJECT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PROJECT_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_物料名称", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_物料名称", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_颜色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_颜色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_配色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_配色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_总用量", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_总用量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_单位", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_单位", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_供应商", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_供应商", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_来料数量", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_来料数量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_来料日期", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_来料日期", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_标注", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_标注", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_是否标色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_是否标色", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_是否审核", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_是否审核", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[yw_cktoday] ([PROJECT_ID], [序号], [物料名称], [颜色], [配色], [总用量], [单位], [供应商], [来料数量], [来料日期], [标注], [是否标色], [是否审核]) VALUES (@PROJECT_ID, @序号, @物料名称, @颜色, @配色, @总用量, @单位, @供应商, @来料数量, @来料日期, @标注, @是否标色, @是否审核);
+SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 供应商, 来料数量, 来料日期, 标注, 是否标色, 是否审核 FROM yw_cktoday WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PROJECT_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@物料名称", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@颜色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@配色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@总用量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@单位", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@供应商", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@来料数量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@来料日期", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@标注", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@是否标色", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@是否审核", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[yw_cktoday] SET [PROJECT_ID] = @PROJECT_ID, [序号] = @序号, [物料名称] = @物料名称, [颜色] = @颜色, [配色] = @配色, [总用量] = @总用量, [单位] = @单位, [供应商] = @供应商, [来料数量] = @来料数量, [来料日期] = @来料日期, [标注] = @标注, [是否标色] = @是否标色, [是否审核] = @是否审核 WHERE (([id] = @Original_id) AND ((@IsNull_PROJECT_ID = 1 AND [PROJECT_ID] IS NULL) OR ([PROJECT_ID] = @Original_PROJECT_ID)) AND ((@IsNull_序号 = 1 AND [序号] IS NULL) OR ([序号] = @Original_序号)) AND ((@IsNull_物料名称 = 1 AND [物料名称] IS NULL) OR ([物料名称] = @Original_物料名称)) AND ((@IsNull_颜色 = 1 AND [颜色] IS NULL) OR ([颜色] = @Original_颜色)) AND ((@IsNull_配色 = 1 AND [配色] IS NULL) OR ([配色] = @Original_配色)) AND ((@IsNull_总用量 = 1 AND [总用量] IS NULL) OR ([总用量] = @Original_总用量)) AND ((@IsNull_单位 = 1 AND [单位] IS NULL) OR ([单位] = @Original_单位)) AND ((@IsNull_供应商 = 1 AND [供应商] IS NULL) OR ([供应商] = @Original_供应商)) AND ((@IsNull_来料数量 = 1 AND [来料数量] IS NULL) OR ([来料数量] = @Original_来料数量)) AND ((@IsNull_来料日期 = 1 AND [来料日期] IS NULL) OR ([来料日期] = @Original_来料日期)) AND ((@IsNull_标注 = 1 AND [标注] IS NULL) OR ([标注] = @Original_标注)) AND ((@IsNull_是否标色 = 1 AND [是否标色] IS NULL) OR ([是否标色] = @Original_是否标色)) AND ((@IsNull_是否审核 = 1 AND [是否审核] IS NULL) OR ([是否审核] = @Original_是否审核)));
+SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 供应商, 来料数量, 来料日期, 标注, 是否标色, 是否审核 FROM yw_cktoday WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PROJECT_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@物料名称", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@颜色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@配色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@总用量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@单位", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@供应商", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@来料数量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@来料日期", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@标注", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@是否标色", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@是否审核", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PROJECT_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PROJECT_ID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_序号", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "序号", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_物料名称", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_物料名称", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "物料名称", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_颜色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_颜色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "颜色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_配色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_配色", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "配色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_总用量", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_总用量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "总用量", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_单位", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_单位", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "单位", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_供应商", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_供应商", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "供应商", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_来料数量", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_来料数量", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料数量", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_来料日期", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_来料日期", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "来料日期", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_标注", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_标注", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "标注", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_是否标色", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_是否标色", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否标色", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_是否审核", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_是否审核", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "是否审核", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ZBPM.Properties.Settings.Default.gujiaConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 供应商, 来料数量, 来料日期, 标注, 是否标色, 是否审核" +
+                " FROM dbo.yw_cktoday";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(wc.yw_cktodayDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual wc.yw_cktodayDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            wc.yw_cktodayDataTable dataTable = new wc.yw_cktodayDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(wc.yw_cktodayDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(wc dataSet) {
+            return this.Adapter.Update(dataSet, "yw_cktoday");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_id, string Original_PROJECT_ID, global::System.Nullable<int> Original_序号, string Original_物料名称, string Original_颜色, string Original_配色, string Original_总用量, string Original_单位, string Original_供应商, string Original_来料数量, string Original_来料日期, string Original_标注, global::System.Nullable<bool> Original_是否标色, global::System.Nullable<bool> Original_是否审核) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_PROJECT_ID == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_PROJECT_ID));
+            }
+            if ((Original_序号.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_序号.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_物料名称 == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_物料名称));
+            }
+            if ((Original_颜色 == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_颜色));
+            }
+            if ((Original_配色 == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_配色));
+            }
+            if ((Original_总用量 == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_总用量));
+            }
+            if ((Original_单位 == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_单位));
+            }
+            if ((Original_供应商 == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_供应商));
+            }
+            if ((Original_来料数量 == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_来料数量));
+            }
+            if ((Original_来料日期 == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_来料日期));
+            }
+            if ((Original_标注 == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_标注));
+            }
+            if ((Original_是否标色.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((bool)(Original_是否标色.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_是否审核.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((bool)(Original_是否审核.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string PROJECT_ID, global::System.Nullable<int> 序号, string 物料名称, string 颜色, string 配色, string 总用量, string 单位, string 供应商, string 来料数量, string 来料日期, string 标注, global::System.Nullable<bool> 是否标色, global::System.Nullable<bool> 是否审核) {
+            if ((PROJECT_ID == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(PROJECT_ID));
+            }
+            if ((序号.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(序号.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((物料名称 == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(物料名称));
+            }
+            if ((颜色 == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(颜色));
+            }
+            if ((配色 == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(配色));
+            }
+            if ((总用量 == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(总用量));
+            }
+            if ((单位 == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(单位));
+            }
+            if ((供应商 == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(供应商));
+            }
+            if ((来料数量 == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(来料数量));
+            }
+            if ((来料日期 == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(来料日期));
+            }
+            if ((标注 == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(标注));
+            }
+            if ((是否标色.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(是否标色.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((是否审核.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(是否审核.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string PROJECT_ID, 
+                    global::System.Nullable<int> 序号, 
+                    string 物料名称, 
+                    string 颜色, 
+                    string 配色, 
+                    string 总用量, 
+                    string 单位, 
+                    string 供应商, 
+                    string 来料数量, 
+                    string 来料日期, 
+                    string 标注, 
+                    global::System.Nullable<bool> 是否标色, 
+                    global::System.Nullable<bool> 是否审核, 
+                    int Original_id, 
+                    string Original_PROJECT_ID, 
+                    global::System.Nullable<int> Original_序号, 
+                    string Original_物料名称, 
+                    string Original_颜色, 
+                    string Original_配色, 
+                    string Original_总用量, 
+                    string Original_单位, 
+                    string Original_供应商, 
+                    string Original_来料数量, 
+                    string Original_来料日期, 
+                    string Original_标注, 
+                    global::System.Nullable<bool> Original_是否标色, 
+                    global::System.Nullable<bool> Original_是否审核, 
+                    int id) {
+            if ((PROJECT_ID == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(PROJECT_ID));
+            }
+            if ((序号.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(序号.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((物料名称 == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(物料名称));
+            }
+            if ((颜色 == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(颜色));
+            }
+            if ((配色 == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(配色));
+            }
+            if ((总用量 == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(总用量));
+            }
+            if ((单位 == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(单位));
+            }
+            if ((供应商 == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(供应商));
+            }
+            if ((来料数量 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(来料数量));
+            }
+            if ((来料日期 == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(来料日期));
+            }
+            if ((标注 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(标注));
+            }
+            if ((是否标色.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(是否标色.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((是否审核.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(是否审核.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_id));
+            if ((Original_PROJECT_ID == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PROJECT_ID));
+            }
+            if ((Original_序号.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_序号.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            if ((Original_物料名称 == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_物料名称));
+            }
+            if ((Original_颜色 == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_颜色));
+            }
+            if ((Original_配色 == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_配色));
+            }
+            if ((Original_总用量 == null)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_总用量));
+            }
+            if ((Original_单位 == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_单位));
+            }
+            if ((Original_供应商 == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_供应商));
+            }
+            if ((Original_来料数量 == null)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_来料数量));
+            }
+            if ((Original_来料日期 == null)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_来料日期));
+            }
+            if ((Original_标注 == null)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_标注));
+            }
+            if ((Original_是否标色.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((bool)(Original_是否标色.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+            }
+            if ((Original_是否审核.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((bool)(Original_是否审核.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string PROJECT_ID, 
+                    global::System.Nullable<int> 序号, 
+                    string 物料名称, 
+                    string 颜色, 
+                    string 配色, 
+                    string 总用量, 
+                    string 单位, 
+                    string 供应商, 
+                    string 来料数量, 
+                    string 来料日期, 
+                    string 标注, 
+                    global::System.Nullable<bool> 是否标色, 
+                    global::System.Nullable<bool> 是否审核, 
+                    int Original_id, 
+                    string Original_PROJECT_ID, 
+                    global::System.Nullable<int> Original_序号, 
+                    string Original_物料名称, 
+                    string Original_颜色, 
+                    string Original_配色, 
+                    string Original_总用量, 
+                    string Original_单位, 
+                    string Original_供应商, 
+                    string Original_来料数量, 
+                    string Original_来料日期, 
+                    string Original_标注, 
+                    global::System.Nullable<bool> Original_是否标色, 
+                    global::System.Nullable<bool> Original_是否审核) {
+            return this.Update(PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 供应商, 来料数量, 来料日期, 标注, 是否标色, 是否审核, Original_id, Original_PROJECT_ID, Original_序号, Original_物料名称, Original_颜色, Original_配色, Original_总用量, Original_单位, Original_供应商, Original_来料数量, Original_来料日期, Original_标注, Original_是否标色, Original_是否审核, Original_id);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
@@ -9539,6 +11178,8 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
         private yw_ckexcelTableAdapter _yw_ckexcelTableAdapter;
         
         private yw_ckTableAdapter _yw_ckTableAdapter;
+        
+        private yw_cktodayTableAdapter _yw_cktodayTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -9646,6 +11287,19 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+            "", "System.Drawing.Design.UITypeEditor")]
+        public yw_cktodayTableAdapter yw_cktodayTableAdapter {
+            get {
+                return this._yw_cktodayTableAdapter;
+            }
+            set {
+                this._yw_cktodayTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -9690,6 +11344,10 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                             && (this._yw_ckTableAdapter.Connection != null))) {
                     return this._yw_ckTableAdapter.Connection;
                 }
+                if (((this._yw_cktodayTableAdapter != null) 
+                            && (this._yw_cktodayTableAdapter.Connection != null))) {
+                    return this._yw_cktodayTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -9723,6 +11381,9 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                 if ((this._yw_ckTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._yw_cktodayTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -9742,15 +11403,6 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._yw_wcckexeclTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._yw_wcckexeclTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._yw_ckexcelTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.yw_ckexcel.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -9766,6 +11418,24 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._yw_ckTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._yw_cktodayTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.yw_cktoday.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._yw_cktodayTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._yw_wcckexeclTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._yw_wcckexeclTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9813,14 +11483,6 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._yw_wcckexeclTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._yw_wcckexeclTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._yw_ckexcelTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.yw_ckexcel.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -9834,6 +11496,22 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._yw_ckTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._yw_cktodayTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.yw_cktoday.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._yw_cktodayTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._yw_wcckexeclTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._yw_wcckexeclTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9894,6 +11572,22 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._yw_wcckexeclTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._yw_wcckexeclTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._yw_cktodayTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.yw_cktoday.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._yw_cktodayTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._yw_ckTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.yw_ck.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -9907,14 +11601,6 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._yw_ckexcelTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._yw_wcckexeclTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.yw_wcckexecl.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._yw_wcckexeclTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9995,6 +11681,11 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
             }
             if (((this._yw_ckTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._yw_ckTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._yw_cktodayTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._yw_cktodayTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -10093,6 +11784,15 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                         adaptersWithAcceptChangesDuringUpdate.Add(this._yw_ckTableAdapter.Adapter);
                     }
                 }
+                if ((this._yw_cktodayTableAdapter != null)) {
+                    revertConnections.Add(this._yw_cktodayTableAdapter, this._yw_cktodayTableAdapter.Connection);
+                    this._yw_cktodayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._yw_cktodayTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._yw_cktodayTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._yw_cktodayTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._yw_cktodayTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -10178,6 +11878,10 @@ SELECT id, PROJECT_ID, 序号, 物料名称, 颜色, 配色, 总用量, 单位, 
                 if ((this._yw_ckTableAdapter != null)) {
                     this._yw_ckTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._yw_ckTableAdapter]));
                     this._yw_ckTableAdapter.Transaction = null;
+                }
+                if ((this._yw_cktodayTableAdapter != null)) {
+                    this._yw_cktodayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._yw_cktodayTableAdapter]));
+                    this._yw_cktodayTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
