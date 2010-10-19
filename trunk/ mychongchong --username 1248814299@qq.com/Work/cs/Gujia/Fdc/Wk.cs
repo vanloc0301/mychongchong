@@ -1011,6 +1011,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 this.Invoke(new System.Action(delegate()
                 {
                     WaitDialogHelper.Show();
+                    this.gv_cktotay.ClearColumnsFilter();
                     gdc_cktoday.DataSource = null;
                     bt_导入excel数据ck.Visible = false;
                     bt_读Execl写进数据库ck.Visible = false;
@@ -1269,10 +1270,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
             try
             {
-                DataTable dt = m_dstAll.Tables["yw_cktoday"];
-                String tmp = dt.Rows[e.RowHandle]["是否标色"].ToString();
-                String tmp1 = dt.Rows[e.RowHandle]["是否审核"].ToString();
-                string tmpwlmc = dt.Rows[e.RowHandle]["物料名称"].ToString();
+                DataRow dr=((DevExpress.XtraGrid.Views.Grid.GridView)(sender)).GetDataRow(e.RowHandle);
+                String tmp = dr["是否标色"].ToString();
+                String tmp1 = dr["是否审核"].ToString();
+                string tmpwlmc = dr["物料名称"].ToString();
                 //if (e.RowHandle != smGridView4.FocusedRowHandle)
                 //{
                 if (!string.IsNullOrEmpty(tmp) && tmp == "True" && !string.IsNullOrEmpty(tmp1) && tmp1 == "True" && !string.IsNullOrEmpty(tmpwlmc))
