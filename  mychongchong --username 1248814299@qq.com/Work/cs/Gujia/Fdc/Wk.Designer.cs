@@ -1250,7 +1250,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.splitContainerControl3);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage3.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage3.Text = "导入购料单Excel";
             // 
             // splitContainerControl3
@@ -1262,7 +1262,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl7);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(771, 548);
+            this.splitContainerControl3.Size = new System.Drawing.Size(367, 288);
             this.splitContainerControl3.SplitterPosition = 25;
             this.toolTipController.SetSuperTip(this.splitContainerControl3, null);
             this.splitContainerControl3.TabIndex = 7;
@@ -1283,7 +1283,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(21, 544);
+            this.panelControl6.Size = new System.Drawing.Size(21, 284);
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
@@ -1369,7 +1369,7 @@
             this.gdc_ckexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_ckexcel.EmbeddedNavigator.Name = "";
             this.gdc_ckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_ckexcel.Location = new System.Drawing.Point(2, 220);
+            this.gdc_ckexcel.Location = new System.Drawing.Point(2, -40);
             this.gdc_ckexcel.MainView = this.gv_ckexcel;
             this.gdc_ckexcel.Name = "gdc_ckexcel";
             this.gdc_ckexcel.Size = new System.Drawing.Size(17, 322);
@@ -1606,7 +1606,7 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(736, 544);
+            this.panelControl7.Size = new System.Drawing.Size(332, 284);
             this.toolTipController.SetSuperTip(this.panelControl7, null);
             this.panelControl7.TabIndex = 2;
             // 
@@ -1620,7 +1620,7 @@
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(732, 31);
+            this.panelControl8.Size = new System.Drawing.Size(328, 31);
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
             // 
@@ -1687,7 +1687,7 @@
             this.repositoryItemCheckEdit6,
             this.repositoryItemMemoEdit6,
             this.repositoryItemMemoEdit7});
-            this.gdc_cktoday.Size = new System.Drawing.Size(732, 540);
+            this.gdc_cktoday.Size = new System.Drawing.Size(328, 280);
             this.gdc_cktoday.TabIndex = 10;
             this.gdc_cktoday.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_cktotay});
@@ -2700,7 +2700,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
+            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
             this.xtraTabPage4.Text = "物控已审核数据";
             // 
             // gdc_ck
@@ -2715,7 +2715,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
+            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
