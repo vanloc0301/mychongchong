@@ -1587,15 +1587,22 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_文件ck).ToString()))
+            try
             {
-                if (brun == false)
+                if (base.GetControlBindValue(this.cbe_文件ck) != null && base.GetControlBindValue(this.cbe_文件ck).ToString().Trim()!="")
                 {
-                    Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
-                    t.Start("null");
-                    brun = true;
-                    timer1.Enabled = false;
+                    if (brun == false)
+                    {
+                        Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
+                        t.Start("null");
+                        brun = true;                        
+                    }
                 }
+                
+            }
+            finally
+            {
+                timer1.Enabled = false;
             }
         }
 
