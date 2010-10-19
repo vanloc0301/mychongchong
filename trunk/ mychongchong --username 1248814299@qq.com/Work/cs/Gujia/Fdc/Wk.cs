@@ -185,7 +185,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcckexcel"]);
             //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ckexcel"]);
             //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_cktoday"]);
-            sqlDataEngine.SaveData( smDs,  m_dstAll);
+            sqlDataEngine.SaveData(smDs, m_dstAll);
             sqlDataEngine.RefreshDataset(smDs, m_dstAll);
         }
         private void BBindData()
@@ -968,7 +968,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 this.Save();
             }));
 
-            
+
             int inum = 1;
             if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_文件ck).ToString())) return;
             if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_工作表ck).ToString())) return;
@@ -1018,7 +1018,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
 
                 //mapper.Write(gh, excelFileName);
-               
+
                 //--------
                 NewMethod(bomexcel, filename);
                 //--------
@@ -1117,39 +1117,52 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 }
                 finally
                 {
-                    this.Invoke(new System.Action(delegate()
+                    try
                     {
-                        DataTable dtcktoday = m_dstAll.Tables["yw_cktoday"];
-                        foreach (DataRow dr in dtcktoday.Rows)
+                        this.Invoke(new System.Action(delegate()
                         {
-                            dr.Delete();
-                        }
-                        foreach (DataRow dtcktodaydr in dtck.Rows)
-                        {
-                            DataRow dr = dtcktoday.NewRow();
-                            dr["序号"] = dtcktodaydr["序号"];
-                            dr["物料名称"] = dtcktodaydr["物料名称"];
-                            dr["颜色"] = dtcktodaydr["颜色"];
-                            dr["总用量"] = dtcktodaydr["总用量"];
-                            dr["单位"] = dtcktodaydr["单位"];
-                            dr["供应商"] = dtcktodaydr["供应商"];
-                            dr["来料数量"] = dtcktodaydr["来料数量"];
-                            dr["来料日期"] = dtcktodaydr["来料日期"];
-                            dr["配色"] = dtcktodaydr["配色"];
-                            dr["标注"] = dtcktodaydr["标注"];
-                            dr["是否审核"] = dtcktodaydr["是否审核"];
-                            dr["是否标色"] = dtcktodaydr["是否标色"];
-                            dtcktoday.Rows.Add(dr);
-                        }
-                        this.txt_hash.Text = strhash;
-                        this.Save();
-                        gdc_cktoday.DataSource = m_dstAll;
-                        gdc_cktoday.DataMember = "yw_cktoday";
-                        gv_cktotay.RefreshData();
-                        bt_读Execl写进数据库ck.Visible = true;
-                        bt_导入excel数据ck.Visible = true;
-                        WaitDialogHelper.Close();
-                    }));
+                            try
+                            {
+                                DataTable dtcktoday = m_dstAll.Tables["yw_cktoday"];
+                                foreach (DataRow dr in dtcktoday.Rows)
+                                {
+                                    dr.Delete();
+                                }
+                                foreach (DataRow dtcktodaydr in dtck.Rows)
+                                {
+                                    DataRow dr = dtcktoday.NewRow();
+                                    dr["序号"] = dtcktodaydr["序号"];
+                                    dr["物料名称"] = dtcktodaydr["物料名称"];
+                                    dr["颜色"] = dtcktodaydr["颜色"];
+                                    dr["总用量"] = dtcktodaydr["总用量"];
+                                    dr["单位"] = dtcktodaydr["单位"];
+                                    dr["供应商"] = dtcktodaydr["供应商"];
+                                    dr["来料数量"] = dtcktodaydr["来料数量"];
+                                    dr["来料日期"] = dtcktodaydr["来料日期"];
+                                    dr["配色"] = dtcktodaydr["配色"];
+                                    dr["标注"] = dtcktodaydr["标注"];
+                                    dr["是否审核"] = dtcktodaydr["是否审核"];
+                                    dr["是否标色"] = dtcktodaydr["是否标色"];
+                                    dtcktoday.Rows.Add(dr);
+                                }
+                                this.txt_hash.Text = strhash;
+                                this.Save();
+                            }
+                            finally
+                            {  
+                                gdc_cktoday.DataSource = m_dstAll;
+                                gdc_cktoday.DataMember = "yw_cktoday";
+                                gv_cktotay.RefreshData();
+                                bt_读Execl写进数据库ck.Visible = true;
+                                bt_导入excel数据ck.Visible = true;
+                                WaitDialogHelper.Close();
+                            }
+                        }));
+                    }
+                    catch//ExcelException e)
+                    {
+                      //  MessageBox.Show(e.Message.ToString());
+                    }
                 }
 
             }
@@ -1252,7 +1265,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         }
 
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {    
+        {
             //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
             try
             {
@@ -1637,7 +1650,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //return the MD5 hash of the file
             return sb.ToString();
         }
-         
+
 
     }
 }
