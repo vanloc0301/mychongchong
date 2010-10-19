@@ -35,6 +35,7 @@ using ZBPM.fj;
 using ZBPM.yd;
 
 using ExcelOper;
+using System.Security.Cryptography;
 
 
 namespace ZBPM
@@ -177,13 +178,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             SMDataSource smDs = this.dataFormController.DAODataForm.DataSource;
             SkyMap.Net.DataForms.DataEngine.SQLDataEngine sqlDataEngine = new SkyMap.Net.DataForms.DataEngine.SQLDataEngine();
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bom"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcexcel"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bomexcel"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ck"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcckexcel"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ckexcel"]);
-            sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_cktoday"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bom"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcexcel"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_bomexcel"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ck"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_wcckexcel"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_ckexcel"]);
+            //sqlDataEngine.SaveData(smDs, m_dstAll.Tables["YW_cktoday"]);
+            sqlDataEngine.SaveData( smDs,  m_dstAll);
             sqlDataEngine.RefreshDataset(smDs, m_dstAll);
         }
         private void BBindData()
@@ -943,7 +945,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //ac();
             //this.Save();
 
-            ThreadPool.QueueUserWorkItem(new WaitCallback(this.GetExcelData));
+            ThreadPool.QueueUserWorkItem(new WaitCallback(this.GetExcelDataGc));
 
             //Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
             //t.Start("null");
@@ -956,11 +958,17 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         }
         private void GetExcelData(object o)
         {
+            string strhash = "";
+            string filename = string.Format("{0}{1}", this.excelCkFilePath, base.GetControlBindValue(this.cbe_文件ck).ToString());
+            strhash = getFilesMD5Hash(filename);
+            if (strhash == base.GetControlBindValue(this.txt_hash).ToString()) return;
+
             this.Invoke(new System.Action(delegate()
             {
                 this.Save();
             }));
 
+            
             int inum = 1;
             if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_文件ck).ToString())) return;
             if (string.IsNullOrEmpty(base.GetControlBindValue(this.cbe_工作表ck).ToString())) return;
@@ -1010,7 +1018,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
 
                 //mapper.Write(gh, excelFileName);
-                string filename = string.Format("{0}{1}", this.excelCkFilePath, base.GetControlBindValue(this.cbe_文件ck).ToString());
+               
                 //--------
                 NewMethod(bomexcel, filename);
                 //--------
@@ -1103,6 +1111,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         inum++;
                     }
                 }
+                catch
+                {
+                    throw new ExcelException("private void GetExcelData(object o)函数运行抛出异常");
+                }
                 finally
                 {
                     this.Invoke(new System.Action(delegate()
@@ -1129,8 +1141,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             dr["是否标色"] = dtcktodaydr["是否标色"];
                             dtcktoday.Rows.Add(dr);
                         }
+                        this.txt_hash.Text = strhash;
+                        this.Save();
                         gdc_cktoday.DataSource = m_dstAll;
                         gdc_cktoday.DataMember = "yw_cktoday";
+                        gv_cktotay.RefreshData();
                         bt_读Execl写进数据库ck.Visible = true;
                         bt_导入excel数据ck.Visible = true;
                         WaitDialogHelper.Close();
@@ -1170,7 +1185,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         private void NewMethod(DataTable bomexcel, string filename)
         {
             wk.TestWlmc twlmc = new ZBPM.wk.TestWlmc();
-            AutoSetTestWlmc(bomexcel, 3000);
+            AutoSetTestWlmc(bomexcel, 10000);
             int iwlmccount = GetWlmcCount(bomexcel, filename, twlmc);
             AutoSetTestWlmc(bomexcel, iwlmccount);
 
@@ -1237,7 +1252,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         }
 
         private void smGridView4_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
+        {    
             //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
             try
             {
@@ -1575,6 +1590,54 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             AutoSetRangeCk(m_dstAll.Tables["yw_ckexcel"]);
         }
 
+        private void CkTodayFilter()
+        {
+            this.gv_cktotay.ClearColumnsFilter();
+            DevExpress.XtraGrid.Views.Base.ColumnView view = this.gv_cktotay;
+            DevExpress.XtraGrid.Views.Base.ViewColumnFilterInfo viewFilterInfo = new ViewColumnFilterInfo(view.Columns["是否标色"], new DevExpress.XtraGrid.Columns.ColumnFilterInfo("[是否标色] ==1", ""));
+            view.ActiveFilter.Add(viewFilterInfo);
+            viewFilterInfo = new ViewColumnFilterInfo(view.Columns["是否审核"], new DevExpress.XtraGrid.Columns.ColumnFilterInfo("[是否审核] ==0", ""));
+            view.ActiveFilter.Add(viewFilterInfo);
+            //view.SortInfo.Add(new DevExpress.XtraGrid.Columns.GridColumnSortInfo(new DevExpress.XtraGrid.Columns.GridColumn(""), DevExpress.Data.ColumnSortOrder.Descending));
+        }
+
+        private void bt_bsms_Click(object sender, EventArgs e)
+        {
+            CkTodayFilter();
+        }
+
+        public string getFilesMD5Hash(string file)
+        {
+            //MD5 hash provider for computing the hash of the file
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+
+            //open the file
+            FileStream stream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.Read, 8192);
+
+            //calculate the files hash
+            md5.ComputeHash(stream);
+
+            //close our stream
+            stream.Close();
+
+            //byte array of files hash
+            byte[] hash = md5.Hash;
+
+            //string builder to hold the results
+            StringBuilder sb = new StringBuilder();
+
+            //loop through each byte in the byte array
+            foreach (byte b in hash)
+            {
+                //format each byte into the proper value and append
+                //current value to return value
+                sb.Append(string.Format("{0:X2}", b));
+            }
+
+            //return the MD5 hash of the file
+            return sb.ToString();
+        }
+         
 
     }
 }

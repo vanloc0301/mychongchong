@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -155,6 +155,8 @@
             this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.txt_hash = new DevExpress.XtraEditors.TextEdit();
+            this.bt_bsms = new DevExpress.XtraEditors.SimpleButton();
             this.bt_读Execl写进数据库ck = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.bt_导入excel数据ck = new DevExpress.XtraEditors.SimpleButton();
@@ -164,6 +166,7 @@
             this.colPROJECT_ID5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col序号4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col物料名称4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemMemoEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
             this.col颜色4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col配色2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col总用量4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -348,8 +351,10 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_hash.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_cktoday)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_cktotay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).BeginInit();
@@ -971,9 +976,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1258,7 +1263,7 @@
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl7);
             this.splitContainerControl3.Panel2.Text = "Panel2";
             this.splitContainerControl3.Size = new System.Drawing.Size(771, 548);
-            this.splitContainerControl3.SplitterPosition = 274;
+            this.splitContainerControl3.SplitterPosition = 25;
             this.toolTipController.SetSuperTip(this.splitContainerControl3, null);
             this.splitContainerControl3.TabIndex = 7;
             this.splitContainerControl3.Text = "splitContainerControl3";
@@ -1278,7 +1283,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl6.Location = new System.Drawing.Point(0, 0);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(270, 544);
+            this.panelControl6.Size = new System.Drawing.Size(21, 544);
             this.toolTipController.SetSuperTip(this.panelControl6, null);
             this.panelControl6.TabIndex = 1;
             // 
@@ -1367,7 +1372,7 @@
             this.gdc_ckexcel.Location = new System.Drawing.Point(2, 220);
             this.gdc_ckexcel.MainView = this.gv_ckexcel;
             this.gdc_ckexcel.Name = "gdc_ckexcel";
-            this.gdc_ckexcel.Size = new System.Drawing.Size(266, 322);
+            this.gdc_ckexcel.Size = new System.Drawing.Size(17, 322);
             this.gdc_ckexcel.TabIndex = 5;
             this.gdc_ckexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_ckexcel});
@@ -1514,9 +1519,9 @@
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode2});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1601,21 +1606,40 @@
             this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl7.Location = new System.Drawing.Point(0, 0);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(487, 544);
+            this.panelControl7.Size = new System.Drawing.Size(736, 544);
             this.toolTipController.SetSuperTip(this.panelControl7, null);
             this.panelControl7.TabIndex = 2;
             // 
             // panelControl8
             // 
+            this.panelControl8.Controls.Add(this.txt_hash);
+            this.panelControl8.Controls.Add(this.bt_bsms);
             this.panelControl8.Controls.Add(this.bt_读Execl写进数据库ck);
             this.panelControl8.Controls.Add(this.labelControl8);
             this.panelControl8.Controls.Add(this.bt_导入excel数据ck);
             this.panelControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl8.Location = new System.Drawing.Point(2, 2);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(483, 31);
+            this.panelControl8.Size = new System.Drawing.Size(732, 31);
             this.toolTipController.SetSuperTip(this.panelControl8, null);
             this.panelControl8.TabIndex = 11;
+            // 
+            // txt_hash
+            // 
+            this.txt_hash.Location = new System.Drawing.Point(359, 3);
+            this.txt_hash.Name = "txt_hash";
+            this.txt_hash.Size = new System.Drawing.Size(100, 21);
+            this.txt_hash.TabIndex = 10;
+            // 
+            // bt_bsms
+            // 
+            this.bt_bsms.Location = new System.Drawing.Point(263, 3);
+            this.bt_bsms.Name = "bt_bsms";
+            this.bt_bsms.Size = new System.Drawing.Size(81, 23);
+            this.bt_bsms.TabIndex = 3;
+            this.bt_bsms.Text = "已标色未审核";
+            this.bt_bsms.Visible = false;
+            this.bt_bsms.Click += new System.EventHandler(this.bt_bsms_Click);
             // 
             // bt_读Execl写进数据库ck
             // 
@@ -1661,8 +1685,9 @@
             this.repositoryItemMemoExEdit1,
             this.repositoryItemCheckEdit5,
             this.repositoryItemCheckEdit6,
-            this.repositoryItemMemoEdit6});
-            this.gdc_cktoday.Size = new System.Drawing.Size(483, 540);
+            this.repositoryItemMemoEdit6,
+            this.repositoryItemMemoEdit7});
+            this.gdc_cktoday.Size = new System.Drawing.Size(732, 540);
             this.gdc_cktoday.TabIndex = 10;
             this.gdc_cktoday.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_cktotay});
@@ -1723,12 +1748,17 @@
             // col物料名称4
             // 
             this.col物料名称4.Caption = "物料名称";
+            this.col物料名称4.ColumnEdit = this.repositoryItemMemoEdit7;
             this.col物料名称4.FieldName = "物料名称";
             this.col物料名称4.Name = "col物料名称4";
             this.col物料名称4.OptionsColumn.AllowEdit = false;
             this.col物料名称4.Visible = true;
             this.col物料名称4.VisibleIndex = 1;
-            this.col物料名称4.Width = 264;
+            this.col物料名称4.Width = 183;
+            // 
+            // repositoryItemMemoEdit7
+            // 
+            this.repositoryItemMemoEdit7.Name = "repositoryItemMemoEdit7";
             // 
             // col颜色4
             // 
@@ -1809,7 +1839,7 @@
             this.col标注1.OptionsColumn.AllowEdit = false;
             this.col标注1.Visible = true;
             this.col标注1.VisibleIndex = 9;
-            this.col标注1.Width = 36;
+            this.col标注1.Width = 35;
             // 
             // repositoryItemMemoEdit6
             // 
@@ -1823,7 +1853,7 @@
             this.col是否标色1.Name = "col是否标色1";
             this.col是否标色1.Visible = true;
             this.col是否标色1.VisibleIndex = 10;
-            this.col是否标色1.Width = 47;
+            this.col是否标色1.Width = 33;
             // 
             // repositoryItemCheckEdit5
             // 
@@ -1839,7 +1869,7 @@
             this.col是否审核1.Name = "col是否审核1";
             this.col是否审核1.Visible = true;
             this.col是否审核1.VisibleIndex = 11;
-            this.col是否审核1.Width = 59;
+            this.col是否审核1.Width = 67;
             // 
             // repositoryItemCheckEdit6
             // 
@@ -1957,9 +1987,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode3});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2891,6 +2921,7 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -2966,8 +2997,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_hash.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdc_cktoday)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_cktotay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemMemoEdit6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).EndInit();
@@ -3288,5 +3321,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit6;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit6;
+        private DevExpress.XtraEditors.SimpleButton bt_bsms;
+        private DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit repositoryItemMemoEdit7;
+        private DevExpress.XtraEditors.TextEdit txt_hash;
     }
 }

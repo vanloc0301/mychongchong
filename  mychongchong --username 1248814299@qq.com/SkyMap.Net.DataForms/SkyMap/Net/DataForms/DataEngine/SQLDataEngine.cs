@@ -351,6 +351,11 @@
             return table;
         }
 
+        public void SaveData(SMDataSource smDS, DataSet dt)
+        {
+            this.SaveDataToSQlDB(smDS, ref dt);
+        }
+
         public DataSet SaveData(string dataFormID, DataSet ds)
         {
             DataSet set;
