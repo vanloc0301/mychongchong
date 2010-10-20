@@ -352,7 +352,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             if (wexcel != null && dt != null && dt.Rows.Count > 0)
             {
                 //this.txt_厂款号.Text = wexcel.Ckh.ToString();
-                txt_生产单号.Text = wexcel.Scdh.ToString();
+                if (string.IsNullOrEmpty(txt_生产单号.Text.ToString()))
+                {
+                    txt_生产单号.Text = wexcel.Scdh.ToString();
+                }
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 DataView dwbom = dtbom.DefaultView;
                 if (dtbom.Rows.Count > 0)
@@ -1364,8 +1367,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             }
             if (dtck != null && dtck.Rows.Count > 0)
             {
-                if (wckexcel != null)
+                if (wckexcel != null && string.IsNullOrEmpty(txt_生产单号.Text.ToString()))
+                {
                     txt_生产单号.Text = wckexcel.Scdh.ToString();
+                }
                 DataTable dtywck = m_dstAll.Tables["yw_ck"];
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 DataView dwywck = dtywck.DefaultView;
