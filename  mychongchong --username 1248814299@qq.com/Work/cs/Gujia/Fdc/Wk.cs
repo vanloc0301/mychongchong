@@ -951,6 +951,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //t.Start("null");
         }
 
+
         private void GetExcelDataGc(object o)
         {
             GetExcelData(o);
@@ -960,7 +961,16 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             string strhash = "";
             string filename = string.Format("{0}{1}", this.excelCkFilePath, base.GetControlBindValue(this.cbe_文件ck).ToString());
-            strhash = getFilesMD5Hash(filename);
+
+            try
+            {
+                strhash = getFilesMD5Hash(filename);
+            }
+            catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                return;
+            }
             if (strhash == base.GetControlBindValue(this.txt_hash).ToString()) return;
 
             this.Invoke(new System.Action(delegate()
