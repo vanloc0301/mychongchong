@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wk));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pc_bom = new DevExpress.XtraEditors.PanelControl();
             this.gdc_bom = new SkyMap.Net.Gui.Components.SmGridControl();
@@ -728,7 +728,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.splitContainerControl1);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage2.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage2.Text = "导入欠料表excel数据";
             // 
             // splitContainerControl1
@@ -740,7 +740,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.pc_bomexcel);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(367, 288);
+            this.splitContainerControl1.Size = new System.Drawing.Size(771, 548);
             this.splitContainerControl1.SplitterPosition = 354;
             this.toolTipController.SetSuperTip(this.splitContainerControl1, null);
             this.splitContainerControl1.TabIndex = 6;
@@ -759,7 +759,7 @@
             this.pc_wcexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_wcexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_wcexcel.Name = "pc_wcexcel";
-            this.pc_wcexcel.Size = new System.Drawing.Size(332, 284);
+            this.pc_wcexcel.Size = new System.Drawing.Size(350, 544);
             this.toolTipController.SetSuperTip(this.pc_wcexcel, null);
             this.pc_wcexcel.TabIndex = 1;
             // 
@@ -825,10 +825,10 @@
             this.gdc_bomexcel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gdc_bomexcel.EmbeddedNavigator.Name = "";
             this.gdc_bomexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gdc_bomexcel.Location = new System.Drawing.Point(2, -40);
+            this.gdc_bomexcel.Location = new System.Drawing.Point(2, 220);
             this.gdc_bomexcel.MainView = this.gv_bomexcel;
             this.gdc_bomexcel.Name = "gdc_bomexcel";
-            this.gdc_bomexcel.Size = new System.Drawing.Size(328, 322);
+            this.gdc_bomexcel.Size = new System.Drawing.Size(346, 322);
             this.gdc_bomexcel.TabIndex = 5;
             this.gdc_bomexcel.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_bomexcel});
@@ -976,9 +976,9 @@
             // 
             this.gdc_wcexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode4.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.gdc_wcexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode4});
+            gridLevelNode1});
             this.gdc_wcexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcexcel.MainView = this.gv_wcexcel;
             this.gdc_wcexcel.Name = "gdc_wcexcel";
@@ -1063,7 +1063,7 @@
             this.pc_bomexcel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pc_bomexcel.Location = new System.Drawing.Point(0, 0);
             this.pc_bomexcel.Name = "pc_bomexcel";
-            this.pc_bomexcel.Size = new System.Drawing.Size(21, 284);
+            this.pc_bomexcel.Size = new System.Drawing.Size(407, 544);
             this.toolTipController.SetSuperTip(this.pc_bomexcel, null);
             this.pc_bomexcel.TabIndex = 2;
             // 
@@ -1075,7 +1075,7 @@
             this.pc_cmdexcel.Dock = System.Windows.Forms.DockStyle.Top;
             this.pc_cmdexcel.Location = new System.Drawing.Point(2, 2);
             this.pc_cmdexcel.Name = "pc_cmdexcel";
-            this.pc_cmdexcel.Size = new System.Drawing.Size(17, 31);
+            this.pc_cmdexcel.Size = new System.Drawing.Size(403, 31);
             this.toolTipController.SetSuperTip(this.pc_cmdexcel, null);
             this.pc_cmdexcel.TabIndex = 11;
             // 
@@ -1116,7 +1116,7 @@
             this.smGridControl1.Location = new System.Drawing.Point(2, 2);
             this.smGridControl1.MainView = this.smGridView1;
             this.smGridControl1.Name = "smGridControl1";
-            this.smGridControl1.Size = new System.Drawing.Size(17, 280);
+            this.smGridControl1.Size = new System.Drawing.Size(403, 540);
             this.smGridControl1.TabIndex = 10;
             this.smGridControl1.UseEmbeddedNavigator = true;
             this.smGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1519,9 +1519,9 @@
             // 
             this.gdc_wcckexcel.EmbeddedNavigator.Name = "";
             this.gdc_wcckexcel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.gdc_wcckexcel.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.gdc_wcckexcel.Location = new System.Drawing.Point(2, 57);
             this.gdc_wcckexcel.MainView = this.gv_wcckexcel;
             this.gdc_wcckexcel.Name = "gdc_wcckexcel";
@@ -1986,9 +1986,9 @@
             // 
             this.smGridControl2.EmbeddedNavigator.Name = "";
             this.smGridControl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.smGridControl2.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode3});
             this.smGridControl2.Location = new System.Drawing.Point(2, 57);
             this.smGridControl2.MainView = this.smCardView1;
             this.smGridControl2.Name = "smGridControl2";
@@ -2699,7 +2699,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage4.Text = "物控已审核数据";
             // 
             // gdc_ck
@@ -2714,7 +2714,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
+            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2769,6 +2769,7 @@
             this.col序号2.Caption = "序号";
             this.col序号2.FieldName = "序号";
             this.col序号2.Name = "col序号2";
+            this.col序号2.OptionsColumn.AllowEdit = false;
             this.col序号2.Visible = true;
             this.col序号2.VisibleIndex = 0;
             // 
@@ -2827,6 +2828,7 @@
             this.col供应商2.Caption = "供应商";
             this.col供应商2.FieldName = "供应商";
             this.col供应商2.Name = "col供应商2";
+            this.col供应商2.OptionsColumn.AllowEdit = false;
             this.col供应商2.Visible = true;
             this.col供应商2.VisibleIndex = 6;
             // 
@@ -2835,6 +2837,7 @@
             this.col收货数量1.Caption = "收货数量";
             this.col收货数量1.FieldName = "收货数量";
             this.col收货数量1.Name = "col收货数量1";
+            this.col收货数量1.OptionsColumn.AllowEdit = false;
             this.col收货数量1.Visible = true;
             this.col收货数量1.VisibleIndex = 7;
             // 
@@ -2843,6 +2846,7 @@
             this.col收货日期1.Caption = "收货日期";
             this.col收货日期1.FieldName = "收货日期";
             this.col收货日期1.Name = "col收货日期1";
+            this.col收货日期1.OptionsColumn.AllowEdit = false;
             this.col收货日期1.Visible = true;
             this.col收货日期1.VisibleIndex = 8;
             // 
@@ -2851,6 +2855,7 @@
             this.col标注.Caption = "标注";
             this.col标注.FieldName = "标注";
             this.col标注.Name = "col标注";
+            this.col标注.OptionsColumn.AllowEdit = false;
             this.col标注.Visible = true;
             this.col标注.VisibleIndex = 9;
             // 
@@ -2860,6 +2865,7 @@
             this.col是否标色.ColumnEdit = this.repositoryItemCheckEdit1;
             this.col是否标色.FieldName = "是否标色";
             this.col是否标色.Name = "col是否标色";
+            this.col是否标色.OptionsColumn.AllowEdit = false;
             this.col是否标色.Visible = true;
             this.col是否标色.VisibleIndex = 10;
             // 
@@ -2875,6 +2881,7 @@
             this.col是否审核.ColumnEdit = this.repositoryItemCheckEdit2;
             this.col是否审核.FieldName = "是否审核";
             this.col是否审核.Name = "col是否审核";
+            this.col是否审核.OptionsColumn.AllowEdit = false;
             this.col是否审核.Visible = true;
             this.col是否审核.VisibleIndex = 11;
             // 
@@ -2908,7 +2915,7 @@
             // 
             this.xtraTabPage5.Controls.Add(this.txtTx);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage5.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage5.Text = "提醒";
             // 
             // txtTx
