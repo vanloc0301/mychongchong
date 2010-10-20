@@ -69,7 +69,7 @@
             Control.CheckForIllegalCrossThreadCalls = true;
             commandLineArgs = args;
             bool flag = false;
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.SetCompatibleTextRenderingDefault(false);
             SplashScreenForm.SetCommandLineArgs(args);
             foreach (string str in SplashScreenForm.GetParameterList())
             {
