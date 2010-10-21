@@ -1532,7 +1532,13 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             }
                             else if (RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
                             {
-
+                                dwbom = new DataView(dtbom);
+                                dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
+                                if (dwbom.Count == 1)
+                                {
+                                    dwbom[0].Delete();
+                                    dtbom.Rows[0].Delete();
+                                }
                             }
                             else
                             {
@@ -1793,7 +1799,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             if (dr != null)
             {
                 int icktoday, ick;
-                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())))
+                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())) > (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())))
                 {
                     if (icktoday > 1)
                     {
