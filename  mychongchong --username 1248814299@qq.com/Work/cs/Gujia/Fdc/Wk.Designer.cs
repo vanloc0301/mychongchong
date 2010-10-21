@@ -1718,6 +1718,7 @@
             this.gv_cktotay.OptionsView.RowAutoHeight = true;
             this.gv_cktotay.PaintStyleName = "Skin";
             this.gv_cktotay.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gv_cktotay.DoubleClick += new System.EventHandler(this.gv_cktotay_DoubleClick);
             this.gv_cktotay.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.smGridView4_RowCellStyle);
             // 
             // colid5
@@ -2698,7 +2699,7 @@
             // 
             this.xtraTabPage4.Controls.Add(this.gdc_ck);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(367, 288);
+            this.xtraTabPage4.Size = new System.Drawing.Size(771, 548);
             this.xtraTabPage4.Text = "物控已审核数据";
             // 
             // gdc_ck
@@ -2713,7 +2714,7 @@
             this.repositoryItemMemoEdit3,
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2});
-            this.gdc_ck.Size = new System.Drawing.Size(367, 288);
+            this.gdc_ck.Size = new System.Drawing.Size(771, 548);
             this.gdc_ck.TabIndex = 10;
             this.gdc_ck.UseEmbeddedNavigator = true;
             this.gdc_ck.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
