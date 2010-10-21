@@ -969,7 +969,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             {
                 strhash = getFilesMD5Hash(filename);
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
                 return;
@@ -1163,7 +1163,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                 this.Save();
                             }
                             finally
-                            {  
+                            {
                                 gdc_cktoday.DataSource = m_dstAll;
                                 gdc_cktoday.DataMember = "yw_cktoday";
                                 gv_cktotay.RefreshData();
@@ -1175,7 +1175,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     }
                     catch//ExcelException e)
                     {
-                      //  MessageBox.Show(e.Message.ToString());
+                        //  MessageBox.Show(e.Message.ToString());
                     }
                 }
 
@@ -1283,7 +1283,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             //e.Column.VisibleIndex % 2 == 0 && e.RowHandle % 2 == 1))
             try
             {
-                DataRow dr=((DevExpress.XtraGrid.Views.Grid.GridView)(sender)).GetDataRow(e.RowHandle);
+                DataRow dr = ((DevExpress.XtraGrid.Views.Grid.GridView)(sender)).GetDataRow(e.RowHandle);
                 String tmp = dr["是否标色"].ToString();
                 String tmp1 = dr["是否审核"].ToString();
                 string tmpwlmc = dr["物料名称"].ToString();
@@ -1376,7 +1376,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 DataTable dtbom = m_dstAll.Tables["yw_bom"];
                 DataView dwywck = dtywck.DefaultView;
                 DataView dwbom = dtbom.DefaultView;
-                DataView dwywcktoday = dtck.DefaultView;
+                DataView dwywcktoday = dtcktoday.DefaultView;
                 Hashtable ht = new Hashtable();
                 ht.Clear();
                 for (int i = 0; i < dtck.Rows.Count; i++)
@@ -1384,20 +1384,22 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     bsh = false;
                     if (bool.TryParse(dtck.Rows[i]["是否审核"].ToString(), out bsh))
                     {
-                        tmpwlmc = dtck.Rows[i]["物料名称"].ToString().Trim();
-                        tmpys = dtck.Rows[i]["颜色"].ToString().Trim();
-                        tmpzrl = dtck.Rows[i]["总用量"].ToString().Trim();
+                        tmpwlmc = dtck.Rows[i]["物料名称"].ToString();
+                        tmpys = dtck.Rows[i]["颜色"].ToString();
+                        tmpzrl = dtck.Rows[i]["总用量"].ToString();
                         if (bsh)
                         {
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
 
-                            if (RowCount(dwywcktoday, tmpwlmc, tmpzrl, tmpys) > RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
+                            int icktoday, ick;
+                            if ((icktoday = RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl)) > (ick = RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
                             {
                                 YsCkAddRow(dtywck, i);
                             }
-                            else if (RowCount(dwywcktoday, tmpwlmc, tmpzrl, tmpys) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
+                            else if (RowCount(dwywcktoday, tmpwlmc,  tmpys,tmpzrl) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
                             {
+                                dwbom = new DataView(dtbom);
                                 dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                                 if (dwbom.Count == 1)
                                 {
@@ -1409,24 +1411,25 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             {
                                 MessageBox.Show(string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}',只允许已审核表中的记录小于或等于excel中读取的记录", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString())));
                                 return;
-                            } 
+                            }
                         }
                         else
                         {
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
-                            int icktoday,ick;
-                            if ((icktoday = RowCount(dwywcktoday, tmpwlmc, tmpzrl, tmpys)) > (ick=RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
+                            int icktoday, ick;
+                            if ((icktoday = RowCount(dwywcktoday, tmpwlmc,  tmpys,tmpzrl)) > (ick = RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
                             {
-                                string strfilter = string.Format("序号={3}|物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()), DvRowFilter(dwbom[0]["序号"].ToString()));
+                                string strfilter = string.Format("物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                                 if (!ht.Contains(strfilter))
                                 {
-                                    ht.Add(strfilter, icktoday-ick);
+                                    ht.Add(strfilter, icktoday - ick);
                                 }
                                 else
                                 {
-                                    ht[strfilter] = int.Parse(ht[strfilter].ToString()) - 1;
+                                    ht[strfilter] = icktoday - ick;// int.Parse(ht[strfilter].ToString()) - 1;
                                 }
+                                dwbom = new DataView(dtbom);
                                 dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                                 if (dwbom.Count == 1)
                                 {
@@ -1434,7 +1437,32 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
                                     dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
                                     dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
-                                    dwbom[0]["物控备注"] = string.Format("存在{0}条相同的记录,{1}", ht[strfilter].ToString(), dwbom[0]["物控备注"].ToString());
+                                    int istart, iend;
+                                    if (int.Parse(ht[strfilter].ToString()) > 1)
+                                    {
+                                        istart = dwbom[0]["物控备注"].ToString().IndexOf("存在");
+                                        iend = dwbom[0]["物控备注"].ToString().IndexOf("条相同的记录");
+
+                                        if (istart != -1 && iend != -1 && iend > istart)
+                                        {
+                                            dwbom[0]["物控备注"] = dwbom[0]["物控备注"].ToString().Replace(dwbom[0]["物控备注"].ToString().Substring(istart + "存在".Length, iend - istart - "存在".Length), ht[strfilter].ToString());
+                                        }
+                                        else
+                                        {
+                                            dwbom[0]["物控备注"] = string.Format("存在{0}条相同的记录,{1}", ht[strfilter].ToString(), dwbom[0]["物控备注"].ToString());
+                                        }
+                                    }
+                                    else
+                                    {
+                                        istart = dwbom[0]["物控备注"].ToString().IndexOf("存在");
+                                        iend = dwbom[0]["物控备注"].ToString().IndexOf("条相同的记录");
+
+                                        if (istart != -1 && iend != -1 && iend > istart)
+                                        {
+                                            dwbom[0]["物控备注"] = dwbom[0]["物控备注"].ToString().Replace(dwbom[0]["物控备注"].ToString().Substring(istart + "存在".Length, iend - istart - "存在".Length), "1");
+                                            dwbom[0]["物控备注"] = dwbom[0]["物控备注"].ToString().Replace("存在1条相同的记录,", "");
+                                        }                                     
+                                    }
                                 }
                                 else if (dwbom.Count == 0)
                                 {
@@ -1447,7 +1475,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dr["供应商"] = dtck.Rows[i]["供应商"].ToString();
                                     dr["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
                                     dr["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
-                                    dr["物控备注"] = string.Format("存在{0}条相同的记录", ht[strfilter].ToString());
+                                    if (int.Parse(ht[strfilter].ToString()) > 1)
+                                    {
+                                        dr["物控备注"] = string.Format("存在{0}条相同的记录", ht[strfilter].ToString());
+                                    }
                                     dtbom.Rows.Add(dr);
                                 }
                                 else
@@ -1456,15 +1487,15 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     break;
                                 }
                             }
-                            else if (RowCount(dwywcktoday, tmpwlmc, tmpzrl, tmpys) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
+                            else if (RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
                             {
-                              
+
                             }
                             else
                             {
                                 MessageBox.Show(string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}',只允许已审核表中的记录小于或等于excel中读取的记录", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString())));
                                 return;
-                            }       
+                            }
 
                         }
                     }
@@ -1527,10 +1558,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             dtywck.Rows.Add(dr);
         }
 
-        private int RowCount(DataView dv,string wlmc, string ys, string zrl)
+        private int RowCount(DataView dv, string wlmc, string ys, string zrl)
         {
-            dv.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(wlmc), DvRowFilter(ys), DvRowFilter(zrl));
-            return dv.Count;
+            DataView ddv = new DataView(dv.Table);
+            ddv.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(wlmc), DvRowFilter(ys), DvRowFilter(zrl));
+            return ddv.Count;
         }
         /// <summary>
         /// 
@@ -1550,13 +1582,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     newDr.ItemArray = oldDr.ItemArray;
                     tmpdt.ImportRow(oldDr);
                 }
-                DataView dwck = tmpdt.DefaultView;
+                DataView dwck;// = tmpdt.DefaultView;
 
                 for (int i = 0; i < dtbom.Rows.Count; i++)
                 {
                     //=====================
                     if (string.IsNullOrEmpty(dtbom.Rows[i]["物料名称"].ToString().Trim())) continue;
                     if (string.IsNullOrEmpty(dtbom.Rows[i]["总用量"].ToString().Trim())) continue;
+                    dwck = new DataView(tmpdt);
                     dwck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtbom.Rows[i]["物料名称"].ToString()), DvRowFilter(dtbom.Rows[i]["颜色"].ToString()), DvRowFilter(dtbom.Rows[i]["总用量"].ToString()));
                     if (dwck.Count >= 1)
                     {
@@ -1637,16 +1670,16 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
         {
             try
             {
-                if (base.GetControlBindValue(this.cbe_文件ck) != null && base.GetControlBindValue(this.cbe_文件ck).ToString().Trim()!="")
+                if (base.GetControlBindValue(this.cbe_文件ck) != null && base.GetControlBindValue(this.cbe_文件ck).ToString().Trim() != "")
                 {
                     if (brun == false)
                     {
                         Thread t = new Thread(new ParameterizedThreadStart(this.GetExcelDataGc));
                         t.Start("null");
-                        brun = true;                        
+                        brun = true;
                     }
                 }
-                
+
             }
             finally
             {
