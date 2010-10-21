@@ -1434,7 +1434,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dwbom[0]["供应商"] = dtck.Rows[i]["供应商"].ToString();
                                     dwbom[0]["收货数量"] = dtck.Rows[i]["来料数量"].ToString();
                                     dwbom[0]["收货日期"] = dtck.Rows[i]["来料日期"].ToString();
-                                    dwbom[0]["物控备注"] = string.Format("存在{0}条相同的记录", ht[strfilter].ToString());
+                                    dwbom[0]["物控备注"] = string.Format("存在{0}条相同的记录,{1}", ht[strfilter].ToString(), dwbom[0]["物控备注"].ToString());
                                 }
                                 else if (dwbom.Count == 0)
                                 {
@@ -1558,7 +1558,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                     if (string.IsNullOrEmpty(dtbom.Rows[i]["物料名称"].ToString().Trim())) continue;
                     if (string.IsNullOrEmpty(dtbom.Rows[i]["总用量"].ToString().Trim())) continue;
                     dwck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtbom.Rows[i]["物料名称"].ToString()), DvRowFilter(dtbom.Rows[i]["颜色"].ToString()), DvRowFilter(dtbom.Rows[i]["总用量"].ToString()));
-                    if (dwck.Count == 1)
+                    if (dwck.Count >= 1)
                     {
 
                     }
