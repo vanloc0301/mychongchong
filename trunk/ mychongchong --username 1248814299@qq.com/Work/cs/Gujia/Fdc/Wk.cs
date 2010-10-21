@@ -1799,7 +1799,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             if (dr != null)
             {
                 int icktoday, ick;
-                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())) > (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())))
+                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())))
                 {
                     if (icktoday > 1)
                     {
@@ -1807,23 +1807,31 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         {
                             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
                             string str;
-                            str = string.Format("您确认要再次添加物料名称为:{1},颜色为{2},总用量为{3}的记录吗？\r\n物料表中有{0}条记录;\r\n已审表中发现有{1}条记录;\r\n", icktoday, dr["物料名称"], dr["颜色"], dr["总用量"], ick);
+                            str = string.Format("您确认要再次添加物料名称为:{1},颜色为{2},总用量为{3}的记录吗？\r\n物料表中有{0}条记录;\r\n已审表中发现有{4}条记录;\r\n", icktoday, dr["物料名称"], dr["颜色"], dr["总用量"], ick);
                             DialogResult tmpdiag = MessageBox.Show(str, "提醒", messButton);
                             if (tmpdiag == DialogResult.OK)
                             {
-                                DataRow djr = m_dstAll.Tables["yw_ck"].NewRow();
-                                djr["序号"] = dr["序号"].ToString();
-                                djr["物料名称"] = dr["物料名称"].ToString();
-                                djr["颜色"] = dr["颜色"].ToString();
-                                djr["总用量"] = dr["总用量"].ToString();
-                                djr["单位"] = dr["单位"].ToString();
-                                djr["供应商"] = dr["供应商"].ToString();
-                                djr["收货数量"] = dr["来料数量"].ToString();
-                                djr["收货日期"] = dr["来料日期"].ToString();
-                                djr["配色"] = dr["配色"].ToString();
-                                djr["是否标色"] = 1;
-                                djr["是否审核"] = 1;
-                                m_dstAll.Tables["yw_ck"].Rows.Add(djr);
+                                if (icktoday > ick)
+                                {
+                                    DataRow djr = m_dstAll.Tables["yw_ck"].NewRow();
+                                    djr["序号"] = dr["序号"].ToString();
+                                    djr["物料名称"] = dr["物料名称"].ToString();
+                                    djr["颜色"] = dr["颜色"].ToString();
+                                    djr["总用量"] = dr["总用量"].ToString();
+                                    djr["单位"] = dr["单位"].ToString();
+                                    djr["供应商"] = dr["供应商"].ToString();
+                                    djr["收货数量"] = dr["来料数量"].ToString();
+                                    djr["收货日期"] = dr["来料日期"].ToString();
+                                    djr["配色"] = dr["配色"].ToString();
+                                    djr["是否标色"] = 1;
+                                    djr["是否审核"] = 1;
+                                    m_dstAll.Tables["yw_ck"].Rows.Add(djr);
+                                    return;
+                                }
+                                else if(icktoday == ick)
+                                {
+                                    MessageBox.Show("因为都已经审核过了，所以不能添加,\r\n" + str);
+                                }
                             }                          
                         }
                     }
