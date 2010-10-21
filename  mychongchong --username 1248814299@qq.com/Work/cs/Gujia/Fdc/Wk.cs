@@ -1161,7 +1161,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dr["标注"] = dtcktodaydr["标注"];
                                     //===============做标记看是否审核，对于含重复记录的不作判断，以后着色的时候，用了特别的颜色标示重复的记录;
 
-                                    if ((icktoday = RowCount(dtck.DefaultView, dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView,dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())))
+                                    if ((icktoday = RowCount(dtck.DefaultView, dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())))
                                     {
                                         if (icktoday == 1 && ick == 1)
                                             dr["是否审核"] = 1;
@@ -1170,14 +1170,14 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     }
                                     else
                                     {
-                                        MessageBox.Show(string.Format("物料表中有{0}条，物料名称为:{1},颜色为{2},总用量为{3}的记录，\r\n但是在已审表中发现有{1}条,\r\n请根据实际情况解决此不合法的规则[已审表的相同物料的记录数>物料表的记录数",icktoday,dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"],ick),"警告");
+                                        MessageBox.Show(string.Format("物料表中有{0}条，物料名称为:{1},颜色为{2},总用量为{3}的记录，\r\n但是在已审表中发现有{1}条,\r\n请根据实际情况解决此不合法的规则[已审表的相同物料的记录数>物料表的记录数", icktoday, dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"], ick), "警告");
                                     }
                                     //===============
-                                    
+
                                     dr["是否标色"] = dtcktodaydr["是否标色"];
                                     dtcktoday.Rows.Add(dr);
                                 }
-                           
+
                                 this.txt_hash.Text = strhash;
                                 this.Save();
                             }
@@ -1311,19 +1311,22 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 int icktoday, ick;
                 if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, tmpwlmc, tmpys, tmpzrl)) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, tmpwlmc, tmpys, tmpzrl)))
                 {
-                    if (icktoday >1)
+                    if (icktoday > 1)
                     {
-                        e.Appearance.BackColor = Color.Green;
-                        e.Appearance.BackColor2 = Color.Green;
+                        if (!string.IsNullOrEmpty(tmpwlmc))
+                        {
+                            e.Appearance.BackColor = Color.Green;
+                            e.Appearance.BackColor2 = Color.Green;
+                        }
                     }
                     else
                     {
                         Bs(e, tmp, tmp1, tmpwlmc);
-                    } 
+                    }
                 }
-               
 
-               
+
+
             }
             catch
             {
@@ -1789,14 +1792,36 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
             DataRow dr = gvYdk.GetFocusedDataRow();
             if (dr != null)
             {
+                int icktoday, ick;
+                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, dr["物料名称"].ToString(), dr["颜色"].ToString(), dr["总用量"].ToString())))
+                {
+                    if (icktoday > 1)
+                    {
+                        if (!string.IsNullOrEmpty(tmpwlmc))
+                        {
+                            DataRow djr = m_dstAll.Tables["yw_ck"].NewRow();
+                            djr["序号"] = dr["序号"].ToString();
+                            djr["物料名称"] = dr["物料名称"].ToString();
+                            djr["颜色"] = dr["颜色"].ToString();
+                            djr["总用量"] = dr["总用量"].ToString();
+                            djr["单位"] = dr["单位"].ToString();
+                            djr["供应商"] = dr["供应商"].ToString();
+                            djr["收货数量"] = dr["来料数量"].ToString();
+                            djr["收货日期"] = dr["来料日期"].ToString();
+                            djr["配色"] = dr["配色"].ToString();
+                            djr["是否标色"] = 1;
+                            djr["是否审核"] = 1;
+                            m_dstAll.Tables["yw_ck"].Rows.Add(djr);
+                        }
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+
                 
-                    DataRow djr = m_dstAll.Tables["yw_ck"].NewRow();
-                    djr["地址"] = dr["座落"];
-                    djr["建筑面积"] = dr["建筑面积"];
-                    djr["套内面积"] = dr["套内面积"];
-                    djr["土地面积"] = dr["土地面积"];                 
-                    m_dstAll.Tables["yw_yddj"].Rows.Add(djr);               
-             
+
             }
         }
 
