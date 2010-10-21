@@ -1161,7 +1161,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dr["标注"] = dtcktodaydr["标注"];
                                     //===============做标记看是否审核，对于含重复记录的不作判断，以后着色的时候，用了特别的颜色标示重复的记录;
 
-                                    if ((icktoday = RowCount(dtck.DefaultView, dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"])) >= (ick = RowCount(dwywck = new DataView(m_dstAll.Tables["yw_ck"]),dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"])))
+                                    if ((icktoday = RowCount(dtck.DefaultView, dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView,dtcktodaydr["物料名称"].ToString(), dtcktodaydr["颜色"].ToString(), dtcktodaydr["总用量"].ToString())))
                                     {
                                         if (icktoday == 1 && ick == 1)
                                             dr["是否审核"] = 1;
@@ -1308,8 +1308,8 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 string tmpwlmc = dr["物料名称"].ToString();
                 string tmpys = dr["颜色"].ToString();
                 string tmpzrl = dr["总用量"].ToString();
-
-                if ((icktoday = RowCount(new DataView(m_dstAll.Tables["yw_cktoday"]), tmpwlmc, tmpys, tmpzrl)) >= (ick = RowCount(new DataView(m_dstAll.Tables["yw_ck"]), tmpwlmc, tmpys, tmpzrl)))
+                int icktoday, ick;
+                if ((icktoday = RowCount(m_dstAll.Tables["yw_cktoday"].DefaultView, tmpwlmc, tmpys, tmpzrl)) >= (ick = RowCount(m_dstAll.Tables["yw_ck"].DefaultView, tmpwlmc, tmpys, tmpzrl)))
                 {
                     if (icktoday >1)
                     {
@@ -1778,6 +1778,26 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
 
             //return the MD5 hash of the file
             return sb.ToString();
+        }
+
+        private void gv_cktotay_DoubleClick(object sender, EventArgs e)
+        {
+            double zj;
+            double dj;
+            double jzmj;
+            double tdmj;
+            DataRow dr = gvYdk.GetFocusedDataRow();
+            if (dr != null)
+            {
+                
+                    DataRow djr = m_dstAll.Tables["yw_ck"].NewRow();
+                    djr["地址"] = dr["座落"];
+                    djr["建筑面积"] = dr["建筑面积"];
+                    djr["套内面积"] = dr["套内面积"];
+                    djr["土地面积"] = dr["土地面积"];                 
+                    m_dstAll.Tables["yw_yddj"].Rows.Add(djr);               
+             
+            }
         }
 
 
