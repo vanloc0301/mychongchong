@@ -1105,11 +1105,12 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                         }
                         if (!string.IsNullOrEmpty(wlmc[0].ToString()))
                         {
+                            dwywck = new DataView(m_dstAll.Tables["yw_ck"]);
                             dwywck.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}' and 是否审核=1", DvRowFilter(wlmc[0].ToString()), DvRowFilter(ys[0].ToString()), DvRowFilter(zrl[0].ToString()));
                             if (dwywck.Count > 0)
                             {
-                                dr["是否审核"] = 1;
-                                dr["是否标色"] = 1;
+                                //dr["是否审核"] = 1;
+                                //dr["是否标色"] = 1;
                             }
                             else
                             {
@@ -1142,8 +1143,11 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                 {
                                     dr.Delete();
                                 }
+                                int icktoday, ick;
                                 foreach (DataRow dtcktodaydr in dtck.Rows)
                                 {
+                                    icktoday = 0;
+                                    ick = 0;
                                     DataRow dr = dtcktoday.NewRow();
                                     dr["序号"] = dtcktodaydr["序号"];
                                     dr["物料名称"] = dtcktodaydr["物料名称"];
@@ -1155,10 +1159,25 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                     dr["来料日期"] = dtcktodaydr["来料日期"];
                                     dr["配色"] = dtcktodaydr["配色"];
                                     dr["标注"] = dtcktodaydr["标注"];
-                                    dr["是否审核"] = dtcktodaydr["是否审核"];
+                                    //===============做标记看是否审核，对于含重复记录的不作判断，以后着色的时候，用了特别的颜色标示重复的记录;
+
+                                    if ((icktoday = RowCount(dtck.DefaultView, dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"])) >= (ick = RowCount(dwywck = new DataView(m_dstAll.Tables["yw_ck"]),dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"])))
+                                    {
+                                        if (icktoday == 1 && ick == 1)
+                                            dr["是否审核"] = 1;
+                                        else
+                                            dr["是否审核"] = 0;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show(string.Format("物料表中有{0}条，物料名称为:{1},颜色为{2},总用量为{3}的记录，\r\n但是在已审表中发现有{1}条,\r\n请根据实际情况解决此不合法的规则[已审表的相同物料的记录数>物料表的记录数",icktoday,dtcktodaydr["物料名称"], dtcktodaydr["颜色"], dtcktodaydr["总用量"],ick),"警告");
+                                    }
+                                    //===============
+                                    
                                     dr["是否标色"] = dtcktodaydr["是否标色"];
                                     dtcktoday.Rows.Add(dr);
                                 }
+                           
                                 this.txt_hash.Text = strhash;
                                 this.Save();
                             }
@@ -1395,9 +1414,10 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             int icktoday, ick;
                             if ((icktoday = RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl)) > (ick = RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
                             {
-                                YsCkAddRow(dtywck, i);
+                                if (icktoday == 1 && ick == 0)
+                                    YsCkAddRow(dtywck, i);
                             }
-                            else if (RowCount(dwywcktoday, tmpwlmc,  tmpys,tmpzrl) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
+                            else if (RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl) == RowCount(dwywck, tmpwlmc, tmpys, tmpzrl))
                             {
                                 dwbom = new DataView(dtbom);
                                 dwbom.RowFilter = string.Format("物料名称='{0}' and 颜色='{1}' and 总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
@@ -1418,7 +1438,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                             if (string.IsNullOrEmpty(dtck.Rows[i]["物料名称"].ToString().Trim())) continue;
                             if (string.IsNullOrEmpty(dtck.Rows[i]["总用量"].ToString().Trim())) continue;
                             int icktoday, ick;
-                            if ((icktoday = RowCount(dwywcktoday, tmpwlmc,  tmpys,tmpzrl)) > (ick = RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
+                            if ((icktoday = RowCount(dwywcktoday, tmpwlmc, tmpys, tmpzrl)) > (ick = RowCount(dwywck, tmpwlmc, tmpys, tmpzrl)))
                             {
                                 string strfilter = string.Format("物料名称='{0}'|颜色='{1}'|总用量='{2}'", DvRowFilter(dtck.Rows[i]["物料名称"].ToString()), DvRowFilter(dtck.Rows[i]["颜色"].ToString()), DvRowFilter(dtck.Rows[i]["总用量"].ToString()));
                                 if (!ht.Contains(strfilter))
@@ -1461,7 +1481,7 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                                         {
                                             dwbom[0]["物控备注"] = dwbom[0]["物控备注"].ToString().Replace(dwbom[0]["物控备注"].ToString().Substring(istart + "存在".Length, iend - istart - "存在".Length), "1");
                                             dwbom[0]["物控备注"] = dwbom[0]["物控备注"].ToString().Replace("存在1条相同的记录,", "");
-                                        }                                     
+                                        }
                                     }
                                 }
                                 else if (dwbom.Count == 0)
