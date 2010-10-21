@@ -1708,7 +1708,6 @@
             this.col是否标色1,
             this.col是否审核1});
             this.gv_cktotay.GridControl = this.gdc_cktoday;
-            this.gv_cktotay.GroupCount = 3;
             this.gv_cktotay.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gv_cktotay.Name = "gv_cktotay";
             this.gv_cktotay.OptionsMenu.EnableColumnMenu = false;
@@ -1718,10 +1717,6 @@
             this.gv_cktotay.OptionsView.EnableAppearanceOddRow = true;
             this.gv_cktotay.OptionsView.RowAutoHeight = true;
             this.gv_cktotay.PaintStyleName = "Skin";
-            this.gv_cktotay.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.col物料名称4, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.col颜色4, DevExpress.Data.ColumnSortOrder.Ascending),
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.col总用量4, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gv_cktotay.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gv_cktotay.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.smGridView4_RowCellStyle);
             // 
@@ -1770,7 +1765,7 @@
             this.col颜色4.Name = "col颜色4";
             this.col颜色4.OptionsColumn.AllowEdit = false;
             this.col颜色4.Visible = true;
-            this.col颜色4.VisibleIndex = 1;
+            this.col颜色4.VisibleIndex = 2;
             this.col颜色4.Width = 36;
             // 
             // col配色2
@@ -1780,7 +1775,7 @@
             this.col配色2.Name = "col配色2";
             this.col配色2.OptionsColumn.AllowEdit = false;
             this.col配色2.Visible = true;
-            this.col配色2.VisibleIndex = 1;
+            this.col配色2.VisibleIndex = 3;
             this.col配色2.Width = 36;
             // 
             // col总用量4
@@ -1790,7 +1785,7 @@
             this.col总用量4.Name = "col总用量4";
             this.col总用量4.OptionsColumn.AllowEdit = false;
             this.col总用量4.Visible = true;
-            this.col总用量4.VisibleIndex = 2;
+            this.col总用量4.VisibleIndex = 5;
             this.col总用量4.Width = 36;
             // 
             // col单位4
@@ -1800,7 +1795,7 @@
             this.col单位4.Name = "col单位4";
             this.col单位4.OptionsColumn.AllowEdit = false;
             this.col单位4.Visible = true;
-            this.col单位4.VisibleIndex = 2;
+            this.col单位4.VisibleIndex = 4;
             this.col单位4.Width = 36;
             // 
             // col供应商4
@@ -1810,7 +1805,7 @@
             this.col供应商4.Name = "col供应商4";
             this.col供应商4.OptionsColumn.AllowEdit = false;
             this.col供应商4.Visible = true;
-            this.col供应商4.VisibleIndex = 3;
+            this.col供应商4.VisibleIndex = 6;
             this.col供应商4.Width = 36;
             // 
             // col来料数量2
@@ -1820,7 +1815,7 @@
             this.col来料数量2.Name = "col来料数量2";
             this.col来料数量2.OptionsColumn.AllowEdit = false;
             this.col来料数量2.Visible = true;
-            this.col来料数量2.VisibleIndex = 4;
+            this.col来料数量2.VisibleIndex = 7;
             this.col来料数量2.Width = 36;
             // 
             // col来料日期2
@@ -1830,7 +1825,7 @@
             this.col来料日期2.Name = "col来料日期2";
             this.col来料日期2.OptionsColumn.AllowEdit = false;
             this.col来料日期2.Visible = true;
-            this.col来料日期2.VisibleIndex = 5;
+            this.col来料日期2.VisibleIndex = 8;
             this.col来料日期2.Width = 36;
             // 
             // col标注1
@@ -1841,7 +1836,7 @@
             this.col标注1.Name = "col标注1";
             this.col标注1.OptionsColumn.AllowEdit = false;
             this.col标注1.Visible = true;
-            this.col标注1.VisibleIndex = 6;
+            this.col标注1.VisibleIndex = 9;
             this.col标注1.Width = 35;
             // 
             // repositoryItemMemoEdit6
@@ -1855,7 +1850,7 @@
             this.col是否标色1.FieldName = "是否标色";
             this.col是否标色1.Name = "col是否标色1";
             this.col是否标色1.Visible = true;
-            this.col是否标色1.VisibleIndex = 7;
+            this.col是否标色1.VisibleIndex = 10;
             this.col是否标色1.Width = 33;
             // 
             // repositoryItemCheckEdit5
@@ -1871,7 +1866,7 @@
             this.col是否审核1.FieldName = "是否审核";
             this.col是否审核1.Name = "col是否审核1";
             this.col是否审核1.Visible = true;
-            this.col是否审核1.VisibleIndex = 8;
+            this.col是否审核1.VisibleIndex = 11;
             this.col是否审核1.Width = 67;
             // 
             // repositoryItemCheckEdit6
