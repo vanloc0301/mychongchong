@@ -1306,31 +1306,51 @@ FROM YW_bom where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FROM
                 String tmp = dr["是否标色"].ToString();
                 String tmp1 = dr["是否审核"].ToString();
                 string tmpwlmc = dr["物料名称"].ToString();
-                //if (e.RowHandle != smGridView4.FocusedRowHandle)
-                //{
-                if (!string.IsNullOrEmpty(tmp) && tmp == "True" && !string.IsNullOrEmpty(tmp1) && tmp1 == "True" && !string.IsNullOrEmpty(tmpwlmc))
+                string tmpys = dr["颜色"].ToString();
+                string tmpzrl = dr["总用量"].ToString();
+
+                if ((icktoday = RowCount(new DataView(m_dstAll.Tables["yw_cktoday"]), tmpwlmc, tmpys, tmpzrl)) >= (ick = RowCount(new DataView(m_dstAll.Tables["yw_ck"]), tmpwlmc, tmpys, tmpzrl)))
                 {
-                    e.Appearance.BackColor = Color.SkyBlue;
-                    e.Appearance.BackColor2 = Color.SkyBlue;
-                    return;
+                    if (icktoday >1)
+                    {
+                        e.Appearance.BackColor = Color.Green;
+                        e.Appearance.BackColor2 = Color.Green;
+                    }
+                    else
+                    {
+                        Bs(e, tmp, tmp1, tmpwlmc);
+                    } 
                 }
-                if (!string.IsNullOrEmpty(tmp) && tmp == "True" && ((!string.IsNullOrEmpty(tmp1) && tmp1 == "False") || (string.IsNullOrEmpty(tmp1))) && !string.IsNullOrEmpty(tmpwlmc))
-                {
-                    e.Appearance.BackColor = Color.Orange;
-                    e.Appearance.BackColor2 = Color.Orange;
-                    return;
-                }
-                if (!string.IsNullOrEmpty(tmp) && tmp == "True" && string.IsNullOrEmpty(tmpwlmc))
-                {
-                    e.Appearance.BackColor = Color.Red;
-                    e.Appearance.BackColor2 = Color.Red;
-                    return;
-                }
+               
+
+               
             }
             catch
             {
             }
-            //}
+
+        }
+
+        private static void Bs(RowCellStyleEventArgs e, String tmp, String tmp1, string tmpwlmc)
+        {
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && !string.IsNullOrEmpty(tmp1) && tmp1 == "True" && !string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.SkyBlue;
+                e.Appearance.BackColor2 = Color.SkyBlue;
+
+            }
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && ((!string.IsNullOrEmpty(tmp1) && tmp1 == "False") || (string.IsNullOrEmpty(tmp1))) && !string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.Orange;
+                e.Appearance.BackColor2 = Color.Orange;
+
+            }
+            if (!string.IsNullOrEmpty(tmp) && tmp == "True" && string.IsNullOrEmpty(tmpwlmc))
+            {
+                e.Appearance.BackColor = Color.Red;
+                e.Appearance.BackColor2 = Color.Red;
+
+            }
         }
 
         /// <summary>
