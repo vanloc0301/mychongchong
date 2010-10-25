@@ -1,0 +1,1 @@
+for %%s in (*.dll)  do  "C:\Program Files\Microsoft SDKs\Windows\v7.0A\Bin\gacutil.exe" -i %%s >>1.txt
