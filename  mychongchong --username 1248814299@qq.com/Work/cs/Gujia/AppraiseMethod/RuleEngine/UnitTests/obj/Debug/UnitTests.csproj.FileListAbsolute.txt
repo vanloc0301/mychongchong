@@ -1,9 +1,0 @@
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\UnitTests.dll
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\UnitTests.pdb
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\nunit.framework.dll
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\RuleEngine.dll
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\RuleEngine.pdb
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\bin\Debug\nunit.framework.xml
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\obj\Debug\UnitTests.dll
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\UnitTests\obj\Debug\UnitTests.pdb

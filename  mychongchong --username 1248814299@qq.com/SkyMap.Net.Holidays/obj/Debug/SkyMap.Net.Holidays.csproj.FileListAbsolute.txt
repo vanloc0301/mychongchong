@@ -1,8 +1,0 @@
-D:\pg-oa\bin\SkyMap.Net.Holidays.dll
-D:\pg-oa\bin\SkyMap.Net.Holidays.pdb
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Holidays\obj\Debug\ResolveAssemblyReference.cache
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Holidays\obj\Debug\SkyMap.Net.Holidays.dll
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.Holidays\obj\Debug\SkyMap.Net.Holidays.pdb
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Holidays\obj\Debug\ResolveAssemblyReference.cache
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Holidays\obj\Debug\SkyMap.Net.Holidays.dll
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.Holidays\obj\Debug\SkyMap.Net.Holidays.pdb

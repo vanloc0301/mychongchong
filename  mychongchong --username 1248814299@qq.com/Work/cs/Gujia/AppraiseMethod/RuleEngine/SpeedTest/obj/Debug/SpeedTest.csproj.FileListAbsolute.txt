@@ -1,7 +1,0 @@
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\bin\Debug\SpeedTest.exe
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\bin\Debug\SpeedTest.pdb
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\bin\Debug\RuleEngine.dll
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\bin\Debug\RuleEngine.pdb
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\obj\Debug\SpeedTest.exe
-C:\Documents and Settings\Administrator\桌面\SimpleRuleEngine\RuleEngine\SpeedTest\obj\Debug\SpeedTest.pdb

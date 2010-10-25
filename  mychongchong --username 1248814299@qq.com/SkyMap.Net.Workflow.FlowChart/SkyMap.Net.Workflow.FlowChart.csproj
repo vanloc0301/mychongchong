@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>local</ProjectType>
     <ProjectVersion>7.10.3077</ProjectVersion>
@@ -14,9 +15,11 @@
     <OutputType>Library</OutputType>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>0.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <PublishUrl>http://localhost/SkyMap.Net.Workflow.FlowChart/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -29,7 +32,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>true</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -41,8 +43,10 @@
     <NoStdLib>false</NoStdLib>
     <Optimize>false</Optimize>
     <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -54,15 +58,57 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v8.2, Version=8.2.2.0, Culture=neutral, PublicKeyToken=49d90c14d24271b5, processorArchitecture=MSIL" />
+    <Reference Include="AutoUpdate, Version=5.0.3356.17847, Culture=neutral, processorArchitecture=MSIL">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="DevExpress.Data.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=6066d5bd82987292, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\DevExpress.Data.v8.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2, Version=8.2.6.0, Culture=neutral, PublicKeyToken=6066d5bd82987292, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\DevExpress.Utils.v8.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraEditors.v8.2">
       <Name>DevExpress.XtraEditors.v8.2</Name>
     </Reference>
     <Reference Include="DevExpress.XtraGrid.v8.2">
       <Name>DevExpress.XtraGrid.v8.2</Name>
+    </Reference>
+    <Reference Include="SkyMap.Net.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.DAO, Version=5.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.DataForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.DataForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Tools.DataForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Tools.DataForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Tools.Organize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Tools.Organize.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Workflow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Workflow.FlowChartCtl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Workflow.FlowChartCtl.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -144,6 +190,11 @@
     <EmbeddedResource Include="SkyMap.Net.Workflow.FlowChartCtl.SMFlowChart.resources" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
@@ -159,44 +210,11 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoUpdate\AutoUpdate.csproj">
-      <Project>{1A7A97F6-8756-4F51-8372-89411AA20F1C}</Project>
-      <Name>AutoUpdate</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
-      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
-      <Name>SkyMap.Net.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.DAO\SkyMap.Net.DAO.csproj">
-      <Project>{B27F5666-F54C-4422-9B41-0BB6D82E01AE}</Project>
-      <Name>SkyMap.Net.DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.DataForms\SkyMap.Net.DataForms.csproj">
-      <Project>{D849C043-D533-4B5C-87AC-28115B16E539}</Project>
-      <Name>SkyMap.Net.DataForms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Tools.DataForms\SkyMap.Net.Tools.DataForms.csproj">
-      <Project>{BA03235E-F8BD-40DF-91EC-7BEE45D37261}</Project>
-      <Name>SkyMap.Net.Tools.DataForms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Tools.Organize\SkyMap.Net.Tools.Organize.csproj">
-      <Project>{C34E2649-AB76-4837-9CEF-F9F3AABB9C26}</Project>
-      <Name>SkyMap.Net.Tools.Organize</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
-      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
-      <Name>SkyMap.Net.Windows</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Workflow.FlowChartCtl\SkyMap.Net.Workflow.FlowChartCtl.csproj">
-      <Project>{3EACA55A-F034-4E6A-920F-976F9A4AD956}</Project>
-      <Name>SkyMap.Net.Workflow.FlowChartCtl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SkyMap.Net.Workflow\SkyMap.Net.Workflow.csproj">
-      <Project>{59C4907B-30F8-4616-90ED-8A909115771F}</Project>
-      <Name>SkyMap.Net.Workflow</Name>
-    </ProjectReference>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
