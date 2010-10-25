@@ -1,8 +1,0 @@
-D:\pg-oa\bin\SkyMap.Net.DAO.dll
-D:\pg-oa\bin\SkyMap.Net.DAO.pdb
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.DAO\obj\Debug\ResolveAssemblyReference.cache
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.DAO\obj\Debug\SkyMap.Net.DAO.dll
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\SkyMap.Net.DAO\obj\Debug\SkyMap.Net.DAO.pdb
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.DAO\obj\Debug\ResolveAssemblyReference.cache
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.DAO\obj\Debug\SkyMap.Net.DAO.dll
-D:\我的文档\Reflector\Disassembler\AutoUpdate\wc\SkyMap.Net.DAO\obj\Debug\SkyMap.Net.DAO.pdb
