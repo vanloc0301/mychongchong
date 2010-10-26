@@ -108,6 +108,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SkyMap\Net\Criteria\Client\GeneralCriteria.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SkyMap\Net\Criteria\Client\QueryClientHelper.cs">
       <SubType>Code</SubType>
