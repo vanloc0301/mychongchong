@@ -25,8 +25,6 @@
         private PopupContainerControl pcContainer;
         private TextEdit txtPassword;
         private PictureBox pClose;
-        private LabelControl labelControl1;
-        private LabelControl labelControl2;
         private DevExpress.XtraEditors.PopupContainerEdit txtUser;
 
         public UserLogin()
@@ -39,9 +37,15 @@
         {
         }
 
+
+        protected void Save()
+        {
+            this.txtUser.Enabled = true;
+        }
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             this.marqueeProgressBarControl1.Hide();
+
             if (LoggingService.IsInfoEnabled)
             {
                 LoggingService.Info("异步操作完成");
@@ -78,7 +82,7 @@
             {
                 name = "Dialog.UserLogin.Message.NoSelectUser";
             }
-            else if (!OGMService.CheckPassword(editValue.Staff, (string) this.txtPassword.EditValue))
+            else if (!OGMService.CheckPassword(editValue.Staff, (string)this.txtPassword.EditValue))
             {
                 name = "Dialog.UserLogin.Message.PasswordError";
                 this.txtPassword.SelectAll();
@@ -116,8 +120,6 @@
             this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.pClose = new System.Windows.Forms.PictureBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
@@ -134,6 +136,7 @@
             this.txtUser.Properties.PopupControl = this.pcContainer;
             this.txtUser.Size = new System.Drawing.Size(154, 21);
             this.txtUser.TabIndex = 3;
+            this.txtUser.DoubleClick += new System.EventHandler(this.ogmTv_DoubleClick);
             // 
             // pcContainer
             // 
@@ -177,9 +180,9 @@
             // 
             this.marqueeProgressBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.marqueeProgressBarControl1.EditValue = "";
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 283);
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 268);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(497, 14);
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(466, 14);
             this.marqueeProgressBarControl1.TabIndex = 8;
             // 
             // pClose
@@ -196,22 +199,6 @@
             this.pClose.Click += new System.EventHandler(this.pClose_Click);
             this.pClose.MouseHover += new System.EventHandler(this.pClose_MouseHover);
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(120, 98);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(40, 14);
-            this.labelControl1.TabIndex = 10;
-            this.labelControl1.Text = "用户名:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(132, 130);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(28, 14);
-            this.labelControl2.TabIndex = 11;
-            this.labelControl2.Text = "密码:";
-            // 
             // UserLogin
             // 
             this.AcceptButton = this.btOk;
@@ -219,11 +206,9 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleBaseSize = new System.Drawing.Size(6, 15);
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::Properties.Resources.SplashScreen;
+            this.BackgroundImageStore = global::Properties.Resources.评估管理软件登录;
             this.CancelButton = this.btCancel;
-            this.ClientSize = new System.Drawing.Size(497, 297);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl1);
+            this.ClientSize = new System.Drawing.Size(466, 282);
             this.Controls.Add(this.pClose);
             this.Controls.Add(this.marqueeProgressBarControl1);
             this.Controls.Add(this.btCancel);
@@ -334,9 +319,9 @@
         private void ogmTv_HandleCreated(object sender, EventArgs e)
         {
             this.marqueeProgressBarControl1.Show();
-            this.txtUser.Enabled = false;
-            this.btOk.Enabled = false;
-            this.backgroundWorker.DoWork += delegate (object sender1, DoWorkEventArgs e1) {
+            this.btOk.Enabled = false;            
+            this.backgroundWorker.DoWork += delegate(object sender1, DoWorkEventArgs e1)
+            {
                 this.ogmTv.InitOGMTree();
             };
             this.backgroundWorker.RunWorkerAsync();
@@ -346,7 +331,8 @@
         {
             base.OnShown(e);
             BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += delegate (object sender1, DoWorkEventArgs e1) {
+            worker.DoWork += delegate(object sender1, DoWorkEventArgs e1)
+            {
                 try
                 {
                     LoggingService.InfoFormatted("开始异步载入人员部门缓存", new object[0]);
