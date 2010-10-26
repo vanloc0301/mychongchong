@@ -95,6 +95,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SkyMap\Net\FDCMX\FDCMX.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <EmbeddedResource Include="SkyMap.Net.FDCMX.FDCMX.resources" />
     <EmbeddedResource Include="SkyMap.Net.FDCMX.Report_FDCMX.rdlc" />
