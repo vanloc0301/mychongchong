@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelOper", "ExcelOper\ExcelOper.csproj", "{3DED9BCA-1A80-4524-A0AE-46977E630959}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZBPM", "ZBPM.csproj", "{BD566A18-17E2-42AB-9798-A766889FDDD8}"
