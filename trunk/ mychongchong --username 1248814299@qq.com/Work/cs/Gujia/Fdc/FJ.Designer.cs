@@ -604,7 +604,10 @@
             this.txt样点座落 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lbl区镇 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.tblData)).BeginInit();
+            this.gcyddj标准价格 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj逆算 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydfdj标准价格 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydfdj逆算 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tblData.SuspendLayout();
             this.xtb单家.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRjlto.Properties)).BeginInit();
@@ -786,7 +789,7 @@
             this.tblData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblData.Location = new System.Drawing.Point(0, 0);
             this.tblData.SelectedTabPage = this.xtb基本信息;
-            this.tblData.Size = new System.Drawing.Size(828, 710);
+            this.tblData.Size = new System.Drawing.Size(966, 828);
             this.tblData.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtb基本信息,
             this.xtb单家,
@@ -808,41 +811,41 @@
             this.xtb单家.Controls.Add(this.txtRjlfrom);
             this.xtb单家.Controls.Add(this.groupControl1);
             this.xtb单家.Name = "xtb单家";
-            this.xtb单家.Size = new System.Drawing.Size(367, 288);
+            this.xtb单家.Size = new System.Drawing.Size(959, 798);
             this.xtb单家.Text = "单家";
             // 
             // qm_容积率修正其它
             // 
-            this.qm_容积率修正其它.Location = new System.Drawing.Point(484, 372);
+            this.qm_容积率修正其它.Location = new System.Drawing.Point(565, 434);
             this.qm_容积率修正其它.Name = "qm_容积率修正其它";
-            this.qm_容积率修正其它.Size = new System.Drawing.Size(58, 23);
+            this.qm_容积率修正其它.Size = new System.Drawing.Size(68, 27);
             this.qm_容积率修正其它.TabIndex = 158;
             this.qm_容积率修正其它.Text = "其它";
             this.qm_容积率修正其它.Click += new System.EventHandler(this.qm_容积率修正其它_Click);
             // 
             // qm_容积率修正砖木
             // 
-            this.qm_容积率修正砖木.Location = new System.Drawing.Point(408, 372);
+            this.qm_容积率修正砖木.Location = new System.Drawing.Point(476, 434);
             this.qm_容积率修正砖木.Name = "qm_容积率修正砖木";
-            this.qm_容积率修正砖木.Size = new System.Drawing.Size(58, 23);
+            this.qm_容积率修正砖木.Size = new System.Drawing.Size(68, 27);
             this.qm_容积率修正砖木.TabIndex = 157;
             this.qm_容积率修正砖木.Text = "砖木";
             this.qm_容积率修正砖木.Click += new System.EventHandler(this.qm_容积率修正砖木_Click);
             // 
             // qm_容积率修正混合
             // 
-            this.qm_容积率修正混合.Location = new System.Drawing.Point(331, 372);
+            this.qm_容积率修正混合.Location = new System.Drawing.Point(386, 434);
             this.qm_容积率修正混合.Name = "qm_容积率修正混合";
-            this.qm_容积率修正混合.Size = new System.Drawing.Size(58, 23);
+            this.qm_容积率修正混合.Size = new System.Drawing.Size(68, 27);
             this.qm_容积率修正混合.TabIndex = 156;
             this.qm_容积率修正混合.Text = "混合";
             this.qm_容积率修正混合.Click += new System.EventHandler(this.qm_容积率修正混合_Click);
             // 
             // qm_容积率修正钢混
             // 
-            this.qm_容积率修正钢混.Location = new System.Drawing.Point(254, 372);
+            this.qm_容积率修正钢混.Location = new System.Drawing.Point(296, 434);
             this.qm_容积率修正钢混.Name = "qm_容积率修正钢混";
-            this.qm_容积率修正钢混.Size = new System.Drawing.Size(58, 23);
+            this.qm_容积率修正钢混.Size = new System.Drawing.Size(68, 27);
             this.qm_容积率修正钢混.TabIndex = 155;
             this.qm_容积率修正钢混.Text = "钢混";
             this.qm_容积率修正钢混.Click += new System.EventHandler(this.qm_容积率修正钢混_Click);
@@ -850,51 +853,48 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(159, 377);
+            this.label19.Location = new System.Drawing.Point(185, 440);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(19, 14);
-            this.toolTipController.SetSuperTip(this.label19, null);
             this.label19.TabIndex = 42;
             this.label19.Text = "到";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(83, 377);
+            this.label18.Location = new System.Drawing.Point(97, 440);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(19, 14);
-            this.toolTipController.SetSuperTip(this.label18, null);
             this.label18.TabIndex = 41;
             this.label18.Text = "从";
             // 
             // txtRjlto
             // 
-            this.txtRjlto.Location = new System.Drawing.Point(184, 374);
+            this.txtRjlto.Location = new System.Drawing.Point(215, 436);
             this.txtRjlto.Name = "txtRjlto";
             this.txtRjlto.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRjlto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRjlto.Properties.NullText = "5";
-            this.txtRjlto.Size = new System.Drawing.Size(45, 21);
+            this.txtRjlto.Size = new System.Drawing.Size(52, 21);
             this.txtRjlto.TabIndex = 40;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 377);
+            this.label17.Location = new System.Drawing.Point(9, 440);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 14);
-            this.toolTipController.SetSuperTip(this.label17, null);
             this.label17.TabIndex = 39;
             this.label17.Text = "容积率范围：";
             // 
             // txtRjlfrom
             // 
-            this.txtRjlfrom.Location = new System.Drawing.Point(108, 374);
+            this.txtRjlfrom.Location = new System.Drawing.Point(126, 436);
             this.txtRjlfrom.Name = "txtRjlfrom";
             this.txtRjlfrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtRjlfrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRjlfrom.Properties.NullText = "0.1";
-            this.txtRjlfrom.Size = new System.Drawing.Size(41, 21);
+            this.txtRjlfrom.Size = new System.Drawing.Size(48, 21);
             this.txtRjlfrom.TabIndex = 38;
             // 
             // groupControl1
@@ -906,10 +906,9 @@
             this.groupControl1.Controls.Add(this.cbe交通修正);
             this.groupControl1.Controls.Add(this.grid容积率修正);
             this.groupControl1.Controls.Add(this.grid交通修正);
-            this.groupControl1.Location = new System.Drawing.Point(6, 3);
+            this.groupControl1.Location = new System.Drawing.Point(7, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(796, 356);
-            this.toolTipController.SetSuperTip(this.groupControl1, null);
+            this.groupControl1.Size = new System.Drawing.Size(929, 415);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "交通|容积率修正";
             // 
@@ -917,65 +916,63 @@
             // 
             this.lbl容积率修正系数.AutoSize = true;
             this.lbl容积率修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl容积率修正系数.Location = new System.Drawing.Point(641, 195);
+            this.lbl容积率修正系数.Location = new System.Drawing.Point(748, 227);
             this.lbl容积率修正系数.Name = "lbl容积率修正系数";
             this.lbl容积率修正系数.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.lbl容积率修正系数, null);
             this.lbl容积率修正系数.TabIndex = 169;
             this.lbl容积率修正系数.Text = "样点容积率修正系数";
+            this.lbl容积率修正系数.Visible = false;
             // 
             // lbl交通修正系数
             // 
             this.lbl交通修正系数.AutoSize = true;
             this.lbl交通修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl交通修正系数.Location = new System.Drawing.Point(641, 32);
+            this.lbl交通修正系数.Location = new System.Drawing.Point(748, 37);
             this.lbl交通修正系数.Name = "lbl交通修正系数";
             this.lbl交通修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl交通修正系数, null);
             this.lbl交通修正系数.TabIndex = 168;
             this.lbl交通修正系数.Text = "样点交通修正系数";
+            this.lbl交通修正系数.Visible = false;
             // 
             // txt交通修正
             // 
-            this.txt交通修正.Location = new System.Drawing.Point(194, 29);
+            this.txt交通修正.Location = new System.Drawing.Point(226, 34);
             this.txt交通修正.Name = "txt交通修正";
-            this.txt交通修正.Size = new System.Drawing.Size(441, 21);
+            this.txt交通修正.Size = new System.Drawing.Size(514, 21);
             this.txt交通修正.TabIndex = 28;
             // 
             // label交通修正
             // 
             this.label交通修正.AutoSize = true;
-            this.label交通修正.Location = new System.Drawing.Point(5, 32);
+            this.label交通修正.Location = new System.Drawing.Point(6, 37);
             this.label交通修正.Name = "label交通修正";
             this.label交通修正.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label交通修正, null);
             this.label交通修正.TabIndex = 27;
             this.label交通修正.Text = "交通修正：";
             // 
             // cbe交通修正
             // 
-            this.cbe交通修正.Location = new System.Drawing.Point(78, 29);
+            this.cbe交通修正.Location = new System.Drawing.Point(91, 34);
             this.cbe交通修正.Name = "cbe交通修正";
             this.cbe交通修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe交通修正.Properties.Items.AddRange(new object[] {
             "不相同",
             "自定义"});
-            this.cbe交通修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe交通修正.Size = new System.Drawing.Size(117, 21);
             this.cbe交通修正.TabIndex = 26;
             this.cbe交通修正.SelectedIndexChanged += new System.EventHandler(this.cbe交通修正_SelectedIndexChanged);
             // 
             // grid容积率修正
             // 
             this.grid容积率修正.DataSource = this.yw容积率修正BindingSource;
-            this.grid容积率修正.EmbeddedNavigator.Name = "";
             this.grid容积率修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid容积率修正.Location = new System.Drawing.Point(5, 215);
+            this.grid容积率修正.Location = new System.Drawing.Point(6, 251);
             this.grid容积率修正.MainView = this.gv容积率修正;
             this.grid容积率修正.Name = "grid容积率修正";
             this.grid容积率修正.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit2});
-            this.grid容积率修正.Size = new System.Drawing.Size(783, 136);
+            this.grid容积率修正.Size = new System.Drawing.Size(913, 159);
             this.grid容积率修正.TabIndex = 4;
             this.grid容积率修正.UseEmbeddedNavigator = true;
             this.grid容积率修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1536,12 +1533,11 @@
             // grid交通修正
             // 
             this.grid交通修正.DataSource = this.yw交通修正BindingSource;
-            this.grid交通修正.EmbeddedNavigator.Name = "";
             this.grid交通修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid交通修正.Location = new System.Drawing.Point(5, 56);
+            this.grid交通修正.Location = new System.Drawing.Point(6, 65);
             this.grid交通修正.MainView = this.gv交通修正;
             this.grid交通修正.Name = "grid交通修正";
-            this.grid交通修正.Size = new System.Drawing.Size(783, 136);
+            this.grid交通修正.Size = new System.Drawing.Size(913, 159);
             this.grid交通修正.TabIndex = 3;
             this.grid交通修正.UseEmbeddedNavigator = true;
             this.grid交通修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1637,7 +1633,7 @@
             this.xtb非单家.Controls.Add(this.groupcontrol非单家);
             this.xtb非单家.Controls.Add(this.xtraTabControl1);
             this.xtb非单家.Name = "xtb非单家";
-            this.xtb非单家.Size = new System.Drawing.Size(367, 288);
+            this.xtb非单家.Size = new System.Drawing.Size(959, 798);
             this.xtb非单家.Text = "非单家";
             // 
             // groupcontrol非单家
@@ -1652,8 +1648,7 @@
             this.groupcontrol非单家.Controls.Add(this.grid建筑面积修正);
             this.groupcontrol非单家.Location = new System.Drawing.Point(3, 3);
             this.groupcontrol非单家.Name = "groupcontrol非单家";
-            this.groupcontrol非单家.Size = new System.Drawing.Size(813, 262);
-            this.toolTipController.SetSuperTip(this.groupcontrol非单家, null);
+            this.groupcontrol非单家.Size = new System.Drawing.Size(948, 306);
             this.groupcontrol非单家.TabIndex = 10;
             this.groupcontrol非单家.Text = "建筑面积|电梯修正";
             // 
@@ -1661,10 +1656,9 @@
             // 
             this.lbl电梯修正系数.AutoSize = true;
             this.lbl电梯修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl电梯修正系数.Location = new System.Drawing.Point(208, 168);
+            this.lbl电梯修正系数.Location = new System.Drawing.Point(243, 196);
             this.lbl电梯修正系数.Name = "lbl电梯修正系数";
             this.lbl电梯修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl电梯修正系数, null);
             this.lbl电梯修正系数.TabIndex = 170;
             this.lbl电梯修正系数.Text = "样点电梯修正系数";
             this.lbl电梯修正系数.Visible = false;
@@ -1673,22 +1667,21 @@
             // 
             this.lbl建筑面积修正.AutoSize = true;
             this.lbl建筑面积修正.ForeColor = System.Drawing.Color.Blue;
-            this.lbl建筑面积修正.Location = new System.Drawing.Point(668, 27);
+            this.lbl建筑面积修正.Location = new System.Drawing.Point(779, 31);
             this.lbl建筑面积修正.Name = "lbl建筑面积修正";
             this.lbl建筑面积修正.Size = new System.Drawing.Size(127, 14);
-            this.toolTipController.SetSuperTip(this.lbl建筑面积修正, null);
             this.lbl建筑面积修正.TabIndex = 169;
             this.lbl建筑面积修正.Text = "样点建筑面积修正系数";
+            this.lbl建筑面积修正.Visible = false;
             // 
             // grid建筑密度修正
             // 
             this.grid建筑密度修正.DataSource = this.yw建筑密度修正BindingSource;
-            this.grid建筑密度修正.EmbeddedNavigator.Name = "";
             this.grid建筑密度修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid建筑密度修正.Location = new System.Drawing.Point(403, 161);
+            this.grid建筑密度修正.Location = new System.Drawing.Point(470, 188);
             this.grid建筑密度修正.MainView = this.smGridView3;
             this.grid建筑密度修正.Name = "grid建筑密度修正";
-            this.grid建筑密度修正.Size = new System.Drawing.Size(405, 93);
+            this.grid建筑密度修正.Size = new System.Drawing.Size(472, 108);
             this.grid建筑密度修正.TabIndex = 32;
             this.grid建筑密度修正.UseEmbeddedNavigator = true;
             this.grid建筑密度修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1804,43 +1797,41 @@
             // 
             // txt建筑面积修正
             // 
-            this.txt建筑面积修正.Location = new System.Drawing.Point(211, 24);
+            this.txt建筑面积修正.Location = new System.Drawing.Point(246, 28);
             this.txt建筑面积修正.Name = "txt建筑面积修正";
-            this.txt建筑面积修正.Size = new System.Drawing.Size(441, 21);
+            this.txt建筑面积修正.Size = new System.Drawing.Size(514, 21);
             this.txt建筑面积修正.TabIndex = 31;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 27);
+            this.label11.Location = new System.Drawing.Point(15, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label11, null);
             this.label11.TabIndex = 30;
             this.label11.Text = "建筑面积修正：";
             // 
             // cbe建筑面积修正
             // 
-            this.cbe建筑面积修正.Location = new System.Drawing.Point(105, 24);
+            this.cbe建筑面积修正.Location = new System.Drawing.Point(122, 28);
             this.cbe建筑面积修正.Name = "cbe建筑面积修正";
             this.cbe建筑面积修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe建筑面积修正.Properties.Items.AddRange(new object[] {
             "不相同",
             "自定义"});
-            this.cbe建筑面积修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe建筑面积修正.Size = new System.Drawing.Size(117, 21);
             this.cbe建筑面积修正.TabIndex = 29;
             this.cbe建筑面积修正.SelectedIndexChanged += new System.EventHandler(this.cbe建筑面积修正_SelectedIndexChanged);
             // 
             // grid电梯修正
             // 
             this.grid电梯修正.DataSource = this.yw电梯修正BindingSource;
-            this.grid电梯修正.EmbeddedNavigator.Name = "";
             this.grid电梯修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid电梯修正.Location = new System.Drawing.Point(5, 161);
+            this.grid电梯修正.Location = new System.Drawing.Point(6, 188);
             this.grid电梯修正.MainView = this.gv电梯修正;
             this.grid电梯修正.Name = "grid电梯修正";
-            this.grid电梯修正.Size = new System.Drawing.Size(371, 93);
+            this.grid电梯修正.Size = new System.Drawing.Size(433, 108);
             this.grid电梯修正.TabIndex = 11;
             this.grid电梯修正.UseEmbeddedNavigator = true;
             this.grid电梯修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1903,14 +1894,13 @@
             // grid建筑面积修正
             // 
             this.grid建筑面积修正.DataSource = this.yw建筑面积修正BindingSource;
-            this.grid建筑面积修正.EmbeddedNavigator.Name = "";
             this.grid建筑面积修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid建筑面积修正.Location = new System.Drawing.Point(4, 51);
+            this.grid建筑面积修正.Location = new System.Drawing.Point(5, 59);
             this.grid建筑面积修正.MainView = this.gv建筑面积修正;
             this.grid建筑面积修正.Name = "grid建筑面积修正";
             this.grid建筑面积修正.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit3});
-            this.grid建筑面积修正.Size = new System.Drawing.Size(787, 104);
+            this.grid建筑面积修正.Size = new System.Drawing.Size(918, 121);
             this.grid建筑面积修正.TabIndex = 10;
             this.grid建筑面积修正.UseEmbeddedNavigator = true;
             this.grid建筑面积修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2062,10 +2052,10 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(4, 271);
+            this.xtraTabControl1.Location = new System.Drawing.Point(5, 316);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(798, 404);
+            this.xtraTabControl1.Size = new System.Drawing.Size(931, 471);
             this.xtraTabControl1.TabIndex = 8;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -2092,17 +2082,16 @@
             this.xtraTabPage1.Controls.Add(this.grid复式修正);
             this.xtraTabPage1.Controls.Add(this.grid公摊修正);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(789, 372);
+            this.xtraTabPage1.Size = new System.Drawing.Size(924, 441);
             this.xtraTabPage1.Text = "楼型|公摊|物业|复式修正";
             // 
             // lbl复式修正系数
             // 
             this.lbl复式修正系数.AutoSize = true;
             this.lbl复式修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl复式修正系数.Location = new System.Drawing.Point(554, 188);
+            this.lbl复式修正系数.Location = new System.Drawing.Point(646, 219);
             this.lbl复式修正系数.Name = "lbl复式修正系数";
             this.lbl复式修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl复式修正系数, null);
             this.lbl复式修正系数.TabIndex = 175;
             this.lbl复式修正系数.Text = "样点复式修正系数";
             this.lbl复式修正系数.Click += new System.EventHandler(this.label47_Click);
@@ -2111,10 +2100,9 @@
             // 
             this.lbl物业修正系数.AutoSize = true;
             this.lbl物业修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl物业修正系数.Location = new System.Drawing.Point(223, 188);
+            this.lbl物业修正系数.Location = new System.Drawing.Point(260, 219);
             this.lbl物业修正系数.Name = "lbl物业修正系数";
             this.lbl物业修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl物业修正系数, null);
             this.lbl物业修正系数.TabIndex = 174;
             this.lbl物业修正系数.Text = "样点物业修正系数";
             // 
@@ -2122,59 +2110,58 @@
             // 
             this.lbl公摊修正系数.AutoSize = true;
             this.lbl公摊修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl公摊修正系数.Location = new System.Drawing.Point(685, 12);
+            this.lbl公摊修正系数.Location = new System.Drawing.Point(799, 14);
             this.lbl公摊修正系数.Name = "lbl公摊修正系数";
             this.lbl公摊修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl公摊修正系数, null);
             this.lbl公摊修正系数.TabIndex = 173;
             this.lbl公摊修正系数.Text = "样点公摊修正系数";
+            this.lbl公摊修正系数.Visible = false;
             this.lbl公摊修正系数.Click += new System.EventHandler(this.lbl公摊修正系数_Click);
             // 
             // lbl楼型修正系数
             // 
             this.lbl楼型修正系数.AutoSize = true;
             this.lbl楼型修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl楼型修正系数.Location = new System.Drawing.Point(378, 12);
+            this.lbl楼型修正系数.Location = new System.Drawing.Point(441, 14);
             this.lbl楼型修正系数.Name = "lbl楼型修正系数";
             this.lbl楼型修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl楼型修正系数, null);
             this.lbl楼型修正系数.TabIndex = 172;
             this.lbl楼型修正系数.Text = "样点楼型修正系数";
+            this.lbl楼型修正系数.Visible = false;
             // 
             // txt复式修正
             // 
-            this.txt复式修正.Location = new System.Drawing.Point(557, 158);
+            this.txt复式修正.Location = new System.Drawing.Point(650, 184);
             this.txt复式修正.Name = "txt复式修正";
-            this.txt复式修正.Size = new System.Drawing.Size(228, 21);
+            this.txt复式修正.Size = new System.Drawing.Size(266, 21);
             this.txt复式修正.TabIndex = 22;
             // 
             // txt物业管理修正
             // 
-            this.txt物业管理修正.Location = new System.Drawing.Point(207, 158);
+            this.txt物业管理修正.Location = new System.Drawing.Point(241, 184);
             this.txt物业管理修正.Name = "txt物业管理修正";
-            this.txt物业管理修正.Size = new System.Drawing.Size(166, 21);
+            this.txt物业管理修正.Size = new System.Drawing.Size(194, 21);
             this.txt物业管理修正.TabIndex = 21;
             // 
             // txt楼型修正
             // 
-            this.txt楼型修正.Location = new System.Drawing.Point(182, 9);
+            this.txt楼型修正.Location = new System.Drawing.Point(212, 10);
             this.txt楼型修正.Name = "txt楼型修正";
-            this.txt楼型修正.Size = new System.Drawing.Size(190, 21);
+            this.txt楼型修正.Size = new System.Drawing.Size(222, 21);
             this.txt楼型修正.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 12);
+            this.label8.Location = new System.Drawing.Point(3, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label8, null);
             this.label8.TabIndex = 18;
             this.label8.Text = "楼型修正：";
             // 
             // cbe楼型修正
             // 
-            this.cbe楼型修正.Location = new System.Drawing.Point(76, 9);
+            this.cbe楼型修正.Location = new System.Drawing.Point(89, 10);
             this.cbe楼型修正.Name = "cbe楼型修正";
             this.cbe楼型修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2184,23 +2171,22 @@
             "1梯2户",
             "1梯3户及以上",
             "自定义"});
-            this.cbe楼型修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe楼型修正.Size = new System.Drawing.Size(117, 21);
             this.cbe楼型修正.TabIndex = 17;
             this.cbe楼型修正.SelectedIndexChanged += new System.EventHandler(this.cbe楼型修正_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(378, 161);
+            this.label5.Location = new System.Drawing.Point(441, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label5, null);
             this.label5.TabIndex = 16;
             this.label5.Text = "复式修正：";
             // 
             // cbe复式修正
             // 
-            this.cbe复式修正.Location = new System.Drawing.Point(451, 157);
+            this.cbe复式修正.Location = new System.Drawing.Point(526, 183);
             this.cbe复式修正.Name = "cbe复式修正";
             this.cbe复式修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2209,23 +2195,22 @@
             "复式",
             "不是复式",
             "自定义"});
-            this.cbe复式修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe复式修正.Size = new System.Drawing.Size(117, 21);
             this.cbe复式修正.TabIndex = 15;
             this.cbe复式修正.SelectedIndexChanged += new System.EventHandler(this.cbe复式修正_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 160);
+            this.label4.Location = new System.Drawing.Point(5, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label4, null);
             this.label4.TabIndex = 14;
             this.label4.Text = "物业管理修正：";
             // 
             // cbe物业管理修正
             // 
-            this.cbe物业管理修正.Location = new System.Drawing.Point(101, 157);
+            this.cbe物业管理修正.Location = new System.Drawing.Point(118, 183);
             this.cbe物业管理修正.Name = "cbe物业管理修正";
             this.cbe物业管理修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2234,19 +2219,18 @@
             "有",
             "无",
             "自定义"});
-            this.cbe物业管理修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe物业管理修正.Size = new System.Drawing.Size(117, 21);
             this.cbe物业管理修正.TabIndex = 13;
             this.cbe物业管理修正.SelectedIndexChanged += new System.EventHandler(this.cbe物业管理修正_SelectedIndexChanged);
             // 
             // grid物业管理修正
             // 
             this.grid物业管理修正.DataSource = this.yw物业管理修正BindingSource3;
-            this.grid物业管理修正.EmbeddedNavigator.Name = "";
             this.grid物业管理修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid物业管理修正.Location = new System.Drawing.Point(7, 181);
+            this.grid物业管理修正.Location = new System.Drawing.Point(8, 211);
             this.grid物业管理修正.MainView = this.gv物业管理修正;
             this.grid物业管理修正.Name = "grid物业管理修正";
-            this.grid物业管理修正.Size = new System.Drawing.Size(366, 130);
+            this.grid物业管理修正.Size = new System.Drawing.Size(427, 152);
             this.grid物业管理修正.TabIndex = 11;
             this.grid物业管理修正.UseEmbeddedNavigator = true;
             this.grid物业管理修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2311,12 +2295,11 @@
             // grid楼型修正
             // 
             this.grid楼型修正.DataSource = this.yw楼型修正BindingSource;
-            this.grid楼型修正.EmbeddedNavigator.Name = "";
             this.grid楼型修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid楼型修正.Location = new System.Drawing.Point(6, 36);
+            this.grid楼型修正.Location = new System.Drawing.Point(7, 42);
             this.grid楼型修正.MainView = this.gv楼型修正;
             this.grid楼型修正.Name = "grid楼型修正";
-            this.grid楼型修正.Size = new System.Drawing.Size(366, 117);
+            this.grid楼型修正.Size = new System.Drawing.Size(427, 136);
             this.grid楼型修正.TabIndex = 10;
             this.grid楼型修正.UseEmbeddedNavigator = true;
             this.grid楼型修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2394,12 +2377,11 @@
             // grid复式修正
             // 
             this.grid复式修正.DataSource = this.yw复式修正BindingSource;
-            this.grid复式修正.EmbeddedNavigator.Name = "";
             this.grid复式修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid复式修正.Location = new System.Drawing.Point(379, 181);
+            this.grid复式修正.Location = new System.Drawing.Point(442, 211);
             this.grid复式修正.MainView = this.gv复式修正;
             this.grid复式修正.Name = "grid复式修正";
-            this.grid复式修正.Size = new System.Drawing.Size(409, 130);
+            this.grid复式修正.Size = new System.Drawing.Size(477, 152);
             this.grid复式修正.TabIndex = 9;
             this.grid复式修正.UseEmbeddedNavigator = true;
             this.grid复式修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2462,12 +2444,11 @@
             // grid公摊修正
             // 
             this.grid公摊修正.DataSource = this.yw公摊修正BindingSource;
-            this.grid公摊修正.EmbeddedNavigator.Name = "";
             this.grid公摊修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid公摊修正.Location = new System.Drawing.Point(380, 36);
+            this.grid公摊修正.Location = new System.Drawing.Point(443, 42);
             this.grid公摊修正.MainView = this.gv公摊修正;
             this.grid公摊修正.Name = "grid公摊修正";
-            this.grid公摊修正.Size = new System.Drawing.Size(409, 117);
+            this.grid公摊修正.Size = new System.Drawing.Size(477, 136);
             this.grid公摊修正.TabIndex = 7;
             this.grid公摊修正.UseEmbeddedNavigator = true;
             this.grid公摊修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2554,29 +2535,28 @@
             this.xtraTabPage2.Controls.Add(this.lbl电梯房楼层修正系数);
             this.xtraTabPage2.Controls.Add(this.grid电梯房楼层修正);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(789, 372);
+            this.xtraTabPage2.Size = new System.Drawing.Size(924, 441);
             this.xtraTabPage2.Text = "电梯房楼层修正";
             // 
             // lbl电梯房楼层修正系数
             // 
             this.lbl电梯房楼层修正系数.AutoSize = true;
             this.lbl电梯房楼层修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl电梯房楼层修正系数.Location = new System.Drawing.Point(154, 16);
+            this.lbl电梯房楼层修正系数.Location = new System.Drawing.Point(180, 19);
             this.lbl电梯房楼层修正系数.Name = "lbl电梯房楼层修正系数";
             this.lbl电梯房楼层修正系数.Size = new System.Drawing.Size(139, 14);
-            this.toolTipController.SetSuperTip(this.lbl电梯房楼层修正系数, null);
             this.lbl电梯房楼层修正系数.TabIndex = 173;
             this.lbl电梯房楼层修正系数.Text = "样点电梯房楼层修正系数";
+            this.lbl电梯房楼层修正系数.Visible = false;
             // 
             // grid电梯房楼层修正
             // 
             this.grid电梯房楼层修正.DataSource = this.yw电梯房楼层修正BindingSource;
-            this.grid电梯房楼层修正.EmbeddedNavigator.Name = "";
             this.grid电梯房楼层修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.grid电梯房楼层修正.Location = new System.Drawing.Point(0, 3);
             this.grid电梯房楼层修正.MainView = this.gv电梯房楼层修正;
             this.grid电梯房楼层修正.Name = "grid电梯房楼层修正";
-            this.grid电梯房楼层修正.Size = new System.Drawing.Size(784, 247);
+            this.grid电梯房楼层修正.Size = new System.Drawing.Size(915, 288);
             this.grid电梯房楼层修正.TabIndex = 3;
             this.grid电梯房楼层修正.UseEmbeddedNavigator = true;
             this.grid电梯房楼层修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2955,29 +2935,28 @@
             this.xtraTabPage3.Controls.Add(this.lbl非电梯房楼层修正系数);
             this.xtraTabPage3.Controls.Add(this.grid无电梯房楼层修正);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(789, 372);
+            this.xtraTabPage3.Size = new System.Drawing.Size(924, 441);
             this.xtraTabPage3.Text = "非电梯房楼层修正";
             // 
             // lbl非电梯房楼层修正系数
             // 
             this.lbl非电梯房楼层修正系数.AutoSize = true;
             this.lbl非电梯房楼层修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl非电梯房楼层修正系数.Location = new System.Drawing.Point(161, 18);
+            this.lbl非电梯房楼层修正系数.Location = new System.Drawing.Point(188, 21);
             this.lbl非电梯房楼层修正系数.Name = "lbl非电梯房楼层修正系数";
             this.lbl非电梯房楼层修正系数.Size = new System.Drawing.Size(151, 14);
-            this.toolTipController.SetSuperTip(this.lbl非电梯房楼层修正系数, null);
             this.lbl非电梯房楼层修正系数.TabIndex = 173;
             this.lbl非电梯房楼层修正系数.Text = "样点非电梯房楼层修正系数";
+            this.lbl非电梯房楼层修正系数.Visible = false;
             // 
             // grid无电梯房楼层修正
             // 
             this.grid无电梯房楼层修正.DataSource = this.yw无电梯房楼层修正BindingSource;
-            this.grid无电梯房楼层修正.EmbeddedNavigator.Name = "";
             this.grid无电梯房楼层修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.grid无电梯房楼层修正.Location = new System.Drawing.Point(0, 3);
             this.grid无电梯房楼层修正.MainView = this.gv非电梯房楼层修正;
             this.grid无电梯房楼层修正.Name = "grid无电梯房楼层修正";
-            this.grid无电梯房楼层修正.Size = new System.Drawing.Size(781, 258);
+            this.grid无电梯房楼层修正.Size = new System.Drawing.Size(911, 301);
             this.grid无电梯房楼层修正.TabIndex = 7;
             this.grid无电梯房楼层修正.UseEmbeddedNavigator = true;
             this.grid无电梯房楼层修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3181,29 +3160,27 @@
             // 
             this.xtb车房.Controls.Add(this.groupControl2);
             this.xtb车房.Name = "xtb车房";
-            this.xtb车房.Size = new System.Drawing.Size(367, 288);
+            this.xtb车房.Size = new System.Drawing.Size(959, 798);
             this.xtb车房.Text = "车房";
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.grid车房类型修正);
             this.groupControl2.Controls.Add(this.grid车房区片价);
-            this.groupControl2.Location = new System.Drawing.Point(6, 3);
+            this.groupControl2.Location = new System.Drawing.Point(7, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(796, 318);
-            this.toolTipController.SetSuperTip(this.groupControl2, null);
+            this.groupControl2.Size = new System.Drawing.Size(929, 371);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "车房区片价|车房类型";
             // 
             // grid车房类型修正
             // 
             this.grid车房类型修正.DataSource = this.yw车房类型修正BindingSource;
-            this.grid车房类型修正.EmbeddedNavigator.Name = "";
             this.grid车房类型修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid车房类型修正.Location = new System.Drawing.Point(5, 177);
+            this.grid车房类型修正.Location = new System.Drawing.Point(6, 206);
             this.grid车房类型修正.MainView = this.gridView9;
             this.grid车房类型修正.Name = "grid车房类型修正";
-            this.grid车房类型修正.Size = new System.Drawing.Size(579, 136);
+            this.grid车房类型修正.Size = new System.Drawing.Size(675, 159);
             this.grid车房类型修正.TabIndex = 5;
             this.grid车房类型修正.UseEmbeddedNavigator = true;
             this.grid车房类型修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3275,12 +3252,11 @@
             // grid车房区片价
             // 
             this.grid车房区片价.DataSource = this.yw车房区片价BindingSource;
-            this.grid车房区片价.EmbeddedNavigator.Name = "";
             this.grid车房区片价.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid车房区片价.Location = new System.Drawing.Point(5, 24);
+            this.grid车房区片价.Location = new System.Drawing.Point(6, 28);
             this.grid车房区片价.MainView = this.gridView8;
             this.grid车房区片价.Name = "grid车房区片价";
-            this.grid车房区片价.Size = new System.Drawing.Size(579, 136);
+            this.grid车房区片价.Size = new System.Drawing.Size(675, 159);
             this.grid车房区片价.TabIndex = 4;
             this.grid车房区片价.UseEmbeddedNavigator = true;
             this.grid车房区片价.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3403,55 +3379,52 @@
             this.xtb基本信息.Controls.Add(this.txtProjectid);
             this.xtb基本信息.Controls.Add(this.cbeType);
             this.xtb基本信息.Name = "xtb基本信息";
-            this.xtb基本信息.Size = new System.Drawing.Size(819, 678);
+            this.xtb基本信息.Size = new System.Drawing.Size(959, 798);
             this.xtb基本信息.Text = "基本信息";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(444, 6);
+            this.label3.Location = new System.Drawing.Point(518, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 14);
-            this.toolTipController.SetSuperTip(this.label3, null);
             this.label3.TabIndex = 152;
             this.label3.Text = "镇区：";
             // 
             // lue_镇区
             // 
-            this.lue_镇区.Location = new System.Drawing.Point(505, 3);
+            this.lue_镇区.Location = new System.Drawing.Point(589, 3);
             this.lue_镇区.Name = "lue_镇区";
             this.lue_镇区.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lue_镇区.Properties.NullText = "";
-            this.lue_镇区.Size = new System.Drawing.Size(100, 21);
+            this.lue_镇区.Size = new System.Drawing.Size(117, 21);
             this.lue_镇区.TabIndex = 151;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(221, 6);
+            this.label2.Location = new System.Drawing.Point(258, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 14);
-            this.toolTipController.SetSuperTip(this.label2, null);
             this.label2.TabIndex = 13;
             this.label2.Text = "区片号：";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Location = new System.Drawing.Point(14, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label1, null);
             this.label1.TabIndex = 12;
             this.label1.Text = "业务类型：";
             // 
             // xtraTabControl2
             // 
-            this.xtraTabControl2.Location = new System.Drawing.Point(6, 30);
+            this.xtraTabControl2.Location = new System.Drawing.Point(7, 35);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage4;
-            this.xtraTabControl2.Size = new System.Drawing.Size(813, 645);
+            this.xtraTabControl2.Size = new System.Drawing.Size(948, 752);
             this.xtraTabControl2.TabIndex = 11;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage4,
@@ -3475,102 +3448,97 @@
             this.xtraTabPage4.Controls.Add(this.Btn单家独户车房非单家);
             this.xtraTabPage4.Controls.Add(this.grid区片信息);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(804, 613);
+            this.xtraTabPage4.Size = new System.Drawing.Size(941, 722);
             this.xtraTabPage4.Text = "区片信息";
             this.xtraTabPage4.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage4_Paint);
             // 
             // chk修改类型修改备注
             // 
-            this.chk修改类型修改备注.Location = new System.Drawing.Point(157, 413);
+            this.chk修改类型修改备注.Location = new System.Drawing.Point(183, 482);
             this.chk修改类型修改备注.Name = "chk修改类型修改备注";
             this.chk修改类型修改备注.Properties.Caption = "修改类型修改备注";
             this.chk修改类型修改备注.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            this.chk修改类型修改备注.Size = new System.Drawing.Size(122, 19);
+            this.chk修改类型修改备注.Size = new System.Drawing.Size(142, 19);
             this.chk修改类型修改备注.TabIndex = 168;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(546, 91);
+            this.label16.Location = new System.Drawing.Point(637, 106);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 14);
-            this.toolTipController.SetSuperTip(this.label16, null);
             this.label16.TabIndex = 167;
             this.label16.Text = "基准容积率：";
             // 
             // txt基准容积率
             // 
-            this.txt基准容积率.Location = new System.Drawing.Point(631, 88);
+            this.txt基准容积率.Location = new System.Drawing.Point(736, 103);
             this.txt基准容积率.Name = "txt基准容积率";
             this.txt基准容积率.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt基准容积率.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt基准容积率.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt基准容积率.Size = new System.Drawing.Size(136, 21);
+            this.txt基准容积率.Size = new System.Drawing.Size(159, 21);
             this.txt基准容积率.TabIndex = 166;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(558, 54);
+            this.label15.Location = new System.Drawing.Point(651, 63);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label15, null);
             this.label15.TabIndex = 165;
             this.label15.Text = "基准地价：";
             // 
             // txt地价区片价
             // 
-            this.txt地价区片价.Location = new System.Drawing.Point(631, 51);
+            this.txt地价区片价.Location = new System.Drawing.Point(736, 59);
             this.txt地价区片价.Name = "txt地价区片价";
             this.txt地价区片价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt地价区片价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt地价区片价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt地价区片价.Size = new System.Drawing.Size(136, 21);
+            this.txt地价区片价.Size = new System.Drawing.Size(159, 21);
             this.txt地价区片价.TabIndex = 164;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(570, 17);
+            this.label14.Location = new System.Drawing.Point(665, 20);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 14);
-            this.toolTipController.SetSuperTip(this.label14, null);
             this.label14.TabIndex = 163;
             this.label14.Text = "区片价：";
             // 
             // txt房价区片价
             // 
-            this.txt房价区片价.Location = new System.Drawing.Point(631, 14);
+            this.txt房价区片价.Location = new System.Drawing.Point(736, 16);
             this.txt房价区片价.Name = "txt房价区片价";
             this.txt房价区片价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt房价区片价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt房价区片价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txt房价区片价.Properties.ReadOnly = true;
-            this.txt房价区片价.Size = new System.Drawing.Size(136, 21);
+            this.txt房价区片价.Size = new System.Drawing.Size(159, 21);
             this.txt房价区片价.TabIndex = 162;
             // 
             // txt修改备注
             // 
-            this.txt修改备注.Location = new System.Drawing.Point(215, 44);
+            this.txt修改备注.Location = new System.Drawing.Point(251, 51);
             this.txt修改备注.Multiline = true;
             this.txt修改备注.Name = "txt修改备注";
-            this.txt修改备注.Size = new System.Drawing.Size(218, 65);
-            this.toolTipController.SetSuperTip(this.txt修改备注, null);
+            this.txt修改备注.Size = new System.Drawing.Size(254, 75);
             this.txt修改备注.TabIndex = 161;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 44);
+            this.label13.Location = new System.Drawing.Point(10, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label13, null);
             this.label13.TabIndex = 159;
             this.label13.Text = "修改备注：";
             // 
             // cbe修改备注
             // 
-            this.cbe修改备注.Location = new System.Drawing.Point(82, 41);
+            this.cbe修改备注.Location = new System.Drawing.Point(96, 48);
             this.cbe修改备注.Name = "cbe修改备注";
             this.cbe修改备注.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3578,32 +3546,31 @@
             "调整区片价格",
             "车房区片新加一种类型的区片价",
             "其它"});
-            this.cbe修改备注.Size = new System.Drawing.Size(124, 21);
+            this.cbe修改备注.Size = new System.Drawing.Size(145, 21);
             this.cbe修改备注.TabIndex = 158;
             this.cbe修改备注.SelectedIndexChanged += new System.EventHandler(this.cbe修改备注_SelectedIndexChanged);
             // 
             // txt修改类型
             // 
-            this.txt修改类型.Location = new System.Drawing.Point(215, 14);
+            this.txt修改类型.Location = new System.Drawing.Point(251, 16);
             this.txt修改类型.Name = "txt修改类型";
             this.txt修改类型.Properties.ReadOnly = true;
-            this.txt修改类型.Size = new System.Drawing.Size(218, 21);
+            this.txt修改类型.Size = new System.Drawing.Size(254, 21);
             this.txt修改类型.TabIndex = 157;
             this.txt修改类型.EditValueChanged += new System.EventHandler(this.txt修改类型_EditValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 17);
+            this.label12.Location = new System.Drawing.Point(10, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label12, null);
             this.label12.TabIndex = 156;
             this.label12.Text = "修改类型：";
             // 
             // cbe修改类型
             // 
-            this.cbe修改类型.Location = new System.Drawing.Point(82, 14);
+            this.cbe修改类型.Location = new System.Drawing.Point(96, 16);
             this.cbe修改类型.Name = "cbe修改类型";
             this.cbe修改类型.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3616,15 +3583,15 @@
             "新增区片",
             "其他"});
             this.cbe修改类型.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbe修改类型.Size = new System.Drawing.Size(124, 21);
+            this.cbe修改类型.Size = new System.Drawing.Size(145, 21);
             this.cbe修改类型.TabIndex = 155;
             this.cbe修改类型.SelectedIndexChanged += new System.EventHandler(this.cbe修改类型_SelectedIndexChanged);
             // 
             // Btn单家独户车房非单家
             // 
-            this.Btn单家独户车房非单家.Location = new System.Drawing.Point(6, 409);
+            this.Btn单家独户车房非单家.Location = new System.Drawing.Point(7, 477);
             this.Btn单家独户车房非单家.Name = "Btn单家独户车房非单家";
-            this.Btn单家独户车房非单家.Size = new System.Drawing.Size(130, 23);
+            this.Btn单家独户车房非单家.Size = new System.Drawing.Size(152, 27);
             this.Btn单家独户车房非单家.TabIndex = 154;
             this.Btn单家独户车房非单家.Text = "生成word";
             this.Btn单家独户车房非单家.Click += new System.EventHandler(this.Btn单家独户_Click);
@@ -3632,16 +3599,15 @@
             // grid区片信息
             // 
             this.grid区片信息.DataSource = this.yw区片信息BindingSource;
-            this.grid区片信息.EmbeddedNavigator.Name = "";
             this.grid区片信息.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid区片信息.Location = new System.Drawing.Point(6, 115);
+            this.grid区片信息.Location = new System.Drawing.Point(7, 134);
             this.grid区片信息.MainView = this.smGridView5;
             this.grid区片信息.Name = "grid区片信息";
             this.grid区片信息.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMemoEdit1,
             this.repositoryItemMemoEdit2,
             this.repositoryItemMemoEdit3});
-            this.grid区片信息.Size = new System.Drawing.Size(787, 257);
+            this.grid区片信息.Size = new System.Drawing.Size(918, 300);
             this.grid区片信息.TabIndex = 11;
             this.grid区片信息.UseEmbeddedNavigator = true;
             this.grid区片信息.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3810,7 +3776,7 @@
             this.xtraTabPage5.Controls.Add(this.grid朝向修正);
             this.xtraTabPage5.Controls.Add(this.grid结构类型修正);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(804, 613);
+            this.xtraTabPage5.Size = new System.Drawing.Size(941, 722);
             this.xtraTabPage5.Text = "结构类型|朝向|楼龄|临路情况修正";
             this.xtraTabPage5.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage5_Paint);
             // 
@@ -3818,115 +3784,113 @@
             // 
             this.lbl临路情况修正系数.AutoSize = true;
             this.lbl临路情况修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl临路情况修正系数.Location = new System.Drawing.Point(673, 460);
+            this.lbl临路情况修正系数.Location = new System.Drawing.Point(785, 537);
             this.lbl临路情况修正系数.Name = "lbl临路情况修正系数";
             this.lbl临路情况修正系数.Size = new System.Drawing.Size(127, 14);
-            this.toolTipController.SetSuperTip(this.lbl临路情况修正系数, null);
             this.lbl临路情况修正系数.TabIndex = 169;
             this.lbl临路情况修正系数.Text = "样点临路情况修正系数";
+            this.lbl临路情况修正系数.Visible = false;
             // 
             // lbl楼龄修正系数
             // 
             this.lbl楼龄修正系数.AutoSize = true;
             this.lbl楼龄修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl楼龄修正系数.Location = new System.Drawing.Point(673, 344);
+            this.lbl楼龄修正系数.Location = new System.Drawing.Point(785, 401);
             this.lbl楼龄修正系数.Name = "lbl楼龄修正系数";
             this.lbl楼龄修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl楼龄修正系数, null);
             this.lbl楼龄修正系数.TabIndex = 168;
             this.lbl楼龄修正系数.Text = "样点楼龄修正系数";
+            this.lbl楼龄修正系数.Visible = false;
             // 
             // lbl结构类型修正系数
             // 
             this.lbl结构类型修正系数.AutoSize = true;
             this.lbl结构类型修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl结构类型修正系数.Location = new System.Drawing.Point(673, 6);
+            this.lbl结构类型修正系数.Location = new System.Drawing.Point(785, 7);
             this.lbl结构类型修正系数.Name = "lbl结构类型修正系数";
             this.lbl结构类型修正系数.Size = new System.Drawing.Size(127, 14);
-            this.toolTipController.SetSuperTip(this.lbl结构类型修正系数, null);
             this.lbl结构类型修正系数.TabIndex = 167;
             this.lbl结构类型修正系数.Text = "样点结构类型修正系数";
+            this.lbl结构类型修正系数.Visible = false;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.ForeColor = System.Drawing.Color.Blue;
-            this.label41.Location = new System.Drawing.Point(402, 299);
+            this.label41.Location = new System.Drawing.Point(469, 349);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(0, 14);
-            this.toolTipController.SetSuperTip(this.label41, null);
             this.label41.TabIndex = 166;
             // 
             // lbl朝向修正系数
             // 
             this.lbl朝向修正系数.AutoSize = true;
             this.lbl朝向修正系数.ForeColor = System.Drawing.Color.Blue;
-            this.lbl朝向修正系数.Location = new System.Drawing.Point(675, 161);
+            this.lbl朝向修正系数.Location = new System.Drawing.Point(787, 188);
             this.lbl朝向修正系数.Name = "lbl朝向修正系数";
             this.lbl朝向修正系数.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.lbl朝向修正系数, null);
             this.lbl朝向修正系数.TabIndex = 165;
             this.lbl朝向修正系数.Text = "样点朝向修正系数";
+            this.lbl朝向修正系数.Visible = false;
             // 
             // txt基准年限
             // 
-            this.txt基准年限.Location = new System.Drawing.Point(726, 266);
+            this.txt基准年限.Location = new System.Drawing.Point(847, 310);
             this.txt基准年限.Name = "txt基准年限";
             this.txt基准年限.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt基准年限.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt基准年限.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt基准年限.Size = new System.Drawing.Size(74, 21);
+            this.txt基准年限.Size = new System.Drawing.Size(86, 21);
             this.txt基准年限.TabIndex = 164;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(662, 269);
+            this.label20.Location = new System.Drawing.Point(772, 314);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label20, null);
             this.label20.TabIndex = 163;
             this.label20.Text = "基准年限：";
             // 
             // qm_结构类型修正其它
             // 
-            this.qm_结构类型修正其它.Location = new System.Drawing.Point(742, 71);
+            this.qm_结构类型修正其它.Location = new System.Drawing.Point(866, 83);
             this.qm_结构类型修正其它.Name = "qm_结构类型修正其它";
-            this.qm_结构类型修正其它.Size = new System.Drawing.Size(58, 23);
+            this.qm_结构类型修正其它.Size = new System.Drawing.Size(68, 27);
             this.qm_结构类型修正其它.TabIndex = 162;
             this.qm_结构类型修正其它.Text = "其它";
             this.qm_结构类型修正其它.Click += new System.EventHandler(this.qm_结构类型修正其它_Click);
             // 
             // qm_结构类型修正砖木
             // 
-            this.qm_结构类型修正砖木.Location = new System.Drawing.Point(678, 71);
+            this.qm_结构类型修正砖木.Location = new System.Drawing.Point(791, 83);
             this.qm_结构类型修正砖木.Name = "qm_结构类型修正砖木";
-            this.qm_结构类型修正砖木.Size = new System.Drawing.Size(58, 23);
+            this.qm_结构类型修正砖木.Size = new System.Drawing.Size(68, 27);
             this.qm_结构类型修正砖木.TabIndex = 161;
             this.qm_结构类型修正砖木.Text = "砖木";
             this.qm_结构类型修正砖木.Click += new System.EventHandler(this.qm_结构类型修正砖木_Click);
             // 
             // qm_结构类型修正混合
             // 
-            this.qm_结构类型修正混合.Location = new System.Drawing.Point(743, 30);
+            this.qm_结构类型修正混合.Location = new System.Drawing.Point(867, 35);
             this.qm_结构类型修正混合.Name = "qm_结构类型修正混合";
-            this.qm_结构类型修正混合.Size = new System.Drawing.Size(58, 23);
+            this.qm_结构类型修正混合.Size = new System.Drawing.Size(68, 27);
             this.qm_结构类型修正混合.TabIndex = 160;
             this.qm_结构类型修正混合.Text = "混合";
             this.qm_结构类型修正混合.Click += new System.EventHandler(this.qm_结构类型修正混合_Click);
             // 
             // qm_结构类型修正钢混
             // 
-            this.qm_结构类型修正钢混.Location = new System.Drawing.Point(678, 30);
+            this.qm_结构类型修正钢混.Location = new System.Drawing.Point(791, 35);
             this.qm_结构类型修正钢混.Name = "qm_结构类型修正钢混";
-            this.qm_结构类型修正钢混.Size = new System.Drawing.Size(58, 23);
+            this.qm_结构类型修正钢混.Size = new System.Drawing.Size(68, 27);
             this.qm_结构类型修正钢混.TabIndex = 159;
             this.qm_结构类型修正钢混.Text = "钢混";
             this.qm_结构类型修正钢混.Click += new System.EventHandler(this.qm_结构类型修正钢混_Click);
             // 
             // cbe计算楼龄修正
             // 
-            this.cbe计算楼龄修正.Location = new System.Drawing.Point(662, 302);
+            this.cbe计算楼龄修正.Location = new System.Drawing.Point(772, 352);
             this.cbe计算楼龄修正.Name = "cbe计算楼龄修正";
             this.cbe计算楼龄修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3941,120 +3905,116 @@
             "商品房-钢混(8-18层)",
             "商品房-钢混(19-25层)"});
             this.cbe计算楼龄修正.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cbe计算楼龄修正.Size = new System.Drawing.Size(138, 21);
+            this.cbe计算楼龄修正.Size = new System.Drawing.Size(161, 21);
             this.cbe计算楼龄修正.TabIndex = 39;
             this.cbe计算楼龄修正.SelectedIndexChanged += new System.EventHandler(this.cbe计算楼龄修正_SelectedIndexChanged);
             // 
             // txt朝向修正
             // 
-            this.txt朝向修正.Location = new System.Drawing.Point(182, 134);
+            this.txt朝向修正.Location = new System.Drawing.Point(212, 156);
             this.txt朝向修正.Name = "txt朝向修正";
-            this.txt朝向修正.Size = new System.Drawing.Size(441, 21);
+            this.txt朝向修正.Size = new System.Drawing.Size(514, 21);
             this.txt朝向修正.TabIndex = 28;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 137);
+            this.label10.Location = new System.Drawing.Point(10, 160);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label10, null);
             this.label10.TabIndex = 27;
             this.label10.Text = "朝向修正：";
             // 
             // cbe朝向修正
             // 
-            this.cbe朝向修正.Location = new System.Drawing.Point(76, 134);
+            this.cbe朝向修正.Location = new System.Drawing.Point(89, 156);
             this.cbe朝向修正.Name = "cbe朝向修正";
             this.cbe朝向修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe朝向修正.Properties.Items.AddRange(new object[] {
             "不相同",
             "自定义"});
-            this.cbe朝向修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe朝向修正.Size = new System.Drawing.Size(117, 21);
             this.cbe朝向修正.TabIndex = 26;
             this.cbe朝向修正.SelectedIndexChanged += new System.EventHandler(this.cbe朝向修正_SelectedIndexChanged);
             // 
             // txt结构类型修正
             // 
-            this.txt结构类型修正.Location = new System.Drawing.Point(215, 3);
+            this.txt结构类型修正.Location = new System.Drawing.Point(251, 3);
             this.txt结构类型修正.Name = "txt结构类型修正";
-            this.txt结构类型修正.Size = new System.Drawing.Size(441, 21);
+            this.txt结构类型修正.Size = new System.Drawing.Size(514, 21);
             this.txt结构类型修正.TabIndex = 25;
             // 
             // txt临路情况修正
             // 
-            this.txt临路情况修正.Location = new System.Drawing.Point(201, 436);
+            this.txt临路情况修正.Location = new System.Drawing.Point(234, 509);
             this.txt临路情况修正.Name = "txt临路情况修正";
-            this.txt临路情况修正.Size = new System.Drawing.Size(455, 21);
+            this.txt临路情况修正.Size = new System.Drawing.Size(531, 21);
             this.txt临路情况修正.TabIndex = 24;
             // 
             // cbe临路情况修正
             // 
-            this.cbe临路情况修正.Location = new System.Drawing.Point(95, 436);
+            this.cbe临路情况修正.Location = new System.Drawing.Point(111, 509);
             this.cbe临路情况修正.Name = "cbe临路情况修正";
             this.cbe临路情况修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe临路情况修正.Properties.Items.AddRange(new object[] {
             "不相同",
             "自定义"});
-            this.cbe临路情况修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe临路情况修正.Size = new System.Drawing.Size(117, 21);
             this.cbe临路情况修正.TabIndex = 23;
             this.cbe临路情况修正.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 439);
+            this.label9.Location = new System.Drawing.Point(10, 512);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label9, null);
             this.label9.TabIndex = 22;
             this.label9.Text = "临路情况修正：";
             // 
             // cbe楼龄修正
             // 
-            this.cbe楼龄修正.Location = new System.Drawing.Point(76, 266);
+            this.cbe楼龄修正.Location = new System.Drawing.Point(89, 310);
             this.cbe楼龄修正.Name = "cbe楼龄修正";
             this.cbe楼龄修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbe楼龄修正.Properties.Items.AddRange(new object[] {
             "不相同",
             "自定义"});
-            this.cbe楼龄修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe楼龄修正.Size = new System.Drawing.Size(117, 21);
             this.cbe楼龄修正.TabIndex = 21;
             this.cbe楼龄修正.SelectedIndexChanged += new System.EventHandler(this.cbe楼龄修正_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 269);
+            this.label7.Location = new System.Drawing.Point(10, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label7, null);
             this.label7.TabIndex = 20;
             this.label7.Text = "楼龄修正：";
             // 
             // txt楼龄修正
             // 
-            this.txt楼龄修正.Location = new System.Drawing.Point(182, 266);
+            this.txt楼龄修正.Location = new System.Drawing.Point(212, 310);
             this.txt楼龄修正.Name = "txt楼龄修正";
-            this.txt楼龄修正.Size = new System.Drawing.Size(474, 21);
+            this.txt楼龄修正.Size = new System.Drawing.Size(553, 21);
             this.txt楼龄修正.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 6);
+            this.label6.Location = new System.Drawing.Point(10, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label6, null);
             this.label6.TabIndex = 18;
             this.label6.Text = "结构类型修正：";
             // 
             // cbe结构类型修正
             // 
-            this.cbe结构类型修正.Location = new System.Drawing.Point(106, 3);
+            this.cbe结构类型修正.Location = new System.Drawing.Point(124, 3);
             this.cbe结构类型修正.Name = "cbe结构类型修正";
             this.cbe结构类型修正.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -4065,19 +4025,18 @@
             "砖木",
             "其它",
             "自定义"});
-            this.cbe结构类型修正.Size = new System.Drawing.Size(100, 21);
+            this.cbe结构类型修正.Size = new System.Drawing.Size(117, 21);
             this.cbe结构类型修正.TabIndex = 17;
             this.cbe结构类型修正.SelectedIndexChanged += new System.EventHandler(this.cbe结构类型修正_SelectedIndexChanged);
             // 
             // grid临路情况
             // 
             this.grid临路情况.DataSource = this.yw临路情况修正BindingSource1;
-            this.grid临路情况.EmbeddedNavigator.Name = "";
             this.grid临路情况.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid临路情况.Location = new System.Drawing.Point(6, 460);
+            this.grid临路情况.Location = new System.Drawing.Point(7, 537);
             this.grid临路情况.MainView = this.gv临路情况修正;
             this.grid临路情况.Name = "grid临路情况";
-            this.grid临路情况.Size = new System.Drawing.Size(650, 112);
+            this.grid临路情况.Size = new System.Drawing.Size(758, 131);
             this.grid临路情况.TabIndex = 13;
             this.grid临路情况.UseEmbeddedNavigator = true;
             this.grid临路情况.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -4204,14 +4163,13 @@
             // grid楼龄修正
             // 
             this.grid楼龄修正.DataSource = this.yw楼龄修正BindingSource;
-            this.grid楼龄修正.EmbeddedNavigator.Name = "";
             this.grid楼龄修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid楼龄修正.Location = new System.Drawing.Point(6, 289);
+            this.grid楼龄修正.Location = new System.Drawing.Point(7, 337);
             this.grid楼龄修正.MainView = this.gv楼龄修正;
             this.grid楼龄修正.Name = "grid楼龄修正";
             this.grid楼龄修正.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1});
-            this.grid楼龄修正.Size = new System.Drawing.Size(650, 136);
+            this.grid楼龄修正.Size = new System.Drawing.Size(758, 159);
             this.grid楼龄修正.TabIndex = 12;
             this.grid楼龄修正.UseEmbeddedNavigator = true;
             this.grid楼龄修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -4511,12 +4469,11 @@
             // grid朝向修正
             // 
             this.grid朝向修正.DataSource = this.yw朝向修正BindingSource;
-            this.grid朝向修正.EmbeddedNavigator.Name = "";
             this.grid朝向修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid朝向修正.Location = new System.Drawing.Point(6, 161);
+            this.grid朝向修正.Location = new System.Drawing.Point(7, 188);
             this.grid朝向修正.MainView = this.gv朝向修正;
             this.grid朝向修正.Name = "grid朝向修正";
-            this.grid朝向修正.Size = new System.Drawing.Size(650, 96);
+            this.grid朝向修正.Size = new System.Drawing.Size(758, 112);
             this.grid朝向修正.TabIndex = 11;
             this.grid朝向修正.UseEmbeddedNavigator = true;
             this.grid朝向修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -4634,12 +4591,11 @@
             // grid结构类型修正
             // 
             this.grid结构类型修正.DataSource = this.yw结构类型修正BindingSource;
-            this.grid结构类型修正.EmbeddedNavigator.Name = "";
             this.grid结构类型修正.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.grid结构类型修正.Location = new System.Drawing.Point(6, 30);
+            this.grid结构类型修正.Location = new System.Drawing.Point(7, 35);
             this.grid结构类型修正.MainView = this.gv结构类型修正;
             this.grid结构类型修正.Name = "grid结构类型修正";
-            this.grid结构类型修正.Size = new System.Drawing.Size(650, 94);
+            this.grid结构类型修正.Size = new System.Drawing.Size(758, 110);
             this.grid结构类型修正.TabIndex = 10;
             this.grid结构类型修正.UseEmbeddedNavigator = true;
             this.grid结构类型修正.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -4721,22 +4677,22 @@
             // 
             // txt区片号
             // 
-            this.txt区片号.Location = new System.Drawing.Point(282, 3);
+            this.txt区片号.Location = new System.Drawing.Point(329, 3);
             this.txt区片号.Name = "txt区片号";
-            this.txt区片号.Size = new System.Drawing.Size(136, 21);
+            this.txt区片号.Size = new System.Drawing.Size(159, 21);
             this.txt区片号.TabIndex = 9;
             // 
             // txtProjectid
             // 
-            this.txtProjectid.Location = new System.Drawing.Point(687, 3);
+            this.txtProjectid.Location = new System.Drawing.Point(801, 3);
             this.txtProjectid.Name = "txtProjectid";
             this.txtProjectid.Properties.ReadOnly = true;
-            this.txtProjectid.Size = new System.Drawing.Size(126, 21);
+            this.txtProjectid.Size = new System.Drawing.Size(147, 21);
             this.txtProjectid.TabIndex = 7;
             // 
             // cbeType
             // 
-            this.cbeType.Location = new System.Drawing.Point(83, 3);
+            this.cbeType.Location = new System.Drawing.Point(97, 3);
             this.cbeType.Name = "cbeType";
             this.cbeType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -4744,7 +4700,7 @@
             "非单家独户",
             "单家独户",
             "车房"});
-            this.cbeType.Size = new System.Drawing.Size(100, 21);
+            this.cbeType.Size = new System.Drawing.Size(117, 21);
             this.cbeType.TabIndex = 6;
             this.cbeType.SelectedIndexChanged += new System.EventHandler(this.cbeType_SelectedIndexChanged);
             // 
@@ -4894,7 +4850,7 @@
             this.xtb样点临时.Controls.Add(this.groupControl单家独户);
             this.xtb样点临时.Name = "xtb样点临时";
             this.xtb样点临时.PageVisible = false;
-            this.xtb样点临时.Size = new System.Drawing.Size(367, 288);
+            this.xtb样点临时.Size = new System.Drawing.Size(959, 798);
             this.xtb样点临时.Text = "样点临时";
             // 
             // groupControl非单家独户
@@ -4924,268 +4880,255 @@
             this.groupControl非单家独户.Controls.Add(this.txt非单家独户结构类型修正系数);
             this.groupControl非单家独户.Controls.Add(this.label33);
             this.groupControl非单家独户.Controls.Add(this.txt非单家独户区片基准房价);
-            this.groupControl非单家独户.Location = new System.Drawing.Point(21, 43);
+            this.groupControl非单家独户.Location = new System.Drawing.Point(24, 50);
             this.groupControl非单家独户.Name = "groupControl非单家独户";
-            this.groupControl非单家独户.Size = new System.Drawing.Size(334, 406);
-            this.toolTipController.SetSuperTip(this.groupControl非单家独户, null);
+            this.groupControl非单家独户.Size = new System.Drawing.Size(390, 474);
             this.groupControl非单家独户.TabIndex = 170;
             this.groupControl非单家独户.Text = "非单家独户";
             // 
             // btn计算非单家独户样点单价
             // 
-            this.btn计算非单家独户样点单价.Location = new System.Drawing.Point(49, 370);
+            this.btn计算非单家独户样点单价.Location = new System.Drawing.Point(57, 432);
             this.btn计算非单家独户样点单价.Name = "btn计算非单家独户样点单价";
-            this.btn计算非单家独户样点单价.Size = new System.Drawing.Size(130, 23);
+            this.btn计算非单家独户样点单价.Size = new System.Drawing.Size(152, 27);
             this.btn计算非单家独户样点单价.TabIndex = 181;
             this.btn计算非单家独户样点单价.Text = "计算样点单价";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(70, 346);
+            this.label40.Location = new System.Drawing.Point(82, 404);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label40, null);
             this.label40.TabIndex = 195;
             this.label40.Text = "样点单价：";
             // 
             // txt非单家独户样点单价
             // 
-            this.txt非单家独户样点单价.Location = new System.Drawing.Point(143, 343);
+            this.txt非单家独户样点单价.Location = new System.Drawing.Point(167, 400);
             this.txt非单家独户样点单价.Name = "txt非单家独户样点单价";
             this.txt非单家独户样点单价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户样点单价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户样点单价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户样点单价.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户样点单价.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户样点单价.TabIndex = 194;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(46, 315);
+            this.label39.Location = new System.Drawing.Point(54, 367);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label39, null);
             this.label39.TabIndex = 193;
             this.label39.Text = "是否包含公摊：";
             // 
             // txt非单家独户公摊修正系数
             // 
-            this.txt非单家独户公摊修正系数.Location = new System.Drawing.Point(143, 312);
+            this.txt非单家独户公摊修正系数.Location = new System.Drawing.Point(167, 364);
             this.txt非单家独户公摊修正系数.Name = "txt非单家独户公摊修正系数";
             this.txt非单家独户公摊修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户公摊修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户公摊修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户公摊修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户公摊修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户公摊修正系数.TabIndex = 192;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(58, 282);
+            this.label38.Location = new System.Drawing.Point(68, 329);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(79, 14);
-            this.toolTipController.SetSuperTip(this.label38, null);
             this.label38.TabIndex = 191;
             this.label38.Text = "是否为复式：";
             // 
             // txt非单家独户复式修正系数
             // 
-            this.txt非单家独户复式修正系数.Location = new System.Drawing.Point(143, 279);
+            this.txt非单家独户复式修正系数.Location = new System.Drawing.Point(167, 325);
             this.txt非单家独户复式修正系数.Name = "txt非单家独户复式修正系数";
             this.txt非单家独户复式修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户复式修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户复式修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户复式修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户复式修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户复式修正系数.TabIndex = 190;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(22, 255);
+            this.label37.Location = new System.Drawing.Point(26, 297);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label37, null);
             this.label37.TabIndex = 189;
             this.label37.Text = "物业管理修正系数：";
             // 
             // txt非单家独户物业管理修正系数
             // 
-            this.txt非单家独户物业管理修正系数.Location = new System.Drawing.Point(143, 252);
+            this.txt非单家独户物业管理修正系数.Location = new System.Drawing.Point(167, 294);
             this.txt非单家独户物业管理修正系数.Name = "txt非单家独户物业管理修正系数";
             this.txt非单家独户物业管理修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户物业管理修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户物业管理修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户物业管理修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户物业管理修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户物业管理修正系数.TabIndex = 188;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(46, 226);
+            this.label36.Location = new System.Drawing.Point(54, 264);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label36, null);
             this.label36.TabIndex = 187;
             this.label36.Text = "楼层修正系数：";
             // 
             // txt非单家独户楼层修正系数
             // 
-            this.txt非单家独户楼层修正系数.Location = new System.Drawing.Point(143, 220);
+            this.txt非单家独户楼层修正系数.Location = new System.Drawing.Point(167, 257);
             this.txt非单家独户楼层修正系数.Name = "txt非单家独户楼层修正系数";
             this.txt非单家独户楼层修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼层修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼层修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户楼层修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户楼层修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户楼层修正系数.TabIndex = 186;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(46, 196);
+            this.label35.Location = new System.Drawing.Point(54, 229);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label35, null);
             this.label35.TabIndex = 185;
             this.label35.Text = "楼型修正系数：";
             // 
             // txt非单家独户楼型修正系数
             // 
-            this.txt非单家独户楼型修正系数.Location = new System.Drawing.Point(143, 193);
+            this.txt非单家独户楼型修正系数.Location = new System.Drawing.Point(167, 225);
             this.txt非单家独户楼型修正系数.Name = "txt非单家独户楼型修正系数";
             this.txt非单家独户楼型修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼型修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼型修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户楼型修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户楼型修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户楼型修正系数.TabIndex = 184;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(22, 164);
+            this.label34.Location = new System.Drawing.Point(26, 191);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label34, null);
             this.label34.TabIndex = 182;
             this.label34.Text = "建筑面积修正系数：";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(22, 137);
+            this.label29.Location = new System.Drawing.Point(26, 160);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label29, null);
             this.label29.TabIndex = 183;
             this.label29.Text = "临路情况修正系数：";
             // 
             // txt非单家独户建筑面积修正系数
             // 
-            this.txt非单家独户建筑面积修正系数.Location = new System.Drawing.Point(143, 161);
+            this.txt非单家独户建筑面积修正系数.Location = new System.Drawing.Point(167, 188);
             this.txt非单家独户建筑面积修正系数.Name = "txt非单家独户建筑面积修正系数";
             this.txt非单家独户建筑面积修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户建筑面积修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户建筑面积修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户建筑面积修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户建筑面积修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户建筑面积修正系数.TabIndex = 181;
             // 
             // txt非单家独户临路情况修正系数
             // 
-            this.txt非单家独户临路情况修正系数.Location = new System.Drawing.Point(143, 134);
+            this.txt非单家独户临路情况修正系数.Location = new System.Drawing.Point(167, 156);
             this.txt非单家独户临路情况修正系数.Name = "txt非单家独户临路情况修正系数";
             this.txt非单家独户临路情况修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户临路情况修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户临路情况修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户临路情况修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户临路情况修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户临路情况修正系数.TabIndex = 182;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(46, 110);
+            this.label30.Location = new System.Drawing.Point(54, 128);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label30, null);
             this.label30.TabIndex = 181;
             this.label30.Text = "楼龄修正系数：";
             // 
             // txt非单家独户楼龄修正系数
             // 
-            this.txt非单家独户楼龄修正系数.Location = new System.Drawing.Point(143, 107);
+            this.txt非单家独户楼龄修正系数.Location = new System.Drawing.Point(167, 125);
             this.txt非单家独户楼龄修正系数.Name = "txt非单家独户楼龄修正系数";
             this.txt非单家独户楼龄修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼龄修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户楼龄修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户楼龄修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户楼龄修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户楼龄修正系数.TabIndex = 180;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(46, 83);
+            this.label31.Location = new System.Drawing.Point(54, 97);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label31, null);
             this.label31.TabIndex = 179;
             this.label31.Text = "朝向修正系数：";
             // 
             // txt非单家独户朝向修正系数
             // 
-            this.txt非单家独户朝向修正系数.Location = new System.Drawing.Point(143, 80);
+            this.txt非单家独户朝向修正系数.Location = new System.Drawing.Point(167, 93);
             this.txt非单家独户朝向修正系数.Name = "txt非单家独户朝向修正系数";
             this.txt非单家独户朝向修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户朝向修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户朝向修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户朝向修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户朝向修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户朝向修正系数.TabIndex = 178;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(22, 56);
+            this.label32.Location = new System.Drawing.Point(26, 65);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label32, null);
             this.label32.TabIndex = 177;
             this.label32.Text = "结构类型修正系数：";
             // 
             // txt非单家独户结构类型修正系数
             // 
-            this.txt非单家独户结构类型修正系数.Location = new System.Drawing.Point(143, 53);
+            this.txt非单家独户结构类型修正系数.Location = new System.Drawing.Point(167, 62);
             this.txt非单家独户结构类型修正系数.Name = "txt非单家独户结构类型修正系数";
             this.txt非单家独户结构类型修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户结构类型修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户结构类型修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户结构类型修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户结构类型修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户结构类型修正系数.TabIndex = 176;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(46, 29);
+            this.label33.Location = new System.Drawing.Point(54, 34);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label33, null);
             this.label33.TabIndex = 175;
             this.label33.Text = "区片基准房价：";
             // 
             // txt非单家独户区片基准房价
             // 
-            this.txt非单家独户区片基准房价.Location = new System.Drawing.Point(143, 26);
+            this.txt非单家独户区片基准房价.Location = new System.Drawing.Point(167, 30);
             this.txt非单家独户区片基准房价.Name = "txt非单家独户区片基准房价";
             this.txt非单家独户区片基准房价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户区片基准房价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt非单家独户区片基准房价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt非单家独户区片基准房价.Size = new System.Drawing.Size(136, 21);
+            this.txt非单家独户区片基准房价.Size = new System.Drawing.Size(159, 21);
             this.txt非单家独户区片基准房价.TabIndex = 174;
             // 
             // chk样点计算
             // 
-            this.chk样点计算.Location = new System.Drawing.Point(19, 15);
+            this.chk样点计算.Location = new System.Drawing.Point(22, 17);
             this.chk样点计算.Name = "chk样点计算";
             this.chk样点计算.Properties.Caption = "样点计算";
             this.chk样点计算.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            this.chk样点计算.Size = new System.Drawing.Size(85, 19);
+            this.chk样点计算.Size = new System.Drawing.Size(99, 19);
             this.chk样点计算.TabIndex = 169;
             this.chk样点计算.CheckedChanged += new System.EventHandler(this.chk样点计算_CheckedChanged);
             // 
@@ -5208,180 +5151,171 @@
             this.groupControl单家独户.Controls.Add(this.txt单家独户结构类型修正系数);
             this.groupControl单家独户.Controls.Add(this.label21);
             this.groupControl单家独户.Controls.Add(this.txt单家独户区片基准房价);
-            this.groupControl单家独户.Location = new System.Drawing.Point(21, 37);
+            this.groupControl单家独户.Location = new System.Drawing.Point(24, 43);
             this.groupControl单家独户.Name = "groupControl单家独户";
-            this.groupControl单家独户.Size = new System.Drawing.Size(292, 275);
-            this.toolTipController.SetSuperTip(this.groupControl单家独户, null);
+            this.groupControl单家独户.Size = new System.Drawing.Size(341, 321);
             this.groupControl单家独户.TabIndex = 6;
             this.groupControl单家独户.Text = "单家独户";
             // 
             // btn计算单家独户样点单价
             // 
-            this.btn计算单家独户样点单价.Location = new System.Drawing.Point(133, 247);
+            this.btn计算单家独户样点单价.Location = new System.Drawing.Point(155, 288);
             this.btn计算单家独户样点单价.Name = "btn计算单家独户样点单价";
-            this.btn计算单家独户样点单价.Size = new System.Drawing.Size(130, 23);
+            this.btn计算单家独户样点单价.Size = new System.Drawing.Size(152, 27);
             this.btn计算单家独户样点单价.TabIndex = 180;
             this.btn计算单家独户样点单价.Text = "计算样点单价";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(60, 222);
+            this.label28.Location = new System.Drawing.Point(70, 259);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(67, 14);
-            this.toolTipController.SetSuperTip(this.label28, null);
             this.label28.TabIndex = 179;
             this.label28.Text = "样点单价：";
             // 
             // txt单家独户样点单价
             // 
-            this.txt单家独户样点单价.Location = new System.Drawing.Point(133, 219);
+            this.txt单家独户样点单价.Location = new System.Drawing.Point(155, 255);
             this.txt单家独户样点单价.Name = "txt单家独户样点单价";
             this.txt单家独户样点单价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户样点单价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户样点单价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户样点单价.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户样点单价.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户样点单价.TabIndex = 178;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(24, 189);
+            this.label27.Location = new System.Drawing.Point(28, 220);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(103, 14);
-            this.toolTipController.SetSuperTip(this.label27, null);
             this.label27.TabIndex = 177;
             this.label27.Text = "容积率修正系数：";
             // 
             // txt单家独户容积率修正系数
             // 
-            this.txt单家独户容积率修正系数.Location = new System.Drawing.Point(133, 186);
+            this.txt单家独户容积率修正系数.Location = new System.Drawing.Point(155, 217);
             this.txt单家独户容积率修正系数.Name = "txt单家独户容积率修正系数";
             this.txt单家独户容积率修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户容积率修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户容积率修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户容积率修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户容积率修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户容积率修正系数.TabIndex = 176;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(36, 162);
+            this.label26.Location = new System.Drawing.Point(42, 189);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label26, null);
             this.label26.TabIndex = 175;
             this.label26.Text = "交通修正系数：";
             // 
             // txt单家独户交通修正系数
             // 
-            this.txt单家独户交通修正系数.Location = new System.Drawing.Point(133, 159);
+            this.txt单家独户交通修正系数.Location = new System.Drawing.Point(155, 185);
             this.txt单家独户交通修正系数.Name = "txt单家独户交通修正系数";
             this.txt单家独户交通修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户交通修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户交通修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户交通修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户交通修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户交通修正系数.TabIndex = 174;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 135);
+            this.label25.Location = new System.Drawing.Point(14, 157);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label25, null);
             this.label25.TabIndex = 173;
             this.label25.Text = "临路情况修正系数：";
             // 
             // txt单家独户临路情况修正系数
             // 
-            this.txt单家独户临路情况修正系数.Location = new System.Drawing.Point(133, 132);
+            this.txt单家独户临路情况修正系数.Location = new System.Drawing.Point(155, 154);
             this.txt单家独户临路情况修正系数.Name = "txt单家独户临路情况修正系数";
             this.txt单家独户临路情况修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户临路情况修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户临路情况修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户临路情况修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户临路情况修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户临路情况修正系数.TabIndex = 172;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(36, 108);
+            this.label24.Location = new System.Drawing.Point(42, 126);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label24, null);
             this.label24.TabIndex = 171;
             this.label24.Text = "楼龄修正系数：";
             // 
             // txt单家独户楼龄修正系数
             // 
-            this.txt单家独户楼龄修正系数.Location = new System.Drawing.Point(133, 105);
+            this.txt单家独户楼龄修正系数.Location = new System.Drawing.Point(155, 122);
             this.txt单家独户楼龄修正系数.Name = "txt单家独户楼龄修正系数";
             this.txt单家独户楼龄修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户楼龄修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户楼龄修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户楼龄修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户楼龄修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户楼龄修正系数.TabIndex = 170;
             this.txt单家独户楼龄修正系数.EditValueChanged += new System.EventHandler(this.textEdit4_EditValueChanged);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(36, 81);
+            this.label23.Location = new System.Drawing.Point(42, 94);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label23, null);
             this.label23.TabIndex = 169;
             this.label23.Text = "朝向修正系数：";
             // 
             // txt单家独户朝向修正系数
             // 
-            this.txt单家独户朝向修正系数.Location = new System.Drawing.Point(133, 78);
+            this.txt单家独户朝向修正系数.Location = new System.Drawing.Point(155, 91);
             this.txt单家独户朝向修正系数.Name = "txt单家独户朝向修正系数";
             this.txt单家独户朝向修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户朝向修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户朝向修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户朝向修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户朝向修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户朝向修正系数.TabIndex = 168;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 54);
+            this.label22.Location = new System.Drawing.Point(14, 63);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(115, 14);
-            this.toolTipController.SetSuperTip(this.label22, null);
             this.label22.TabIndex = 167;
             this.label22.Text = "结构类型修正系数：";
             // 
             // txt单家独户结构类型修正系数
             // 
-            this.txt单家独户结构类型修正系数.Location = new System.Drawing.Point(133, 51);
+            this.txt单家独户结构类型修正系数.Location = new System.Drawing.Point(155, 59);
             this.txt单家独户结构类型修正系数.Name = "txt单家独户结构类型修正系数";
             this.txt单家独户结构类型修正系数.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户结构类型修正系数.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户结构类型修正系数.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户结构类型修正系数.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户结构类型修正系数.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户结构类型修正系数.TabIndex = 166;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(36, 27);
+            this.label21.Location = new System.Drawing.Point(42, 31);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(91, 14);
-            this.toolTipController.SetSuperTip(this.label21, null);
             this.label21.TabIndex = 165;
             this.label21.Text = "区片基准房价：";
             // 
             // txt单家独户区片基准房价
             // 
-            this.txt单家独户区片基准房价.Location = new System.Drawing.Point(133, 24);
+            this.txt单家独户区片基准房价.Location = new System.Drawing.Point(155, 28);
             this.txt单家独户区片基准房价.Name = "txt单家独户区片基准房价";
             this.txt单家独户区片基准房价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户区片基准房价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt单家独户区片基准房价.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txt单家独户区片基准房价.Size = new System.Drawing.Size(136, 21);
+            this.txt单家独户区片基准房价.Size = new System.Drawing.Size(159, 21);
             this.txt单家独户区片基准房价.TabIndex = 164;
             // 
             // xtr样点计算
@@ -5397,32 +5331,31 @@
             this.xtr样点计算.Controls.Add(this.labelControl2);
             this.xtr样点计算.Controls.Add(this.lbl区镇);
             this.xtr样点计算.Name = "xtr样点计算";
-            this.xtr样点计算.Size = new System.Drawing.Size(819, 678);
+            this.xtr样点计算.Size = new System.Drawing.Size(959, 798);
             this.xtr样点计算.Text = "样点";
             // 
             // bt_exportyddata
             // 
-            this.bt_exportyddata.Location = new System.Drawing.Point(710, 12);
+            this.bt_exportyddata.Location = new System.Drawing.Point(828, 14);
             this.bt_exportyddata.Name = "bt_exportyddata";
-            this.bt_exportyddata.Size = new System.Drawing.Size(92, 23);
+            this.bt_exportyddata.Size = new System.Drawing.Size(107, 27);
             this.bt_exportyddata.TabIndex = 185;
             this.bt_exportyddata.Text = "导出样点数据";
             this.bt_exportyddata.Click += new System.EventHandler(this.bt_exportyddata_Click);
             // 
             // bt_test
             // 
-            this.bt_test.Location = new System.Drawing.Point(618, 12);
+            this.bt_test.Location = new System.Drawing.Point(721, 14);
             this.bt_test.Name = "bt_test";
-            this.bt_test.Size = new System.Drawing.Size(75, 23);
+            this.bt_test.Size = new System.Drawing.Size(87, 27);
             this.bt_test.TabIndex = 184;
             this.bt_test.Text = "样点估价";
             this.bt_test.Click += new System.EventHandler(this.bt_test_Click);
             // 
             // gcydfdj
             // 
-            this.gcydfdj.EmbeddedNavigator.Name = "";
             this.gcydfdj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gcydfdj.Location = new System.Drawing.Point(-3, 362);
+            this.gcydfdj.Location = new System.Drawing.Point(3, 503);
             this.gcydfdj.MainView = this.gvydfdj;
             this.gcydfdj.Name = "gcydfdj";
             this.gcydfdj.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -5436,7 +5369,7 @@
             this.repositoryItemComboBoxFdjgt,
             this.repositoryItemComboBoxFdjly,
             this.repositoryItemComboBoxFdjywdt});
-            this.gcydfdj.Size = new System.Drawing.Size(813, 239);
+            this.gcydfdj.Size = new System.Drawing.Size(948, 279);
             this.gcydfdj.TabIndex = 183;
             this.gcydfdj.UseEmbeddedNavigator = true;
             this.gcydfdj.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -5476,7 +5409,9 @@
             this.gcydfdj评估时点,
             this.gcydfdj样点来源,
             this.gcydfdj备注,
-            this.gcydfdj样点});
+            this.gcydfdj样点,
+            this.gcydfdj标准价格,
+            this.gcydfdj逆算});
             this.gvydfdj.GridControl = this.gcydfdj;
             this.gvydfdj.Name = "gvydfdj";
             this.gvydfdj.OptionsView.ColumnAutoWidth = false;
@@ -5816,9 +5751,8 @@
             // 
             // gcyddj
             // 
-            this.gcyddj.EmbeddedNavigator.Name = "";
             this.gcyddj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gcyddj.Location = new System.Drawing.Point(0, 362);
+            this.gcyddj.Location = new System.Drawing.Point(0, 422);
             this.gcyddj.MainView = this.gvyddj;
             this.gcyddj.Name = "gcyddj";
             this.gcyddj.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -5829,7 +5763,7 @@
             this.repositoryItemComboBoxYddjjt,
             this.repositoryItemComboBoxYddjrjl,
             this.repositoryItemComboBoxYddjly});
-            this.gcyddj.Size = new System.Drawing.Size(813, 239);
+            this.gcyddj.Size = new System.Drawing.Size(948, 279);
             this.gcyddj.TabIndex = 182;
             this.gcyddj.UseEmbeddedNavigator = true;
             this.gcyddj.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -5860,7 +5794,9 @@
             this.gcyddj交易时点,
             this.gcyddj评估时点,
             this.gcyddj样点来源,
-            this.gcyddj备注});
+            this.gcyddj备注,
+            this.gcyddj标准价格,
+            this.gcyddj逆算});
             this.gvyddj.GridControl = this.gcyddj;
             this.gvyddj.Name = "gvyddj";
             this.gvyddj.OptionsView.ColumnAutoWidth = false;
@@ -6104,12 +6040,11 @@
             // 
             // gcYdk
             // 
-            this.gcYdk.EmbeddedNavigator.Name = "";
             this.gcYdk.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gcYdk.Location = new System.Drawing.Point(1, 41);
+            this.gcYdk.Location = new System.Drawing.Point(1, 48);
             this.gcYdk.MainView = this.gvYdk;
             this.gcYdk.Name = "gcYdk";
-            this.gcYdk.Size = new System.Drawing.Size(813, 315);
+            this.gcYdk.Size = new System.Drawing.Size(948, 367);
             this.gcYdk.TabIndex = 181;
             this.gcYdk.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvYdk});
@@ -6287,34 +6222,34 @@
             // 
             // bt_searchydk
             // 
-            this.bt_searchydk.Location = new System.Drawing.Point(282, 12);
+            this.bt_searchydk.Location = new System.Drawing.Point(329, 14);
             this.bt_searchydk.Name = "bt_searchydk";
-            this.bt_searchydk.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchydk.Size = new System.Drawing.Size(87, 27);
             this.bt_searchydk.TabIndex = 178;
             this.bt_searchydk.Text = "查询";
             this.bt_searchydk.Click += new System.EventHandler(this.bt_searchydk_Click);
             // 
             // cbe样点区镇
             // 
-            this.cbe样点区镇.Location = new System.Drawing.Point(437, 14);
+            this.cbe样点区镇.Location = new System.Drawing.Point(510, 16);
             this.cbe样点区镇.Name = "cbe样点区镇";
             this.cbe样点区镇.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbe样点区镇.Size = new System.Drawing.Size(100, 21);
+            this.cbe样点区镇.Size = new System.Drawing.Size(117, 21);
             this.cbe样点区镇.TabIndex = 177;
             this.cbe样点区镇.Visible = false;
             // 
             // txt样点座落
             // 
-            this.txt样点座落.Location = new System.Drawing.Point(51, 14);
+            this.txt样点座落.Location = new System.Drawing.Point(59, 16);
             this.txt样点座落.Name = "txt样点座落";
-            this.txt样点座落.Size = new System.Drawing.Size(207, 21);
+            this.txt样点座落.Size = new System.Drawing.Size(241, 21);
             this.txt样点座落.TabIndex = 176;
             this.txt样点座落.EditValueChanged += new System.EventHandler(this.txt样点座落_EditValueChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(17, 17);
+            this.labelControl2.Location = new System.Drawing.Point(20, 20);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(28, 14);
             this.labelControl2.TabIndex = 175;
@@ -6322,21 +6257,51 @@
             // 
             // lbl区镇
             // 
-            this.lbl区镇.Location = new System.Drawing.Point(403, 16);
+            this.lbl区镇.Location = new System.Drawing.Point(470, 19);
             this.lbl区镇.Name = "lbl区镇";
             this.lbl区镇.Size = new System.Drawing.Size(28, 14);
             this.lbl区镇.TabIndex = 173;
             this.lbl区镇.Text = "区镇:";
             this.lbl区镇.Visible = false;
             // 
+            // gcyddj标准价格
+            // 
+            this.gcyddj标准价格.Caption = "标准价格";
+            this.gcyddj标准价格.FieldName = "标准价格";
+            this.gcyddj标准价格.Name = "gcyddj标准价格";
+            this.gcyddj标准价格.Visible = true;
+            this.gcyddj标准价格.VisibleIndex = 19;
+            // 
+            // gcyddj逆算
+            // 
+            this.gcyddj逆算.Caption = "逆算";
+            this.gcyddj逆算.FieldName = "逆算";
+            this.gcyddj逆算.Name = "gcyddj逆算";
+            this.gcyddj逆算.Visible = true;
+            this.gcyddj逆算.VisibleIndex = 20;
+            // 
+            // gcydfdj标准价格
+            // 
+            this.gcydfdj标准价格.Caption = "标准价格";
+            this.gcydfdj标准价格.FieldName = "标准价格";
+            this.gcydfdj标准价格.Name = "gcydfdj标准价格";
+            this.gcydfdj标准价格.Visible = true;
+            this.gcydfdj标准价格.VisibleIndex = 28;
+            // 
+            // gcydfdj逆算
+            // 
+            this.gcydfdj逆算.Caption = "逆算";
+            this.gcydfdj逆算.FieldName = "逆算";
+            this.gcydfdj逆算.Name = "gcydfdj逆算";
+            this.gcydfdj逆算.Visible = true;
+            this.gcydfdj逆算.VisibleIndex = 29;
+            // 
             // FJ
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "FJ";
-            this.Size = new System.Drawing.Size(828, 710);
-            this.toolTipController.SetSuperTip(this, null);
-            ((System.ComponentModel.ISupportInitialize)(this.tblData)).EndInit();
+            this.Size = new System.Drawing.Size(966, 828);
             this.tblData.ResumeLayout(false);
             this.xtb单家.ResumeLayout(false);
             this.xtb单家.PerformLayout();
@@ -7116,5 +7081,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcydfdj室;
         private DevExpress.XtraGrid.Columns.GridColumn gcydfdj样点;
         private DevExpress.XtraEditors.SimpleButton bt_exportyddata;
+        private DevExpress.XtraGrid.Columns.GridColumn gcydfdj标准价格;
+        private DevExpress.XtraGrid.Columns.GridColumn gcydfdj逆算;
+        private DevExpress.XtraGrid.Columns.GridColumn gcyddj标准价格;
+        private DevExpress.XtraGrid.Columns.GridColumn gcyddj逆算;
     }
 }
