@@ -1806,13 +1806,13 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
             string lnqksz;
             double llsz;
             double jzmj;
-            string lxsz;
+            //string lxsz;
             double lcsz;
             double zlc;
-            string wyglsz;
-            string fssz;
-            string gtsz;
-            string ywdt;
+            //string wyglsz;
+            //string fssz;
+            //string gtsz;
+            //string ywdt;
             #region 非单家
 
             ydfdjdata tmpydfdjdata = new ydfdjdata();
@@ -2770,21 +2770,18 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                             break;
                                         }
                                     }
-                                    bool bok = false;
+
                                     if (t1 == 0 && t2 == 0)
                                     {
                                         (yd as iyddj).Rjlsz = 0;
-                                        bok = true;
                                     }
                                     else if (t1 != 0 && t2 == 0)
                                     {
                                         (yd as iyddj).Rjlsz = d1;
-                                        bok = true;
                                     }
                                     else if (t1 == 0 && t2 != 0)
                                     {
                                         (yd as iyddj).Rjlsz = d2;
-                                        bok = true;
                                     }
                                     else if (t1 != 0 && t2 != 0)
                                     {
@@ -2805,35 +2802,12 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                 }
                             }
                             #endregion
-                            //if (((ZBPM.yd.yddj)(yd))ToString().Substring(1, 3) == "888")
-                            //{
-                            //    string ss = ydcol.Rjl[3].ToString();
-                            //}
 
                         }
                         if (tmpyddata is ydfdjdata)
                         {
-                            //cxsz = (tmpyddata as ydfdjdata).Cxsz;
-                            //jglxsz = (tmpyddata as ydfdjdata).Jglxsz;
-                            //jzmj = (tmpyddata as ydfdjdata).Jzmj;
-                            //llsz = (tmpyddata as ydfdjdata).Llsz;
-                            //lnqksz = (tmpyddata as ydfdjdata).Lnqksz;
-
-                            //lxsz = (tmpyddata as ydfdjdata).Lxsz;
-                            //lcsz = (tmpyddata as ydfdjdata).Lcsz;
-                            //zlc = (tmpyddata as ydfdjdata).Zlc;
-                            //wy = (tmpyddata as ydfdjdata).Wyglsz;
-                            //fs = (tmpyddata as ydfdjdata).Fssz;
-                            //gt = (tmpyddata as ydfdjdata).Gtsz;
-                            //ywdt = (tmpyddata as ydfdjdata).Ywdt;
                             double dqpj;
-                            //==========
-                            //rom.Evidence["Fjglxxz"].Value
-                            //rom.Evidence["Fcxxz"].Value
-                            //rom.Evidence["Llxz"].Value
-                            //rom.Evidence["Fllqkxz"].Value
-                            //rom.Evidence["Fjtxz"].Value
-                            //rom.Evidence["Rjlxz"].Value
+
                             if (yd != null)
                             {
                                 yd = null;
@@ -2968,21 +2942,21 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                             break;
                                         }
                                     }
-                                    bool bok = false;
+                                   
                                     if (t1 == 0 && t2 == 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = 0;
-                                        bok = true;
+                                        
                                     }
                                     else if (t1 != 0 && t2 == 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = d1;
-                                        bok = true;
+                                       
                                     }
                                     else if (t1 == 0 && t2 != 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = d2;
-                                        bok = true;
+                                        
                                     }
                                     else if (t1 != 0 && t2 != 0)
                                     {
@@ -3059,21 +3033,17 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                                 break;
                                             }
                                         }
-                                        bool bok = false;
                                         if (t1 == 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = 0;
-                                            bok = true;
                                         }
                                         else if (t1 != 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = d1;
-                                            bok = true;
-                                        }
+                                         }
                                         else if (t1 == 0 && t2 != 0)
                                         {
                                             (yd as iydfdj).Lcsz = d2;
-                                            bok = true;
                                         }
                                         else if (t1 != 0 && t2 != 0)
                                         {
@@ -3126,21 +3096,21 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                                 break;
                                             }
                                         }
-                                        bool bok = false;
+                                     
                                         if (t1 == 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = 0;
-                                            bok = true;
+                                            
                                         }
                                         else if (t1 != 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = d1;
-                                            bok = true;
+                                           
                                         }
                                         else if (t1 == 0 && t2 != 0)
                                         {
                                             (yd as iydfdj).Lcsz = d2;
-                                            bok = true;
+                                            
                                         }
                                         else if (t1 != 0 && t2 != 0)
                                         {
@@ -3175,19 +3145,7 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
 
 
                         }
-                        //rom.Evidence["Fjglxxz"].Value
-                        //rom.Evidence["Fcxxz"].Value
-                        //rom.Evidence["Llxz"].Value
-                        //rom.Evidence["Fllqkxz"].Value
-                        //rom.Evidence["Fjtxz"].Value
-                        //rom.Evidence["Rjlxz"].Value
-                        //rom.Evidence["Jzmjxz"].Value
-                        //rom.Evidence["Lxxz"].Value
-                        //rom.Evidence["Gtxz"].Value
-                        //rom.Evidence["Wyxz"].Value
-                        //rom.Evidence["Fsxz"].Value xxxx
-                        //rom.Evidence["Dtxz"].Value
-                        //rom.Evidence["Fdtxz"].Value
+                        
                     }
 
                     else if (inTest && reader.Name == "test")
@@ -3309,14 +3267,11 @@ FROM
 
     public class JZFJ
     {
-        private SqlConnection cnn;
-        private DataSet dsData = null;
         private System.Data.DataTable dtCxxz = null;//yw_朝向修正
         private System.Data.DataTable dtCflx = null;//yw_车房类型修正
         private DataTable dtCfqp = null;//yw_车房区片价
         private DataTable dtJzfj = null;//yw_jzfj中某projectid指定的单条记录
         private DataTable dtData = null;//yw_jzfj所有记录
-        private DataTable dtDtflc = null;//yw_电梯房楼层修正
         private DataTable dtDt = null;//yw_电梯修正
         private DataTable dtFs = null;//yw_复式修正
         private DataTable dtGt = null;//yw_公摊修正

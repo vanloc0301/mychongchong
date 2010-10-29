@@ -86,8 +86,7 @@ namespace ZBPM
 
         #region 全局变量
         private DataSet m_dstAll;
-        private DataTable m_dtbB;
-        private string m_strYwNo;
+        private string m_strYwNo = string.Empty;
         private PrintSet m_printSet;
         private string bglx = "doc";
         private int iweburl = 0; //标记是否是第一次运行webgujia;
@@ -312,7 +311,6 @@ namespace ZBPM
 
                 string url = strdz;
 
-                Object o = null;
 
                 //fetch the page to your web browser.
                 this._windowManager.ActiveBrowser.Navigate(url);
@@ -422,7 +420,7 @@ namespace ZBPM
             SetControlState();
             //for (int i = gridview_sf.RowCount; i >= 0; i--)
             //{
-                gridview_sf.ExpandAllGroups();
+            gridview_sf.ExpandAllGroups();
             //}
         }
 
@@ -569,7 +567,6 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
             PrintSet.Name = printSet.Name;
             PrintSet.ReplicationVersion = printSet.ReplicationVersion;
             int intCount = printSet.TempletPrints.Count;
-            int intRow = 0;
             string strDescription = "";
             PrintSet.TempletPrints = new List<TempletPrint>();
             for (int i = intCount - 1; i >= 0; i--)
@@ -631,41 +628,10 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
         {
             string strProjectId;
             string strPROINST_ID;
-            DataSet dtsYW_tdzbpm;
             string strXmlData = "";
 
             strProjectId = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
             strPROINST_ID = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProinstId, "");
-
-            //            string strYW_tdzbpm_td = @"SELECT dkid AS Expr1, PROJECT_ID AS Expr2, ISNULL(地块编号, N'') AS 地块编号, 
-            //                                      ISNULL(权属单位, N'') AS 权属单位, ISNULL(土地位置坐落, N'') AS 土地位置坐落, 
-            //                                      ISNULL(建设用地批文号, N'') AS 建设用地批文号, ISNULL(用地现状, N'') 
-            //                                      AS 用地现状, ISNULL(土地使用证编号, N'') AS 土地使用证编号, 
-            //                                      CASE WHEN YW_tdzbpm_td.原产权单位提供的底价 IS NOT NULL 
-            //                                      THEN CONVERT(varchar(20), YW_tdzbpm_td.原产权单位提供的底价) 
-            //                                      ELSE '' END AS 原产权单位提供的底价, ISNULL(原土地用途, N'') AS 原土地用途, 
-            //                                      ISNULL(原土地性质, N'') AS 原土地性质, 
-            //                                      CASE WHEN YW_tdzbpm_td.用地面积 IS NOT NULL THEN CONVERT(varchar(20), 
-            //                                      YW_tdzbpm_td.用地面积) ELSE '' END AS 用地面积, ISNULL(图纸编号, N'') 
-            //                                      AS 图纸编号, ISNULL(勘察情况, N'') AS 勘察情况, ISNULL(税费完善情况, N'') 
-            //                                      AS 税费完善情况, ISNULL(权属争议, N'') AS 权属争议, ISNULL(清拆补偿负责人, N'') 
-            //                                      AS 清拆补偿负责人, 
-            //                                      CASE WHEN YW_tdzbpm_td.保证金冲减地价款期数 IS NOT NULL 
-            //                                      THEN CONVERT(varchar(20), YW_tdzbpm_td.保证金冲减地价款期数) 
-            //                                      ELSE '' END AS 保证金冲减地价款期数, ISNULL(过户税费, N'') AS 过户税费, 
-            //                                      ISNULL(查封情况, N'') AS 查封情况, ISNULL(抵押情况, N'') AS 抵押情况, 
-            //                                      ISNULL(是否有保留价, N'') AS 是否有保留价, 宗地图, 万分一图, 现状图, 规划图, 
-            //                                      地价图,'wordml://'+PROJECT_ID+'Z.jpg' as 宗地图号,'wordml://'+PROJECT_ID+'W.jpg' as  万分一图号,'wordml://'+PROJECT_ID+'X.jpg' as  现状图号,'wordml://'+PROJECT_ID+'G.jpg' as  规划图号, 
-            //                                      'wordml://'+PROJECT_ID+'D.jpg' as  地价图号, 图纸编号
-            //                                      FROM dbo.YW_tdzbpm_td where YW_tdzbpm_td.PROJECT_ID = '" + strProjectId + @"'
-            //                                      FOR XML AUTO,ELEMENTS,BINARY BASE64";
-
-
-            //            string strMATER = @"SELECT PROINSTMATER_ID, isnull(PROINSTMATER_NAME,'') as PROINSTMATER_NAME, PROINST_ID, isnull(OLD_NUM,'') as OLD_NUM, 
-            //                                isnull(DUPL_NUM,'') as DUPL_NUM, isnull(PROINSTMATER_MEM,'') as PROINSTMATER_MEM, REPLICATION_VERSION
-            //                                FROM WF_PROINSTMATER where  PROINST_ID = '" + strPROINST_ID + @"' and SELECTED = 1 
-            //                                FOR XML AUTO,ELEMENTS";
-            //            dtsYW_tdzbpm = SkyMap.Net.DAO.QueryHelper.ExecuteSqls("Default", string.Empty, new string[] { strYW_tdzbpm_td, strMATER }, new string[] { "YW_tdzbpm_td", "WF_PROINSTMATER" });
 
             IDA0 dao = DAOFactory.GetInstanceByNameSpace("SkyMap.Net.DAO");
             IDbConnection dbConn = dao.Connection;
@@ -976,103 +942,12 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                     //==============================end
                 }
 
-                //XmlDocument xcopyto = new XmlDocument();
-                //strXmlData = "<Root xmlns=\"http://www.zgfdc.net/gujia\">" + "</Root>";
-                //xcopyto.LoadXml(strXmlData);
-                //XmlDocument xcopyfrom = new XmlDocument();
-                //xcopyfrom.LoadXml(xe.ToString());
-                //foreach (XmlNode nodeB in xcopyfrom.FirstChild.ChildNodes)
-                //{
-                //    node = xcopyto.ImportNode(nodeB, true);
-                //    xcopyto.FirstChild.AppendChild(node);
-                //}
-                //string xcopytostring = xcopyto.InnerXml.ToString();
-                //XElement xcopytoxe = XElement.Parse(tmpstring);
-                //var xcopytoss = from el in xcopytoxe.Descendants(ns + "yw_gujia_b") select el;
-                //foreach (XElement x in xcopytoss)
-                //{
-                //    xe.SetElementValue(ns + x.Name.LocalName.ToString(), "111");
-                //}
-                //#region==============================2009.9.4 收费通知书
-                ////HasElementReturnString(x, ns, "座落");
-                ////评估类型,评估总值,评估对象,评估地址,评估日期,评估编号,标准收费,折扣率,折扣后价值大写,折扣后价值小写,开户帐号,开户行,开户名称
-                //string straddress="";//评估地址
-                //string strpgbh="";
-                //string strpglx="";
-                //var varywgujiab = from el in xe.Descendants(ns + "yw_gujia_b") select el;
-                //foreach (XElement x in varywgujiab)
-                //{
-                //    if (HasElement(x, ns, "收费标准"))
-                //    {
-                //        if (HasElementReturnString(x, ns, "收费标准").IndexOf("房地产") >= 0 || HasElementReturnString(x, ns, "收费标准").IndexOf("土地") >= 0)
-                //        {
-                //            if (strpglx != "房地产")
-                //            {
-                //                if (HasElementReturnString(x, ns, "收费标准").IndexOf("房地产") >= 0) strpglx = "房地产";
-                //                if (HasElementReturnString(x, ns, "收费标准").IndexOf("土地") >= 0) strpglx = "土地";
-                //            }
-                //            if (double.Parse(HasElementReturnString(x, ns, "标准收费")) > 0)
-                //            {
-                //                straddress = straddress + HasElementReturnString(x,ns, "座落") + "/";
-                //                strpgbh = strpgbh + HasElementReturnString(x, ns, "正报告编号") + "/";
-                //            }                            
-                //        }
-                //        straddress = straddress.Substring(0, straddress.Length - 1);
-                //        strpgbh = strpgbh.Substring(0, strpgbh.Length - 1);
-                //    }
-                //}
-                //var varywgujia = from el in xe.Descendants(ns + "yw_gujia") select el;
-                //foreach (XElement x in varywgujia)
-                //{
-                //    if (HasElement(x, ns, "委托方"))
-                //    {
-                //        x.SetElementValue(ns + "评估类型", strpglx);
-                //        x.SetElementValue(ns + "评估地址", straddress);
-                //        x.SetElementValue(ns + "评估编号", strpgbh);
-                //        x.SetElementValue(ns + "评估总值", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "评估总值"),0).ToString("#,#"));
-                //        x.SetElementValue(ns + "标准收费", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "标准收费"),0).ToString("#,#"));
-                //        x.SetElementValue(ns + "折扣率", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "折扣率") * 10, 1));
-                //        x.SetElementValue(ns + "实际收费", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "实际收费"), 0).ToString("#,#"));
-                //        x.SetElementValue(ns + "实际收费大写",AppraiseReport.MoneyDx(AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "实际收费"), 0).ToString("#,#")));
-                //        x.SetElementValue(ns + "评估日期", string.Format("{0}年{1}月{2}日", DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Year, DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Month, DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Day));
-                //        x.SetElementValue(ns + "收费通知书日期", string.Format("{0}年{1}月{2}日", DateTime.Parse(DateTime.Now.ToString()).Year, DateTime.Parse(DateTime.Now.ToString()).Month, DateTime.Parse(DateTime.Now.ToString()).Day));
-                //        x.SetElementValue(ns + "开户帐号", "ssss");
-                //        x.SetElementValue(ns + "开户行", "name");
-                //        x.SetElementValue(ns + "开户名称", strpglx);
-                //    }
-                //}
-                //#endregion==============================2009.9.4 收费通知书
             }
             catch (Exception ex)
             {
-                MessageHelper.ShowInfo(tmperror);
+                MessageHelper.ShowInfo(string.Format("1.{0}\r\n2.{1}", tmperror, ex.Message.ToString()));
             }
-
-
             xe.Save(strFilePath);
-            //XElement xe = XElement.Load("test.xml");
-            //var ss = from el in xe.Elements("yw_gujia").Elements("yw_gujia_b") select el;
-            //foreach (XElement x in ss)
-            //{
-            //    MessageBox.Show(x.ToString());
-            //}
-            //===============================
-            //strXmlData = "";
-            //foreach (DataRow dr in dtsYW_tdzbpm.Tables["WF_PROINSTMATER"].Rows)
-            //{
-            //    strXmlData += dr[0].ToString();
-            //}
-            //strXmlData = strXmlData.Replace("dbo.", "");
-            //strXmlData = strXmlData.Replace("xmlns=\"\"", "");
-            //XmlDocument docWF_PROINSTMATER = new XmlDocument();
-            //strXmlData = "<Root xmlns=\"http://www.zgfdc.net/gujia\">" + strXmlData + "</Root>";
-            //docWF_PROINSTMATER.LoadXml(strXmlData);
-            //foreach (XmlNode nodeB in docWF_PROINSTMATER.FirstChild.ChildNodes)
-            //{
-            //    node = doc.ImportNode(nodeB, true);
-            //    doc.FirstChild.FirstChild.AppendChild(node);
-            //}
-
             return true;
         }
 
@@ -1081,7 +956,6 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
         {
             string strProjectId;
             string strPROINST_ID;
-            DataSet dtsYW_tdzbpm;
             string strXmlData = "";
 
             strProjectId = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
@@ -1403,39 +1277,16 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
             {
                 if (tmperror == "业务收费通知书")
                 {
-                   //MessageHelper.ShowInfo("出错,请与系统维护人员联系!");     
+                    //MessageHelper.ShowInfo("出错,请与系统维护人员联系!");     
                     LoggingService.Debug("财务环节的话，业务收费通知书出错;");
                 }
                 else
                 {
-                    MessageHelper.ShowInfo(tmperror);
-                    
+                    MessageHelper.ShowInfo(string.Format("1.{0}\r\n2.{1}", tmperror, ex.Message.ToString()));
+
                 }
             }
             xe.Save(strFilePath);
-            //XElement xe = XElement.Load("test.xml");
-            //var ss = from el in xe.Elements("yw_gujia").Elements("yw_gujia_b") select el;
-            //foreach (XElement x in ss)
-            //{
-            //    MessageBox.Show(x.ToString());
-            //}
-            //===============================
-            //strXmlData = "";
-            //foreach (DataRow dr in dtsYW_tdzbpm.Tables["WF_PROINSTMATER"].Rows)
-            //{
-            //    strXmlData += dr[0].ToString();
-            //}
-            //strXmlData = strXmlData.Replace("dbo.", "");
-            //strXmlData = strXmlData.Replace("xmlns=\"\"", "");
-            //XmlDocument docWF_PROINSTMATER = new XmlDocument();
-            //strXmlData = "<Root xmlns=\"http://www.zgfdc.net/gujia\">" + strXmlData + "</Root>";
-            //docWF_PROINSTMATER.LoadXml(strXmlData);
-            //foreach (XmlNode nodeB in docWF_PROINSTMATER.FirstChild.ChildNodes)
-            //{
-            //    node = doc.ImportNode(nodeB, true);
-            //    doc.FirstChild.FirstChild.AppendChild(node);
-            //}
-
             return true;
         }
         #endregion
@@ -1445,7 +1296,6 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
         {
             string strProjectId;
             string strPROINST_ID;
-            DataSet dtsYW_tdzbpm;
             string strXmlData = "";
 
             strProjectId = (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PProjectId, "");
@@ -1650,9 +1500,6 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                     x.Add(new XElement(ns + "估价期日长数字", AppraiseReport.SetValue("估价期日(长数字)", x.Element(ns + "估价基准日").Value.ToString())));
                     tmperror = "17.有效年限长";
                     x.Add(new XElement(ns + "有效年期长", AppraiseReport.SetValue("有效年期(长)", x.Element(ns + "报告有效期限").Value.ToString())));
-                    //==================
-
-                    //==================
                     tmperror = "19. 价格精度";
                     x.SetElementValue(ns + "价格精度大写", x.Element(ns + "总价精度").Value.ToString());
 
@@ -1691,81 +1538,13 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                     x.Add(new XElement(ns + "评估方法描述", ""));
                     x.Add(new XElement(ns + "本估评师", (string)this.DataFormConntroller.GetParamValue(SkyMap.Net.DataForms.ParamNames.PStaffName, "")));
                     tmperror = "18.位置区域和环境为空";
-                    // x.SetElementValue(ns + "位置区域和环境", Convert.ToBase64String(Encoding.Default.GetBytes((x.Element(ns + "位置区域和环境").Value.ToString()))));
                     x.SetElementValue(ns + "位置区域和环境", x.Element(ns + "位置区域和环境").Value.ToString());
 
                 }
-                //#region==============================2009.9.4 收费通知书
-                ////HasElementReturnString(x, ns, "座落");
-                ////评估类型,评估总值,评估对象,评估地址,评估日期,评估编号,标准收费,折扣率,折扣后价值大写,折扣后价值小写,开户帐号,开户行,开户名称
-                //string straddress = "";//评估地址
-
-                //tmperror = "业务收费通知书";
-                //string strpgbh = "";
-                //string strpglx = "";
-                //var varywgujiab = from el in xe.Descendants(ns + "yw_gujia_b") select el;
-                //foreach (XElement x in varywgujiab)
-                //{
-                //    if (HasElement(x, ns, "收费标准"))
-                //    {
-                //        if (HasElementReturnString(x, ns, "收费标准").IndexOf("房地产") >= 0 || HasElementReturnString(x, ns, "收费标准").IndexOf("土地") >= 0)
-                //        {
-                //            if (strpglx != "房地产")
-                //            {
-                //                if (HasElementReturnString(x, ns, "收费标准").IndexOf("房地产") >= 0) strpglx = "房地产";
-                //                if (HasElementReturnString(x, ns, "收费标准").IndexOf("土地") >= 0) strpglx = "土地";
-                //            }
-                //            if (double.Parse(HasElementReturnString(x, ns, "标准收费")) > 0)
-                //            {
-                //                straddress = straddress + HasElementReturnString(x, ns, "座落") + "/";
-                //                strpgbh = strpgbh + HasElementReturnString(x, ns, "正报告编号") + "/";
-                //            }
-                //        }
-                //        straddress = straddress.Substring(0, straddress.Length - 1);
-                //        strpgbh = strpgbh.Substring(0, strpgbh.Length - 1);
-                //    }
-                //}
-                //var varywgujia = from el in xe.Descendants(ns + "yw_gujia") select el;
-                //foreach (XElement x in varywgujia)
-                //{
-                //    if (HasElement(x, ns, "委托方"))
-                //    {
-                //        string tmpyh = HasElementReturnString(x, ns, "收费银行");
-                //        x.SetElementValue(ns + "评估类型", strpglx);
-                //        x.SetElementValue(ns + "评估地址", straddress);
-                //        x.SetElementValue(ns + "评估编号", strpgbh);
-                //        x.SetElementValue(ns + "评估总值", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "评估总值"), 0).ToString("#,#"));
-                //        x.SetElementValue(ns + "标准收费", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "标准收费"), 0).ToString("#,#"));
-                //        double tmpdouble = AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "折扣") * 10, 1);
-                //        string strzk = "";
-                //        if (tmpdouble.ToString().EndsWith("0"))
-                //        {
-                //            strzk = int.Parse(tmpdouble.ToString()).ToString() == "10" ? "" : string.Format("，现按{0}折收费如下", int.Parse(tmpdouble.ToString()).ToString());
-                //        }
-                //        else
-                //        {
-                //            strzk = string.Format("，现按{0}折收费如下", tmpdouble.ToString());
-                //        }
-                //        x.SetElementValue(ns + "折扣", strzk);
-                //        //20100126 收费通知书，实际收费数据继承改为开票收费字段;
-                //        x.SetElementValue(ns + "实际收费", AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "开票收费"), 0).ToString("#,#"));
-                //        x.SetElementValue(ns + "实际收费大写", AppraiseReport.MoneyDx(AppraiseClass.S4J5(HasElementReturnDouble(x, ns, "开票收费"), 0).ToString("#,#")));
-                //        x.SetElementValue(ns + "评估日期", string.Format("{0}年{1}月{2}日", DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Year, DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Month, DateTime.Parse(HasElementReturnString(x, ns, "报告开始时间")).Day));
-                //        x.SetElementValue(ns + "收费通知书日期", string.Format("{0}年{1}月{2}日", DateTime.Parse(DateTime.Now.ToString()).Year, DateTime.Parse(DateTime.Now.ToString()).Month, DateTime.Parse(DateTime.Now.ToString()).Day));
-                //        string tmpsql = "select 开户名称 ,帐号 ,开户行 from [收费帐号] where 开户行='{0}'";
-                //        tmpsql = string.Format(tmpsql, tmpyh);
-                //        DataTable tmpTable = SkyMap.Net.DAO.QueryHelper.ExecuteSql("Default", string.Empty, tmpsql);
-
-                //        x.SetElementValue(ns + "开户帐号", tmpTable.Rows[0]["帐号"].ToString());
-                //        x.SetElementValue(ns + "开户行", tmpTable.Rows[0]["开户行"].ToString());
-                //        x.SetElementValue(ns + "开户名称", tmpTable.Rows[0]["开户名称"].ToString());
-                //    }
-                //}
-                //#endregion==============================2009.9.4 收费通知书
             }
             catch (Exception ex)
             {
-                MessageHelper.ShowInfo(tmperror);
+                MessageHelper.ShowInfo(string.Format("1.{0}\r\n2.{1}", tmperror, ex.Message.ToString()));
                 return false;
             }
             //xe.Save(strFilePath);
@@ -1810,7 +1589,7 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                     }
                     else if (templetPrint.Description.IndexOf("检查数据") >= 0)
                     {
-                       return CreateData(inputfile); //正式报告 建档的时候判断数据是否补全了，防止财务收费通知书的时候退回;
+                        return CreateData(inputfile); //正式报告 建档的时候判断数据是否补全了，防止财务收费通知书的时候退回;
                     }
                     else
                     {
@@ -1852,38 +1631,12 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                 outputfile = string.Format("{0}.xml", outputfile);
                 try
                 {
-                    xslt.Transform(inputfile, outputfile as string);
-                    ////======================start 特殊处理方式
-                    //string sok;
-                    //string strstart = "<ns0:位置区域和环境>";
-                    //string strend = "</ns0:位置区域和环境>";
-                    //StringBuilder ss = new StringBuilder();
-                    //string s1;
-                    //using (StreamReader sr = new StreamReader(outputfile as string, System.Text.Encoding.GetEncoding("utf-8")))
-                    //{
-                    //    string s = "";
-                    //    while ((s = sr.ReadLine()) != null)
-                    //    {
-                    //        ss.Append(s);
-                    //    }
-                    //    s1 = ss.ToString();
-
-                    //    sok = AppraiseReport.TF(s1, strstart, strend);
-
-                    //}
-                    //using (StreamWriter sw = new StreamWriter(outputfile as string))
-                    //{
-                    //    sw.Write(sok);
-                    //}
-                    ////=====================end  特殊处理方式
-
+                    xslt.Transform(inputfile, outputfile as string);   
                 }
                 catch (Exception ex)
                 {
-                    MessageHelper.ShowInfo("该报表已经打开了！");
+                    MessageHelper.ShowInfo(string.Format("1.{0}\r\n2.{1}", "该报表已经打开了！", ex.Message.ToString()));
                 }
-
-
                 System.Diagnostics.Process process = new Process();
                 process.StartInfo.FileName = outputfile as string;
                 process.Start();
@@ -1894,26 +1647,7 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                     {
                         try
                         {
-                            //-------------------------
                             SaveToWebGujia(outputfile.ToString(), base.GetControlBindValue(this.txt委托方).ToString(), this.bglx, base.GetControlBindValue(this.txt_ProjectId).ToString().Substring(base.GetControlBindValue(this.txt_ProjectId).ToString().IndexOf("-") + 1).Replace("-", ""), templetPrint.Description.ToString());
-                            //-------------------------
-                            //System.Diagnostics.Process process1 = new Process();
-                            //process1.StartInfo.CreateNoWindow = true;
-                            //process1.StartInfo.UseShellExecute = false;
-                            //process1.StartInfo.FileName = Application.StartupPath + "\\WML2XSLT";
-                            //process1.StartInfo.Arguments = "\"" + outputfile + "\" -o \"" + xsltFile + "\" -ns http://www.zgfdc.net/gujia";
-                            //process1.Start();
-                            //process1.WaitForExit();
-
-                            //byte[] bytefile;
-                            //FileStream file = File.Open(xsltFile, FileMode.Open);
-                            //bytefile = new byte[(int)file.Length];
-                            //file.Read(bytefile, 0, (int)file.Length);
-                            //dtbReport.Rows[0].BeginEdit();
-                            //dtbReport.Rows[0]["ReportData"] = bytefile;
-                            //dtbReport.Rows[0].EndEdit();
-                            //SkyMap.Net.DataForms.DataEngine.SQLDataEngine sqlDataEngine = new SkyMap.Net.DataForms.DataEngine.SQLDataEngine();
-                            //sqlDataEngine.SaveData(this.dataFormController.DAODataForm.DataSource, dtbReport);
                         }
                         catch (Exception ex)
                         {
@@ -2410,7 +2144,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
                     string url = strdz + "/weboffice/default.aspx?ReportId=" + base.GetControlBindValue(this.txt_ProjectId).ToString().Substring(base.GetControlBindValue(this.txt_ProjectId).ToString().IndexOf("-") + 1).Replace("-", "");
 
-                    Object o = null;
 
                     //fetch the page to your web browser.
                     this._windowManager.ActiveBrowser.Navigate(url);
@@ -3008,7 +2741,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                             {
                                 drB["评估确定土地总价"] = AppraiseClass.QuZhen(AppraiseClass.S4J5(drB["计算土地总价"].ToString()), intjd);
                                 drB["评估确定土地单价"] = AppraiseClass.S4J5(double.Parse(drB["计算土地总价"].ToString()) / double.Parse(drB["评估最后采用土地面积"].ToString()), 0);
-                               // drB["评估确定房地产总价"] = AppraiseClass.QuZhen(AppraiseClass.S4J5(drB["计算房地产总价"].ToString()), intjd);
+                                // drB["评估确定房地产总价"] = AppraiseClass.QuZhen(AppraiseClass.S4J5(drB["计算房地产总价"].ToString()), intjd);
                                 drB["评估确定房地产单价"] = AppraiseClass.S4J5(double.Parse(drB["计算房地产总价"].ToString()) / double.Parse(drB["评估最后采用建筑面积"].ToString()), 0);
                                 drB["评估确定房产价值"] = AppraiseClass.QuZhen(AppraiseClass.S4J5(double.Parse(drB["计算房地产总价"].ToString()) - double.Parse(drB["计算土地总价"].ToString()), 0), intjd);
                                 drB["评估确定房产单价"] = AppraiseClass.S4J5(((double.Parse(drB["计算房地产总价"].ToString()) - double.Parse(drB["计算土地总价"].ToString()))) / double.Parse(drB["评估最后采用建筑面积"].ToString()), 0);
@@ -3153,7 +2886,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                     // string aa = string.Format("{0}-{1}", s.Key, s.NumProducts);
                     double dfcjz = 0;
                     double dtdjz = 0;
-                    var v = from Sh aa in al where aa.Tdzh == s.Key select new { tdzj = aa.Tdzj,fdczj=aa.Fdczj,pglx= aa.Pglx };
+                    var v = from Sh aa in al where aa.Tdzh == s.Key select new { tdzj = aa.Tdzj, fdczj = aa.Fdczj, pglx = aa.Pglx };
                     foreach (var t in v)
                     {
                         tmpal.Add(double.Parse(t.tdzj.ToString()));
@@ -3163,10 +2896,10 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                         {
                             tmptdz.Add(s.Key);
                         }
-                        
+
                     }
                     double tmptdzj = tmpal[0];
-                    for (int i = 1; i < tmpal.Count;i++ )
+                    for (int i = 1; i < tmpal.Count; i++)
                     {
                         if (tmptdzj != tmpal[i])
                         {
@@ -3179,13 +2912,13 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                         dprice = 0; dtotal = 0;
                         txt标准价格.Text = dprice.ToString("#,#");
                         txt评估总值.Text = dtotal.ToString("#,#");
-                        MessageHelper.ShowInfo(String.Format("请检查数据是否正确!土地证号为【{0}】的评估项目土地总价输入不适合业务规则!",s.Key));
+                        MessageHelper.ShowInfo(String.Format("请检查数据是否正确!土地证号为【{0}】的评估项目土地总价输入不适合业务规则!", s.Key));
                         return;
                     }
                     //=============
                     if (dfcjz > 0 && dtdjz > 0)
                     {
-                        dprice = dprice + GetMoneyStand(dfcjz+dtdjz,"房地产");
+                        dprice = dprice + GetMoneyStand(dfcjz + dtdjz, "房地产");
                         MessageHelper.ShowInfo(string.Format("【{0}】包含{1}宗房产，评估最后确定土地总价为{2}，房地产总价为{3}，评估标准收费为{4}。", s.Key, s.NumProducts, dtdjz, dtdjz + dfcjz, GetMoneyStand(dfcjz + dtdjz, "房地产").ToString("#,#")));
                         dtotal = dtotal + dtdjz + dfcjz;
                     }
@@ -3198,7 +2931,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                     if (!tmptdz.Contains(sh.Tdzh))
                     {
                         dprice = dprice + sh.Bzsf;
-                        if (sh.Pglx.ToString()=="房地产")
+                        if (sh.Pglx.ToString() == "房地产")
                         {
                             dtotal = dtotal + sh.Fdczj;
                         }
@@ -3208,7 +2941,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                         }
                         else
                         {
-                            throw new Exception(string.Format("[{0}]评估类型不明！",sh.Tdzh.ToString()));
+                            throw new Exception(string.Format("[{0}]评估类型不明！", sh.Tdzh.ToString()));
                         }
                     }
                 }
@@ -3561,26 +3294,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 {
                     try
                     {
-                        //-------------------------
                         SaveToWebGujia(outputfile.ToString(), base.GetControlBindValue(this.txt委托方).ToString(), this.bglx, base.GetControlBindValue(this.txt_ProjectId).ToString().Substring(base.GetControlBindValue(this.txt_ProjectId).ToString().IndexOf("-") + 1).Replace("-", ""), "明细表");
-                        //-------------------------
-                        //System.Diagnostics.Process process1 = new Process();
-                        //process1.StartInfo.CreateNoWindow = true;
-                        //process1.StartInfo.UseShellExecute = false;
-                        //process1.StartInfo.FileName = Application.StartupPath + "\\WML2XSLT";
-                        //process1.StartInfo.Arguments = "\"" + outputfile + "\" -o \"" + xsltFile + "\" -ns http://www.zgfdc.net/gujia";
-                        //process1.Start();
-                        //process1.WaitForExit();
-
-                        //byte[] bytefile;
-                        //FileStream file = File.Open(xsltFile, FileMode.Open);
-                        //bytefile = new byte[(int)file.Length];
-                        //file.Read(bytefile, 0, (int)file.Length);
-                        //dtbReport.Rows[0].BeginEdit();
-                        //dtbReport.Rows[0]["ReportData"] = bytefile;
-                        //dtbReport.Rows[0].EndEdit();
-                        //SkyMap.Net.DataForms.DataEngine.SQLDataEngine sqlDataEngine = new SkyMap.Net.DataForms.DataEngine.SQLDataEngine();
-                        //sqlDataEngine.SaveData(this.dataFormController.DAODataForm.DataSource, dtbReport);
                     }
                     catch (Exception ex)
                     {
@@ -3591,7 +3305,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
             }
             catch (Exception ex)
             {
-                MessageHelper.ShowInfo("该报表已经打开了！");
+                MessageHelper.ShowInfo(string.Format("1.{0}\r\n2.{1}", "该报表已经打开了！", ex.Message.ToString()));
             }
 
         }
@@ -3960,11 +3674,11 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 string tmpstring = ((DevExpress.XtraEditors.ComboBoxEdit)sender).EditValue.ToString();
                 if (tmpstring == "房地产" || tmpstring == "土地")
                 {
-                    txt标准价格.Text = GetMoneyStand(double.Parse(txt评估总值.Text.Replace(",","").ToString()), tmpstring).ToString("#,#");
+                    txt标准价格.Text = GetMoneyStand(double.Parse(txt评估总值.Text.Replace(",", "").ToString()), tmpstring).ToString("#,#");
                 }
                 else
                 {
-                  
+
                 }
             }
             catch
@@ -4030,7 +3744,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                         }
 
                         tmp = dr["评估最后采用建筑面积"].ToString();
-                        if(!string.IsNullOrEmpty(tmp))
+                        if (!string.IsNullOrEmpty(tmp))
                         {
                             jzmj = jzmj + double.Parse(tmp);
                         }
@@ -4048,7 +3762,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                             {
                                 pgzz = pgzz + double.Parse(tmp);
                             }
-                            
+
                         }
                         else if (dr["评估类型"].ToString() == "土地")
                         {
@@ -4066,29 +3780,12 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                     }
                 }
                 #endregion
-                string strsplit = "/-";
-
-                //string result = string.Join("/-", studentNames.ToArray());
-                //List<string> newStudentNames = new List<string>(result.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries));
-
-
-            }
-            else
-            {
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (int.Parse(dr["报告号"].ToString()) < 65)
-                    {
-
-                    }
-                }
-
             }
         }
 
         private void txt初评档案_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void groupControl初评档案归档_Paint(object sender, PaintEventArgs e)
@@ -4148,7 +3845,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
         private bool checkdata()
         {
-           return CreateData("");
+            return CreateData("");
         }
 
         private void bt初评建档_Click(object sender, EventArgs e)
@@ -4180,7 +3877,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                             lstdsyz.Add(tmp);
                         }
 
-                       
+
 
                         tmp = dr["报告名"].ToString();
                         if (!lsbgm.Contains(tmp))
@@ -4283,7 +3980,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
         private void bt正式报告建档_Click(object sender, EventArgs e)
         {
-            
+
             List<string> lstdsyz = new List<string>();//土地使用者
             List<string> lsbgm = new List<string>(); //报告名
             List<string> lspglx = new List<string>();//评估类型
@@ -4311,7 +4008,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                         {
                             lstdsyz.Add(tmp);
                         }
-                       
+
 
                         tmp = dr["报告名"].ToString();
                         if (!lsbgm.Contains(tmp))
@@ -4389,7 +4086,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
                     }
                 }
-                #endregion              
+                #endregion
 
             }
             else
@@ -4484,7 +4181,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
                         }
                     }
-                    #endregion              
+                    #endregion
                 }
                 else
                 {
