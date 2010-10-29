@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace ZBPM.yd
 {
-    class yddj : iyd, iyddj
+    public class yddj : iyd, iyddj
     {
         private double fjqpj;
         private double jglxsz;
@@ -17,7 +17,7 @@ namespace ZBPM.yd
         private double jtsz;
         #region iyd Members
 
-        double iyd.Fjqpj
+        public double Fjqpj
         {
             get
             {
@@ -29,7 +29,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Jglxsz
+        public double Jglxsz
         {
             get
             {
@@ -41,7 +41,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Cxsz
+        public double Cxsz
         {
             get
             {
@@ -53,7 +53,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Llsz
+        public double Llsz
         {
             get
             {
@@ -65,7 +65,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Lnqksz
+        public double Lnqksz
         {
             get
             {
@@ -77,16 +77,16 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Calu()
+        public virtual double Calu()
         {
-            return fjqpj * (1 + jglxsz/100 + cxsz/100 + llsz/100 + lnqksz/100  + jtsz/100) * rjlsz/100;
+            return fjqpj * (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jtsz / 100) * rjlsz / 100;
         }
 
         #endregion
 
         #region iyddj Members
 
-        double iyddj.Jtsz
+        public double Jtsz
         {
             get
             {
@@ -98,7 +98,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyddj.Rjlsz
+        public double Rjlsz
         {
             get
             {
@@ -114,7 +114,7 @@ namespace ZBPM.yd
 
     }
 
-    class ydfdj : iyd, iydfdj
+    public class ydfdj : iyd, iydfdj
     {
         private double fjqpj;
         private double jglxsz;
@@ -130,7 +130,7 @@ namespace ZBPM.yd
         private double dtsz;
         #region iyd Members
 
-        double iyd.Fjqpj
+        public double Fjqpj
         {
             get
             {
@@ -142,7 +142,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Jglxsz
+        public double Jglxsz
         {
             get
             {
@@ -154,7 +154,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Cxsz
+        public double Cxsz
         {
             get
             {
@@ -166,7 +166,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Llsz
+        public double Llsz
         {
             get
             {
@@ -178,7 +178,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Lnqksz
+        public double Lnqksz
         {
             get
             {
@@ -190,16 +190,16 @@ namespace ZBPM.yd
             }
         }
 
-        double iyd.Calu()
+        public virtual double Calu()
         {
-            return fjqpj * (1 + jglxsz/100 + cxsz/100 + llsz/100 + lnqksz/100 + jzmjsz/100 + lxsz/100 + lcsz/100 + wyglsz/100 + fssz/100 + gtsz/100 + dtsz/100);
+            return fjqpj * (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jzmjsz / 100 + lxsz / 100 + lcsz / 100 + wyglsz / 100 + fssz / 100 + gtsz / 100 + dtsz / 100);
         }
 
         #endregion
 
         #region iydfdj Members
 
-        double iydfdj.Jzmjsz
+        public double Jzmjsz
         {
             get
             {
@@ -211,7 +211,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Lxsz
+        public double Lxsz
         {
             get
             {
@@ -223,7 +223,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Lcsz
+        public double Lcsz
         {
             get
             {
@@ -235,7 +235,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Wyglsz
+        public double Wyglsz
         {
             get
             {
@@ -247,7 +247,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Fssz
+        public double Fssz
         {
             get
             {
@@ -259,7 +259,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Gtsz
+        public double Gtsz
         {
             get
             {
@@ -271,7 +271,7 @@ namespace ZBPM.yd
             }
         }
 
-        double iydfdj.Dtsz 
+        public double Dtsz
         {
             get { return dtsz; }
             set { dtsz = value; }
@@ -279,7 +279,24 @@ namespace ZBPM.yd
         #endregion
     }
 
-    class ydksearch:iydsearch
+    #region 加入逆算功能 2010年10月31日
+    public class yddjls : yddj
+    {
+        public override double Calu()
+        {
+            return  base.Fjqpj / (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jtsz / 100) * base.Rjlsz / 100;
+        }
+    }
+    public class ydfdjls : ydfdj
+    {
+        public override double Calu()
+        {
+            return base.Fjqpj * (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jzmjsz / 100 + base.Lxsz / 100 + base.Lcsz / 100 + base.Wyglsz / 100 + base.Fssz / 100 + base.Gtsz / 100 + base.Dtsz / 100);
+        }
+    }
+    #endregion
+
+    class ydksearch : iydsearch
     {
         private string qz;
         private string dz;
