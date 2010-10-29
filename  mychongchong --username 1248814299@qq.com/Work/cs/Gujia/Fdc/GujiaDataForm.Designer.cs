@@ -4057,7 +4057,6 @@
             this.lue_财务业务联系人.Properties.NullText = "";
             this.lue_财务业务联系人.Size = new System.Drawing.Size(100, 21);
             this.lue_财务业务联系人.TabIndex = 153;
-            this.lue_财务业务联系人.EditValueChanged += new System.EventHandler(this.lue_财务业务联系人_EditValueChanged);
             // 
             // labelControl80
             // 
@@ -4076,7 +4075,6 @@
             this.lue_财务业务来源.Properties.NullText = "";
             this.lue_财务业务来源.Size = new System.Drawing.Size(173, 21);
             this.lue_财务业务来源.TabIndex = 151;
-            this.lue_财务业务来源.EditValueChanged += new System.EventHandler(this.lue_财务业务来源_EditValueChanged);
             // 
             // labelControl79
             // 
@@ -4911,7 +4909,6 @@
             this.toolTipController.SetSuperTip(this.groupControl初评档案参与人员, null);
             this.groupControl初评档案参与人员.TabIndex = 96;
             this.groupControl初评档案参与人员.Text = "参与人员";
-            this.groupControl初评档案参与人员.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl8_Paint);
             // 
             // pc初评档案参与人员
             // 
@@ -5530,7 +5527,6 @@
             this.toolTipController.SetSuperTip(this.groupControl初评档案归档, null);
             this.groupControl初评档案归档.TabIndex = 81;
             this.groupControl初评档案归档.Text = "归档";
-            this.groupControl初评档案归档.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl初评档案归档_Paint);
             // 
             // pc初评档案归档
             // 
@@ -6580,7 +6576,6 @@
             this.toolTipController.SetSuperTip(this.groupControl正式报告档案归档, null);
             this.groupControl正式报告档案归档.TabIndex = 81;
             this.groupControl正式报告档案归档.Text = "归档";
-            this.groupControl正式报告档案归档.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl6_Paint);
             // 
             // pc正式报告归档财务收费
             // 

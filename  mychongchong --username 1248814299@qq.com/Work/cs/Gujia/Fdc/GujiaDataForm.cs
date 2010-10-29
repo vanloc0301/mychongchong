@@ -1892,7 +1892,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
         }
 
         private void SetControlState()
-        {           
+        {
             panelControl_换证.Visible = false;
             panelControl_不换证.Visible = true;
         }
@@ -3458,12 +3458,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
             }
             this.bglx = "doc";
             DataFormPrint("收费通知书");
-
-            //SkyMap.Net.DAO.SMDataSource smds = SkyMap.Net.DAO.QueryHelper.Get<SMDataSource>("SMDataSource_1c9905db15c1465f825867d269ea0a9b", "1c9905db15c1465f825867d269ea0a9b");
-            //smds.CreateConnection();
-            //SkyMap.Net.DAO.DAOCacheService.Get();
-            //if(SkyMap.Net.DAO.DAOCacheService.Contains(""))
-
         }
 
         private void LoginWeb(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -3492,21 +3486,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
 
 
 
-        //位置区域和环境改变
-        //private void repositoryItemMemoExEdit3_EditValueChanged(object sender, EventArgs e)
-        //{
-        //    //DataRow drB = ((DevExpress.XtraGrid.Views.Card.CardView)gridB1.FocusedView).GetDataRow(((DevExpress.XtraGrid.Views.Card.CardView)gridB1.FocusedView).FocusedRowHandle);
-        //    //try
-        //    //{
-        //    //    drB.BeginEdit();
-        //    //    drB["位置区域和环境"] = XMLEncodeHelper.Encode("<div>sss</div><p>yyyyy</p>");
-        //    //    drB.EndEdit();
-        //    //}
-        //    //catch
-        //    //{
 
-        //    //}
-        //}
 
         /// <summary>
         /// 将生成的报告上传到webgujia服务器上
@@ -3638,10 +3618,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 {
                     txt标准价格.Text = GetMoneyStand(double.Parse(txt评估总值.Text.Replace(",", "").ToString()), tmpstring).ToString("#,#");
                 }
-                else
-                {
 
-                }
             }
             catch
             {
@@ -3743,66 +3720,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 }
                 #endregion
             }
-        }
-
-        private void txt初评档案_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl初评档案归档_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textEdit11_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dateEdit18_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl62_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit27_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit26_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit20_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupControl6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private bool checkdata()
@@ -3919,9 +3836,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 }
                 #endregion
                 string strsplit = "、";
-
-                //string result = string.Join("/-", studentNames.ToArray());
-                //List<string> newStudentNames = new List<string>(result.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries));
                 txt初评档案估价报告编号.Text = string.Join(strsplit, lsbgm.ToArray());
                 txt初评档案土地使用者.Text = string.Join(strsplit, lstdsyz.ToArray());
                 txt初评档案评估类型.Text = string.Join(strsplit, lspglx.ToArray());
@@ -4049,7 +3963,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                     }
                 }
                 #endregion
-
             }
             else
             {
@@ -4152,8 +4065,6 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
                 }
             }
             string strsplit = "、";
-            //string result = string.Join("/-", studentNames.ToArray());
-            //List<string> newStudentNames = new List<string>(result.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries));
             txt正式报告档案估价报告编号.Text = string.Join(strsplit, lsbgm.ToArray());
             txt正式报告档案土地使用者.Text = string.Join(strsplit, lstdsyz.ToArray());
             txt正式报告档案座落.Text = string.Join(strsplit, lszl.ToArray());
@@ -4260,15 +4171,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
         }
         #endregion
 
-        private void lue_财务业务来源_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void lue_财务业务联系人_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
 
