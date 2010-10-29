@@ -1631,7 +1631,7 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                 outputfile = string.Format("{0}.xml", outputfile);
                 try
                 {
-                    xslt.Transform(inputfile, outputfile as string);   
+                    xslt.Transform(inputfile, outputfile as string);
                 }
                 catch (Exception ex)
                 {
@@ -1683,24 +1683,13 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
             {
                 m_dstAll.Tables["YW_gujia_b"].ExtendedProperties.Add("selectsql", @"SELECT  * FROM YW_gujia_b where PROJECT_ID ='" + strProjectId + "' order by bid asc");
 
-                m_dstAll.Tables["YW_tdzbpm_td"].ExtendedProperties.Add("selectsql", @"SELECT  *  FROM YW_tdzbpm_td where PROJECT_ID ='" + strProjectId + "'");
-                m_dstAll.Tables["YW_tdzbpm_djksq"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_tdzbpm_djksq where PROJECT_ID ='" + strProjectId + "' order by  djksqid ");
-                m_dstAll.Tables["YW_tdzbpm_gpbj"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_tdzbpm_gpbj where PROJECT_ID ='" + strProjectId + "'");
-                m_dstAll.Tables["YW_tdzbpm_phdj"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_tdzbpm_phdj where PROJECT_ID ='" + strProjectId + "'");
-                m_dstAll.Tables["YW_tdzbpm_xcbj"].ExtendedProperties.Add("selectsql", @"SELECT * FROM YW_tdzbpm_xcbj where PROJECT_ID ='" + strProjectId + "'");
-                //地块
-                DataRelation dtr = new DataRelation("Btd", m_dstAll.Tables["YW_gujia_b"].Columns["Bid"], m_dstAll.Tables["YW_tdzbpm_td"].Columns["标"], false);
-                m_dstAll.Relations.Add(dtr);
-                //地价款
-                dtr = new DataRelation("Bdjksq", m_dstAll.Tables["YW_gujia_b"].Columns["Bid"], m_dstAll.Tables["YW_tdzbpm_djksq"].Columns["B_id"], false);
-                m_dstAll.Relations.Add(dtr);
+                DataRelation dtr;
 
                 dtr = new DataRelation("Bxcbj", m_dstAll.Tables["YW_gujia_b"].Columns["Bid"], m_dstAll.Tables["YW_tdzbpm_xcbj"].Columns["B_id"], false);
                 m_dstAll.Relations.Add(dtr);
 
                 m_dstAll.Tables["YW_gujia_b"].TableNewRow += new DataTableNewRowEventHandler(ZBPMDataForms_BNewRow);
                 m_dstAll.Tables["YW_gujia_b"].RowDeleted += new DataRowChangeEventHandler(ZBPMDataForms_RowDeleted);
-                // m_dstAll.Tables["YW_gujia_b"].RowDeleting += new DataRowChangeEventHandler(ZBPMDataForms_RowDeleting);
             }
             return m_dstAll;
         }
@@ -1903,34 +1892,7 @@ FROM YW_gujia_b where PROJECT_ID ='"+strProjectId+"' order by Bid asc","SELECT *
         }
 
         private void SetControlState()
-        {
-            ////if (!cbx_换证.Properties.ReadOnly)
-            ////{
-            ////    cbx_换证.Text = "是";
-            ////    cbx_换证.Enabled = false;
-            ////}
-            ////else
-            ////{
-
-            ////}
-            //try
-            //{
-            //    if (base.GetControlBindValue(this.cbx_换证).ToString() == "是")
-            //    {
-            //        panelControl_换证.Visible = true;
-            //        panelControl_不换证.Visible = false;
-            //    }
-            //    else
-            //    {
-            //        panelControl_换证.Visible = false;
-            //        panelControl_不换证.Visible = true;
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw new Exception(ex.Message.ToString());
-            //}
+        {           
             panelControl_换证.Visible = false;
             panelControl_不换证.Visible = true;
         }
