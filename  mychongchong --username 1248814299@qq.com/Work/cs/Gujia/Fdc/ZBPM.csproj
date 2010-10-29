@@ -39,6 +39,8 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -277,12 +279,6 @@
       <DependentUpon>gujiaDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="fj\Jglx.cs" />
-    <Compile Include="PhotoManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhotoManager.Designer.cs">
-      <DependentUpon>PhotoManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="yd\iyd.cs" />
     <Compile Include="yd\yd.cs" />
@@ -418,16 +414,6 @@
       <Project>{3DED9BCA-1A80-4524-A0AE-46977E630959}</Project>
       <Name>ExcelOper</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Map2PicTool">
-      <Guid>{EE7370BB-D642-492E-A737-B43174FBCE0A}</Guid>
-      <VersionMajor>4</VersionMajor>
-      <VersionMinor>1</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
