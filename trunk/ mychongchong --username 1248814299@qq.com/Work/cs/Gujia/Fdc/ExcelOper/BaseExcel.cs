@@ -24,7 +24,7 @@ namespace ExcelOper
                 return work;
 
             }
-            catch (Exception ex)
+            catch 
             {
                 return null;
 

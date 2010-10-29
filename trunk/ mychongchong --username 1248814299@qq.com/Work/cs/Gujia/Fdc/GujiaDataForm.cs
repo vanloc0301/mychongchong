@@ -1618,7 +1618,7 @@ f.templetprint_id=d.templetprint_id and f.REPLICATION_VERSION!=d.REPLICATION_VER
                 object isVisible = true;
                 object missing = System.Reflection.Missing.Value;
                 //Create the XslTransform object.
-                XslTransform xslt = new XslTransform();
+                XslCompiledTransform xslt = new XslCompiledTransform();
 
                 //Load the stylesheet.
                 xslt.Load(xsltFile);

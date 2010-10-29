@@ -14,7 +14,7 @@ namespace ExcelOper
 
         }
 
-        public bool SetBookTitle(string Title, Worksheet wsheet)
+        public new bool SetBookTitle(string Title, Worksheet wsheet)
         {
             try
             {
