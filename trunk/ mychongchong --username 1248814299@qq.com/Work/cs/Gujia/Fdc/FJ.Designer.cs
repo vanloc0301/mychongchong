@@ -506,65 +506,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txt单家独户区片基准房价 = new DevExpress.XtraEditors.TextEdit();
             this.xtr样点计算 = new DevExpress.XtraTab.XtraTabPage();
-            this.panelControl_ydtitle = new DevExpress.XtraEditors.PanelControl();
-            this.bt_exportyddata = new DevExpress.XtraEditors.SimpleButton();
-            this.bt_test = new DevExpress.XtraEditors.SimpleButton();
-            this.bt_searchydk = new DevExpress.XtraEditors.SimpleButton();
-            this.cbe样点区镇 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txt样点座落 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lbl区镇 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl_ydc = new DevExpress.XtraEditors.PanelControl();
-            this.gcYdk = new SkyMap.Net.Gui.Components.SmGridControl();
-            this.gvYdk = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gcydkid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk区镇 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk座落 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk房产使用性质 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk房产楼层 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk付款方式 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk签约日期 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk楼盘名称 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk建筑面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk套内面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk土地面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk总价 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcydk单价 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panelControl_yddj = new DevExpress.XtraEditors.PanelControl();
-            this.gcyddj = new SkyMap.Net.Gui.Components.SmGridControl();
-            this.gvyddj = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gcyddjid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddjPROJECT_ID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj序号 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj区片号 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj样点编号 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj区镇 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj地址 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj建筑面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj套内面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj土地面积 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj结构 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjjglx = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj朝向 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjcx = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj楼龄 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjll = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj竣工时间 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj临路情况 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjlnqk = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj交通情况 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjjt = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj容积率 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjrjl = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj总价 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj单价 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj交易时点 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj评估时点 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj样点来源 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemComboBoxYddjly = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.gcyddj备注 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj标准价格 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcyddj逆算 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl_Ydfdj = new DevExpress.XtraEditors.PanelControl();
             this.gcydfdj = new SkyMap.Net.Gui.Components.SmGridControl();
             this.gvydfdj = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -612,6 +553,65 @@
             this.gcydfdj样点 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcydfdj标准价格 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gcydfdj逆算 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl_yddj = new DevExpress.XtraEditors.PanelControl();
+            this.gcyddj = new SkyMap.Net.Gui.Components.SmGridControl();
+            this.gvyddj = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcyddjid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddjPROJECT_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj序号 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj区片号 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj样点编号 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj区镇 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj地址 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj建筑面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj套内面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj土地面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj结构 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjjglx = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj朝向 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjcx = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj楼龄 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjll = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj竣工时间 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj临路情况 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjlnqk = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj交通情况 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjjt = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj容积率 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjrjl = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj总价 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj单价 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj交易时点 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj评估时点 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj样点来源 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBoxYddjly = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.gcyddj备注 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj标准价格 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcyddj逆算 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl_ydc = new DevExpress.XtraEditors.PanelControl();
+            this.gcYdk = new SkyMap.Net.Gui.Components.SmGridControl();
+            this.gvYdk = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gcydkid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk区镇 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk座落 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk房产使用性质 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk房产楼层 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk付款方式 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk签约日期 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk楼盘名称 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk建筑面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk套内面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk土地面积 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk总价 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcydk单价 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl_ydtitle = new DevExpress.XtraEditors.PanelControl();
+            this.bt_exportyddata = new DevExpress.XtraEditors.SimpleButton();
+            this.bt_test = new DevExpress.XtraEditors.SimpleButton();
+            this.bt_searchydk = new DevExpress.XtraEditors.SimpleButton();
+            this.cbe样点区镇 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txt样点座落 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl区镇 = new DevExpress.XtraEditors.LabelControl();
             this.tblData.SuspendLayout();
             this.xtb单家.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRjlto.Properties)).BeginInit();
@@ -761,25 +761,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt单家独户结构类型修正系数.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt单家独户区片基准房价.Properties)).BeginInit();
             this.xtr样点计算.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydtitle)).BeginInit();
-            this.panelControl_ydtitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbe样点区镇.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt样点座落.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydc)).BeginInit();
-            this.panelControl_ydc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcYdk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvYdk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_yddj)).BeginInit();
-            this.panelControl_yddj.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcyddj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvyddj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjglx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjcx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjll)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjlnqk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjrjl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjly)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ydfdj)).BeginInit();
             this.panelControl_Ydfdj.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcydfdj)).BeginInit();
@@ -794,6 +775,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjgt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjywdt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_yddj)).BeginInit();
+            this.panelControl_yddj.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcyddj)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvyddj)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjglx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjcx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjlnqk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjrjl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydc)).BeginInit();
+            this.panelControl_ydc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcYdk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvYdk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydtitle)).BeginInit();
+            this.panelControl_ydtitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe样点区镇.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt样点座落.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tblData
@@ -5340,593 +5340,13 @@
             this.xtr样点计算.Size = new System.Drawing.Size(959, 798);
             this.xtr样点计算.Text = "样点";
             // 
-            // panelControl_ydtitle
-            // 
-            this.panelControl_ydtitle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl_ydtitle.Controls.Add(this.bt_exportyddata);
-            this.panelControl_ydtitle.Controls.Add(this.bt_test);
-            this.panelControl_ydtitle.Controls.Add(this.bt_searchydk);
-            this.panelControl_ydtitle.Controls.Add(this.cbe样点区镇);
-            this.panelControl_ydtitle.Controls.Add(this.txt样点座落);
-            this.panelControl_ydtitle.Controls.Add(this.labelControl2);
-            this.panelControl_ydtitle.Controls.Add(this.lbl区镇);
-            this.panelControl_ydtitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl_ydtitle.Location = new System.Drawing.Point(0, 0);
-            this.panelControl_ydtitle.Name = "panelControl_ydtitle";
-            this.panelControl_ydtitle.Size = new System.Drawing.Size(959, 39);
-            this.panelControl_ydtitle.TabIndex = 200;
-            // 
-            // bt_exportyddata
-            // 
-            this.bt_exportyddata.Location = new System.Drawing.Point(822, 8);
-            this.bt_exportyddata.Name = "bt_exportyddata";
-            this.bt_exportyddata.Size = new System.Drawing.Size(107, 27);
-            this.bt_exportyddata.TabIndex = 191;
-            this.bt_exportyddata.Text = "导出样点数据";
-            // 
-            // bt_test
-            // 
-            this.bt_test.Location = new System.Drawing.Point(711, 8);
-            this.bt_test.Name = "bt_test";
-            this.bt_test.Size = new System.Drawing.Size(87, 27);
-            this.bt_test.TabIndex = 190;
-            this.bt_test.Text = "样点估价";
-            // 
-            // bt_searchydk
-            // 
-            this.bt_searchydk.Location = new System.Drawing.Point(319, 8);
-            this.bt_searchydk.Name = "bt_searchydk";
-            this.bt_searchydk.Size = new System.Drawing.Size(87, 27);
-            this.bt_searchydk.TabIndex = 189;
-            this.bt_searchydk.Text = "查询";
-            // 
-            // cbe样点区镇
-            // 
-            this.cbe样点区镇.Location = new System.Drawing.Point(500, 10);
-            this.cbe样点区镇.Name = "cbe样点区镇";
-            this.cbe样点区镇.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbe样点区镇.Size = new System.Drawing.Size(117, 21);
-            this.cbe样点区镇.TabIndex = 188;
-            this.cbe样点区镇.Visible = false;
-            // 
-            // txt样点座落
-            // 
-            this.txt样点座落.Location = new System.Drawing.Point(49, 10);
-            this.txt样点座落.Name = "txt样点座落";
-            this.txt样点座落.Size = new System.Drawing.Size(241, 21);
-            this.txt样点座落.TabIndex = 187;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(8, 12);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(28, 14);
-            this.labelControl2.TabIndex = 186;
-            this.labelControl2.Text = "座落:";
-            // 
-            // lbl区镇
-            // 
-            this.lbl区镇.Location = new System.Drawing.Point(458, 11);
-            this.lbl区镇.Name = "lbl区镇";
-            this.lbl区镇.Size = new System.Drawing.Size(28, 14);
-            this.lbl区镇.TabIndex = 185;
-            this.lbl区镇.Text = "区镇:";
-            this.lbl区镇.Visible = false;
-            // 
-            // panelControl_ydc
-            // 
-            this.panelControl_ydc.Controls.Add(this.gcYdk);
-            this.panelControl_ydc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl_ydc.Location = new System.Drawing.Point(0, 39);
-            this.panelControl_ydc.Name = "panelControl_ydc";
-            this.panelControl_ydc.Size = new System.Drawing.Size(959, 439);
-            this.panelControl_ydc.TabIndex = 189;
-            // 
-            // gcYdk
-            // 
-            this.gcYdk.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcYdk.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gcYdk.Location = new System.Drawing.Point(2, 2);
-            this.gcYdk.MainView = this.gvYdk;
-            this.gcYdk.Name = "gcYdk";
-            this.gcYdk.Size = new System.Drawing.Size(955, 435);
-            this.gcYdk.TabIndex = 182;
-            this.gcYdk.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvYdk});
-            // 
-            // gvYdk
-            // 
-            this.gvYdk.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gcydkid,
-            this.gcydk区镇,
-            this.gcydk座落,
-            this.gcydk房产使用性质,
-            this.gcydk房产楼层,
-            this.gcydk付款方式,
-            this.gcydk签约日期,
-            this.gcydk楼盘名称,
-            this.gcydk建筑面积,
-            this.gcydk套内面积,
-            this.gcydk土地面积,
-            this.gcydk总价,
-            this.gcydk单价});
-            this.gvYdk.GridControl = this.gcYdk;
-            this.gvYdk.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
-            this.gvYdk.Name = "gvYdk";
-            this.gvYdk.OptionsView.ColumnAutoWidth = false;
-            this.gvYdk.OptionsView.ShowFooter = true;
-            this.gvYdk.OptionsView.ShowGroupPanel = false;
-            // 
-            // gcydkid
-            // 
-            this.gcydkid.Caption = "id";
-            this.gcydkid.FieldName = "id";
-            this.gcydkid.Name = "gcydkid";
-            this.gcydkid.OptionsColumn.AllowEdit = false;
-            this.gcydkid.OptionsColumn.AllowMove = false;
-            this.gcydkid.OptionsColumn.AllowSize = false;
-            this.gcydkid.OptionsColumn.ReadOnly = true;
-            this.gcydkid.OptionsColumn.ShowInCustomizationForm = false;
-            this.gcydkid.SummaryItem.DisplayFormat = "{0}";
-            this.gcydkid.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            this.gcydkid.Width = 38;
-            // 
-            // gcydk区镇
-            // 
-            this.gcydk区镇.Caption = "区镇";
-            this.gcydk区镇.FieldName = "区镇";
-            this.gcydk区镇.Name = "gcydk区镇";
-            this.gcydk区镇.OptionsColumn.AllowEdit = false;
-            this.gcydk区镇.OptionsColumn.ReadOnly = true;
-            this.gcydk区镇.Width = 61;
-            // 
-            // gcydk座落
-            // 
-            this.gcydk座落.Caption = "座落";
-            this.gcydk座落.FieldName = "座落";
-            this.gcydk座落.Name = "gcydk座落";
-            this.gcydk座落.OptionsColumn.AllowEdit = false;
-            this.gcydk座落.OptionsColumn.ReadOnly = true;
-            this.gcydk座落.SummaryItem.DisplayFormat = "共查询到{0}个数据";
-            this.gcydk座落.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
-            this.gcydk座落.Visible = true;
-            this.gcydk座落.VisibleIndex = 0;
-            this.gcydk座落.Width = 202;
-            // 
-            // gcydk房产使用性质
-            // 
-            this.gcydk房产使用性质.Caption = "房产使用性质";
-            this.gcydk房产使用性质.FieldName = "房产使用性质";
-            this.gcydk房产使用性质.Name = "gcydk房产使用性质";
-            this.gcydk房产使用性质.OptionsColumn.AllowEdit = false;
-            this.gcydk房产使用性质.OptionsColumn.ReadOnly = true;
-            this.gcydk房产使用性质.Visible = true;
-            this.gcydk房产使用性质.VisibleIndex = 1;
-            this.gcydk房产使用性质.Width = 84;
-            // 
-            // gcydk房产楼层
-            // 
-            this.gcydk房产楼层.Caption = "房产楼层";
-            this.gcydk房产楼层.FieldName = "房产楼层";
-            this.gcydk房产楼层.Name = "gcydk房产楼层";
-            this.gcydk房产楼层.OptionsColumn.AllowEdit = false;
-            this.gcydk房产楼层.OptionsColumn.ReadOnly = true;
-            this.gcydk房产楼层.Visible = true;
-            this.gcydk房产楼层.VisibleIndex = 2;
-            this.gcydk房产楼层.Width = 61;
-            // 
-            // gcydk付款方式
-            // 
-            this.gcydk付款方式.Caption = "付款方式";
-            this.gcydk付款方式.FieldName = "付款方式";
-            this.gcydk付款方式.Name = "gcydk付款方式";
-            this.gcydk付款方式.OptionsColumn.AllowEdit = false;
-            this.gcydk付款方式.OptionsColumn.ReadOnly = true;
-            this.gcydk付款方式.Visible = true;
-            this.gcydk付款方式.VisibleIndex = 3;
-            this.gcydk付款方式.Width = 67;
-            // 
-            // gcydk签约日期
-            // 
-            this.gcydk签约日期.Caption = "签约日期";
-            this.gcydk签约日期.FieldName = "签约日期";
-            this.gcydk签约日期.Name = "gcydk签约日期";
-            this.gcydk签约日期.OptionsColumn.AllowEdit = false;
-            this.gcydk签约日期.OptionsColumn.ReadOnly = true;
-            this.gcydk签约日期.Visible = true;
-            this.gcydk签约日期.VisibleIndex = 4;
-            this.gcydk签约日期.Width = 68;
-            // 
-            // gcydk楼盘名称
-            // 
-            this.gcydk楼盘名称.Caption = "楼盘名称";
-            this.gcydk楼盘名称.FieldName = "楼盘名称";
-            this.gcydk楼盘名称.Name = "gcydk楼盘名称";
-            this.gcydk楼盘名称.OptionsColumn.AllowEdit = false;
-            this.gcydk楼盘名称.OptionsColumn.ReadOnly = true;
-            this.gcydk楼盘名称.Visible = true;
-            this.gcydk楼盘名称.VisibleIndex = 5;
-            this.gcydk楼盘名称.Width = 53;
-            // 
-            // gcydk建筑面积
-            // 
-            this.gcydk建筑面积.Caption = "建筑面积";
-            this.gcydk建筑面积.FieldName = "建筑面积";
-            this.gcydk建筑面积.Name = "gcydk建筑面积";
-            this.gcydk建筑面积.OptionsColumn.AllowEdit = false;
-            this.gcydk建筑面积.OptionsColumn.ReadOnly = true;
-            this.gcydk建筑面积.Visible = true;
-            this.gcydk建筑面积.VisibleIndex = 6;
-            this.gcydk建筑面积.Width = 53;
-            // 
-            // gcydk套内面积
-            // 
-            this.gcydk套内面积.Caption = "套内面积";
-            this.gcydk套内面积.FieldName = "套内面积";
-            this.gcydk套内面积.Name = "gcydk套内面积";
-            this.gcydk套内面积.OptionsColumn.AllowEdit = false;
-            this.gcydk套内面积.OptionsColumn.ReadOnly = true;
-            this.gcydk套内面积.Visible = true;
-            this.gcydk套内面积.VisibleIndex = 7;
-            this.gcydk套内面积.Width = 53;
-            // 
-            // gcydk土地面积
-            // 
-            this.gcydk土地面积.Caption = "土地面积";
-            this.gcydk土地面积.FieldName = "土地面积";
-            this.gcydk土地面积.Name = "gcydk土地面积";
-            this.gcydk土地面积.OptionsColumn.AllowEdit = false;
-            this.gcydk土地面积.OptionsColumn.ReadOnly = true;
-            this.gcydk土地面积.Visible = true;
-            this.gcydk土地面积.VisibleIndex = 8;
-            this.gcydk土地面积.Width = 53;
-            // 
-            // gcydk总价
-            // 
-            this.gcydk总价.Caption = "总价";
-            this.gcydk总价.FieldName = "总价";
-            this.gcydk总价.Name = "gcydk总价";
-            this.gcydk总价.OptionsColumn.AllowEdit = false;
-            this.gcydk总价.OptionsColumn.ReadOnly = true;
-            this.gcydk总价.Visible = true;
-            this.gcydk总价.VisibleIndex = 9;
-            this.gcydk总价.Width = 74;
-            // 
-            // gcydk单价
-            // 
-            this.gcydk单价.Caption = "单价";
-            this.gcydk单价.FieldName = "单价";
-            this.gcydk单价.Name = "gcydk单价";
-            this.gcydk单价.OptionsColumn.AllowEdit = false;
-            this.gcydk单价.OptionsColumn.ReadOnly = true;
-            this.gcydk单价.Visible = true;
-            this.gcydk单价.VisibleIndex = 10;
-            this.gcydk单价.Width = 87;
-            // 
-            // panelControl_yddj
-            // 
-            this.panelControl_yddj.Controls.Add(this.gcyddj);
-            this.panelControl_yddj.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl_yddj.Location = new System.Drawing.Point(0, 478);
-            this.panelControl_yddj.Name = "panelControl_yddj";
-            this.panelControl_yddj.Size = new System.Drawing.Size(959, 320);
-            this.panelControl_yddj.TabIndex = 188;
-            // 
-            // gcyddj
-            // 
-            this.gcyddj.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcyddj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gcyddj.Location = new System.Drawing.Point(2, 2);
-            this.gcyddj.MainView = this.gvyddj;
-            this.gcyddj.Name = "gcyddj";
-            this.gcyddj.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemComboBoxYddjjglx,
-            this.repositoryItemComboBoxYddjcx,
-            this.repositoryItemComboBoxYddjll,
-            this.repositoryItemComboBoxYddjlnqk,
-            this.repositoryItemComboBoxYddjjt,
-            this.repositoryItemComboBoxYddjrjl,
-            this.repositoryItemComboBoxYddjly});
-            this.gcyddj.Size = new System.Drawing.Size(955, 406);
-            this.gcyddj.TabIndex = 183;
-            this.gcyddj.UseEmbeddedNavigator = true;
-            this.gcyddj.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvyddj});
-            // 
-            // gvyddj
-            // 
-            this.gvyddj.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gcyddjid,
-            this.gcyddjPROJECT_ID,
-            this.gcyddj序号,
-            this.gcyddj区片号,
-            this.gcyddj样点编号,
-            this.gcyddj区镇,
-            this.gcyddj地址,
-            this.gcyddj建筑面积,
-            this.gcyddj套内面积,
-            this.gcyddj土地面积,
-            this.gcyddj结构,
-            this.gcyddj朝向,
-            this.gcyddj楼龄,
-            this.gcyddj竣工时间,
-            this.gcyddj临路情况,
-            this.gcyddj交通情况,
-            this.gcyddj容积率,
-            this.gcyddj总价,
-            this.gcyddj单价,
-            this.gcyddj交易时点,
-            this.gcyddj评估时点,
-            this.gcyddj样点来源,
-            this.gcyddj备注,
-            this.gcyddj标准价格,
-            this.gcyddj逆算});
-            this.gvyddj.GridControl = this.gcyddj;
-            this.gvyddj.Name = "gvyddj";
-            this.gvyddj.OptionsView.ColumnAutoWidth = false;
-            this.gvyddj.OptionsView.ShowGroupPanel = false;
-            // 
-            // gcyddjid
-            // 
-            this.gcyddjid.Caption = "id";
-            this.gcyddjid.FieldName = "id";
-            this.gcyddjid.Name = "gcyddjid";
-            this.gcyddjid.OptionsColumn.AllowEdit = false;
-            this.gcyddjid.OptionsColumn.ReadOnly = true;
-            // 
-            // gcyddjPROJECT_ID
-            // 
-            this.gcyddjPROJECT_ID.Caption = "PROJECT_ID";
-            this.gcyddjPROJECT_ID.FieldName = "PROJECT_ID";
-            this.gcyddjPROJECT_ID.Name = "gcyddjPROJECT_ID";
-            this.gcyddjPROJECT_ID.OptionsColumn.AllowEdit = false;
-            this.gcyddjPROJECT_ID.OptionsColumn.ReadOnly = true;
-            // 
-            // gcyddj序号
-            // 
-            this.gcyddj序号.Caption = "序号";
-            this.gcyddj序号.FieldName = "序号";
-            this.gcyddj序号.Name = "gcyddj序号";
-            // 
-            // gcyddj区片号
-            // 
-            this.gcyddj区片号.Caption = "区片号";
-            this.gcyddj区片号.FieldName = "区片号";
-            this.gcyddj区片号.Name = "gcyddj区片号";
-            // 
-            // gcyddj样点编号
-            // 
-            this.gcyddj样点编号.Caption = "样点编号";
-            this.gcyddj样点编号.FieldName = "样点编号";
-            this.gcyddj样点编号.Name = "gcyddj样点编号";
-            this.gcyddj样点编号.Visible = true;
-            this.gcyddj样点编号.VisibleIndex = 0;
-            // 
-            // gcyddj区镇
-            // 
-            this.gcyddj区镇.Caption = "区镇";
-            this.gcyddj区镇.FieldName = "区镇";
-            this.gcyddj区镇.Name = "gcyddj区镇";
-            this.gcyddj区镇.Visible = true;
-            this.gcyddj区镇.VisibleIndex = 1;
-            // 
-            // gcyddj地址
-            // 
-            this.gcyddj地址.Caption = "地址";
-            this.gcyddj地址.FieldName = "地址";
-            this.gcyddj地址.Name = "gcyddj地址";
-            this.gcyddj地址.Visible = true;
-            this.gcyddj地址.VisibleIndex = 2;
-            // 
-            // gcyddj建筑面积
-            // 
-            this.gcyddj建筑面积.Caption = "建筑面积";
-            this.gcyddj建筑面积.FieldName = "建筑面积";
-            this.gcyddj建筑面积.Name = "gcyddj建筑面积";
-            this.gcyddj建筑面积.Visible = true;
-            this.gcyddj建筑面积.VisibleIndex = 3;
-            // 
-            // gcyddj套内面积
-            // 
-            this.gcyddj套内面积.Caption = "套内面积";
-            this.gcyddj套内面积.FieldName = "套内面积";
-            this.gcyddj套内面积.Name = "gcyddj套内面积";
-            this.gcyddj套内面积.Visible = true;
-            this.gcyddj套内面积.VisibleIndex = 4;
-            // 
-            // gcyddj土地面积
-            // 
-            this.gcyddj土地面积.Caption = "土地面积";
-            this.gcyddj土地面积.FieldName = "土地面积";
-            this.gcyddj土地面积.Name = "gcyddj土地面积";
-            this.gcyddj土地面积.Visible = true;
-            this.gcyddj土地面积.VisibleIndex = 5;
-            // 
-            // gcyddj结构
-            // 
-            this.gcyddj结构.Caption = "结构";
-            this.gcyddj结构.ColumnEdit = this.repositoryItemComboBoxYddjjglx;
-            this.gcyddj结构.FieldName = "结构";
-            this.gcyddj结构.Name = "gcyddj结构";
-            this.gcyddj结构.Visible = true;
-            this.gcyddj结构.VisibleIndex = 6;
-            // 
-            // repositoryItemComboBoxYddjjglx
-            // 
-            this.repositoryItemComboBoxYddjjglx.AutoHeight = false;
-            this.repositoryItemComboBoxYddjjglx.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjjglx.Name = "repositoryItemComboBoxYddjjglx";
-            // 
-            // gcyddj朝向
-            // 
-            this.gcyddj朝向.Caption = "朝向";
-            this.gcyddj朝向.ColumnEdit = this.repositoryItemComboBoxYddjcx;
-            this.gcyddj朝向.FieldName = "朝向";
-            this.gcyddj朝向.Name = "gcyddj朝向";
-            this.gcyddj朝向.Visible = true;
-            this.gcyddj朝向.VisibleIndex = 7;
-            // 
-            // repositoryItemComboBoxYddjcx
-            // 
-            this.repositoryItemComboBoxYddjcx.AutoHeight = false;
-            this.repositoryItemComboBoxYddjcx.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjcx.Name = "repositoryItemComboBoxYddjcx";
-            // 
-            // gcyddj楼龄
-            // 
-            this.gcyddj楼龄.Caption = "楼龄";
-            this.gcyddj楼龄.ColumnEdit = this.repositoryItemComboBoxYddjll;
-            this.gcyddj楼龄.FieldName = "楼龄";
-            this.gcyddj楼龄.Name = "gcyddj楼龄";
-            this.gcyddj楼龄.Visible = true;
-            this.gcyddj楼龄.VisibleIndex = 8;
-            // 
-            // repositoryItemComboBoxYddjll
-            // 
-            this.repositoryItemComboBoxYddjll.AutoHeight = false;
-            this.repositoryItemComboBoxYddjll.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjll.Name = "repositoryItemComboBoxYddjll";
-            // 
-            // gcyddj竣工时间
-            // 
-            this.gcyddj竣工时间.Caption = "竣工时间";
-            this.gcyddj竣工时间.FieldName = "竣工时间";
-            this.gcyddj竣工时间.Name = "gcyddj竣工时间";
-            this.gcyddj竣工时间.Visible = true;
-            this.gcyddj竣工时间.VisibleIndex = 9;
-            // 
-            // gcyddj临路情况
-            // 
-            this.gcyddj临路情况.Caption = "临路情况";
-            this.gcyddj临路情况.ColumnEdit = this.repositoryItemComboBoxYddjlnqk;
-            this.gcyddj临路情况.FieldName = "临路情况";
-            this.gcyddj临路情况.Name = "gcyddj临路情况";
-            this.gcyddj临路情况.Visible = true;
-            this.gcyddj临路情况.VisibleIndex = 10;
-            // 
-            // repositoryItemComboBoxYddjlnqk
-            // 
-            this.repositoryItemComboBoxYddjlnqk.AutoHeight = false;
-            this.repositoryItemComboBoxYddjlnqk.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjlnqk.Name = "repositoryItemComboBoxYddjlnqk";
-            // 
-            // gcyddj交通情况
-            // 
-            this.gcyddj交通情况.Caption = "交通情况";
-            this.gcyddj交通情况.ColumnEdit = this.repositoryItemComboBoxYddjjt;
-            this.gcyddj交通情况.FieldName = "交通情况";
-            this.gcyddj交通情况.Name = "gcyddj交通情况";
-            this.gcyddj交通情况.Visible = true;
-            this.gcyddj交通情况.VisibleIndex = 11;
-            // 
-            // repositoryItemComboBoxYddjjt
-            // 
-            this.repositoryItemComboBoxYddjjt.AutoHeight = false;
-            this.repositoryItemComboBoxYddjjt.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjjt.Name = "repositoryItemComboBoxYddjjt";
-            // 
-            // gcyddj容积率
-            // 
-            this.gcyddj容积率.Caption = "容积率";
-            this.gcyddj容积率.ColumnEdit = this.repositoryItemComboBoxYddjrjl;
-            this.gcyddj容积率.FieldName = "容积率";
-            this.gcyddj容积率.Name = "gcyddj容积率";
-            this.gcyddj容积率.Visible = true;
-            this.gcyddj容积率.VisibleIndex = 12;
-            // 
-            // repositoryItemComboBoxYddjrjl
-            // 
-            this.repositoryItemComboBoxYddjrjl.AutoHeight = false;
-            this.repositoryItemComboBoxYddjrjl.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjrjl.Name = "repositoryItemComboBoxYddjrjl";
-            // 
-            // gcyddj总价
-            // 
-            this.gcyddj总价.Caption = "总价";
-            this.gcyddj总价.FieldName = "总价";
-            this.gcyddj总价.Name = "gcyddj总价";
-            this.gcyddj总价.Visible = true;
-            this.gcyddj总价.VisibleIndex = 13;
-            // 
-            // gcyddj单价
-            // 
-            this.gcyddj单价.Caption = "单价";
-            this.gcyddj单价.FieldName = "单价";
-            this.gcyddj单价.Name = "gcyddj单价";
-            this.gcyddj单价.Visible = true;
-            this.gcyddj单价.VisibleIndex = 14;
-            // 
-            // gcyddj交易时点
-            // 
-            this.gcyddj交易时点.Caption = "交易时点";
-            this.gcyddj交易时点.FieldName = "交易时点";
-            this.gcyddj交易时点.Name = "gcyddj交易时点";
-            this.gcyddj交易时点.Visible = true;
-            this.gcyddj交易时点.VisibleIndex = 15;
-            // 
-            // gcyddj评估时点
-            // 
-            this.gcyddj评估时点.Caption = "评估时点";
-            this.gcyddj评估时点.FieldName = "评估时点";
-            this.gcyddj评估时点.Name = "gcyddj评估时点";
-            this.gcyddj评估时点.Visible = true;
-            this.gcyddj评估时点.VisibleIndex = 16;
-            // 
-            // gcyddj样点来源
-            // 
-            this.gcyddj样点来源.Caption = "样点来源";
-            this.gcyddj样点来源.ColumnEdit = this.repositoryItemComboBoxYddjly;
-            this.gcyddj样点来源.FieldName = "样点来源";
-            this.gcyddj样点来源.Name = "gcyddj样点来源";
-            this.gcyddj样点来源.Visible = true;
-            this.gcyddj样点来源.VisibleIndex = 17;
-            // 
-            // repositoryItemComboBoxYddjly
-            // 
-            this.repositoryItemComboBoxYddjly.AutoHeight = false;
-            this.repositoryItemComboBoxYddjly.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBoxYddjly.Name = "repositoryItemComboBoxYddjly";
-            // 
-            // gcyddj备注
-            // 
-            this.gcyddj备注.Caption = "备注";
-            this.gcyddj备注.FieldName = "备注";
-            this.gcyddj备注.Name = "gcyddj备注";
-            this.gcyddj备注.Visible = true;
-            this.gcyddj备注.VisibleIndex = 18;
-            // 
-            // gcyddj标准价格
-            // 
-            this.gcyddj标准价格.Caption = "标准价格";
-            this.gcyddj标准价格.FieldName = "标准价格";
-            this.gcyddj标准价格.Name = "gcyddj标准价格";
-            this.gcyddj标准价格.Visible = true;
-            this.gcyddj标准价格.VisibleIndex = 19;
-            // 
-            // gcyddj逆算
-            // 
-            this.gcyddj逆算.Caption = "逆算";
-            this.gcyddj逆算.FieldName = "逆算";
-            this.gcyddj逆算.Name = "gcyddj逆算";
-            this.gcyddj逆算.Visible = true;
-            this.gcyddj逆算.VisibleIndex = 20;
-            // 
             // panelControl_Ydfdj
             // 
             this.panelControl_Ydfdj.Controls.Add(this.gcydfdj);
             this.panelControl_Ydfdj.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl_Ydfdj.Location = new System.Drawing.Point(0, 478);
+            this.panelControl_Ydfdj.Location = new System.Drawing.Point(0, 393);
             this.panelControl_Ydfdj.Name = "panelControl_Ydfdj";
-            this.panelControl_Ydfdj.Size = new System.Drawing.Size(959, 320);
+            this.panelControl_Ydfdj.Size = new System.Drawing.Size(959, 405);
             this.panelControl_Ydfdj.TabIndex = 187;
             // 
             // gcydfdj
@@ -5947,7 +5367,7 @@
             this.repositoryItemComboBoxFdjgt,
             this.repositoryItemComboBoxFdjly,
             this.repositoryItemComboBoxFdjywdt});
-            this.gcydfdj.Size = new System.Drawing.Size(955, 316);
+            this.gcydfdj.Size = new System.Drawing.Size(955, 401);
             this.gcydfdj.TabIndex = 184;
             this.gcydfdj.UseEmbeddedNavigator = true;
             this.gcydfdj.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -6343,6 +5763,586 @@
             this.gcydfdj逆算.Visible = true;
             this.gcydfdj逆算.VisibleIndex = 29;
             // 
+            // panelControl_yddj
+            // 
+            this.panelControl_yddj.Controls.Add(this.gcyddj);
+            this.panelControl_yddj.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl_yddj.Location = new System.Drawing.Point(0, 393);
+            this.panelControl_yddj.Name = "panelControl_yddj";
+            this.panelControl_yddj.Size = new System.Drawing.Size(959, 405);
+            this.panelControl_yddj.TabIndex = 188;
+            // 
+            // gcyddj
+            // 
+            this.gcyddj.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcyddj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gcyddj.Location = new System.Drawing.Point(2, 2);
+            this.gcyddj.MainView = this.gvyddj;
+            this.gcyddj.Name = "gcyddj";
+            this.gcyddj.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemComboBoxYddjjglx,
+            this.repositoryItemComboBoxYddjcx,
+            this.repositoryItemComboBoxYddjll,
+            this.repositoryItemComboBoxYddjlnqk,
+            this.repositoryItemComboBoxYddjjt,
+            this.repositoryItemComboBoxYddjrjl,
+            this.repositoryItemComboBoxYddjly});
+            this.gcyddj.Size = new System.Drawing.Size(955, 406);
+            this.gcyddj.TabIndex = 183;
+            this.gcyddj.UseEmbeddedNavigator = true;
+            this.gcyddj.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvyddj});
+            // 
+            // gvyddj
+            // 
+            this.gvyddj.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gcyddjid,
+            this.gcyddjPROJECT_ID,
+            this.gcyddj序号,
+            this.gcyddj区片号,
+            this.gcyddj样点编号,
+            this.gcyddj区镇,
+            this.gcyddj地址,
+            this.gcyddj建筑面积,
+            this.gcyddj套内面积,
+            this.gcyddj土地面积,
+            this.gcyddj结构,
+            this.gcyddj朝向,
+            this.gcyddj楼龄,
+            this.gcyddj竣工时间,
+            this.gcyddj临路情况,
+            this.gcyddj交通情况,
+            this.gcyddj容积率,
+            this.gcyddj总价,
+            this.gcyddj单价,
+            this.gcyddj交易时点,
+            this.gcyddj评估时点,
+            this.gcyddj样点来源,
+            this.gcyddj备注,
+            this.gcyddj标准价格,
+            this.gcyddj逆算});
+            this.gvyddj.GridControl = this.gcyddj;
+            this.gvyddj.Name = "gvyddj";
+            this.gvyddj.OptionsView.ColumnAutoWidth = false;
+            this.gvyddj.OptionsView.ShowGroupPanel = false;
+            // 
+            // gcyddjid
+            // 
+            this.gcyddjid.Caption = "id";
+            this.gcyddjid.FieldName = "id";
+            this.gcyddjid.Name = "gcyddjid";
+            this.gcyddjid.OptionsColumn.AllowEdit = false;
+            this.gcyddjid.OptionsColumn.ReadOnly = true;
+            // 
+            // gcyddjPROJECT_ID
+            // 
+            this.gcyddjPROJECT_ID.Caption = "PROJECT_ID";
+            this.gcyddjPROJECT_ID.FieldName = "PROJECT_ID";
+            this.gcyddjPROJECT_ID.Name = "gcyddjPROJECT_ID";
+            this.gcyddjPROJECT_ID.OptionsColumn.AllowEdit = false;
+            this.gcyddjPROJECT_ID.OptionsColumn.ReadOnly = true;
+            // 
+            // gcyddj序号
+            // 
+            this.gcyddj序号.Caption = "序号";
+            this.gcyddj序号.FieldName = "序号";
+            this.gcyddj序号.Name = "gcyddj序号";
+            // 
+            // gcyddj区片号
+            // 
+            this.gcyddj区片号.Caption = "区片号";
+            this.gcyddj区片号.FieldName = "区片号";
+            this.gcyddj区片号.Name = "gcyddj区片号";
+            // 
+            // gcyddj样点编号
+            // 
+            this.gcyddj样点编号.Caption = "样点编号";
+            this.gcyddj样点编号.FieldName = "样点编号";
+            this.gcyddj样点编号.Name = "gcyddj样点编号";
+            this.gcyddj样点编号.Visible = true;
+            this.gcyddj样点编号.VisibleIndex = 0;
+            // 
+            // gcyddj区镇
+            // 
+            this.gcyddj区镇.Caption = "区镇";
+            this.gcyddj区镇.FieldName = "区镇";
+            this.gcyddj区镇.Name = "gcyddj区镇";
+            this.gcyddj区镇.Visible = true;
+            this.gcyddj区镇.VisibleIndex = 1;
+            // 
+            // gcyddj地址
+            // 
+            this.gcyddj地址.Caption = "地址";
+            this.gcyddj地址.FieldName = "地址";
+            this.gcyddj地址.Name = "gcyddj地址";
+            this.gcyddj地址.Visible = true;
+            this.gcyddj地址.VisibleIndex = 2;
+            // 
+            // gcyddj建筑面积
+            // 
+            this.gcyddj建筑面积.Caption = "建筑面积";
+            this.gcyddj建筑面积.FieldName = "建筑面积";
+            this.gcyddj建筑面积.Name = "gcyddj建筑面积";
+            this.gcyddj建筑面积.Visible = true;
+            this.gcyddj建筑面积.VisibleIndex = 3;
+            // 
+            // gcyddj套内面积
+            // 
+            this.gcyddj套内面积.Caption = "套内面积";
+            this.gcyddj套内面积.FieldName = "套内面积";
+            this.gcyddj套内面积.Name = "gcyddj套内面积";
+            this.gcyddj套内面积.Visible = true;
+            this.gcyddj套内面积.VisibleIndex = 4;
+            // 
+            // gcyddj土地面积
+            // 
+            this.gcyddj土地面积.Caption = "土地面积";
+            this.gcyddj土地面积.FieldName = "土地面积";
+            this.gcyddj土地面积.Name = "gcyddj土地面积";
+            this.gcyddj土地面积.Visible = true;
+            this.gcyddj土地面积.VisibleIndex = 5;
+            // 
+            // gcyddj结构
+            // 
+            this.gcyddj结构.Caption = "结构";
+            this.gcyddj结构.ColumnEdit = this.repositoryItemComboBoxYddjjglx;
+            this.gcyddj结构.FieldName = "结构";
+            this.gcyddj结构.Name = "gcyddj结构";
+            this.gcyddj结构.Visible = true;
+            this.gcyddj结构.VisibleIndex = 6;
+            // 
+            // repositoryItemComboBoxYddjjglx
+            // 
+            this.repositoryItemComboBoxYddjjglx.AutoHeight = false;
+            this.repositoryItemComboBoxYddjjglx.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjjglx.Name = "repositoryItemComboBoxYddjjglx";
+            // 
+            // gcyddj朝向
+            // 
+            this.gcyddj朝向.Caption = "朝向";
+            this.gcyddj朝向.ColumnEdit = this.repositoryItemComboBoxYddjcx;
+            this.gcyddj朝向.FieldName = "朝向";
+            this.gcyddj朝向.Name = "gcyddj朝向";
+            this.gcyddj朝向.Visible = true;
+            this.gcyddj朝向.VisibleIndex = 7;
+            // 
+            // repositoryItemComboBoxYddjcx
+            // 
+            this.repositoryItemComboBoxYddjcx.AutoHeight = false;
+            this.repositoryItemComboBoxYddjcx.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjcx.Name = "repositoryItemComboBoxYddjcx";
+            // 
+            // gcyddj楼龄
+            // 
+            this.gcyddj楼龄.Caption = "楼龄";
+            this.gcyddj楼龄.ColumnEdit = this.repositoryItemComboBoxYddjll;
+            this.gcyddj楼龄.FieldName = "楼龄";
+            this.gcyddj楼龄.Name = "gcyddj楼龄";
+            this.gcyddj楼龄.Visible = true;
+            this.gcyddj楼龄.VisibleIndex = 8;
+            // 
+            // repositoryItemComboBoxYddjll
+            // 
+            this.repositoryItemComboBoxYddjll.AutoHeight = false;
+            this.repositoryItemComboBoxYddjll.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjll.Name = "repositoryItemComboBoxYddjll";
+            // 
+            // gcyddj竣工时间
+            // 
+            this.gcyddj竣工时间.Caption = "竣工时间";
+            this.gcyddj竣工时间.FieldName = "竣工时间";
+            this.gcyddj竣工时间.Name = "gcyddj竣工时间";
+            this.gcyddj竣工时间.Visible = true;
+            this.gcyddj竣工时间.VisibleIndex = 9;
+            // 
+            // gcyddj临路情况
+            // 
+            this.gcyddj临路情况.Caption = "临路情况";
+            this.gcyddj临路情况.ColumnEdit = this.repositoryItemComboBoxYddjlnqk;
+            this.gcyddj临路情况.FieldName = "临路情况";
+            this.gcyddj临路情况.Name = "gcyddj临路情况";
+            this.gcyddj临路情况.Visible = true;
+            this.gcyddj临路情况.VisibleIndex = 10;
+            // 
+            // repositoryItemComboBoxYddjlnqk
+            // 
+            this.repositoryItemComboBoxYddjlnqk.AutoHeight = false;
+            this.repositoryItemComboBoxYddjlnqk.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjlnqk.Name = "repositoryItemComboBoxYddjlnqk";
+            // 
+            // gcyddj交通情况
+            // 
+            this.gcyddj交通情况.Caption = "交通情况";
+            this.gcyddj交通情况.ColumnEdit = this.repositoryItemComboBoxYddjjt;
+            this.gcyddj交通情况.FieldName = "交通情况";
+            this.gcyddj交通情况.Name = "gcyddj交通情况";
+            this.gcyddj交通情况.Visible = true;
+            this.gcyddj交通情况.VisibleIndex = 11;
+            // 
+            // repositoryItemComboBoxYddjjt
+            // 
+            this.repositoryItemComboBoxYddjjt.AutoHeight = false;
+            this.repositoryItemComboBoxYddjjt.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjjt.Name = "repositoryItemComboBoxYddjjt";
+            // 
+            // gcyddj容积率
+            // 
+            this.gcyddj容积率.Caption = "容积率";
+            this.gcyddj容积率.ColumnEdit = this.repositoryItemComboBoxYddjrjl;
+            this.gcyddj容积率.FieldName = "容积率";
+            this.gcyddj容积率.Name = "gcyddj容积率";
+            this.gcyddj容积率.Visible = true;
+            this.gcyddj容积率.VisibleIndex = 12;
+            // 
+            // repositoryItemComboBoxYddjrjl
+            // 
+            this.repositoryItemComboBoxYddjrjl.AutoHeight = false;
+            this.repositoryItemComboBoxYddjrjl.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjrjl.Name = "repositoryItemComboBoxYddjrjl";
+            // 
+            // gcyddj总价
+            // 
+            this.gcyddj总价.Caption = "总价";
+            this.gcyddj总价.FieldName = "总价";
+            this.gcyddj总价.Name = "gcyddj总价";
+            this.gcyddj总价.Visible = true;
+            this.gcyddj总价.VisibleIndex = 13;
+            // 
+            // gcyddj单价
+            // 
+            this.gcyddj单价.Caption = "单价";
+            this.gcyddj单价.FieldName = "单价";
+            this.gcyddj单价.Name = "gcyddj单价";
+            this.gcyddj单价.Visible = true;
+            this.gcyddj单价.VisibleIndex = 14;
+            // 
+            // gcyddj交易时点
+            // 
+            this.gcyddj交易时点.Caption = "交易时点";
+            this.gcyddj交易时点.FieldName = "交易时点";
+            this.gcyddj交易时点.Name = "gcyddj交易时点";
+            this.gcyddj交易时点.Visible = true;
+            this.gcyddj交易时点.VisibleIndex = 15;
+            // 
+            // gcyddj评估时点
+            // 
+            this.gcyddj评估时点.Caption = "评估时点";
+            this.gcyddj评估时点.FieldName = "评估时点";
+            this.gcyddj评估时点.Name = "gcyddj评估时点";
+            this.gcyddj评估时点.Visible = true;
+            this.gcyddj评估时点.VisibleIndex = 16;
+            // 
+            // gcyddj样点来源
+            // 
+            this.gcyddj样点来源.Caption = "样点来源";
+            this.gcyddj样点来源.ColumnEdit = this.repositoryItemComboBoxYddjly;
+            this.gcyddj样点来源.FieldName = "样点来源";
+            this.gcyddj样点来源.Name = "gcyddj样点来源";
+            this.gcyddj样点来源.Visible = true;
+            this.gcyddj样点来源.VisibleIndex = 17;
+            // 
+            // repositoryItemComboBoxYddjly
+            // 
+            this.repositoryItemComboBoxYddjly.AutoHeight = false;
+            this.repositoryItemComboBoxYddjly.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBoxYddjly.Name = "repositoryItemComboBoxYddjly";
+            // 
+            // gcyddj备注
+            // 
+            this.gcyddj备注.Caption = "备注";
+            this.gcyddj备注.FieldName = "备注";
+            this.gcyddj备注.Name = "gcyddj备注";
+            this.gcyddj备注.Visible = true;
+            this.gcyddj备注.VisibleIndex = 18;
+            // 
+            // gcyddj标准价格
+            // 
+            this.gcyddj标准价格.Caption = "标准价格";
+            this.gcyddj标准价格.FieldName = "标准价格";
+            this.gcyddj标准价格.Name = "gcyddj标准价格";
+            this.gcyddj标准价格.Visible = true;
+            this.gcyddj标准价格.VisibleIndex = 19;
+            // 
+            // gcyddj逆算
+            // 
+            this.gcyddj逆算.Caption = "逆算";
+            this.gcyddj逆算.FieldName = "逆算";
+            this.gcyddj逆算.Name = "gcyddj逆算";
+            this.gcyddj逆算.Visible = true;
+            this.gcyddj逆算.VisibleIndex = 20;
+            // 
+            // panelControl_ydc
+            // 
+            this.panelControl_ydc.Controls.Add(this.gcYdk);
+            this.panelControl_ydc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl_ydc.Location = new System.Drawing.Point(0, 39);
+            this.panelControl_ydc.Name = "panelControl_ydc";
+            this.panelControl_ydc.Size = new System.Drawing.Size(959, 354);
+            this.panelControl_ydc.TabIndex = 189;
+            // 
+            // gcYdk
+            // 
+            this.gcYdk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcYdk.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.gcYdk.Location = new System.Drawing.Point(2, 2);
+            this.gcYdk.MainView = this.gvYdk;
+            this.gcYdk.Name = "gcYdk";
+            this.gcYdk.Size = new System.Drawing.Size(955, 350);
+            this.gcYdk.TabIndex = 182;
+            this.gcYdk.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvYdk});
+            // 
+            // gvYdk
+            // 
+            this.gvYdk.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gcydkid,
+            this.gcydk区镇,
+            this.gcydk座落,
+            this.gcydk房产使用性质,
+            this.gcydk房产楼层,
+            this.gcydk付款方式,
+            this.gcydk签约日期,
+            this.gcydk楼盘名称,
+            this.gcydk建筑面积,
+            this.gcydk套内面积,
+            this.gcydk土地面积,
+            this.gcydk总价,
+            this.gcydk单价});
+            this.gvYdk.GridControl = this.gcYdk;
+            this.gvYdk.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
+            this.gvYdk.Name = "gvYdk";
+            this.gvYdk.OptionsView.ColumnAutoWidth = false;
+            this.gvYdk.OptionsView.ShowFooter = true;
+            this.gvYdk.OptionsView.ShowGroupPanel = false;
+            // 
+            // gcydkid
+            // 
+            this.gcydkid.Caption = "id";
+            this.gcydkid.FieldName = "id";
+            this.gcydkid.Name = "gcydkid";
+            this.gcydkid.OptionsColumn.AllowEdit = false;
+            this.gcydkid.OptionsColumn.AllowMove = false;
+            this.gcydkid.OptionsColumn.AllowSize = false;
+            this.gcydkid.OptionsColumn.ReadOnly = true;
+            this.gcydkid.OptionsColumn.ShowInCustomizationForm = false;
+            this.gcydkid.SummaryItem.DisplayFormat = "{0}";
+            this.gcydkid.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.gcydkid.Width = 38;
+            // 
+            // gcydk区镇
+            // 
+            this.gcydk区镇.Caption = "区镇";
+            this.gcydk区镇.FieldName = "区镇";
+            this.gcydk区镇.Name = "gcydk区镇";
+            this.gcydk区镇.OptionsColumn.AllowEdit = false;
+            this.gcydk区镇.OptionsColumn.ReadOnly = true;
+            this.gcydk区镇.Width = 61;
+            // 
+            // gcydk座落
+            // 
+            this.gcydk座落.Caption = "座落";
+            this.gcydk座落.FieldName = "座落";
+            this.gcydk座落.Name = "gcydk座落";
+            this.gcydk座落.OptionsColumn.AllowEdit = false;
+            this.gcydk座落.OptionsColumn.ReadOnly = true;
+            this.gcydk座落.SummaryItem.DisplayFormat = "共查询到{0}个数据";
+            this.gcydk座落.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count;
+            this.gcydk座落.Visible = true;
+            this.gcydk座落.VisibleIndex = 0;
+            this.gcydk座落.Width = 202;
+            // 
+            // gcydk房产使用性质
+            // 
+            this.gcydk房产使用性质.Caption = "房产使用性质";
+            this.gcydk房产使用性质.FieldName = "房产使用性质";
+            this.gcydk房产使用性质.Name = "gcydk房产使用性质";
+            this.gcydk房产使用性质.OptionsColumn.AllowEdit = false;
+            this.gcydk房产使用性质.OptionsColumn.ReadOnly = true;
+            this.gcydk房产使用性质.Visible = true;
+            this.gcydk房产使用性质.VisibleIndex = 1;
+            this.gcydk房产使用性质.Width = 84;
+            // 
+            // gcydk房产楼层
+            // 
+            this.gcydk房产楼层.Caption = "房产楼层";
+            this.gcydk房产楼层.FieldName = "房产楼层";
+            this.gcydk房产楼层.Name = "gcydk房产楼层";
+            this.gcydk房产楼层.OptionsColumn.AllowEdit = false;
+            this.gcydk房产楼层.OptionsColumn.ReadOnly = true;
+            this.gcydk房产楼层.Visible = true;
+            this.gcydk房产楼层.VisibleIndex = 2;
+            this.gcydk房产楼层.Width = 61;
+            // 
+            // gcydk付款方式
+            // 
+            this.gcydk付款方式.Caption = "付款方式";
+            this.gcydk付款方式.FieldName = "付款方式";
+            this.gcydk付款方式.Name = "gcydk付款方式";
+            this.gcydk付款方式.OptionsColumn.AllowEdit = false;
+            this.gcydk付款方式.OptionsColumn.ReadOnly = true;
+            this.gcydk付款方式.Visible = true;
+            this.gcydk付款方式.VisibleIndex = 3;
+            this.gcydk付款方式.Width = 67;
+            // 
+            // gcydk签约日期
+            // 
+            this.gcydk签约日期.Caption = "签约日期";
+            this.gcydk签约日期.FieldName = "签约日期";
+            this.gcydk签约日期.Name = "gcydk签约日期";
+            this.gcydk签约日期.OptionsColumn.AllowEdit = false;
+            this.gcydk签约日期.OptionsColumn.ReadOnly = true;
+            this.gcydk签约日期.Visible = true;
+            this.gcydk签约日期.VisibleIndex = 4;
+            this.gcydk签约日期.Width = 68;
+            // 
+            // gcydk楼盘名称
+            // 
+            this.gcydk楼盘名称.Caption = "楼盘名称";
+            this.gcydk楼盘名称.FieldName = "楼盘名称";
+            this.gcydk楼盘名称.Name = "gcydk楼盘名称";
+            this.gcydk楼盘名称.OptionsColumn.AllowEdit = false;
+            this.gcydk楼盘名称.OptionsColumn.ReadOnly = true;
+            this.gcydk楼盘名称.Visible = true;
+            this.gcydk楼盘名称.VisibleIndex = 5;
+            this.gcydk楼盘名称.Width = 53;
+            // 
+            // gcydk建筑面积
+            // 
+            this.gcydk建筑面积.Caption = "建筑面积";
+            this.gcydk建筑面积.FieldName = "建筑面积";
+            this.gcydk建筑面积.Name = "gcydk建筑面积";
+            this.gcydk建筑面积.OptionsColumn.AllowEdit = false;
+            this.gcydk建筑面积.OptionsColumn.ReadOnly = true;
+            this.gcydk建筑面积.Visible = true;
+            this.gcydk建筑面积.VisibleIndex = 6;
+            this.gcydk建筑面积.Width = 53;
+            // 
+            // gcydk套内面积
+            // 
+            this.gcydk套内面积.Caption = "套内面积";
+            this.gcydk套内面积.FieldName = "套内面积";
+            this.gcydk套内面积.Name = "gcydk套内面积";
+            this.gcydk套内面积.OptionsColumn.AllowEdit = false;
+            this.gcydk套内面积.OptionsColumn.ReadOnly = true;
+            this.gcydk套内面积.Visible = true;
+            this.gcydk套内面积.VisibleIndex = 7;
+            this.gcydk套内面积.Width = 53;
+            // 
+            // gcydk土地面积
+            // 
+            this.gcydk土地面积.Caption = "土地面积";
+            this.gcydk土地面积.FieldName = "土地面积";
+            this.gcydk土地面积.Name = "gcydk土地面积";
+            this.gcydk土地面积.OptionsColumn.AllowEdit = false;
+            this.gcydk土地面积.OptionsColumn.ReadOnly = true;
+            this.gcydk土地面积.Visible = true;
+            this.gcydk土地面积.VisibleIndex = 8;
+            this.gcydk土地面积.Width = 53;
+            // 
+            // gcydk总价
+            // 
+            this.gcydk总价.Caption = "总价";
+            this.gcydk总价.FieldName = "总价";
+            this.gcydk总价.Name = "gcydk总价";
+            this.gcydk总价.OptionsColumn.AllowEdit = false;
+            this.gcydk总价.OptionsColumn.ReadOnly = true;
+            this.gcydk总价.Visible = true;
+            this.gcydk总价.VisibleIndex = 9;
+            this.gcydk总价.Width = 74;
+            // 
+            // gcydk单价
+            // 
+            this.gcydk单价.Caption = "单价";
+            this.gcydk单价.FieldName = "单价";
+            this.gcydk单价.Name = "gcydk单价";
+            this.gcydk单价.OptionsColumn.AllowEdit = false;
+            this.gcydk单价.OptionsColumn.ReadOnly = true;
+            this.gcydk单价.Visible = true;
+            this.gcydk单价.VisibleIndex = 10;
+            this.gcydk单价.Width = 87;
+            // 
+            // panelControl_ydtitle
+            // 
+            this.panelControl_ydtitle.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl_ydtitle.Controls.Add(this.bt_exportyddata);
+            this.panelControl_ydtitle.Controls.Add(this.bt_test);
+            this.panelControl_ydtitle.Controls.Add(this.bt_searchydk);
+            this.panelControl_ydtitle.Controls.Add(this.cbe样点区镇);
+            this.panelControl_ydtitle.Controls.Add(this.txt样点座落);
+            this.panelControl_ydtitle.Controls.Add(this.labelControl2);
+            this.panelControl_ydtitle.Controls.Add(this.lbl区镇);
+            this.panelControl_ydtitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl_ydtitle.Location = new System.Drawing.Point(0, 0);
+            this.panelControl_ydtitle.Name = "panelControl_ydtitle";
+            this.panelControl_ydtitle.Size = new System.Drawing.Size(959, 39);
+            this.panelControl_ydtitle.TabIndex = 200;
+            // 
+            // bt_exportyddata
+            // 
+            this.bt_exportyddata.Location = new System.Drawing.Point(822, 8);
+            this.bt_exportyddata.Name = "bt_exportyddata";
+            this.bt_exportyddata.Size = new System.Drawing.Size(107, 27);
+            this.bt_exportyddata.TabIndex = 191;
+            this.bt_exportyddata.Text = "导出样点数据";
+            // 
+            // bt_test
+            // 
+            this.bt_test.Location = new System.Drawing.Point(711, 8);
+            this.bt_test.Name = "bt_test";
+            this.bt_test.Size = new System.Drawing.Size(87, 27);
+            this.bt_test.TabIndex = 190;
+            this.bt_test.Text = "样点估价";
+            // 
+            // bt_searchydk
+            // 
+            this.bt_searchydk.Location = new System.Drawing.Point(319, 8);
+            this.bt_searchydk.Name = "bt_searchydk";
+            this.bt_searchydk.Size = new System.Drawing.Size(87, 27);
+            this.bt_searchydk.TabIndex = 189;
+            this.bt_searchydk.Text = "查询";
+            // 
+            // cbe样点区镇
+            // 
+            this.cbe样点区镇.Location = new System.Drawing.Point(500, 10);
+            this.cbe样点区镇.Name = "cbe样点区镇";
+            this.cbe样点区镇.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbe样点区镇.Size = new System.Drawing.Size(117, 21);
+            this.cbe样点区镇.TabIndex = 188;
+            this.cbe样点区镇.Visible = false;
+            // 
+            // txt样点座落
+            // 
+            this.txt样点座落.Location = new System.Drawing.Point(49, 10);
+            this.txt样点座落.Name = "txt样点座落";
+            this.txt样点座落.Size = new System.Drawing.Size(241, 21);
+            this.txt样点座落.TabIndex = 187;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(8, 12);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(28, 14);
+            this.labelControl2.TabIndex = 186;
+            this.labelControl2.Text = "座落:";
+            // 
+            // lbl区镇
+            // 
+            this.lbl区镇.Location = new System.Drawing.Point(458, 11);
+            this.lbl区镇.Name = "lbl区镇";
+            this.lbl区镇.Size = new System.Drawing.Size(28, 14);
+            this.lbl区镇.TabIndex = 185;
+            this.lbl区镇.Text = "区镇:";
+            this.lbl区镇.Visible = false;
+            // 
             // FJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -6509,26 +6509,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt单家独户结构类型修正系数.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt单家独户区片基准房价.Properties)).EndInit();
             this.xtr样点计算.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydtitle)).EndInit();
-            this.panelControl_ydtitle.ResumeLayout(false);
-            this.panelControl_ydtitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbe样点区镇.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt样点座落.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydc)).EndInit();
-            this.panelControl_ydc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcYdk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvYdk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl_yddj)).EndInit();
-            this.panelControl_yddj.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcyddj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvyddj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjglx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjcx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjll)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjlnqk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjrjl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjly)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_Ydfdj)).EndInit();
             this.panelControl_Ydfdj.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcydfdj)).EndInit();
@@ -6543,6 +6523,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjgt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjywdt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxFdjly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_yddj)).EndInit();
+            this.panelControl_yddj.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcyddj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvyddj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjglx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjcx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjlnqk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjjt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjrjl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBoxYddjly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydc)).EndInit();
+            this.panelControl_ydc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcYdk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvYdk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl_ydtitle)).EndInit();
+            this.panelControl_ydtitle.ResumeLayout(false);
+            this.panelControl_ydtitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbe样点区镇.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt样点座落.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
