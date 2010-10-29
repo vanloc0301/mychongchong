@@ -2106,6 +2106,7 @@
             this.lbl复式修正系数.Size = new System.Drawing.Size(103, 14);
             this.lbl复式修正系数.TabIndex = 175;
             this.lbl复式修正系数.Text = "样点复式修正系数";
+            this.lbl复式修正系数.Visible = false;
             this.lbl复式修正系数.Click += new System.EventHandler(this.label47_Click);
             // 
             // lbl物业修正系数
@@ -2117,6 +2118,7 @@
             this.lbl物业修正系数.Size = new System.Drawing.Size(103, 14);
             this.lbl物业修正系数.TabIndex = 174;
             this.lbl物业修正系数.Text = "样点物业修正系数";
+            this.lbl物业修正系数.Visible = false;
             // 
             // lbl公摊修正系数
             // 
@@ -6292,6 +6294,7 @@
             this.bt_exportyddata.Size = new System.Drawing.Size(107, 27);
             this.bt_exportyddata.TabIndex = 191;
             this.bt_exportyddata.Text = "导出样点数据";
+            this.bt_exportyddata.Click += new System.EventHandler(this.bt_exportyddata_Click);
             // 
             // bt_test
             // 
@@ -6300,6 +6303,7 @@
             this.bt_test.Size = new System.Drawing.Size(87, 27);
             this.bt_test.TabIndex = 190;
             this.bt_test.Text = "样点估价";
+            this.bt_test.Click += new System.EventHandler(this.bt_test_Click);
             // 
             // bt_searchydk
             // 
@@ -6308,6 +6312,7 @@
             this.bt_searchydk.Size = new System.Drawing.Size(87, 27);
             this.bt_searchydk.TabIndex = 189;
             this.bt_searchydk.Text = "查询";
+            this.bt_searchydk.Click += new System.EventHandler(this.bt_searchydk_Click);
             // 
             // cbe样点区镇
             // 
