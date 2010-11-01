@@ -65,6 +65,7 @@ namespace ZBPM
         iyd yd = null;
         DataSet m_dstAll;
         DataSet m_dstYdk;
+        BFlag bflag = new BFlag();
 
         ExcelFromArrayList excelop = null;   //excel操作 样点导出功能时使用; 2010-08-11
 
@@ -1715,7 +1716,7 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
             double rjlsz;
             string jtsz;
             #region 单家
-
+            bflag.Ss = true;
             yddjdata tmpyddjdata = new yddjdata();
             DataTable dtdj = m_dstAll.Tables["yw_yddj"];
             if (dtdj.Rows.Count > 0)
@@ -1814,6 +1815,7 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
             //string gtsz;
             //string ywdt;
             #region 非单家
+            bflag.Ss = true;
 
             ydfdjdata tmpydfdjdata = new ydfdjdata();
             DataTable dtfdj = m_dstAll.Tables["yw_ydfdj"];
@@ -3268,6 +3270,7 @@ FROM
 
         private void gvydfdj_DoubleClick(object sender, EventArgs e)
         {
+            bflag.Ss = false;
             DataRow drfdj = this.gvydfdj.GetFocusedDataRow();
             if (drfdj != null)
             {
@@ -3286,7 +3289,16 @@ FROM
                 #region 非单家
 
                 ydfdjdata tmpydfdjdata = new ydfdjdata();
-
+                double dj;
+                if (double.TryParse(drfdj["单价"].ToString(), out dj))
+                {
+                    bflag.Dj = dj;
+                }
+                else
+                {
+                    MessageBox.Show("请检查所选择的行对应的单价数据的正确性!", "提示:");
+                    return;
+                }
                 if (drfdj["样点来源"].ToString().Trim() != "评估样点")
                 {
                     return;
@@ -3371,6 +3383,7 @@ FROM
 
         private void gvyddj_DoubleClick(object sender, EventArgs e)
         {
+            bflag.Ss = false;
             DataRow drdj = this.gvyddj.GetFocusedDataRow();
             if (drdj != null)
             {
@@ -3384,7 +3397,16 @@ FROM
                 string jtsz;
                 #region 单家
                 yddjdata tmpyddjdata = new yddjdata();
-
+                double dj;
+                if (double.TryParse(drdj["单价"].ToString(), out dj))
+                {
+                    bflag.Dj = dj;
+                }
+                else
+                {
+                    MessageBox.Show("请检查所选择的行对应的单价数据的正确性!", "提示:");
+                    return;
+                }
                 if (drdj["样点来源"].ToString().Trim() != "评估样点")
                 {
                     return;
@@ -3464,9 +3486,31 @@ FROM
         }
     }
 
-
 }
 
+public class BFlag
+{
+    private bool ss;
+
+    private double dj;
+
+    /// <summary>
+    /// 单价
+    /// </summary>
+    public double Dj
+    {
+        get { return dj; }
+        set { dj = value; }
+    }
+    /// <summary>
+    /// true代表顺算，false代表逆算
+    /// </summary>
+    public bool Ss
+    {
+        get { return ss; }
+        set { ss = value; }
+    }
+}
 public class JZFJ
 {
     private System.Data.DataTable dtCxxz = null;//yw_朝向修正
