@@ -3392,16 +3392,16 @@ FROM
                 EvaluateYd(tmpydfdjdata, yd);
                 if (yd != null)
                 {
-                    drfdj["单价"] = yd.Calu().ToString("#");
+                    drfdj["标准价格"] = yd.Calu(bflag).ToString("#");
                     try
                     {
-                        drfdj["总价"] = (yd.Calu() * double.Parse(drfdj["建筑面积"].ToString())).ToString("#");
+                        drfdj["总价"] = (dj * double.Parse(drfdj["建筑面积"].ToString())).ToString("#");
                     }
                     catch
                     {
                         try
                         {
-                            drfdj["总价"] = (yd.Calu() * double.Parse(drfdj["套内面积"].ToString())).ToString("#");
+                            drfdj["总价"] = (dj * double.Parse(drfdj["套内面积"].ToString())).ToString("#");
                         }
                         catch
                         {
@@ -3495,16 +3495,16 @@ FROM
                 EvaluateYd(tmpyddjdata, yd);
                 if (yd != null)
                 {
-                    drdj["单价"] = yd.Calu().ToString("#");
+                    drdj["标准价格"] = yd.Calu(bflag).ToString("#");
                     try
                     {
-                        drdj["总价"] = (yd.Calu() * double.Parse(drdj["建筑面积"].ToString())).ToString("#");
+                        drdj["总价"] = (dj * double.Parse(drdj["建筑面积"].ToString())).ToString("#");
                     }
                     catch
                     {
                         try
                         {
-                            drdj["总价"] = (yd.Calu() * double.Parse(drdj["套内面积"].ToString())).ToString("#");
+                            drdj["总价"] = (dj * double.Parse(drdj["套内面积"].ToString())).ToString("#");
                         }
                         catch
                         {
