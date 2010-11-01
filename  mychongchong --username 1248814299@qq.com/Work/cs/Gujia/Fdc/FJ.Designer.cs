@@ -5416,6 +5416,7 @@
             this.gvydfdj.Name = "gvydfdj";
             this.gvydfdj.OptionsView.ColumnAutoWidth = false;
             this.gvydfdj.OptionsView.ShowGroupPanel = false;
+            this.gvydfdj.DoubleClick += new System.EventHandler(this.gvydfdj_DoubleClick);
             // 
             // gcydfdjid
             // 
@@ -5827,6 +5828,7 @@
             this.gvyddj.Name = "gvyddj";
             this.gvyddj.OptionsView.ColumnAutoWidth = false;
             this.gvyddj.OptionsView.ShowGroupPanel = false;
+            this.gvyddj.DoubleClick += new System.EventHandler(this.gvyddj_DoubleClick);
             // 
             // gcyddjid
             // 

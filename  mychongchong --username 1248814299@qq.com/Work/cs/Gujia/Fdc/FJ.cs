@@ -2942,21 +2942,21 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                             break;
                                         }
                                     }
-                                   
+
                                     if (t1 == 0 && t2 == 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = 0;
-                                        
+
                                     }
                                     else if (t1 != 0 && t2 == 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = d1;
-                                       
+
                                     }
                                     else if (t1 == 0 && t2 != 0)
                                     {
                                         (yd as iydfdj).Jzmjsz = d2;
-                                        
+
                                     }
                                     else if (t1 != 0 && t2 != 0)
                                     {
@@ -3040,7 +3040,7 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                         else if (t1 != 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = d1;
-                                         }
+                                        }
                                         else if (t1 == 0 && t2 != 0)
                                         {
                                             (yd as iydfdj).Lcsz = d2;
@@ -3096,21 +3096,21 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                                                 break;
                                             }
                                         }
-                                     
+
                                         if (t1 == 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = 0;
-                                            
+
                                         }
                                         else if (t1 != 0 && t2 == 0)
                                         {
                                             (yd as iydfdj).Lcsz = d1;
-                                           
+
                                         }
                                         else if (t1 == 0 && t2 != 0)
                                         {
                                             (yd as iydfdj).Lcsz = d2;
-                                            
+
                                         }
                                         else if (t1 != 0 && t2 != 0)
                                         {
@@ -3145,7 +3145,7 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
 
 
                         }
-                        
+
                     }
 
                     else if (inTest && reader.Name == "test")
@@ -3262,401 +3262,603 @@ FROM
             excelop.showExcel();
         }
 
-
-    }
-
-    public class JZFJ
-    {
-        private System.Data.DataTable dtCxxz = null;//yw_朝向修正
-        private System.Data.DataTable dtCflx = null;//yw_车房类型修正
-        private DataTable dtCfqp = null;//yw_车房区片价
-        private DataTable dtJzfj = null;//yw_jzfj中某projectid指定的单条记录
-        private DataTable dtData = null;//yw_jzfj所有记录
-        private DataTable dtDt = null;//yw_电梯修正
-        private DataTable dtFs = null;//yw_复式修正
-        private DataTable dtGt = null;//yw_公摊修正
-        private DataTable dtJzmd = null;//yw_建筑密度修正
-        private DataTable dtJzmj = null;//yw_建筑面积修正
-        private DataTable dtJt = null;//yw_交通修正
-        private DataTable dtJglx = null;//yw_结构类型修正
-        private DataTable dtLlxz = null;//yw_临路情况修正
-        private DataTable dtLoulingxz = null;//yw_楼龄修正    钢筋混凝土
-        private DataTable dtLoulingxz1 = null;//yw_楼龄修正   混合
-        private DataTable dtLoulingxz2 = null;//yw_楼龄修正   砖木
-        private DataTable dtLoulingxz3 = null;//yw_楼龄修正   其它
-        private DataTable dtLx = null;//yw_楼型修正
-        private DataTable dtQp = null;//yw_区片信息
-        private DataTable dtRjl = null;//yw_容积率修正
-        private DataTable dtWdt = null;//yw_无电梯房楼层修正
-        private DataTable dtWygl = null;//yw_物业管理修正
-        private DataTable dtJzmjxzlx = null;//建筑面积修正楼型
-        private DataTable dtLlxzjglx = null;//楼龄修正结构类型
-        private DataTable dtRjlxzlx = null;//容积率修正类型
-
-        public DataTable Jzfj()
+        private void gcydfdj_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM [Yw_Jzfj]";
-            string tablename = "Jzfj";
-            return NewMethod(sql, tablename, this.dtData);
         }
 
-        private DataTable NewMethod(string sql, string tablename, DataTable dt)
+        private void gvydfdj_DoubleClick(object sender, EventArgs e)
         {
-            DataTable tmpdt = new DataTable();
-            tmpdt = QueryHelper.ExecuteSql("Default", string.Empty, sql);
-            tmpdt.TableName = tablename;
-            return tmpdt;
-        }
-
-        public DataTable Cxxz(string projectid)
-        {
-            string sql = "SELECT * FROM [Yw_朝向修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "朝向修正";
-            return NewMethod(sql, tablename, this.dtCxxz);
-        }
-
-        public DataTable Jzfj(string projectid)
-        {
-            string sql = "SELECT * FROM [Yw_Jzfj] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "Jzfj";
-            return NewMethod(sql, tablename, this.dtJzfj);
-        }
-
-        public DataTable Cflx(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_车房类型修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "车房类型修正";
-            return NewMethod(sql, tablename, this.dtCflx);
-        }
-
-        public DataTable Cfqp(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_车房区片价] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "车房区片价";
-            return NewMethod(sql, tablename, this.dtCfqp);
-        }
-
-
-
-        public DataTable Dt(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_电梯修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "电梯修正";
-            return NewMethod(sql, tablename, this.dtDt);
-        }
-
-        public DataTable Fs(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_复式修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "复式修正";
-            return NewMethod(sql, tablename, this.dtFs);
-        }
-
-        public DataTable Gt(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_公摊修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "公摊修正";
-            return NewMethod(sql, tablename, this.dtGt);
-        }
-
-        public DataTable Jzmd(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_建筑密度修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "建筑密度修正";
-            return NewMethod(sql, tablename, this.dtJzmd);
-        }
-
-        public DataTable Jzmj(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_建筑面积修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "建筑面积修正";
-            return NewMethod(sql, tablename, this.dtJzmj);
-        }
-
-        public DataTable Jt(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_交通修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "交通修正";
-            return NewMethod(sql, tablename, this.dtJt);
-        }
-
-        public DataTable Jglx(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_结构类型修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "结构类型修正";
-            return NewMethod(sql, tablename, this.dtJglx);
-        }
-
-        public DataTable Llxz(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_临路情况修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "临路情况修正";
-            return NewMethod(sql, tablename, this.dtLlxz);
-        }
-
-
-
-        public DataTable LouLingXz(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='钢筋混凝土')";
-            sql = string.Format(sql, projectid);
-            string tablename = "钢筋混凝土楼龄修正";
-            return NewMethod(sql, tablename, this.dtLoulingxz);
-        }
-
-        public DataTable LouLingXz1(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='混合')";
-            sql = string.Format(sql, projectid);
-            string tablename = "混合楼龄修正";
-            return NewMethod(sql, tablename, this.dtLoulingxz1);
-        }
-
-
-        public DataTable LouLingXz2(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='砖木')";
-            sql = string.Format(sql, projectid);
-            string tablename = "砖木楼龄修正";
-            return NewMethod(sql, tablename, this.dtLoulingxz2);
-        }
-
-
-        public DataTable LouLingXz3(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='其它')";
-            sql = string.Format(sql, projectid);
-            string tablename = "其它楼龄修正";
-            return NewMethod(sql, tablename, this.dtLoulingxz3);
-        }
-
-        public DataTable Lxxz(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_楼型修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "楼型修正";
-            return NewMethod(sql, tablename, this.dtLx);
-
-        }
-
-        public DataTable Qp(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_区片信息] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "区片信息";
-            return NewMethod(sql, tablename, this.dtQp);
-        }
-
-        public DataTable Rjl(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_容积率修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "容积率修正";
-            return NewMethod(sql, tablename, this.dtRjl);
-        }
-
-        public DataTable Wdt(string projectid, int i)
-        {
-            string sql = "SELECT count(*) FROM [yw_无电梯房楼层修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "无电梯房楼层修正" + i.ToString();
-            DataTable dt = NewMethod(sql, tablename, this.dtWdt);
-
-            Debug.Assert(int.Parse(dt.Rows[0][0].ToString()) < 6, "只能处理小于6条记录的无电梯房楼层修正");
-
-            if (int.Parse(dt.Rows[0][0].ToString()) == 0)
+            DataRow drfdj = this.gvydfdj.GetFocusedDataRow();
+            if (drfdj != null)
             {
-                sql = "select * from [yw_无电梯房楼层修正] where 1<>1";
+                string jglxsz;
+                string cxsz;
+                string lnqksz;
+                double llsz;
+                double jzmj;
+                //string lxsz;
+                double lcsz;
+                double zlc;
+                //string wyglsz;
+                //string fssz;
+                //string gtsz;
+                //string ywdt;
+                #region 非单家
+
+                ydfdjdata tmpydfdjdata = new ydfdjdata();
+
+                if (drfdj["样点来源"].ToString().Trim() != "评估样点")
+                {
+                    return;
+                }
+                if (double.TryParse(drfdj["建筑面积"].ToString(), out jzmj))
+                {
+                }
+                else
+                {
+                    if (double.TryParse(drfdj["套内面积"].ToString(), out jzmj))
+                    {
+
+                    }
+                }
+                if (jzmj <= 0)
+                {
+                    SkyMap.Net.Gui.MessageHelper.ShowInfo(String.Format("请输入样点{0}的建筑面积或套内面积！", drfdj["序号"].ToString()));
+                    return;
+                }
+
+                jglxsz = drfdj["结构"].ToString();
+                cxsz = drfdj["朝向"].ToString();
+                lnqksz = drfdj["临路情况"].ToString();
+
+                if (double.TryParse(drfdj["楼龄"].ToString(), out llsz))
+                {
+
+                }
+                else
+                {
+                    //SkyMap.Net.Gui.MessageHelper.ShowInfo(String.Format("请输入样点{0}的楼龄！", drfdj["序号"].ToString()));
+                    //return;
+                }
+                tmpydfdjdata.Cxsz = cxsz;
+                tmpydfdjdata.Jglxsz = jglxsz;
+                tmpydfdjdata.Jzmj = jzmj;
+                tmpydfdjdata.Llsz = llsz;
+                tmpydfdjdata.Lnqksz = lnqksz;
+                //string lxsz;
+                //double lcsz;
+                //double zlc;
+                //string wyglsz;
+                //string fssz;
+                //string gtsz;
+                //string ywdt;
+                tmpydfdjdata.Lxsz = drfdj["楼型"].ToString();
+                if (double.TryParse(drfdj["所处楼层"].ToString(), out lcsz))
+                {
+                    tmpydfdjdata.Lcsz = lcsz;
+                }
+                if (double.TryParse(drfdj["总楼层"].ToString(), out zlc))
+                {
+                    tmpydfdjdata.Zlc = zlc;
+                }
+                tmpydfdjdata.Wyglsz = drfdj["物业"].ToString();
+                tmpydfdjdata.Fssz = drfdj["复式"].ToString();
+                tmpydfdjdata.Gtsz = drfdj["公摊"].ToString();
+                tmpydfdjdata.Ywdt = drfdj["有无电梯"].ToString();
+                EvaluateYd(tmpydfdjdata, yd);
+                if (yd != null)
+                {
+                    drfdj["单价"] = yd.Calu().ToString("#");
+                    try
+                    {
+                        drfdj["总价"] = (yd.Calu() * double.Parse(drfdj["建筑面积"].ToString())).ToString("#");
+                    }
+                    catch
+                    {
+                        try
+                        {
+                            drfdj["总价"] = (yd.Calu() * double.Parse(drfdj["套内面积"].ToString())).ToString("#");
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
+
+                #endregion
             }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 1 && i == 1)
+        }
+
+        private void gvyddj_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow drdj = this.gvyddj.GetFocusedDataRow();
+            if (drdj != null)
             {
-                sql = "SELECT top 1 *  FROM (select top 1 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 2 && i == 2)
-            {
-                sql = "SELECT top 1 *  FROM (select top 2 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 3 && i == 3)
-            {
-                sql = "SELECT top 1 *  FROM (select top 3 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 4 && i == 4)
-            {
-                sql = "SELECT top 1 *  FROM (select top 4 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 5 && i == 5)
-            {
-                sql = "SELECT top 1 *  FROM (select top 5 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else
-            {
-                sql = "select * from [yw_无电梯房楼层修正] where 1<>1";
+                string jglxsz;
+                string cxsz;
+                string lnqksz;
+                double jzmj;
+                double tdmj;
+                double llsz;
+                double rjlsz;
+                string jtsz;
+                #region 单家
+                yddjdata tmpyddjdata = new yddjdata();
+
+                if (drdj["样点来源"].ToString().Trim() != "评估样点")
+                {
+                    return;
+                }
+                if (double.TryParse(drdj["建筑面积"].ToString(), out jzmj))
+                {
+                }
+                else
+                {
+                    if (double.TryParse(drdj["套内面积"].ToString(), out jzmj))
+                    {
+
+                    }
+                }
+                if (jzmj <= 0)
+                {
+                    SkyMap.Net.Gui.MessageHelper.ShowInfo(String.Format("请输入样点{0}的建筑面积或套内面积！", drdj["序号"].ToString()));
+                    return;
+                }
+
+                if (double.TryParse(drdj["土地面积"].ToString(), out tdmj))
+                {
+                    drdj["容积率"] = (jzmj / tdmj).ToString("#.##");
+                }
+
+                jglxsz = drdj["结构"].ToString();
+                cxsz = drdj["朝向"].ToString();
+                lnqksz = drdj["临路情况"].ToString();
+                jtsz = drdj["交通情况"].ToString();
+                if (double.TryParse(drdj["容积率"].ToString(), out rjlsz))
+                {
+                }
+                else
+                {
+                    SkyMap.Net.Gui.MessageHelper.ShowInfo(String.Format("请输入样点{0}的容积率！", drdj["序号"].ToString()));
+                    return;
+                }
+                if (double.TryParse(drdj["楼龄"].ToString(), out llsz))
+                {
+
+                }
+                else
+                {
+                    SkyMap.Net.Gui.MessageHelper.ShowInfo(String.Format("请输入样点{0}的楼龄！", drdj["序号"].ToString()));
+                    return;
+                }
+                tmpyddjdata.Cxsz = cxsz;
+                tmpyddjdata.Jglxsz = jglxsz;
+                tmpyddjdata.Jtsz = jtsz;
+                tmpyddjdata.Jzmj = jzmj;
+                tmpyddjdata.Llsz = llsz;
+                tmpyddjdata.Lnqksz = lnqksz;
+                tmpyddjdata.Rjlsz = rjlsz;
+                EvaluateYd(tmpyddjdata, yd);
+                if (yd != null)
+                {
+                    drdj["单价"] = yd.Calu().ToString("#");
+                    try
+                    {
+                        drdj["总价"] = (yd.Calu() * double.Parse(drdj["建筑面积"].ToString())).ToString("#");
+                    }
+                    catch
+                    {
+                        try
+                        {
+                            drdj["总价"] = (yd.Calu() * double.Parse(drdj["套内面积"].ToString())).ToString("#");
+                        }
+                        catch
+                        {
+                        }
+                    }
+                }
             }
 
-            sql = string.Format(sql, projectid);
-            tablename = "无电梯房楼层修正" + i.ToString();
-            return NewMethod(sql, tablename, this.dtWdt);
+                #endregion
 
-        }
-
-
-        public DataTable Dtflc(string projectid, int i)
-        {
-            string sql = "SELECT count(*) FROM [yw_电梯房楼层修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "电梯房楼层修正" + i.ToString();
-            DataTable dt = NewMethod(sql, tablename, this.dtWdt);
-
-            Debug.Assert(int.Parse(dt.Rows[0][0].ToString()) < 6, "只能处理小于6条记录的电梯房楼层修正");
-
-            if (int.Parse(dt.Rows[0][0].ToString()) == 0)
-            {
-                sql = "select * from [yw_电梯房楼层修正] where 1<>1";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 1 && i == 1)
-            {
-                sql = "SELECT top 1 *  FROM (select top 1 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 2 && i == 2)
-            {
-                sql = "SELECT top 1 *  FROM (select top 2 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 3 && i == 3)
-            {
-                sql = "SELECT top 1 *  FROM (select top 3 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 4 && i == 4)
-            {
-                sql = "SELECT top 1 *  FROM (select top 4 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else if (int.Parse(dt.Rows[0][0].ToString()) >= 5 && i == 5)
-            {
-                sql = "SELECT top 1 *  FROM (select top 5 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
-            }
-            else
-            {
-                sql = "select * from [yw_电梯房楼层修正] where 1<>1";
-            }
-
-            sql = string.Format(sql, projectid);
-            tablename = "电梯房楼层修正" + i.ToString();
-            return NewMethod(sql, tablename, this.dtWdt);
-        }
-
-        public System.Data.DataTable Wygl(string projectid)
-        {
-            string sql = "SELECT * FROM [yw_物业管理修正] where project_id = '{0}'";
-            sql = string.Format(sql, projectid);
-            string tablename = "物业管理修正";
-            return NewMethod(sql, tablename, this.dtWygl);
-        }
-
-        public DataTable Jzmjxzlx()
-        {
-            string sql = "SELECT * FROM [建筑面积修正楼型]";
-            string tablename = "建筑面积修正楼型";
-            return NewMethod(sql, tablename, this.dtJzmjxzlx);
-        }
-
-        public DataTable Llxzjglx()
-        {
-            string sql = "SELECT * FROM [楼龄修正结构类型]";
-            string tablename = "楼龄修正结构类型";
-            return NewMethod(sql, tablename, this.dtLlxzjglx);
-        }
-
-        public DataTable Rjlxzlx()
-        {
-            string sql = "SELECT * FROM [容积率修正类型]";
-            string tablename = "容积率修正类型";
-            return NewMethod(sql, tablename, this.dtRjlxzlx);
         }
     }
 
-    public class KillExcel
+
+}
+
+public class JZFJ
+{
+    private System.Data.DataTable dtCxxz = null;//yw_朝向修正
+    private System.Data.DataTable dtCflx = null;//yw_车房类型修正
+    private DataTable dtCfqp = null;//yw_车房区片价
+    private DataTable dtJzfj = null;//yw_jzfj中某projectid指定的单条记录
+    private DataTable dtData = null;//yw_jzfj所有记录
+    private DataTable dtDt = null;//yw_电梯修正
+    private DataTable dtFs = null;//yw_复式修正
+    private DataTable dtGt = null;//yw_公摊修正
+    private DataTable dtJzmd = null;//yw_建筑密度修正
+    private DataTable dtJzmj = null;//yw_建筑面积修正
+    private DataTable dtJt = null;//yw_交通修正
+    private DataTable dtJglx = null;//yw_结构类型修正
+    private DataTable dtLlxz = null;//yw_临路情况修正
+    private DataTable dtLoulingxz = null;//yw_楼龄修正    钢筋混凝土
+    private DataTable dtLoulingxz1 = null;//yw_楼龄修正   混合
+    private DataTable dtLoulingxz2 = null;//yw_楼龄修正   砖木
+    private DataTable dtLoulingxz3 = null;//yw_楼龄修正   其它
+    private DataTable dtLx = null;//yw_楼型修正
+    private DataTable dtQp = null;//yw_区片信息
+    private DataTable dtRjl = null;//yw_容积率修正
+    private DataTable dtWdt = null;//yw_无电梯房楼层修正
+    private DataTable dtWygl = null;//yw_物业管理修正
+    private DataTable dtJzmjxzlx = null;//建筑面积修正楼型
+    private DataTable dtLlxzjglx = null;//楼龄修正结构类型
+    private DataTable dtRjlxzlx = null;//容积率修正类型
+
+    public DataTable Jzfj()
     {
-        /// <summary>
-        /// 结束Excel进程
-        /// </summary>
-        public static void KillExcelProcess(DateTime beforetime, DateTime aftertime)
+        string sql = "SELECT * FROM [Yw_Jzfj]";
+        string tablename = "Jzfj";
+        return NewMethod(sql, tablename, this.dtData);
+    }
+
+    private DataTable NewMethod(string sql, string tablename, DataTable dt)
+    {
+        DataTable tmpdt = new DataTable();
+        tmpdt = QueryHelper.ExecuteSql("Default", string.Empty, sql);
+        tmpdt.TableName = tablename;
+        return tmpdt;
+    }
+
+    public DataTable Cxxz(string projectid)
+    {
+        string sql = "SELECT * FROM [Yw_朝向修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "朝向修正";
+        return NewMethod(sql, tablename, this.dtCxxz);
+    }
+
+    public DataTable Jzfj(string projectid)
+    {
+        string sql = "SELECT * FROM [Yw_Jzfj] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "Jzfj";
+        return NewMethod(sql, tablename, this.dtJzfj);
+    }
+
+    public DataTable Cflx(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_车房类型修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "车房类型修正";
+        return NewMethod(sql, tablename, this.dtCflx);
+    }
+
+    public DataTable Cfqp(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_车房区片价] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "车房区片价";
+        return NewMethod(sql, tablename, this.dtCfqp);
+    }
+
+
+
+    public DataTable Dt(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_电梯修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "电梯修正";
+        return NewMethod(sql, tablename, this.dtDt);
+    }
+
+    public DataTable Fs(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_复式修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "复式修正";
+        return NewMethod(sql, tablename, this.dtFs);
+    }
+
+    public DataTable Gt(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_公摊修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "公摊修正";
+        return NewMethod(sql, tablename, this.dtGt);
+    }
+
+    public DataTable Jzmd(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_建筑密度修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "建筑密度修正";
+        return NewMethod(sql, tablename, this.dtJzmd);
+    }
+
+    public DataTable Jzmj(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_建筑面积修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "建筑面积修正";
+        return NewMethod(sql, tablename, this.dtJzmj);
+    }
+
+    public DataTable Jt(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_交通修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "交通修正";
+        return NewMethod(sql, tablename, this.dtJt);
+    }
+
+    public DataTable Jglx(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_结构类型修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "结构类型修正";
+        return NewMethod(sql, tablename, this.dtJglx);
+    }
+
+    public DataTable Llxz(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_临路情况修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "临路情况修正";
+        return NewMethod(sql, tablename, this.dtLlxz);
+    }
+
+
+
+    public DataTable LouLingXz(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='钢筋混凝土')";
+        sql = string.Format(sql, projectid);
+        string tablename = "钢筋混凝土楼龄修正";
+        return NewMethod(sql, tablename, this.dtLoulingxz);
+    }
+
+    public DataTable LouLingXz1(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='混合')";
+        sql = string.Format(sql, projectid);
+        string tablename = "混合楼龄修正";
+        return NewMethod(sql, tablename, this.dtLoulingxz1);
+    }
+
+
+    public DataTable LouLingXz2(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='砖木')";
+        sql = string.Format(sql, projectid);
+        string tablename = "砖木楼龄修正";
+        return NewMethod(sql, tablename, this.dtLoulingxz2);
+    }
+
+
+    public DataTable LouLingXz3(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_楼龄修正] where project_id = '{0}' and  结构类型 in (select 结构类型 from [楼龄修正结构类型] where  结构说明 ='其它')";
+        sql = string.Format(sql, projectid);
+        string tablename = "其它楼龄修正";
+        return NewMethod(sql, tablename, this.dtLoulingxz3);
+    }
+
+    public DataTable Lxxz(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_楼型修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "楼型修正";
+        return NewMethod(sql, tablename, this.dtLx);
+
+    }
+
+    public DataTable Qp(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_区片信息] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "区片信息";
+        return NewMethod(sql, tablename, this.dtQp);
+    }
+
+    public DataTable Rjl(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_容积率修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "容积率修正";
+        return NewMethod(sql, tablename, this.dtRjl);
+    }
+
+    public DataTable Wdt(string projectid, int i)
+    {
+        string sql = "SELECT count(*) FROM [yw_无电梯房楼层修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "无电梯房楼层修正" + i.ToString();
+        DataTable dt = NewMethod(sql, tablename, this.dtWdt);
+
+        Debug.Assert(int.Parse(dt.Rows[0][0].ToString()) < 6, "只能处理小于6条记录的无电梯房楼层修正");
+
+        if (int.Parse(dt.Rows[0][0].ToString()) == 0)
         {
-            Process[] myProcesses;
-            DateTime startTime;
-            myProcesses = Process.GetProcessesByName("Excel");
-
-            //得不到Excel进程ID，暂时只能判断进程启动时间
-            foreach (Process myProcess in myProcesses)
-            {
-                //加入try,因为有可能myProcess已退出 20091203
-                try
-                {
-                    startTime = myProcess.StartTime;
-                    string title = myProcess.MainWindowTitle;// 返回标题,在这里可以考虑做些判断，那样的话，杀进程将更加精确;
-
-                    if (startTime > beforetime && startTime < aftertime)
-                    {
-                        myProcess.Kill();
-                    }
-                }
-                catch
-                { }
-            }
+            sql = "select * from [yw_无电梯房楼层修正] where 1<>1";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 1 && i == 1)
+        {
+            sql = "SELECT top 1 *  FROM (select top 1 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 2 && i == 2)
+        {
+            sql = "SELECT top 1 *  FROM (select top 2 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 3 && i == 3)
+        {
+            sql = "SELECT top 1 *  FROM (select top 3 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 4 && i == 4)
+        {
+            sql = "SELECT top 1 *  FROM (select top 4 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 5 && i == 5)
+        {
+            sql = "SELECT top 1 *  FROM (select top 5 * from [yw_无电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else
+        {
+            sql = "select * from [yw_无电梯房楼层修正] where 1<>1";
         }
 
-        public static void KillWordProcess(DateTime beforetime, DateTime aftertime)
+        sql = string.Format(sql, projectid);
+        tablename = "无电梯房楼层修正" + i.ToString();
+        return NewMethod(sql, tablename, this.dtWdt);
+
+    }
+
+
+    public DataTable Dtflc(string projectid, int i)
+    {
+        string sql = "SELECT count(*) FROM [yw_电梯房楼层修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "电梯房楼层修正" + i.ToString();
+        DataTable dt = NewMethod(sql, tablename, this.dtWdt);
+
+        Debug.Assert(int.Parse(dt.Rows[0][0].ToString()) < 6, "只能处理小于6条记录的电梯房楼层修正");
+
+        if (int.Parse(dt.Rows[0][0].ToString()) == 0)
         {
-            Process[] myProcesses;
-            DateTime startTime;
-            myProcesses = Process.GetProcessesByName("WINWORD");
-
-            //得不到Excel进程ID，暂时只能判断进程启动时间
-            foreach (Process myProcess in myProcesses)
-            {
-                //加入try,因为有可能myProcess已退出 20091203
-                try
-                {
-                    startTime = myProcess.StartTime;
-                    string title = myProcess.MainWindowTitle;// 返回标题,在这里可以考虑做些判断，那样的话，杀进程将更加精确;
-
-                    if (startTime > beforetime && startTime < aftertime)
-                    {
-                        myProcess.Kill();
-                    }
-                }
-                catch
-                { }
-            }
+            sql = "select * from [yw_电梯房楼层修正] where 1<>1";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 1 && i == 1)
+        {
+            sql = "SELECT top 1 *  FROM (select top 1 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 2 && i == 2)
+        {
+            sql = "SELECT top 1 *  FROM (select top 2 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 3 && i == 3)
+        {
+            sql = "SELECT top 1 *  FROM (select top 3 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 4 && i == 4)
+        {
+            sql = "SELECT top 1 *  FROM (select top 4 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else if (int.Parse(dt.Rows[0][0].ToString()) >= 5 && i == 5)
+        {
+            sql = "SELECT top 1 *  FROM (select top 5 * from [yw_电梯房楼层修正] where project_id = '{0}' order by [ID] desc) ttt order by [id] asc";
+        }
+        else
+        {
+            sql = "select * from [yw_电梯房楼层修正] where 1<>1";
         }
 
-        public static void KillExcelProcess()
+        sql = string.Format(sql, projectid);
+        tablename = "电梯房楼层修正" + i.ToString();
+        return NewMethod(sql, tablename, this.dtWdt);
+    }
+
+    public System.Data.DataTable Wygl(string projectid)
+    {
+        string sql = "SELECT * FROM [yw_物业管理修正] where project_id = '{0}'";
+        sql = string.Format(sql, projectid);
+        string tablename = "物业管理修正";
+        return NewMethod(sql, tablename, this.dtWygl);
+    }
+
+    public DataTable Jzmjxzlx()
+    {
+        string sql = "SELECT * FROM [建筑面积修正楼型]";
+        string tablename = "建筑面积修正楼型";
+        return NewMethod(sql, tablename, this.dtJzmjxzlx);
+    }
+
+    public DataTable Llxzjglx()
+    {
+        string sql = "SELECT * FROM [楼龄修正结构类型]";
+        string tablename = "楼龄修正结构类型";
+        return NewMethod(sql, tablename, this.dtLlxzjglx);
+    }
+
+    public DataTable Rjlxzlx()
+    {
+        string sql = "SELECT * FROM [容积率修正类型]";
+        string tablename = "容积率修正类型";
+        return NewMethod(sql, tablename, this.dtRjlxzlx);
+    }
+}
+
+public class KillExcel
+{
+    /// <summary>
+    /// 结束Excel进程
+    /// </summary>
+    public static void KillExcelProcess(DateTime beforetime, DateTime aftertime)
+    {
+        Process[] myProcesses;
+        DateTime startTime;
+        myProcesses = Process.GetProcessesByName("Excel");
+
+        //得不到Excel进程ID，暂时只能判断进程启动时间
+        foreach (Process myProcess in myProcesses)
         {
-            Process[] myProcesses;
-
-            myProcesses = Process.GetProcessesByName("Excel");
-
-            foreach (Process myProcess in myProcesses)
+            //加入try,因为有可能myProcess已退出 20091203
+            try
             {
-                //加入try,因为有可能myProcess已退出 20091203
-                try
+                startTime = myProcess.StartTime;
+                string title = myProcess.MainWindowTitle;// 返回标题,在这里可以考虑做些判断，那样的话，杀进程将更加精确;
+
+                if (startTime > beforetime && startTime < aftertime)
                 {
                     myProcess.Kill();
                 }
-                catch
+            }
+            catch
+            { }
+        }
+    }
+
+    public static void KillWordProcess(DateTime beforetime, DateTime aftertime)
+    {
+        Process[] myProcesses;
+        DateTime startTime;
+        myProcesses = Process.GetProcessesByName("WINWORD");
+
+        //得不到Excel进程ID，暂时只能判断进程启动时间
+        foreach (Process myProcess in myProcesses)
+        {
+            //加入try,因为有可能myProcess已退出 20091203
+            try
+            {
+                startTime = myProcess.StartTime;
+                string title = myProcess.MainWindowTitle;// 返回标题,在这里可以考虑做些判断，那样的话，杀进程将更加精确;
+
+                if (startTime > beforetime && startTime < aftertime)
                 {
+                    myProcess.Kill();
                 }
+            }
+            catch
+            { }
+        }
+    }
+
+    public static void KillExcelProcess()
+    {
+        Process[] myProcesses;
+
+        myProcesses = Process.GetProcessesByName("Excel");
+
+        foreach (Process myProcess in myProcesses)
+        {
+            //加入try,因为有可能myProcess已退出 20091203
+            try
+            {
+                myProcess.Kill();
+            }
+            catch
+            {
             }
         }
     }
 }
+
