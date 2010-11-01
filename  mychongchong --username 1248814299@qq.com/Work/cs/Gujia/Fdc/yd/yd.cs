@@ -302,22 +302,22 @@ namespace ZBPM.yd
         #endregion
     }
 
-    #region 加入逆算功能 2010年10月31日
-    public class yddjls : yddj
-    {
-        public override double Calu()
-        {
-            return  base.Fjqpj / (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jtsz / 100) * base.Rjlsz / 100;
-        }
-    }
-    public class ydfdjls : ydfdj
-    {
-        public override double Calu()
-        {
-            return base.Fjqpj * (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jzmjsz / 100 + base.Lxsz / 100 + base.Lcsz / 100 + base.Wyglsz / 100 + base.Fssz / 100 + base.Gtsz / 100 + base.Dtsz / 100);
-        }
-    }
-    #endregion
+    //#region 加入逆算功能 2010年10月31日
+    //public class yddjls : yddj
+    //{
+    //    public override double Calu()
+    //    {
+    //        return  base.Fjqpj / (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jtsz / 100) * base.Rjlsz / 100;
+    //    }
+    //}
+    //public class ydfdjls : ydfdj
+    //{
+    //    public override double Calu()
+    //    {
+    //        return base.Fjqpj * (1 + base.Jglxsz / 100 + base.Cxsz / 100 + base.Llsz / 100 + base.Lnqksz / 100 + base.Jzmjsz / 100 + base.Lxsz / 100 + base.Lcsz / 100 + base.Wyglsz / 100 + base.Fssz / 100 + base.Gtsz / 100 + base.Dtsz / 100);
+    //    }
+    //}
+    //#endregion
 
     class ydksearch : iydsearch
     {
