@@ -82,6 +82,18 @@ namespace ZBPM.yd
             return fjqpj * (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jtsz / 100) * rjlsz / 100;
         }
 
+        public virtual double Calu(BFlag bflag)
+        {
+            if (bflag.Ss)
+            {
+                return Calu();
+            }
+            else
+            {
+                return fjqpj / (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jtsz / 100) / rjlsz * 100;
+            }
+        }
+
         #endregion
 
         #region iyddj Members
@@ -195,6 +207,17 @@ namespace ZBPM.yd
             return fjqpj * (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jzmjsz / 100 + lxsz / 100 + lcsz / 100 + wyglsz / 100 + fssz / 100 + gtsz / 100 + dtsz / 100);
         }
 
+        public virtual double Calu(BFlag bflag)
+        {
+            if (bflag.Ss)
+            {
+                return Calu();
+            }
+            else
+            {
+                return fjqpj / (1 + jglxsz / 100 + cxsz / 100 + llsz / 100 + lnqksz / 100 + jzmjsz / 100 + lxsz / 100 + lcsz / 100 + wyglsz / 100 + fssz / 100 + gtsz / 100 + dtsz / 100);
+            }
+        }
         #endregion
 
         #region iydfdj Members

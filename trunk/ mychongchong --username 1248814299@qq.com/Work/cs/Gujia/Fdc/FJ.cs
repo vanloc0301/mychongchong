@@ -2639,15 +2639,31 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                             {
                                 yd = new yddj();
                             }
-                            if (double.TryParse(this.txt房价区片价.Text.ToString(), out dqpj))
+                            if (bflag.Ss)
                             {
-                                yd.Fjqpj = dqpj;
+                                if (double.TryParse(this.txt房价区片价.Text.ToString(), out dqpj))
+                                {
+                                    yd.Fjqpj = dqpj;
+                                }
+                                else
+                                {
+                                    yd = null;
+                                    SkyMap.Net.Gui.MessageHelper.ShowInfo("房价区片价不能为空");
+                                    return;
+                                }
                             }
                             else
                             {
-                                yd = null;
-                                SkyMap.Net.Gui.MessageHelper.ShowInfo("房价区片价不能为空");
-                                return;
+                                if (double.TryParse(bflag.Dj.ToString(), out dqpj))
+                                {
+                                    yd.Fjqpj = dqpj;
+                                }
+                                else
+                                {
+                                    yd = null;
+                                    SkyMap.Net.Gui.MessageHelper.ShowInfo("单价有误！");
+                                    return;
+                                }
                             }
                             yd.Jglxsz = rom["Fjglxxz"].Value.ToString() == "999" ? 0 : double.Parse(rom["Fjglxxz"].Value.ToString());
                             if (yd.Jglxsz > 1000)
@@ -2819,15 +2835,31 @@ FROM yw_yddj where PROJECT_ID ='"+strProjectId+"' order by id asc","SELECT * FRO
                             {
                                 yd = new ydfdj();
                             }
-                            if (double.TryParse(this.txt房价区片价.Text.ToString(), out dqpj))
+                            if (bflag.Ss)
                             {
-                                yd.Fjqpj = dqpj;
+                                if (double.TryParse(this.txt房价区片价.Text.ToString(), out dqpj))
+                                {
+                                    yd.Fjqpj = dqpj;
+                                }
+                                else
+                                {
+                                    yd = null;
+                                    SkyMap.Net.Gui.MessageHelper.ShowInfo("房价区片价不能为空");
+                                    return;
+                                }
                             }
                             else
                             {
-                                yd = null;
-                                SkyMap.Net.Gui.MessageHelper.ShowInfo("房价区片价不能为空");
-                                return;
+                                if (double.TryParse(bflag.Dj.ToString(), out dqpj))
+                                {
+                                    yd.Fjqpj = dqpj;
+                                }
+                                else
+                                {
+                                    yd = null;
+                                    SkyMap.Net.Gui.MessageHelper.ShowInfo("单价不能为空");
+                                    return;
+                                }
                             }
                             yd.Jglxsz = rom["Fjglxxz"].Value.ToString() == "999" ? 0 : double.Parse(rom["Fjglxxz"].Value.ToString());
                             if (yd.Jglxsz > 1000)

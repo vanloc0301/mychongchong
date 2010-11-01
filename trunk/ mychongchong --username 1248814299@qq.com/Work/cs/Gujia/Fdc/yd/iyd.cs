@@ -13,6 +13,7 @@ namespace ZBPM.yd
         double Llsz { get; set; }   //楼龄修正系数
         double Lnqksz { get; set; } //临路情况修正系数
         double Calu();              //计算样点结果
+        double Calu(BFlag bflag);
     }
 
     public interface iyddj    //单家
