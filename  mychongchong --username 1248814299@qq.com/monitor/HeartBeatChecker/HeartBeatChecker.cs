@@ -59,9 +59,15 @@ namespace HeartBeatChecker
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Start();
+
+        }
+
+        private void Start()
+        {
             button1.Text = "监控中";
             int j = ReadText();
-            if (j <=1 )
+            if (j <= 1)
             {
                 MessageBox.Show("在当前目录下未找到site.ini文件或文件中没有有效网址!");
                 return;
@@ -89,16 +95,15 @@ namespace HeartBeatChecker
                 else
                 {
                     backgroundWorker1.RunWorkerAsync();
-                }              
-                
+                }
+
             }
             catch
             {
                 MessageBox.Show("最小时间间隔为60秒!" + intT.ToString());
                 txtTime.Focus();
-                return;            
+                return;
             }
-
         }
 
         private void StartCheck()
@@ -299,6 +304,9 @@ namespace HeartBeatChecker
             this.MaximizeBox = false;
             this.MinimizeBox = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            
+            SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
+            Start();
         }
 
         private void HeartBeatChecker_Closed(object sender, FormClosedEventArgs e)
