@@ -118,7 +118,7 @@
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(53, 21);
             this.txtTime.TabIndex = 8;
-            this.txtTime.Text = "300";
+            this.txtTime.Text = "3600";
             // 
             // label4
             // 
@@ -225,7 +225,7 @@
             this.Name = "HeartBeatChecker";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "服务器监控";
+            this.Text = "服务器管理";
             this.Load += new System.EventHandler(this.HeartBeatChecker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
