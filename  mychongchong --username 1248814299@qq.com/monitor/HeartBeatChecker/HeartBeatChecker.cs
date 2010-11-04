@@ -305,7 +305,7 @@ namespace HeartBeatChecker
             this.MinimizeBox = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             
-            //SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
+            SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
             Start();
         }
 
