@@ -27,7 +27,7 @@ namespace HeartBeatChecker
         //string strFileContent = "";
         public HeartBeatChecker()
         {
-            InitializeComponent();//5^1~a~s~p·x^
+            InitializeComponent();
             Initializenotifyicon();
         }
 
@@ -94,7 +94,7 @@ namespace HeartBeatChecker
             }
             catch
             {
-                MessageBox.Show("最小时间间隔为60秒!" + intT.ToString());//5^1~a~s~p·x^
+                MessageBox.Show("最小时间间隔为60秒!" + intT.ToString());
                 txtTime.Focus();
                 return;            
             }
@@ -112,7 +112,7 @@ namespace HeartBeatChecker
                 try
                 {
                     延迟(30* 1000);
-                    v = CheckServer(arrUrl[i].ToString());//5^1~a~s~p·x^
+                    v = CheckServer(arrUrl[i].ToString());
                     if (v != "")
                     {
                         intError = 1;
