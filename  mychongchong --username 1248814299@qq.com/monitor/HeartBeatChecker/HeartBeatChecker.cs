@@ -305,8 +305,16 @@ namespace HeartBeatChecker
             this.MinimizeBox = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             
-            SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
+            SendMail(string.Format("{1}:网站检测软件启动了....{0}",DateTime.Now.ToString(),GetLocalIP()));
             Start();
+        }
+
+        public string GetLocalIP()
+        {
+            string sHostName = System.Net.Dns.GetHostName();
+            System.Net.IPHostEntry hostinfo = System.Net.Dns.GetHostEntry(sHostName);
+            System.Net.IPAddress add = hostinfo.AddressList[0];
+            return add.ToString();
         }
 
 
@@ -314,7 +322,7 @@ namespace HeartBeatChecker
         {
             MessageBox.Show("你选择了退出系统!");
             TrayIcon.Visible = false;
-            SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
+            SendMail(string.Format("{1}:网站检测软件关闭了....{0}", DateTime.Now.ToString(), GetLocalIP()));
             this.Close();
             
         }
