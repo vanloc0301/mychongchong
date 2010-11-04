@@ -36,9 +36,9 @@ namespace HeartBeatChecker
             //设定托盘程序的各个属性 
             TrayIcon = new NotifyIcon();
             TrayIcon.Icon = mNetIcon;
-            TrayIcon.Text = "用Visual C#做托盘程序";
+            TrayIcon.Text = "服务监测";
             TrayIcon.Visible = true;
-            TrayIcon.Click += new System.EventHandler(this.click);
+            //TrayIcon.Click += new System.EventHandler(this.click);
 
             ////定义一个MenuItem数组，并把此数组同时赋值给ContextMenu对象 
             MenuItem[] mnuItms = new MenuItem[2];
@@ -305,24 +305,15 @@ namespace HeartBeatChecker
             this.MinimizeBox = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             
-            SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
+            //SendMail(string.Format("网站检测软件启动了....{0}",DateTime.Now.ToString()));
             Start();
         }
 
-        private void HeartBeatChecker_Closed(object sender, FormClosedEventArgs e)
-        {
-            TrayIcon.Visible = false;
-            SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
-        }
-        public void click(object sender, System.EventArgs e)
-        {
-            //this.Visible = true;
-            
-        }
 
         public void close(object sender, System.EventArgs e)
         {
             MessageBox.Show("你选择了退出系统!");
+            TrayIcon.Visible = false;
             SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
             this.Close();
             
@@ -339,6 +330,13 @@ namespace HeartBeatChecker
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+        }
+
+        private void HeartBeatChecker_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TrayIcon.Visible = false;
+            MessageBox.Show("你选择了退出系统!");
+            SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
         } 
 
     }
