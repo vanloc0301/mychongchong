@@ -312,6 +312,7 @@ namespace HeartBeatChecker
         private void HeartBeatChecker_Closed(object sender, FormClosedEventArgs e)
         {
             TrayIcon.Visible = false;
+            SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
         }
         public void click(object sender, System.EventArgs e)
         {
@@ -322,7 +323,9 @@ namespace HeartBeatChecker
         public void close(object sender, System.EventArgs e)
         {
             MessageBox.Show("你选择了退出系统!");
+            SendMail(string.Format("网站检测软件关闭了....{0}", DateTime.Now.ToString()));
             this.Close();
+            
         }
 
         public void show(object sender, System.EventArgs e)
