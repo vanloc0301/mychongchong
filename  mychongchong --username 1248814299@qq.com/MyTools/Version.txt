@@ -1,0 +1,2 @@
+This build of FileDisassembler was compiled against version 5.0.42.0 of .NET Reflector.
+See http://www.aisto.com/roeder/dotnet for further information.
