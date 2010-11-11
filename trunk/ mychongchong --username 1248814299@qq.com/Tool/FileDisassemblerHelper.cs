@@ -218,7 +218,7 @@ namespace Reflector.FileDisassembler
                     }
                     namespaceItem.Types.Add(typeDeclaration);
 
-                    #region 2010-11-11 lhm  字段加入完整的命名空间
+                    #region 2010-11-11 lhm  字段, 方法加入完整的命名空间
                     string strnamespace;
                     string strname;
                     string strfield;
@@ -243,29 +243,14 @@ namespace Reflector.FileDisassembler
                         }
                         strfield = fieldDeclaration2.Name;
                         streamWriter.WriteLine(string.Format("//#hmstart-{0}.{1} {2}#hmend", strnamespace, strname, strfield));
-                        //Type t = (((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration2)).FieldType as Reflector.CodeModel.IType).GetType();
-                        //FieldInfo[] fi = new FieldInfo[]{};
-                        //fi = t.GetFields();
-                        //foreach (PropertyInfo pro in t.GetProperties())
-                        //{ 
-                        //    System.Diagnostics.Debug.Print(pro.ToString()); 
-                        //}
-                        //foreach (MethodInfo method in t.GetMethods())
-                        //{
-                        //    System.Diagnostics.Debug.Print(method.ToString());
-                        //}
-                        //string typeName = null;            
-                        //Reflector.CodeModel.​ITypeReference typeReference = t as Reflector.CodeModel.​ITypeReference;  
-
-                        //writer.WriteFieldDeclaration(fieldDeclaration2);
                     }
-                    #endregion
+                    
 
-                    streamWriter.WriteLine(("Type: " + typeDeclaration.Namespace + "." + typeDeclaration.Name));
+                    streamWriter.WriteLine(("//Type: " + typeDeclaration.Namespace + "." + typeDeclaration.Name));
 
                     foreach (IMethodDeclaration methodDeclaration in typeDeclaration.Methods)
                     {
-                        streamWriter.WriteLine(("Method: " + methodDeclaration));
+                        streamWriter.WriteLine(("//Method: " + methodDeclaration));
 
                         int icount = ((Reflector.CodeModel.Memory.MethodDeclaration)(methodDeclaration)).Parameters.Count;
                         if (icount ==0) continue;
@@ -290,38 +275,9 @@ namespace Reflector.FileDisassembler
                             }
                             strfield = fieldDeclaration.Name;
                             streamWriter.WriteLine(string.Format("//#p_hmstart-{0}.{1} {2}#p_hmend", strnamespace, strname, strfield));
-                        }
-                        //IMethodBody methodBody = methodDeclaration.Body as IMethodBody;
-                        //if (methodBody != null)
-                        //{
-                        //    foreach (IInstruction instruction in methodBody.Instructions)
-                        //    {
-                        //        streamWriter.WriteLine("L" + instruction.Offset.ToString("X4", CultureInfo.InvariantCulture));
-                        //        streamWriter.WriteLine(": ");
-                        //        //streamWriter.WriteLine(InstructionTable.GetInstructionName(instruction.Code));
-                        //        streamWriter.WriteLine(instruction.Code);
-                        //        if (instruction.Value != null)
-                        //        {
-                        //            streamWriter.WriteLine(" ");
-
-                        //            if (instruction.Value is string)
-                        //            {
-                        //                streamWriter.WriteLine("\"");
-                        //            }
-
-                        //            streamWriter.WriteLine(instruction.Value.ToString());
-
-                        //            if (instruction.Value is string)
-                        //            {
-                        //                streamWriter.WriteLine("\"");
-                        //            }
-                        //        }
-
-                        //        streamWriter.WriteLine();
-                        //    }
-
-                        //}
+                        }                      
                     }
+                    #endregion
                 }
                 catch (Exception ex)
                 {
