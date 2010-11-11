@@ -1,30 +1,19 @@
-Microsoft Visual Studio Solution File, Format Version 7.00
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflector.FileDisassembler", "Reflector.FileDisassembler.csproj", "{880650F5-FDBA-435B-A739-F743A8E5C675}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 2
-		SccLocalPath0 = .
-		CanCheckoutShared = true
-		SolutionUniqueID = {E9638CBE-3924-4BD4-8264-778B0FCB7E82}
-		SccProjectUniqueName1 = Reflector.FileDisassembler.csproj
-		SccLocalPath1 = .
-		CanCheckoutShared = true
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionConfiguration) = preSolution
-		ConfigName.0 = Debug
-		ConfigName.1 = Release
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{880650F5-FDBA-435B-A739-F743A8E5C675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880650F5-FDBA-435B-A739-F743A8E5C675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880650F5-FDBA-435B-A739-F743A8E5C675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880650F5-FDBA-435B-A739-F743A8E5C675}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectDependencies) = postSolution
-	EndGlobalSection
-	GlobalSection(ProjectConfiguration) = postSolution
-		{880650F5-FDBA-435B-A739-F743A8E5C675}.Debug.ActiveCfg = Debug|.NET
-		{880650F5-FDBA-435B-A739-F743A8E5C675}.Debug.Build.0 = Debug|.NET
-		{880650F5-FDBA-435B-A739-F743A8E5C675}.Release.ActiveCfg = Release|.NET
-		{880650F5-FDBA-435B-A739-F743A8E5C675}.Release.Build.0 = Release|.NET
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
