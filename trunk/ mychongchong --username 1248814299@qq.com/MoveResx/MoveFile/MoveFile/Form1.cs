@@ -12,6 +12,7 @@ namespace MoveFile
 {
     public partial class Form1 : Form
     {
+        bool bflag = false;
         public Form1()
         {
             InitializeComponent();
@@ -19,9 +20,16 @@ namespace MoveFile
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.listBoxLog.Items.Clear();
+            NewMethod();
+        }
+
+        private void NewMethod()
+        {
+           
             // 获取当前路径下全部文件名
             String[] files = Directory.GetFiles(Environment.CurrentDirectory);
+            bflag = false;
+            this.listBoxLog.Items.Clear();
             foreach (String filename in files)
             {
                 // 最后一个"\"
@@ -42,7 +50,15 @@ namespace MoveFile
                     // 补齐为3位，组成新的文件名
                     String namenew, tmpnew;
                     namenew = namenoext.Substring(namenoext.LastIndexOf(".") + 1);
-                    tmpnew = namenoext.Replace(namenew, "").Replace(".", "\\");
+                    if (bflag)
+                    {
+                        tmpnew = namenoext.Replace(namenew, "").Replace(".", "\\");
+                    }
+                    else
+                    {
+                        tmpnew = namenoext.Replace(namenew, "").Substring(0, namenoext.Replace(namenew, "").Length - 1) + "\\";
+                    }
+                   
                     String fullnewname = beginpart + tmpnew + namenew + ext;
 
                     // 改名
@@ -54,6 +70,12 @@ namespace MoveFile
 
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bflag = true;
+            NewMethod();
         }
     }
 }
