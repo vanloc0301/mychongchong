@@ -9,3 +9,10 @@ d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MyTools\obj\Debug\Reflector
 d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MyTools\obj\Debug\Reflector.FileDisassembler.pdb
 d:\Hi\Net Reflector\Add-ins\Release\Reflector.FileDisassembler.dll
 d:\Hi\Net Reflector\Add-ins\Release\Reflector.FileDisassembler.pdb
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\ResolveAssemblyReference.cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\Reflector.FileDisassembler.FileDisassemblerWindow.resources
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\GenerateResource-ResGen.read.1.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\GenerateResource-ResGen.read.4.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\GenerateResource-ResGen.write.1.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\Reflector.FileDisassembler.dll
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\Tool\obj\Debug\Reflector.FileDisassembler.pdb

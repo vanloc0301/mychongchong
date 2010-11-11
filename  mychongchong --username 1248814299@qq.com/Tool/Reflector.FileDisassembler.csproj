@@ -56,7 +56,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DocumentationFile />
     <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
+    <FileAlignment>2048</FileAlignment>
     <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
