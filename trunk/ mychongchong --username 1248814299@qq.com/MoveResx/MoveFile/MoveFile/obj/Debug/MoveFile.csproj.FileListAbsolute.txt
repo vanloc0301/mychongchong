@@ -1,0 +1,8 @@
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\ResolveAssemblyReference.cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\MoveFile.Form1.resources
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\MoveFile.Properties.Resources.resources
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\MoveFile.csproj.GenerateResource.Cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\bin\Debug\MoveFile.exe
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\bin\Debug\MoveFile.pdb
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\MoveFile.exe
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\MoveResx\MoveFile\MoveFile\obj\Debug\MoveFile.pdb
