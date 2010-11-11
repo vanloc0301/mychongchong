@@ -226,10 +226,15 @@ namespace Reflector.FileDisassembler
                     {
                         IFieldDeclaration fieldDeclaration2 = translator.TranslateFieldDeclaration(fieldDeclaration);
                         //(((Reflector.CodeModel.Memory.ArrayCreateExpression))((fieldDeclaration).Initializer)).Type
-                        if ((fieldDeclaration).Initializer is Reflector.CodeModel.Memory.ArrayCreateExpression)
+                        if ((fieldDeclaration).Initializer is Reflector.CodeModel.Memory.ArrayCreateExpression) //字段为数组类型并且初始化了值
                         {
                             strnamespace = ((((Reflector.CodeModel.Memory.ArrayCreateExpression)fieldDeclaration.Initializer).Type as Reflector.CodeModel.IType) as ITypeReference).Namespace;
                             strname = ((((Reflector.CodeModel.Memory.ArrayCreateExpression)fieldDeclaration.Initializer).Type as Reflector.CodeModel.IType) as ITypeReference).Name;                           
+                        }
+                        else if (((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration)).FieldType is Reflector.CodeModel.IArrayType)//字段为数组类型无初始化值
+                        {
+                            strnamespace = ((((Reflector.CodeModel.IArrayType)((((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration)).FieldType)))).ElementType as ITypeReference).Namespace;
+                            strname = ((((Reflector.CodeModel.IArrayType)((((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration)).FieldType)))).ElementType as ITypeReference).Name;
                         }
                         else
                         {
