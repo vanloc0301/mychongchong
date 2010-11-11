@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Specialized;
 using System.IO;
@@ -6,6 +6,8 @@ using System.Resources;
 using System.Xml;
 using Reflector.CodeModel;
 using Reflector.CodeModel.Memory;
+using System.Text;
+using System.Reflection;
 
 namespace Reflector.FileDisassembler
 {
@@ -205,13 +207,46 @@ namespace Reflector.FileDisassembler
 				INamespace namespaceItem = new Namespace();
 				namespaceItem.Name = typeDeclaration.Namespace;
 
+                TextFormatter formatter = new TextFormatter();
+				ILanguageWriter writer = language.GetWriter(formatter, configuration);
 				try
 				{
 					if (language.Translate)
 					{
-						typeDeclaration = translator.TranslateTypeDeclaration(typeDeclaration, true, true);
+						typeDeclaration = translator.TranslateTypeDeclaration(typeDeclaration, true, true);                       
 					}
 					namespaceItem.Types.Add(typeDeclaration);
+
+                    
+                    string strnamespace;
+                    string strname;
+                    string strfield;
+                    foreach (IFieldDeclaration fieldDeclaration in typeDeclaration.Fields)
+                    {
+                        IFieldDeclaration fieldDeclaration2 = translator.TranslateFieldDeclaration(fieldDeclaration);
+                        strnamespace =((((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration2)).FieldType as Reflector.CodeModel.IType) as ITypeReference).Namespace;
+                        strname = ((((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration2)).FieldType as Reflector.CodeModel.IType) as ITypeReference).Name;
+                        strfield = fieldDeclaration2.Name;
+                        streamWriter.WriteLine(string.Format("//#hmstart-{0}.{1} {2}#hmend", strnamespace, strname, strfield)); 
+                        //Type t = (((Reflector.CodeModel.Memory.FieldDeclaration)(fieldDeclaration2)).FieldType as Reflector.CodeModel.IType).GetType();
+                        //FieldInfo[] fi = new FieldInfo[]{};
+                        //fi = t.GetFields();
+                        //foreach (PropertyInfo pro in t.GetProperties())
+                        //{ 
+                        //    System.Diagnostics.Debug.Print(pro.ToString()); 
+                        //}
+                        //foreach (MethodInfo method in t.GetMethods())
+                        //{
+                        //    System.Diagnostics.Debug.Print(method.ToString());
+                        //}
+                        //string typeName = null;            
+                        //Reflector.CodeModel.​ITypeReference typeReference = t as Reflector.CodeModel.​ITypeReference;  
+                       
+                        //writer.WriteFieldDeclaration(fieldDeclaration2);
+                    }
+
+
+            
 				}
 				catch (Exception ex)
 				{
@@ -220,8 +255,7 @@ namespace Reflector.FileDisassembler
 					exceptions++;
 				}
 				
-				TextFormatter formatter = new TextFormatter();
-				ILanguageWriter writer = language.GetWriter(formatter, configuration);
+				
 				try
 				{
 					writer.WriteNamespace(namespaceItem);
@@ -256,7 +290,7 @@ namespace Reflector.FileDisassembler
 		{
 			//somehow Path.InvalidPathChars does not include all invalid chars
 			ArrayList invalidPathChars = new ArrayList();
-			invalidPathChars.AddRange(Path.InvalidPathChars);
+			invalidPathChars.AddRange(Path.GetInvalidPathChars());
 			invalidPathChars.Add('^');
 			invalidPathChars.Add('<');
 			invalidPathChars.Add('>');

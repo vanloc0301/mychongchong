@@ -90,216 +90,213 @@ namespace Reflector.FileDisassembler
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(FileDisassemblerWindow));
-			this.lnkHomepage = new System.Windows.Forms.LinkLabel();
-			this.label7 = new System.Windows.Forms.Label();
-			this.groupBox4 = new System.Windows.Forms.GroupBox();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.cbProjectType = new System.Windows.Forms.ComboBox();
-			this.outputDirectoryText = new System.Windows.Forms.TextBox();
-			this.progressBar = new System.Windows.Forms.ProgressBar();
-			this.outputDirectoryLabel = new System.Windows.Forms.Label();
-			this.generateButton = new System.Windows.Forms.Button();
-			this.logTextBox = new System.Windows.Forms.TextBox();
-			this.groupBox4.SuspendLayout();
-			this.panel1.SuspendLayout();
-			this.groupBox1.SuspendLayout();
-			this.SuspendLayout();
-			// 
-			// lnkHomepage
-			// 
-			this.lnkHomepage.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
-			this.lnkHomepage.Location = new System.Drawing.Point(248, 568);
-			this.lnkHomepage.Name = "lnkHomepage";
-			this.lnkHomepage.Size = new System.Drawing.Size(184, 23);
-			this.lnkHomepage.TabIndex = 24;
-			this.lnkHomepage.TabStop = true;
-			this.lnkHomepage.Text = "http://www.denisbauer.com/";
-			this.lnkHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHomepage_LinkClicked);
-			// 
-			// label7
-			// 
-			this.label7.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
-			this.label7.Location = new System.Drawing.Point(16, 568);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(232, 23);
-			this.label7.TabIndex = 23;
-			this.label7.Text = "Copyright 2004-2007 by Denis Bauer, ";
-			this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-			// 
-			// groupBox4
-			// 
-			this.groupBox4.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.groupBox4.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.panel1,
-																					this.groupBox1});
-			this.groupBox4.Location = new System.Drawing.Point(8, 8);
-			this.groupBox4.Name = "groupBox4";
-			this.groupBox4.Size = new System.Drawing.Size(448, 552);
-			this.groupBox4.TabIndex = 22;
-			this.groupBox4.TabStop = false;
-			// 
-			// panel1
-			// 
-			this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.panel1.BackColor = System.Drawing.SystemColors.Window;
-			this.panel1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																				 this.pictureBox1,
-																				 this.label5,
-																				 this.label1});
-			this.panel1.Location = new System.Drawing.Point(4, 8);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(440, 72);
-			this.panel1.TabIndex = 16;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.pictureBox1.Image = ((System.Drawing.Bitmap)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(376, 8);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(56, 56);
-			this.pictureBox1.TabIndex = 2;
-			this.pictureBox1.TabStop = false;
-			// 
-			// label5
-			// 
-			this.label5.Location = new System.Drawing.Point(16, 40);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(376, 23);
-			this.label5.TabIndex = 1;
-			this.label5.Text = "Select an assembly to dump it to the disk";
-			// 
-			// label1
-			// 
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-			this.label1.Location = new System.Drawing.Point(16, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(264, 23);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Reflector FileDisassembler";
-			// 
-			// groupBox1
-			// 
-			this.groupBox1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.groupBox1.Controls.AddRange(new System.Windows.Forms.Control[] {
-																					this.label2,
-																					this.cbProjectType,
-																					this.outputDirectoryText,
-																					this.progressBar,
-																					this.outputDirectoryLabel,
-																					this.generateButton,
-																					this.logTextBox});
-			this.groupBox1.Location = new System.Drawing.Point(8, 88);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(432, 456);
-			this.groupBox1.TabIndex = 25;
-			this.groupBox1.TabStop = false;
-			// 
-			// label2
-			// 
-			this.label2.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.label2.Location = new System.Drawing.Point(216, 16);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(72, 16);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "Project Type:";
-			// 
-			// cbProjectType
-			// 
-			this.cbProjectType.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.cbProjectType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbProjectType.Items.AddRange(new object[] {
-															   "None",
-															   "Class Library",
-															   "Windows Application",
-															   "Console Application"});
-			this.cbProjectType.Location = new System.Drawing.Point(288, 12);
-			this.cbProjectType.Name = "cbProjectType";
-			this.cbProjectType.Size = new System.Drawing.Size(132, 21);
-			this.cbProjectType.TabIndex = 1;
-			// 
-			// outputDirectoryText
-			// 
-			this.outputDirectoryText.Anchor = ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.outputDirectoryText.Location = new System.Drawing.Point(8, 40);
-			this.outputDirectoryText.Name = "outputDirectoryText";
-			this.outputDirectoryText.Size = new System.Drawing.Size(328, 20);
-			this.outputDirectoryText.TabIndex = 0;
-			this.outputDirectoryText.Text = "";
-			this.outputDirectoryText.TextChanged += new System.EventHandler(this.OutputDirectoryText_TextChanged);
-			// 
-			// progressBar
-			// 
-			this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.progressBar.Location = new System.Drawing.Point(8, 424);
-			this.progressBar.Name = "progressBar";
-			this.progressBar.Size = new System.Drawing.Size(416, 23);
-			this.progressBar.TabIndex = 6;
-			this.progressBar.TabStop = false;
-			this.progressBar.Visible = false;
-			// 
-			// outputDirectoryLabel
-			// 
-			this.outputDirectoryLabel.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.outputDirectoryLabel.Location = new System.Drawing.Point(8, 16);
-			this.outputDirectoryLabel.Name = "outputDirectoryLabel";
-			this.outputDirectoryLabel.Size = new System.Drawing.Size(100, 16);
-			this.outputDirectoryLabel.TabIndex = 0;
-			this.outputDirectoryLabel.Text = "&Output Directory:";
-			// 
-			// generateButton
-			// 
-			this.generateButton.Anchor = (System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right);
-			this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.generateButton.Location = new System.Drawing.Point(344, 40);
-			this.generateButton.Name = "generateButton";
-			this.generateButton.Size = new System.Drawing.Size(75, 21);
-			this.generateButton.TabIndex = 2;
-			this.generateButton.Text = "&Generate";
-			this.generateButton.Click += new System.EventHandler(this.GenerateButton_Click);
-			// 
-			// logTextBox
-			// 
-			this.logTextBox.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-				| System.Windows.Forms.AnchorStyles.Left) 
-				| System.Windows.Forms.AnchorStyles.Right);
-			this.logTextBox.Location = new System.Drawing.Point(8, 72);
-			this.logTextBox.MaxLength = 16777216;
-			this.logTextBox.Multiline = true;
-			this.logTextBox.Name = "logTextBox";
-			this.logTextBox.ReadOnly = true;
-			this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.logTextBox.Size = new System.Drawing.Size(416, 344);
-			this.logTextBox.TabIndex = 5;
-			this.logTextBox.Text = "";
-			this.logTextBox.Visible = false;
-			this.logTextBox.WordWrap = false;
-			// 
-			// FileDisassemblerWindow
-			// 
-			this.Controls.AddRange(new System.Windows.Forms.Control[] {
-																		  this.lnkHomepage,
-																		  this.label7,
-																		  this.groupBox4});
-			this.Name = "FileDisassemblerWindow";
-			this.Size = new System.Drawing.Size(464, 592);
-			this.groupBox4.ResumeLayout(false);
-			this.panel1.ResumeLayout(false);
-			this.groupBox1.ResumeLayout(false);
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileDisassemblerWindow));
+            this.lnkHomepage = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbProjectType = new System.Windows.Forms.ComboBox();
+            this.outputDirectoryText = new System.Windows.Forms.TextBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.outputDirectoryLabel = new System.Windows.Forms.Label();
+            this.generateButton = new System.Windows.Forms.Button();
+            this.logTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // lnkHomepage
+            // 
+            this.lnkHomepage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lnkHomepage.Location = new System.Drawing.Point(248, 568);
+            this.lnkHomepage.Name = "lnkHomepage";
+            this.lnkHomepage.Size = new System.Drawing.Size(184, 23);
+            this.lnkHomepage.TabIndex = 24;
+            this.lnkHomepage.TabStop = true;
+            this.lnkHomepage.Text = "http://www.denisbauer.com/";
+            this.lnkHomepage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHomepage_LinkClicked);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Location = new System.Drawing.Point(16, 568);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(232, 23);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Copyright 2004-2007 by Denis Bauer, ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.panel1);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Location = new System.Drawing.Point(8, 8);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(448, 552);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(4, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(440, 72);
+            this.panel1.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(376, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 56);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(16, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(376, 23);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Select an assembly to dump it to the disk";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modify Version";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.cbProjectType);
+            this.groupBox1.Controls.Add(this.outputDirectoryText);
+            this.groupBox1.Controls.Add(this.progressBar);
+            this.groupBox1.Controls.Add(this.outputDirectoryLabel);
+            this.groupBox1.Controls.Add(this.generateButton);
+            this.groupBox1.Controls.Add(this.logTextBox);
+            this.groupBox1.Location = new System.Drawing.Point(8, 88);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(432, 456);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Location = new System.Drawing.Point(216, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Project Type:";
+            // 
+            // cbProjectType
+            // 
+            this.cbProjectType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbProjectType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProjectType.Items.AddRange(new object[] {
+            "None",
+            "Class Library",
+            "Windows Application",
+            "Console Application"});
+            this.cbProjectType.Location = new System.Drawing.Point(288, 12);
+            this.cbProjectType.Name = "cbProjectType";
+            this.cbProjectType.Size = new System.Drawing.Size(132, 20);
+            this.cbProjectType.TabIndex = 1;
+            // 
+            // outputDirectoryText
+            // 
+            this.outputDirectoryText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputDirectoryText.Location = new System.Drawing.Point(8, 40);
+            this.outputDirectoryText.Name = "outputDirectoryText";
+            this.outputDirectoryText.Size = new System.Drawing.Size(328, 21);
+            this.outputDirectoryText.TabIndex = 0;
+            this.outputDirectoryText.TextChanged += new System.EventHandler(this.OutputDirectoryText_TextChanged);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(8, 424);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(416, 23);
+            this.progressBar.TabIndex = 6;
+            this.progressBar.TabStop = false;
+            this.progressBar.Visible = false;
+            // 
+            // outputDirectoryLabel
+            // 
+            this.outputDirectoryLabel.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.outputDirectoryLabel.Location = new System.Drawing.Point(8, 16);
+            this.outputDirectoryLabel.Name = "outputDirectoryLabel";
+            this.outputDirectoryLabel.Size = new System.Drawing.Size(100, 16);
+            this.outputDirectoryLabel.TabIndex = 0;
+            this.outputDirectoryLabel.Text = "&Output Directory:";
+            // 
+            // generateButton
+            // 
+            this.generateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.generateButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.generateButton.Location = new System.Drawing.Point(344, 40);
+            this.generateButton.Name = "generateButton";
+            this.generateButton.Size = new System.Drawing.Size(75, 21);
+            this.generateButton.TabIndex = 2;
+            this.generateButton.Text = "&Generate";
+            this.generateButton.Click += new System.EventHandler(this.GenerateButton_Click);
+            // 
+            // logTextBox
+            // 
+            this.logTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.logTextBox.Location = new System.Drawing.Point(8, 72);
+            this.logTextBox.MaxLength = 16777216;
+            this.logTextBox.Multiline = true;
+            this.logTextBox.Name = "logTextBox";
+            this.logTextBox.ReadOnly = true;
+            this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.logTextBox.Size = new System.Drawing.Size(416, 344);
+            this.logTextBox.TabIndex = 5;
+            this.logTextBox.Visible = false;
+            this.logTextBox.WordWrap = false;
+            // 
+            // FileDisassemblerWindow
+            // 
+            this.Controls.Add(this.lnkHomepage);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.groupBox4);
+            this.Name = "FileDisassemblerWindow";
+            this.Size = new System.Drawing.Size(464, 592);
+            this.groupBox4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
 
 		}
 		#endregion

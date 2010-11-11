@@ -56,5 +56,5 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyDelaySign(false)]
 //DENISB: If you want to recompile, the following line throws an error. Please just remove the reference to my private key
 //or create your own private key with the sn.exe tool
-[assembly: AssemblyKeyFile("..\\..\\..\\DenisBauer.snk")]
+//[assembly: AssemblyKeyFile("..\\..\\..\\DenisBauer.snk")]
 [assembly: AssemblyKeyName("")]
