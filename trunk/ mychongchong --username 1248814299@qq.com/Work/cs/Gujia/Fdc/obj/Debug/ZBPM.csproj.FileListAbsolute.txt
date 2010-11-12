@@ -2,8 +2,6 @@ D:\pg-oa\bin\ZBPM.dll.config
 D:\pg-oa\bin\ZBPM.dll
 D:\pg-oa\bin\ZBPM.pdb
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ResolveAssemblyReference.cache
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\Interop.Map2PicTool.dll
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.csproj.ResolveComReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.BrowserControl.resources
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.FJ.resources
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.FjBb.resources
@@ -13,6 +11,4 @@ D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debu
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\RdlCompile.compiled
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.pdb
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.read.1.tlog
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.read.4.tlog
-D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.write.1.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.csproj.GenerateResource.Cache

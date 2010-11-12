@@ -307,6 +307,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.bt生成标准状态 = new DevExpress.XtraEditors.SimpleButton();
+            this.txt标准状态 = new System.Windows.Forms.TextBox();
             this.chk修改类型修改备注 = new DevExpress.XtraEditors.CheckEdit();
             this.label16 = new System.Windows.Forms.Label();
             this.txt基准容积率 = new DevExpress.XtraEditors.TextEdit();
@@ -3446,6 +3448,8 @@
             // 
             // xtraTabPage4
             // 
+            this.xtraTabPage4.Controls.Add(this.bt生成标准状态);
+            this.xtraTabPage4.Controls.Add(this.txt标准状态);
             this.xtraTabPage4.Controls.Add(this.chk修改类型修改备注);
             this.xtraTabPage4.Controls.Add(this.label16);
             this.xtraTabPage4.Controls.Add(this.txt基准容积率);
@@ -3466,9 +3470,26 @@
             this.xtraTabPage4.Text = "区片信息";
             this.xtraTabPage4.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage4_Paint);
             // 
+            // bt生成标准状态
+            // 
+            this.bt生成标准状态.Location = new System.Drawing.Point(423, 18);
+            this.bt生成标准状态.Name = "bt生成标准状态";
+            this.bt生成标准状态.Size = new System.Drawing.Size(94, 21);
+            this.bt生成标准状态.TabIndex = 170;
+            this.bt生成标准状态.Text = "生成标准状态";
+            this.bt生成标准状态.Click += new System.EventHandler(this.bt生成标准状态_Click);
+            // 
+            // txt标准状态
+            // 
+            this.txt标准状态.Location = new System.Drawing.Point(423, 48);
+            this.txt标准状态.Multiline = true;
+            this.txt标准状态.Name = "txt标准状态";
+            this.txt标准状态.Size = new System.Drawing.Size(238, 73);
+            this.txt标准状态.TabIndex = 169;
+            // 
             // chk修改类型修改备注
             // 
-            this.chk修改类型修改备注.Location = new System.Drawing.Point(183, 482);
+            this.chk修改类型修改备注.Location = new System.Drawing.Point(6, 463);
             this.chk修改类型修改备注.Name = "chk修改类型修改备注";
             this.chk修改类型修改备注.Properties.Caption = "修改类型修改备注";
             this.chk修改类型修改备注.Properties.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
@@ -3478,7 +3499,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(637, 106);
+            this.label16.Location = new System.Drawing.Point(667, 105);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 14);
             this.label16.TabIndex = 167;
@@ -3486,7 +3507,7 @@
             // 
             // txt基准容积率
             // 
-            this.txt基准容积率.Location = new System.Drawing.Point(736, 103);
+            this.txt基准容积率.Location = new System.Drawing.Point(766, 102);
             this.txt基准容积率.Name = "txt基准容积率";
             this.txt基准容积率.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt基准容积率.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -3497,7 +3518,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(651, 63);
+            this.label15.Location = new System.Drawing.Point(681, 62);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 14);
             this.label15.TabIndex = 165;
@@ -3505,7 +3526,7 @@
             // 
             // txt地价区片价
             // 
-            this.txt地价区片价.Location = new System.Drawing.Point(736, 59);
+            this.txt地价区片价.Location = new System.Drawing.Point(766, 58);
             this.txt地价区片价.Name = "txt地价区片价";
             this.txt地价区片价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt地价区片价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -3516,7 +3537,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(665, 20);
+            this.label14.Location = new System.Drawing.Point(695, 19);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 14);
             this.label14.TabIndex = 163;
@@ -3524,7 +3545,7 @@
             // 
             // txt房价区片价
             // 
-            this.txt房价区片价.Location = new System.Drawing.Point(736, 16);
+            this.txt房价区片价.Location = new System.Drawing.Point(766, 15);
             this.txt房价区片价.Name = "txt房价区片价";
             this.txt房价区片价.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txt房价区片价.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -3535,16 +3556,16 @@
             // 
             // txt修改备注
             // 
-            this.txt修改备注.Location = new System.Drawing.Point(251, 51);
+            this.txt修改备注.Location = new System.Drawing.Point(225, 48);
             this.txt修改备注.Multiline = true;
             this.txt修改备注.Name = "txt修改备注";
-            this.txt修改备注.Size = new System.Drawing.Size(254, 75);
+            this.txt修改备注.Size = new System.Drawing.Size(174, 75);
             this.txt修改备注.TabIndex = 161;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 51);
+            this.label13.Location = new System.Drawing.Point(4, 52);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 14);
             this.label13.TabIndex = 159;
@@ -3552,7 +3573,7 @@
             // 
             // cbe修改备注
             // 
-            this.cbe修改备注.Location = new System.Drawing.Point(96, 48);
+            this.cbe修改备注.Location = new System.Drawing.Point(74, 49);
             this.cbe修改备注.Name = "cbe修改备注";
             this.cbe修改备注.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3566,17 +3587,17 @@
             // 
             // txt修改类型
             // 
-            this.txt修改类型.Location = new System.Drawing.Point(251, 16);
+            this.txt修改类型.Location = new System.Drawing.Point(225, 18);
             this.txt修改类型.Name = "txt修改类型";
             this.txt修改类型.Properties.ReadOnly = true;
-            this.txt修改类型.Size = new System.Drawing.Size(254, 21);
+            this.txt修改类型.Size = new System.Drawing.Size(174, 21);
             this.txt修改类型.TabIndex = 157;
             this.txt修改类型.EditValueChanged += new System.EventHandler(this.txt修改类型_EditValueChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 20);
+            this.label12.Location = new System.Drawing.Point(4, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 14);
             this.label12.TabIndex = 156;
@@ -3584,7 +3605,7 @@
             // 
             // cbe修改类型
             // 
-            this.cbe修改类型.Location = new System.Drawing.Point(96, 16);
+            this.cbe修改类型.Location = new System.Drawing.Point(74, 17);
             this.cbe修改类型.Name = "cbe修改类型";
             this.cbe修改类型.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -3603,9 +3624,9 @@
             // 
             // Btn单家独户车房非单家
             // 
-            this.Btn单家独户车房非单家.Location = new System.Drawing.Point(7, 477);
+            this.Btn单家独户车房非单家.Location = new System.Drawing.Point(7, 498);
             this.Btn单家独户车房非单家.Name = "Btn单家独户车房非单家";
-            this.Btn单家独户车房非单家.Size = new System.Drawing.Size(152, 27);
+            this.Btn单家独户车房非单家.Size = new System.Drawing.Size(109, 27);
             this.Btn单家独户车房非单家.TabIndex = 154;
             this.Btn单家独户车房非单家.Text = "生成word";
             this.Btn单家独户车房非单家.Click += new System.EventHandler(this.Btn单家独户_Click);
@@ -7151,5 +7172,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gcyddj备注;
         private DevExpress.XtraGrid.Columns.GridColumn gcyddj标准价格;
         private DevExpress.XtraGrid.Columns.GridColumn gcyddj逆算;
+        private System.Windows.Forms.TextBox txt标准状态;
+        private DevExpress.XtraEditors.SimpleButton bt生成标准状态;
     }
 }
