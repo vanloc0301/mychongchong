@@ -200,7 +200,8 @@
             foreach (GridColumn column in grid.Columns)
             {
                 column.OptionsColumn.AllowSize = true;
-                if (column.Caption.Substring(0, 1).IndexOfAny(StringHelper.ABC) >= 0)
+                //column.Caption.Substring(0, 1).IndexOfAny(StringHelper.ABC) >= 0); 2010.11.12 dev升级后出问题
+                if (!String.IsNullOrEmpty(column.FieldName) && column.FieldName.Substring(0, 1).IndexOfAny(StringHelper.ABC) >= 0)
                 {
                     column.VisibleIndex = -1;
                 }
