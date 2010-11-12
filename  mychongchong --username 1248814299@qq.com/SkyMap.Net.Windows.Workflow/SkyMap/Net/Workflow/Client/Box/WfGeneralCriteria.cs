@@ -96,13 +96,14 @@
             {
                 if (column.FieldName.Equals("sel"))
                 {
-                    column.Caption = "";
+                    column.Caption = " ";                    
                     column.VisibleIndex = 0;
                     column.Width = 20;
                     column.OptionsColumn.AllowFocus = true;
                     column.ColumnEdit = base.rschkSel;
                 }
-                else if (column.Caption.Substring(0, 1).ToUpper().LastIndexOfAny(StringHelper.ABC) >= 0)
+                //else if (column.Caption.Substring(0, 1).ToUpper().LastIndexOfAny(StringHelper.ABC) >= 0) 2010.11.12 因dev升级此代码出现问题，改为如下
+                else if (!String.IsNullOrEmpty(column.FieldName) && column.FieldName.Substring(0, 1).ToUpper().LastIndexOfAny(StringHelper.ABC) >= 0)
                 {
                     column.VisibleIndex = -1;
                 }
@@ -112,6 +113,7 @@
                 }
             }
             base.grid.EndUpdate();
+            //base.grid.Refresh();
         }
 
         public override void Init(CBoxConfig boxConfig)
