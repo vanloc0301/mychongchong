@@ -3516,6 +3516,64 @@ FROM
                 #endregion
 
         }
+
+        private void bt生成标准状态_Click(object sender, EventArgs e)
+        {
+            string Jglxsz = "";
+            int tmpjglx = 0;
+            DataSet ds = (this as IDataForm).DataFormConntroller.DataSource;
+
+            DataTable dtjzfj = ds.Tables["yw_jzfj"].Copy();
+            DataTable dtjglx = ds.Tables["yw_结构类型修正"].Copy();
+            DataTable dtcx = ds.Tables["yw_朝向修正"].Copy();
+            DataTable dtll = ds.Tables["yw_楼龄修正"].Copy();
+            DataTable dtllqk = ds.Tables["yw_临路情况修正"].Copy();
+            DataTable dtjt = ds.Tables["yw_交通修正"].Copy();
+            DataTable dtjzmj = ds.Tables["yw_建筑面积修正"].Copy();
+            DataTable dtlx = ds.Tables["yw_楼型修正"].Copy();
+            DataTable dtgt = ds.Tables["yw_公摊修正"].Copy();
+            DataTable dtwy = ds.Tables["yw_物业管理修正"].Copy();
+            DataTable dtfs = ds.Tables["yw_复式修正"].Copy();
+            DataTable dtdt = ds.Tables["yw_电梯房楼层修正"].Copy();
+            DataTable dtfdt = ds.Tables["yw_无电梯房楼层修正"].Copy();
+            DataTable dtrjl = ds.Tables["yw_容积率修正"].Copy();
+            DataTable dtsz = ds.Tables["yw_电梯修正"].Copy();
+
+            if (dtll.Rows.Count >= 1)
+            {
+                if (Jglxsz.Contains("钢筋混凝土"))
+                {
+                    tmpjglx = 1;
+                }
+                else if (Jglxsz.Contains("混合"))
+                {
+                    tmpjglx = 2;
+                }
+                else if (Jglxsz.Contains("转木"))
+                {
+                    tmpjglx = 3;
+                }
+                else if (Jglxsz.Contains("其它"))
+                {
+                    tmpjglx = 4;
+                }
+            }
+
+            foreach (DataRow dr in dtll.Rows)
+            {
+                try
+                {
+                    if (int.Parse(dr["结构类型"].ToString()) != tmpjglx)
+                    {
+                        dr.Delete();
+                    }
+                }
+                catch
+                {
+                }
+            }
+            dtll.AcceptChanges();
+        }
     }
 
 }
