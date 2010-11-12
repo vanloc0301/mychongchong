@@ -180,9 +180,9 @@
             // 
             this.marqueeProgressBarControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.marqueeProgressBarControl1.EditValue = "";
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 268);
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(0, 247);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(466, 14);
+            this.marqueeProgressBarControl1.Size = new System.Drawing.Size(460, 14);
             this.marqueeProgressBarControl1.TabIndex = 8;
             // 
             // pClose
@@ -208,7 +208,7 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::Properties.Resources.评估管理软件登录;
             this.CancelButton = this.btCancel;
-            this.ClientSize = new System.Drawing.Size(466, 282);
+            this.ClientSize = new System.Drawing.Size(460, 261);
             this.Controls.Add(this.pClose);
             this.Controls.Add(this.marqueeProgressBarControl1);
             this.Controls.Add(this.btCancel);
