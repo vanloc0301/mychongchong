@@ -3511,9 +3511,10 @@ FROM
                         }
                     }
                 }
-            }
+           
 
                 #endregion
+            }
 
         }
 
@@ -3521,6 +3522,7 @@ FROM
         {
             string Jglxsz = "";
             int tmpjglx = 0;
+            StringBuilder sb = new StringBuilder();
             DataSet ds = (this as IDataForm).DataFormConntroller.DataSource;
 
             DataTable dtjzfj = ds.Tables["yw_jzfj"].Copy();
@@ -3538,7 +3540,52 @@ FROM
             DataTable dtfdt = ds.Tables["yw_无电梯房楼层修正"].Copy();
             DataTable dtrjl = ds.Tables["yw_容积率修正"].Copy();
             DataTable dtsz = ds.Tables["yw_电梯修正"].Copy();
+            DataTable tmpdt;
+            #region 
+            string tmpjglxbz, tmpcxbz, tmpllbz, tmpllqkbz, tmpjzmjbz, tmpjtbz, tmprjlbz, tmplxbz, tmpwybz, tmpfsbz;
+            string tmpname;
+            int isearch=0;
+            if (dtjzfj.Rows.Count == 1)
+            {
+                DataRow dr = dtjzfj.Rows[0];
+                tmpjglxbz = dr["结构类型备注"] == DBNull.Value? "":dr["结构类型备注"].ToString();
+                tmpcxbz = dr["朝向修正备注"].ToString() ;
+                tmpllbz = dr["楼龄修正备注"].ToString();
+                tmpllqkbz = dr["临路情况备注"].ToString();
+                tmpjzmjbz = dr["建筑面积备注"].ToString();
+                tmpjtbz = dr["交通修正备注"].ToString();
+                tmprjlbz = "";//注:容积率没有备注
+                tmplxbz = dr["楼型修正备注"].ToString();
+                tmpwybz = dr["物业管理备注"].ToString();
+                tmpfsbz = dr["复式修正备注"].ToString();
 
+                tmpdt = dtjglx;
+                isearch = 0;
+                tmpname = GetBzzt(tmpdt, isearch);
+                if (tmpname == "no")
+                {
+                    Jglxsz = GetJglx(tmpjglxbz);                    
+                }
+                else
+                {
+                    Jglxsz = GetJglx(tmpname); 
+                }
+                sb.Append(string.Format("结构类型:{0}", Jglxsz));
+
+                //朝向
+                tmpdt = dtcx;
+                isearch = 0;
+                tmpname = GetBzzt(tmpdt, isearch);
+                if (tmpname == "no")
+                {
+
+                }
+                else
+                {
+                }
+
+            }
+            #endregion
             if (dtll.Rows.Count >= 1)
             {
                 if (Jglxsz.Contains("钢筋混凝土"))
@@ -3549,7 +3596,7 @@ FROM
                 {
                     tmpjglx = 2;
                 }
-                else if (Jglxsz.Contains("转木"))
+                else if (Jglxsz.Contains("砖木"))
                 {
                     tmpjglx = 3;
                 }
@@ -3557,22 +3604,78 @@ FROM
                 {
                     tmpjglx = 4;
                 }
-            }
-
-            foreach (DataRow dr in dtll.Rows)
-            {
-                try
+                foreach (DataRow dr in dtll.Rows)
                 {
-                    if (int.Parse(dr["结构类型"].ToString()) != tmpjglx)
+                    try
                     {
-                        dr.Delete();
+                        if (int.Parse(dr["结构类型"].ToString()) != tmpjglx)
+                        {
+                            dr.Delete();
+                        }
+                    }
+                    catch
+                    {
                     }
                 }
-                catch
+                dtll.AcceptChanges();
+            }
+
+         
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tmpjglxbz"></param>
+        /// <returns></returns>
+        private static string GetJglx( string tmpjglxbz)
+        {
+            string Jglxsz = "";
+            if (tmpjglxbz.IndexOf("钢筋") >= 0)
+            {
+                Jglxsz = "钢筋混凝土";
+            }
+            else if (tmpjglxbz.IndexOf("混合") >= 0)
+            {
+                Jglxsz = "混合";
+            }
+            else if (tmpjglxbz.IndexOf("转木") >= 0)
+            {
+                Jglxsz = "转木";
+            }
+            else if (tmpjglxbz.IndexOf("其它") >= 0)
+            {
+                Jglxsz = "其它";
+            }
+            else
+            {
+                MessageBox.Show("请检查结构类型!", "提醒:");
+            }
+            return Jglxsz;
+        }
+
+        private  string GetBzzt(DataTable tmpdt, int isearch)
+        {
+            string tmpname;
+            if (tmpdt.Rows.Count == 1)
+            {
+                foreach (DataColumn dc in tmpdt.Columns)
                 {
+                    if (tmpdt.Rows[0][dc].ToString() == isearch.ToString())
+                    {
+                        tmpname = dc.ColumnName.ToString();
+                        return tmpname;
+                    }
                 }
             }
-            dtll.AcceptChanges();
+            else
+            {
+                tmpname = "no";
+                return tmpname;
+            }
+            return null;
+           
         }
     }
 

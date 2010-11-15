@@ -5,6 +5,7 @@
     <StartProgram>D:\pg-oa\bin\评估业务管理系统.exe</StartProgram>
     <StartWorkingDirectory>
     </StartWorkingDirectory>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
   </PropertyGroup>
   <PropertyGroup>
     <ReferencePath>
