@@ -3,3 +3,5 @@ D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Debug\bin\Ex
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\ExcelOper\obj\Debug\ResolveAssemblyReference.cache
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\ExcelOper\obj\Debug\ExcelOper.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\ExcelOper\obj\Debug\ExcelOper.pdb
+d:\pg-oa\bin\ExcelOper.dll
+d:\pg-oa\bin\ExcelOper.pdb

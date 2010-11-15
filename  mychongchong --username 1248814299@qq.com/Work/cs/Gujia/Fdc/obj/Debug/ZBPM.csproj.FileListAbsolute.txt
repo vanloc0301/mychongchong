@@ -11,4 +11,6 @@ D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debu
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\RdlCompile.compiled
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.dll
 D:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.pdb
-d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\ZBPM.csproj.GenerateResource.Cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.read.1.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.read.4.tlog
+d:\我的文档\Reflector\Disassembler\AutoUpdate\iwo\Work\cs\Gujia\Fdc\obj\Debug\GenerateResource-ResGen.write.1.tlog
