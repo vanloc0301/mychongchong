@@ -3629,10 +3629,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        if (!tmpllbz.Contains("一致"))
-                        {
-                            sb.Append(string.Format("楼龄:{0};", GetBz(tmpllbz)));
-                        }
+                        //if (!tmpllbz.Contains("一致"))
+                        //{
+                        //    sb.Append(string.Format("楼龄:{0};", GetBz(tmpllbz)));
+                        //}
                     }
                     else
                     {
@@ -3642,7 +3642,7 @@ FROM
                 }
                 else
                 {
-                    sb.Append(string.Format("楼龄:{0};", tmpllbz));
+                    //sb.Append(string.Format("楼龄:{0};", tmpllbz));
                 }
                 #endregion
                 #region 临路情况
