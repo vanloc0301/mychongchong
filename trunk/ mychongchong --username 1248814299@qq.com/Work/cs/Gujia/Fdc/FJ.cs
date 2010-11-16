@@ -3545,6 +3545,7 @@ FROM
             string tmpjglxbz, tmpcxbz, tmpllbz, tmpllqkbz, tmpjzmjbz, tmpjtbz, tmprjlbz, tmplxbz, tmpwybz, tmpfsbz;
             string tmpname;
             int isearch = 0;
+            this.Save();
             if (dtjzfj.Rows.Count == 1)
             {
                 DataRow dr = dtjzfj.Rows[0];
@@ -3579,7 +3580,10 @@ FROM
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("朝向:{0};", GetBz(tmpcxbz)));
+                    if (!tmpcxbz.Contains("一致"))
+                    {
+                        sb.Append(string.Format("朝向:{0};", GetBz(tmpcxbz)));
+                    }
                 }
                 else
                 {
@@ -3625,7 +3629,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("楼龄:{0};", GetBz(tmpllbz)));
+                        if (!tmpllbz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("楼龄:{0};", GetBz(tmpllbz)));
+                        }
                     }
                     else
                     {
@@ -3644,14 +3651,16 @@ FROM
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("临路情况:{0};", GetBz(tmpllqkbz)));
+                    if (!tmpllqkbz.Contains("一致"))
+                    {
+                        sb.Append(string.Format("临路情况:{0};", GetBz(tmpllqkbz)));
+                    }
                 }
                 else
                 {
                     sb.Append(string.Format("临路情况:{0};", tmpname));
                 }
                 #endregion
-                this.Save();
 
                 if (cbeType.Text.ToString() == "单家独户")
                 {
@@ -3661,7 +3670,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("交通:{0};", GetBz(tmpjtbz)));
+                        if (!tmpjtbz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("交通:{0};", GetBz(tmpjtbz)));
+                        }
                     }
                     else
                     {
@@ -3674,7 +3686,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("容积率:{0};", tmprjlbz));
+                        //if (!tmprjlbz.Contains("一致"))
+                        //{
+                        //    sb.Append(string.Format("容积率:{0};", tmprjlbz));
+                        //}
                     }
                     else
                     {
@@ -3690,14 +3705,16 @@ FROM
                     tmpname = GetBzztAll(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("建筑面积:{0};", GetBz(tmpjzmjbz)));
+                        if (!tmpjzmjbz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("建筑面积:{0};", GetBz(tmpjzmjbz)));
+                        }
                     }
                     else
                     {
                         sb.Append(string.Format("建筑面积:{0};", tmpname.EndsWith(",") ? tmpname.Substring(0, tmpname.Length - 1) : tmpname));
                     }
                     #endregion
-
                     #region 有无电梯
                     tmpdt = dtsz;
                     isearch = 0;
@@ -3717,7 +3734,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("楼型:{0};", GetBz(tmplxbz)));
+                        if (!tmplxbz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("楼型:{0};", GetBz(tmplxbz)));
+                        }
                     }
                     else
                     {
@@ -3743,7 +3763,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("{0};", GetBz(tmpwybz)));
+                        if (!tmpwybz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("{0};", GetBz(tmpwybz)));
+                        }
                     }
                     else
                     {
@@ -3756,7 +3779,10 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("{0};", GetBz(tmpfsbz)));
+                        if (!tmpfsbz.Contains("一致"))
+                        {
+                            sb.Append(string.Format("{0};", GetBz(tmpfsbz)));
+                        }
                     }
                     else
                     {
@@ -3764,8 +3790,8 @@ FROM
                     }
                     #endregion
                 }
-
-
+                txt标准状态.Text = sb.ToString();
+                this.Save();
             }
             #endregion
 
@@ -3778,13 +3804,14 @@ FROM
             string str = "";
             if (tmp.Contains("均为") && tmp.Contains("故修正系数为0"))
             {
-                str = tmp.Substring(tmp.IndexOf("均为") + 2, tmp.IndexOf("故修正系数为0") - tmp.IndexOf("均为") - 1);
-                return str;
+                str = tmp.Substring(tmp.IndexOf("均为") + 2, tmp.IndexOf("故修正系数为0") - tmp.IndexOf("均为") - 3);
             }
             else
             {
-                return tmp;
+                str = tmp;
             }
+            str = str.EndsWith("。") ? str.Substring(0, str.Length - 1) : str;
+            return str;
         }
 
         /// <summary>
