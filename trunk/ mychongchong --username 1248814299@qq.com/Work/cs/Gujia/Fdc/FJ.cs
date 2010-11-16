@@ -3651,110 +3651,121 @@ FROM
                     sb.Append(string.Format("临路情况:{0};", tmpname));
                 }
                 #endregion
-                #region 交通修正
-                tmpdt = dtjt;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
+                this.Save();
+
+                if (cbeType.Text.ToString() == "单家独户")
                 {
-                    sb.Append(string.Format("交通:{0};", GetBz(tmpjtbz)));
+                    #region 交通修正
+                    tmpdt = dtjt;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("交通:{0};", GetBz(tmpjtbz)));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("交通:{0};", tmpname));
+                    }
+                    #endregion
+                    #region 容积率
+                    tmpdt = dtrjl;
+                    isearch = 100;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("容积率:{0};", tmprjlbz));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("容积率:{0};", tmpname.Replace("-", ".")));
+                    }
+                    #endregion
                 }
-                else
+                else if (cbeType.Text.ToString() == "非单家独户")
                 {
-                    sb.Append(string.Format("交通:{0};", tmpname));
+                    #region 建筑面积
+                    tmpdt = dtjzmj;
+                    isearch = 0;
+                    tmpname = GetBzztAll(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("建筑面积:{0};", GetBz(tmpjzmjbz)));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("建筑面积:{0};", tmpname.EndsWith(",") ? tmpname.Substring(0, tmpname.Length - 1) : tmpname));
+                    }
+                    #endregion
+
+                    #region 有无电梯
+                    tmpdt = dtsz;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        //sb.Append(string.Format("电梯:{0};",""));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("{0};", tmpname));
+                    }
+                    #endregion
+                    #region 楼型
+                    tmpdt = dtlx;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("楼型:{0};", GetBz(tmplxbz)));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("楼型:{0};", tmpname));
+                    }
+                    #endregion
+                    #region 公摊
+                    tmpdt = dtgt;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        //sb.Append(string.Format("公摊:{0};",""));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("{0};", tmpname));
+                    }
+                    #endregion
+                    #region 物业
+                    tmpdt = dtwy;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("{0};", GetBz(tmpwybz)));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("{0};", tmpname));
+                    }
+                    #endregion
+                    #region 复式
+                    tmpdt = dtfs;
+                    isearch = 0;
+                    tmpname = GetBzzt(tmpdt, isearch);
+                    if (tmpname == "no")
+                    {
+                        sb.Append(string.Format("{0};", GetBz(tmpfsbz)));
+                    }
+                    else
+                    {
+                        sb.Append(string.Format("{0};", tmpname));
+                    }
+                    #endregion
                 }
-                #endregion
-                #region 容积率
-                tmpdt = dtrjl;
-                isearch = 100;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    sb.Append(string.Format("容积率:{0};", tmprjlbz));
-                }
-                else
-                {
-                    sb.Append(string.Format("容积率:{0};", tmpname.Replace("-", ".")));
-                }
-                #endregion
-                #region 建筑面积
-                tmpdt = dtjzmj;
-                isearch = 0;
-                tmpname = GetBzztAll(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    sb.Append(string.Format("建筑面积:{0};", GetBz(tmpjzmjbz)));
-                }
-                else
-                {
-                    sb.Append(string.Format("建筑面积:{0};", tmpname.EndsWith(",")?tmpname.Substring(0,tmpname.Length-1):tmpname));
-                }
-                #endregion
-                #region 有无电梯
-                tmpdt = dtsz;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    //sb.Append(string.Format("电梯:{0};",""));
-                }
-                else
-                {
-                    sb.Append(string.Format("{0};", tmpname));
-                }
-                #endregion
-                #region 楼型
-                tmpdt = dtlx;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    sb.Append(string.Format("楼型:{0};", GetBz(tmplxbz)));
-                }
-                else
-                {
-                    sb.Append(string.Format("楼型:{0};", tmpname));
-                }
-                #endregion
-                #region 公摊
-                tmpdt = dtgt;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    //sb.Append(string.Format("公摊:{0};",""));
-                }
-                else
-                {
-                    sb.Append(string.Format("{0};", tmpname));
-                }
-                #endregion
-                #region 物业
-                tmpdt = dtwy;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    sb.Append(string.Format("{0};", GetBz(tmpwybz)));
-                }
-                else
-                {
-                    sb.Append(string.Format("{0};", tmpname));
-                }
-                #endregion
-                #region 复式
-                tmpdt = dtfs;
-                isearch = 0;
-                tmpname = GetBzzt(tmpdt, isearch);
-                if (tmpname == "no")
-                {
-                    sb.Append(string.Format("{0};", GetBz(tmpfsbz)));
-                }
-                else
-                {
-                    sb.Append(string.Format("{0};", tmpname));
-                }
-                #endregion
+
+
             }
             #endregion
 
@@ -3764,10 +3775,10 @@ FROM
 
         private string GetBz(string tmp)
         {
-            string str="";
+            string str = "";
             if (tmp.Contains("均为") && tmp.Contains("故修正系数为0"))
             {
-                str = tmp.Substring(tmp.IndexOf("均为"), tmp.IndexOf("故修正系数为0") - tmp.IndexOf("均为") - 1);
+                str = tmp.Substring(tmp.IndexOf("均为") + 2, tmp.IndexOf("故修正系数为0") - tmp.IndexOf("均为") - 1);
                 return str;
             }
             else
