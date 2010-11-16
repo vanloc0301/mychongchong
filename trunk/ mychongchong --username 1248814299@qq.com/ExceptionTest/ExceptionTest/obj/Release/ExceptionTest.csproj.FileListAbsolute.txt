@@ -1,0 +1,7 @@
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\bin\Release\ExceptionTest.exe
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\bin\Release\ExceptionTest.pdb
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\obj\Release\ResolveAssemblyReference.cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\obj\Release\ExceptionTest.Properties.Resources.resources
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\obj\Release\ExceptionTest.csproj.GenerateResource.Cache
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\obj\Release\ExceptionTest.exe
+d:\我的文档\Reflector\Disassembler\AutoUpdate\wc\ExceptionTest\ExceptionTest\obj\Release\ExceptionTest.pdb
