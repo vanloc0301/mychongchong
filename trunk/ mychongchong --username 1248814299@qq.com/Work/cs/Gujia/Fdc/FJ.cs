@@ -3511,7 +3511,7 @@ FROM
                         }
                     }
                 }
-           
+
 
                 #endregion
             }
@@ -3541,15 +3541,15 @@ FROM
             DataTable dtrjl = ds.Tables["yw_容积率修正"].Copy();
             DataTable dtsz = ds.Tables["yw_电梯修正"].Copy();
             DataTable tmpdt;
-            #region 
+            #region
             string tmpjglxbz, tmpcxbz, tmpllbz, tmpllqkbz, tmpjzmjbz, tmpjtbz, tmprjlbz, tmplxbz, tmpwybz, tmpfsbz;
             string tmpname;
-            int isearch=0;
+            int isearch = 0;
             if (dtjzfj.Rows.Count == 1)
             {
                 DataRow dr = dtjzfj.Rows[0];
-                tmpjglxbz = dr["结构类型备注"] == DBNull.Value? "":dr["结构类型备注"].ToString();
-                tmpcxbz = dr["朝向修正备注"].ToString() ;
+                tmpjglxbz = dr["结构类型备注"] == DBNull.Value ? "" : dr["结构类型备注"].ToString();
+                tmpcxbz = dr["朝向修正备注"].ToString();
                 tmpllbz = dr["楼龄修正备注"].ToString();
                 tmpllqkbz = dr["临路情况备注"].ToString();
                 tmpjzmjbz = dr["建筑面积备注"].ToString();
@@ -3559,34 +3559,34 @@ FROM
                 tmpwybz = dr["物业管理备注"].ToString();
                 tmpfsbz = dr["复式修正备注"].ToString();
 
-#region 结构类型
+                #region 结构类型
                 tmpdt = dtjglx;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    Jglxsz = GetJglx(tmpjglxbz);                    
+                    Jglxsz = GetJglx(tmpjglxbz);
                 }
                 else
                 {
-                    Jglxsz = GetJglx(tmpname); 
+                    Jglxsz = GetJglx(tmpname);
                 }
                 sb.Append(string.Format("结构类型:{0};", Jglxsz));
-#endregion
-#region 朝向
+                #endregion
+                #region 朝向
                 tmpdt = dtcx;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("朝向:{0};", tmpcxbz));
+                    sb.Append(string.Format("朝向:{0};", GetBz(tmpcxbz)));
                 }
                 else
                 {
-                    sb.Append(string.Format("朝向:{0};",tmpname));
+                    sb.Append(string.Format("朝向:{0};", tmpname));
                 }
-#endregion
-#region 楼龄
+                #endregion
+                #region 楼龄
                 if (dtll.Rows.Count >= 1)
                 {
                     if (Jglxsz.Contains("钢筋混凝土"))
@@ -3625,7 +3625,7 @@ FROM
                     tmpname = GetBzzt(tmpdt, isearch);
                     if (tmpname == "no")
                     {
-                        sb.Append(string.Format("楼龄:{0};", tmpllbz));
+                        sb.Append(string.Format("楼龄:{0};", GetBz(tmpllbz)));
                     }
                     else
                     {
@@ -3637,60 +3637,60 @@ FROM
                 {
                     sb.Append(string.Format("楼龄:{0};", tmpllbz));
                 }
-#endregion
-#region 临路情况
+                #endregion
+                #region 临路情况
                 tmpdt = dtllqk;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("临路情况:{0};", tmpllqkbz));
+                    sb.Append(string.Format("临路情况:{0};", GetBz(tmpllqkbz)));
                 }
                 else
                 {
                     sb.Append(string.Format("临路情况:{0};", tmpname));
                 }
-#endregion
-#region 交通修正
+                #endregion
+                #region 交通修正
                 tmpdt = dtjt;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("交通:{0};", tmpjtbz));
+                    sb.Append(string.Format("交通:{0};", GetBz(tmpjtbz)));
                 }
                 else
                 {
                     sb.Append(string.Format("交通:{0};", tmpname));
                 }
-#endregion
-#region 容积率
+                #endregion
+                #region 容积率
                 tmpdt = dtrjl;
                 isearch = 100;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("容积率:{0};",tmprjlbz));
+                    sb.Append(string.Format("容积率:{0};", tmprjlbz));
                 }
                 else
                 {
-                    sb.Append(string.Format("容积率:{0};", tmpname.Replace("-",".")));
+                    sb.Append(string.Format("容积率:{0};", tmpname.Replace("-", ".")));
                 }
-#endregion
-#region 建筑面积
-                tmpdt = dtjzmj ;
+                #endregion
+                #region 建筑面积
+                tmpdt = dtjzmj;
                 isearch = 0;
                 tmpname = GetBzztAll(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("建筑面积:{0};", tmpjzmjbz));
+                    sb.Append(string.Format("建筑面积:{0};", GetBz(tmpjzmjbz)));
                 }
                 else
                 {
-                    sb.Append(string.Format("建筑面积:{0};", tmpname));
+                    sb.Append(string.Format("建筑面积:{0};", tmpname.EndsWith(",")?tmpname.Substring(0,tmpname.Length-1):tmpname));
                 }
-#endregion
-#region 有无电梯
+                #endregion
+                #region 有无电梯
                 tmpdt = dtsz;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
@@ -3702,21 +3702,21 @@ FROM
                 {
                     sb.Append(string.Format("{0};", tmpname));
                 }
-#endregion
-#region 楼型
+                #endregion
+                #region 楼型
                 tmpdt = dtlx;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("楼型:{0};",tmplxbz));
+                    sb.Append(string.Format("楼型:{0};", GetBz(tmplxbz)));
                 }
                 else
                 {
                     sb.Append(string.Format("楼型:{0};", tmpname));
                 }
-#endregion
-#region 公摊
+                #endregion
+                #region 公摊
                 tmpdt = dtgt;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
@@ -3728,47 +3728,60 @@ FROM
                 {
                     sb.Append(string.Format("{0};", tmpname));
                 }
-#endregion
-#region 物业
+                #endregion
+                #region 物业
                 tmpdt = dtwy;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("{0};", tmpwybz));
+                    sb.Append(string.Format("{0};", GetBz(tmpwybz)));
                 }
                 else
                 {
                     sb.Append(string.Format("{0};", tmpname));
                 }
-#endregion
-#region 复式
+                #endregion
+                #region 复式
                 tmpdt = dtfs;
                 isearch = 0;
                 tmpname = GetBzzt(tmpdt, isearch);
                 if (tmpname == "no")
                 {
-                    sb.Append(string.Format("{0};", tmpfsbz));
+                    sb.Append(string.Format("{0};", GetBz(tmpfsbz)));
                 }
                 else
                 {
                     sb.Append(string.Format("{0};", tmpname));
                 }
-#endregion
+                #endregion
             }
             #endregion
-          
 
-         
+
+
         }
 
+        private string GetBz(string tmp)
+        {
+            string str="";
+            if (tmp.Contains("均为") && tmp.Contains("故修正系数为0"))
+            {
+                str = tmp.Substring(tmp.IndexOf("均为"), tmp.IndexOf("故修正系数为0") - tmp.IndexOf("均为") - 1);
+                return str;
+            }
+            else
+            {
+                return tmp;
+            }
+        }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="tmpjglxbz"></param>
         /// <returns></returns>
-        private static string GetJglx( string tmpjglxbz)
+        private static string GetJglx(string tmpjglxbz)
         {
             string Jglxsz = "";
             if (tmpjglxbz.IndexOf("钢筋") >= 0)
@@ -3794,7 +3807,7 @@ FROM
             return Jglxsz;
         }
 
-        private  string GetBzzt(DataTable tmpdt, int isearch)
+        private string GetBzzt(DataTable tmpdt, int isearch)
         {
             string tmpname;
             if (tmpdt.Rows.Count == 1)
@@ -3814,19 +3827,19 @@ FROM
                 return tmpname;
             }
             return null;
-           
+
         }
 
         private string GetBzztAll(DataTable tmpdt, int isearch)
         {
-            string tmpname="";
+            string tmpname = "";
             if (tmpdt.Rows.Count == 1)
             {
                 foreach (DataColumn dc in tmpdt.Columns)
                 {
                     if (tmpdt.Rows[0][dc].ToString() == isearch.ToString())
                     {
-                        tmpname = tmpname + dc.ColumnName.ToString() + ",";                        
+                        tmpname = tmpname + dc.ColumnName.ToString() + ",";
                     }
                 }
                 return tmpname;
