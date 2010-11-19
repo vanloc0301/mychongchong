@@ -289,10 +289,14 @@
             this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
             this.txtSyf可出租时间 = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage假设开发法_商品房 = new DevExpress.XtraTab.XtraTabPage();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.txtJsfspf楼面地价 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl57 = new DevExpress.XtraEditors.LabelControl();
+            this.rgroup_jsfspf = new DevExpress.XtraEditors.RadioGroup();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.sbJsfspfSave = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
             this.txtJsfspf房地产单价 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
             this.fMFormulaTemplateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fMFCMarketComporisonApproachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fM_FCMarketComporisonApproachTableAdapter1 = new AppraiseMethod.MarketDataSetTableAdapters.FM_FCMarketComporisonApproachTableAdapter();
@@ -446,6 +450,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).BeginInit();
             this.xtraTabPage假设开发法_商品房.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf楼面地价.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgroup_jsfspf.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf房地产单价.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFormulaTemplateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFCMarketComporisonApproachBindingSource)).BeginInit();
@@ -2915,17 +2923,63 @@
             // 
             // xtraTabPage假设开发法_商品房
             // 
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.simpleButton8);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.sbJsfspfSave);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.labelControl56);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.txtJsfspf房地产单价);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.groupControl4);
             this.xtraTabPage假设开发法_商品房.Name = "xtraTabPage假设开发法_商品房";
             this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage假设开发法_商品房.Text = "假设开发法-商品房";
             // 
+            // groupControl4
+            // 
+            this.groupControl4.Controls.Add(this.txtJsfspf楼面地价);
+            this.groupControl4.Controls.Add(this.labelControl57);
+            this.groupControl4.Controls.Add(this.rgroup_jsfspf);
+            this.groupControl4.Controls.Add(this.simpleButton8);
+            this.groupControl4.Controls.Add(this.sbJsfspfSave);
+            this.groupControl4.Controls.Add(this.txtJsfspf房地产单价);
+            this.groupControl4.Controls.Add(this.labelControl56);
+            this.groupControl4.Location = new System.Drawing.Point(126, 77);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(498, 163);
+            this.groupControl4.TabIndex = 57;
+            // 
+            // txtJsfspf楼面地价
+            // 
+            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(328, 127);
+            this.txtJsfspf楼面地价.Name = "txtJsfspf楼面地价";
+            this.txtJsfspf楼面地价.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtJsfspf楼面地价.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.txtJsfspf楼面地价.Properties.Appearance.Options.UseBackColor = true;
+            this.txtJsfspf楼面地价.Properties.Appearance.Options.UseForeColor = true;
+            this.txtJsfspf楼面地价.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtJsfspf楼面地价.Size = new System.Drawing.Size(100, 19);
+            this.txtJsfspf楼面地价.TabIndex = 58;
+            // 
+            // labelControl57
+            // 
+            this.labelControl57.Location = new System.Drawing.Point(262, 130);
+            this.labelControl57.Name = "labelControl57";
+            this.labelControl57.Size = new System.Drawing.Size(60, 14);
+            this.labelControl57.TabIndex = 59;
+            this.labelControl57.Text = "楼面地价：";
+            // 
+            // rgroup_jsfspf
+            // 
+            this.rgroup_jsfspf.Location = new System.Drawing.Point(9, 26);
+            this.rgroup_jsfspf.Name = "rgroup_jsfspf";
+            this.rgroup_jsfspf.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "城区7层及以下"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "城区8-18层"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "城区19层及以上"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区7层及以下"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区8-18层"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区19层及以上")});
+            this.rgroup_jsfspf.Size = new System.Drawing.Size(260, 96);
+            this.rgroup_jsfspf.TabIndex = 57;
+            this.rgroup_jsfspf.SelectedIndexChanged += new System.EventHandler(this.rgroup_jsfspf_SelectedIndexChanged);
+            // 
             // simpleButton8
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(406, 22);
+            this.simpleButton8.Location = new System.Drawing.Point(380, 67);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(104, 23);
             this.simpleButton8.TabIndex = 55;
@@ -2934,27 +2988,27 @@
             // 
             // sbJsfspfSave
             // 
-            this.sbJsfspfSave.Location = new System.Drawing.Point(252, 22);
+            this.sbJsfspfSave.Location = new System.Drawing.Point(380, 26);
             this.sbJsfspfSave.Name = "sbJsfspfSave";
             this.sbJsfspfSave.Size = new System.Drawing.Size(104, 23);
             this.sbJsfspfSave.TabIndex = 54;
             this.sbJsfspfSave.Text = "计算";
             this.sbJsfspfSave.Click += new System.EventHandler(this.sbJsfspfSave_Click);
             // 
+            // txtJsfspf房地产单价
+            // 
+            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(91, 127);
+            this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
+            this.txtJsfspf房地产单价.Size = new System.Drawing.Size(100, 21);
+            this.txtJsfspf房地产单价.TabIndex = 52;
+            // 
             // labelControl56
             // 
-            this.labelControl56.Location = new System.Drawing.Point(39, 27);
+            this.labelControl56.Location = new System.Drawing.Point(13, 130);
             this.labelControl56.Name = "labelControl56";
             this.labelControl56.Size = new System.Drawing.Size(72, 14);
             this.labelControl56.TabIndex = 53;
             this.labelControl56.Text = "房地产单价：";
-            // 
-            // txtJsfspf房地产单价
-            // 
-            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(117, 24);
-            this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
-            this.txtJsfspf房地产单价.Size = new System.Drawing.Size(100, 21);
-            this.txtJsfspf房地产单价.TabIndex = 52;
             // 
             // fMFormulaTemplateBindingSource
             // 
@@ -3333,7 +3387,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).EndInit();
             this.xtraTabPage假设开发法_商品房.ResumeLayout(false);
-            this.xtraTabPage假设开发法_商品房.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf楼面地价.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rgroup_jsfspf.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf房地产单价.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFormulaTemplateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFCMarketComporisonApproachBindingSource)).EndInit();
@@ -3661,5 +3719,9 @@
         private DevExpress.XtraEditors.SimpleButton sbJsfspfSave;
         private DevExpress.XtraEditors.LabelControl labelControl56;
         private DevExpress.XtraEditors.TextEdit txtJsfspf房地产单价;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.RadioGroup rgroup_jsfspf;
+        private DevExpress.XtraEditors.TextEdit txtJsfspf楼面地价;
+        private DevExpress.XtraEditors.LabelControl labelControl57;
     }
 }

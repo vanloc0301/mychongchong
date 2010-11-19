@@ -2454,7 +2454,53 @@ namespace AppraiseMethod
 
         private void sbJsfspfSave_Click(object sender, EventArgs e)
         {
+            //if (rgroup_jsfspf.SelectedIndex)
+            //{
+            string strreturn = "";
+            string tmpstr = rgroup_jsfspf.Properties.Items[rgroup_jsfspf.SelectedIndex].Description.ToString();
+
+
             JsfspfMethod(true, "假设开发法-商品房");
+            try
+            {
+                if (tmpstr == "城区7层及以下")
+                {
+                    strreturn = FormulaEngine.ht["假商城区7层及以下楼面地价"].ToString();
+                }
+                else if (tmpstr == "城区8-18层")
+                {
+                    strreturn = FormulaEngine.ht["假商城区8至18层楼面地价"].ToString();
+                }
+                else if (tmpstr == "城区19层及以上")
+                {
+                    strreturn = FormulaEngine.ht["假商城区19层及以上楼面地价"].ToString();
+                }
+                else if (tmpstr == "镇区7层及以下")
+                {
+                    strreturn = FormulaEngine.ht["假商镇区7层及以下楼面地价"].ToString();
+                }
+                else if (tmpstr == "镇区8-18层")
+                {
+                    strreturn = FormulaEngine.ht["假商镇区8至18层楼面地价"].ToString();
+                }
+                else if (tmpstr == "镇区19层及以上")
+                {
+                    strreturn = FormulaEngine.ht["假商镇区19层及以上楼面地价"].ToString();
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                this.txtJsfspf楼面地价.Text = strreturn;
+            }
+        }
+
+        private void rgroup_jsfspf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormulaEngine.ClearVariableTable();
         }
 
 
