@@ -84,6 +84,34 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SkyMap.Net.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.DAO, Version=5.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Windows.Workflow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Windows.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Workflow.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Workflow.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="SkyMap.Net.Workflow.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\pg-oa\bin\SkyMap.Net.Workflow.Engine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
@@ -259,38 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Core\SkyMap.Net.Core.csproj">
-      <Project>{90C2CDD1-A724-4C09-A149-9B78B1BB5C13}</Project>
-      <Name>SkyMap.Net.Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Security\SkyMap.Net.Security.csproj">
-      <Project>{3369F1AA-6DD4-406E-A654-312A72ABD265}</Project>
-      <Name>SkyMap.Net.Security</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Windows.Workflow\SkyMap.Net.Windows.Workflow.csproj">
-      <Project>{08B692EA-C07C-4F47-9B3C-5760866082A5}</Project>
-      <Name>SkyMap.Net.Windows.Workflow</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Windows\SkyMap.Net.Windows.csproj">
-      <Project>{8510FC0B-92F7-44BD-A418-E8F54DF7495B}</Project>
-      <Name>SkyMap.Net.Windows</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Workflow.Client\SkyMap.Net.Workflow.Client.csproj">
-      <Project>{217987FF-FFC1-43A0-9BF4-1160E9D6A90E}</Project>
-      <Name>SkyMap.Net.Workflow.Client</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\SkyMap.Net.Workflow.Engine\SkyMap.Net.Workflow.Engine.csproj">
-      <Project>{FC50239B-6D25-48C0-AD92-DD3EE9D01A3F}</Project>
-      <Name>SkyMap.Net.Workflow.Engine</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
