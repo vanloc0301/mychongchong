@@ -2283,7 +2283,7 @@ namespace AppraiseMethod
             //FormulaEngine.ht["a"] = 10;
             //FormulaEngine.ht["b"] = 20;
             //FormulaEngine.ht["d"] = 20;
-            this.fM_FormulaTemplateTableAdapter.FillBy(this.dataSetFMFormulaTemplate.FM_FormulaTemplate, "收益还原法", "结合成本法");
+            this.fM_FormulaTemplateTableAdapter.FillBy(this.dataSetFMFormulaTemplate.FM_FormulaTemplate, "假设开发法", "商品房");
 
             if (this.dataSetFMFormulaTemplate.FM_FormulaTemplate.Count > 0)
             {

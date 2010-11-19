@@ -274,7 +274,7 @@
             this.btMarketSave = new DevExpress.XtraEditors.SimpleButton();
             this.btMarketCustomize = new DevExpress.XtraEditors.SimpleButton();
             this.添加案例 = new DevExpress.XtraEditors.SimpleButton();
-            this.xtraTabPage7 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage设置 = new DevExpress.XtraTab.XtraTabPage();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -330,6 +330,11 @@
             this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit39 = new DevExpress.XtraEditors.TextEdit();
             this.fM_FormulaTemplateTableAdapter = new AppraiseMethod.DataSetFMFormulaTemplateTableAdapters.FM_FormulaTemplateTableAdapter();
+            this.xtraTabPage假设开发法_商品房 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.sbJsfspfSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             row选中项目 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -436,7 +441,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.xtraTabPage7.SuspendLayout();
+            this.xtraTabPage设置.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
@@ -455,6 +460,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).BeginInit();
+            this.xtraTabPage假设开发法_商品房.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // row选中项目
@@ -489,7 +496,8 @@
             this.xtraTabPage4,
             this.xtraTabPage5,
             this.xtraTabPage6,
-            this.xtraTabPage7});
+            this.xtraTabPage假设开发法_商品房,
+            this.xtraTabPage设置});
             this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
             // xtraTabPage6
@@ -529,7 +537,8 @@
             this.xtraTabPage6.Controls.Add(this.labelControl37);
             this.xtraTabPage6.Controls.Add(this.txtSyf可出租时间);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage6.PageVisible = false;
+            this.xtraTabPage6.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage6.Text = "收益还原法";
             this.xtraTabPage6.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage6_Paint);
             // 
@@ -800,7 +809,8 @@
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Controls.Add(this.gridControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage1.PageVisible = false;
+            this.xtraTabPage1.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage1.Text = "业务数据继承";
             // 
             // txt建筑面积
@@ -835,7 +845,6 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Name = "";
             this.gridControl1.Location = new System.Drawing.Point(25, 96);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -883,7 +892,8 @@
             this.xtraTabPage2.Controls.Add(this.txtQph);
             this.xtraTabPage2.Controls.Add(this.labelControl3);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage2.PageVisible = false;
+            this.xtraTabPage2.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage2.Text = "基准地价修正法";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage2_Paint);
             // 
@@ -1128,7 +1138,6 @@
             // 
             // gridControlGy
             // 
-            this.gridControlGy.EmbeddedNavigator.Name = "";
             this.gridControlGy.Location = new System.Drawing.Point(3, 123);
             this.gridControlGy.MainView = this.gridViewLand;
             this.gridControlGy.Name = "gridControlGy";
@@ -1276,7 +1285,8 @@
             this.xtraTabPage3.Controls.Add(this.labelControl26);
             this.xtraTabPage3.Controls.Add(this.txtCbf土建成本);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage3.PageVisible = false;
+            this.xtraTabPage3.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage3.Text = "成本法";
             // 
             // labelControl55
@@ -1393,7 +1403,8 @@
             // 
             this.xtraTabPage4.Controls.Add(this.groupControl3);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage4.PageVisible = false;
+            this.xtraTabPage4.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage4.Text = "假设开发法";
             // 
             // groupControl3
@@ -1437,7 +1448,6 @@
             // 
             // gdcJsfGy
             // 
-            this.gdcJsfGy.EmbeddedNavigator.Name = "";
             this.gdcJsfGy.Location = new System.Drawing.Point(45, 242);
             this.gdcJsfGy.MainView = this.gridView4;
             this.gdcJsfGy.Name = "gdcJsfGy";
@@ -1724,7 +1734,8 @@
             this.xtraTabPage5.Controls.Add(this.groupControl2);
             this.xtraTabPage5.Controls.Add(this.groupControl1);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(944, 575);
+            this.xtraTabPage5.PageVisible = false;
+            this.xtraTabPage5.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage5.Text = "市场比较法";
             this.xtraTabPage5.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage5_Paint);
             // 
@@ -1735,15 +1746,14 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 60);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(944, 515);
+            this.groupControl2.Size = new System.Drawing.Size(946, 517);
             this.groupControl2.TabIndex = 9;
             // 
             // gcMarket
             // 
             this.gcMarket.DataSource = this.fMFCMarketComporisonApproachTemplateBindingSource;
             this.gcMarket.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gcMarket.EmbeddedNavigator.Name = "";
-            this.gcMarket.Location = new System.Drawing.Point(2, 21);
+            this.gcMarket.Location = new System.Drawing.Point(2, 23);
             this.gcMarket.MainView = this.gridView2;
             this.gcMarket.Name = "gcMarket";
             this.gcMarket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -1836,7 +1846,7 @@
             this.vgc_Market.DataMember = null;
             this.vgc_Market.DataSource = this.fMMARKETHIDECOLUMNBindingSource;
             this.vgc_Market.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vgc_Market.Location = new System.Drawing.Point(2, 21);
+            this.vgc_Market.Location = new System.Drawing.Point(2, 23);
             this.vgc_Market.Name = "vgc_Market";
             this.vgc_Market.OptionsBehavior.AutoFocusNewRecord = true;
             this.vgc_Market.OptionsBehavior.UseEnterAsTab = true;
@@ -1865,7 +1875,7 @@
             this.vgc_Market.Rows.AddRange(new DevExpress.XtraVerticalGrid.Rows.BaseRow[] {
             this.categoryRow6,
             this.categoryRow1});
-            this.vgc_Market.Size = new System.Drawing.Size(940, 492);
+            this.vgc_Market.Size = new System.Drawing.Size(942, 492);
             this.vgc_Market.TabIndex = 1;
             this.vgc_Market.Visible = false;
             this.vgc_Market.EndDragRow += new DevExpress.XtraVerticalGrid.Events.EndDragRowEventHandler(this.vgc_Market_EndDragRow);
@@ -2701,7 +2711,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(944, 60);
+            this.groupControl1.Size = new System.Drawing.Size(946, 60);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "操作";
             // 
@@ -2769,14 +2779,14 @@
             this.添加案例.Text = "添加案例";
             this.添加案例.Click += new System.EventHandler(this.添加案例_Click);
             // 
-            // xtraTabPage7
+            // xtraTabPage设置
             // 
-            this.xtraTabPage7.Controls.Add(this.simpleButton7);
-            this.xtraTabPage7.Controls.Add(this.simpleButton6);
-            this.xtraTabPage7.Controls.Add(this.gridControl2);
-            this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(944, 575);
-            this.xtraTabPage7.Text = "设置";
+            this.xtraTabPage设置.Controls.Add(this.simpleButton7);
+            this.xtraTabPage设置.Controls.Add(this.simpleButton6);
+            this.xtraTabPage设置.Controls.Add(this.gridControl2);
+            this.xtraTabPage设置.Name = "xtraTabPage设置";
+            this.xtraTabPage设置.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage设置.Text = "设置";
             // 
             // simpleButton7
             // 
@@ -2785,7 +2795,6 @@
             this.simpleButton7.Size = new System.Drawing.Size(75, 23);
             this.simpleButton7.TabIndex = 28;
             this.simpleButton7.Text = "解析公式";
-            this.simpleButton7.Visible = false;
             this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
             // 
             // simpleButton6
@@ -2801,7 +2810,6 @@
             // 
             this.gridControl2.DataMember = "FM_FormulaTemplate";
             this.gridControl2.DataSource = this.dataSetFMFormulaTemplate;
-            this.gridControl2.EmbeddedNavigator.Name = "";
             this.gridControl2.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.Begin;
             this.gridControl2.Location = new System.Drawing.Point(7, 44);
             this.gridControl2.MainView = this.gridView3;
@@ -3157,6 +3165,48 @@
             // 
             this.fM_FormulaTemplateTableAdapter.ClearBeforeFill = true;
             // 
+            // xtraTabPage假设开发法_商品房
+            // 
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.simpleButton8);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.sbJsfspfSave);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.labelControl56);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.textEdit1);
+            this.xtraTabPage假设开发法_商品房.Name = "xtraTabPage假设开发法_商品房";
+            this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage假设开发法_商品房.Text = "假设开发法-商品房";
+            // 
+            // simpleButton8
+            // 
+            this.simpleButton8.Location = new System.Drawing.Point(406, 22);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(104, 23);
+            this.simpleButton8.TabIndex = 55;
+            this.simpleButton8.Text = "还原数据";
+            this.simpleButton8.Visible = false;
+            // 
+            // sbJsfspfSave
+            // 
+            this.sbJsfspfSave.Location = new System.Drawing.Point(252, 22);
+            this.sbJsfspfSave.Name = "sbJsfspfSave";
+            this.sbJsfspfSave.Size = new System.Drawing.Size(104, 23);
+            this.sbJsfspfSave.TabIndex = 54;
+            this.sbJsfspfSave.Text = "计算";
+            // 
+            // labelControl56
+            // 
+            this.labelControl56.Location = new System.Drawing.Point(39, 27);
+            this.labelControl56.Name = "labelControl56";
+            this.labelControl56.Size = new System.Drawing.Size(72, 14);
+            this.labelControl56.TabIndex = 53;
+            this.labelControl56.Text = "房地产单价：";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(117, 24);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 21);
+            this.textEdit1.TabIndex = 52;
+            // 
             // MethodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3277,7 +3327,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.xtraTabPage7.ResumeLayout(false);
+            this.xtraTabPage设置.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
@@ -3296,6 +3346,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).EndInit();
+            this.xtraTabPage假设开发法_商品房.ResumeLayout(false);
+            this.xtraTabPage假设开发法_商品房.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3556,7 +3609,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.TextEdit txtRjlxs;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage7;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage设置;
         private DevExpress.XtraGrid.GridControl gridControl2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DataSetFMFormulaTemplate dataSetFMFormulaTemplate;
@@ -3602,5 +3655,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox15;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox16;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox17;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage假设开发法_商品房;
+        private DevExpress.XtraEditors.SimpleButton simpleButton8;
+        private DevExpress.XtraEditors.SimpleButton sbJsfspfSave;
+        private DevExpress.XtraEditors.LabelControl labelControl56;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }
