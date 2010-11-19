@@ -1760,6 +1760,53 @@ namespace AppraiseMethod
 
 
         /// <summary>
+        /// //将[假设开发法-商品房]相关的数据入库或者出库
+        /// </summary>
+        /// <param name="flag">true 入库, false出库</param>
+        private void JsfspfMethod(bool flag, string methodname)
+        {
+            Dictionary<string, string> jsfVariables = new Dictionary<string, string>();
+            List<DataSetMethod.FM_MethodRow> rlist;
+            this.fM_MethodTableAdapter1.FillBy(this.fmMethodDataSet.FM_Method, this.Project_Id, methodname);
+            if (flag)
+            {
+                #region 入库
+                if (this.fmMethodDataSet.FM_Method.Count > 0)
+                {
+                    foreach (DataRow dr in fmMethodDataSet.FM_Method.Rows)
+                    {
+                        dr.Delete();
+                    }
+                }
+                //#############
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商房地产单价",  this.txtJsfspf房地产单价.Text.ToString(), typeof(double).ToString());
+                this.fM_MethodTableAdapter1.Update(this.fmMethodDataSet);
+                this.fmMethodDataSet.AcceptChanges();
+                #endregion
+            }
+            else
+            {
+                #region 出库
+                if (this.fmMethodDataSet.FM_Method.Count > 0)
+                {
+                    string tmp;
+                    jsfVariables.Clear();
+                    rlist = this.fmMethodDataSet.FM_Method.ToList();
+                    foreach (DataSetMethod.FM_MethodRow fr in rlist)
+                    {
+                        jsfVariables.Add(fr.ParameterName.ToString(), fr.ParameterValue.ToString());
+                    }
+
+                    if (jsfVariables.TryGetValue("假商房地产单价", out tmp))
+                    {
+                        txtJsf销售费用率.Text = tmp;
+                    }
+                }
+                #endregion
+            }
+            StartExecute("假设开发法", "商品房");           
+        }
+        /// <summary>
         /// 将[成本法]相关的数据入库或出库
         /// </summary>
         /// <param name="flag"></param>
@@ -2403,6 +2450,11 @@ namespace AppraiseMethod
         private void xtraTabPage6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void sbJsfspfSave_Click(object sender, EventArgs e)
+        {
+            JsfspfMethod(true, "假设开发法-商品房");
         }
 
 

@@ -31,42 +31,21 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraVerticalGrid.Rows.EditorRow row选中项目;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            this.btSyf1Res = new DevExpress.XtraEditors.SimpleButton();
-            this.btSyf1Save = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf成本法房屋现值 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf收益年限 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf收益率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl61 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf个人所得税率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl60 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf教育费附加率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl59 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf城市维护建设税率 = new DevExpress.XtraEditors.TextEdit();
-            this.lblSyf营业税率 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf营业税率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf房产税率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf保险费率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf维修费率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf建筑物现值 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf管理费率 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf月租金 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf收益总面积 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf空置时间 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSyf可出租时间 = new DevExpress.XtraEditors.TextEdit();
+            this.DevXtraTabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage设置 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.dataSetFMFormulaTemplate = new AppraiseMethod.DataSetFMFormulaTemplate();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodBigClass = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodSmallClass = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodFormula = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodDemo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodOrder = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodAddTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMethodModifyTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.txt建筑面积 = new DevExpress.XtraEditors.TextEdit();
             this.txt土地面积 = new DevExpress.XtraEditors.TextEdit();
@@ -274,20 +253,46 @@
             this.btMarketSave = new DevExpress.XtraEditors.SimpleButton();
             this.btMarketCustomize = new DevExpress.XtraEditors.SimpleButton();
             this.添加案例 = new DevExpress.XtraEditors.SimpleButton();
-            this.xtraTabPage设置 = new DevExpress.XtraTab.XtraTabPage();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.dataSetFMFormulaTemplate = new AppraiseMethod.DataSetFMFormulaTemplate();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodBigClass = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodSmallClass = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodFormula = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodDemo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodOrder = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodAddTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMethodModifyTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            this.btSyf1Res = new DevExpress.XtraEditors.SimpleButton();
+            this.btSyf1Save = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf成本法房屋现值 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf收益年限 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf收益率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl61 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf个人所得税率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl60 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf教育费附加率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl59 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf城市维护建设税率 = new DevExpress.XtraEditors.TextEdit();
+            this.lblSyf营业税率 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf营业税率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl51 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf房产税率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl50 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf保险费率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf维修费率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl42 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf建筑物现值 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl41 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf管理费率 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl40 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf月租金 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl39 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf收益总面积 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf空置时间 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSyf可出租时间 = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabPage假设开发法_商品房 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
+            this.sbJsfspfSave = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
+            this.txtJsfspf房地产单价 = new DevExpress.XtraEditors.TextEdit();
             this.fMFormulaTemplateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fMFCMarketComporisonApproachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fM_FCMarketComporisonApproachTableAdapter1 = new AppraiseMethod.MarketDataSetTableAdapters.FM_FCMarketComporisonApproachTableAdapter();
@@ -330,33 +335,15 @@
             this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit39 = new DevExpress.XtraEditors.TextEdit();
             this.fM_FormulaTemplateTableAdapter = new AppraiseMethod.DataSetFMFormulaTemplateTableAdapters.FM_FormulaTemplateTableAdapter();
-            this.xtraTabPage假设开发法_商品房 = new DevExpress.XtraTab.XtraTabPage();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.sbJsfspfSave = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             row选中项目 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
-            this.xtraTabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf成本法房屋现值.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益年限.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf个人所得税率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf教育费附加率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf城市维护建设税率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf营业税率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf房产税率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf保险费率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf维修费率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf建筑物现值.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf管理费率.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf月租金.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益总面积.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevXtraTabControl)).BeginInit();
+            this.DevXtraTabControl.SuspendLayout();
+            this.xtraTabPage设置.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt建筑面积.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt土地面积.Properties)).BeginInit();
@@ -441,10 +428,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.xtraTabPage设置.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            this.xtraTabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf成本法房屋现值.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益年限.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf个人所得税率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf教育费附加率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf城市维护建设税率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf营业税率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf房产税率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf保险费率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf维修费率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf建筑物现值.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf管理费率.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf月租金.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益总面积.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).BeginInit();
+            this.xtraTabPage假设开发法_商品房.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf房地产单价.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFormulaTemplateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFCMarketComporisonApproachBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.landDatumValue)).BeginInit();
@@ -460,8 +462,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).BeginInit();
-            this.xtraTabPage假设开发法_商品房.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // row选中项目
@@ -474,22 +474,22 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.xtraTabControl1);
+            this.panelControl1.Controls.Add(this.DevXtraTabControl);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(957, 611);
             this.panelControl1.TabIndex = 0;
             // 
-            // xtraTabControl1
+            // DevXtraTabControl
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage6;
-            this.xtraTabControl1.Size = new System.Drawing.Size(953, 607);
-            this.xtraTabControl1.TabIndex = 2;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.DevXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DevXtraTabControl.Location = new System.Drawing.Point(2, 2);
+            this.DevXtraTabControl.Name = "DevXtraTabControl";
+            this.DevXtraTabControl.SelectedTabPage = this.xtraTabPage设置;
+            this.DevXtraTabControl.Size = new System.Drawing.Size(953, 607);
+            this.DevXtraTabControl.TabIndex = 2;
+            this.DevXtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3,
@@ -498,308 +498,141 @@
             this.xtraTabPage6,
             this.xtraTabPage假设开发法_商品房,
             this.xtraTabPage设置});
-            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
-            // 
-            // xtraTabPage6
-            // 
-            this.xtraTabPage6.Controls.Add(this.btSyf1Res);
-            this.xtraTabPage6.Controls.Add(this.btSyf1Save);
-            this.xtraTabPage6.Controls.Add(this.labelControl54);
-            this.xtraTabPage6.Controls.Add(this.txtSyf成本法房屋现值);
-            this.xtraTabPage6.Controls.Add(this.labelControl53);
-            this.xtraTabPage6.Controls.Add(this.txtSyf收益年限);
-            this.xtraTabPage6.Controls.Add(this.labelControl52);
-            this.xtraTabPage6.Controls.Add(this.txtSyf收益率);
-            this.xtraTabPage6.Controls.Add(this.labelControl61);
-            this.xtraTabPage6.Controls.Add(this.txtSyf个人所得税率);
-            this.xtraTabPage6.Controls.Add(this.labelControl60);
-            this.xtraTabPage6.Controls.Add(this.txtSyf教育费附加率);
-            this.xtraTabPage6.Controls.Add(this.labelControl59);
-            this.xtraTabPage6.Controls.Add(this.txtSyf城市维护建设税率);
-            this.xtraTabPage6.Controls.Add(this.lblSyf营业税率);
-            this.xtraTabPage6.Controls.Add(this.txtSyf营业税率);
-            this.xtraTabPage6.Controls.Add(this.labelControl51);
-            this.xtraTabPage6.Controls.Add(this.txtSyf房产税率);
-            this.xtraTabPage6.Controls.Add(this.labelControl50);
-            this.xtraTabPage6.Controls.Add(this.txtSyf保险费率);
-            this.xtraTabPage6.Controls.Add(this.labelControl49);
-            this.xtraTabPage6.Controls.Add(this.txtSyf维修费率);
-            this.xtraTabPage6.Controls.Add(this.labelControl42);
-            this.xtraTabPage6.Controls.Add(this.txtSyf建筑物现值);
-            this.xtraTabPage6.Controls.Add(this.labelControl41);
-            this.xtraTabPage6.Controls.Add(this.txtSyf管理费率);
-            this.xtraTabPage6.Controls.Add(this.labelControl40);
-            this.xtraTabPage6.Controls.Add(this.txtSyf月租金);
-            this.xtraTabPage6.Controls.Add(this.labelControl39);
-            this.xtraTabPage6.Controls.Add(this.txtSyf收益总面积);
-            this.xtraTabPage6.Controls.Add(this.labelControl38);
-            this.xtraTabPage6.Controls.Add(this.txtSyf空置时间);
-            this.xtraTabPage6.Controls.Add(this.labelControl37);
-            this.xtraTabPage6.Controls.Add(this.txtSyf可出租时间);
-            this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.PageVisible = false;
-            this.xtraTabPage6.Size = new System.Drawing.Size(946, 577);
-            this.xtraTabPage6.Text = "收益还原法";
-            this.xtraTabPage6.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage6_Paint);
-            // 
-            // btSyf1Res
-            // 
-            this.btSyf1Res.Location = new System.Drawing.Point(767, 63);
-            this.btSyf1Res.Name = "btSyf1Res";
-            this.btSyf1Res.Size = new System.Drawing.Size(104, 23);
-            this.btSyf1Res.TabIndex = 51;
-            this.btSyf1Res.Text = "还原数据";
-            this.btSyf1Res.Click += new System.EventHandler(this.btSyf1Res_Click);
-            // 
-            // btSyf1Save
-            // 
-            this.btSyf1Save.Location = new System.Drawing.Point(767, 22);
-            this.btSyf1Save.Name = "btSyf1Save";
-            this.btSyf1Save.Size = new System.Drawing.Size(104, 23);
-            this.btSyf1Save.TabIndex = 50;
-            this.btSyf1Save.Text = "保存数据";
-            this.btSyf1Save.Click += new System.EventHandler(this.btSyf1Save_Click);
-            // 
-            // labelControl54
-            // 
-            this.labelControl54.Location = new System.Drawing.Point(12, 228);
-            this.labelControl54.Name = "labelControl54";
-            this.labelControl54.Size = new System.Drawing.Size(96, 14);
-            this.labelControl54.TabIndex = 49;
-            this.labelControl54.Text = "成本法房屋现值：";
-            // 
-            // txtSyf成本法房屋现值
-            // 
-            this.txtSyf成本法房屋现值.Location = new System.Drawing.Point(114, 225);
-            this.txtSyf成本法房屋现值.Name = "txtSyf成本法房屋现值";
-            this.txtSyf成本法房屋现值.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf成本法房屋现值.TabIndex = 48;
-            // 
-            // labelControl53
-            // 
-            this.labelControl53.Location = new System.Drawing.Point(506, 183);
-            this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(60, 14);
-            this.labelControl53.TabIndex = 47;
-            this.labelControl53.Text = "收益年限：";
-            // 
-            // txtSyf收益年限
-            // 
-            this.txtSyf收益年限.Location = new System.Drawing.Point(572, 180);
-            this.txtSyf收益年限.Name = "txtSyf收益年限";
-            this.txtSyf收益年限.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf收益年限.TabIndex = 46;
-            // 
-            // labelControl52
-            // 
-            this.labelControl52.Location = new System.Drawing.Point(285, 187);
-            this.labelControl52.Name = "labelControl52";
-            this.labelControl52.Size = new System.Drawing.Size(48, 14);
-            this.labelControl52.TabIndex = 45;
-            this.labelControl52.Text = "收益率：";
-            // 
-            // txtSyf收益率
-            // 
-            this.txtSyf收益率.Location = new System.Drawing.Point(339, 184);
-            this.txtSyf收益率.Name = "txtSyf收益率";
-            this.txtSyf收益率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf收益率.TabIndex = 44;
-            // 
-            // labelControl61
-            // 
-            this.labelControl61.Location = new System.Drawing.Point(24, 187);
-            this.labelControl61.Name = "labelControl61";
-            this.labelControl61.Size = new System.Drawing.Size(84, 14);
-            this.labelControl61.TabIndex = 43;
-            this.labelControl61.Text = "个人所得税率：";
-            // 
-            // txtSyf个人所得税率
-            // 
-            this.txtSyf个人所得税率.Location = new System.Drawing.Point(114, 184);
-            this.txtSyf个人所得税率.Name = "txtSyf个人所得税率";
-            this.txtSyf个人所得税率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf个人所得税率.TabIndex = 42;
-            // 
-            // labelControl60
-            // 
-            this.labelControl60.Location = new System.Drawing.Point(482, 141);
-            this.labelControl60.Name = "labelControl60";
-            this.labelControl60.Size = new System.Drawing.Size(84, 14);
-            this.labelControl60.TabIndex = 41;
-            this.labelControl60.Text = "教育费附加率：";
-            // 
-            // txtSyf教育费附加率
-            // 
-            this.txtSyf教育费附加率.Location = new System.Drawing.Point(572, 138);
-            this.txtSyf教育费附加率.Name = "txtSyf教育费附加率";
-            this.txtSyf教育费附加率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf教育费附加率.TabIndex = 40;
-            // 
-            // labelControl59
-            // 
-            this.labelControl59.Location = new System.Drawing.Point(230, 145);
-            this.labelControl59.Name = "labelControl59";
-            this.labelControl59.Size = new System.Drawing.Size(108, 14);
-            this.labelControl59.TabIndex = 39;
-            this.labelControl59.Text = "城市维护建设税率：";
-            // 
-            // txtSyf城市维护建设税率
-            // 
-            this.txtSyf城市维护建设税率.Location = new System.Drawing.Point(339, 142);
-            this.txtSyf城市维护建设税率.Name = "txtSyf城市维护建设税率";
-            this.txtSyf城市维护建设税率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf城市维护建设税率.TabIndex = 38;
-            // 
-            // lblSyf营业税率
-            // 
-            this.lblSyf营业税率.Location = new System.Drawing.Point(48, 145);
-            this.lblSyf营业税率.Name = "lblSyf营业税率";
-            this.lblSyf营业税率.Size = new System.Drawing.Size(60, 14);
-            this.lblSyf营业税率.TabIndex = 37;
-            this.lblSyf营业税率.Text = "营业税率：";
-            // 
-            // txtSyf营业税率
-            // 
-            this.txtSyf营业税率.Location = new System.Drawing.Point(114, 142);
-            this.txtSyf营业税率.Name = "txtSyf营业税率";
-            this.txtSyf营业税率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf营业税率.TabIndex = 36;
-            // 
-            // labelControl51
-            // 
-            this.labelControl51.Location = new System.Drawing.Point(506, 103);
-            this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(60, 14);
-            this.labelControl51.TabIndex = 23;
-            this.labelControl51.Text = "房产税率：";
-            // 
-            // txtSyf房产税率
-            // 
-            this.txtSyf房产税率.Location = new System.Drawing.Point(572, 100);
-            this.txtSyf房产税率.Name = "txtSyf房产税率";
-            this.txtSyf房产税率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf房产税率.TabIndex = 22;
-            // 
-            // labelControl50
-            // 
-            this.labelControl50.Location = new System.Drawing.Point(273, 103);
-            this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(60, 14);
-            this.labelControl50.TabIndex = 21;
-            this.labelControl50.Text = "保险费率：";
-            // 
-            // txtSyf保险费率
-            // 
-            this.txtSyf保险费率.Location = new System.Drawing.Point(339, 100);
-            this.txtSyf保险费率.Name = "txtSyf保险费率";
-            this.txtSyf保险费率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf保险费率.TabIndex = 20;
-            // 
-            // labelControl49
-            // 
-            this.labelControl49.Location = new System.Drawing.Point(48, 103);
-            this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(60, 14);
-            this.labelControl49.TabIndex = 19;
-            this.labelControl49.Text = "维修费率：";
-            // 
-            // txtSyf维修费率
-            // 
-            this.txtSyf维修费率.Location = new System.Drawing.Point(114, 100);
-            this.txtSyf维修费率.Name = "txtSyf维修费率";
-            this.txtSyf维修费率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf维修费率.TabIndex = 18;
-            // 
-            // labelControl42
-            // 
-            this.labelControl42.Location = new System.Drawing.Point(494, 63);
-            this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(72, 14);
-            this.labelControl42.TabIndex = 17;
-            this.labelControl42.Text = "建筑物现值：";
-            // 
-            // txtSyf建筑物现值
-            // 
-            this.txtSyf建筑物现值.Location = new System.Drawing.Point(572, 60);
-            this.txtSyf建筑物现值.Name = "txtSyf建筑物现值";
-            this.txtSyf建筑物现值.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf建筑物现值.TabIndex = 16;
-            // 
-            // labelControl41
-            // 
-            this.labelControl41.Location = new System.Drawing.Point(273, 63);
-            this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(60, 14);
-            this.labelControl41.TabIndex = 15;
-            this.labelControl41.Text = "管理费率：";
-            // 
-            // txtSyf管理费率
-            // 
-            this.txtSyf管理费率.Location = new System.Drawing.Point(339, 60);
-            this.txtSyf管理费率.Name = "txtSyf管理费率";
-            this.txtSyf管理费率.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf管理费率.TabIndex = 14;
-            // 
-            // labelControl40
-            // 
-            this.labelControl40.Location = new System.Drawing.Point(60, 63);
-            this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(48, 14);
-            this.labelControl40.TabIndex = 13;
-            this.labelControl40.Text = "月租金：";
-            // 
-            // txtSyf月租金
-            // 
-            this.txtSyf月租金.Location = new System.Drawing.Point(114, 60);
-            this.txtSyf月租金.Name = "txtSyf月租金";
-            this.txtSyf月租金.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf月租金.TabIndex = 12;
-            // 
-            // labelControl39
-            // 
-            this.labelControl39.Location = new System.Drawing.Point(494, 27);
-            this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(72, 14);
-            this.labelControl39.TabIndex = 11;
-            this.labelControl39.Text = "收益总面积：";
-            // 
-            // txtSyf收益总面积
-            // 
-            this.txtSyf收益总面积.Location = new System.Drawing.Point(572, 24);
-            this.txtSyf收益总面积.Name = "txtSyf收益总面积";
-            this.txtSyf收益总面积.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf收益总面积.TabIndex = 10;
-            // 
-            // labelControl38
-            // 
-            this.labelControl38.Location = new System.Drawing.Point(273, 27);
-            this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(60, 14);
-            this.labelControl38.TabIndex = 9;
-            this.labelControl38.Text = "空置时间：";
-            // 
-            // txtSyf空置时间
-            // 
-            this.txtSyf空置时间.Location = new System.Drawing.Point(339, 24);
-            this.txtSyf空置时间.Name = "txtSyf空置时间";
-            this.txtSyf空置时间.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf空置时间.TabIndex = 8;
-            this.txtSyf空置时间.EditValueChanged += new System.EventHandler(this.textEdit29_EditValueChanged);
-            // 
-            // labelControl37
-            // 
-            this.labelControl37.Location = new System.Drawing.Point(36, 27);
-            this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(72, 14);
-            this.labelControl37.TabIndex = 7;
-            this.labelControl37.Text = "可出租时间：";
-            // 
-            // txtSyf可出租时间
-            // 
-            this.txtSyf可出租时间.Location = new System.Drawing.Point(114, 24);
-            this.txtSyf可出租时间.Name = "txtSyf可出租时间";
-            this.txtSyf可出租时间.Size = new System.Drawing.Size(100, 21);
-            this.txtSyf可出租时间.TabIndex = 6;
+            this.DevXtraTabControl.Click += new System.EventHandler(this.xtraTabControl1_Click);
+            // 
+            // xtraTabPage设置
+            // 
+            this.xtraTabPage设置.Controls.Add(this.simpleButton7);
+            this.xtraTabPage设置.Controls.Add(this.simpleButton6);
+            this.xtraTabPage设置.Controls.Add(this.gridControl2);
+            this.xtraTabPage设置.Name = "xtraTabPage设置";
+            this.xtraTabPage设置.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage设置.Text = "设置";
+            // 
+            // simpleButton7
+            // 
+            this.simpleButton7.Location = new System.Drawing.Point(105, 15);
+            this.simpleButton7.Name = "simpleButton7";
+            this.simpleButton7.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton7.TabIndex = 28;
+            this.simpleButton7.Text = "解析公式";
+            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Location = new System.Drawing.Point(7, 15);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton6.TabIndex = 27;
+            this.simpleButton6.Text = "保存数据";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.DataMember = "FM_FormulaTemplate";
+            this.gridControl2.DataSource = this.dataSetFMFormulaTemplate;
+            this.gridControl2.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.Begin;
+            this.gridControl2.Location = new System.Drawing.Point(7, 44);
+            this.gridControl2.MainView = this.gridView3;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(920, 297);
+            this.gridControl2.TabIndex = 0;
+            this.gridControl2.UseEmbeddedNavigator = true;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // dataSetFMFormulaTemplate
+            // 
+            this.dataSetFMFormulaTemplate.DataSetName = "DataSetFMFormulaTemplate";
+            this.dataSetFMFormulaTemplate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colID,
+            this.colMethodBigClass,
+            this.colMethodSmallClass,
+            this.colMethodFormula,
+            this.colMethodDemo,
+            this.colMethodOrder,
+            this.colMethodAddTime,
+            this.colMethodModifyTime});
+            this.gridView3.GridControl = this.gridControl2;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView3_InitNewRow);
+            // 
+            // colID
+            // 
+            this.colID.Caption = "ID";
+            this.colID.FieldName = "ID";
+            this.colID.Name = "colID";
+            this.colID.OptionsColumn.ReadOnly = true;
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 0;
+            this.colID.Width = 112;
+            // 
+            // colMethodBigClass
+            // 
+            this.colMethodBigClass.Caption = "大类";
+            this.colMethodBigClass.FieldName = "MethodBigClass";
+            this.colMethodBigClass.Name = "colMethodBigClass";
+            this.colMethodBigClass.Visible = true;
+            this.colMethodBigClass.VisibleIndex = 1;
+            this.colMethodBigClass.Width = 112;
+            // 
+            // colMethodSmallClass
+            // 
+            this.colMethodSmallClass.Caption = "小类";
+            this.colMethodSmallClass.FieldName = "MethodSmallClass";
+            this.colMethodSmallClass.Name = "colMethodSmallClass";
+            this.colMethodSmallClass.Visible = true;
+            this.colMethodSmallClass.VisibleIndex = 2;
+            this.colMethodSmallClass.Width = 132;
+            // 
+            // colMethodFormula
+            // 
+            this.colMethodFormula.Caption = "公式";
+            this.colMethodFormula.FieldName = "MethodFormula";
+            this.colMethodFormula.Name = "colMethodFormula";
+            this.colMethodFormula.Visible = true;
+            this.colMethodFormula.VisibleIndex = 3;
+            this.colMethodFormula.Width = 129;
+            // 
+            // colMethodDemo
+            // 
+            this.colMethodDemo.Caption = "备注";
+            this.colMethodDemo.FieldName = "MethodDemo";
+            this.colMethodDemo.Name = "colMethodDemo";
+            this.colMethodDemo.Visible = true;
+            this.colMethodDemo.VisibleIndex = 4;
+            this.colMethodDemo.Width = 99;
+            // 
+            // colMethodOrder
+            // 
+            this.colMethodOrder.Caption = "排序";
+            this.colMethodOrder.FieldName = "MethodOrder";
+            this.colMethodOrder.Name = "colMethodOrder";
+            this.colMethodOrder.Visible = true;
+            this.colMethodOrder.VisibleIndex = 5;
+            this.colMethodOrder.Width = 101;
+            // 
+            // colMethodAddTime
+            // 
+            this.colMethodAddTime.Caption = "入库时间";
+            this.colMethodAddTime.FieldName = "MethodAddTime";
+            this.colMethodAddTime.Name = "colMethodAddTime";
+            this.colMethodAddTime.Visible = true;
+            this.colMethodAddTime.VisibleIndex = 6;
+            this.colMethodAddTime.Width = 77;
+            // 
+            // colMethodModifyTime
+            // 
+            this.colMethodModifyTime.Caption = "修改时间";
+            this.colMethodModifyTime.FieldName = "MethodModifyTime";
+            this.colMethodModifyTime.Name = "colMethodModifyTime";
+            this.colMethodModifyTime.Visible = true;
+            this.colMethodModifyTime.VisibleIndex = 7;
+            this.colMethodModifyTime.Width = 137;
             // 
             // xtraTabPage1
             // 
@@ -2779,139 +2612,349 @@
             this.添加案例.Text = "添加案例";
             this.添加案例.Click += new System.EventHandler(this.添加案例_Click);
             // 
-            // xtraTabPage设置
+            // xtraTabPage6
             // 
-            this.xtraTabPage设置.Controls.Add(this.simpleButton7);
-            this.xtraTabPage设置.Controls.Add(this.simpleButton6);
-            this.xtraTabPage设置.Controls.Add(this.gridControl2);
-            this.xtraTabPage设置.Name = "xtraTabPage设置";
-            this.xtraTabPage设置.Size = new System.Drawing.Size(946, 577);
-            this.xtraTabPage设置.Text = "设置";
+            this.xtraTabPage6.Controls.Add(this.btSyf1Res);
+            this.xtraTabPage6.Controls.Add(this.btSyf1Save);
+            this.xtraTabPage6.Controls.Add(this.labelControl54);
+            this.xtraTabPage6.Controls.Add(this.txtSyf成本法房屋现值);
+            this.xtraTabPage6.Controls.Add(this.labelControl53);
+            this.xtraTabPage6.Controls.Add(this.txtSyf收益年限);
+            this.xtraTabPage6.Controls.Add(this.labelControl52);
+            this.xtraTabPage6.Controls.Add(this.txtSyf收益率);
+            this.xtraTabPage6.Controls.Add(this.labelControl61);
+            this.xtraTabPage6.Controls.Add(this.txtSyf个人所得税率);
+            this.xtraTabPage6.Controls.Add(this.labelControl60);
+            this.xtraTabPage6.Controls.Add(this.txtSyf教育费附加率);
+            this.xtraTabPage6.Controls.Add(this.labelControl59);
+            this.xtraTabPage6.Controls.Add(this.txtSyf城市维护建设税率);
+            this.xtraTabPage6.Controls.Add(this.lblSyf营业税率);
+            this.xtraTabPage6.Controls.Add(this.txtSyf营业税率);
+            this.xtraTabPage6.Controls.Add(this.labelControl51);
+            this.xtraTabPage6.Controls.Add(this.txtSyf房产税率);
+            this.xtraTabPage6.Controls.Add(this.labelControl50);
+            this.xtraTabPage6.Controls.Add(this.txtSyf保险费率);
+            this.xtraTabPage6.Controls.Add(this.labelControl49);
+            this.xtraTabPage6.Controls.Add(this.txtSyf维修费率);
+            this.xtraTabPage6.Controls.Add(this.labelControl42);
+            this.xtraTabPage6.Controls.Add(this.txtSyf建筑物现值);
+            this.xtraTabPage6.Controls.Add(this.labelControl41);
+            this.xtraTabPage6.Controls.Add(this.txtSyf管理费率);
+            this.xtraTabPage6.Controls.Add(this.labelControl40);
+            this.xtraTabPage6.Controls.Add(this.txtSyf月租金);
+            this.xtraTabPage6.Controls.Add(this.labelControl39);
+            this.xtraTabPage6.Controls.Add(this.txtSyf收益总面积);
+            this.xtraTabPage6.Controls.Add(this.labelControl38);
+            this.xtraTabPage6.Controls.Add(this.txtSyf空置时间);
+            this.xtraTabPage6.Controls.Add(this.labelControl37);
+            this.xtraTabPage6.Controls.Add(this.txtSyf可出租时间);
+            this.xtraTabPage6.Name = "xtraTabPage6";
+            this.xtraTabPage6.PageVisible = false;
+            this.xtraTabPage6.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage6.Text = "收益还原法";
+            this.xtraTabPage6.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage6_Paint);
             // 
-            // simpleButton7
+            // btSyf1Res
             // 
-            this.simpleButton7.Location = new System.Drawing.Point(105, 15);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton7.TabIndex = 28;
-            this.simpleButton7.Text = "解析公式";
-            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
+            this.btSyf1Res.Location = new System.Drawing.Point(767, 63);
+            this.btSyf1Res.Name = "btSyf1Res";
+            this.btSyf1Res.Size = new System.Drawing.Size(104, 23);
+            this.btSyf1Res.TabIndex = 51;
+            this.btSyf1Res.Text = "还原数据";
+            this.btSyf1Res.Click += new System.EventHandler(this.btSyf1Res_Click);
             // 
-            // simpleButton6
+            // btSyf1Save
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(7, 15);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton6.TabIndex = 27;
-            this.simpleButton6.Text = "保存数据";
-            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            this.btSyf1Save.Location = new System.Drawing.Point(767, 22);
+            this.btSyf1Save.Name = "btSyf1Save";
+            this.btSyf1Save.Size = new System.Drawing.Size(104, 23);
+            this.btSyf1Save.TabIndex = 50;
+            this.btSyf1Save.Text = "保存数据";
+            this.btSyf1Save.Click += new System.EventHandler(this.btSyf1Save_Click);
             // 
-            // gridControl2
+            // labelControl54
             // 
-            this.gridControl2.DataMember = "FM_FormulaTemplate";
-            this.gridControl2.DataSource = this.dataSetFMFormulaTemplate;
-            this.gridControl2.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.Begin;
-            this.gridControl2.Location = new System.Drawing.Point(7, 44);
-            this.gridControl2.MainView = this.gridView3;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(920, 297);
-            this.gridControl2.TabIndex = 0;
-            this.gridControl2.UseEmbeddedNavigator = true;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
+            this.labelControl54.Location = new System.Drawing.Point(12, 228);
+            this.labelControl54.Name = "labelControl54";
+            this.labelControl54.Size = new System.Drawing.Size(96, 14);
+            this.labelControl54.TabIndex = 49;
+            this.labelControl54.Text = "成本法房屋现值：";
             // 
-            // dataSetFMFormulaTemplate
+            // txtSyf成本法房屋现值
             // 
-            this.dataSetFMFormulaTemplate.DataSetName = "DataSetFMFormulaTemplate";
-            this.dataSetFMFormulaTemplate.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.txtSyf成本法房屋现值.Location = new System.Drawing.Point(114, 225);
+            this.txtSyf成本法房屋现值.Name = "txtSyf成本法房屋现值";
+            this.txtSyf成本法房屋现值.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf成本法房屋现值.TabIndex = 48;
             // 
-            // gridView3
+            // labelControl53
             // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colID,
-            this.colMethodBigClass,
-            this.colMethodSmallClass,
-            this.colMethodFormula,
-            this.colMethodDemo,
-            this.colMethodOrder,
-            this.colMethodAddTime,
-            this.colMethodModifyTime});
-            this.gridView3.GridControl = this.gridControl2;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView3_InitNewRow);
+            this.labelControl53.Location = new System.Drawing.Point(506, 183);
+            this.labelControl53.Name = "labelControl53";
+            this.labelControl53.Size = new System.Drawing.Size(60, 14);
+            this.labelControl53.TabIndex = 47;
+            this.labelControl53.Text = "收益年限：";
             // 
-            // colID
+            // txtSyf收益年限
             // 
-            this.colID.Caption = "ID";
-            this.colID.FieldName = "ID";
-            this.colID.Name = "colID";
-            this.colID.OptionsColumn.ReadOnly = true;
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 0;
-            this.colID.Width = 112;
+            this.txtSyf收益年限.Location = new System.Drawing.Point(572, 180);
+            this.txtSyf收益年限.Name = "txtSyf收益年限";
+            this.txtSyf收益年限.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf收益年限.TabIndex = 46;
             // 
-            // colMethodBigClass
+            // labelControl52
             // 
-            this.colMethodBigClass.Caption = "大类";
-            this.colMethodBigClass.FieldName = "MethodBigClass";
-            this.colMethodBigClass.Name = "colMethodBigClass";
-            this.colMethodBigClass.Visible = true;
-            this.colMethodBigClass.VisibleIndex = 1;
-            this.colMethodBigClass.Width = 112;
+            this.labelControl52.Location = new System.Drawing.Point(285, 187);
+            this.labelControl52.Name = "labelControl52";
+            this.labelControl52.Size = new System.Drawing.Size(48, 14);
+            this.labelControl52.TabIndex = 45;
+            this.labelControl52.Text = "收益率：";
             // 
-            // colMethodSmallClass
+            // txtSyf收益率
             // 
-            this.colMethodSmallClass.Caption = "小类";
-            this.colMethodSmallClass.FieldName = "MethodSmallClass";
-            this.colMethodSmallClass.Name = "colMethodSmallClass";
-            this.colMethodSmallClass.Visible = true;
-            this.colMethodSmallClass.VisibleIndex = 2;
-            this.colMethodSmallClass.Width = 132;
+            this.txtSyf收益率.Location = new System.Drawing.Point(339, 184);
+            this.txtSyf收益率.Name = "txtSyf收益率";
+            this.txtSyf收益率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf收益率.TabIndex = 44;
             // 
-            // colMethodFormula
+            // labelControl61
             // 
-            this.colMethodFormula.Caption = "公式";
-            this.colMethodFormula.FieldName = "MethodFormula";
-            this.colMethodFormula.Name = "colMethodFormula";
-            this.colMethodFormula.Visible = true;
-            this.colMethodFormula.VisibleIndex = 3;
-            this.colMethodFormula.Width = 129;
+            this.labelControl61.Location = new System.Drawing.Point(24, 187);
+            this.labelControl61.Name = "labelControl61";
+            this.labelControl61.Size = new System.Drawing.Size(84, 14);
+            this.labelControl61.TabIndex = 43;
+            this.labelControl61.Text = "个人所得税率：";
             // 
-            // colMethodDemo
+            // txtSyf个人所得税率
             // 
-            this.colMethodDemo.Caption = "备注";
-            this.colMethodDemo.FieldName = "MethodDemo";
-            this.colMethodDemo.Name = "colMethodDemo";
-            this.colMethodDemo.Visible = true;
-            this.colMethodDemo.VisibleIndex = 4;
-            this.colMethodDemo.Width = 99;
+            this.txtSyf个人所得税率.Location = new System.Drawing.Point(114, 184);
+            this.txtSyf个人所得税率.Name = "txtSyf个人所得税率";
+            this.txtSyf个人所得税率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf个人所得税率.TabIndex = 42;
             // 
-            // colMethodOrder
+            // labelControl60
             // 
-            this.colMethodOrder.Caption = "排序";
-            this.colMethodOrder.FieldName = "MethodOrder";
-            this.colMethodOrder.Name = "colMethodOrder";
-            this.colMethodOrder.Visible = true;
-            this.colMethodOrder.VisibleIndex = 5;
-            this.colMethodOrder.Width = 101;
+            this.labelControl60.Location = new System.Drawing.Point(482, 141);
+            this.labelControl60.Name = "labelControl60";
+            this.labelControl60.Size = new System.Drawing.Size(84, 14);
+            this.labelControl60.TabIndex = 41;
+            this.labelControl60.Text = "教育费附加率：";
             // 
-            // colMethodAddTime
+            // txtSyf教育费附加率
             // 
-            this.colMethodAddTime.Caption = "入库时间";
-            this.colMethodAddTime.FieldName = "MethodAddTime";
-            this.colMethodAddTime.Name = "colMethodAddTime";
-            this.colMethodAddTime.Visible = true;
-            this.colMethodAddTime.VisibleIndex = 6;
-            this.colMethodAddTime.Width = 77;
+            this.txtSyf教育费附加率.Location = new System.Drawing.Point(572, 138);
+            this.txtSyf教育费附加率.Name = "txtSyf教育费附加率";
+            this.txtSyf教育费附加率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf教育费附加率.TabIndex = 40;
             // 
-            // colMethodModifyTime
+            // labelControl59
             // 
-            this.colMethodModifyTime.Caption = "修改时间";
-            this.colMethodModifyTime.FieldName = "MethodModifyTime";
-            this.colMethodModifyTime.Name = "colMethodModifyTime";
-            this.colMethodModifyTime.Visible = true;
-            this.colMethodModifyTime.VisibleIndex = 7;
-            this.colMethodModifyTime.Width = 137;
+            this.labelControl59.Location = new System.Drawing.Point(230, 145);
+            this.labelControl59.Name = "labelControl59";
+            this.labelControl59.Size = new System.Drawing.Size(108, 14);
+            this.labelControl59.TabIndex = 39;
+            this.labelControl59.Text = "城市维护建设税率：";
+            // 
+            // txtSyf城市维护建设税率
+            // 
+            this.txtSyf城市维护建设税率.Location = new System.Drawing.Point(339, 142);
+            this.txtSyf城市维护建设税率.Name = "txtSyf城市维护建设税率";
+            this.txtSyf城市维护建设税率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf城市维护建设税率.TabIndex = 38;
+            // 
+            // lblSyf营业税率
+            // 
+            this.lblSyf营业税率.Location = new System.Drawing.Point(48, 145);
+            this.lblSyf营业税率.Name = "lblSyf营业税率";
+            this.lblSyf营业税率.Size = new System.Drawing.Size(60, 14);
+            this.lblSyf营业税率.TabIndex = 37;
+            this.lblSyf营业税率.Text = "营业税率：";
+            // 
+            // txtSyf营业税率
+            // 
+            this.txtSyf营业税率.Location = new System.Drawing.Point(114, 142);
+            this.txtSyf营业税率.Name = "txtSyf营业税率";
+            this.txtSyf营业税率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf营业税率.TabIndex = 36;
+            // 
+            // labelControl51
+            // 
+            this.labelControl51.Location = new System.Drawing.Point(506, 103);
+            this.labelControl51.Name = "labelControl51";
+            this.labelControl51.Size = new System.Drawing.Size(60, 14);
+            this.labelControl51.TabIndex = 23;
+            this.labelControl51.Text = "房产税率：";
+            // 
+            // txtSyf房产税率
+            // 
+            this.txtSyf房产税率.Location = new System.Drawing.Point(572, 100);
+            this.txtSyf房产税率.Name = "txtSyf房产税率";
+            this.txtSyf房产税率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf房产税率.TabIndex = 22;
+            // 
+            // labelControl50
+            // 
+            this.labelControl50.Location = new System.Drawing.Point(273, 103);
+            this.labelControl50.Name = "labelControl50";
+            this.labelControl50.Size = new System.Drawing.Size(60, 14);
+            this.labelControl50.TabIndex = 21;
+            this.labelControl50.Text = "保险费率：";
+            // 
+            // txtSyf保险费率
+            // 
+            this.txtSyf保险费率.Location = new System.Drawing.Point(339, 100);
+            this.txtSyf保险费率.Name = "txtSyf保险费率";
+            this.txtSyf保险费率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf保险费率.TabIndex = 20;
+            // 
+            // labelControl49
+            // 
+            this.labelControl49.Location = new System.Drawing.Point(48, 103);
+            this.labelControl49.Name = "labelControl49";
+            this.labelControl49.Size = new System.Drawing.Size(60, 14);
+            this.labelControl49.TabIndex = 19;
+            this.labelControl49.Text = "维修费率：";
+            // 
+            // txtSyf维修费率
+            // 
+            this.txtSyf维修费率.Location = new System.Drawing.Point(114, 100);
+            this.txtSyf维修费率.Name = "txtSyf维修费率";
+            this.txtSyf维修费率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf维修费率.TabIndex = 18;
+            // 
+            // labelControl42
+            // 
+            this.labelControl42.Location = new System.Drawing.Point(494, 63);
+            this.labelControl42.Name = "labelControl42";
+            this.labelControl42.Size = new System.Drawing.Size(72, 14);
+            this.labelControl42.TabIndex = 17;
+            this.labelControl42.Text = "建筑物现值：";
+            // 
+            // txtSyf建筑物现值
+            // 
+            this.txtSyf建筑物现值.Location = new System.Drawing.Point(572, 60);
+            this.txtSyf建筑物现值.Name = "txtSyf建筑物现值";
+            this.txtSyf建筑物现值.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf建筑物现值.TabIndex = 16;
+            // 
+            // labelControl41
+            // 
+            this.labelControl41.Location = new System.Drawing.Point(273, 63);
+            this.labelControl41.Name = "labelControl41";
+            this.labelControl41.Size = new System.Drawing.Size(60, 14);
+            this.labelControl41.TabIndex = 15;
+            this.labelControl41.Text = "管理费率：";
+            // 
+            // txtSyf管理费率
+            // 
+            this.txtSyf管理费率.Location = new System.Drawing.Point(339, 60);
+            this.txtSyf管理费率.Name = "txtSyf管理费率";
+            this.txtSyf管理费率.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf管理费率.TabIndex = 14;
+            // 
+            // labelControl40
+            // 
+            this.labelControl40.Location = new System.Drawing.Point(60, 63);
+            this.labelControl40.Name = "labelControl40";
+            this.labelControl40.Size = new System.Drawing.Size(48, 14);
+            this.labelControl40.TabIndex = 13;
+            this.labelControl40.Text = "月租金：";
+            // 
+            // txtSyf月租金
+            // 
+            this.txtSyf月租金.Location = new System.Drawing.Point(114, 60);
+            this.txtSyf月租金.Name = "txtSyf月租金";
+            this.txtSyf月租金.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf月租金.TabIndex = 12;
+            // 
+            // labelControl39
+            // 
+            this.labelControl39.Location = new System.Drawing.Point(494, 27);
+            this.labelControl39.Name = "labelControl39";
+            this.labelControl39.Size = new System.Drawing.Size(72, 14);
+            this.labelControl39.TabIndex = 11;
+            this.labelControl39.Text = "收益总面积：";
+            // 
+            // txtSyf收益总面积
+            // 
+            this.txtSyf收益总面积.Location = new System.Drawing.Point(572, 24);
+            this.txtSyf收益总面积.Name = "txtSyf收益总面积";
+            this.txtSyf收益总面积.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf收益总面积.TabIndex = 10;
+            // 
+            // labelControl38
+            // 
+            this.labelControl38.Location = new System.Drawing.Point(273, 27);
+            this.labelControl38.Name = "labelControl38";
+            this.labelControl38.Size = new System.Drawing.Size(60, 14);
+            this.labelControl38.TabIndex = 9;
+            this.labelControl38.Text = "空置时间：";
+            // 
+            // txtSyf空置时间
+            // 
+            this.txtSyf空置时间.Location = new System.Drawing.Point(339, 24);
+            this.txtSyf空置时间.Name = "txtSyf空置时间";
+            this.txtSyf空置时间.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf空置时间.TabIndex = 8;
+            this.txtSyf空置时间.EditValueChanged += new System.EventHandler(this.textEdit29_EditValueChanged);
+            // 
+            // labelControl37
+            // 
+            this.labelControl37.Location = new System.Drawing.Point(36, 27);
+            this.labelControl37.Name = "labelControl37";
+            this.labelControl37.Size = new System.Drawing.Size(72, 14);
+            this.labelControl37.TabIndex = 7;
+            this.labelControl37.Text = "可出租时间：";
+            // 
+            // txtSyf可出租时间
+            // 
+            this.txtSyf可出租时间.Location = new System.Drawing.Point(114, 24);
+            this.txtSyf可出租时间.Name = "txtSyf可出租时间";
+            this.txtSyf可出租时间.Size = new System.Drawing.Size(100, 21);
+            this.txtSyf可出租时间.TabIndex = 6;
+            // 
+            // xtraTabPage假设开发法_商品房
+            // 
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.simpleButton8);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.sbJsfspfSave);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.labelControl56);
+            this.xtraTabPage假设开发法_商品房.Controls.Add(this.txtJsfspf房地产单价);
+            this.xtraTabPage假设开发法_商品房.Name = "xtraTabPage假设开发法_商品房";
+            this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage假设开发法_商品房.Text = "假设开发法-商品房";
+            // 
+            // simpleButton8
+            // 
+            this.simpleButton8.Location = new System.Drawing.Point(406, 22);
+            this.simpleButton8.Name = "simpleButton8";
+            this.simpleButton8.Size = new System.Drawing.Size(104, 23);
+            this.simpleButton8.TabIndex = 55;
+            this.simpleButton8.Text = "还原数据";
+            this.simpleButton8.Visible = false;
+            // 
+            // sbJsfspfSave
+            // 
+            this.sbJsfspfSave.Location = new System.Drawing.Point(252, 22);
+            this.sbJsfspfSave.Name = "sbJsfspfSave";
+            this.sbJsfspfSave.Size = new System.Drawing.Size(104, 23);
+            this.sbJsfspfSave.TabIndex = 54;
+            this.sbJsfspfSave.Text = "计算";
+            this.sbJsfspfSave.Click += new System.EventHandler(this.sbJsfspfSave_Click);
+            // 
+            // labelControl56
+            // 
+            this.labelControl56.Location = new System.Drawing.Point(39, 27);
+            this.labelControl56.Name = "labelControl56";
+            this.labelControl56.Size = new System.Drawing.Size(72, 14);
+            this.labelControl56.TabIndex = 53;
+            this.labelControl56.Text = "房地产单价：";
+            // 
+            // txtJsfspf房地产单价
+            // 
+            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(117, 24);
+            this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
+            this.txtJsfspf房地产单价.Size = new System.Drawing.Size(100, 21);
+            this.txtJsfspf房地产单价.TabIndex = 52;
             // 
             // fMFormulaTemplateBindingSource
             // 
@@ -3165,48 +3208,6 @@
             // 
             this.fM_FormulaTemplateTableAdapter.ClearBeforeFill = true;
             // 
-            // xtraTabPage假设开发法_商品房
-            // 
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.simpleButton8);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.sbJsfspfSave);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.labelControl56);
-            this.xtraTabPage假设开发法_商品房.Controls.Add(this.textEdit1);
-            this.xtraTabPage假设开发法_商品房.Name = "xtraTabPage假设开发法_商品房";
-            this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(946, 577);
-            this.xtraTabPage假设开发法_商品房.Text = "假设开发法-商品房";
-            // 
-            // simpleButton8
-            // 
-            this.simpleButton8.Location = new System.Drawing.Point(406, 22);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(104, 23);
-            this.simpleButton8.TabIndex = 55;
-            this.simpleButton8.Text = "还原数据";
-            this.simpleButton8.Visible = false;
-            // 
-            // sbJsfspfSave
-            // 
-            this.sbJsfspfSave.Location = new System.Drawing.Point(252, 22);
-            this.sbJsfspfSave.Name = "sbJsfspfSave";
-            this.sbJsfspfSave.Size = new System.Drawing.Size(104, 23);
-            this.sbJsfspfSave.TabIndex = 54;
-            this.sbJsfspfSave.Text = "计算";
-            // 
-            // labelControl56
-            // 
-            this.labelControl56.Location = new System.Drawing.Point(39, 27);
-            this.labelControl56.Name = "labelControl56";
-            this.labelControl56.Size = new System.Drawing.Size(72, 14);
-            this.labelControl56.TabIndex = 53;
-            this.labelControl56.Text = "房地产单价：";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(117, 24);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 21);
-            this.textEdit1.TabIndex = 52;
-            // 
             // MethodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3219,26 +3220,12 @@
             this.Load += new System.EventHandler(this.MethodForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
-            this.xtraTabPage6.ResumeLayout(false);
-            this.xtraTabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf成本法房屋现值.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益年限.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf个人所得税率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf教育费附加率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf城市维护建设税率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf营业税率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf房产税率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf保险费率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf维修费率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf建筑物现值.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf管理费率.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf月租金.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益总面积.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevXtraTabControl)).EndInit();
+            this.DevXtraTabControl.ResumeLayout(false);
+            this.xtraTabPage设置.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt建筑面积.Properties)).EndInit();
@@ -3327,10 +3314,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.xtraTabPage设置.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetFMFormulaTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            this.xtraTabPage6.ResumeLayout(false);
+            this.xtraTabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf成本法房屋现值.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益年限.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf个人所得税率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf教育费附加率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf城市维护建设税率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf营业税率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf房产税率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf保险费率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf维修费率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf建筑物现值.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf管理费率.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf月租金.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf收益总面积.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf空置时间.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSyf可出租时间.Properties)).EndInit();
+            this.xtraTabPage假设开发法_商品房.ResumeLayout(false);
+            this.xtraTabPage假设开发法_商品房.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJsfspf房地产单价.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFormulaTemplateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fMFCMarketComporisonApproachBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.landDatumValue)).EndInit();
@@ -3346,9 +3350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).EndInit();
-            this.xtraTabPage假设开发法_商品房.ResumeLayout(false);
-            this.xtraTabPage假设开发法_商品房.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3356,7 +3357,7 @@
         #endregion
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabControl DevXtraTabControl;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
@@ -3659,6 +3660,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.SimpleButton sbJsfspfSave;
         private DevExpress.XtraEditors.LabelControl labelControl56;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtJsfspf房地产单价;
     }
 }

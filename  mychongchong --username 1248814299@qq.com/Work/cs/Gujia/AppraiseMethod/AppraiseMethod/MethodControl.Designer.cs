@@ -101,7 +101,6 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.EmbeddedNavigator.Name = "";
             this.gridControl1.Location = new System.Drawing.Point(160, 86);
             this.gridControl1.MainView = this.cardView1;
             this.gridControl1.Name = "gridControl1";
