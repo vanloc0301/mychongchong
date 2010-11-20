@@ -2135,7 +2135,10 @@ namespace AppraiseMethod
                 {
                     foreach (DataRow dr in this.dataSetFMFormulaTemplate.FM_FormulaTemplate.Rows)
                     {
-                        formulacanevaluate.Add(dr["MethodFormula"].ToString(), false);
+                        if (dr["MethodFormula"].ToString().IndexOf("多选:=") < 0)
+                        {
+                            formulacanevaluate.Add(dr["MethodFormula"].ToString(), false);
+                        }
                     }
 
                     Dictionary<string, bool> formulaevalute = new Dictionary<string, bool>();//保存可以执行的,并已经执行的formula
