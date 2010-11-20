@@ -339,6 +339,10 @@
             this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit39 = new DevExpress.XtraEditors.TextEdit();
             this.fM_FormulaTemplateTableAdapter = new AppraiseMethod.DataSetFMFormulaTemplateTableAdapters.FM_FormulaTemplateTableAdapter();
+            this.lue_建筑安装工程费 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lue_年利润率 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl58 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl62 = new DevExpress.XtraEditors.LabelControl();
             row选中项目 = new DevExpress.XtraVerticalGrid.Rows.EditorRow();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -470,6 +474,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_建筑安装工程费.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_年利润率.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // row选中项目
@@ -2930,6 +2936,10 @@
             // 
             // groupControl4
             // 
+            this.groupControl4.Controls.Add(this.labelControl62);
+            this.groupControl4.Controls.Add(this.labelControl58);
+            this.groupControl4.Controls.Add(this.lue_年利润率);
+            this.groupControl4.Controls.Add(this.lue_建筑安装工程费);
             this.groupControl4.Controls.Add(this.txtJsfspf楼面地价);
             this.groupControl4.Controls.Add(this.labelControl57);
             this.groupControl4.Controls.Add(this.rgroup_jsfspf);
@@ -2944,19 +2954,19 @@
             // 
             // txtJsfspf楼面地价
             // 
-            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(91, 178);
+            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(134, 224);
             this.txtJsfspf楼面地价.Name = "txtJsfspf楼面地价";
             this.txtJsfspf楼面地价.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtJsfspf楼面地价.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
             this.txtJsfspf楼面地价.Properties.Appearance.Options.UseBackColor = true;
             this.txtJsfspf楼面地价.Properties.Appearance.Options.UseForeColor = true;
             this.txtJsfspf楼面地价.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.txtJsfspf楼面地价.Size = new System.Drawing.Size(100, 19);
+            this.txtJsfspf楼面地价.Size = new System.Drawing.Size(113, 19);
             this.txtJsfspf楼面地价.TabIndex = 58;
             // 
             // labelControl57
             // 
-            this.labelControl57.Location = new System.Drawing.Point(25, 183);
+            this.labelControl57.Location = new System.Drawing.Point(45, 226);
             this.labelControl57.Name = "labelControl57";
             this.labelControl57.Size = new System.Drawing.Size(60, 14);
             this.labelControl57.TabIndex = 59;
@@ -2973,7 +2983,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区7层及以下"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区8-18层"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "镇区19层及以上")});
-            this.rgroup_jsfspf.Size = new System.Drawing.Size(260, 96);
+            this.rgroup_jsfspf.Size = new System.Drawing.Size(238, 96);
             this.rgroup_jsfspf.TabIndex = 57;
             this.rgroup_jsfspf.SelectedIndexChanged += new System.EventHandler(this.rgroup_jsfspf_SelectedIndexChanged);
             // 
@@ -2997,14 +3007,14 @@
             // 
             // txtJsfspf房地产单价
             // 
-            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(91, 137);
+            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(134, 190);
             this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
-            this.txtJsfspf房地产单价.Size = new System.Drawing.Size(100, 21);
+            this.txtJsfspf房地产单价.Size = new System.Drawing.Size(113, 21);
             this.txtJsfspf房地产单价.TabIndex = 52;
             // 
             // labelControl56
             // 
-            this.labelControl56.Location = new System.Drawing.Point(13, 140);
+            this.labelControl56.Location = new System.Drawing.Point(33, 193);
             this.labelControl56.Name = "labelControl56";
             this.labelControl56.Size = new System.Drawing.Size(72, 14);
             this.labelControl56.TabIndex = 53;
@@ -3262,6 +3272,44 @@
             // 
             this.fM_FormulaTemplateTableAdapter.ClearBeforeFill = true;
             // 
+            // lue_建筑安装工程费
+            // 
+            this.lue_建筑安装工程费.EditValue = "";
+            this.lue_建筑安装工程费.Location = new System.Drawing.Point(134, 128);
+            this.lue_建筑安装工程费.Name = "lue_建筑安装工程费";
+            this.lue_建筑安装工程费.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_建筑安装工程费.Properties.NullText = "";
+            this.lue_建筑安装工程费.Size = new System.Drawing.Size(113, 21);
+            this.lue_建筑安装工程费.TabIndex = 152;
+            // 
+            // lue_年利润率
+            // 
+            this.lue_年利润率.EditValue = "";
+            this.lue_年利润率.Location = new System.Drawing.Point(134, 155);
+            this.lue_年利润率.Name = "lue_年利润率";
+            this.lue_年利润率.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lue_年利润率.Properties.NullText = "";
+            this.lue_年利润率.Size = new System.Drawing.Size(113, 21);
+            this.lue_年利润率.TabIndex = 153;
+            // 
+            // labelControl58
+            // 
+            this.labelControl58.Location = new System.Drawing.Point(9, 131);
+            this.labelControl58.Name = "labelControl58";
+            this.labelControl58.Size = new System.Drawing.Size(96, 14);
+            this.labelControl58.TabIndex = 154;
+            this.labelControl58.Text = "建筑安装工程费：";
+            // 
+            // labelControl62
+            // 
+            this.labelControl62.Location = new System.Drawing.Point(45, 158);
+            this.labelControl62.Name = "labelControl62";
+            this.labelControl62.Size = new System.Drawing.Size(60, 14);
+            this.labelControl62.TabIndex = 155;
+            this.labelControl62.Text = "年利润率：";
+            // 
             // MethodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3407,6 +3455,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit37.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit38.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit39.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_建筑安装工程费.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lue_年利润率.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3722,5 +3772,9 @@
         private DevExpress.XtraEditors.RadioGroup rgroup_jsfspf;
         private DevExpress.XtraEditors.TextEdit txtJsfspf楼面地价;
         private DevExpress.XtraEditors.LabelControl labelControl57;
+        private DevExpress.XtraEditors.LookUpEdit lue_建筑安装工程费;
+        private DevExpress.XtraEditors.LabelControl labelControl62;
+        private DevExpress.XtraEditors.LabelControl labelControl58;
+        private DevExpress.XtraEditors.LookUpEdit lue_年利润率;
     }
 }
