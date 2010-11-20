@@ -2937,14 +2937,14 @@
             this.groupControl4.Controls.Add(this.sbJsfspfSave);
             this.groupControl4.Controls.Add(this.txtJsfspf房地产单价);
             this.groupControl4.Controls.Add(this.labelControl56);
-            this.groupControl4.Location = new System.Drawing.Point(126, 77);
+            this.groupControl4.Location = new System.Drawing.Point(198, 27);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(498, 163);
+            this.groupControl4.Size = new System.Drawing.Size(498, 261);
             this.groupControl4.TabIndex = 57;
             // 
             // txtJsfspf楼面地价
             // 
-            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(328, 127);
+            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(91, 178);
             this.txtJsfspf楼面地价.Name = "txtJsfspf楼面地价";
             this.txtJsfspf楼面地价.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtJsfspf楼面地价.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
@@ -2956,7 +2956,7 @@
             // 
             // labelControl57
             // 
-            this.labelControl57.Location = new System.Drawing.Point(262, 130);
+            this.labelControl57.Location = new System.Drawing.Point(25, 183);
             this.labelControl57.Name = "labelControl57";
             this.labelControl57.Size = new System.Drawing.Size(60, 14);
             this.labelControl57.TabIndex = 59;
@@ -2997,14 +2997,14 @@
             // 
             // txtJsfspf房地产单价
             // 
-            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(91, 127);
+            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(91, 137);
             this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
             this.txtJsfspf房地产单价.Size = new System.Drawing.Size(100, 21);
             this.txtJsfspf房地产单价.TabIndex = 52;
             // 
             // labelControl56
             // 
-            this.labelControl56.Location = new System.Drawing.Point(13, 130);
+            this.labelControl56.Location = new System.Drawing.Point(13, 140);
             this.labelControl56.Name = "labelControl56";
             this.labelControl56.Size = new System.Drawing.Size(72, 14);
             this.labelControl56.TabIndex = 53;
@@ -3270,7 +3270,6 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "MethodForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "评估方法";
             this.Load += new System.EventHandler(this.MethodForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
