@@ -13,6 +13,7 @@ using System.Collections;
 using System.Reflection;
 using System.Threading;
 using DevExpress.XtraVerticalGrid.Rows;
+using DevExpress.XtraEditors.Controls;
 
 namespace AppraiseMethod
 {
@@ -802,6 +803,76 @@ namespace AppraiseMethod
             BindMarketData(); //市场比较法数据绑定；
             //DataRelation dr = marketDataSet.Relations.Add("projectid", marketDataSet.Tables["FM_FCMarketComporisonApproach"].Columns["PROJECT_ID"], marketDataSet.Tables["FM_MARKETHIDECOLUMN"].Columns["PROJECT_ID"]);
             #endregion
+
+            #region 假设开发法商品房          
+
+            InitControl("假设开发法", "商品房", lue_建筑安装工程费,"假商7层及以下建筑安装工程费多选");
+            #endregion
+        }
+
+        private void InitControl(string methodbigname, string methodsmallname,DevExpress.XtraEditors.LookUpEdit tmpLookUpEdit ,string strfind)
+        {
+            string strfind;
+            string[] str1;
+            string[] str2;
+            Hashtable ht;
+            DataTable dt = new DataTable("ChooseVariable");
+            DataColumn dc = new DataColumn("");
+            dc.ColumnName = "Code";
+            dc.Caption = "Code";
+            dt.Columns.Add(dc);
+            dc = new DataColumn();
+            dc.Caption = "Name";
+            dc.ColumnName = "Name";
+            dt.Columns.Add(dc);
+            ht = GetFormula(methodbigname, methodsmallname);
+            if (ht.Contains(strfind))
+            {
+                str1 = ht[strfind].ToString().Split(new char[] { '@' });
+                if (str1.Length > 0)
+                {
+                    tmpLookUpEdit.EditValue = str1[0].ToString();
+                    if (str1.Length >= 2)
+                    {
+                        for (int i = 1; i < str1.Length; i++)
+                        {
+                            str2 = str1[i].ToString().Split(new char[] { '#' });
+                            if (str2.Length == 2)
+                            {
+                                DataRow dr = dt.Rows.Add();
+                                dr["Code"] = str2[0].ToString();
+                                dr["Name"] = str2[1].ToString();
+                            }
+                        }
+                        tmpLookUpEdit.Properties.DisplayMember = "Name";
+                        tmpLookUpEdit.Properties.ValueMember = "Name";
+                        tmpLookUpEdit.Properties.Columns.Add(new LookUpColumnInfo("Code", 40, "名称"));
+                        tmpLookUpEdit.Properties.Columns.Add(new LookUpColumnInfo("Name", 80, "值"));
+                        tmpLookUpEdit.Properties.DataSource = dt.DefaultView;
+                    }
+                }
+            }
+        }
+
+        public Hashtable GetFormula(string methodbigname, string methodsmallname)
+        {
+            Hashtable ht = new Hashtable();
+            this.fM_FormulaTemplateTableAdapter.FillBy(this.dataSetFMFormulaTemplate.FM_FormulaTemplate, methodbigname, methodsmallname);
+            int i = 0;
+            if (this.dataSetFMFormulaTemplate.FM_FormulaTemplate.Count > 0)
+            {
+                foreach (DataRow dr in this.dataSetFMFormulaTemplate.FM_FormulaTemplate.Rows)
+                {
+                    i = 0;
+
+                    if (dr["MethodFormula"].ToString().IndexOf(":=") >= 0)
+                    {
+                        i = dr["MethodFormula"].ToString().IndexOf(":=");
+                        ht[dr["MethodFormula"].ToString().Substring(0, i)] = dr["MethodFormula"].ToString().Substring(i + 2);
+                    }
+                }
+            }
+            return ht;
         }
 
         private void xtraTabPage5_Paint(object sender, PaintEventArgs e)
@@ -1119,7 +1190,7 @@ namespace AppraiseMethod
                         }
                     }
                     #region 非估价对象相关因素改变
-                    if (igjdx >= 0 && ifocus != igjdx) 
+                    if (igjdx >= 0 && ifocus != igjdx)
                     {
                         DataRow drgjdx = sourceTable.Rows[igjdx];
                         DataRow drfocus = sourceTable.Rows[ifocus];
@@ -1152,7 +1223,7 @@ namespace AppraiseMethod
             }
         }
 
-        private void ModifyDf(DataTable sourceTable,DataRow drgjdx, DataRow drfocus,List<string> ls,List<string>lstag,string fieldname)
+        private void ModifyDf(DataTable sourceTable, DataRow drgjdx, DataRow drfocus, List<string> ls, List<string> lstag, string fieldname)
         {
             if (ls.Contains(drgjdx[fieldname].ToString()) && ls.Contains(drfocus[fieldname].ToString()))
             {
@@ -1779,7 +1850,11 @@ namespace AppraiseMethod
                     }
                 }
                 //#############
-                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商房地产单价",  this.txtJsfspf房地产单价.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商房地产单价", this.txtJsfspf房地产单价.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商7层及以下建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商8至18层建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商7层及以下建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商年利润率", this.lue_年利润率.Text.ToString(), typeof(double).ToString());
                 this.fM_MethodTableAdapter1.Update(this.fmMethodDataSet);
                 this.fmMethodDataSet.AcceptChanges();
                 #endregion
@@ -1804,7 +1879,7 @@ namespace AppraiseMethod
                 }
                 #endregion
             }
-            StartExecute("假设开发法", "商品房");           
+            StartExecute("假设开发法", "商品房");
         }
         /// <summary>
         /// 将[成本法]相关的数据入库或出库
@@ -2315,7 +2390,7 @@ namespace AppraiseMethod
             }
             else
             {
-                MessageBox.Show("无相关权限!","提示：");
+                MessageBox.Show("无相关权限!", "提示：");
             }
         }
 
