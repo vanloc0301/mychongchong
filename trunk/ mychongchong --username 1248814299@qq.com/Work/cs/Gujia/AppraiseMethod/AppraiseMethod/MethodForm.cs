@@ -2501,6 +2501,7 @@ namespace AppraiseMethod
         private void rgroup_jsfspf_SelectedIndexChanged(object sender, EventArgs e)
         {
             FormulaEngine.ClearVariableTable();
+            this.txtJsfspf楼面地价.Text = "";
         }
 
 
