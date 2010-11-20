@@ -804,15 +804,15 @@ namespace AppraiseMethod
             //DataRelation dr = marketDataSet.Relations.Add("projectid", marketDataSet.Tables["FM_FCMarketComporisonApproach"].Columns["PROJECT_ID"], marketDataSet.Tables["FM_MARKETHIDECOLUMN"].Columns["PROJECT_ID"]);
             #endregion
 
-            #region 假设开发法商品房          
-
-            InitControl("假设开发法", "商品房", lue_建筑安装工程费,"假商7层及以下建筑安装工程费多选");
+            #region 假设开发法商品房
+            string strreturn = "";
+            if (rgroup_jsfspf.SelectedIndex == -1) rgroup_jsfspf.SelectedIndex = 0;
+            JsfspfInitControl();
             #endregion
         }
 
-        private void InitControl(string methodbigname, string methodsmallname,DevExpress.XtraEditors.LookUpEdit tmpLookUpEdit ,string strfind)
+        private void InitControl(string methodbigname, string methodsmallname, DevExpress.XtraEditors.LookUpEdit tmpLookUpEdit, string strfind)
         {
-            string strfind;
             string[] str1;
             string[] str2;
             Hashtable ht;
@@ -825,6 +825,8 @@ namespace AppraiseMethod
             dc.Caption = "Name";
             dc.ColumnName = "Name";
             dt.Columns.Add(dc);
+            tmpLookUpEdit.Properties.DataSource = null;
+            tmpLookUpEdit.Properties.Columns.Clear();
             ht = GetFormula(methodbigname, methodsmallname);
             if (ht.Contains(strfind))
             {
@@ -1853,7 +1855,7 @@ namespace AppraiseMethod
                 this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商房地产单价", this.txtJsfspf房地产单价.Text.ToString(), typeof(double).ToString());
                 this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商7层及以下建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
                 this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商8至18层建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
-                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商7层及以下建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
+                this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商19层及以上建筑安装工程费", this.lue_建筑安装工程费.Text.ToString(), typeof(double).ToString());
                 this.fmMethodDataSet.FM_Method.AddFM_MethodRow(Guid.NewGuid(), this.Project_Id, methodname, "假商年利润率", this.lue_年利润率.Text.ToString(), typeof(double).ToString());
                 this.fM_MethodTableAdapter1.Update(this.fmMethodDataSet);
                 this.fmMethodDataSet.AcceptChanges();
@@ -2577,6 +2579,40 @@ namespace AppraiseMethod
         {
             FormulaEngine.ClearVariableTable();
             this.txtJsfspf楼面地价.Text = "";
+            JsfspfInitControl();
+        }
+
+        private void JsfspfInitControl()
+        {
+            string strreturn = "";
+            string tmpstr = rgroup_jsfspf.Properties.Items[rgroup_jsfspf.SelectedIndex].Description.ToString();
+
+            if (tmpstr == "城区7层及以下")
+            {
+                strreturn = "假商7层及以下建筑安装工程费多选";
+            }
+            else if (tmpstr == "城区8-18层")
+            {
+                strreturn = "假商8至18层建筑安装工程费多选";
+            }
+            else if (tmpstr == "城区19层及以上")
+            {
+                strreturn = "假商19层及以上建筑安装工程费多选";
+            }
+            else if (tmpstr == "镇区7层及以下")
+            {
+                strreturn = "假商7层及以下建筑安装工程费多选";
+            }
+            else if (tmpstr == "镇区8-18层")
+            {
+                strreturn = "假商8至18层建筑安装工程费多选";
+            }
+            else if (tmpstr == "镇区19层及以上")
+            {
+                strreturn = "假商19层及以上建筑安装工程费多选";
+            }
+            InitControl("假设开发法", "商品房", lue_建筑安装工程费, strreturn);
+            InitControl("假设开发法", "商品房", lue_年利润率, "假商年利润率多选");
         }
 
 
