@@ -492,7 +492,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(957, 611);
+            this.panelControl1.Size = new System.Drawing.Size(457, 304);
             this.panelControl1.TabIndex = 0;
             // 
             // DevXtraTabControl
@@ -500,8 +500,8 @@
             this.DevXtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DevXtraTabControl.Location = new System.Drawing.Point(2, 2);
             this.DevXtraTabControl.Name = "DevXtraTabControl";
-            this.DevXtraTabControl.SelectedTabPage = this.xtraTabPage设置;
-            this.DevXtraTabControl.Size = new System.Drawing.Size(953, 607);
+            this.DevXtraTabControl.SelectedTabPage = this.xtraTabPage假设开发法_商品房;
+            this.DevXtraTabControl.Size = new System.Drawing.Size(453, 300);
             this.DevXtraTabControl.TabIndex = 2;
             this.DevXtraTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -520,6 +520,7 @@
             this.xtraTabPage设置.Controls.Add(this.simpleButton6);
             this.xtraTabPage设置.Controls.Add(this.gridControl2);
             this.xtraTabPage设置.Name = "xtraTabPage设置";
+            this.xtraTabPage设置.PageVisible = false;
             this.xtraTabPage设置.Size = new System.Drawing.Size(946, 577);
             this.xtraTabPage设置.Text = "设置";
             // 
@@ -2931,7 +2932,7 @@
             // 
             this.xtraTabPage假设开发法_商品房.Controls.Add(this.groupControl4);
             this.xtraTabPage假设开发法_商品房.Name = "xtraTabPage假设开发法_商品房";
-            this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(946, 577);
+            this.xtraTabPage假设开发法_商品房.Size = new System.Drawing.Size(446, 270);
             this.xtraTabPage假设开发法_商品房.Text = "假设开发法-商品房";
             // 
             // groupControl4
@@ -2949,12 +2950,12 @@
             this.groupControl4.Controls.Add(this.labelControl56);
             this.groupControl4.Location = new System.Drawing.Point(8, 3);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(498, 261);
+            this.groupControl4.Size = new System.Drawing.Size(433, 261);
             this.groupControl4.TabIndex = 57;
             // 
             // labelControl62
             // 
-            this.labelControl62.Location = new System.Drawing.Point(45, 158);
+            this.labelControl62.Location = new System.Drawing.Point(66, 166);
             this.labelControl62.Name = "labelControl62";
             this.labelControl62.Size = new System.Drawing.Size(60, 14);
             this.labelControl62.TabIndex = 155;
@@ -2962,7 +2963,7 @@
             // 
             // labelControl58
             // 
-            this.labelControl58.Location = new System.Drawing.Point(9, 131);
+            this.labelControl58.Location = new System.Drawing.Point(30, 131);
             this.labelControl58.Name = "labelControl58";
             this.labelControl58.Size = new System.Drawing.Size(96, 14);
             this.labelControl58.TabIndex = 154;
@@ -2971,7 +2972,7 @@
             // lue_年利润率
             // 
             this.lue_年利润率.EditValue = "";
-            this.lue_年利润率.Location = new System.Drawing.Point(134, 155);
+            this.lue_年利润率.Location = new System.Drawing.Point(131, 163);
             this.lue_年利润率.Name = "lue_年利润率";
             this.lue_年利润率.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2982,7 +2983,7 @@
             // lue_建筑安装工程费
             // 
             this.lue_建筑安装工程费.EditValue = "";
-            this.lue_建筑安装工程费.Location = new System.Drawing.Point(134, 128);
+            this.lue_建筑安装工程费.Location = new System.Drawing.Point(132, 128);
             this.lue_建筑安装工程费.Name = "lue_建筑安装工程费";
             this.lue_建筑安装工程费.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2992,7 +2993,7 @@
             // 
             // txtJsfspf楼面地价
             // 
-            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(134, 224);
+            this.txtJsfspf楼面地价.Location = new System.Drawing.Point(131, 232);
             this.txtJsfspf楼面地价.Name = "txtJsfspf楼面地价";
             this.txtJsfspf楼面地价.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtJsfspf楼面地价.Properties.Appearance.ForeColor = System.Drawing.Color.Blue;
@@ -3004,7 +3005,7 @@
             // 
             // labelControl57
             // 
-            this.labelControl57.Location = new System.Drawing.Point(45, 226);
+            this.labelControl57.Location = new System.Drawing.Point(66, 234);
             this.labelControl57.Name = "labelControl57";
             this.labelControl57.Size = new System.Drawing.Size(60, 14);
             this.labelControl57.TabIndex = 59;
@@ -3027,7 +3028,7 @@
             // 
             // simpleButton8
             // 
-            this.simpleButton8.Location = new System.Drawing.Point(380, 67);
+            this.simpleButton8.Location = new System.Drawing.Point(314, 69);
             this.simpleButton8.Name = "simpleButton8";
             this.simpleButton8.Size = new System.Drawing.Size(104, 23);
             this.simpleButton8.TabIndex = 55;
@@ -3036,7 +3037,7 @@
             // 
             // sbJsfspfSave
             // 
-            this.sbJsfspfSave.Location = new System.Drawing.Point(380, 26);
+            this.sbJsfspfSave.Location = new System.Drawing.Point(314, 26);
             this.sbJsfspfSave.Name = "sbJsfspfSave";
             this.sbJsfspfSave.Size = new System.Drawing.Size(104, 23);
             this.sbJsfspfSave.TabIndex = 54;
@@ -3045,14 +3046,14 @@
             // 
             // txtJsfspf房地产单价
             // 
-            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(134, 190);
+            this.txtJsfspf房地产单价.Location = new System.Drawing.Point(130, 197);
             this.txtJsfspf房地产单价.Name = "txtJsfspf房地产单价";
             this.txtJsfspf房地产单价.Size = new System.Drawing.Size(113, 21);
             this.txtJsfspf房地产单价.TabIndex = 52;
             // 
             // labelControl56
             // 
-            this.labelControl56.Location = new System.Drawing.Point(33, 193);
+            this.labelControl56.Location = new System.Drawing.Point(54, 200);
             this.labelControl56.Name = "labelControl56";
             this.labelControl56.Size = new System.Drawing.Size(72, 14);
             this.labelControl56.TabIndex = 53;
@@ -3314,7 +3315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 611);
+            this.ClientSize = new System.Drawing.Size(457, 304);
             this.Controls.Add(this.panelControl1);
             this.Name = "MethodForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
